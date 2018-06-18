@@ -72,3 +72,8 @@ if ( ! function_exists ( 'cortextoo_tiny_mce_before_init' ) ) {
       return $settings;
   }
 }
+
+function cortextoo_editor_font_styles() {
+    wp_enqueue_style( 'cortextoo-editor-font-style', get_template_directory_uri() . '/assets/stylesheets/editor-style.css' );
+}
+add_action( 'enqueue_block_editor_assets', 'theme_slug_editor_styles' );
