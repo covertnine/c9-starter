@@ -6,12 +6,12 @@
  */
 
 
-add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
-if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
+add_action( 'after_setup_theme', 'cortextoo_woocommerce_support' );
+if ( ! function_exists( 'cortextoo_woocommerce_support' ) ) {
 	/**
 	 * Declares WooCommerce theme support.
 	 */
-	function understrap_woocommerce_support() {
+	function cortextoo_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 		
 		// Add New Woocommerce 3.0.0 Product Gallery support
@@ -20,7 +20,7 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// hook in and customizer form fields.
-		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_args', 'cortextoo_wc_form_field_args', 10, 3 );
 	}
 }
 
@@ -34,11 +34,11 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 /**
 * Then hook in your own functions to display the wrappers your theme requires
 */
-add_action('woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10);
-if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
-	function understrap_woocommerce_wrapper_start() {
-		$container   = get_theme_mod( 'understrap_container_type' );
+add_action('woocommerce_before_main_content', 'cortextoo_woocommerce_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'cortextoo_woocommerce_wrapper_end', 10);
+if ( ! function_exists( 'cortextoo_woocommerce_wrapper_start' ) ) {
+	function cortextoo_woocommerce_wrapper_start() {
+		$container   = get_theme_mod( 'cortextoo_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
@@ -46,8 +46,8 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 		echo '<main class="site-main" id="main">';
 	}
 }
-if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
-function understrap_woocommerce_wrapper_end() {
+if ( ! function_exists( 'cortextoo_woocommerce_wrapper_end' ) ) {
+function cortextoo_woocommerce_wrapper_end() {
 	echo '</main><!-- #main -->';
 	get_template_part( 'global-templates/right-sidebar-check' );
   echo '</div><!-- .row -->';
@@ -67,8 +67,8 @@ function understrap_woocommerce_wrapper_end() {
  *
  * @return mixed
  */
-if ( ! function_exists ( 'understrap_wc_form_field_args' ) ) {
-	function understrap_wc_form_field_args( $args, $key, $value = null ) {
+if ( ! function_exists ( 'cortextoo_wc_form_field_args' ) ) {
+	function cortextoo_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			/* Targets all select input type elements, except the country and state select input types */
@@ -141,10 +141,10 @@ if ( ! function_exists ( 'understrap_wc_form_field_args' ) ) {
 /**
 * Change loop add-to-cart button class to Bootstrap
 */
-add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_woocommerce_add_to_cart_args', 10, 2 );
+add_filter( 'woocommerce_loop_add_to_cart_args', 'cortextoo_woocommerce_add_to_cart_args', 10, 2 );
 
-if ( ! function_exists ( 'understrap_woocommerce_add_to_cart_args' ) ) {
-	function understrap_woocommerce_add_to_cart_args( $args, $product ) {
+if ( ! function_exists ( 'cortextoo_woocommerce_add_to_cart_args' ) ) {
+	function cortextoo_woocommerce_add_to_cart_args( $args, $product ) {
 		$args['class'] = str_replace('button','btn btn-outline-primary', 'button');
 		return $args;
 	}

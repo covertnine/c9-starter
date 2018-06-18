@@ -5,10 +5,10 @@
  * @package understrap
  */
 
-add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
+add_action( 'after_setup_theme', 'cortextoo_custom_header_setup' );
 
-if ( ! function_exists ( 'understrap_custom_header_setup' ) ) {
-	function understrap_custom_header_setup() {
+if ( ! function_exists ( 'cortextoo_custom_header_setup' ) ) {
+	function cortextoo_custom_header_setup() {
 
 		/**
 		 * Filter UnderStrap custom-header support arguments.
@@ -27,7 +27,7 @@ if ( ! function_exists ( 'understrap_custom_header_setup' ) ) {
 		 *     @type string $flex-height     		Flex support for height of header.
 		 * }
 		 */
-		add_theme_support( 'custom-header', apply_filters( 'understrap_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'cortextoo_custom_header_args', array(
 			'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
 			'width'              => 2000,
 			'height'             => 1200,

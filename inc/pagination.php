@@ -5,8 +5,8 @@
  * @package understrap
  */
 
-if ( ! function_exists ( 'understrap_pagination' ) ) {
-	function understrap_pagination($args = [], $class = 'pagination') {
+if ( ! function_exists ( 'cortextoo_pagination' ) ) {
+	function cortextoo_pagination($args = [], $class = 'pagination') {
 
 	    if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 

@@ -12,7 +12,7 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'cortextoo_container_type' );
 
 ?>
 

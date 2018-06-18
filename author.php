@@ -8,7 +8,7 @@
  */
 
 get_header();
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'cortextoo_container_type' );
 ?>
 
 
@@ -64,7 +64,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								<a rel="bookmark" href="<?php the_permalink() ?>"
 								   title="<?php esc_html_e( 'Permanent Link:', 'understrap' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
-								<?php understrap_posted_on(); ?> <?php esc_html_e( 'in',
+								<?php cortextoo_posted_on(); ?> <?php esc_html_e( 'in',
 								'understrap' ); ?> <?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
@@ -82,7 +82,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php cortextoo_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

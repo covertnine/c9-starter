@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'cortextoo_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -58,7 +58,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php cortextoo_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

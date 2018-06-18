@@ -8,7 +8,7 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'cortextoo_container_type' );
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>

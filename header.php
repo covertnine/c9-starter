@@ -7,7 +7,7 @@
  * @package understrap
  */
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'cortextoo_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						'walker'          => new cortextoo_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 			<?php if ( 'container' == $container ) : ?>

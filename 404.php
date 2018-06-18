@@ -7,8 +7,8 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$container   = get_theme_mod( 'cortextoo_container_type' );
+$sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 
 ?>
 
@@ -40,7 +40,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<?php if ( cortextoo_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
 								<div class="widget widget_categories">
 

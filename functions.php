@@ -1,8 +1,8 @@
 <?php
 /**
- * Understrap functions and definitions
+ * cortextoo functions and definitions
  *
- * @package understrap
+ * @package cortextoo
  */
 
 /**

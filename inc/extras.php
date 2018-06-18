@@ -7,9 +7,9 @@
  * @package understrap
  */
 
-add_filter( 'body_class', 'understrap_body_classes' );
+add_filter( 'body_class', 'cortextoo_body_classes' );
 
-if ( ! function_exists( 'understrap_body_classes' ) ) {
+if ( ! function_exists( 'cortextoo_body_classes' ) ) {
 	/**
 	 * Adds custom classes to the array of body classes.
 	 *
@@ -17,7 +17,7 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 	 *
 	 * @return array
 	 */
-	function understrap_body_classes( $classes ) {
+	function cortextoo_body_classes( $classes ) {
 		// Adds a class of group-blog to blogs with more than 1 published author.
 		if ( is_multi_author() ) {
 			$classes[] = 'group-blog';
@@ -32,9 +32,9 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 }
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
-add_filter( 'body_class', 'understrap_adjust_body_class' );
+add_filter( 'body_class', 'cortextoo_adjust_body_class' );
 
-if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
+if ( ! function_exists( 'cortextoo_adjust_body_class' ) ) {
 	/**
 	 * Setup body classes.
 	 *
@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 *
 	 * @return mixed
 	 */
-	function understrap_adjust_body_class( $classes ) {
+	function cortextoo_adjust_body_class( $classes ) {
 
 		foreach ( $classes as $key => $value ) {
 			if ( 'tag' == $value ) {
@@ -56,9 +56,9 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 }
 
 // Filter custom logo with correct classes.
-add_filter( 'get_custom_logo', 'understrap_change_logo_class' );
+add_filter( 'get_custom_logo', 'cortextoo_change_logo_class' );
 
-if ( ! function_exists( 'understrap_change_logo_class' ) ) {
+if ( ! function_exists( 'cortextoo_change_logo_class' ) ) {
 	/**
 	 * Replaces logo CSS class.
 	 *
@@ -66,7 +66,7 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 	 *
 	 * @return mixed
 	 */
-	function understrap_change_logo_class( $html ) {
+	function cortextoo_change_logo_class( $html ) {
 
 		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
@@ -80,8 +80,8 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
  * Display navigation to next/previous post when applicable.
  */
 
-if ( ! function_exists ( 'understrap_post_nav' ) ) {
-	function understrap_post_nav() {
+if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
+	function cortextoo_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
