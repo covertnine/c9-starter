@@ -2,7 +2,7 @@
 /**
  * Pagination layout.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 if ( ! function_exists ( 'cortextoo_pagination' ) ) {

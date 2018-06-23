@@ -2,7 +2,7 @@
 /**
  * Sidebar - hero canvas setup.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 ?>

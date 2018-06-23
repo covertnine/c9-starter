@@ -1,2 +1,93 @@
-//Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-//@import "theme"; 
+// used to match Gutenberg Editor backend with frontend of site
+
+/****************************************************************************************/
+/* Main column width */
+/****************************************************************************************/
+body.gutenberg-editor-page .editor-post-title,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+    max-width: 970px;
+}
+
+/****************************************************************************************/
+/***************************** base fonts
+/****************************************************************************************/
+.body.gutenberg-editor-page .edit-post-visual-editor p,
+.edit-post-visual-editor p {font-family: 'roboto slab', times, serif;}
+
+
+/****************************************************************************************/
+/***************************** headings
+/****************************************************************************************/
+.edit-post-visual-editor h1,
+.edit-post-visual-editor h2,
+.edit-post-visual-editor h3,
+.edit-post-visual-editor h4,
+.edit-post-visual-editor h5,
+.edit-post-visual-editor h6,
+.edit-post-visual-editor .h1,
+.edit-post-visual-editor .h2,
+.edit-post-visual-editor .h3,
+.edit-post-visual-editor .h4,
+.edit-post-visual-editor .h5,
+.edit-post-visual-editor .h6,
+.edit-post-visual-editor .editor-post-title__block { font-family: 'Montserrat', 'helvetica neue', helvetica, sans-serif; }
+
+.edit-post-visual-editor .editor-post-title__block {max-width: 970px;}
+
+/****************************************************************************************/
+/***************************** ordered + unordered lists
+/****************************************************************************************/
+.body.gutenberg-editor-page  ol li,
+.body.gutenberg-editor-page ul li { margin:5px 0;}
+
+.body.gutenberg-editor-page ol li {
+	counter-increment:step-counter;
+	padding-left: 40px;
+}
+
+.body.gutenberg-editor-page ol li:before {list-style-type:none;}
+
+.body.gutenberg-editor-page ol li:before {
+	content:counter(step-counter);
+	width:22px;
+	display:inline-block;
+	font-weight:700;
+	margin: 0 7px 0 -27px;
+}
+
+/****************************************************************************************/
+/***************************** blockquotes
+/****************************************************************************************/
+.wp-block-cortex-blocks-block-cortex-blockquote  {
+	position: relative;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content:"";
+}
+
+blockquote {
+	quotes:"" "";
+	position:relative;
+	margin: 0px 40px 20px 40px;
+	padding:0 35px;
+	border-left:3px solid #ca292c;
+}
+
+blockquote:before {
+	content:"\201C";
+	letter-spacing:.2rem;
+	text-transform:uppercase;
+	position:absolute;
+	top: 0;
+    left: -55px;
+    font-size: 3rem;
+	font-weight:700;
+	font-family: 'montserrat';
+	color:#ca292c;
+}
+
+blockquote p,blockquote {
+	font:normal 1.8rem/2.1em 'Roboto Slab',sans-serif;
+}

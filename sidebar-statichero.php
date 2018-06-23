@@ -2,7 +2,7 @@
 /**
  * Static hero sidebar setup.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 $container   = get_theme_mod( 'cortextoo_container_type' );

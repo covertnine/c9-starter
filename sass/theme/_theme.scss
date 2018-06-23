@@ -1,7 +1,19 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+/****************************************************************************************/
+/***************************** Page Setup */
+/****************************************************************************************/
+.page-container .entry-header {
+	display: block;
+	margin: 0px auto;
+	width: 970px;
+}
 
-/* WordPress Core*/
-/* post content tables*/
+/****************************************************************************************/
+/***************************** WordPress Core*/
+/****************************************************************************************/
+
+/****************************************************************************************/
+/***************************** post content tables*/
+/****************************************************************************************/
 .entry-content table, .entry-content table tbody, .entry-content table tbody tr, .entry-content table tbody tr td {
 	border: none;
 	border-left: none;
@@ -14,9 +26,39 @@
 	box-shadow: 0 -1px 0 0 #ECEEEF;
 }
 
-/* post content subheadings */
+/****************************************************************************************/
+/***************************** post content subheadings */
+/****************************************************************************************/
 p.wp-block-subhead {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
-	font-style: normal;
+	font-style: normal !important;
+}
+
+/****************************************************************************************/
+/***************************** ordered and unordered lists */
+/****************************************************************************************/
+.entry-content ul li,
+.entry-content ol li { margin:5px 0;}
+
+.entry-content ol li {
+	counter-increment:step-counter;
+	padding-left: 40px;
+}
+
+.entry-content ol {list-style-type:none;}
+
+.entry-content ol li:before {
+	content:counter(step-counter);
+	width:22px;
+	display:inline-block;
+	font-weight:700;
+	margin: 0 7px 0 -27px;
+}
+
+/****************************************************************************************/
+/***************************** full width cover image blocks
+/****************************************************************************************/
+.wp-block-cover-image {
+	width: 100vw;
 }

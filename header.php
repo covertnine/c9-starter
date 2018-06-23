@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package understrap
+ * @package cortextoo
  */
 
 $container = get_theme_mod( 'cortextoo_container_type' );

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 add_filter( 'body_class', 'cortextoo_body_classes' );

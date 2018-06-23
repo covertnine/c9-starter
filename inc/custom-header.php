@@ -2,7 +2,7 @@
 /**
  * Custom header setup.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 add_action( 'after_setup_theme', 'cortextoo_custom_header_setup' );

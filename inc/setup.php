@@ -2,7 +2,7 @@
 /**
  * Theme basic setup.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 
@@ -80,31 +80,29 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 			'link',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'cortextoo_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
 		// Check and setup theme default settings.
 		cortextoo_setup_theme_default_settings();
 
-		add_theme_support( 'gutenberg', array(
-		 
-		    // Theme supports wide images, galleries and videos.
-		    'wide-images' => true,
-		 
-		    // Make specific theme colors available in the editor.
-		    'colors' => array(
-		        '#ffffff',
-		        '#000000',
-		        '#cccccc',
+		add_theme_support( 'align-wide' );
+
+		// Make specific theme colors available in the editor.
+		add_theme_support( 'editor-color-palette',
+			array(
+		        'name' => 'white',
+		        'color'	=> '#ffffff',
 		    ),
-		 
-		) );
+			array(
+				'name' => 'black',
+				'color' => '#000000',
+		    ),
+			array(
+		        'name' => 'light gray',
+		        'color'	=> '#cccccc',
+		    )
+		);
 
 	}
 }

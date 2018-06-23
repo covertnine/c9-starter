@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package understrap
+ * @package cortextoo
  */
 
 
