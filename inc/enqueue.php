@@ -29,14 +29,3 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 } // endif function_exists( 'cortextoo_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'cortextoo_scripts' );
-
-/**
- * Enqueue WordPress theme styles within Gutenberg.
- */
-function cortextoo_gutenberg_styles() {
-	// Load the theme styles within Gutenberg.
-	//$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/css/theme.min.css');
-	//wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version );
-	wp_enqueue_style( 'cortextoo-gutenberg', get_theme_file_uri( '/css/custom-editor-style.css' ), false, '', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'cortextoo_gutenberg_styles' );

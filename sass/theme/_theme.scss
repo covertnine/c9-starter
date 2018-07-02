@@ -1,7 +1,8 @@
 /****************************************************************************************/
 /***************************** Page Setup */
 /****************************************************************************************/
-.page-container .entry-header {
+.page-container .entry-header,
+#full-width-page-wrapper > .container {
 	display: block;
 	margin: 0px auto;
 	width: 970px;
@@ -10,6 +11,72 @@
 /****************************************************************************************/
 /***************************** WordPress Core*/
 /****************************************************************************************/
+
+/****************************************************************************************/
+/***************************** post content subheadings */
+/****************************************************************************************/
+p.wp-block-subhead {
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	font-style: normal !important;
+}
+
+/****************************************************************************************/
+/***************************** ordered and unordered lists */
+/****************************************************************************************/
+.entry-content ul li,
+.entry-content ol li { margin:5px 0;}
+
+.entry-content ol li {
+	counter-increment:step-counter;
+}
+
+.entry-content ol {list-style-type:none;}
+
+.entry-content ol li:before {
+	content:counter(step-counter);
+	width: 20px;
+	display:inline-block;
+	font-weight:700;
+	margin: 0 0 0 -18px;
+}
+
+/****************************************************************************************/
+/***************************** blockquotes
+/****************************************************************************************/
+.entry-content .wp-block-cortex-blocks-block-cortex-blockquote  {
+	position: relative;
+}
+
+.entry-content blockquote:before,.entry-content blockquote:after,.entry-content q:before,.entry-content q:after {
+	content:"";
+}
+
+.entry-content blockquote {
+	quotes:"" "";
+	position:relative;
+	margin: 0px 40px 20px 40px;
+	padding:0 35px;
+	border-left:3px solid #ca292c;
+}
+
+.entry-content blockquote:before {
+	content:"\201C";
+	letter-spacing:.2rem;
+	text-transform:uppercase;
+	position:absolute;
+	top: 0;
+    left: -55px;
+    font-size: 3rem;
+	font-weight:700;
+	font-family: $headings-font-family;
+	color:#ca292c;
+}
+
+.entry-content blockquote p, .entry-content blockquote {
+	font:normal 1.8rem/2.1em $font-family-base;
+}
+
 
 /****************************************************************************************/
 /***************************** post content tables*/
@@ -24,41 +91,4 @@
 .entry-content table tbody tr td {
 	background: #FFFFFF;
 	box-shadow: 0 -1px 0 0 #ECEEEF;
-}
-
-/****************************************************************************************/
-/***************************** post content subheadings */
-/****************************************************************************************/
-p.wp-block-subhead {
-	font-family: 'Oswald', sans-serif;
-	font-weight: 300;
-	font-style: normal !important;
-}
-
-/****************************************************************************************/
-/***************************** ordered and unordered lists */
-/****************************************************************************************/
-.entry-content ul li,
-.entry-content ol li { margin:5px 0;}
-
-.entry-content ol li {
-	counter-increment:step-counter;
-	padding-left: 40px;
-}
-
-.entry-content ol {list-style-type:none;}
-
-.entry-content ol li:before {
-	content:counter(step-counter);
-	width:22px;
-	display:inline-block;
-	font-weight:700;
-	margin: 0 7px 0 -27px;
-}
-
-/****************************************************************************************/
-/***************************** full width cover image blocks
-/****************************************************************************************/
-.wp-block-cover-image {
-	width: 100vw;
 }

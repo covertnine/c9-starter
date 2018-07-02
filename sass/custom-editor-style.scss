@@ -1,20 +1,39 @@
 // used to match Gutenberg Editor backend with frontend of site
+@import "assets/bootstrap4.scss";
+@import "theme/_theme_variables.scss";
 
 /****************************************************************************************/
 /* Main column width */
 /****************************************************************************************/
-body.gutenberg-editor-page .editor-post-title,
-body.gutenberg-editor-page .editor-default-block-appender,
-body.gutenberg-editor-page .editor-block-list__block {
+.edit-post-visual-editor .editor-default-block-appender,
+.edit-post-visual-editor .editor-block-list__block,
+.edit-post-visual-editor .editor-post-title,
+.edit-post-visual-editor .editor-post-title__block {
     max-width: 970px;
+}
+
+.edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
+	max-width: 100%;
 }
 
 /****************************************************************************************/
 /***************************** base fonts
 /****************************************************************************************/
-.body.gutenberg-editor-page .edit-post-visual-editor p,
-.edit-post-visual-editor p {font-family: 'roboto slab', times, serif;}
+body.gutenberg-editor-page .edit-post-visual-editor p,
+.edit-post-visual-editor p,
+.edit-post-visual-editor {font-family: $font-family-base;}
 
+body.gutenberg-editor-page p.wp-block-subhead,
+.edit-post-visual-editor p.wp-block-subhead {
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+}
 
 /****************************************************************************************/
 /***************************** headings
@@ -31,43 +50,58 @@ body.gutenberg-editor-page .editor-block-list__block {
 .edit-post-visual-editor .h4,
 .edit-post-visual-editor .h5,
 .edit-post-visual-editor .h6,
-.edit-post-visual-editor .editor-post-title__block { font-family: 'Montserrat', 'helvetica neue', helvetica, sans-serif; }
+.edit-post-visual-editor .editor-post-title__block {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+}
 
-.edit-post-visual-editor .editor-post-title__block {max-width: 970px;}
+/****************************************************************************************/
+/***************************** post title
+/****************************************************************************************/
+
+@media (min-width: 600px) {
+	.editor-post-title__block .editor-post-title__input {padding: 19px 16px;}
+	.editor-post-title { padding-left: 10px; padding-right: 10px;}
+}
+
+.edit-post-visual-editor .editor-post-title {margin: 0px auto;}
 
 /****************************************************************************************/
 /***************************** ordered + unordered lists
 /****************************************************************************************/
-.body.gutenberg-editor-page  ol li,
-.body.gutenberg-editor-page ul li { margin:5px 0;}
+.edit-post-visual-editor ol li:before,
+.edit-post-visual-editor ol li {list-style-type: none;}
 
-.body.gutenberg-editor-page ol li {
-	counter-increment:step-counter;
-	padding-left: 40px;
+.edit-post-visual-editor  ol li,
+.edit-post-visual-editor  ul li {
+	margin:5px 0;
+	font-family: $font-family-base;
 }
 
-.body.gutenberg-editor-page ol li:before {list-style-type:none;}
+.edit-post-visual-editor ol li {
+	counter-increment:step-counter;
+}
 
-.body.gutenberg-editor-page ol li:before {
-	content:counter(step-counter);
-	width:22px;
-	display:inline-block;
-	font-weight:700;
-	margin: 0 7px 0 -27px;
+.edit-post-visual-editor ol li:before {
+	content: counter(step-counter);
+	width: 20px;
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 0 0 -18px;
 }
 
 /****************************************************************************************/
 /***************************** blockquotes
 /****************************************************************************************/
-.wp-block-cortex-blocks-block-cortex-blockquote  {
+.edit-post-visual-editor .wp-block-cortex-blocks-block-cortex-blockquote  {
 	position: relative;
 }
 
-blockquote:before,blockquote:after,q:before,q:after {
+.edit-post-visual-editor blockquote:before,.edit-post-visual-editor blockquote:after,.edit-post-visual-editor q:before,.edit-post-visual-editor q:after {
 	content:"";
 }
 
-blockquote {
+.edit-post-visual-editor blockquote {
 	quotes:"" "";
 	position:relative;
 	margin: 0px 40px 20px 40px;
@@ -75,7 +109,7 @@ blockquote {
 	border-left:3px solid #ca292c;
 }
 
-blockquote:before {
+.edit-post-visual-editor blockquote:before {
 	content:"\201C";
 	letter-spacing:.2rem;
 	text-transform:uppercase;
@@ -84,10 +118,28 @@ blockquote:before {
     left: -55px;
     font-size: 3rem;
 	font-weight:700;
-	font-family: 'montserrat';
+	font-family: $headings-font-family;
 	color:#ca292c;
 }
 
-blockquote p,blockquote {
-	font:normal 1.8rem/2.1em 'Roboto Slab',sans-serif;
+.edit-post-visual-editor blockquote p, .edit-post-visual-editor blockquote {
+	font:normal 1.8rem/2.1em $font-family-base;
 }
+
+/****************************************************************************************/
+/***************************** tables
+/****************************************************************************************/
+
+.edit-post-visual-editor table, .edit-post-visual-editor table tbody, .edit-post-visual-editor table tbody tr, .edit-post-visual-editor table tbody tr td {
+	border: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.edit-post-visual-editor table tbody tr td {
+	background: #fff;
+	box-shadow: 0 -1px 0 0 #ECEEEF;
+}
+
+
