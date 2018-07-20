@@ -89,20 +89,23 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 		add_theme_support( 'align-wide' );
 
 		// Make specific theme colors available in the editor.
-		add_theme_support( 'editor-color-palette',
+		add_theme_support( 'editor-color-palette', array(
 			array(
 		        'name' => 'white',
 		        'color'	=> '#ffffff',
+		        'slug' => 'color-white',
 		    ),
 			array(
 				'name' => 'black',
 				'color' => '#000000',
+				'slug'	=> 'color-black',
 		    ),
 			array(
 		        'name' => 'light gray',
 		        'color'	=> '#cccccc',
-		    )
-		);
+				'slug'	=> 'color-light-gray',
+		    ),
+		));
 
 	}
 }
