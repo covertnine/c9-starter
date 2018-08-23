@@ -8,6 +8,38 @@
 	width: 970px;
 }
 
+@media (min-width: 576px) {
+
+	.container-narrow {
+		width: 100%;
+		margin: 0px auto;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	.container-narrow {
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 992px) {
+
+	.container-narrow {
+		width: 970px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	.container-narrow {
+		width: 970px;
+	}
+
+}
 /****************************************************************************************/
 /***************************** WordPress Core*/
 /****************************************************************************************/

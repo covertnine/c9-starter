@@ -106,7 +106,7 @@ body.gutenberg-editor-page p.wp-block-subhead,
 	position:relative;
 	margin: 0px 40px 20px 40px;
 	padding:0 35px;
-	border-left:3px solid #ca292c;
+	border-left:3px solid $primary;
 }
 
 .edit-post-visual-editor blockquote:before {
@@ -119,7 +119,7 @@ body.gutenberg-editor-page p.wp-block-subhead,
     font-size: 3rem;
 	font-weight:700;
 	font-family: $headings-font-family;
-	color:#ca292c;
+	color: $primary;
 }
 
 .edit-post-visual-editor blockquote p, .edit-post-visual-editor blockquote {
