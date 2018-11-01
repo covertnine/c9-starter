@@ -8,6 +8,8 @@
 /**
  * Registers an editor stylesheet for the theme.
  */
+// Adding theme support
+add_theme_support('editor-styles');
 
 // Add TinyMCE style formats.
 add_filter( 'mce_buttons_2', 'cortextoo_tiny_mce_style_formats' );
@@ -70,3 +72,5 @@ function cortextoo_editor_style() {
     wp_enqueue_style( 'cortextoo-editor-style', get_template_directory_uri() . '/css/custom-editor-style.css' );
 }
 add_action( 'enqueue_block_editor_assets', 'cortextoo_editor_style' );
+
+// add_editor_style('/css/custom-editor-style.css');
