@@ -1,8 +1,8 @@
 /****************************************************************************************/
 /***************************** Page Setup */
 /****************************************************************************************/
-#page-wrapper {
-  padding: 0;
+#page-wrapper, .wrapper {
+  padding: 0px;
 }
 .page-container .entry-header,
 #full-width-page-wrapper > .container {
@@ -47,6 +47,17 @@
 /****************************************************************************************/
 /***************************** WordPress Core*/
 /****************************************************************************************/
+
+nav ul li {
+	font-family: $headings-font-family;
+	font-size: 1rem;
+}
+
+nav ul li a {
+	transition: color .3s ease-in;
+}
+
+.navbar-toggler-icon {border: 1px solid #000000;}
 
 /****************************************************************************************/
 /***************************** post content subheadings */
@@ -128,3 +139,19 @@ p.wp-block-subhead {
 	background: #FFFFFF;
 	box-shadow: 0 -1px 0 0 #ECEEEF;
 }
+
+/****************************************************************************************/
+/***************************** cortex base colors + editor color palette */
+/****************************************************************************************/
+
+.has-color-white-color {color: #ffffff;}
+.has-color-black-color {color: #000000;}
+.has-color-light-gray-color {color: #cccccc;}
+
+.bg-primary { background-color: $primary }
+.bg-secondary { background-color: $secondary;}
+.bg-success { background-color: $success;}
+.bg-info { background-color: $info;}
+.bg-warning { background-color: $warning;}
+.bg-danger { background-color: $danger;}
+.bg-dark { background-color: $dark;}

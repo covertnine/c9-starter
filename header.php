@@ -28,11 +28,11 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 <div class="hfeed site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
@@ -64,9 +64,9 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
+						'container_class' => 'collapse navbar-collapse justify-content-end',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
+						'menu_class'      => 'navbar-nav nav nav-pills nav-filled',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
