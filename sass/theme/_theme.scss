@@ -48,17 +48,6 @@
 /***************************** WordPress Core*/
 /****************************************************************************************/
 
-nav ul li {
-	font-family: $headings-font-family;
-	font-size: 1rem;
-}
-
-nav ul li a {
-	transition: color .3s ease-in;
-}
-
-.navbar-toggler-icon {border: 1px solid #000000;}
-
 /****************************************************************************************/
 /***************************** post content subheadings */
 /****************************************************************************************/
@@ -155,3 +144,16 @@ p.wp-block-subhead {
 .bg-warning { background-color: $warning;}
 .bg-danger { background-color: $danger;}
 .bg-dark { background-color: $dark;}
+
+
+/****************************************************************************************/
+/* navigation*/
+/****************************************************************************************/
+nav ul li {
+	font-family: $headings-font-family;
+	font-size: 1rem;
+}
+
+nav ul li a {
+	transition: color .3s ease-in;
+}
