@@ -11,6 +11,11 @@
 	width: 970px;
 }
 
+.page-template-default .page .entry-content {
+	width: 970px;
+	margin: 0px auto;
+}
+
 @media (min-width: 576px) {
 
 	.container-narrow {
@@ -47,6 +52,20 @@
 /****************************************************************************************/
 /***************************** WordPress Core*/
 /****************************************************************************************/
+
+.alignwide {
+	width: 75%;
+	max-width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignfull {
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /****************************************************************************************/
 /***************************** post content subheadings */
@@ -132,10 +151,11 @@ p.wp-block-subhead {
 /****************************************************************************************/
 /***************************** cortex base colors + editor color palette */
 /****************************************************************************************/
-
+.has-color-green-color {color: #006A30;}
 .has-color-white-color {color: #ffffff;}
+.has-color-pink-color {color: #D548CA;}
 .has-color-black-color {color: #000000;}
-.has-color-light-gray-color {color: #cccccc;}
+.has-color-gray-color {color: #767676;}
 
 .bg-primary { background-color: $primary }
 .bg-secondary { background-color: $secondary;}
@@ -159,3 +179,4 @@ nav ul li {
 nav ul li a {
 	transition: color .3s ease-in;
 }
+

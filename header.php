@@ -21,6 +21,7 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -32,7 +33,7 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md fixed-top">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >

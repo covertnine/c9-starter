@@ -21,7 +21,7 @@ var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 var browserSyncOptions = {
-                    proxy: "covert-nine-core.local",
+                    proxy: "cea.local",
                     notify: false
                 };
 

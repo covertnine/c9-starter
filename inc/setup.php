@@ -91,19 +91,29 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 		// Make specific theme colors available in the editor.
 		add_theme_support( 'editor-color-palette', array(
 			array(
+		        'name' => 'green',
+		        'color'	=> '#006A30',
+		        'slug' => 'color-green',
+		    ),
+			array(
+				'name' => 'pink',
+				'color' => '#D548CA',
+				'slug'	=> 'color-pink',
+		    ),
+			array(
+		        'name' => 'gray',
+		        'color'	=> '#cccccc',
+				'slug'	=> 'color-gray',
+		    ),
+			array(
 		        'name' => 'white',
 		        'color'	=> '#ffffff',
-		        'slug' => 'color-white',
+				'slug'	=> 'color-white',
 		    ),
 			array(
-				'name' => 'black',
-				'color' => '#000000',
+		        'name' => 'black',
+		        'color'	=> '#000000',
 				'slug'	=> 'color-black',
-		    ),
-			array(
-		        'name' => 'light gray',
-		        'color'	=> '#cccccc',
-				'slug'	=> 'color-light-gray',
 		    ),
 		));
 

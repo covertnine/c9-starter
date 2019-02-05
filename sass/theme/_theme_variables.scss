@@ -1,15 +1,15 @@
 // cortextoo
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
-:root {font-family: 'roboto slab', times, serif;}
+:root {font-family: NiveauGroteskRegular, times, serif;}
 
 // Typography
-$headings-font-family: 'Montserrat', 'helvetica neue', helvetica, sans-serif;
+$headings-font-family: NiveauGroteskBold, 'helvetica neue', helvetica, sans-serif;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: 'Oswald', impact, sans-serif;
-$font-family-base: 'Roboto Slab', times, serif;
+$font-family-sans-serif: NiveauGroteskRegular, sans-serif;
+$font-family-base: NiveauGroteskRegular, serif;
 
-$line-height-base:            1.8;
+$line-height-base:            2;
 
 $headings-font-weight: 700;
 
@@ -33,14 +33,14 @@ $enable-rounded: false;
 
 
 // Colors
-$primary: #3D7DA7;
-$secondary: #818A91;
+$primary: #006A30;
+$secondary: #D548CA;
 $success: #21A77A;
 $info: #F7F7F9;
 $warning: #EC971F;
 $danger: #843534;
-$dark: #121212;
+$dark: #000000;
 
-$link-hover-color: #3D7DA7;
-$link-color: #373A3C;
+$link-hover-color: #006A30;
+$link-color: #4A4A4A;
 

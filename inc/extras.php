@@ -108,3 +108,29 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 		<?php
 	}
 }
+
+/**
+	 allow svg uploads
+*/
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+/*
+	add shortcode for search form on homepage
+*/
+function ceasearchform( $form ) {
+
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+    <div><label class="sr-only" for="s">' . __('Search for:') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+    <input type="submit" id="homesearchsubmit" value="'. esc_attr__('Search') .'" />
+    </div>
+    </form>';
+
+    return $form;
+}
+
+add_shortcode('ceasearch', 'ceasearchform');
