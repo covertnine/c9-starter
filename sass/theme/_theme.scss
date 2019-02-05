@@ -49,8 +49,9 @@
 	}
 
 }
+
 /****************************************************************************************/
-/***************************** WordPress Core*/
+/***************************** WordPress Core */
 /****************************************************************************************/
 
 .alignwide {
@@ -68,7 +69,78 @@
 }
 
 /****************************************************************************************/
-/***************************** post content subheadings */
+/* navigation*/
+/****************************************************************************************/
+.nav-container-width {width: 90%;}
+
+nav ul li {
+	font-family: $headings-font-family;
+	font-size: 1rem;
+}
+
+nav ul li a {
+	transition: color .3s ease-in;
+}
+
+/****************************************************************************************/
+/* cortex base colors + editor color palette */
+/****************************************************************************************/
+.has-color-green-color {color: #006A30;}
+.has-color-white-color {color: #ffffff;}
+.has-color-pink-color {color: #D548CA;}
+.has-color-black-color {color: #000000;}
+.has-color-gray-color {color: #767676;}
+
+.bg-primary { background-color: $primary }
+.bg-secondary { background-color: $secondary;}
+.bg-success { background-color: $success;}
+.bg-info { background-color: $info;}
+.bg-warning { background-color: $warning;}
+.bg-danger { background-color: $danger;}
+.bg-dark { background-color: $dark;}
+
+
+
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+/* Block Specific Styles Begin */
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+
+/****************************************************************************************/
+/* CEA block typography */
+/****************************************************************************************/
+
+.section-heading-accent {
+	display: block;
+	margin: 0px auto;
+	font-family: $headings-font-family;
+	font-size: 2.6rem;
+	line-height: 3rem;
+	letter-spacing: .08rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/****************************************************************************************/
+/* post content tables*/
+/****************************************************************************************/
+.entry-content table, .entry-content table tbody, .entry-content table tbody tr, .entry-content table tbody tr td {
+	border: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.entry-content table tbody tr td {
+	background: #FFFFFF;
+	box-shadow: 0 -1px 0 0 #ECEEEF;
+}
+
+/****************************************************************************************/
+/* post content subheadings */
 /****************************************************************************************/
 p.wp-block-subhead {
 	font-family: $font-family-sans-serif;
@@ -77,7 +149,7 @@ p.wp-block-subhead {
 }
 
 /****************************************************************************************/
-/***************************** ordered and unordered lists */
+/* ordered and unordered lists */
 /****************************************************************************************/
 .entry-content ul li,
 .entry-content ol li { margin:5px 0;}
@@ -97,7 +169,7 @@ p.wp-block-subhead {
 }
 
 /****************************************************************************************/
-/***************************** blockquotes
+/* blockquotes
 /****************************************************************************************/
 .entry-content .wp-block-cortex-blocks-block-cortex-blockquote  {
 	position: relative;
@@ -133,50 +205,4 @@ p.wp-block-subhead {
 }
 
 
-/****************************************************************************************/
-/***************************** post content tables*/
-/****************************************************************************************/
-.entry-content table, .entry-content table tbody, .entry-content table tbody tr, .entry-content table tbody tr td {
-	border: none;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
-.entry-content table tbody tr td {
-	background: #FFFFFF;
-	box-shadow: 0 -1px 0 0 #ECEEEF;
-}
-
-/****************************************************************************************/
-/***************************** cortex base colors + editor color palette */
-/****************************************************************************************/
-.has-color-green-color {color: #006A30;}
-.has-color-white-color {color: #ffffff;}
-.has-color-pink-color {color: #D548CA;}
-.has-color-black-color {color: #000000;}
-.has-color-gray-color {color: #767676;}
-
-.bg-primary { background-color: $primary }
-.bg-secondary { background-color: $secondary;}
-.bg-success { background-color: $success;}
-.bg-info { background-color: $info;}
-.bg-warning { background-color: $warning;}
-.bg-danger { background-color: $danger;}
-.bg-dark { background-color: $dark;}
-
-
-/****************************************************************************************/
-/* navigation*/
-/****************************************************************************************/
-.nav-container-width {width: 90%;}
-
-nav ul li {
-	font-family: $headings-font-family;
-	font-size: 1rem;
-}
-
-nav ul li a {
-	transition: color .3s ease-in;
-}
 
