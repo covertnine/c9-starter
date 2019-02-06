@@ -1,6 +1,10 @@
 /****************************************************************************************/
 /***************************** Page Setup */
 /****************************************************************************************/
+:root {
+	font-size: 62.5%;
+}
+
 #page-wrapper, .wrapper {
   padding: 0px;
 }
@@ -51,7 +55,7 @@
 }
 
 /****************************************************************************************/
-/***************************** WordPress Core */
+/***************************** WordPress Core Classes */
 /****************************************************************************************/
 
 .alignwide {
@@ -68,8 +72,105 @@
 	margin-right: auto;
 }
 
+.alignleft {
+	display:inline;
+	float:left;
+	margin-right:1.5em;
+}
+
+.alignright {
+	display:inline;
+	float:right;
+	margin-left:1.5em;
+}
+
+.aligncenter {
+	clear:both;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.wp-caption {
+	margin-bottom:1.5em;
+	max-width:100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display:block;
+	margin:0 auto;
+}
+
+.wp-caption-text {
+	text-align:center;
+	font-size:1.1rem;
+	line-height:1.3rem;
+	margin-top:0;
+	text-transform:uppercase;
+	font-weight:700;
+}
+
+.wp-caption .wp-caption-text {
+	margin:.8075em 0;
+}
+
+
 /****************************************************************************************/
-/* navigation*/
+/* WordPress Core Widgets */
+/****************************************************************************************/
+.entry-content ul,.entry-content ol,.widget_archive ul,.widget_categories ul,.widget_pages ul,.widget_meta ul,.widget_recent_comments ul,.widget_recent_entries ul,.widget_rss ul,.widget_text ul,.widget_nav_menu ul,.widget_cortex_twitter_widget ul,.widget_product_categories ul {
+	list-style:none;
+	margin:15px 0;
+	padding:0;
+}
+
+.entry-content ul li,.widget_archive ul li,.widget_categories ul li,.widget_categories ul li,.widget_pages ul li,.widget_meta ul li,.widget_recent_comments ul li,.widget_recent_entries ul li,.widget_rss ul li,.widget_text ul li,.widget_nav_menu ul li,.widget_product_categories ul li {
+	font-size:1.4rem;
+	margin:10px 0;
+	padding-left:40px;
+}
+
+.widget {
+	margin:0 0 5em;
+	font-size:1.4rem;
+}
+
+.widget:last-child {margin:0;}
+
+.widget h1,
+.widget h2,
+.widget h3 {
+	font-weight:700;
+	letter-spacing:.2rem;
+	text-transform:uppercase;
+	font-size:2rem;
+}
+
+.widget .widget-title:after,
+.widget .widgettitle:after {
+	display:block;
+	content:"";
+	width:60%;
+	border-bottom:2px solid #ca292c;
+	padding-bottom:22px;
+	margin-bottom:26px;
+}
+
+.widget select {
+	max-width:100%;
+}
+
+.widget_nav_menu ul li ul {
+	margin:8px 0 8px 20px;
+}
+
+.widget_nav_menu ul li ul li ul,.widget_product_categories ul li ul li ul {
+	margin:8px 0 8px 40px;
+}
+
+
+/****************************************************************************************/
+/* WordPress Navigation*/
 /****************************************************************************************/
 .nav-container-width {width: 90%;}
 
@@ -83,49 +184,339 @@ nav ul li a {
 }
 
 /****************************************************************************************/
-/* cortex base colors + editor color palette */
+/* WordPress Theme base colors + editor color palette */
 /****************************************************************************************/
-.has-color-green-color {color: #006A30;}
+.has-color-green-color {color: $primary;}
 .has-color-white-color {color: #ffffff;}
-.has-color-pink-color {color: #D548CA;}
+.has-color-pink-color {color: $secondary;}
 .has-color-black-color {color: #000000;}
 .has-color-gray-color {color: #767676;}
 
-.bg-primary { background-color: $primary }
-.bg-secondary { background-color: $secondary;}
+.bg-primary,
+.has-color-green-background-color {background-color: $primary;}
+.bg-secondary,
+.has-color-pink-background-color {background-color: $secondary;}
 .bg-success { background-color: $success;}
 .bg-info { background-color: $info;}
 .bg-warning { background-color: $warning;}
 .bg-danger { background-color: $danger;}
 .bg-dark { background-color: $dark;}
 
+/****************************************************************************************/
+/* WordPress Image Galleries */
+/****************************************************************************************/
+
+.gallery {
+	margin-bottom:1.5em;
+}
+
+.gallery .gallery-item {
+	display:inline-block;
+	text-align:center;
+	vertical-align:top;
+	width:100%;
+	margin-bottom:2%;
+}
+
+.gallery-item .wp-caption-text {
+	margin-bottom:25px;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width:50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width:33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width:25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width:20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width:16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width:14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width:12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width:11.11%;
+}
+
+.gallery-caption {
+	display:block;
+}
+
+/* For displaying 3 columns on tablet */
+@media only screen and (max-width: 768px) {
+	.gallery-columns-4 .gallery-item,.gallery-columns-5 .gallery-item,.gallery-columns-6 .gallery-item,.gallery-columns-7 .gallery-item,.gallery-columns-8 .gallery-item.gallery-columns-9 .gallery-item {
+		width:25%;
+		max-width:25%;
+	}
+
+}
+
+/* For displaying two columns on mobile */
+@media only screen and (max-width: 568px) {
+	.gallery-columns-2 .gallery-item,.gallery-columns-3 .gallery-item,.gallery-columns-4 .gallery-item,.gallery-columns-5 .gallery-item,.gallery-columns-6 .gallery-item,.gallery-columns-7 .gallery-item,.gallery-columns-8 .gallery-item.gallery-columns-9 .gallery-item {
+		width:50%;
+		max-width:50%;
+	}
+}
+
+.gallery-columns-2 .gallery-item:nth-child(2n+1), .gallery-columns-3 .gallery-item:nth-child(3n+1), .gallery-columns-4 .gallery-item:nth-child(4n+1), .gallery-columns-5 .gallery-item:nth-child(5n+1), .gallery-columns-6 .gallery-item:nth-child(6n+1), .gallery-columns-7 .gallery-item:nth-child(7n+1), .gallery-columns-8 .gallery-item:nth-child(8n+1), .gallery-columns-9 .gallery-item:nth-child(9n+1) {
+	clear:none;
+}
 
 
 /****************************************************************************************/
+/* WordPress Search Form */
 /****************************************************************************************/
+
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+	border-radius:0;
+	padding:6px 8px 2px;
+	font-size:1.4rem;
+	height:34px;
+	line-height:15px;
+}
+
+.search-field {
+	font-size:1.2rem;
+}
+
+.widget_search input[type="submit"],
+.widget_search .search-form label {max-width:48%;}
+
+.widget_search .search-form label {
+	display:inline-block;
+	float:left;
+}
+
+.search-form,.widget_search .search-form {
+	height:34px;
+	overflow:hidden;
+}
+
+.widget_search .search-field,
+.search-form .search-field {width: 100%;}
+.search-form label,.widget_search .search-form label,.widget_product_search .woocommerce-product-search label {
+	width: 50%;
+	margin:0;
+	float:left;
+}
+
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+	border-radius:0;
+	padding:6px 8px 2px;
+	font-size:1.4rem;
+	height:34px;
+	line-height:15px;
+}
+
+.widget_search .search-submit {
+	display:block;
+	float:left;
+	vertical-align:top;
+	padding:11px 30px 7px;
+	text-transform:uppercase;
+	letter-spacing:.1rem;
+	text-align:center;
+	margin:-1px 0 0 -2px;
+	border:0;
+	box-shadow:none;
+	border-radius:0;
+	font-weight:400;
+	height:35px;
+	line-height:15px;
+}
+
+.widget_search .search-submit:hover {
+	box-shadow:none;
+}
+
+
+/********************************************************************************************************************************************************************************/
 /****************************************************************************************/
 /* Block Specific Styles Begin */
 /****************************************************************************************/
-/****************************************************************************************/
-/****************************************************************************************/
+/********************************************************************************************************************************************************************************/
 
 /****************************************************************************************/
-/* CEA block typography */
+/* WordPress Core HTML tag selectors */
 /****************************************************************************************/
 
-.section-heading-accent {
-	display: block;
-	margin: 0px auto;
-	font-family: $headings-font-family;
-	font-size: 2.6rem;
-	line-height: 3rem;
-	letter-spacing: .08rem;
-	text-align: center;
-	text-transform: uppercase;
+hr {
+	border:0;
+	height:1px;
+	width:33%;
+	margin-bottom:1.5em;
 }
 
+ul,ol {
+	margin:0 0 1.5em 3em;
+}
+
+ul {
+	list-style:disc;
+}
+
+ol {
+	list-style:decimal;
+}
+
+li > ul,li > ol {
+	margin-bottom:0;
+	margin-left:1.5em;
+}
+
+dt {
+	font-weight:700;
+}
+
+dd {
+	margin:0 1.5em 1.5em;
+}
+
+img {
+	height:auto;
+	max-width:100%;
+}
+
+table {
+	margin:0 0 1.5em;
+	width:100%;
+}
+
+table tr td,table tr th {
+	padding:15px;
+	text-align: left;
+}
+
+table tr td {vertical-align: top;}
+
+table tr th {
+	padding-top:20px;
+	padding-bottom:20px;
+	font-weight:700;
+	letter-spacing:.2rem;
+	text-transform:uppercase;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,iframe,object {
+	max-width:100%;
+}
+
+.embed-container {
+	position:relative;
+	padding-bottom:56.25%;
+	height:0;
+	overflow:hidden;
+	max-width:100%;
+	height:auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
 /****************************************************************************************/
-/* post content tables*/
+/* Typography */
+/****************************************************************************************/
+.entry-content p, p {
+	margin-bottom:1.5em;
+	font-size:1.4rem;
+	line-height:2rem;
+	word-wrap:break-word;
+}
+
+h1,.h1{font-size:6rem}
+h2,.h2{font-size:5rem}
+h3,.h3{font-size:4rem}
+h4,.h4{font-size:3rem}
+h5,.h5{font-size:2rem}
+h6,.h6{font-size:1rem}
+
+
+@media (max-width: 568px) {
+	/* media query font size adjustments*/
+	h1,.h1,.xxlarge,.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1,.woocommerce .entry-content h1 {
+		font-size:4rem;
+	}
+
+	h2,.h2,.xlarge,.woocommerce .entry-content h2 {
+		font-size:3.5rem;
+	}
+
+	h3,.h3,.large,.content-area .site-main .masonry_portfolio .container h3, .project_masonry_description, .events_description, .blog_latest .blog_latest_title .subtitle,.subtitle,.blog_latest .blog_latest_title h3 {
+		font-size:3rem;
+	}
+
+	h4,.h4,.medium,.hero .heading .hero-sub-title,.blog_latest .blog_latest_title .subtitle {
+		font-size:2.5rem;
+	}
+
+	h5,.h5,.small,.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a {
+		font-size:2rem;
+	}
+
+	h6,.h6 {
+		font-size:1.4rem;
+	}
+}
+	.section-heading-accent { /*cea specific here*/
+		display: block;
+		margin: 0px auto;
+		font-family: $headings-font-family;
+		font-size: 2.6rem;
+		line-height: 3rem;
+		letter-spacing: .8rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p.wp-block-subhead {
+		font-family: $font-family-sans-serif;
+		font-weight: 300;
+		font-style: normal !important;
+	}
+
+	.entry-content hr {
+		text-align:center;
+		width:80%;
+		margin:30px auto 25px;
+		max-width: 300px;
+	}
+
+
+
+/****************************************************************************************/
+/* post content tables */
 /****************************************************************************************/
 .entry-content table, .entry-content table tbody, .entry-content table tbody tr, .entry-content table tbody tr td {
 	border: none;
@@ -140,23 +531,14 @@ nav ul li a {
 }
 
 /****************************************************************************************/
-/* post content subheadings */
+/* post content ordered and unordered lists */
 /****************************************************************************************/
-p.wp-block-subhead {
-	font-family: $font-family-sans-serif;
-	font-weight: 300;
-	font-style: normal !important;
-}
+.entry-content ul, .entry-content ol {padding:0 50px 0 20px;}
 
-/****************************************************************************************/
-/* ordered and unordered lists */
-/****************************************************************************************/
 .entry-content ul li,
 .entry-content ol li { margin:5px 0;}
 
-.entry-content ol li {
-	counter-increment:step-counter;
-}
+.entry-content ol li {counter-increment:step-counter;}
 
 .entry-content ol {list-style-type:none;}
 
@@ -167,6 +549,22 @@ p.wp-block-subhead {
 	font-weight:700;
 	margin: 0 0 0 -18px;
 }
+
+.entry-content ol li {
+	counter-increment:step-counter;
+	padding-left: 40px;
+}
+
+.entry-content ol {list-style-type:none;}
+
+.entry-content ol li:before {
+	content:counter(step-counter);
+	width:22px;
+	display:inline-block;
+	font-weight:700;
+	margin: 0 7px 0 -27px;
+}
+
 
 /****************************************************************************************/
 /* blockquotes
@@ -204,5 +602,95 @@ p.wp-block-subhead {
 	font:normal 1.8rem/2.1em $font-family-base;
 }
 
+/****************************************************************************************/
+/* buttons
+/****************************************************************************************/
+
+.btn,
+.btn:visited,
+button,input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.wp-block-button__link,
+.entry-content .wp-block-button__link {
+	display:inline-block;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+	text-align:center;
+	text-transform:uppercase;
+	padding:14px 45px;
+	letter-spacing:.08rem;
+	font-size:1.4rem;
+	font-weight:700;
+	width:auto;
+	line-height:1.2rem;
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4sease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+	background-color: $primary;
+}
+
+/****************************************************************************************/
+/* Utility Classes
+/****************************************************************************************/
+
+.mar5B{margin-bottom:5px}
+.mar10B{margin-bottom:10px}
+.mar15B{margin-bottom:15px}
+.mar20B{margin-bottom:20px}
+.mar30B{margin-bottom:30px}
+.mar40B{margin-bottom:40px}
+.mar50B{margin-bottom:50px}
+.mar60B{margin-bottom:60px}
+.mar70B{margin-bottom:70px}
+.mar80B{margin-bottom:80px}
+.mar100B{margin-bottom:90px}
+.mar110B{margin-bottom:110px}
+.mar120B{margin-bottom:120px}
+.mar0T{margin-top:0}
+.mar5T{margin-top:5px}
+.mar10T{margin-top:10px}
+.mar15T{margin-top:15px}
+.mar20T{margin-top:20px}
+.mar30T{margin-top:30px}
+.mar40T{margin-top:40px}
+.mar50T{margin-top:50px}
+.mar60T{margin-top:60px}
+.mar70T{margin-top:70px}
+.mar80T{margin-top:80px}
+.mar90T{margin-top:90px}
+.mar100T{margin-top:100px}
+.mar110T{margin-top:110px}
+.mar120T{margin-top:120px}
+.mar130T{margin-top:130px}
+.mar140T{margin-top:140px}
+.mar10NT{margin-top:-10px}
+.mar20NT{margin-top:-20px}
+.mar30NT{margin-top:-30px}
+.mar40NT{margin-top:-40px}
+.mar50NT{margin-top:-50px}
+.mar60NT{margin-top:-60px}
+.mar70NT{margin-top:-70px}
+.mar80NT{margin-top:-80px}
+.mar90NT{margin-top:-90px}
+.mar100NT{margin-top:-100px}
+.mar110NT{margin-top:-110px}
+.mar120NT{margin-top:-120px}
+.mar130NT{margin-top:-130px}
+.mar140NT{margin-top:-140px}
+
+.c9-25{width:25%}
+.c9-50{width:50%}
+.c9-75{width:75%}
+.c9-100{width:100%}
+
+.light, .h1.light, .h2.light .h3.light, .h4.light, .h5.light, .h6.light, .subheading.light, .subheading.h1.light, .subheading.h2.light .subheading.h3.light, .subheading.h4.light, .subheading.h5.light, .subheading.h6.light {
+	font-weight: 300;
+}
+
+.heavy, .h1.heavy, .h2.heavy, .h3.heavy, .h4.heavy, .h5.heavy, .h6.heavy, .subheading.heavy, .subheading.h1.heavy, .subheading.h2.heavy, .subheading.h3.heavy, .subheading.h4.heavy, .subheading.h5.heavy, .subheading.h6.heavy {
+	font-weight:900;
+}
 
 
