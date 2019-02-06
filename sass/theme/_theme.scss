@@ -1,6 +1,10 @@
 /****************************************************************************************/
 /***************************** Page Setup */
 /****************************************************************************************/
+body {
+	color: #4A4A4A;
+}
+
 :root {
 	font-size: 62.5%;
 }
@@ -23,7 +27,7 @@
 @media (min-width: 576px) {
 
 	.container-narrow {
-    max-width: 100%;
+    	max-width: 100%;
 		width: 100%;
 		margin: 0px auto;
 	}
@@ -55,7 +59,7 @@
 }
 
 /****************************************************************************************/
-/***************************** WordPress Core Classes */
+/* WordPress Core Classes */
 /****************************************************************************************/
 
 .alignwide {
@@ -141,8 +145,7 @@
 .widget h2,
 .widget h3 {
 	font-weight:700;
-	letter-spacing:.2rem;
-	text-transform:uppercase;
+	letter-spacing:.08rem;
 	font-size:2rem;
 }
 
@@ -164,7 +167,7 @@
 	margin:8px 0 8px 20px;
 }
 
-.widget_nav_menu ul li ul li ul,.widget_product_categories ul li ul li ul {
+.widget_nav_menu ul li ul li ul {
 	margin:8px 0 8px 40px;
 }
 
@@ -172,8 +175,6 @@
 /****************************************************************************************/
 /* WordPress Navigation*/
 /****************************************************************************************/
-.nav-container-width {width: 90%;}
-
 nav ul li {
 	font-family: $headings-font-family;
 	font-size: 1rem;
@@ -192,16 +193,17 @@ nav ul li a {
 .has-color-black-color {color: #000000;}
 .has-color-gray-color {color: #767676;}
 
-.bg-primary,
-.has-color-green-background-color {background-color: $primary;}
-.bg-secondary,
-.has-color-pink-background-color {background-color: $secondary;}
+.bg-primary {background-color: $primary;}
+.bg-secondary {background-color: $secondary;}
 .bg-success { background-color: $success;}
 .bg-info { background-color: $info;}
 .bg-warning { background-color: $warning;}
 .bg-danger { background-color: $danger;}
 .bg-dark { background-color: $dark;}
 
+
+.has-color-pink-background-color {background-color: $secondary;}
+.has-color-green-background-color {background-color: $primary;}
 /****************************************************************************************/
 /* WordPress Image Galleries */
 /****************************************************************************************/
@@ -260,7 +262,12 @@ nav ul li a {
 
 /* For displaying 3 columns on tablet */
 @media only screen and (max-width: 768px) {
-	.gallery-columns-4 .gallery-item,.gallery-columns-5 .gallery-item,.gallery-columns-6 .gallery-item,.gallery-columns-7 .gallery-item,.gallery-columns-8 .gallery-item.gallery-columns-9 .gallery-item {
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
 		width:25%;
 		max-width:25%;
 	}
@@ -269,13 +276,27 @@ nav ul li a {
 
 /* For displaying two columns on mobile */
 @media only screen and (max-width: 568px) {
-	.gallery-columns-2 .gallery-item,.gallery-columns-3 .gallery-item,.gallery-columns-4 .gallery-item,.gallery-columns-5 .gallery-item,.gallery-columns-6 .gallery-item,.gallery-columns-7 .gallery-item,.gallery-columns-8 .gallery-item.gallery-columns-9 .gallery-item {
+	.gallery-columns-2 .gallery-item,
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
 		width:50%;
 		max-width:50%;
 	}
 }
 
-.gallery-columns-2 .gallery-item:nth-child(2n+1), .gallery-columns-3 .gallery-item:nth-child(3n+1), .gallery-columns-4 .gallery-item:nth-child(4n+1), .gallery-columns-5 .gallery-item:nth-child(5n+1), .gallery-columns-6 .gallery-item:nth-child(6n+1), .gallery-columns-7 .gallery-item:nth-child(7n+1), .gallery-columns-8 .gallery-item:nth-child(8n+1), .gallery-columns-9 .gallery-item:nth-child(9n+1) {
+.gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
 	clear:none;
 }
 
@@ -314,7 +335,9 @@ nav ul li a {
 
 .widget_search .search-field,
 .search-form .search-field {width: 100%;}
-.search-form label,.widget_search .search-form label,.widget_product_search .woocommerce-product-search label {
+
+.search-form label,
+.widget_search .search-form label {
 	width: 50%;
 	margin:0;
 	float:left;
@@ -324,28 +347,12 @@ nav ul li a {
 .widget_search .search-field {
 	display:inline;
 	vertical-align:top;
-	border-radius:0;
-	padding:6px 8px 2px;
-	font-size:1.4rem;
-	height:34px;
-	line-height:15px;
 }
 
-.widget_search .search-submit {
+.widget_search .search-submit,
+.search-submit {
 	display:block;
 	float:left;
-	vertical-align:top;
-	padding:11px 30px 7px;
-	text-transform:uppercase;
-	letter-spacing:.1rem;
-	text-align:center;
-	margin:-1px 0 0 -2px;
-	border:0;
-	box-shadow:none;
-	border-radius:0;
-	font-weight:400;
-	height:35px;
-	line-height:15px;
 }
 
 .widget_search .search-submit:hover {
@@ -354,9 +361,9 @@ nav ul li a {
 
 
 /********************************************************************************************************************************************************************************/
-/****************************************************************************************/
-/* Block Specific Styles Begin */
-/****************************************************************************************/
+/********************************************************************************************************************************************************************************/
+/***************************************** Block Specific Styles Begin */
+/********************************************************************************************************************************************************************************/
 /********************************************************************************************************************************************************************************/
 
 /****************************************************************************************/
@@ -368,6 +375,13 @@ hr {
 	height:1px;
 	width:33%;
 	margin-bottom:1.5em;
+}
+
+.entry-content hr {
+	text-align:center;
+	width:80%;
+	margin:30px auto 25px;
+	max-width: 300px;
 }
 
 ul,ol {
@@ -450,68 +464,40 @@ embed,iframe,object {
 /****************************************************************************************/
 .entry-content p, p {
 	margin-bottom:1.5em;
-	font-size:1.4rem;
-	line-height:2rem;
+	font-size: 2rem;
+	line-height:4rem;
 	word-wrap:break-word;
 }
 
-h1,.h1{font-size:6rem}
-h2,.h2{font-size:5rem}
-h3,.h3{font-size:4rem}
-h4,.h4{font-size:3rem}
-h5,.h5{font-size:2rem}
-h6,.h6{font-size:1rem}
-
-
-@media (max-width: 568px) {
-	/* media query font size adjustments*/
-	h1,.h1,.xxlarge,.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1,.woocommerce .entry-content h1 {
-		font-size:4rem;
-	}
-
-	h2,.h2,.xlarge,.woocommerce .entry-content h2 {
-		font-size:3.5rem;
-	}
-
-	h3,.h3,.large,.content-area .site-main .masonry_portfolio .container h3, .project_masonry_description, .events_description, .blog_latest .blog_latest_title .subtitle,.subtitle,.blog_latest .blog_latest_title h3 {
-		font-size:3rem;
-	}
-
-	h4,.h4,.medium,.hero .heading .hero-sub-title,.blog_latest .blog_latest_title .subtitle {
-		font-size:2.5rem;
-	}
-
-	h5,.h5,.small,.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a {
-		font-size:2rem;
-	}
-
-	h6,.h6 {
-		font-size:1.4rem;
-	}
+.entry-content ul li,
+.entry-content ol li {
+	font-size: 2rem;
+	line-height:4rem;
 }
-	.section-heading-accent { /*cea specific here*/
-		display: block;
-		margin: 0px auto;
-		font-family: $headings-font-family;
-		font-size: 2.6rem;
-		line-height: 3rem;
-		letter-spacing: .8rem;
-		text-align: center;
-		text-transform: uppercase;
-	}
 
-	p.wp-block-subhead {
-		font-family: $font-family-sans-serif;
-		font-weight: 300;
-		font-style: normal !important;
-	}
+h1,.h1{font-size:4rem}
+h2,.h2{font-size:3.6rem}
+h3,.h3{font-size:3rem}
+h4,.h4{font-size:2.8rem}
+h5,.h5{font-size:2rem}
+h6,.h6{font-size:1.4rem}
 
-	.entry-content hr {
-		text-align:center;
-		width:80%;
-		margin:30px auto 25px;
-		max-width: 300px;
-	}
+p.wp-block-subhead {
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	font-style: normal !important;
+}
+
+.section-heading-accent { /*cea specific here*/
+	display: block;
+	margin: 0px auto;
+	font-family: $headings-font-family;
+	font-size: 2.6rem;
+	line-height: 3rem;
+	letter-spacing: .8rem;
+	text-align: center;
+	text-transform: uppercase;
+}
 
 
 
@@ -531,9 +517,10 @@ h6,.h6{font-size:1rem}
 }
 
 /****************************************************************************************/
-/* post content ordered and unordered lists */
+/* post content ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul, .entry-content ol {padding:0 50px 0 20px;}
+.entry-content ul,
+.entry-content ol {padding:0 50px 0 20px;}
 
 .entry-content ul li,
 .entry-content ol li { margin:5px 0;}
@@ -606,29 +593,31 @@ h6,.h6{font-size:1rem}
 /* buttons
 /****************************************************************************************/
 
-.btn,
-.btn:visited,
-button,input[type="button"],
-input[type="reset"],
-input[type="submit"],
-.button,
-.wp-block-button__link,
-.entry-content .wp-block-button__link {
+.entry-content .btn,
+.entry-content .btn:visited,
+.entry-content button,
+.entry-content input[type="button"],
+.entry-content input[type="reset"],
+.entry-content input[type="submit"],
+.entry-content .button,
+.entry-content .wp-block-button__link,
+.wp-block-button .wp-block-button__link {
 	display:inline-block;
+	padding:14px 45px;
+	width:auto;
+	background-color: $primary;
 	text-shadow:1px 1px 3px rgba(0,0,0,0.4);
 	text-align:center;
 	text-transform:uppercase;
-	padding:14px 45px;
-	letter-spacing:.08rem;
+	letter-spacing:.2rem;
+	font-family: $headings-font-family;
 	font-size:1.4rem;
-	font-weight:700;
-	width:auto;
-	line-height:1.2rem;
+	line-height:1.4rem;
+	font-weight:400;
 	-webkit-transition:all .4s ease-in-out;
 	-moz-transition:all .4sease-in-out;
 	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
-	background-color: $primary;
 }
 
 /****************************************************************************************/
