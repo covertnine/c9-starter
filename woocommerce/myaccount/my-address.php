@@ -50,11 +50,11 @@ $col    = 1;
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'understrap' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'cortextoo' ); ?></a>
 		</header>
 		<address><?php
 			$address = wc_get_account_formatted_address( $name );
-			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'understrap' );
+			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'cortextoo' );
 		?></address>
 	</div>
 

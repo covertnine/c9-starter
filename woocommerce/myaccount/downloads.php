@@ -40,7 +40,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 			<?php esc_html_e( 'Go shop', 'understrap' ) ?>
 		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'understrap' ); ?>
+		<?php esc_html_e( 'No downloads available yet.', 'cortextoo' ); ?>
 	</div>
 <?php endif; ?>
 

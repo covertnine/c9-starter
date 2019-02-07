@@ -33,11 +33,11 @@ if ( empty( WC()->cart->applied_coupons ) ) {
 <form class="checkout_coupon" method="post" style="display:none">
 
 	<p class="form-row form-row-first">
-		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'understrap' ); ?>" id="coupon_code" value="" />
+		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'cortextoo' ); ?>" id="coupon_code" value="" />
 	</p>
 
 	<p class="form-row form-row-last">
-		<button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'understrap' ); ?>"><?php esc_html_e( 'Apply coupon', 'understrap' ); ?></button>
+		<button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'cortextoo' ); ?>"><?php esc_html_e( 'Apply coupon', 'cortextoo' ); ?></button>
 	</p>
 
 	<div class="clear"></div>

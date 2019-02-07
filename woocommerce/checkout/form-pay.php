@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="shop_table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php esc_html_e( 'Product', 'understrap' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Qty', 'understrap' ); ?></th>
-				<th class="product-total"><?php esc_html_e( 'Totals', 'understrap' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'cortextoo' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Qty', 'cortextoo' ); ?></th>
+				<th class="product-total"><?php esc_html_e( 'Totals', 'cortextoo' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>

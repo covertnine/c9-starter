@@ -91,7 +91,7 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 		}
 		?>
 				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
+					<h2 class="sr-only"><?php _e( 'Post navigation', 'cortextoo' ); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
 

@@ -40,8 +40,8 @@ if ( ! is_ajax() ) {
 	<?php endif; ?>
 	<div class="form-row place-order">
 		<noscript>
-			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'understrap' ); ?>
-			<br/><button type="submit" class="btn btn-primary" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'understrap' ); ?>"><?php esc_html_e( 'Update totals', 'understrap' ); ?></button>
+			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'cortextoo' ); ?>
+			<br/><button type="submit" class="btn btn-primary" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'cortextoo' ); ?>"><?php esc_html_e( 'Update totals', 'cortextoo' ); ?></button>
 		</noscript>
 
 		<?php wc_get_template( 'checkout/terms.php' ); ?>

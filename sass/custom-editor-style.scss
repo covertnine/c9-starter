@@ -6,149 +6,51 @@
 /* Main column width */
 /****************************************************************************************/
 .edit-post-visual-editor .editor-default-block-appender,
-.edit-post-visual-editor .editor-block-list__block,
 .edit-post-visual-editor .editor-post-title,
+.edit-post-visual-editor .editor-block-list__block,
 .edit-post-visual-editor .editor-post-title__block {
-    max-width: 100% !important;
+    max-width: 1170px !important;
 }
 
 .edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
-	max-width: 100%;
+	max-width: 1170px;
+}
+
+.edit-post-visual-editor .editor-block-list__block[data-align="full"] {
+	max-width: 100vw;
 }
 
 /****************************************************************************************/
-/***************************** base fonts
-/****************************************************************************************/
-body.gutenberg-editor-page .edit-post-visual-editor p,
-.edit-post-visual-editor p,
-.edit-post-visual-editor {font-family: $font-family-base;}
-
-body.gutenberg-editor-page p.wp-block-subhead,
-.edit-post-visual-editor p.wp-block-subhead {
-	font-family: $font-family-sans-serif;
-	font-weight: 300;
-	font-style: normal;
-}
-
-.editor-post-title__block .editor-post-title__input {
-	font-family: $headings-font-family;
-	font-weight: $headings-font-weight;
-}
-
-/****************************************************************************************/
-/***************************** headings
-/****************************************************************************************/
-.edit-post-visual-editor h1,
-.edit-post-visual-editor h2,
-.edit-post-visual-editor h3,
-.edit-post-visual-editor h4,
-.edit-post-visual-editor h5,
-.edit-post-visual-editor h6,
-.edit-post-visual-editor .h1,
-.edit-post-visual-editor .h2,
-.edit-post-visual-editor .h3,
-.edit-post-visual-editor .h4,
-.edit-post-visual-editor .h5,
-.edit-post-visual-editor .h6,
-.edit-post-visual-editor .editor-post-title__block {
-	font-family: $headings-font-family;
-	font-weight: $headings-font-weight;
-}
-
-/****************************************************************************************/
-/***************************** post title
+/***************************** post title + post visual editor widths/alignments match
 /****************************************************************************************/
 
 @media (min-width: 600px) {
-	.editor-post-title__block .editor-post-title__input {padding: 19px 16px;}
-	.editor-post-title { padding-left: 10px; padding-right: 10px;}
+	.editor-post-title__block .editor-post-title__input {
+		padding: 0px 16px;
+		font-family: $headings-font-family;
+		font-weight: $headings-font-weight;
+	}
+
+	.editor-post-title,
+	.editor-post-title__block  {padding: 0px;}
+
+	.editor-block-list__layout {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.editor-block-list__layout .editor-block-list__block[data-align="full"] {
+		margin: 0px auto;
+	}
 }
 
 .edit-post-visual-editor .editor-post-title {margin: 0px auto;}
 
 /****************************************************************************************/
-/***************************** ordered + unordered lists
-/****************************************************************************************/
-.edit-post-visual-editor ol li:before,
-.edit-post-visual-editor ol li {list-style-type: none;}
-
-.edit-post-visual-editor  ol li,
-.edit-post-visual-editor  ul li {
-	margin:5px 0;
-	font-family: $font-family-base;
-}
-
-.edit-post-visual-editor ol li {
-	counter-increment:step-counter;
-}
-
-.edit-post-visual-editor ol li:before {
-	content: counter(step-counter);
-	width: 20px;
-	display: inline-block;
-	font-weight: 700;
-	margin: 0 0 0 -18px;
-}
-
-/****************************************************************************************/
-/***************************** blockquotes
-/****************************************************************************************/
-.edit-post-visual-editor .wp-block-cortex-blocks-block-cortex-blockquote  {
-	position: relative;
-}
-
-.edit-post-visual-editor blockquote:before,.edit-post-visual-editor blockquote:after,.edit-post-visual-editor q:before,.edit-post-visual-editor q:after {
-	content:"";
-}
-
-.edit-post-visual-editor blockquote {
-	quotes:"" "";
-	position:relative;
-	margin: 0px 40px 20px 40px;
-	padding:0 35px;
-	border-left:3px solid $primary;
-}
-
-.edit-post-visual-editor blockquote:before {
-	content:"\201C";
-	letter-spacing:.2rem;
-	text-transform:uppercase;
-	position:absolute;
-	top: 0;
-    left: -55px;
-    font-size: 3rem;
-	font-weight:700;
-	font-family: $headings-font-family;
-	color: $primary;
-}
-
-.edit-post-visual-editor blockquote p, .edit-post-visual-editor blockquote {
-	font:normal 1.8rem/2.1em $font-family-base;
-}
-
-/****************************************************************************************/
-/***************************** tables
+/***************************** cortextoo custom block edits for backend only
 /****************************************************************************************/
 
-.edit-post-visual-editor table, .edit-post-visual-editor table tbody, .edit-post-visual-editor table tbody tr, .edit-post-visual-editor table tbody tr td {
-	border: none;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
-.edit-post-visual-editor table tbody tr td {
-	background: #fff;
-	box-shadow: 0 -1px 0 0 #ECEEEF;
-}
-
-/****************************************************************************************/
-/***************************** Sam's Styles
-/****************************************************************************************/
-.container-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+/*cortex column container innerblocks set to full width + innerblock full width */
+.wp-block[data-type="covertnine-blocks/column-containers"] .editor-inner-blocks {
+	width: 100%;
 }
