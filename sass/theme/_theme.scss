@@ -11,38 +11,36 @@ body {
 }
 
 #page-wrapper, .wrapper {
-  padding: 0px;
+	padding: 0px;
 }
 
-.page-container .entry-header,
-#full-width-page-wrapper > .container {
-	display: block;
-	margin: 0px auto;
-	width: 970px;
+@media (max-width: 768px) {
+	.page-template-default .entry-content {
+		padding: 0px 15px;
+	}
 }
 
 @media (min-width: 576px) {
 
-	.container-narrow {
-    	max-width: 100%;
-		width: 100%;
-		margin: 0px auto;
-	}
-	.page-template-default .page .entry-content {
+	.container-narrow,
+	.page-template-default .page .entry-content,
+	.page-container .entry-header,
+	#full-width-page-wrapper > .container {
 		width: 100%;
 		max-width: 100%;
 		margin: 0px auto;
 	}
 
+	.entry-content {overflow: visible;}
+
 }
 
 @media (min-width: 768px) {
 
-	.container-narrow {
-		width: 100%;
-	}
-
-	.page-template-default .page .entry-content {
+	.container-narrow,
+	.page-template-default .page .entry-content,
+	.page-container .entry-header,
+	#full-width-page-wrapper > .container {
 		width: 100%;
 	}
 
@@ -51,14 +49,12 @@ body {
 
 @media (min-width: 992px) {
 
-	.container-narrow {
+	.container-narrow,
+	.page-template-default .page .entry-content,
+	.page-container .entry-header,
+	#full-width-page-wrapper > .container {
 		width: 970px;
 	}
-
-	.page-template-default .page .entry-content {
-		width: 970px;
-	}
-
 
 }
 
@@ -68,7 +64,9 @@ body {
 		width: 970px;
 	}
 
-	.page-template-default .page .entry-content {
+	.page-template-default .page .entry-content,
+	.page-container .entry-header,
+	#full-width-page-wrapper > .container {
 		width: 1140px;
 		margin: 0px auto;
 	}
@@ -483,9 +481,9 @@ embed,iframe,object {
 
 .entry-content p,
 .editor-styles-wrapper .wp-block-paragraph,
-.editor-styles-wrapper .editor-rich-text .mce-content-body {
+.editor-styles-wrapper .editor-rich-text .mce-content-body p {
 	margin-bottom:15px;
-	line-height:2;
+	line-height: 2;
 }
 
 .editor-styles-wrapper div {font-family: $font-family-base;}
@@ -507,6 +505,7 @@ embed,iframe,object {
 .entry-content h5,.entry-content .h5, .wp-block-heading h5 {font-size:2rem}
 .entry-content h6,.entry-content .h6, .wp-block-heading h6 {font-size:1.4rem}
 
+
 .has-small-font-size {font-size: 1rem !important;}
 
 .has-regular-font-size,
@@ -526,16 +525,6 @@ p.wp-block-subhead {
 	font-style: normal !important;
 }
 
-.section-heading-accent { /*cea specific here*/
-	display: block;
-	margin: 0px auto;
-	font-family: $headings-font-family;
-	font-size: 2.6rem;
-	line-height: 1.5;
-	letter-spacing: .8rem;
-	text-align: center;
-	text-transform: uppercase;
-}
 
 /****************************************************************************************/
 /* post content tables */
@@ -630,30 +619,38 @@ p.wp-block-subhead {
 /* post content ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
 .entry-content ul:not(.wp-block-gallery),
-.entry-content ol {
-	font-size: 2rem;
+.entry-content ol,
+.editor-styles-wrapper .entry-content ol {
 	line-height: 4rem;
 	padding: 0px 20px;
 	margin: 0px 0px 15px 30px;
 }
 
-.entry-content ul:not(.wp-block-gallery) {
+.entry-content ul:not(.wp-block-gallery),
+.editor-styles-wrapper ul:not(.wp-block-gallery) {
 	list-style:disc;
 }
 
-.entry-content ol {
-	list-style:decimal;
+.entry-content ol,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ol li {
+	list-style-type:none;
 }
 
-.entry-content li > ul,.entry-content li > ol {
+.entry-content li > ul,
+.entry-content li > ol,
+.editor-styles-wrapper li > ol  {
 	margin-bottom:0px 0px 0px 15px;
 }
 
-.entry-content ol li {counter-increment:step-counter;}
+.entry-content ol li,
+.editor-styles-wrapper ol li {counter-increment:step-counter;}
 
-.entry-content ol {list-style-type:none;}
+.entry-content ol,
+.editor-styles-wrapper ol {list-style-type:none;}
 
-.entry-content ol li:before {
+.entry-content ol li:before,
+.editor-styles-wrapper ol li:before {
 	content:counter(step-counter);
 	width: 20px;
 	display:inline-block;
@@ -661,14 +658,16 @@ p.wp-block-subhead {
 	margin: 0 0 0 -18px;
 }
 
-.entry-content ol li {
+.entry-content ol li,
+.editor-styles-wrapper ol li {
 	counter-increment:step-counter;
 	padding-left: 40px;
 }
 
-.entry-content ol {list-style-type:none;}
 
-.entry-content ol li:before {
+
+.entry-content ol li:before,
+.editor-styles-wrapper ol li:before {
 	content:counter(step-counter);
 	width:22px;
 	display:inline-block;
@@ -677,7 +676,7 @@ p.wp-block-subhead {
 }
 
 /****************************************************************************************/
-/***************************** Sam's Styles
+/***************************** C9 Custom Blocks for new WordPress Gutenberg
 /****************************************************************************************/
 .container-overlay {
   position: absolute;
@@ -685,6 +684,14 @@ p.wp-block-subhead {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 0px) {
+	.wp-block-covertnine-blocks-column-containers {
+		width: 100vw;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
 }
 
 @media (min-width: 576px) {
@@ -702,6 +709,7 @@ p.wp-block-subhead {
 	.wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
+		margin-left: -15px;
 	}
 
 }
@@ -730,7 +738,8 @@ p.wp-block-subhead {
 /****************************************************************************************/
 /* buttons
 /****************************************************************************************/
-
+.button,
+input[type="submit"],
 .entry-content .btn,
 .entry-content .btn:visited,
 .entry-content button,
@@ -744,23 +753,25 @@ p.wp-block-subhead {
 	padding:14px 45px;
 	width:auto;
 	background-color: $primary;
-	text-shadow:1px 1px 3px rgba(0,0,0,0.4);
 	text-align:center;
 	text-transform:uppercase;
 	letter-spacing:.2rem;
-	font-family: $headings-font-family;
+	font-family: $font-family-base;
 	font-size:1.4rem;
 	line-height:1.4rem;
-	font-weight:400;
 	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4sease-in-out;
+	-moz-transition:all .4s ease-in-out;
 	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
+	border: none;
 }
 
 /****************************************************************************************/
 /* Utility Classes
 /****************************************************************************************/
+
+.opacity0 {opacity: 0;}
+.opacity100 {opacity: 1;}
 
 .mar5B{margin-bottom:5px}
 .mar10B{margin-bottom:10px}
@@ -818,4 +829,233 @@ p.wp-block-subhead {
 
 .heavy, .h1.heavy, .h2.heavy, .h3.heavy, .h4.heavy, .h5.heavy, .h6.heavy, .subheading.heavy, .subheading.h1.heavy, .subheading.h2.heavy, .subheading.h3.heavy, .subheading.h4.heavy, .subheading.h5.heavy, .subheading.h6.heavy {
 	font-weight:900;
+}
+
+/********************************************************************************************************************************************************************************/
+/********************************************************************************************************************************************************************************/
+/* end of base styling for cortextoo everything below here is specific to the client or demo */
+/********************************************************************************************************************************************************************************/
+/********************************************************************************************************************************************************************************/
+
+/********************************************************************************************************************************************************************************/
+/****************************************************************************************/
+/* CEA Specific Styling
+/****************************************************************************************/
+/********************************************************************************************************************************************************************************/
+
+
+/*buttons*/
+.btn-cea,
+#topnav input[type="submit"] {
+	padding:7px 30px;
+	width:auto;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.2rem;
+	font-family: $font-family-base;
+	font-size:1.2rem;
+	line-height:1.2rem;
+	font-weight:400;
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+	border-radius: 34px;
+}
+
+#topnav input[type="submit"] {
+	background-color: $dark;
+	border-radius: 28px;
+	color: $light;
+	padding:7px 15px;
+	margin-left: 25px;
+}
+
+/****************************************************************************************/
+/***************************** topnav
+/****************************************************************************************/
+#topnav {
+	background-color: $primary;
+	padding: 15px 0px;
+}
+
+/* login form */
+#topnav #loginform p {
+	display: inline;
+	margin: 0px;
+}
+
+#topnav #loginform p .input {
+	padding: 5px;
+	font-size: 1.2rem;
+	line-height: 1;
+	border: none;
+	margin: 0px;
+}
+
+#topnav #loginform p .input:focus {
+	outline-color: $secondary;
+}
+
+#topnav #loginform p label {
+	color: $light;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	padding-right: 15px;
+	letter-spacing: .08rem;
+	margin: 0px;
+}
+
+#topnav #loginform .login-password {
+	margin-left: 30px;
+}
+
+@media only screen and (max-width: 576px) {
+	#topnav {
+		padding: 10px 0px;
+	}
+
+	.page-template-default .entry-content {
+		overflow: hidden;
+	}
+
+	#topnav .container {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	#topnav #loginform p .input {
+		padding: 2px;
+		height: 16px;
+		max-width: 55px;
+	}
+
+	#topnav #loginform p label {
+		color: $light;
+		font-size: .9rem;
+		letter-spacing: .06rem;
+		padding-right: 5px;
+	}
+
+	#topnav #loginform {
+		width: 100%;
+		text-align: center;
+		margin: 0px auto;
+	}
+
+	#topnav #loginform .login-password {
+		margin-left: 10px;
+	}
+
+	#topnav input[type=submit], .btn-cea {
+		margin-left: 5px;
+		font-size: .9rem;
+		letter-spacing: .07rem;
+		padding: 4px 8px;
+	}
+
+	#topnav .topnav-btn-signup {
+		width: 100%;
+		display: block;
+		margin: 0px auto;
+		border-radius: 0px;
+		margin-top: 8px;
+	}
+}
+
+
+/*navbar*/
+.navbar {
+	background-color: $light;
+}
+
+.navbar-small {
+	height: 55px;
+}
+
+.header-navbar {
+	height: 55px;
+}
+
+.navbar-small .navbar-brand img {
+	max-height: 45px;
+	width: auto;
+}
+
+@media only screen and (min-width: 0px) {
+	.navbar-brand img {
+		width: auto;
+		max-height: 45px;
+		height: auto;
+	}
+
+	#page .navbar-small-mobile {padding-bottom: 0px;}
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar-brand img {
+		width: 285px;
+		max-height: 92px;
+		height: auto;
+	}
+	.navbar-nav {width: 80%;}
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: rgba(43,43,43,.77);
+	letter-spacing: .09rem;
+}
+
+/* section heading accents */
+.editor-styles-wrapper .editor-rich-text .section-heading-accent,
+.section-heading-accent {
+	margin: 0px auto;
+	font-size: 2rem;
+	font-family: niveau-grotesk-small-caps, sans-serif;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: .08rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: $dark;
+}
+
+.editor-styles-wrapper .section-heading-accent:before,
+.section-heading-accent:before {
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 38px;
+	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') center center no-repeat;
+	background-size: contain;
+}
+
+/* unordered list stylings */
+.entry-content ul:not(.wp-block-gallery),
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) {
+	list-style: none;
+	font-size: 2rem;
+}
+
+.entry-content ul:not(.wp-block-gallery) li,
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
+	line-height: 2;
+	margin-bottom: 0px;
+	font-size: 2rem;
+}
+
+.entry-content ul:not(.wp-block-gallery) li:before,
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before {
+	content: ' ';
+	display: inline-block;
+	margin-left: -25px;
+	padding-left: 50px;
+	width: 24px;
+	height: 24px;
+	line-height: 2;
+	background: transparent url('/wp-content/uploads/2019/02/Rating_star.svg') center center no-repeat;
+	background-size: 25px 25px;
 }
