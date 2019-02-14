@@ -2,35 +2,66 @@
 @import "assets/bootstrap4.scss";
 @import "theme/_theme_variables.scss";
 
+
+/* fix font sizes in interface in backend from the reset css */
+input,
+button,
+select,
+optgroup,
+textarea,
+.components-notice__content,
+body {font-size: 1.3rem;}
+
 /****************************************************************************************/
-/* Main column width */
+/* Main column width settings */
 /****************************************************************************************/
 .edit-post-visual-editor .editor-default-block-appender,
 .edit-post-visual-editor .editor-post-title,
 .edit-post-visual-editor .editor-block-list__block,
 .edit-post-visual-editor .editor-post-title__block {
-    max-width: 1170px !important;
+    max-width: 1140px;
 }
 
-.edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
-	max-width: 1170px;
-}
-
-.edit-post-visual-editor .editor-block-list__block[data-align="full"] {
-	min-width: 100vw;
-	max-width: none;
+.edit-post-layout__content .edit-post-visual-editor {
+    width: 100%;
+    max-width: 1140px; // The widest container, which is 1140px
+    margin: 0px auto;
 }
 
 /****************************************************************************************/
-/***************************** post title + post visual editor widths/alignments match
+/***************************** post title + post visual editor widths + alignments
 /****************************************************************************************/
+.edit-post-visual-editor .editor-post-title {margin: 0px auto;}
+
+.editor-post-title__block .editor-post-title__input {
+	padding: 0px 16px;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+}
+
+
+@media (min-width: 1px) {
+
+
+	//set the alignfull width to be the editable area within gutenberg removing widths of both admin bar and document settings since they are hidden below 600px
+	.wp-block[data-align=full],
+	body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full] {
+		width: 100vw;
+		max-width: 100vw; //subtract the width of the document options sidebar
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.edit-post-visual-editor .editor-block-list__block.wp-block[data-align=wide] {
+		width: 100%;
+		max-width: 600px;
+		margin-left: calc(((-100vw + 440px) + 100%)/2);
+		margin-right: calc(((-100vw + 440px) + 100%)/2);
+	}
+
+}
 
 @media (min-width: 600px) {
-	.editor-post-title__block .editor-post-title__input {
-		padding: 0px 16px;
-		font-family: $headings-font-family;
-		font-weight: $headings-font-weight;
-	}
 
 	.editor-post-title,
 	.editor-post-title__block  {padding: 0px;}
@@ -40,12 +71,119 @@
 		padding-right: 10px;
 	}
 
-	.editor-block-list__layout .editor-block-list__block[data-align="full"] {
-		margin: 0px auto;
+	//non collapsed admin sidebar with document settings
+	body:not(.folded) .edit-post-visual-editor .edit-post-layout.is-sidebar-opened .editor-block-list__block.wp-block[data-align=wide] {
+		width: 120%;
+		max-width: calc(100vw - 440px);
+		margin-left: calc(((-100vw + 440px) + 1120px)/2);
+		margin-right: calc(((-100vw + 440px) + 1120px)/2);
 	}
+
+	//non collapsed admin sidebar without document settings
+	body:not(.folded) .edit-post-visual-editor .edit-post-layout .editor-block-list__block.wp-block[data-align=wide] {
+
+	}
+
+	//collapsed admin sidebar with document settings open
+	body .edit-post-visual-editor .edit-post-layout.is-sidebar-opened .editor-block-list__block.wp-block[data-align=wide] {
+
+	}
+
+	//collapsed admin sidebar without document settings open
+	body .edit-post-visual-editor .edit-post-layout .editor-block-list__block.wp-block[data-align=wide] {
+
+	}
+
+	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
+	.wp-block[data-align=full],
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full] {
+		width: calc(100vw - 440px);
+		max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
+		margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
+		margin-right: calc((-100vw + 440px) / 2 + (100% / 2));
+	}
+
+	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
+	.wp-block[data-align=full],
+	body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full] {
+		width: calc(100vw - 316px);
+		max-width: calc(100vw - 316px); //subtract the width of the document options sidebar
+		margin-left: calc((-100vw + 316px) / 2 + (100% / 2));
+		margin-right: calc((-100vw + 316px) / 2 + (100% / 2));
+	}
+
+	//set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
+	.wp-block[data-align=full],
+	body:not(.folded) .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full] {
+		width: calc(100vw - 160px);
+		max-width: calc(100vw - 160px); //subtract the width of the document options sidebar
+		margin-left: calc((-100vw + 160px) / 2 + (100% / 2));
+		margin-right: calc((-100vw + 160px) / 2 + (100% / 2));
+	}
+
+	//set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
+	.wp-block[data-align=full],
+	body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full] {
+		width: calc(100vw - 36px);
+		max-width: calc(100vw - 36px); //subtract the width of the document options sidebar
+		margin-left: calc((-100vw + 36px) / 2 + (100% / 2));
+		margin-right: calc((-100vw + 36px) / 2 + (100% / 2));
+	}
+
+
 }
 
-.edit-post-visual-editor .editor-post-title {margin: 0px auto;}
+@media (min-width: 1200px) {
+
+	.edit-post-layout .wp-block {width: 100%;}
+
+	body:not(.folded) .edit-post-layout .editor-block-list__block.wp-block[data-align=wide] {
+		width: 120%;
+		max-width: calc(100vw - 160px);
+		margin-left: calc(((-100vw + 160px) + 100%)/2);
+		margin-right: calc(((-100vw + 160px) + 100%)/2);
+
+	}
+
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__block.wp-block[data-align=wide] {
+		width: 120%;
+		max-width: calc(100vw - 440px);
+		margin-left: calc(((-100vw + 440px) + 100%)/2);
+		margin-right: calc(((-100vw + 440px) + 100%)/2);
+	}
+
+	body .edit-post-layout .editor-block-list__block.wp-block[data-align=wide] {
+		width: 120%;
+		max-width: calc(100vw - 36px);
+		margin-left: calc((-100vw + 1218px)/2);
+		margin-right: calc((-100vw + 1218px)/2);
+	}
+
+	body .edit-post-layout.is-sidebar-opened .editor-block-list__block.wp-block[data-align=wide] {
+		width: 120%;
+		max-width: calc(100vw - 316px);
+		margin-left: calc(((-100vw + 316px) + 100%)/2);
+		margin-right: calc(((-100vw + 316px) + 100%)/2);
+	}
+
+}
+
+
+/****************************************************************************************/
+/***************************** font color changes for editor only (frontend color is on body)
+/****************************************************************************************/
+.editor-styles-wrapper div,
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block-paragraph,
+.editor-styles-wrapper .wp-block-quote p,
+.wp-block-heading h1,
+.wp-block-heading h2,
+.wp-block-heading h3,
+.wp-block-heading h4,
+.wp-block-heading h5,
+.wp-block-heading h6 {color: $gray-900;}
+
+.wp-block-pullquote .wp-block-pullquote__citation {color: $gray-500;}
 
 /****************************************************************************************/
 /***************************** cortextoo custom block edits for backend only
@@ -56,24 +194,56 @@
 	width: 100%;
 }
 
+
+//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
+body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
+	width: calc(100vw - 440px);
+	max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
+	margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
+	margin-right: calc((-100vw + 440px) / 2 + (100% / 2));
+}
+
+//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
+body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
+	width: calc(100vw - 316px);
+	max-width: calc(100vw - 316px); //subtract the width of the document options sidebar
+	margin-left: calc((-100vw + 316px) / 2 + (100% / 2));
+	margin-right: calc((-100vw + 316px) / 2 + (100% / 2));
+}
+
+//set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
+body:not(.folded) .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
+	width: calc(100vw - 160px);
+	max-width: calc(100vw - 160px); //subtract the width of the document options sidebar
+	margin-left: calc((-100vw + 160px) / 2 + (100% / 2));
+	margin-right: calc((-100vw + 160px) / 2 + (100% / 2));
+}
+
+//set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
+body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
+	width: calc(100vw - 36px);
+	max-width: calc(100vw - 36px); //subtract the width of the document options sidebar
+	margin-left: calc((-100vw + 36px) / 2 + (100% / 2));
+	margin-right: calc((-100vw + 36px) / 2 + (100% / 2));
+}
+
+
 /****************************************************************************************/
 /***************************** cortextoo core block edits for custom theme
 /****************************************************************************************/
 @import "https://use.typekit.net/uqa4rne.css";
 
-.editor-styles-wrapper {font-size: 2rem;}
+.editor-styles-wrapper,
+.wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
+.wp-block-pullquote blockquote>.editor-rich-text p {font-size: 2rem;}
+
+.editor-styles-wrapper div {font-family: $font-family-base;}
 
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
 	font-size: 2rem;
 	color: $gray-900;
 }
-
-/* line height for specific sections */
-.editor-styles-wrapper p.mce-content-body {
-	line-height: 2;
-}
-
 
 .editor-styles-wrapper .h1,
 .editor-styles-wrapper .h2,
