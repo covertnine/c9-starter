@@ -88,6 +88,10 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 
 		add_theme_support( 'align-wide' );
 
+		add_theme_support('editor-styles');
+
+		add_theme_support( 'responsive-embeds' );
+
 		// Make specific theme colors available in the editor.
 		add_theme_support( 'editor-color-palette', array(
 			array(
