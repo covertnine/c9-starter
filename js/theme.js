@@ -3981,3 +3981,8 @@
 		jQuery('.navbar-top').addClass('navbar-small-mobile');
 
 	} //end small screens
+
+	// fit videos responsively
+	jQuery(function($){
+		$(".entry-content").fitVids();
+	});

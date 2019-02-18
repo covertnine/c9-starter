@@ -47,7 +47,7 @@ body {
 	.page-template-default .page .entry-content,
 	.page-container .entry-header,
 	#full-width-page-wrapper > .container {
-		width: 960px;
+		width: 100%;
 	}
 
 }
@@ -68,7 +68,7 @@ body {
 }
 
 /****************************************************************************************/
-/* WordPress Core Classes + Alignments */
+/* WordPress Core Alignment Classes + Containers */
 /****************************************************************************************/
 
 .entry-content .container .wp-block-pullquote,
@@ -97,6 +97,14 @@ body {
 		width: 100%;
 		max-width: 100vw;
 	}
+
+	.page-template-default .entry-content .alignfull,
+	.entry-content .container .wp-block-embed.alignfull {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
+	}
 }
 
 @media (min-width: 1200px) {
@@ -123,7 +131,6 @@ body {
 
 }
 
-
 .alignleft {
 	display:inline;
 	float:left;
@@ -141,6 +148,22 @@ body {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.entry-content .container .wp-block-image img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.wp-block-image .alignleft {
+	margin-left: 0px;
+	margin-right: 30px;
+}
+
+.wp-block-image .alignright {
+	margin-right: 0px;
+	margin-left: 30px;
 }
 
 .wp-caption {
@@ -351,9 +374,9 @@ nav ul li a {
 .entry-content hr,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	text-align:center;
-	width:80%;
+	width:100%;
 	margin:30px auto;
-	max-width: 300px;
+	max-width: 1140px;
 	border:0;
 	height:3px;
 	width:33%;
@@ -462,10 +485,10 @@ embed,iframe,object {
 
 	.page-template-default .entry-content .wp-block-cover.alignwide,
 	.editor-block-list__block[data-type="core/cover"][data-align="wide"] {
-		width: 120%;
+		width: 100vw;
 		max-width: 100vw;
-		margin-left: -30px;
-		margin-right: -30px;
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
 	}
 
 }
@@ -776,7 +799,8 @@ p.wp-block-subhead {
 	.page-template-default .entry-content > .wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
-		margin: 0px -15px;
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
 	}
 
 }
@@ -787,8 +811,8 @@ p.wp-block-subhead {
 	.page-template-default .entry-content > .wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
-		margin-left: calc((-100vw + 960px)/2);
-		margin-right: calc((-100vw + 960px)/2);
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
 	}
 
 }
@@ -895,11 +919,6 @@ input[type="submit"],
 .mar120NT{margin-top:-120px}
 .mar130NT{margin-top:-130px}
 .mar140NT{margin-top:-140px}
-
-.c9-25{width:25%}
-.c9-50{width:50%}
-.c9-75{width:75%}
-.c9-100{width:100%}
 
 .light,
 .h1.light,
@@ -1107,14 +1126,35 @@ input[type="submit"],
 	}
 }
 
+@media only screen and (min-width: 1px) and (max-width: 768px) {
+	#topnav #loginform p label {
+		padding-right: 5px;
+	}
+
+	#topnav #loginform .login-password {
+		margin-left: 15px;
+	}
+
+	#topnav .container {
+		margin: 0px;
+	}
+
+	#topnav #loginform p .input {max-width: 90px;}
+
+}
+
+
 
 /*navbar*/
+#wrapper-navbar {overflow: hidden;}
+
 .navbar {
 	background-color: $light;
+	padding: 5px 0px;
 }
 
 .navbar-small {
-	height: 55px;
+	max-height: 55px;
 }
 
 .header-navbar {
@@ -1124,6 +1164,14 @@ input[type="submit"],
 .navbar-small .navbar-brand img {
 	max-height: 45px;
 	width: auto;
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: rgba(43,43,43,.77);
+	letter-spacing: .09rem;
 }
 
 @media only screen and (min-width: 1px) {
@@ -1148,20 +1196,25 @@ input[type="submit"],
 		height: 107px;
 	}
 
+	.header-navbar.jumpfix {
+		height: 55px;
+		margin-bottom: 52px;
+	}
 
 }
 
-.navbar-nav li a {
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	line-height: 1;
-	color: rgba(43,43,43,.77);
-	letter-spacing: .09rem;
+@media only screen and (min-width: 992px) {
+	.navbar {
+		max-width: 1024px;
+	}
 }
+
+
 
 /* section heading accents */
 .editor-styles-wrapper .editor-rich-text .section-heading-accent,
-.section-heading-accent {
+.section-heading-accent,
+.entry-content .section-heading-accent {
 	margin: 0px auto;
 	font-size: 2rem;
 	font-family: niveau-grotesk-small-caps, sans-serif;
