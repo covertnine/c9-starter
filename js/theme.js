@@ -3961,19 +3961,20 @@
 	jQuery(window).scroll(function () {
 
 	    var scroll = jQuery(window).scrollTop();
+	    var screenWidth = jQuery(window).width();
 
 	    if (scroll >= 168) {
 		    jQuery('.navbar').addClass('navbar-small fixed-top');
 		    jQuery('.header-navbar').addClass('jumpfix');
 	    }
-	    if (scroll <= 167) {
+	    if ((scroll <= 167) && (screenWidth >= 668)) {
 		    jQuery('.navbar').removeClass('navbar-small fixed-top');
 		    jQuery('.header-navbar').removeClass('jumpfix');
 	    }
 
 	});
 
-	if (jQuery(window).width() <= 767) {
+	if (jQuery(window).width() <= 667) {
 
 		jQuery('.navbar').addClass('navbar-small');
 
@@ -3981,8 +3982,3 @@
 		jQuery('.navbar-top').addClass('navbar-small-mobile');
 
 	} //end small screens
-
-	// fit videos responsively
-	jQuery(function($){
-		$(".entry-content").fitVids();
-	});

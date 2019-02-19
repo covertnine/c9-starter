@@ -33,15 +33,26 @@
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'cortextoo' ); ?></a>
 
-		<nav class="navbar navbar-expand-sm navbar-light">
+		<nav class="navbar navbar-expand-lg navbar-light">
 
 			<div class="container" >
 				<?php
 					the_custom_logo();
 				?>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+
+				<div class="navbar-small-buttons">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search">
+							<i class="fa fa-search"></i>
+							<span class="sr-only"><?php __('Search', 'cortextoo');?></span>
+						</a>
+					</div>
+					<div class="nav-toggle">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div><!-- .nav-toggle-->
+				</div><!-- .navbar-small-buttons-->
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
@@ -49,7 +60,7 @@
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-md',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav nav nav-fill d-flex justify-content-between',
+						'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,

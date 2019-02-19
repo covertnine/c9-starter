@@ -22,7 +22,9 @@ body {font-size: 1.3rem;}
 .wp-block[data-type="core/columns"],
 .wp-block[data-type="core/paragraph"],
 .wp-block[data-type="core/heading"],
-.wp-block[data-type="core/block"] {
+.wp-block[data-type="core/block"],
+.wp-block[data-type="core/button"],
+.wp-block[data-type="core/image"] {
     max-width: 1140px;
 }
 
@@ -139,9 +141,13 @@ body {font-size: 1.3rem;}
 .wp-block-heading h3,
 .wp-block-heading h4,
 .wp-block-heading h5,
-.wp-block-heading h6 {color: $gray-900;}
+.wp-block-heading h6,
+.wp-block-button.is-style-outline .wp-block-button__link {color: $gray-900;}
 
 .wp-block-pullquote .wp-block-pullquote__citation {color: $gray-500;}
+
+.wp-block-button.is-style-squared .wp-block-button__link,
+.wp-block-button .wp-block-button__link {color: $light;}
 
 /****************************************************************************************/
 /***************************** cortextoo custom block edits for backend only
