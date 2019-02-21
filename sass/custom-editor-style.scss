@@ -136,7 +136,9 @@ body {font-size: 1.3rem;}
 /****************************************************************************************/
 /***************************** font color changes for editor only (frontend color is on body)
 /****************************************************************************************/
-.editor-styles-wrapper div,
+.editor-styles-wrapper,
+.editor-styles-wrapper .wp-block-table,
+.editor-styles-wrapper .wp-block-file,
 .editor-post-title__block .editor-post-title__input,
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
