@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'understrap' ) : __( 'Shipping address', 'cortextoo' );
+$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'cortextoo' ) : __( 'Shipping address', 'cortextoo' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 

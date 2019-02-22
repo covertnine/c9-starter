@@ -15,10 +15,6 @@
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
 
-// Adding some contrast background color to footer full widget
-#wrapper-footer-full,
-#wrapper-static-hero { background-color: $gray-200; }
-
 // Necessary WP classes
 .wp-caption { font-size: inherit; }
 
@@ -44,8 +40,8 @@
 .entry-footer span { padding-right: 10px; }
 
 //Woocommerce product gallery slider width fix
-figure.woocommerce-product-gallery__wrapper { 
-  max-width: inherit !important; 
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important;
 }
 
 // Limit featured image size to 100%

@@ -24,19 +24,17 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-7">
+									<p>&copy; <?php echo date("Y"); ?> CEA | <a href="/terms-of-use/">Terms &amp; Conditions</a> | <a href="/privacy-policy/">Privacy Policy</a></p>
+								</div>
+								<div class="col-xs-12 col-sm-5">
+									Sign Up For Emails [email form]
+								</div>
+							</div>
+						</div><!-- .container-->
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->

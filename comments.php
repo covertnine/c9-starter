@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 				if ( 1 === (int)$comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'understrap' ),
+						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'cortextoo' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
@@ -60,11 +60,11 @@ if ( post_password_required() ) {
 				
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'understrap' ) ); ?></div>
+					'cortextoo' ) ); ?></div>
 				<?php }
 					if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'understrap' ) ); ?></div>
+					'cortextoo' ) ); ?></div>
 				<?php } ?>
 
 			</nav><!-- #comment-nav-above -->
@@ -90,11 +90,11 @@ if ( post_password_required() ) {
 				
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'understrap' ) ); ?></div>
+					'cortextoo' ) ); ?></div>
 				<?php }
 					if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'understrap' ) ); ?></div>
+					'cortextoo' ) ); ?></div>
 				<?php } ?>
 
 			</nav><!-- #comment-nav-below -->

@@ -34,9 +34,9 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 
 		// Theme layout settings.
 		$wp_customize->add_section( 'cortextoo_theme_layout_options', array(
-			'title'       => __( 'Theme Layout Settings', 'understrap' ),
+			'title'       => __( 'Theme Layout Settings', 'cortextoo' ),
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Container width and sidebar defaults', 'understrap' ),
+			'description' => __( 'Container width and sidebar defaults', 'cortextoo' ),
 			'priority'    => 160,
 		) );
 
@@ -65,14 +65,14 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 			new WP_Customize_Control(
 				$wp_customize,
 				'cortextoo_container_type', array(
-					'label'       => __( 'Container Width', 'understrap' ),
-					'description' => __( "Choose between Bootstrap's container and container-fluid", 'understrap' ),
+					'label'       => __( 'Container Width', 'cortextoo' ),
+					'description' => __( "Choose between Bootstrap's container and container-fluid", 'cortextoo' ),
 					'section'     => 'cortextoo_theme_layout_options',
 					'settings'    => 'cortextoo_container_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'container'       => __( 'Fixed width container', 'understrap' ),
-						'container-fluid' => __( 'Full width container', 'understrap' ),
+						'container'       => __( 'Fixed width container', 'cortextoo' ),
+						'container-fluid' => __( 'Full width container', 'cortextoo' ),
 					),
 					'priority'    => '10',
 				)
@@ -89,18 +89,18 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 			new WP_Customize_Control(
 				$wp_customize,
 				'cortextoo_sidebar_position', array(
-					'label'       => __( 'Sidebar Positioning', 'understrap' ),
+					'label'       => __( 'Sidebar Positioning', 'cortextoo' ),
 					'description' => __( "Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
-					'understrap' ),
+					'cortextoo' ),
 					'section'     => 'cortextoo_theme_layout_options',
 					'settings'    => 'cortextoo_sidebar_position',
 					'type'        => 'select',
 					'sanitize_callback' => 'cortextoo_theme_slug_sanitize_select',
 					'choices'     => array(
-						'right' => __( 'Right sidebar', 'understrap' ),
-						'left'  => __( 'Left sidebar', 'understrap' ),
-						'both'  => __( 'Left & Right sidebars', 'understrap' ),
-						'none'  => __( 'No sidebar', 'understrap' ),
+						'right' => __( 'Right sidebar', 'cortextoo' ),
+						'left'  => __( 'Left sidebar', 'cortextoo' ),
+						'both'  => __( 'Left & Right sidebars', 'cortextoo' ),
+						'none'  => __( 'No sidebar', 'cortextoo' ),
 					),
 					'priority'    => '20',
 				)

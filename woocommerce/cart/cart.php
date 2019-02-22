@@ -57,7 +57,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-									__( 'Remove this item', 'understrap' ),
+									__( 'Remove this item', 'cortextoo' ),
 									esc_attr( $product_id ),
 									esc_attr( $_product->get_sku() )
 								), $cart_item_key );
@@ -86,7 +86,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						// Backorder notification.
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-							echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
+							echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'cortextoo' ) . '</p>';
 						}
 						?></td>
 

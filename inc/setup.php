@@ -8,7 +8,7 @@
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
-	$content_width = 970; /* pixels */
+	$content_width = 960; /* pixels */
 }
 
 add_action( 'after_setup_theme', 'cortextoo_setup' );
@@ -88,7 +88,7 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 
 		add_theme_support( 'align-wide' );
 
-		add_theme_support('editor-styles');
+		add_theme_support( 'editor-styles' );
 
 		add_theme_support( 'responsive-embeds' );
 
