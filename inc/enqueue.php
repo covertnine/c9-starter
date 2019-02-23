@@ -17,6 +17,8 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 		$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/css/theme.min.css');
 		wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version );
 
+		wp_enqueue_style( 'cortextoo-megamenu', get_stylesheet_directory_uri() . '/css/megamenu.css', array(), $css_version );
+
 		wp_enqueue_script( 'jquery');
 		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array('jquery'), $theme_version, true);
 		//wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), $theme_version, true);

@@ -27,7 +27,7 @@ if ( !empty( $instance['icon_flickr'] ) ) {
 	echo '<li><a href="' . $instance['icon_flickr'] . '" target="_blank" title="Flickr" class="icon-subscribe d-flex align-items-center justify-content-center"><i class="fab fa-flickr"></i><span class="sr-only">Flickr</span></a></li>';
 }
 if ( !empty( $instance['icon_googleplus'] ) ) {
-	echo '<li><a href="' . $instance['icon_googleplus'] . '" target="_blank" title="Google+" class="icon-subscribe d-flex align-items-center justify-content-center"><i class="fab fa-google-plus-g"></i><span class="sr-only">Google+</span></a></li>';
+	echo '<li><a href="' . $instance['icon_googleplus'] . '" target="_blank" title="Google+" class="icon-subscribe d-flex align-items-center justify-content-center"><i class="fab fa-google-plus"></i><span class="sr-only">Google+</span></a></li>';
 }
 if ( !empty( $instance['icon_email'] ) ) {
 	echo '<li><a href="' . $instance['icon_email'] . '" target="_blank" title="Email" class="icon-subscribe d-flex align-items-center justify-content-center"><i class="fab fa-envelope"></i><span class="sr-only">Email Newsletter</span></a></li>';

@@ -10,7 +10,7 @@
 			</figure>
 		<?php } ?>
 			<header class="c9-article-title<?php if ( (has_post_thumbnail()) ) { echo " w-75"; } else { echo " w-100"; } ?>">
-				<span class="entry-title d-block mb-3"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="mt-0"><?php the_title();?></span></a></span>
+				<span class="entry-title d-block mb-2"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="mt-0"><?php the_title();?></span></a></span>
 				<div class="c9-article-date"><span class="c9-article-date-small"><?php cortextoo_widgets_posted_on(); ?></span></div>
 			</header>
 		</article>

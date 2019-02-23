@@ -25,7 +25,7 @@ if ( ! function_exists( 'cortextoo_slbd_count_widgets' ) ) {
 			$widget_classes = 'widget-count-' . count( $sidebars_widgets_count[ $sidebar_id ] );
 			if ( $widget_count % 4 == 0 || $widget_count > 6 || $widget_count % 5 == 0 ) :
 				// Four widgets per row if there are exactly four or more than six
-				$widget_classes .= ' col-md-3';
+				$widget_classes .= ' col-sm-6 col-md-3';
 			elseif ( 6 == $widget_count ) :
 				// If two widgets are published
 				$widget_classes .= ' col-md-2';
