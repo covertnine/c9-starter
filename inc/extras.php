@@ -124,9 +124,9 @@ add_filter('upload_mimes', 'cc_mime_types');
 function ceasearchform( $form ) {
 
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <div><label class="sr-only" for="s">' . __('Search for:') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-    <input type="submit" id="homesearchsubmit" value="'. esc_attr__('Search') .'" />
+    <div class="d-flex p1 justify-content-between align-items-center"><label class="searchlabel for="s">' . __('Search') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="entertainers, photographers, perty rentals &amp; more" />
+    <input type="submit" id="homesearchsubmit" class="btn btn-primary" value="'. esc_attr__('Search') .'" />
     </div>
     </form>';
 

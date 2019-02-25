@@ -1,6 +1,8 @@
 /****************************************************************************************/
 /***************************** Page Setup */
 /****************************************************************************************/
+html,body {height: 100%;}
+
 body {
 	color: $gray-900;
 	font-family: $font-family-base;
@@ -446,6 +448,22 @@ nav ul li a {
 	margin:8px 0 8px 40px;
 }
 
+/****************************************************************************************/
+/* WordPress Inputs + Forms */
+/****************************************************************************************/
+
+::-webkit-input-placeholder {
+	color: #c1c1c1;
+}
+:-moz-placeholder { /* older Firefox*/
+	color: #c1c1c1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: #c1c1c1;
+}
+:-ms-input-placeholder {
+	color: #c1c1c1;
+}
 /****************************************************************************************/
 /* WordPress Search Form */
 /****************************************************************************************/
@@ -1601,7 +1619,7 @@ input[type="submit"],
 	font-weight: $font-weight-base !important;
 	font-size: 3.6rem !important;
 	letter-spacing: .02rem !important;
-	line-height: 1.4;
+	line-height: 1.6;
 	margin: 25px 0px;
 }
 
@@ -1803,6 +1821,38 @@ input[type="submit"],
 	padding-right: 0px;
 }
 
+/****************************************************************************************/
+/* CEA Search Shortcode */
+/****************************************************************************************/
+.home-search .searchlabel {
+	display: inline-block;
+	text-transform: uppercase;
+	color: $light;
+	font-weight: $font-weight-normal;
+	font-size: 3.6rem;
+	letter-spacing: .2rem;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1;
+}
+
+.home-search #searchform {
+	max-width: 1140px;
+	width: 80%;
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.home-search #searchform #s {
+	width: 70%;
+	display: inline-block;
+	padding-left: 30px;
+}
+
+.home-search #searchform #homesearchsubmit {
+	border-radius: 28px;
+}
 /****************************************************************************************/
 /* CEA widget customizations*/
 /****************************************************************************************/
