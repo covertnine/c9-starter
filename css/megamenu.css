@@ -1391,6 +1391,9 @@ ul.mega-sub-menu {padding-left: 0px;}
 		margin: 0px;
 	}
 
+	#mega-menu-wrap-primary.mega-menu-wrap #mega-menu-primary {
+		box-shadow: rgba(0,0,0,.5) 0px 2px 4px;
+	}
 
 	#mega-menu-wrap-primary .mega-menu-toggle {
 		display:-webkit-box;
@@ -1404,12 +1407,14 @@ ul.mega-sub-menu {padding-left: 0px;}
 		justify-content: flex-end !important;
 	}
 
+	/* hide menus on first load since they're stacked now */
 	#mega-menu-wrap-primary #mega-menu-primary {
 		visibility:hidden;
 		display: none;
 	}
 
-	.mega-menu-primary-mobile-open #mega-menu-wrap-primary #mega-menu-primary {
+	/* styling for drop down now that menu has been clicked */
+	 .mega-menu-primary-mobile-open #mega-menu-wrap-primary #mega-menu-primary {
 		visibility: visible;
 		display: block;
 		position: absolute;
@@ -1419,10 +1424,15 @@ ul.mega-sub-menu {padding-left: 0px;}
 		z-index: 999;
 		background-color: #fff;
 		padding: 0px;
+		top: 60px;
+	 }
+
+	/* re-position nav for fixed top menu*/
+	.mega-menu-primary-mobile-open .navbar.fixed-top #mega-menu-wrap-primary #mega-menu-primary {
 		top: 32px;
 	}
 
-	/* default nav drop down positioning from top of .nav */
+	/* default nav drop down positioning from top of .nav for the mega menu second drop down */
 	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu,
 	.navbar #mega-menu-wrap-primary #mega-menu-primary > ul.mega-sub-menu {
 		top: 110px;
@@ -1460,6 +1470,11 @@ ul.mega-sub-menu {padding-left: 0px;}
 	#mega-menu-wrap-primary {
 		width: 80%;
 	}
+
+	.mega-menu-wrap #mega-menu-primary {
+		box-shadow: none;
+	}
+
 
 	/* first row of nav above tablet size */
 	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
@@ -1508,5 +1523,4 @@ ul.mega-sub-menu {padding-left: 0px;}
 	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
 		top: 55px;
 	}
-
 }
