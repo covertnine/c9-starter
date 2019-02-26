@@ -1384,7 +1384,13 @@ ul.mega-sub-menu {padding-left: 0px;}
 }
 
 
-@media only screen and (min-width: 1px) and (max-width: 991.98px) {
+@media only screen and (min-width: 1px) and (max-width: 991px) {
+
+	.navbar-small.fixed-top #mega-menu-wrap-primary,
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary {
+		margin: 0px;
+	}
+
 
 	#mega-menu-wrap-primary .mega-menu-toggle {
 		display:-webkit-box;
@@ -1407,12 +1413,13 @@ ul.mega-sub-menu {padding-left: 0px;}
 		visibility: visible;
 		display: block;
 		position: absolute;
-		right: -39px;
+		right: -15px;
 		width: 100vw;
+		max-width: 540px;
 		z-index: 999;
 		background-color: #fff;
 		padding: 0px;
-		top: 60px;
+		top: 32px;
 	}
 
 	/* default nav drop down positioning from top of .nav */
@@ -1433,12 +1440,18 @@ ul.mega-sub-menu {padding-left: 0px;}
 	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
 		padding: 0px;
 		line-height: 7;
-		height: 105px;
-		line-height: 105px;
+		height: 55px;
+		line-height: 55px;
 	}
 
 
 	.navbar-brand {margin-right: auto;}
+
+	/* second drop down */
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
+		top: 105px;
+	}
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -1491,9 +1504,9 @@ ul.mega-sub-menu {padding-left: 0px;}
 		height: 100px;
 	}
 
-}
+	/* small nav drop down positioning from top of .nav */
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
+		top: 55px;
+	}
 
-/* small nav drop down positioning from top of .nav */
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
-	top: 55px;
 }
