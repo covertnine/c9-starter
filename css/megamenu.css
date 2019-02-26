@@ -1331,7 +1331,7 @@
 
 .navbar-small.fixed-top #mega-menu-wrap-primary,
 .navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary {
-	margin: -5px auto 0px auto;
+	margin: -5px auto;
 }
 
 
@@ -1375,7 +1375,7 @@ ul.mega-sub-menu {padding-left: 0px;}
 	color: rgba(43,43,43,.77);
 }
 
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:focus, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:focus {
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:focus, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:focus, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover {
 	color: #006A30;
 }
 
@@ -1507,20 +1507,26 @@ ul.mega-sub-menu {padding-left: 0px;}
 		height: 55px;
 	}
 
-	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-toggle-on > a.mega-menu-link,
-	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-current_page_item > a.mega-menu-link {
-		height: 55px;
-	}
-
 	/* active nav item or mega menu dropdown open on nav item parent */
 	.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-toggle-on > a.mega-menu-link,
 	.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-current_page_item > a.mega-menu-link {
-		border-bottom: solid 5px #006A30;
 		height: 100px;
+	}
+
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-toggle-on > a.mega-menu-link,
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-current_page_item > a.mega-menu-link {
+		height: 55px;
 	}
 
 	/* small nav drop down positioning from top of .nav */
 	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
 		top: 55px;
 	}
+}
+
+/* active nav item or mega menu dropdown open on nav item parent */
+.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-toggle-on > a.mega-menu-link,
+.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-current_page_item > a.mega-menu-link {
+	border-bottom: solid 5px #006A30;
+	color: #006A30;
 }
