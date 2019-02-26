@@ -47,11 +47,11 @@
 							<span class="sr-only"><?php __('Search', 'cortextoo');?></span>
 						</a>
 					</div>
-					<div class="nav-toggle">
+					<!--<div class="nav-toggle">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<i class="fa fa-bars"></i>
 						</button>
-					</div><!-- .nav-toggle-->
+					</div> .nav-toggle-->
 				</div><!-- .navbar-small-buttons-->
 
 				<!-- The WordPress Menu goes here -->

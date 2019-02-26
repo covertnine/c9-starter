@@ -77,10 +77,6 @@
 	text-decoration:none;
 }
 
-#mega-menu-wrap-primary #mega-menu-primary {
-	visibility:visible;
-}
-
 #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
 	cursor:pointer;
 	display:inline;
@@ -1203,15 +1199,6 @@
 	padding:0;
 }
 
-@media only screen and (max-width: 600px) {
-	#mega-menu-wrap-primary .mega-menu-toggle {
-		display:-webkit-box;
-		display:-ms-flexbox;
-		display:-webkit-flex;
-		display:flex;
-	}
-}
-
 #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-left,#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-center,#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right {
 	display:-webkit-box;
 	display:-ms-flexbox;
@@ -1341,12 +1328,6 @@
 /****************************************************************************************/
 /* C9 Mega Menu Specifics */
 /****************************************************************************************/
-#mega-menu-wrap-primary,
-#mega-menu-wrap-primary #mega-menu-primary {
-	padding: 0px;
-	margin: 0px auto;
-	text-align: center;
-}
 
 .navbar-small.fixed-top #mega-menu-wrap-primary,
 .navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary {
@@ -1371,52 +1352,17 @@ ul.mega-sub-menu {padding-left: 0px;}
 	padding: 15px;
 }
 
-/****************************************************************************************/
-/* CEA Mega Menu Specifics */
-/****************************************************************************************/
-.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
-	padding: 0px;
-	line-height: 7;
-	margin: 0px 30px;
-	height: 105px;
-	line-height: 105px;
-}
-
-/* small navbar after scrolled */
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
-	line-height: 55px;
-	height: 55px;
-}
-
-/* active nav item or mega menu dropdown open on nav item parent */
-.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-toggle-on > a.mega-menu-link,
-.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-current_page_item > a.mega-menu-link {
-	border-bottom: solid 5px #006A30;
-	height: 100px;
-}
-
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-toggle-on > a.mega-menu-link,
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-current_page_item > a.mega-menu-link {
-	height: 55px;
-}
-
 /* position properly below navigation for first tier only*/
 .navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu,
 .navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
 	padding-left: 15px;
 }
 
+
 /* default nav drop down positioning from top of .nav */
 .navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu,
 .navbar #mega-menu-wrap-primary #mega-menu-primary > ul.mega-sub-menu {
-	top: 110px;
 	box-shadow: rgba(0,0,0,.5) 0px 2px 4px;
-}
-
-/* small nav drop down positioning from top of .nav */
-.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
-	top: 55px;
 }
 
 /* typography for dropdown mega menu link text */
@@ -1437,11 +1383,117 @@ ul.mega-sub-menu {padding-left: 0px;}
 	padding: 0px;
 }
 
-@media only screen and (min-width: 768px) {
 
+@media only screen and (min-width: 1px) and (max-width: 991.98px) {
+
+	#mega-menu-wrap-primary .mega-menu-toggle {
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:-webkit-flex;
+		display:flex;
+	}
+
+
+	.navbar>.container, .navbar>.container-fluid {
+		justify-content: flex-end !important;
+	}
+
+	#mega-menu-wrap-primary #mega-menu-primary {
+		visibility:hidden;
+		display: none;
+	}
+
+	.mega-menu-primary-mobile-open #mega-menu-wrap-primary #mega-menu-primary {
+		visibility: visible;
+		display: block;
+		position: absolute;
+		right: -39px;
+		width: 100vw;
+		z-index: 999;
+		background-color: #fff;
+		padding: 0px;
+		top: 60px;
+	}
+
+	/* default nav drop down positioning from top of .nav */
+	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu,
+	.navbar #mega-menu-wrap-primary #mega-menu-primary > ul.mega-sub-menu {
+		top: 110px;
+	}
+
+	.mega-menu-primary-mobile-open #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item,
+	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		text-align: center;
+		margin: 0px auto;
+		line-height: 1.5;
+		width: 100%;
+	}
+
+	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		padding: 0px;
+		line-height: 7;
+		height: 105px;
+		line-height: 105px;
+	}
+
+
+	.navbar-brand {margin-right: auto;}
+}
+
+@media only screen and (min-width: 992px) {
+
+	/* row width for first row */
 	#mega-menu-wrap-primary {
 		width: 80%;
 	}
 
+	/* first row of nav above tablet size */
+	.navbar #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		padding: 0px;
+		margin: 0px 30px;
+		line-height: 7;
+		height: 105px;
+		line-height: 105px;
+	}
+
+	.navbar>.container, .navbar>.container-fluid {
+		justify-content: space-between !important;
+	}
+
+	#mega-menu-wrap-primary,
+	#mega-menu-wrap-primary #mega-menu-primary {
+		padding: 0px;
+		margin: 0px auto;
+		text-align: center;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary {
+		visibility:visible;
+		display: block;
+	}
+
+	/* small navbar after scrolled */
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		line-height: 55px;
+		height: 55px;
+	}
+
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-toggle-on > a.mega-menu-link,
+	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-current_page_item > a.mega-menu-link {
+		height: 55px;
+	}
+
+	/* active nav item or mega menu dropdown open on nav item parent */
+	.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-toggle-on > a.mega-menu-link,
+	.navbar #mega-menu-wrap-primary #mega-menu-primary .mega-current_page_item > a.mega-menu-link {
+		border-bottom: solid 5px #006A30;
+		height: 100px;
+	}
+
 }
 
+/* small nav drop down positioning from top of .nav */
+.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
+	top: 55px;
+}

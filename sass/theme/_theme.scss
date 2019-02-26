@@ -1824,35 +1824,83 @@ input[type="submit"],
 /****************************************************************************************/
 /* CEA Search Shortcode */
 /****************************************************************************************/
-.home-search .searchlabel {
-	display: inline-block;
-	text-transform: uppercase;
-	color: $light;
-	font-weight: $font-weight-normal;
-	font-size: 3.6rem;
-	letter-spacing: .2rem;
-	margin: 0px;
-	padding: 0px;
-	line-height: 1;
-}
-
-.home-search #searchform {
-	max-width: 1140px;
-	width: 80%;
-	display: block;
-	margin: 30px auto;
-	text-align: center;
-}
-
-.home-search #searchform #s {
-	width: 70%;
-	display: inline-block;
-	padding-left: 30px;
-}
-
 .home-search #searchform #homesearchsubmit {
 	border-radius: 28px;
 }
+
+@media only screen and (min-width: 1px) {
+
+	.home-search .searchlabel {
+		display: inline-block;
+		text-transform: uppercase;
+		color: $light;
+		font-weight: $font-weight-normal;
+		font-size: 3.6rem;
+		letter-spacing: .2rem;
+		margin: 0px;
+		padding: 0px;
+		line-height: 1;
+	}
+
+	.home-search #searchform {
+		max-width: 1140px;
+		width: 100%;
+		display: block;
+		margin: 30px auto;
+		text-align: center;
+	}
+
+	.search-fields-wrap {
+		flex-direction: column;
+	}
+
+	.home-search #searchform #s {
+		margin: 30px 0px;
+		display: block;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 576px) {
+	.home-search #searchform {
+		max-width: 1140px;
+		width: 80%;
+		display: block;
+		margin: 30px auto;
+		text-align: center;
+	}
+
+	.home-search #searchform #s {
+		width: 100%;
+		display: inline-block;
+		padding-left: 30px;
+	}
+
+	.home-search #searchform #homesearchsubmit {margin-top: 0px;}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.search-fields-wrap {
+		flex-direction: row;
+	}
+
+	.home-search .searchlabel {
+		font-size: 3.6rem;
+		margin-right: 20px;
+	}
+
+	.home-search #searchform #s {
+		width: 80%;
+	}
+
+	.home-search #searchform #homesearchsubmit {margin-left: 20px;}
+
+
+}
+
 /****************************************************************************************/
 /* CEA widget customizations*/
 /****************************************************************************************/
