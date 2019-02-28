@@ -50,9 +50,3 @@
 
 .text-black-50 { color: rgba($black, .5) !important; }
 .text-white-50 { color: rgba($white, .5) !important; }
-
-// Misc
-
-.text-hide {
-  @include text-hide();
-}

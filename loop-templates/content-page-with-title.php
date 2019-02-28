@@ -8,7 +8,18 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="entry-content no-entry-title">
+	<header class="entry-header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</div>
+			</div>
+		</div>
+	</header><!-- .entry-header -->
+
+
+	<div class="entry-content">
 
 		<?php the_content(); ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width No Title Page
+ * Template Name: Full Width With Title Page
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
@@ -16,7 +16,7 @@ get_header();
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'loop-templates/content', 'page-no-title' ); ?>
+			<?php get_template_part( 'loop-templates/content', 'page-with-title' ); ?>
 
 
 		<?php endwhile; // end of the loop. ?>

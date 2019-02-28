@@ -7,7 +7,6 @@
  * @package cortextoo
  */
 
-$container = get_theme_mod( 'cortextoo_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -21,61 +20,54 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
 </head>
 
 <body <?php body_class(); ?>>
 
 <div class="hfeed site" id="page">
 
-	<!-- ******************* The Navbar Area ******************* -->
+	<?php include( locate_template( 'inc/topnav.php' ) ); ?>
+
 	<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'cortextoo' ); ?></a>
 
-		<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-light">
 
-		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
-		<?php endif; ?>
+				<?php
+					the_custom_logo();
+				?>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				<div class="navbar-small-buttons">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search">
+							<i class="fa fa-search"></i>
+							<span class="sr-only"><?php __('Search', 'cortextoo');?></span>
+						</a>
+					</div>
+					<!--<div class="nav-toggle">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div> .nav-toggle-->
+				</div><!-- .navbar-small-buttons-->
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse justify-content-end',
+						'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-md',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav nav nav-fill nav-container-width',
+						'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
 						'walker'          => new cortextoo_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
-			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 

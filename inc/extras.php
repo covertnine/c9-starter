@@ -91,15 +91,15 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 		}
 		?>
 				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
+					<h2 class="sr-only"><?php _e( 'Post navigation', 'cortextoo' ); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
 
 							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'cortextoo' ) );
 							}
 							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'cortextoo' ) );
 							}
 						?>
 					</div><!-- .nav-links -->
@@ -108,3 +108,29 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 		<?php
 	}
 }
+
+/**
+	 allow svg uploads
+*/
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+/*
+	add shortcode for search form on homepage
+*/
+function ceasearchform( $form ) {
+
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+    <div class="d-flex p1 justify-content-between align-items-center search-fields-wrap"><label class="searchlabel for="s">' . __('Search') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="entertainers, photographers, perty rentals &amp; more" />
+    <input type="submit" id="homesearchsubmit" class="btn btn-primary" value="'. esc_attr__('Search') .'" />
+    </div>
+    </form>';
+
+    return $form;
+}
+
+add_shortcode('ceasearch', 'ceasearchform');

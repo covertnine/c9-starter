@@ -28,7 +28,7 @@ $container   = get_theme_mod( 'cortextoo_container_type' );
 						
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'understrap' ),
+							 esc_html__( 'Search Results for: %s', 'cortextoo' ),
 								'<span>' . get_search_query() . '</span>' ); ?></h1>
 
 					</header><!-- .page-header -->

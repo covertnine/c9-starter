@@ -17,11 +17,15 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 		$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/css/theme.min.css');
 		wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version );
 
+		wp_enqueue_style( 'cortextoo-megamenu', get_stylesheet_directory_uri() . '/css/megamenu.css', array(), $css_version );
+
 		wp_enqueue_script( 'jquery');
-		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), $theme_version, true);
+		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array('jquery'), $theme_version, true);
+		//wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), $theme_version, true);
 
 		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/js/theme.min.js');
-		wp_enqueue_script( 'cortextoo-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
+		wp_enqueue_script( 'cortextoo-scripts', get_template_directory_uri() . '/js/theme.min.js', array('jquery'), $js_version, true );
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
@@ -29,3 +33,13 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 } // endif function_exists( 'cortextoo_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'cortextoo_scripts' );
+
+/**
+ * Remove emoji specific code and styling
+ */
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
