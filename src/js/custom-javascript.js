@@ -3,9 +3,6 @@
 		//use small nav for mobile
 		jQuery('.navbar').addClass('navbar-small');
 
-		// add class to top for mobile
-		jQuery('.navbar-top').addClass('navbar-small-mobile');
-
 		jQuery(window).scroll(function () {
 
 			//scroll position variable
