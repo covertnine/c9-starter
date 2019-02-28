@@ -7,12 +7,9 @@ var cssnano = require( 'gulp-cssnano' );
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
-var merge2 = require( 'merge2' );
 var imagemin = require( 'gulp-imagemin' );
 var ignore = require( 'gulp-ignore' );
 var rimraf = require( 'gulp-rimraf' );
-var clone = require( 'gulp-clone' );
-var merge = require( 'gulp-merge' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
@@ -20,6 +17,13 @@ var cleanCSS = require( 'gulp-clean-css' );
 var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var babel = require('gulp-babel');
+var del = require('del');
+var webpack_stream = require('webpack-stream')
+var webpack_config = require('./webpack.config.js');
+var vinylPaths = require('vinyl-paths');
+
+
 var browserSyncOptions = {
                     proxy: "covert-nine-core.local",
                     notify: false
@@ -52,12 +56,23 @@ gulp.task( 'sass', function() {
     return stream;
 });
 
+gulp.task('clean', () => {
+    return gulp.src(paths.dev + '/js/custom-javascript.bundle.js')
+        .pipe(vinylPaths(del));
+});
+
+gulp.task('webpack', function () {
+    return webpack_stream(webpack_config)
+    .pipe(gulp.dest(paths.dev + '/js/'));
+});
+
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task( 'watch', function() {
     gulp.watch( paths.sass + '/**/*.scss', ['styles'] );
-    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], ['scripts'] );
+    gulp.watch([paths.dev + '/js/custom-javascript.js'], ['webpack'] )
+    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], ['webpack', 'scripts'] );
 
     //Inside the watch task.
     gulp.watch( paths.imgsrc + '/**', ['imagemin-watch'] );
@@ -142,6 +157,8 @@ gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 gulp.task( 'scripts', function() {
     var scripts = [
 
+        paths.node + 'babel-polyfill/dist/polyfill.js',
+
         // Start - All BS4 stuff
         paths.dev + '/js/bootstrap4/bootstrap.js',
 
@@ -149,12 +166,15 @@ gulp.task( 'scripts', function() {
 
         paths.dev + '/js/skip-link-focus-fix.js',
 
+        paths.node + 'magnific-popup/dist/*.js',
+
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
-        paths.dev + '/js/custom-javascript.js'
+        paths.dev + '/js/custom-javascript.bundle.js'
     ];
   gulp.src( scripts )
-    .pipe( concat( 'theme.min.js' ) )
+    .pipe(babel({presets: ['es2015']}))
+    .pipe( gulp.dest( 'theme.min.js' ) )
     .pipe( uglify() )
     .pipe( gulp.dest( paths.js ) );
 
