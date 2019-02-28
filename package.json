@@ -30,7 +30,6 @@
     "@babel/core": "^7.3.4",
     "bootstrap": "4.1.0",
     "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
     "fitvids": "^2.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "3.9.1",
@@ -58,12 +57,15 @@
     "parallax-js": "^3.1.0",
     "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
-    "undescores-for-npm": "^1.0.0",
-    "vinyl-paths": "^2.1.0",
-    "webpack-stream": "^5.2.1"
+    "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
-    "validator": "^10.7.0"
+    "del": "^3.0.0",
+    "gulp-print": "^5.0.0",
+    "gulp-util": "^3.0.8",
+    "validator": "^10.7.0",
+    "vinyl-paths": "^2.1.0",
+    "webpack-stream": "^5.2.1"
   }
 }

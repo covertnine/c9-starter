@@ -1,4 +1,6 @@
-console.log('cool')
+// var Parallax = require('parallax-js')
+// var scene = document.getElementById('wrapper-footer-full');
+// var parallaxInstance = new Parallax(scene);
 
 if (jQuery(window).width() <= 667) {
 
@@ -30,7 +32,7 @@ if (jQuery(window).width() <= 667) {
 		    }
 		});
 
-	} else { //end small screens
+    } else { //end small screens
 
 		jQuery(window).scroll(function () {
 
