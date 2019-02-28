@@ -25,7 +25,7 @@ var vinylPaths = require('vinyl-paths');
 
 
 var browserSyncOptions = {
-                    proxy: "cea.local",
+                    proxy: "covert-nine-core.local",
                     notify: false
                 };
 

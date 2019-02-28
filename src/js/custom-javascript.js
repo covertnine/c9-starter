@@ -1,3 +1,5 @@
+console.log('cool')
+
 if (jQuery(window).width() <= 667) {
 
 		//use small nav for mobile
