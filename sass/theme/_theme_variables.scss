@@ -1,15 +1,17 @@
 // cortextoo
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
-:root {font-family: Niveau-Grotesk, times, serif;}
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,400i,600,700|Oswald:300,400,700');
+
+:root {font-family: 'Josefin Sans', sans-serif;}
 
 // Typography
-$headings-font-family: Niveau-Grotesk, 'helvetica neue', helvetica, sans-serif;
+$headings-font-family: 'Oswald', 'helvetica neue', helvetica, sans-serif;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: Niveau-Grotesk, sans-serif;
-$font-family-base: Niveau-Grotesk, serif;
+$font-family-sans-serif: 'Josefin Sans', sans-serif;
+$font-family-base: 'Josefin Sans', serif;
 
-$line-height-base: 2;
+$line-height-base: 1.6;
 
 $display1-size: 8rem;
 $display1-weight: 700;
@@ -34,7 +36,7 @@ $enable-rounded: false;
 
 
 // Colors
-$primary: #006A30;
+$primary: #121212;
 $secondary: #D548CA;
 $success: #21A77A;
 $info: #F7F7F9;
