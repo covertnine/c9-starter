@@ -1222,12 +1222,15 @@ input[type="submit"],
 }
 
 #wrapper-footer .site-footer {
-	text-transform: uppercase;
 	font-size: 1.5rem;
 	letter-spacing: .061rem;
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
+}
+
+#wrapper-footer .site-footer p {
+	text-transform: uppercase;
 }
 
 #wrapper-footer .site-footer a {
@@ -1249,6 +1252,50 @@ input[type="submit"],
 
 .footer-widget p {
 	line-height: 1.6;
+}
+
+/****************************************************************************************/
+/* MailChimp Sign Up Forms
+/****************************************************************************************/
+
+/* all mailchimp forms*/
+#mc_embed_signup input[type="email"] {
+	background: #FFFFFF;
+	border: 1px solid rgba(43,43,43,0.77);
+	height: auto;
+	padding: 8px;
+	color: $dark;
+	font: normal 1.4rem/1.1 $font-family-base;
+	letter-spacing: .057rem;
+	max-width: 85px;
+}
+
+#mc_embed_signup label {margin-right: 10px;}
+
+#mc_embed_signup input[type="submit"] {
+	background-color: $secondary;
+	padding: 1rem 1.4rem .8rem 1.7rem;;
+	font-size: 1.4rem;
+	line-height: 1;
+	border-radius: 0;
+	display: inline-block;
+	width: auto;
+	margin: 0px 0px 0px -5px;
+	transition: opacity .3s;
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+	opacity: .8;
+}
+
+#mc_embed_signup #mce-responses {
+	display: block;
+}
+
+/* footer mailchimp form*/
+.site-footer #mc_embed_signup input[type="email"] {
+	display: inline-block;
+
 }
 
 /****************************************************************************************/
@@ -1356,7 +1403,7 @@ input[type="submit"],
 .has-color-green-color {color: $primary;}
 .has-color-pink-color {color: $secondary;}
 .has-color-white-color {color: $light;}
-.has-color-black-color {color: #000000;}
+.has-color-black-color {color: $dark;}
 .has-color-gray-color {color: $gray-900;}
 
 .bg-primary {background-color: $primary;}

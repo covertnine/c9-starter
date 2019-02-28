@@ -1520,7 +1520,7 @@ ul.mega-sub-menu {padding-left: 0px;}
 
 	/* small nav drop down positioning from top of .nav */
 	.navbar-small.fixed-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
-		top: 55px;
+		top: 53px;
 	}
 }
 
