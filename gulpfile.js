@@ -148,7 +148,7 @@ gulp.task( 'scripts', function() {
         // End - All BS4 stuff
 
         paths.dev + '/js/skip-link-focus-fix.js',
-
+		paths.dev + '/js/jquery.magnific-popup.min.js',
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
@@ -201,6 +201,11 @@ gulp.task( 'copy-assets', function() {
 // _s JS files into /src/js
     gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
         .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// magnific
+	gulp.src( paths.node + 'magnific-popup/dist/jquery.magnific-popup.min.js' )
+		.pipe( gulp.dest( paths.dev + '/js' ) );
+
 
 // Copy Popper JS files
     gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
