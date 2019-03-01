@@ -88,7 +88,7 @@ body {font-size: 1.3rem;}
 		width: 100%;
 		max-width: 1140px;
 		margin: 0px auto;
-	}
+	}1
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
 	.wp-block[data-align=full],
@@ -204,6 +204,19 @@ body {font-size: 1.3rem;}
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	// move the custom mover to the top so its not hidden
+	body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] > .editor-block-mover {
+		top: -44px;
+		left: auto;
+		right: 0px;
+		width: 86px;
+		height: 24px;
+		opacity: 1;
+	}
+
+	body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] > .editor-block-mover .editor-block-mover__control {float: left;}
+
 }
 
 @media only screen and (min-width: 992px) {
