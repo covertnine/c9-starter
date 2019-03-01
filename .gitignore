@@ -45,6 +45,10 @@
 .*
 ~*
 
+js/theme.js
+js/theme.min.js
+src/js/custom-javascript.bundle.js
+
 # ignore node/grunt dependency directories
 node_modules/
 

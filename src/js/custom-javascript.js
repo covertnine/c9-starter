@@ -1,5 +1,9 @@
-
 	if (jQuery(window).width() <= 667) {
+
+		// var Parallax = require('parallax-js')
+		// var scene = document.getElementById('wrapper-footer-full');
+		// var parallaxInstance = new Parallax(scene);
+
 
 		//use small nav for mobile
 		jQuery('.navbar').addClass('navbar-small');
@@ -29,7 +33,7 @@
 		    }
 		});
 
-	} else { //end small screens
+    } else { //end small screens
 
 		jQuery(window).scroll(function () {
 
