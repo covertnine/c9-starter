@@ -57,7 +57,7 @@ gulp.task( 'sass', function() {
 });
 
 gulp.task('clean', () => {
-    return gulp.src(paths.dev + '/js/custom-javascript.bundle.js')
+    return gulp.src(paths.dev + '/js/custom-javascript.js')
         .pipe(vinylPaths(del));
 });
 
@@ -168,7 +168,7 @@ gulp.task( 'scripts', function() {
         paths.node + 'magnific-popup/dist/*.js',
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
-        paths.dev + '/js/custom-javascript.bundle.js'
+        paths.dev + '/js/custom-javascript.js'
     ];
   gulp.src( scripts )
     .pipe(babel({presets: ['es2015']}))
