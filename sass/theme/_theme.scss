@@ -1828,6 +1828,133 @@ input[type="submit"],
 
 }
 
+
+/****************************************************************************************/
+/* Gravity Forms
+/****************************************************************************************/
+
+.cortextoo .gform_wrapper label.gfield_label,
+.cortextoo .gform_wrapper legend.gfield_label {
+	font-family: $font-family-base;
+	font-size: 1.8rem;
+	line-height: 1.1;
+	font-weight: 500;
+	letter-spacing: .00094rem;
+	color: #2b2b2b;
+	margin-top: 8px;
+}
+
+.cortextoo .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.cortextoo .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.cortextoo .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox],
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio] {margin-top: 0px;}
+
+.cortextoo .gform_wrapper .gfield_time_hour,
+.cortextoo .gform_wrapper .gfield_time_minute,
+.cortextoo .gform_wrapper .gfield_time_hour i,
+.cortextoo .gform_wrapper .gfield_time_minute i,
+.cortextoo .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+.cortextoo .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label,
+.cortextoo .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label,
+.cortextoo .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.cortextoo .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label,
+.cortextoo .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+.cortextoo .gform_wrapper .gfield_time_ampm,
+.cortextoo .gform_wrapper .gfield_time_hour,
+.cortextoo .gform_wrapper .gfield_time_minute {
+	line-height: 1.1;
+	font-size: 1.8rem;
+	margin-top: 1px;
+}
+
+.cortextoo .gform_wrapper input[type="text"],
+.cortextoo .gform_wrapper textarea {
+	line-height: 1;
+	font-size: 1.8rem;
+	font-family: $font-family-base;
+	border: 1px solid rgba(151,151,151,1);
+}
+
+.cortextoo .gform_wrapper input[type="text"] {
+	height: 30px;
+}
+
+
+.cortextoo .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	padding: 2px 4px;
+}
+
+.cortextoo .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
+	border-radius: 0px;
+	font-size: 1.6rem;
+	height: 30px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	background: #fff;
+	padding-left: 4px;
+}
+
+.cortextoo .gform_button.button {
+	padding:7px 30px;
+	width:auto;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.2rem;
+	font-family: $font-family-base;
+	font-size:1.2rem;
+	line-height:1.2rem;
+	font-weight:400;
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+	border-radius: 34px;
+	background-color: $dark;
+	color: $light;
+	cursor: pointer;
+	transition: .4s opacity;
+}
+
+.cortextoo .gform_button.button:hover {
+	opacity: .8;
+}
+
+.cortextoo .entry-content .gfield_checkbox li {margin-top: 0px;}
+
+.cortextoo .gform_wrapper .left_label textarea {margin-top: 8px;}
+
+@media only screen and (min-width: 641px) {
+	.cortextoo .gform_wrapper .gform_footer input.button,
+	.cortextoo .gform_wrapper .gform_footer input[type=submit],
+	.cortextoo .gform_wrapper .gform_page_footer input.button,
+	.cortextoo .gform_wrapper .gform_page_footer input[type=submit] {
+		font-size:1.2rem;
+	}
+	.cortextoo .gform_wrapper .gform_footer input.button:hover,
+	.cortextoo .gform_wrapper .gform_footer input[type=submit]:hover,
+	.cortextoo .gform_wrapper .gform_page_footer input.button:hover,
+	.cortextoo .gform_wrapper .gform_page_footer input[type=submit]:hover {
+		opacity: .8;
+	}
+
+
+}
+
+@media only screen and (min-width: 768px) {
+	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
+		font-size: 1.8rem;
+	}
+}
+
 /****************************************************************************************/
 /* Utility Classes
 /****************************************************************************************/
@@ -2044,7 +2171,7 @@ input[type="submit"],
 
 @media only screen and (min-width: 1px) and (max-width: 767px) {
 
-	#topnav {padding: 10px 0px;}
+	#topnav {padding: 10px 0px 0px 0px;}
 
 	#topnav .container {
 		padding-right: 0px;
