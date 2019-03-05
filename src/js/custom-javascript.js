@@ -82,16 +82,30 @@
 
 		var items = [];
 		var firstItem = $(this).attr("href");
+		var firstCaption = $(this).attr("title");
 
 		items.push({
-			src: firstItem
+			src: firstItem,
+			title: firstCaption
 		});
 
-		$(this).parent().parent().parent().find('a').each(function () {
-
+		//items after
+		$(this).parent().parent().nextAll().children().find('a').each(function () {
 			var imageLink = $(this).attr('href');
+			var imageCaption = $(this).attr('title');
 			items.push({
-				src: imageLink
+				src: imageLink,
+				title: imageCaption
+			});
+		});
+
+		//items before
+		$(this).parent().parent().prevAll().children().find('a').each(function () {
+			var imageLink = $(this).attr('href');
+			var imageCaption = $(this).attr('title');
+			items.push({
+				src: imageLink,
+				title: imageCaption
 			});
 		});
 

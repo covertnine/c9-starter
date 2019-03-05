@@ -59,6 +59,7 @@ body {
 
 	.container-narrow {
 		width: 960px;
+		margin: 0px auto;
 	}
 
 	.page-template-default .page .entry-content,
@@ -517,6 +518,70 @@ nav ul li a {
 
 .widget_search .search-submit:hover {
 	box-shadow:none;
+}
+
+/* full screen search form */
+#search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+  	padding: 100px;
+  	z-index: -1;
+	background-color:rgba(255, 255, 255, 0.95);
+}
+
+#search.open {
+	position: fixed;
+    opacity: 1;
+    height: 100%;
+    overflow: visible;
+    z-index: 1053;
+}
+
+#search input[type="search"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: 2.8rem;
+    line-height: 1;
+    text-align: left;
+    margin: -51px auto 0px auto;
+    padding: 10px 20px;
+    outline: none;
+	background:rgba(255, 255, 255,.7);
+	font-family: $font-family-base;
+	border: 1px solid rgba(151,151,151,1);
+}
+
+#search .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#search .search-close {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+	opacity: 1;
+	padding: 12px 15px;
+	font-size: 2.7rem;
+	line-height: 1;
+	z-index: 1055;
+	color: $light;
+	background-color: $primary;
 }
 
 /****************************************************************************************/
@@ -1699,6 +1764,7 @@ embed,iframe,object {
 /****************************************************************************************/
 /* buttons
 /****************************************************************************************/
+.btn,
 .button,
 input[type="submit"],
 .entry-content .btn,
@@ -1834,7 +1900,9 @@ input[type="submit"],
 /****************************************************************************************/
 
 .cortextoo .gform_wrapper label.gfield_label,
-.cortextoo .gform_wrapper legend.gfield_label {
+.cortextoo .gform_wrapper legend.gfield_label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper legend.gfield_label {
 	font-family: $font-family-base;
 	font-size: 1.8rem;
 	line-height: 1.1;
@@ -1849,7 +1917,13 @@ input[type="submit"],
 .cortextoo .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
 .cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
 .cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox],
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio] {margin-top: 0px;}
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio] {margin-top: 0px;}
 
 .cortextoo .gform_wrapper .gfield_time_hour,
 .cortextoo .gform_wrapper .gfield_time_minute,
@@ -1863,31 +1937,50 @@ input[type="submit"],
 .cortextoo .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
 .cortextoo .gform_wrapper .gfield_time_ampm,
 .cortextoo .gform_wrapper .gfield_time_hour,
-.cortextoo .gform_wrapper .gfield_time_minute {
+.cortextoo .gform_wrapper .gfield_time_minute,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour i,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute i,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_ampm,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute {
 	line-height: 1.1;
 	font-size: 1.8rem;
 	margin-top: 1px;
 }
 
 .cortextoo .gform_wrapper input[type="text"],
-.cortextoo .gform_wrapper textarea {
+.cortextoo .gform_wrapper textarea,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper textarea {
 	line-height: 1;
 	font-size: 1.8rem;
 	font-family: $font-family-base;
 	border: 1px solid rgba(151,151,151,1);
 }
 
-.cortextoo .gform_wrapper input[type="text"] {
+.cortextoo .gform_wrapper input[type="text"],
+.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
 	height: 30px;
 }
 
 
-.cortextoo .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+.cortextoo .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.wp-block[data-type="gravityforms/block"] .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
 	padding: 2px 4px;
 }
 
 .cortextoo .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
+.cortextoo .gform_wrapper.gf_browser_safari .gfield_time_ampm select,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
 	font-size: 1.6rem;
 	height: 30px;
@@ -1897,7 +1990,8 @@ input[type="submit"],
 	padding-left: 4px;
 }
 
-.cortextoo .gform_button.button {
+.cortextoo .gform_button.button,
+.wp-block[data-type="gravityforms/block"] .gform_button.button {
 	padding:7px 30px;
 	width:auto;
 	text-align:center;
@@ -1918,25 +2012,36 @@ input[type="submit"],
 	transition: .4s opacity;
 }
 
-.cortextoo .gform_button.button:hover {
+.cortextoo .gform_button.button:hover,
+.wp-block[data-type="gravityforms/block"] .gform_button.button:hover {
 	opacity: .8;
 }
 
-.cortextoo .entry-content .gfield_checkbox li {margin-top: 0px;}
+.cortextoo .entry-content .gfield_checkbox li,
+.wp-block[data-type="gravityforms/block"] .entry-content .gfield_checkbox li {margin-top: 0px;}
 
-.cortextoo .gform_wrapper .left_label textarea {margin-top: 8px;}
+.cortextoo .gform_wrapper .left_label textarea,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label textarea {margin-top: 8px;}
 
 @media only screen and (min-width: 641px) {
 	.cortextoo .gform_wrapper .gform_footer input.button,
 	.cortextoo .gform_wrapper .gform_footer input[type=submit],
 	.cortextoo .gform_wrapper .gform_page_footer input.button,
-	.cortextoo .gform_wrapper .gform_page_footer input[type=submit] {
+	.cortextoo .gform_wrapper .gform_page_footer input[type=submit],
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type=submit],
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type=submit] {
 		font-size:1.2rem;
 	}
 	.cortextoo .gform_wrapper .gform_footer input.button:hover,
 	.cortextoo .gform_wrapper .gform_footer input[type=submit]:hover,
 	.cortextoo .gform_wrapper .gform_page_footer input.button:hover,
-	.cortextoo .gform_wrapper .gform_page_footer input[type=submit]:hover {
+	.cortextoo .gform_wrapper .gform_page_footer input[type=submit]:hover,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button:hover,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type=submit]:hover,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button:hover,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type=submit]:hover {
 		opacity: .8;
 	}
 
@@ -1944,13 +2049,15 @@ input[type="submit"],
 }
 
 @media only screen and (min-width: 768px) {
-	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
+	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
 		font-size: 1.2rem;
 	}
 }
 
 @media only screen and (min-width: 992px) {
-	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
+	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
 		font-size: 1.8rem;
 	}
 }
@@ -2084,20 +2191,32 @@ input[type="submit"],
 /****************************************************************************************/
 .btn-cea,
 #topnav input[type="submit"] {
-	padding:7px 30px;
+	padding:5px 30px;
 	width:auto;
 	text-align:center;
 	text-transform:uppercase;
 	letter-spacing:.2rem;
 	font-family: $font-family-base;
 	font-size:1.2rem;
-	line-height:1.2rem;
+	line-height:1;
 	font-weight:400;
 	-webkit-transition:all .4s ease-in-out;
 	-moz-transition:all .4s ease-in-out;
 	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
 	border-radius: 34px;
+}
+
+.btn-cea {
+	background-color: $primary;
+	color: $light;
+}
+
+.topnav-btn-signup {
+	background-color: $secondary;
+	padding:5px 30px;
+	border-radius: 34px;
+	font-size:1.2rem;
 }
 
 .btn-signup .wp-block-button__link:before {
@@ -2201,7 +2320,7 @@ input[type="submit"],
 		padding-right: 5px;
 	}
 
-	#topnav input[type=submit], .btn-cea {
+	#topnav input[type=submit], .topnav-btn-signup {
 		margin-left: 5px;
 		font-size: .9rem;
 		letter-spacing: .07rem;
@@ -2223,7 +2342,7 @@ input[type="submit"],
 /****************************************************************************************/
 
 #wrapper-navbar {
-	z-index: 1080;
+	z-index: 1020;
 	background-color: $light;
 }
 
@@ -2323,6 +2442,26 @@ input[type="submit"],
 	margin: 25px 0px;
 }
 
+.icon-address {
+	color: $primary;
+	font: 500 1.2rem/1.7 $font-family-base, sans-serif !important;
+	padding: 0px 0px 0px 30px;
+	letter-spacing: .1rem;
+	position: relative;
+}
+
+.icon-address:before {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	top: 5px;
+	height: 22px;
+	width: 22px;
+	font: normal normal normal 2.2rem/1 FontAwesome;
+	content: '\f041';
+	color: $primary;
+}
+
 /* section heading accents */
 .editor-styles-wrapper .editor-rich-text .section-heading-accent,
 .section-heading-accent,
@@ -2412,7 +2551,7 @@ input[type="submit"],
 /* WordPress Gutenberg Font Sizes */
 .has-small-font-size {
 	font-size: 1.4rem !important;
-	line-height: 2 !important;
+	line-height: 1.5 !important;
 	letter-spacing: .125rem;
 }
 
