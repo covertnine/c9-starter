@@ -88,12 +88,13 @@ body {font-size: 1.3rem;}
 		width: 100%;
 		max-width: 1140px;
 		margin: 0px auto;
-	}1
+	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
 	.wp-block[data-align=full],
 	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
-	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull,
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .editor-block-list__block[data-type="core/columns"][data-align="full"] {
 		width: calc(100vw - 440px);
 		max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
 		margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
@@ -101,7 +102,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
-	.wp-block[data-align=full],
 	body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 316px);
@@ -111,7 +111,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
-	.wp-block[data-align=full],
 	body:not(.folded) .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body:not(.folded) .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 160px);
@@ -121,7 +120,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
-	.wp-block[data-align=full],
 	body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 36px);
