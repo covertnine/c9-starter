@@ -22,7 +22,7 @@
 		    </div><!--end col-->
 		    <div class="col-12 col-md-3 text-right">
 
-				<a href="#" class="btn btn-secondary btn-cea topnav-btn-signup"><i class="fa fa-star" aria-hidden="true"></i> Talent Sign Up</a>
+				<a href="#" class="btn btn-secondary topnav-btn-signup"><i class="fa fa-star" aria-hidden="true"></i> Talent Sign Up</a>
 
 		    </div><!--end col-->
 	    </div>

@@ -71,6 +71,18 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 
 </div><!-- #page we need this extra closing tag here -->
 
+
+<div id="search">
+    <button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only">Close</span></button>
+    <form role="search" method="get" id="fullscreen" action="https://cortex.covertnine.com/">
+        <div>
+	    	<span class="sr-only">Search for:</span>
+			<input type="search" class="search-field" name="s" value="" placeholder="Search for entertainers, photographers, party rentals &amp; more" />
+			<button type="submit" class="btn btn-cea">Search</button>
+        </div>
+    </form>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>
