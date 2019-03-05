@@ -2800,5 +2800,35 @@ input[type="submit"],
 
 .c9-block-cta {
 	border-top: 4px solid #006a30;
-    border-bottom: 4px solid #006a30;
+	border-bottom: 4px solid #006a30;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
+a.wp-block-button__link {
+	width: auto;
+	max-width: 100%;
+}
+.c9-cta-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.c9-cta-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ab-cta-text p {
+	margin-bottom: 0;
+}
+// .c9-cta-content {
+// 	display: flex;
+// 	align-items: center;
+// }
+// .c9-cta-content .editor-rich-text {
+// 	width: 100%;
+// 	display: flex;
+// }
+// .c9-cta-content .editor-rich-text > div {
+// 	width: 100%;
+// }
