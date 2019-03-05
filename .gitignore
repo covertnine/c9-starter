@@ -50,6 +50,7 @@ js/theme.min.js
 src/js/custom-javascript.bundle.js
 
 css/custom-editor-style.min.css.map
+css/custom-editor-style.min.css
 css/custom-editor-style.css
 css/theme.css
 css/theme.min.css
