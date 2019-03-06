@@ -13,7 +13,7 @@ $sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="container" id="content" tabindex="-1">
+	<div class="container cortextoo" id="content" tabindex="-1">
 
 		<div class="row">
 

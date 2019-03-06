@@ -11,7 +11,7 @@ get_header();
 
 <div class="wrapper" id="single-wrapper">
 
-	<div class="container-narrow" id="content" tabindex="-1">
+	<div class="container-narrow cortextoo" id="content" tabindex="-1">
 
 		<!-- Do the left sidebar check -->
 		<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>

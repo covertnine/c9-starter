@@ -7,13 +7,11 @@
 
 get_header();
 
-$container   = get_theme_mod( 'cortextoo_container_type' );
-
 ?>
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container cortextoo" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -25,7 +23,7 @@ $container   = get_theme_mod( 'cortextoo_container_type' );
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-						
+
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
 							 esc_html__( 'Search Results for: %s', 'cortextoo' ),

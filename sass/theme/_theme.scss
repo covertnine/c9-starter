@@ -3,26 +3,6 @@
 /****************************************************************************************/
 html,body {height: 100%;}
 
-html {font-size: 1rem;}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-
 body {
 	color: $gray-900;
 	font-family: $font-family-base;
@@ -34,7 +14,7 @@ body {
 
 @media only screen and (max-width: 575px) {
 	:root {
-		font-size: 56%;
+		font-size: 54%;
 	}
 }
 
@@ -520,141 +500,6 @@ nav ul li a {
 }
 
 /****************************************************************************************/
-/* WordPress Inputs + Forms */
-/****************************************************************************************/
-
-::-webkit-input-placeholder {
-	color: #c1c1c1;
-}
-:-moz-placeholder { /* older Firefox*/
-	color: #c1c1c1;
-}
-::-moz-placeholder { /* Firefox 19+ */
-	color: #c1c1c1;
-}
-:-ms-input-placeholder {
-	color: #c1c1c1;
-}
-/****************************************************************************************/
-/* WordPress Search Form */
-/****************************************************************************************/
-
-.search-form .search-field,
-.widget_search .search-field {
-	display:inline;
-	vertical-align:top;
-	border-radius:0;
-	padding:6px 8px 2px;
-	font-size:1.4rem;
-	height:34px;
-	line-height:15px;
-}
-
-.widget_search input[type="submit"],
-.widget_search .search-form label {max-width:48%;}
-
-.widget_search .search-form label {
-	display:inline-block;
-	float:left;
-}
-
-.search-form,.widget_search .search-form {
-	height:34px;
-	overflow:hidden;
-}
-
-.widget_search .search-field,
-.search-form .search-field {width: 100%;}
-
-.search-form label,
-.widget_search .search-form label {
-	width: 50%;
-	margin:0;
-	float:left;
-}
-
-.search-form .search-field,
-.widget_search .search-field {
-	display:inline;
-	vertical-align:top;
-}
-
-.widget_search .search-submit,
-.search-submit {
-	display:block;
-	float:left;
-	border: 0;
-}
-
-.widget_search .search-submit:hover {
-	box-shadow:none;
-}
-
-/* full screen search form */
-#search {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 0px;
-    -webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	-ms-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
-    opacity: 0;
-    overflow: hidden;
-  	padding: 100px;
-  	z-index: -1;
-	background-color:rgba(255, 255, 255, 0.95);
-}
-
-#search.open {
-	position: fixed;
-    opacity: 1;
-    height: 100%;
-    overflow: visible;
-    z-index: 1053;
-}
-
-#search input[type="search"] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-	transform: translate(-50%, -50%);
-    width: 80%;
-    font-size: 2.8rem;
-    line-height: 1;
-    text-align: left;
-    margin: -51px auto 0px auto;
-    padding: 10px 20px;
-    outline: none;
-	background:rgba(255, 255, 255,.7);
-	font-family: $font-family-base;
-	border: 1px solid rgba(151,151,151,1);
-}
-
-#search .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-#search .search-close {
-    position: fixed;
-    top: 35px;
-    right: 35px;
-	opacity: 1;
-	padding: 12px 15px;
-	font-size: 2.7rem;
-	line-height: 1;
-	z-index: 1055;
-	color: $light;
-	background-color: $primary;
-}
-
-/****************************************************************************************/
 /* WordPress Comment, Page, & Post Navigation */
 /****************************************************************************************/
 
@@ -689,6 +534,7 @@ nav ul li a {
 	max-width: 960px;
 	margin: 0px auto;
 }
+
 .comment-list {margin-bottom:70px;}
 
 .comment-list .comment article,
@@ -771,6 +617,29 @@ nav ul li a {
 	padding:0;
 }
 
+.comment-meta a {font-size: 1.2rem;}
+
+.comment-awaiting-moderation {
+	display:inline;
+	font-size:1rem;
+}
+
+.comment-author .fn,
+.comment-metadata a,
+.comment-awaiting-moderation {
+	margin-left:25px;
+}
+
+.comment-content:before,
+.comment-content:after {
+	content:"";
+	display:table;
+}
+
+.comment-content:after {
+	clear:both;
+}
+
 .comment-reply-link,
 .comment-author .fn .url,
 .comment-metadata a {
@@ -790,34 +659,6 @@ nav ul li a {
 	font-size:1.4rem;
 }
 
-.comment-meta a {font-size: 1.2rem;}
-
-.comment-awaiting-moderation {
-	display:inline;
-	font-size:1rem;
-}
-
-.comment-author .fn,
-.comment-metadata a,
-.comment-awaiting-moderation {
-	margin-left:25px;
-}
-
-.comment-notes,
-.form-allowed-tags {
-	font-size:1rem;
-	line-height:1.2em;
-}
-
-.comment-notes {margin-bottom:0;}
-
-.comment-form-author,
-.comment-form-email,
-.comment-form-url {
-	margin-top:0;
-	margin-bottom:0;
-}
-
 .comment.bypostauthor {border-left:3px solid $primary;}
 
 .comment-reply-link:hover,
@@ -826,25 +667,9 @@ nav ul li a {
 	text-decoration:none;
 }
 
-.comment-form-comment label {margin-left:5px;}
-
-.comment-form-comment textarea {height:80px;}
-
 .bypostauthor {display:block;}
 
-#reply-title {font-size:2rem;}
-
 .comment-metadata a {color: $primary;}
-
-.comment-content:before,
-.comment-content:after {
-	content:"";
-	display:table;
-}
-
-.comment-content:after {
-	clear:both;
-}
 
 /****************************************************************************************/
 /* C9 Widgets */
@@ -2159,9 +1984,188 @@ button:hover,
 
 
 /****************************************************************************************/
-/* Gravity Forms
+/* WordPress Forms, Search Forms, + Gravity Forms
 /****************************************************************************************/
 
+/*************************** Most WordPress Inputs and Forms ****************************/
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+	color: $gray-400;
+}
+
+.cortextoo input[type="text"],
+.cortextoo input[type="email"],
+.cortextoo input[type="url"],
+.cortextoo textarea {
+	padding: 2px 4px;
+	border: 1px solid $gray-600;
+	line-height: 1;
+	font-size: 1.8rem;
+	font-family: $font-family-base;
+}
+
+.cortextoo input[type="text"] {height: 30px;}
+
+.cortextoo textarea {min-height: 90px;}
+
+.cortextoo .form-group {margin-bottom: 20px;}
+
+.cortextoo form label {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .00094rem;
+	line-height: 1;
+	margin: 0px;
+}
+
+/**************************** WordPress Comment Form **********************************/
+
+.comment-respond {
+	background-color: $gray-100;
+	padding: 20px 30px;
+}
+
+.comment-respond h3 {font-size:2.6rem;}
+
+.comment-notes,
+.form-allowed-tags {
+	font-size:1rem;
+	line-height:1.2em;
+
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.comment-form-comment label {margin-left:5px;}
+
+.comment-form-comment textarea {height:80px;}
+
+
+
+/**************************** Wordpress Search Form **********************************/
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+	border-radius:0;
+	padding:6px 8px 2px;
+	font-size:1.4rem;
+	height:34px;
+	line-height:15px;
+}
+
+.widget_search input[type="submit"],
+.widget_search .search-form label {max-width:48%;}
+
+.widget_search .search-form label {
+	display:inline-block;
+	float:left;
+}
+
+.search-form,.widget_search .search-form {
+	height:34px;
+	overflow:hidden;
+}
+
+.widget_search .search-field,
+.search-form .search-field {width: 100%;}
+
+.search-form label,
+.widget_search .search-form label {
+	width: 50%;
+	margin:0;
+	float:left;
+}
+
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+}
+
+.widget_search .search-submit,
+.search-submit {
+	display:block;
+	float:left;
+	border: 0;
+}
+
+.widget_search .search-submit:hover {
+	box-shadow:none;
+}
+
+/**************************** Full Screen Search Form **********************************/
+#search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+  	padding: 100px;
+  	z-index: -1;
+	background-color:rgba(255, 255, 255, 0.95);
+}
+
+#search.open {
+	position: fixed;
+    opacity: 1;
+    height: 100%;
+    overflow: visible;
+    z-index: 1053;
+}
+
+#search input[type="search"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: 2.8rem;
+    line-height: 1;
+    text-align: left;
+    margin: -51px auto 0px auto;
+    padding: 10px 20px;
+    outline: none;
+	background:rgba(255, 255, 255,.7);
+	font-family: $font-family-base;
+	border: 1px solid rgba(151,151,151,1);
+}
+
+#search .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#search .search-close {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+	opacity: 1;
+	padding: 12px 15px;
+	font-size: 2.7rem;
+	line-height: 1;
+	z-index: 1055;
+	color: $light;
+	background-color: $primary;
+}
+
+/**************************** Gravity Forms **********************************/
 .cortextoo .gform_wrapper label.gfield_label,
 .cortextoo .gform_wrapper legend.gfield_label,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
@@ -2171,7 +2175,7 @@ button:hover,
 	line-height: 1.1;
 	font-weight: 500;
 	letter-spacing: .00094rem;
-	color: #2b2b2b;
+	color: $gray-700;
 	margin-top: 8px;
 }
 
