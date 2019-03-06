@@ -3,6 +3,26 @@
 /****************************************************************************************/
 html,body {height: 100%;}
 
+html {font-size: 1rem;}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
 body {
 	color: $gray-900;
 	font-family: $font-family-base;
@@ -12,10 +32,27 @@ body {
 	font-size: 62.5%;
 }
 
+@media only screen and (max-width: 575px) {
+	:root {
+		font-size: 56%;
+	}
+}
+
 #page-wrapper, .wrapper {
 	padding: 0px;
 	z-index: 50;
 	position: relative;
+}
+
+.container-posts article {margin-bottom: 30px;}
+
+@media only screen and (min-width: 1px) {
+	.blog .entry-header,
+	.blog .entry-content,
+	.single .entry-content,
+	.single .entry-header {
+		padding: 0px 15px;
+	}
 }
 
 @media only screen and (min-width: 576px) {
@@ -41,7 +78,6 @@ body {
 		width: 100%;
 	}
 
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -53,9 +89,23 @@ body {
 		width: 100%;
 	}
 
-	.container-narrow {
+	.container-narrow,
+	.single .entry-header {
 		max-width: 960px;
 	}
+
+	.single .entry-header,
+	.single .entry-image {
+		margin: 0px auto;
+	}
+
+	.blog .entry-header,
+	.blog .entry-content,
+	.single .entry-content,
+	.single .entry-header {
+		padding: 0px;
+	}
+
 
 }
 
@@ -78,6 +128,7 @@ body {
 /****************************************************************************************/
 /* Typography */
 /****************************************************************************************/
+
 .entry-content,
 .editor-styles-wrapper p,
 .editor-styles-wrapper .wp-block-paragraph,
@@ -127,6 +178,20 @@ body {
 .entry-content h5,.entry-content .h5, .wp-block-heading h5 {font-size:2rem}
 .entry-content h6,.entry-content .h6, .wp-block-heading h6 {font-size:1.4rem}
 
+.entry-header h2 {
+	font-size: 3rem;
+}
+
+.entry-meta,
+.entry-meta a {
+	text-transform: uppercase;
+	letter-spacing: .05rem;
+	line-height: 1;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	color: $gray-500;
+}
+
 .has-small-font-size,
 .has-regular-font-size,
 .has-normal-font-size,
@@ -169,6 +234,7 @@ p.wp-block-subhead {
 a {transition: .3s color;}
 
 a:hover {text-decoration: none;}
+
 /****************************************************************************************/
 /* WordPress Core Alignment Classes + Containers */
 /****************************************************************************************/
@@ -413,7 +479,7 @@ nav ul li a {
 .widget ul li {
 	font-size:1.4rem;
 	margin:10px 0;
-	padding-left:40px;
+	padding-left:0px;
 }
 
 .widget {
@@ -589,7 +655,199 @@ nav ul li a {
 }
 
 /****************************************************************************************/
-/* Cortextoo Widgets */
+/* WordPress Comment, Page, & Post Navigation */
+/****************************************************************************************/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin:3rem 0;
+	overflow:hidden;
+	font-size: 1.4rem;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float:left;
+	width:50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float:right;
+	text-align:right;
+	width:50%;
+}
+
+/****************************************************************************************/
+/* WordPress Comments */
+/****************************************************************************************/
+
+.comments-area {
+	max-width: 960px;
+	margin: 0px auto;
+}
+.comment-list {margin-bottom:70px;}
+
+.comment-list .comment article,
+.comment-list .comment {border: none;}
+
+.comment-list {
+	list-style:none;
+	margin:0 0 70px;
+	padding:0;
+}
+
+.comment-list .comment.even {
+	background-color: $gray-100;
+}
+
+.comment-list .comment article {
+	position:relative;
+	margin-bottom:25px;
+}
+
+.comment-list .comment article .says {
+	display:none;
+}
+
+.comment-list .comment article .avatar {
+	float:left;
+}
+
+.comment-list .comment article .reply .comment-reply-link {
+	position:absolute;
+	top:0;
+	right:0;
+	padding:4px 6px 4px 8px;
+	color: $light;
+	line-height: 1;
+	z-index: 1;
+	font-weight: $font-weight-base;
+	letter-spacing: .2rem;
+}
+
+.comment-list .comment article .reply a:after {
+	position:absolute;
+	top:0;
+	left:0;
+	content:"";
+	height:100%;
+	width:100%;
+	opacity:1;
+	z-index:-1;
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+	background-color: $primary;
+}
+
+.comment-list .comment article .reply a:hover:after {
+	opacity: .8;
+}
+
+#comments h3:after {border-bottom:2px solid $primary;}
+
+.children {
+	list-style:none;
+}
+
+.comment-content p {
+	margin-left:105px;
+	margin-top:10px;
+	font-size: 1.4rem;
+	line-height: 1.4;
+}
+
+.comment-content a {word-wrap:break-word;}
+
+.comment-content .wp-smiley {
+	border:none;
+	margin-bottom:0;
+	margin-top:0;
+	padding:0;
+}
+
+.comment-reply-link,
+.comment-author .fn .url,
+.comment-metadata a {
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+}
+
+.comment-reply-link,
+.comment-author .fn,
+.comment-author .fn .url,
+.comment-metadata a {
+	font-weight:700;
+	letter-spacing:.05rem;
+	text-transform:uppercase;
+	font-size:1.4rem;
+}
+
+.comment-meta a {font-size: 1.2rem;}
+
+.comment-awaiting-moderation {
+	display:inline;
+	font-size:1rem;
+}
+
+.comment-author .fn,
+.comment-metadata a,
+.comment-awaiting-moderation {
+	margin-left:25px;
+}
+
+.comment-notes,
+.form-allowed-tags {
+	font-size:1rem;
+	line-height:1.2em;
+}
+
+.comment-notes {margin-bottom:0;}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.comment.bypostauthor {border-left:3px solid $primary;}
+
+.comment-reply-link:hover,
+.comment-author .fn .url:hover,
+.comment-metadata a:hover {
+	text-decoration:none;
+}
+
+.comment-form-comment label {margin-left:5px;}
+
+.comment-form-comment textarea {height:80px;}
+
+.bypostauthor {display:block;}
+
+#reply-title {font-size:2rem;}
+
+.comment-metadata a {color: $primary;}
+
+.comment-content:before,
+.comment-content:after {
+	content:"";
+	display:table;
+}
+
+.comment-content:after {
+	clear:both;
+}
+
+/****************************************************************************************/
+/* C9 Widgets */
 /****************************************************************************************/
 
 .widget_cortex_subscribe_widget ul {
@@ -1244,7 +1502,8 @@ embed,iframe,object {
 	z-index:1045;
 }
 
-.mfp-inline-holder .mfp-content,.mfp-ajax-holder .mfp-content {
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
 	width:100%;
 	cursor:auto;
 }
@@ -1253,7 +1512,8 @@ embed,iframe,object {
 	cursor:progress;
 }
 
-.mfp-zoom-out-cur,.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
 	cursor:-moz-zoom-out;
 	cursor:-webkit-zoom-out;
 	cursor:zoom-out;
@@ -1334,9 +1594,6 @@ button::-moz-focus-inner {
 	opacity:.65;
 	filter:alpha(opacity=65);
 	padding:0 0 18px 10px;
-	font-style:normal;
-	font-size:28px;
-	font-family:Arial,Baskerville,monospace;
 }
 
 .mfp-close:hover,.mfp-close:focus {
@@ -1397,7 +1654,6 @@ button::-moz-focus-inner {
 	top:0;
 	margin-top:35px;
 	margin-left:35px;
-	border:medium inset transparent;
 }
 
 .mfp-arrow:after,.mfp-arrow .mfp-a {
@@ -1479,9 +1735,6 @@ img.mfp-img {
 	height:auto;
 	display:block;
 	line-height:0;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
 	padding:40px 0;
 	margin:0 auto;
 }
@@ -1739,7 +1992,49 @@ img.mfp-img {
 }
 
 /****************************************************************************************/
-/***************************** C9 Custom Blocks for new WordPress Gutenberg
+/* WordPress Gutenberg Buttons
+/****************************************************************************************/
+.btn,
+.button,
+button,
+input[type="submit"],
+.entry-content .btn,
+.entry-content .btn:visited,
+.entry-content button,
+.entry-content input[type="button"],
+.entry-content input[type="reset"],
+.entry-content input[type="submit"],
+.entry-content .button,
+.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+.wp-block-button__link,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
+.wp-block-file__button {
+	display:inline-block;
+	padding:8px 45px;
+	width:auto;
+	background-color: $primary;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.2rem;
+	font-family: $font-family-base;
+	font-size:1.4rem;
+	line-height:1.4;
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+	border: none;
+}
+
+.btn:hover,
+button:hover,
+.wp-block-button a:hover {
+	text-decoration: none;
+	opacity: .9;
+}
+
+/****************************************************************************************/
+/* C9 Custom Blocks for new WordPress Gutenberg */
 /****************************************************************************************/
 .container-overlay {
 	position: absolute;
@@ -1800,7 +2095,6 @@ img.mfp-img {
 		max-width: 960px;
 	}
 
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1817,45 +2111,6 @@ img.mfp-img {
 		max-width: 1140px;
 	}
 
-}
-
-/****************************************************************************************/
-/* WordPress Gutenberg Buttons
-/****************************************************************************************/
-.btn,
-.button,
-input[type="submit"],
-.entry-content .btn,
-.entry-content .btn:visited,
-.entry-content button,
-.entry-content input[type="button"],
-.entry-content input[type="reset"],
-.entry-content input[type="submit"],
-.entry-content .button,
-.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
-.wp-block-button__link,
-.wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
-.wp-block-file__button {
-	display:inline-block;
-	padding:8px 45px;
-	width:auto;
-	background-color: $primary;
-	text-align:center;
-	text-transform:uppercase;
-	letter-spacing:.2rem;
-	font-family: $font-family-base;
-	font-size:1.4rem;
-	line-height:1.4;
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
-	transition:all .4s ease-in-out;
-	border: none;
-}
-
-.wp-block-button a:hover {
-	text-decoration: none;
-	opacity: .9;
 }
 
 /****************************************************************************************/
@@ -2198,6 +2453,8 @@ input[type="submit"],
 /* CEA buttons*/
 /****************************************************************************************/
 .btn-cea,
+button,
+.btn,
 #topnav input[type="submit"] {
 	padding:5px 30px;
 	width:auto;
@@ -2554,6 +2811,22 @@ input[type="submit"],
 	font-size: 1.8rem !important;
 	letter-spacing: .2rem;
 	line-height: 1.1;
+}
+
+.entry-meta,
+.entry-meta a {
+	text-transform: uppercase;
+	letter-spacing: .05rem;
+	line-height: 1;
+	font-size: 1.4rem;
+	color: $gray-700;
+}
+
+.entry-footer .comments-link {
+	display: block;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 
 /* WordPress Gutenberg Font Sizes */
