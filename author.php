@@ -14,7 +14,7 @@ get_header();
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="container" id="content" tabindex="-1">
+	<div class="container cortextoo" id="content" tabindex="-1">
 
 		<div class="row">
 
