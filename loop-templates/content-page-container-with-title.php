@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</div>
 			</div>
 		</div>
@@ -20,8 +20,13 @@
 
 
 	<div class="entry-content">
-
-		<?php the_content(); ?>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<?php the_content(); ?>
+				</div><!-- .col-->
+			</div><!-- .row-->
+		</div><!-- .container-->
 
 	</div><!-- .entry-content -->
 
