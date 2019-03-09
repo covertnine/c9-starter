@@ -71,5 +71,29 @@ if ( ! function_exists( 'cortextoo_widgets_init' ) ) {
 		    'after_title'    => '</h3>',
 		) );
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Right Sidebar', 'cortextoo' ),
+				'id'            => 'right-sidebar',
+				'description'   => __( 'Right sidebar widget area', 'cortextoo' ),
+				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Left Sidebar', 'cortextoo' ),
+				'id'            => 'left-sidebar',
+				'description'   => __( 'Left sidebar widget area', 'cortextoo' ),
+				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 	}
 } // endif function_exists( 'cortextoo_widgets_init' ).

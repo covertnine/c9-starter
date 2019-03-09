@@ -238,6 +238,15 @@ a:hover {text-decoration: none;}
 		margin-left: calc((-100vw + 100%) / 2);
 		margin-right: calc((-100vw + 100%) / 2);
 	}
+
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
+	}
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -252,6 +261,24 @@ a:hover {text-decoration: none;}
 		margin-right: calc((-100vw + 100%) / 2);
 	}
 
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc(((-100vw + 77%) / 2);
+		margin-right: calc(((-100vw + 100%) / 2);
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc(((-100vw + 78.5%) / 2);
+		margin-right: calc(((-100vw + 100%) / 2);
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -493,16 +520,6 @@ nav ul li a {
 	font-size:2rem;
 }
 
-.widget .widget-title:after,
-.widget .widgettitle:after {
-	display:block;
-	content:"";
-	width:60%;
-	border-bottom:2px solid #ca292c;
-	padding-bottom:22px;
-	margin-bottom:26px;
-}
-
 .widget select {
 	max-width:100%;
 }
@@ -687,6 +704,44 @@ nav ul li a {
 
 .comment-metadata a {color: $primary;}
 
+/****************************************************************************************/
+/* Sidebars */
+/****************************************************************************************/
+@media only screen and (min-width: 1px) {
+	#left-sidebar {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	#left-sidebar {
+		display: block;
+		position: fixed;
+		top: 40px;
+		left: 30px;
+		transition: opacity .7s;
+		opacity: 0;
+		max-width: 150px;
+	}
+	#left-sidebar.fixed-sidebar {
+		top: 80px;
+		opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#left-sidebar {
+		left: 30px;
+		max-width: 180px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#left-sidebar {
+		left: 60px;
+		top: 160px;
+	}
+}
 /****************************************************************************************/
 /* C9 Widgets */
 /****************************************************************************************/
