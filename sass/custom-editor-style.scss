@@ -156,9 +156,17 @@ body {font-size: 1.3rem;}
 /****************************************************************************************/
 /***************************** core block edits for backend only
 /****************************************************************************************/
-
-.wp-block[data-type="core/separator"] {
+.wp-block[data-type="core/separator"] .editor-block-list__block-edit {
 	max-width: 1110px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.wp-block[data-type="core/separator"] .editor-block-list__block-edit .wp-block-separator {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 /****************************************************************************************/

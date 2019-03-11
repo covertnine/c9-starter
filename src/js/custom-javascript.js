@@ -1,9 +1,25 @@
-	if (jQuery(window).width() <= 667) {
 
+	// sidebar functionality
+	jQuery(window).scroll(function () {
+
+		//scroll position variable
+		var scroll = jQuery(window).scrollTop();
+
+		if (scroll >=633) {
+			jQuery('#left-sidebar').addClass('fixed-sidebar');
+		}
+		if (scroll <=632) {
+			jQuery('#left-sidebar').removeClass('fixed-sidebar');
+		}
+
+	});
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
+	if (jQuery(window).width() <= 667) {
 		// var Parallax = require('parallax-js')
 		// var scene = document.getElementById('wrapper-footer-full');
 		// var parallaxInstance = new Parallax(scene);
-
 
 		//use small nav for mobile
 		jQuery('.navbar').addClass('navbar-small');
@@ -12,6 +28,7 @@
 		jQuery('.navbar-top').addClass('navbar-small-mobile');
 
 		jQuery(window).scroll(function () {
+
 
 			//scroll position variable
 			var scroll = jQuery(window).scrollTop();
@@ -37,14 +54,15 @@
 
 		jQuery(window).scroll(function () {
 
-		    var scroll = jQuery(window).scrollTop();
+		//scroll position variable
+		var scroll = jQuery(window).scrollTop();
+
 		    if (scroll >=168) {
 				jQuery('.navbar').addClass('opacity0');
 			}
 			if (scroll <=167) {
 				jQuery('.navbar').removeClass('opacity0');
 			}
-
 
 		    if (scroll >= 218) {
 			    jQuery('.navbar').addClass('navbar-small fixed-top opacity100'); //shrink nav and fix it to top
@@ -58,11 +76,12 @@
 		});
 
 	} //end regular
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 (function ($) {
 
 	"use strict";
-
 
 	///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////

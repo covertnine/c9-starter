@@ -8,20 +8,17 @@
  */
 
 get_header();
-$container = get_theme_mod( 'cortextoo_container_type' );
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper cortextoo" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="container page-left-sidebar" id="content">
 
 		<div class="row">
 
-			<?php get_sidebar( 'left' ); ?>
+			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-12 offset-xs-0 col-sm-10 offset-sm-2<?php else : ?>col-12<?php endif; ?> content-area" id="primary">
 
-			<div
-				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
-				id="primary">
+				<?php get_sidebar( 'left' ); ?>
 
 				<main class="site-main" id="main" role="main">
 
@@ -29,20 +26,13 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						?>
-
 					<?php endwhile; // end of the loop. ?>
 
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
 
-		</div><!-- .row -->
+		</div><!--end row-->
 
 	</div><!-- Container end -->
 

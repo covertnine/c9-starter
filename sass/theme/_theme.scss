@@ -12,12 +12,6 @@ body {
 	font-size: 62.5%;
 }
 
-@media only screen and (max-width: 575px) {
-	:root {
-		font-size: 54%;
-	}
-}
-
 #page-wrapper, .wrapper {
 	padding: 0px;
 	z-index: 50;
@@ -111,6 +105,8 @@ body {
 
 .entry-content,
 .editor-styles-wrapper p,
+.editor-styles-wrapper .container p,
+.editor-styles-wrapper .editor-rich-text .mce-content-body p,
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
@@ -133,7 +129,7 @@ body {
 .editor-styles-wrapper .editor-rich-text p.mce-content-body,
 .wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
 .wp-block-pullquote blockquote>.editor-rich-text p {
-	margin-bottom:15px;
+	margin-bottom:30px;
 	line-height: 2;
 }
 
@@ -178,7 +174,7 @@ body {
 .has-medium-font-size,
 .has-large-font-size,
 .has-larger-font-size,
-.has-huge-font-size {line-height: 1.4 !important;}
+.has-huge-font-size {line-height: 1.4;}
 
 
 .has-small-font-size {
@@ -200,7 +196,7 @@ body {
 
 .has-larger-font-size,
 .has-huge-font-size {
-	font-size: 8rem !important;
+	font-size: 7rem !important;
 }
 
 .entry-content p[class$="-font-size"] {line-height: 1;}
@@ -214,6 +210,19 @@ p.wp-block-subhead {
 a {transition: .3s color;}
 
 a:hover {text-decoration: none;}
+
+/* Responsive Typography */
+@media only screen and (max-width: 575px) {
+
+	.has-large-font-size {font-size: 3rem !important;}
+
+	.has-huge-font-size {font-size: 4rem !important;}
+
+	.has-larger-font-size,
+	.has-huge-font-size {line-height: 1 !important;}
+
+}
+
 
 /****************************************************************************************/
 /* WordPress Core Alignment Classes + Containers */
@@ -229,6 +238,15 @@ a:hover {text-decoration: none;}
 		margin-left: calc((-100vw + 100%) / 2);
 		margin-right: calc((-100vw + 100%) / 2);
 	}
+
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
+	}
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -243,6 +261,24 @@ a:hover {text-decoration: none;}
 		margin-right: calc((-100vw + 100%) / 2);
 	}
 
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc(((-100vw + 77%) / 2);
+		margin-right: calc(((-100vw + 100%) / 2);
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.page-left-sidebar .entry-content .container .alignfull,
+	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-left-sidebar .alignfull,
+	.page-left-sidebar .wp-block[data-align="full"] {
+		margin-left: calc(((-100vw + 78.5%) / 2);
+		margin-right: calc(((-100vw + 100%) / 2);
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -302,6 +338,13 @@ a:hover {text-decoration: none;}
 		max-width: 100vw;
 		margin-left: calc((-100vw + 1110px) / 2);
 		margin-right: calc((-100vw + 1110px) / 2);
+	}
+
+	.page-template-default .entry-content hr:after {
+		display: block;
+		content: '';
+		clear: both;
+		padding-bottom: 60px;
 	}
 
 }
@@ -475,16 +518,6 @@ nav ul li a {
 	font-weight:$font-weight-bold;
 	letter-spacing:.08rem;
 	font-size:2rem;
-}
-
-.widget .widget-title:after,
-.widget .widgettitle:after {
-	display:block;
-	content:"";
-	width:60%;
-	border-bottom:2px solid #ca292c;
-	padding-bottom:22px;
-	margin-bottom:26px;
 }
 
 .widget select {
@@ -672,6 +705,44 @@ nav ul li a {
 .comment-metadata a {color: $primary;}
 
 /****************************************************************************************/
+/* Sidebars */
+/****************************************************************************************/
+@media only screen and (min-width: 1px) {
+	#left-sidebar {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	#left-sidebar {
+		display: block;
+		position: fixed;
+		top: 40px;
+		left: 30px;
+		transition: opacity .7s;
+		opacity: 0;
+		max-width: 150px;
+	}
+	#left-sidebar.fixed-sidebar {
+		top: 80px;
+		opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#left-sidebar {
+		left: 30px;
+		max-width: 180px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#left-sidebar {
+		left: 60px;
+		top: 160px;
+	}
+}
+/****************************************************************************************/
 /* C9 Widgets */
 /****************************************************************************************/
 
@@ -688,7 +759,7 @@ nav ul li a {
 }
 
 .widget_cortex_subscribe_widget ul li a {
-	background-color: $primary;
+	background-color: $secondary;
 	height: 30px;
 	width: 30px;
 	display: inline-block;
@@ -707,11 +778,12 @@ nav ul li a {
 /****************************************************************************************/
 
 #wrapper-footer-full {
-	background-color: $light;
+	background-color: $dark;
+	color: $light;
+	padding-top: 30px;
 }
 
 #wrapper-footer {
-	background-color: $primary;
 	color: $light;
 }
 
@@ -1821,8 +1893,11 @@ img.mfp-img {
 /****************************************************************************************/
 .btn,
 .button,
-button,
-input[type="submit"],
+.editor-styles-wrapper .button,
+.editor-styles-wrapper .button-primary,
+.editor-styles-wrapper .mce-content-body.button,
+.cortextoo button,
+.cortextoo input[type="submit"],
 .entry-content .btn,
 .entry-content .btn:visited,
 .entry-content button,
@@ -1837,18 +1912,20 @@ input[type="submit"],
 	display:inline-block;
 	padding:8px 45px;
 	width:auto;
+	height: auto;
 	background-color: $primary;
-	text-align:center;
-	text-transform:uppercase;
-	letter-spacing:.2rem;
+	box-shadow: none;
+	border: none;
 	font-family: $font-family-base;
 	font-size:1.4rem;
-	line-height:1.4;
+	letter-spacing:.2rem;
+	text-align:center;
+	text-transform:uppercase;
 	-webkit-transition:all .4s ease-in-out;
 	-moz-transition:all .4s ease-in-out;
 	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
-	border: none;
+	white-space: normal;
 }
 
 .btn:hover,
@@ -1861,6 +1938,8 @@ button:hover,
 /****************************************************************************************/
 /* C9 Custom Blocks for new WordPress Gutenberg */
 /****************************************************************************************/
+
+/* content container */
 .container-overlay {
 	position: absolute;
 	height: 100%;
@@ -1937,6 +2016,28 @@ button:hover,
 	}
 
 }
+
+/********************************* Call To Action Bar ***********************************/
+.c9-block-cta {
+	border-top: 4px solid #006a30;
+	border-bottom: 4px solid #006a30;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.c9-cta-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.c9-cta-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ab-cta-text p {
+	margin-bottom: 0;
+}
+
 
 /****************************************************************************************/
 /* MailChimp Sign Up Forms
@@ -2047,60 +2148,6 @@ button:hover,
 
 .comment-form-comment textarea {height:80px;}
 
-
-
-/**************************** Wordpress Search Form **********************************/
-.search-form .search-field,
-.widget_search .search-field {
-	display:inline;
-	vertical-align:top;
-	border-radius:0;
-	padding:6px 8px 2px;
-	font-size:1.4rem;
-	height:34px;
-	line-height:15px;
-}
-
-.widget_search input[type="submit"],
-.widget_search .search-form label {max-width:48%;}
-
-.widget_search .search-form label {
-	display:inline-block;
-	float:left;
-}
-
-.search-form,.widget_search .search-form {
-	height:34px;
-	overflow:hidden;
-}
-
-.widget_search .search-field,
-.search-form .search-field {width: 100%;}
-
-.search-form label,
-.widget_search .search-form label {
-	width: 50%;
-	margin:0;
-	float:left;
-}
-
-.search-form .search-field,
-.widget_search .search-field {
-	display:inline;
-	vertical-align:top;
-}
-
-.widget_search .search-submit,
-.search-submit {
-	display:block;
-	float:left;
-	border: 0;
-}
-
-.widget_search .search-submit:hover {
-	box-shadow:none;
-}
-
 /**************************** Full Screen Search Form **********************************/
 #search {
     position: fixed;
@@ -2163,6 +2210,58 @@ button:hover,
 	z-index: 1055;
 	color: $light;
 	background-color: $primary;
+}
+
+/**************************** Wordpress Search Form **********************************/
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+	border-radius:0;
+	padding:6px 8px 2px;
+	font-size:1.4rem;
+	height:34px;
+	line-height:15px;
+}
+
+.widget_search input[type="submit"],
+.widget_search .search-form label {max-width:48%;}
+
+.widget_search .search-form label {
+	display:inline-block;
+	float:left;
+}
+
+.search-form,.widget_search .search-form {
+	height:34px;
+	overflow:hidden;
+}
+
+.widget_search .search-field,
+.search-form .search-field {width: 100%;}
+
+.search-form label,
+.widget_search .search-form label {
+	width: 50%;
+	margin:0;
+	float:left;
+}
+
+.search-form .search-field,
+.widget_search .search-field {
+	display:inline;
+	vertical-align:top;
+}
+
+.widget_search .search-submit,
+.search-submit {
+	display:block;
+	float:left;
+	border: 0;
+}
+
+.widget_search .search-submit:hover {
+	box-shadow:none;
 }
 
 /**************************** Gravity Forms **********************************/
@@ -2426,16 +2525,29 @@ button:hover,
 /****************************************************************************************/
 /* CEA Specific Styling
 /****************************************************************************************/
+.page-id-681 .page {
+	background: transparent url('/wp-content/uploads/2019/03/bg-tile-talent-pattern.jpg') top left repeat;
+	background-size: 50%;
+}
+
+.page-id-681 .page .entry-content {
+	background-color: $light;
+}
+
+.starry-bg .container {
+	background-position: right bottom !important;
+	background-repeat: no-repeat !important;
+}
 
 /****************************************************************************************/
 /* CEA default colors, button colors + background colors */
 /****************************************************************************************/
 
-.has-color-green-color {color: $primary;}
-.has-color-pink-color {color: $secondary;}
-.has-color-white-color {color: $light;}
-.has-color-black-color {color: $dark;}
-.has-color-gray-color {color: $gray-900;}
+.has-color-green-color {color: $primary !important;}
+.has-color-pink-color {color: $secondary !important;}
+.has-color-white-color {color: $light !important;}
+.has-color-black-color {color: $dark !important;}
+.has-color-gray-color {color: $gray-900 !important;}
 
 .bg-primary {background-color: $primary;}
 .bg-secondary {background-color: $secondary;}
@@ -2454,25 +2566,18 @@ button:hover,
 .entry-content .wp-block-button:not(.is-style-outline) .has-color-gray-background-color {background-color: $gray-900;}
 
 /****************************************************************************************/
-/* CEA buttons*/
+/* CEA buttons */
 /****************************************************************************************/
 .btn-cea,
-button,
+.cortextoo button,
 .btn,
-#topnav input[type="submit"] {
-	padding:5px 30px;
-	width:auto;
-	text-align:center;
+#topnav input[type="submit"],
+.wp-block-button__link,
+.editor-styles-wrapper .button,
+.editor-styles-wrapper .button-primary,
+.editor-styles-wrapper .mce-content-body.button,
+.editor-styles-wrapper .wp-block-button__link {
 	text-transform:uppercase;
-	letter-spacing:.2rem;
-	font-family: $font-family-base;
-	font-size:1.2rem;
-	line-height:1;
-	font-weight:400;
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
-	transition:all .4s ease-in-out;
 	border-radius: 34px;
 }
 
@@ -2484,7 +2589,7 @@ button,
 .topnav-btn-signup {
 	background-color: $secondary;
 	padding:5px 30px;
-	border-radius: 34px;
+	border-radius: 28px;
 	font-size:1.2rem;
 }
 
@@ -2494,6 +2599,18 @@ button,
     font: normal normal normal 1.4rem/1 FontAwesome;
     color: #fff;
     padding-right: 8px;
+}
+
+.btn-cea:hover,
+.cortextoo button:hover,
+.btn:hover,
+#topnav input[type="submit"]:hover,
+.wp-block-button__link:hover,
+.editor-styles-wrapper .button:hover,
+.editor-styles-wrapper .button-primary:hover,
+.editor-styles-wrapper .mce-content-body.button:hover,
+.editor-styles-wrapper .wp-block-button__link:hover {
+	opacity: .8;
 }
 
 /* tags */
@@ -2605,7 +2722,28 @@ button,
 	}
 
 }
+@media only screen and (min-width: 768px) {
+	.topnav-btn-signup {
+		padding: 7px 14px;
+	}
+	#topnav input[type=submit] {margin-left: 4px;}
+	#topnav #loginform .login-password {margin-left: 20px;}
+}
 
+@media only screen and (min-width: 992px) {
+	#topnav input[type=submit], .topnav-btn-signup {
+		font-size: 1.3rem;
+		line-height: 1;
+		letter-spacing: .11rem;
+		padding: 7px 16px;
+	}
+
+	.topnav-btn-signup {
+		padding: 7px 30px;
+	}
+
+
+}
 /****************************************************************************************/
 /* CEA navbar */
 /****************************************************************************************/
@@ -2711,6 +2849,16 @@ button,
 	margin: 25px 0px;
 }
 
+/* Responsive Typography */
+@media only screen and (max-width: 575px) {
+	.entry-content .mission {
+		font-size: 2.6rem !important;
+		letter-spacing: .02rem !important;
+		line-height: 1.6;
+	}
+	.entry-content p[class$="-font-size"] {line-height: 1;}
+}
+
 .icon-address {
 	color: $primary;
 	font: 500 1.2rem/1.7 $font-family-base, sans-serif !important;
@@ -2731,23 +2879,49 @@ button,
 	color: $primary;
 }
 
-/* section heading accents */
-.editor-styles-wrapper .editor-rich-text .section-heading-accent,
-.section-heading-accent,
-.entry-content .section-heading-accent {
-	margin: 10px auto;
-	font-size: 2rem;
-	font-family: niveau-grotesk-small-caps, sans-serif;
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: .08rem;
-	text-align: center;
-	text-transform: uppercase;
-	color: $dark;
+@media only screen and (min-width: 1px) {
+
+	/* section heading accents */
+	.editor-styles-wrapper .editor-rich-text .section-heading-accent,
+	.section-heading-accent,
+	.editor-styles-wrapper .editor-rich-text .section-heading-accent-alt,
+	.section-heading-accent-alt,
+	.entry-content .section-heading-accent-alt,
+	.entry-content h3.section-heading-accent,
+	.entry-content h3.section-heading-accent-alt {
+		margin: 10px auto;
+		font-size: 1.6rem;
+		font-family: niveau-grotesk-small-caps, sans-serif;
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: .08rem;
+		text-align: center;
+		text-transform: uppercase;
+		color: $dark;
+	}
+
 }
 
+@media only screen and (min-width: 768px) {
+
+	/* section heading accents */
+	.editor-styles-wrapper .editor-rich-text .section-heading-accent,
+	.section-heading-accent,
+	.editor-styles-wrapper .editor-rich-text .section-heading-accent-alt,
+	.section-heading-accent-alt,
+	.entry-content .section-heading-accent-alt,
+	.entry-content h3.section-heading-accent,
+	.entry-content h3.section-heading-accent-alt  {
+		line-height: 1.5;
+		font-size: 2rem;
+	}
+}
+
+
 .editor-styles-wrapper .section-heading-accent:before,
-.section-heading-accent:before {
+.section-heading-accent:before,
+.editor-styles-wrapper .section-heading-accent-alt:before,
+.section-heading-accent-alt:before {
 	content: ' ';
 	display: block;
 	width: 100%;
@@ -2755,6 +2929,16 @@ button,
 	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') center center no-repeat;
 	background-size: cover;
 	margin-bottom: 10px;
+	min-height: 50px;
+}
+
+.full-width-page-wrapper .section-heading-accent-alt:before,
+.full-width-page-wrapper .section-heading-accent:before {min-height: 75px;}
+
+.editor-styles-wrapper .section-heading-accent-alt:before,
+.section-heading-accent-alt:before {
+	background: transparent url('/wp-content/uploads/2019/03/star-double-divider.svg') center center no-repeat;
+	background-size: cover;
 }
 
 /* subheadings */
@@ -2843,19 +3027,27 @@ button,
 /****************************************************************************************/
 /* CEA page title header */
 /****************************************************************************************/
-.full-width-page-wrapper .entry-header {
+.cortextoo .entry-header {
 	background-color: $primary;
 }
 
-.full-width-page-wrapper .entry-header .entry-title {
-	text-align: center;
-	color: $light;
-	margin: 70px auto;
-	font-size: 8rem;
-	line-height: 1;
+.cortextoo .entry-header {margin-bottom: 20px;}
+
+@media only screen and (min-width: 1px) {
+	.cortextoo .entry-header h1 {
+		font-size: 5rem;
+		text-align: center;
+		color: $light;
+		margin: 70px auto;
+		line-height: 1;
+	}
 }
 
-.full-width-page-wrapper .entry-header {margin-bottom: 20px;}
+@media only screen and (min-width: 768px) {
+	.cortextoo .entry-header h1 {
+		font-size: 8rem;
+	}
+}
 
 /****************************************************************************************/
 /* CEA unordered list stylings */
@@ -2984,6 +3176,12 @@ button,
 		width: 100%;
 	}
 
+	.home-search #searchform #s {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		height: 38px;
+	}
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -3026,6 +3224,23 @@ button,
 }
 
 /****************************************************************************************/
+/* CEA Footer */
+/****************************************************************************************/
+
+#wrapper-footer-full {
+	background-color: $primary;
+	color: $light;
+}
+
+#wrapper-footer {
+	background-color: $primary;
+	color: $light;
+}
+
+#wrapper-footer-full a {color: $light;}
+#wrapper-footer-full a:hover {color: $gray-300;}
+
+/****************************************************************************************/
 /* CEA widget customizations*/
 /****************************************************************************************/
 
@@ -3043,14 +3258,14 @@ button,
 	font-size: 2.4rem;
 	letter-spacing: .115rem;
 	line-height: 1.8;
-	color: $primary;
+	color: $light;
 	font-weight: $font-weight-bold;
 }
 
 /* footer latest posts news */
 .c9-recent-posts .c9-article-title .entry-title {
 	font-size: 1.5rem;
-	color: #767676;
+	color: $gray-800;
 }
 
 .c9-recent-posts .c9-article-title {line-height: 1;}
@@ -3058,7 +3273,6 @@ button,
 .c9-recent-posts .c9-article-title .c9-article-date {
 	font-size: 1.4rem;
 	line-height: 1;
-	color: #767676;
 }
 
 /* social icons */
@@ -3071,41 +3285,3 @@ button,
 .widget_cortex_subscribe_widget ul li a:hover {
 	background-color: $secondary;
 }
-
-
-// Sam Stuff
-
-.c9-block-cta {
-	border-top: 4px solid #006a30;
-	border-bottom: 4px solid #006a30;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-a.wp-block-button__link {
-	width: auto;
-	max-width: 100%;
-}
-.c9-cta-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.c9-cta-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.ab-cta-text p {
-	margin-bottom: 0;
-}
-// .c9-cta-content {
-// 	display: flex;
-// 	align-items: center;
-// }
-// .c9-cta-content .editor-rich-text {
-// 	width: 100%;
-// 	display: flex;
-// }
-// .c9-cta-content .editor-rich-text > div {
-// 	width: 100%;
-// }
