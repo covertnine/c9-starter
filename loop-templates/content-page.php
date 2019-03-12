@@ -12,8 +12,6 @@
 
 	<div class="entry-content">
 
-		<div class="container">
-
 			<?php the_content(); ?>
 
 			<?php
@@ -22,7 +20,6 @@
 				'after'  => '</div>',
 			) );
 			?>
-		</div><!-- .container-->
 
 	</div><!-- .entry-content -->
 

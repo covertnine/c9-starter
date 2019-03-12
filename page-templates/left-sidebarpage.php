@@ -14,7 +14,7 @@ get_header();
 
 	<div class="container page-left-sidebar" id="content">
 
-		<div class="row">
+		<div class="row no-gutters">
 
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-12 offset-xs-0 col-sm-10 offset-sm-2<?php else : ?>col-12<?php endif; ?> content-area" id="primary">
 

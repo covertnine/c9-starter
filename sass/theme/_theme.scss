@@ -242,7 +242,11 @@ a:hover {text-decoration: none;}
 	.page-left-sidebar .entry-content .container .alignfull,
 	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
 	.page-left-sidebar .alignfull,
-	.page-left-sidebar .wp-block[data-align="full"] {
+	.page-left-sidebar .wp-block[data-align="full"],
+	.page-right-sidebar .entry-content .container .alignfull,
+	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-right-sidebar .alignfull,
+	.page-right-sidebar .wp-block[data-align="full"] {
 		margin-left: calc((-100vw + 100%) / 2);
 		margin-right: calc((-100vw + 100%) / 2);
 	}
@@ -269,6 +273,14 @@ a:hover {text-decoration: none;}
 		margin-right: calc(((-100vw + 100%) / 2);
 	}
 
+	.page-right-sidebar .entry-content .container .alignfull,
+	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-right-sidebar .alignfull,
+	.page-right-sidebar .wp-block[data-align="full"] {
+		margin-left: calc(((-100vw + 120%) / 2);
+		margin-right: calc(((-100vw + 100%) / 2);
+	}
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -276,8 +288,15 @@ a:hover {text-decoration: none;}
 	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
 	.page-left-sidebar .alignfull,
 	.page-left-sidebar .wp-block[data-align="full"] {
-		margin-left: calc(((-100vw + 78.5%) / 2);
-		margin-right: calc(((-100vw + 100%) / 2);
+		margin-left: calc((-100vw + 78.5%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
+	}
+
+	.page-right-sidebar .entry-content .container .alignfull,
+	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
+	.page-right-sidebar .alignfull,
+	.page-right-sidebar .wp-block[data-align="full"] {
+		margin-left: calc((-100vw + 120%) / 2);
 	}
 }
 
@@ -708,38 +727,60 @@ nav ul li a {
 /* Sidebars */
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
-	#left-sidebar {
+	#left-sidebar,
+	#right-sidebar {
 		display: none;
 	}
 }
 
 @media only screen and (min-width: 576px) {
-	#left-sidebar {
+	#left-sidebar,
+	#right-sidebar {
 		display: block;
 		position: fixed;
-		top: 40px;
-		left: 30px;
+		top: 60px;
+		left: 15px;
 		transition: opacity .7s;
 		opacity: 0;
-		max-width: 150px;
+		max-width: 115px;
 	}
-	#left-sidebar.fixed-sidebar {
-		top: 80px;
+	#right-sidebar {
+		left: auto;
+		right: 30px;
+	}
+	#left-sidebar.fixed-sidebar,
+	#right-sidebar.fixed-sidebar {
 		opacity: 1;
 	}
 }
-
+@media only screen and (min-width: 768px) {
+	#left-sidebar,
+	#right-sidebar {
+		top: 80px;
+	}
+}
 @media only screen and (min-width: 992px) {
-	#left-sidebar {
+	#left-sidebar,
+	#right-sidebar {
+		top: 80px;
 		left: 30px;
 		max-width: 180px;
+	}
+	#right-sidebar {
+		left: auto;
+		right: 30px;
 	}
 }
 
 @media only screen and (min-width: 1200px) {
-	#left-sidebar {
+	#left-sidebar,
+	#right-sidebar {
 		left: 60px;
 		top: 160px;
+	}
+	#right-sidebar {
+		left: auto;
+		right: 60px;
 	}
 }
 /****************************************************************************************/
@@ -2723,21 +2764,17 @@ button:hover,
 
 }
 @media only screen and (min-width: 768px) {
-	.topnav-btn-signup {
-		padding: 7px 14px;
-	}
-	#topnav input[type=submit] {margin-left: 4px;}
-	#topnav #loginform .login-password {margin-left: 20px;}
-}
-
-@media only screen and (min-width: 992px) {
 	#topnav input[type=submit], .topnav-btn-signup {
 		font-size: 1.3rem;
 		line-height: 1;
 		letter-spacing: .11rem;
 		padding: 7px 16px;
 	}
+	#topnav input[type=submit] {margin-left: 4px;line-height: 1;}
+	#topnav #loginform .login-password {margin-left: 20px;}
+}
 
+@media only screen and (min-width: 992px) {
 	.topnav-btn-signup {
 		padding: 7px 30px;
 	}
@@ -3067,7 +3104,7 @@ button:hover,
 
 .entry-content ul:not(.wp-block-gallery) li,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
-	line-height: 2;
+	line-height: 1.6;
 	font-size: 2rem;
 }
 
@@ -3083,7 +3120,7 @@ button:hover,
 	content: ' ';
 	display: inline;
 	margin-left: -45px;
-	padding-left: 50px;
+	padding-left: 45px;
 	width: 24px;
 	height: 24px;
 	line-height: 2;

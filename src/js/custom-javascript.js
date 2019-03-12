@@ -7,9 +7,11 @@
 
 		if (scroll >=633) {
 			jQuery('#left-sidebar').addClass('fixed-sidebar');
+			jQuery('#right-sidebar').addClass('fixed-sidebar');
 		}
 		if (scroll <=632) {
 			jQuery('#left-sidebar').removeClass('fixed-sidebar');
+			jQuery('#right-sidebar').removeClass('fixed-sidebar');
 		}
 
 	});
