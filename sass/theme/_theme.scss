@@ -199,7 +199,7 @@ body {
 	font-size: 7rem !important;
 }
 
-.entry-content p[class$="-font-size"] {line-height: 1;}
+.entry-content p[class*="font-size"] {line-height: 1.2;}
 
 p.wp-block-subhead {
 	font-family: $font-family-sans-serif;
@@ -229,7 +229,7 @@ a:hover {text-decoration: none;}
 /****************************************************************************************/
 
 @media only screen and (min-width: 1px) {
-	.alignfull,
+	.entry-content > .alignfull,
 	.entry-content .container [class="wp-block-*"][data-align="full"],
 	.entry-content .container .alignfull,
 	.wp-block[data-align="full"] {
@@ -251,11 +251,16 @@ a:hover {text-decoration: none;}
 		margin-right: calc((-100vw + 100%) / 2);
 	}
 
+	.page-template-default .entry-content > .wp-block-columns {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 }
 
 @media only screen and (min-width: 576px) {
 
-	.alignfull,
+	.entry-content > .alignfull,
 	.entry-content .container [class="wp-block-*"][data-align="full"],
 	.entry-content .container .alignfull,
 	.wp-block[data-align="full"] {
@@ -312,23 +317,23 @@ a:hover {text-decoration: none;}
 		margin-right: auto;
 	}
 
-	.page-template-default .entry-content .container .alignwide,
-	.page-template-default .entry-content .container > p,
-	.page-template-default .entry-content .container > h1,
-	.page-template-default .entry-content .container > h2,
-	.page-template-default .entry-content .container > h3,
-	.page-template-default .entry-content .container > h4,
-	.page-template-default .entry-content .container > h5,
-	.page-template-default .entry-content .container > h6,
-	.page-template-default .entry-content .container > .wp-block-columns,
-	.page-template-default .entry-content .container > .wp-block-button {
+	.page-template-default .entry-content .alignwide,
+	.page-template-default .entry-content > p,
+	.page-template-default .entry-content > h1,
+	.page-template-default .entry-content > h2,
+	.page-template-default .entry-content > h3,
+	.page-template-default .entry-content > h4,
+	.page-template-default .entry-content > h5,
+	.page-template-default .entry-content > h6,
+	.page-template-default .entry-content > .wp-block-columns,
+	.page-template-default .entry-content > .wp-block-button {
 		width: 100%;
 		max-width: 100vw;
 	}
 
-	.page-template-default .entry-content .alignfull,
+	.page-template-default .entry-content > .alignfull,
 	.entry-content .container .wp-block-embed.alignfull,
-	.page-template-default .entry-content .container > .wp-block-columns.alignfull {
+	.page-template-default .entry-content > .wp-block-columns.alignfull {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 100%) / 2);
@@ -337,22 +342,22 @@ a:hover {text-decoration: none;}
 }
 
 @media only screen and (min-width: 1200px) {
-	.page-template-default .entry-content .container .alignwide,
-	.page-template-default .entry-content .container > p,
-	.page-template-default .entry-content .container > h1,
-	.page-template-default .entry-content .container > h2,
-	.page-template-default .entry-content .container > h3,
-	.page-template-default .entry-content .container > h4,
-	.page-template-default .entry-content .container > h5,
-	.page-template-default .entry-content .container > h6,
-	.page-template-default .entry-content .container > .wp-block-columns,
-	.page-template-default .entry-content .container > .wp-block-button {
+	.page-template-default .entry-content .alignwide,
+	.page-template-default .entry-content > p,
+	.page-template-default .entry-content > h1,
+	.page-template-default .entry-content > h2,
+	.page-template-default .entry-content > h3,
+	.page-template-default .entry-content > h4,
+	.page-template-default .entry-content > h5,
+	.page-template-default .entry-content > h6,
+	.page-template-default .entry-content > .wp-block-columns,
+	.page-template-default .entry-content > .wp-block-button {
 		width: 1140px;
 		max-width: 100%;
 	}
 
 	.page-template-default .entry-content .alignfull,
-	.page-template-default .entry-content .container > .wp-block-columns.alignfull {
+	.page-template-default .entry-content > .wp-block-columns.alignfull {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 1110px) / 2);
@@ -746,7 +751,7 @@ nav ul li a {
 	}
 	#right-sidebar {
 		left: auto;
-		right: 30px;
+		right: 15px;
 	}
 	#left-sidebar.fixed-sidebar,
 	#right-sidebar.fixed-sidebar {
@@ -763,12 +768,10 @@ nav ul li a {
 	#left-sidebar,
 	#right-sidebar {
 		top: 80px;
-		left: 30px;
 		max-width: 180px;
 	}
 	#right-sidebar {
 		left: auto;
-		right: 30px;
 	}
 }
 
@@ -1003,8 +1006,9 @@ embed,iframe,object {
 /***************************** WordPress Gutenberg Column Blocks
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
-
-}
+	.wp-block-column {
+		margin: 15px 0px;
+	}}
 
 @media only screen and (min-width: 600px) {
 	.wp-block-column:not(:last-child),
@@ -1172,14 +1176,14 @@ embed,iframe,object {
 		font-size: 1rem;
 	}
 
-	.page-template-default .entry-content .container > .wp-block-table.alignfull {
+	.page-template-default .entry-content > .wp-block-table.alignfull {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 100%) / 2);
 		margin-right: calc((-100vw + 100%) / 2);
 	}
 
-	.page-template-default .entry-content .container > .wp-block-table.alignwide {
+	.page-template-default .entry-content > .wp-block-table.alignwide {
 		width: 100%;
 		max-width: 100%;
 		margin-left: 0px;
@@ -1938,7 +1942,6 @@ img.mfp-img {
 .editor-styles-wrapper .button-primary,
 .editor-styles-wrapper .mce-content-body.button,
 .cortextoo button,
-.cortextoo input[type="submit"],
 .entry-content .btn,
 .entry-content .btn:visited,
 .entry-content button,
@@ -1949,7 +1952,8 @@ img.mfp-img {
 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 .wp-block-button__link,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
-.wp-block-file__button {
+.wp-block-file__button,
+.wp-block-file .wp-block-file__button {
 	display:inline-block;
 	padding:8px 45px;
 	width:auto;
@@ -1993,14 +1997,14 @@ button:hover,
 	.page-template-default .entry-content > .wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
-		margin: 0px -15px;
+		margin: 0px;
 	}
 	.wp-block-covertnine-blocks-column-containers p:only-of-type {margin-bottom: 0px;}
 }
 
 @media only screen and (min-width: 576px) {
 
-	.page-template-default .entry-content > .container .wp-block-covertnine-blocks-column-containers {
+	.page-template-default .entry-content > .wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 100%) / 2);
@@ -2011,7 +2015,7 @@ button:hover,
 
 @media only screen and (min-width: 768px) {
 
-	.page-template-default .entry-content > .container .wp-block-covertnine-blocks-column-containers {
+	.page-template-default .entry-content > .wp-block-covertnine-blocks-column-containers {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 100%) / 2);
@@ -2050,10 +2054,28 @@ button:hover,
 		margin-right: calc((-100vw + 1110px)/2);
 	}
 
+	.wp-block-covertnine-blocks-column-containers .wp-block-columns:not(.alignfull),
+	.wp-block-covertnine-blocks-column-containers .wp-block-columns.alignwide {
+		max-width: 1110px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-block-covertnine-blocks-column-containers .wp-block-columns.alignwide {
+		max-width: 1170px;
+		padding: 0px;
+	}
+
+	.wp-block-covertnine-blocks-column-containers .wp-block-columns.alignfull {
+		max-width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
 	.editor-styles-wrapper .wp-block[data-type="covertnine-blocks/column"]:only-child:not(.container-narrow),
 	.editor-styles-wrapper .wp-block[data-type="covertnine-blocks/column-containers"] .wp-block[data-type="core/columns"][data-align="wide"] {
-		width: 1140px;
-		max-width: 1140px;
+		width: 1170px;
+		max-width: 1170px;
 	}
 
 }
@@ -2251,11 +2273,12 @@ button:hover,
 	z-index: 1055;
 	color: $light;
 	background-color: $primary;
+	border: none;
 }
 
 /**************************** Wordpress Search Form **********************************/
 .search-form .search-field,
-.widget_search .search-field {
+.widget-area .widget_search .search-field {
 	display:inline;
 	vertical-align:top;
 	border-radius:0;
@@ -2265,44 +2288,40 @@ button:hover,
 	line-height:15px;
 }
 
-.widget_search input[type="submit"],
-.widget_search .search-form label {max-width:48%;}
+.widget-area .widget_search label {
+	max-width:100%;
 
-.widget_search .search-form label {
+}
+
+.widget-area .widget_search input[type="submit"] {
+	padding: 7px 16px;
+	display: block;
+	width: 100%;
+	line-height: 1;
+	margin-top: 5px;
+	font-size: 1.3rem;
+}
+.widget-area .widget_search label {
 	display:inline-block;
 	float:left;
 }
 
-.search-form,.widget_search .search-form {
+.widget-area .widget_search input[type="text"] {
 	height:34px;
 	overflow:hidden;
+	width: 100%;
 }
 
-.widget_search .search-field,
-.search-form .search-field {width: 100%;}
 
-.search-form label,
-.widget_search .search-form label {
+.search-form label {
 	width: 50%;
 	margin:0;
 	float:left;
 }
 
-.search-form .search-field,
-.widget_search .search-field {
+.search-form .search-field {
 	display:inline;
 	vertical-align:top;
-}
-
-.widget_search .search-submit,
-.search-submit {
-	display:block;
-	float:left;
-	border: 0;
-}
-
-.widget_search .search-submit:hover {
-	box-shadow:none;
 }
 
 /**************************** Gravity Forms **********************************/
