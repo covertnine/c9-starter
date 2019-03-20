@@ -2448,7 +2448,13 @@ button:hover,
 	margin-top: 1px;
 }
 
+.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label,
+.cortextoo .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label {
+	margin-top: 20px;
+}
+
 .cortextoo .gform_wrapper input[type="text"],
+.cortextoo .gform_wrapper input[type="tel"],
 .cortextoo .gform_wrapper textarea,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper textarea {
@@ -2469,8 +2475,15 @@ button:hover,
 	padding: 2px 4px;
 }
 
+.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
 .cortextoo .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
 .cortextoo .gform_wrapper.gf_browser_safari .gfield_time_ampm select,
+.cortextoo .gform_wrapper .ginput_complex .ginput_right select,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
@@ -2535,6 +2548,13 @@ button:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type=submit]:hover {
 		opacity: .8;
+	}
+
+	.cortextoo .gform_wrapper .left_label li.hidden_label input,
+	.cortextoo .gform_wrapper .right_label li.hidden_label input,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label li.hidden_label input,
+	.wp-block[data-type="gravityforms/block"] .gform_wrapper .right_label li.hidden_label input {
+		margin: 0px;
 	}
 
 
@@ -3406,4 +3426,23 @@ button:hover,
 
 .widget_cortex_subscribe_widget ul li a:hover {
 	background-color: $secondary;
+}
+
+/****************************************************************************************/
+/* CEA Gravity Forms */
+/****************************************************************************************/
+.ginput_card_expiration_container select,
+.ginput_card_expiration_container label {
+	float: left;
+	display: inline;
+}
+.cortextoo .ginput_container_creditcard label,
+.cortextoo .ginput_card_expiration_container label {
+	margin-bottom: 10px !important;
+}
+.ginput_card_expiration_container:after {
+	content: '';
+	display: block;
+	clear: both;
+
 }
