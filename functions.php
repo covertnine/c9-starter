@@ -59,3 +59,8 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+/**
+ * CEA Functions
+ */
+require get_template_directory() . '/inc/cea-functions.php';
