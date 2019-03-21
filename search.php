@@ -11,24 +11,48 @@ get_header();
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="page-search-results cortextoo" id="content" tabindex="-1">
 
-		<div class="row">
+		<main class="site-main" id="main">
 
-			<main class="site-main" id="main">
+			<?php if ( have_posts() ) : ?>
 
-				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
+			<div class="wp-block-covertnine-blocks-column-containers mar20B home-search">
+				<div class="container-fluid header-container-search">
+					<div class="row no-gutter">
 
-							<h1 class="page-title"><?php printf(
-							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'cortextoo' ),
-								'<span>' . get_search_query() . '</span>' ); ?></h1>
+						<div class="wp-block-covertnine-blocks-column col">
+							<div class="container">
+								<h1 class="entry-title text-center"><?php printf(
+								/* translators:*/
+								 esc_html__( 'Results for: %s', 'cortextoo' ),
+									'<span>' . get_search_query() . '</span>' ); ?></h1>
 
-					</header><!-- .page-header -->
+								<?php echo do_shortcode("[ceasearch]"); ?>
 
-					<?php /* Start the Loop */ ?>
+							</div>
+
+						</div><!-- .wp-block-covertnine-blocks-column-->
+					</div><!-- .row-->
+				</div><!-- .container-fluid-->
+			</div><!-- .c9 block column container -->
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						[ pre-set categories will be linked here hidden on mobile but visible on min-width: 768]
+					</div>
+				</div>
+				<div class="row no-gutter">
+
+					<div class="col-xs-12 col-sm-3">
+						[filter by tag]
+
+						[filter by rating]
+					</div>
+					<div class="col-xs-12 col-sm-9">
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -48,14 +72,17 @@ get_header();
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
+					</div><!-- .col-->
+				</div><!-- .row-->
+			</div><!-- .container-->
 
-			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+		</main><!-- #main -->
 
-	</div><!-- .row -->
+		<!-- The pagination component -->
+		<?php cortextoo_pagination(); ?>
 
-</div><!-- Container end -->
+
+	</div><!-- .cortextoo end -->
 
 </div><!-- Wrapper end -->
 
