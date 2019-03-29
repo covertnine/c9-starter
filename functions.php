@@ -59,3 +59,8 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+/**
+ * Load Client-Specific Files
+ */
+require get_template_directory() . '/client/client.php';
