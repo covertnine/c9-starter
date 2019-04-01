@@ -8,14 +8,13 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod('cortextoo_container_type');
 ?>
 
 <?php get_sidebar('footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-    <div class="<?php echo esc_attr($container); ?>">
+	<div class="container">
 
         <div class="row">
 
@@ -75,7 +74,7 @@ $container = get_theme_mod('cortextoo_container_type');
 
 <div id="search">
     <button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only">Close</span></button>
-    <form role="search" method="get" id="fullscreen" action="https://cortex.covertnine.com/">
+    <form role="search" method="get" id="fullscreen" action="/">
         <div>
             <span class="sr-only">Search for:</span>
             <input type="search" class="search-field" name="s" value="" placeholder="Search for entertainers, photographers, party rentals &amp; more" />

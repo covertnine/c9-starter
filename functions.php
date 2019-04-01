@@ -78,3 +78,7 @@ function need_client_folder()
 <?php
 
 }
+/**
+ * CEA Functions
+ */
+require get_template_directory() . '/inc/cea-functions.php';

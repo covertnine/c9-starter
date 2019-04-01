@@ -90,9 +90,9 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 			return;
 		}
 		?>
-				<nav class="container navigation post-navigation">
+				<nav class="navigation post-navigation">
 					<h2 class="sr-only"><?php _e( 'Post navigation', 'cortextoo' ); ?></h2>
-					<div class="row nav-links justify-content-between">
+					<div class="nav-links justify-content-between px-3">
 						<?php
 
 							if ( get_previous_post_link() ) {

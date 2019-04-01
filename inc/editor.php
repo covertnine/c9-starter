@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap modify editor
+ * COVERT NINE modify editor
  *
  * @package cortextoo
  */
@@ -67,10 +67,22 @@ if ( ! function_exists ( 'cortextoo_tiny_mce_before_init' ) ) {
   }
 }
 
+/* add theme compiled files to gutenberg editor */
 function cortextoo_editor_style() {
     wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/css/theme.min.css' );
     wp_enqueue_style( 'cortextoo-editor-style', get_template_directory_uri() . '/css/custom-editor-style.css' );
 }
 add_action( 'enqueue_block_editor_assets', 'cortextoo_editor_style' );
 
-// add_editor_style('/css/custom-editor-style.css');
+
+/* add page template name to body_class in admin */
+if (!function_exists('cortextoo_template_selected')) {
+
+	function cortextoo_template_selected( $classes ) {
+
+		$template_slug = basename( get_page_template(), ".php" );
+        return "$classes $template_slug";
+    }
+
+}
+add_filter('admin_body_class', 'cortextoo_template_selected');
