@@ -101,6 +101,7 @@ Thumbs.db
 *.tar
 *.zip
 
+client/*
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
