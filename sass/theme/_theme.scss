@@ -660,9 +660,6 @@ nav ul li a {
 	width:100%;
 	opacity:1;
 	z-index:-1;
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
 	background-color: $primary;
 }
@@ -712,9 +709,6 @@ nav ul li a {
 .comment-reply-link,
 .comment-author .fn .url,
 .comment-metadata a {
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
 }
 
@@ -1465,8 +1459,6 @@ embed,iframe,object {
 	left:0;
 	top:0;
 	padding:0 8px;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 
@@ -1502,15 +1494,10 @@ embed,iframe,object {
 
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-	cursor:-moz-zoom-out;
-	cursor:-webkit-zoom-out;
 	cursor:zoom-out;
 }
 
 .mfp-zoom {
-	cursor:pointer;
-	cursor:-webkit-zoom-in;
-	cursor:-moz-zoom-in;
 	cursor:zoom-in;
 }
 
@@ -1519,8 +1506,6 @@ embed,iframe,object {
 }
 
 .mfp-close,.mfp-arrow,.mfp-preloader,.mfp-counter {
-	-webkit-user-select:none;
-	-moz-user-select:none;
 	user-select:none;
 }
 
@@ -1561,7 +1546,6 @@ button.mfp-close,button.mfp-arrow {
 	outline:none;
 	padding:0;
 	z-index:1046;
-	-webkit-box-shadow:none;
 	box-shadow:none;
 }
 
@@ -1808,8 +1792,6 @@ img.mfp-img {
 		top:auto;
 		padding:3px 5px;
 		position:fixed;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 
@@ -1837,17 +1819,14 @@ img.mfp-img {
 
 @media all and (max-width: 900px) {
 	.mfp-arrow {
-		-webkit-transform:scale(0.75);
 		transform:scale(0.75);
 	}
 
 	.mfp-arrow-left {
-		-webkit-transform-origin:0;
 		transform-origin:0;
 	}
 
 	.mfp-arrow-right {
-		-webkit-transform-origin:100%;
 		transform-origin:100%;
 	}
 
@@ -1890,23 +1869,17 @@ img.mfp-img {
 
 .mfp-zoom-in .mfp-figure,.mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler {
 	opacity:0;
-	-webkit-transition:all .3s ease-out;
 	transition:all .3s ease-out;
-	-webkit-transform:scale(0.95);
-	-ms-transform:scale(0.95);
 	transform:scale(0.95);
 }
 
 .mfp-zoom-in.mfp-bg,.mfp-zoom-in .mfp-preloader {
 	opacity:0;
-	-webkit-transition:all .3s ease-out;
 	transition:all .3s ease-out;
 }
 
 .mfp-zoom-in.mfp-image-loaded .mfp-figure,.mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler {
 	opacity:1;
-	-webkit-transform:scale(1);
-	-ms-transform:scale(1);
 	transform:scale(1);
 }
 
@@ -1915,8 +1888,6 @@ img.mfp-img {
 }
 
 .mfp-zoom-in.mfp-removing .mfp-figure,.mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler {
-	-webkit-transform:scale(0.95);
-	-ms-transform:scale(0.95);
 	transform:scale(0.95);
 	opacity:0;
 }
@@ -1927,7 +1898,6 @@ img.mfp-img {
 
 .mfp-iframe-scaler {
 	overflow:visible;
-/*so the close button is shown*/
 }
 
 .mfp-zoom-out-cur {
@@ -2012,9 +1982,6 @@ img.mfp-img {
 	letter-spacing:.2rem;
 	text-align:center;
 	text-transform:uppercase;
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
 	transition:all .4s ease-in-out;
 	white-space: normal;
 	color: #fff;
@@ -2287,10 +2254,6 @@ button:hover,
     width: 100%;
     max-width: 100vw;
     height: 0px;
-    -webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	-ms-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
     opacity: 0;
     overflow: hidden;
@@ -2359,7 +2322,6 @@ button:hover,
 
 .widget-area .widget_search label {
 	max-width:100%;
-
 }
 
 .widget-area .widget_search input[type="submit"] {
@@ -2498,7 +2460,6 @@ button:hover,
 	font-size: 1.6rem;
 	height: 30px;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0px;
 	background: #fff;
 	padding-left: 4px;
 }
@@ -2514,10 +2475,6 @@ button:hover,
 	font-size:1.2rem;
 	line-height:1.2rem;
 	font-weight:400;
-	-webkit-transition:all .4s ease-in-out;
-	-moz-transition:all .4s ease-in-out;
-	-o-transition:all .4s ease-in-out;
-	transition:all .4s ease-in-out;
 	border-radius: 34px;
 	background-color: $dark;
 	color: $light;
@@ -2590,7 +2547,10 @@ button:hover,
 
 .opacity0 {opacity: 0;}
 .opacity100 {opacity: 1;}
-
+.img-blurred {
+	filter: blur(15px);
+    transform: scale(1.1);
+}
 .mar5B{margin-bottom:5px}
 .mar10B{margin-bottom:10px}
 .mar15B{margin-bottom:15px}
@@ -2636,6 +2596,7 @@ button:hover,
 .mar130NT{margin-top:-130px}
 .mar140NT{margin-top:-140px}
 
+.lighter {font-weight: 200 !important;}
 .light,
 .h1.light,
 .h2.light
@@ -2756,6 +2717,11 @@ button:hover,
 	padding:5px 30px;
 	border-radius: 28px;
 	font-size:1.2rem;
+}
+
+.btn-secondary,
+.cortextoo .entry-content .btn-secondary {
+	background-color: $secondary;
 }
 
 .btn-signup .wp-block-button__link:before {
@@ -3110,8 +3076,8 @@ button:hover,
 	display: block;
 	width: 100%;
 	height: 40px;
-	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') center center no-repeat;
-	background-size: cover;
+	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') no-repeat;
+	background-size: 100% 100%;
 	margin-bottom: 10px;
 	min-height: 50px;
 }
@@ -3432,6 +3398,81 @@ button:hover,
 
 
 }
+
+/****************************************************************************************/
+/* CEA Profile Front End */
+/****************************************************************************************/
+.cea-profile .entry-content {padding-top: 50px;}
+
+.profile-header {
+	position: relative;
+	min-height: 465px;
+	height: 465px;
+	max-height: 465px;
+	text-align: center;
+	overflow: hidden;
+}
+.profile-header-wrapper {
+	position: relative;
+	z-index: 7;
+	height: 100%;
+}
+
+.profile-header-content {
+	text-align: center;
+	margin: 0px auto;
+}
+.profile-carousel .carousel-item .carousel-item-center {
+	min-height: 465px;
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-carousel .carousel-item .entry-profile-gallery-img {
+	max-height: 465px;
+	width: auto;
+}
+
+.profile-carousel .carousel-inner,
+.profile-video-carousel .carousel-inner.profile-video-carousel-container {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.profile-video-carousel .carousel-inner.profile-video-carousel-container {
+	margin-left: 0px;
+}
+
+.entry-content .profile-video-carousel .carousel-item.active:before {display: none;}
+
+.entry-image-gallery-profile {
+	margin-bottom: 0px;
+}
+
+.profile-bg-img {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 4;
+}
+
+.profile-video-wrapper {
+	background: #006A30 url('/wp-content/uploads/2019/04/videos-bg-144.jpg') center center no-repeat;
+	background-size: cover;
+	min-height: 375px;
+	margin: 40px auto;
+}
+
+/****************************************************************************************/
+/* CEA Ratings */
+/****************************************************************************************/
+.cea-ratings-container {}
 
 /****************************************************************************************/
 /* CEA Footer */
