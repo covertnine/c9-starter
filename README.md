@@ -1,17 +1,35 @@
-#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
-
-# UnderStrap WordPress Theme Framework
+# Cortextoo
 
 Built with [understrap](https://understrap.com)
 
+## Repos
+In addition to this repo, you will need to create and version a `client` folder, which will at a minimum contained `client/client.php`.
 
-## Starter Theme + HTML Framework = WordPress Theme Framework
+To start a new project, either clone the client boilerplate (coming soon), or create you own repo.
 
-The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
-Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
+- {client name}-client (e.g., [cea-client](https://github.com/covertnine/cea-client) )
 
-## Developing With npm, Gulp and SASS and [Browser Sync][1]
 
+## Branches
+There are two main branches: 
+
+- main 
+- develop
+
+And Two Supporting:
+
+- hotfix
+- feature
+
+Unless you have a clear reason not to, default to the `develop` branch. When you develop, pull from develop, commit often, and push back to `develop` at the end of your work. Once the code is **production-ready**, merge your changes back into `main`.
+
+If you make a change to the parent theme _and_ the client folder, make _sure_ to follow the same process for the client.
+
+For developing hotfixes and specific features, follow the steps and naming conventions per [this guide](https://nvie.com/posts/a-successful-git-branching-model/).
+
+
+
+## NPM Build-Steps
 ### Installing Dependencies
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
@@ -22,16 +40,3 @@ To work with and compile your Sass files on the fly start:
 
 - `$ gulp watch`
 
-Or, to run with Browser-Sync:
-
-- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
-```javascript
-{
-    "browserSyncOptions" : {
-        "proxy": "localhost/theme_test/", // <----- CHANGE HERE
-        "notify": false
-    },
-    ...
-};
-```
-- then run: `$ gulp watch-bs`
