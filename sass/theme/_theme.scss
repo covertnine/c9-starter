@@ -3521,8 +3521,15 @@ button:hover,
 .page-login .gform_login_widget {
 	margin-bottom: 60px;
 }
-
-/**/
+/****************************************************************************************/
+/* CEA Custom Search */
+/****************************************************************************************/
 .custom-search-blurb {
+	text-align: center;
+}
+.input-group {
+	display: flex;
+}
+.custom-search-span {
 	text-align: center;
 }

@@ -4,7 +4,6 @@
  *
  * @package cortextoo
  */
-
 ?>
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/account-profile' ) ); ?>" role="search">
 	<label class="assistive-text sr-only" for="s"><?php esc_html_e( 'Search', 'cortextoo' ); ?></label>
