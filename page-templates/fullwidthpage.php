@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="full-width-page-wrapper" id="full-width-page-wrapper">
+<div class="full-width-page-wrapper cortextoo" id="full-width-page-wrapper">
 
 	<main class="site-main" id="main" role="main">
 

@@ -121,6 +121,12 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 		    ),
 		));
 
+
+		// C9 custom image sizes
+		add_image_size( 'c9-feature-wide', 960, 411, array('center', 'center'), true);
+		add_image_size( 'c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
+		add_image_size( 'c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
+
 	}
 }
 

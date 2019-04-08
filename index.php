@@ -12,25 +12,12 @@
  */
 
 get_header();
-
-$container   = get_theme_mod( 'cortextoo_container_type' );
 ?>
-
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
 
 <div class="wrapper" id="index-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
-
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
 			<main class="site-main" id="main">
-
+				<div class="container-narrow container-posts cortextoo">
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
@@ -54,19 +41,12 @@ $container   = get_theme_mod( 'cortextoo_container_type' );
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 				<?php endif; ?>
+				</div><!-- .container-narrow-->
 
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
 			<?php cortextoo_pagination(); ?>
-
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-		
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 

@@ -8,13 +8,13 @@
  */
 
 get_header();
-$container   = get_theme_mod( 'cortextoo_container_type' );
+
 ?>
 
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container cortextoo" id="content" tabindex="-1">
 
 		<div class="row">
 

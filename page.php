@@ -16,29 +16,18 @@ get_header();
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="page-container" id="content" tabindex="-1">
+	<div class="page-container cortextoo" id="content" tabindex="-1">
 
 
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+		<main class="site-main" id="main">
 
-			<main class="site-main" id="main">
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+			<?php endwhile; // end of the loop. ?>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			</main><!-- #main -->
-
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		</main><!-- #main -->
 
 
 </div><!-- page-container end -->

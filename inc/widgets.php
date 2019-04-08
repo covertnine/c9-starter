@@ -62,6 +62,26 @@ if ( ! function_exists( 'cortextoo_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
+			'name'          => __( 'CEA User Login', 'cortextoo' ),
+			'id'            => 'cea-login-sidebar',
+			'description'   => 'Widgets for the CEA talent login page',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'CEA User Admin', 'cortextoo' ),
+			'id'            => 'cea-user-sidebar',
+			'description'   => 'Widgets for the CEA logged in users',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
+		register_sidebar( array(
 			'name'          => __( 'Footer', 'cortextoo' ),
 			'id'            => 'footerfull',
 			'description'   => 'Full bottom widget with dynmic grid',
@@ -70,6 +90,30 @@ if ( ! function_exists( 'cortextoo_widgets_init' ) ) {
 		    'before_title'   => '<h3 class="widget-title">',
 		    'after_title'    => '</h3>',
 		) );
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Right Sidebar', 'cortextoo' ),
+				'id'            => 'right-sidebar',
+				'description'   => __( 'Right sidebar widget area', 'cortextoo' ),
+				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Left Sidebar', 'cortextoo' ),
+				'id'            => 'left-sidebar',
+				'description'   => __( 'Left sidebar widget area', 'cortextoo' ),
+				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
 
 	}
 } // endif function_exists( 'cortextoo_widgets_init' ).

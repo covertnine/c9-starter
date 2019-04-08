@@ -7,33 +7,52 @@
 
 get_header();
 
-$container   = get_theme_mod( 'cortextoo_container_type' );
-
 ?>
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="page-search-results cortextoo" id="content" tabindex="-1">
 
-		<div class="row">
+		<main class="site-main" id="main">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php if ( have_posts() ) : ?>
 
-			<main class="site-main" id="main">
 
-				<?php if ( have_posts() ) : ?>
+			<div class="wp-block-covertnine-blocks-column-containers mar20B home-search">
+				<div class="container-fluid header-container-search">
+					<div class="row no-gutter">
 
-					<header class="page-header">
-						
-							<h1 class="page-title"><?php printf(
-							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'cortextoo' ),
-								'<span>' . get_search_query() . '</span>' ); ?></h1>
+						<div class="wp-block-covertnine-blocks-column col">
+							<div class="container">
+								<h1 class="entry-title text-center"><?php printf(
+								/* translators:*/
+								 esc_html__( 'Results for: %s', 'cortextoo' ),
+									'<span>' . get_search_query() . '</span>' ); ?></h1>
 
-					</header><!-- .page-header -->
+								<?php echo do_shortcode("[ceasearch]"); ?>
 
-					<?php /* Start the Loop */ ?>
+							</div>
+
+						</div><!-- .wp-block-covertnine-blocks-column-->
+					</div><!-- .row-->
+				</div><!-- .container-fluid-->
+			</div><!-- .c9 block column container -->
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						[ pre-set categories will be linked here hidden on mobile but visible on min-width: 768]
+					</div>
+				</div>
+				<div class="row no-gutter">
+
+					<div class="col-xs-12 col-sm-3">
+						[filter by tag]
+
+						[filter by rating]
+					</div>
+					<div class="col-xs-12 col-sm-9">
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -53,17 +72,17 @@ $container   = get_theme_mod( 'cortextoo_container_type' );
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
+					</div><!-- .col-->
+				</div><!-- .row-->
+			</div><!-- .container-->
 
-			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+		</main><!-- #main -->
 
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		<!-- The pagination component -->
+		<?php cortextoo_pagination(); ?>
 
-	</div><!-- .row -->
 
-</div><!-- Container end -->
+	</div><!-- .cortextoo end -->
 
 </div><!-- Wrapper end -->
 

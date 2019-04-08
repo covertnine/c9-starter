@@ -8,22 +8,23 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'cortextoo_container_type' );
 ?>
 
-<?php get_sidebar( 'footerfull' ); ?>
+<?php get_sidebar('footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="container">
 
-		<div class="row">
+        <div class="row">
 
-			<div class="col-md-12">
+            <div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+                <footer class="site-footer" id="colophon">
+
 
 					<div class="site-info">
+
 						<div class="container">
 							<div class="row text-center">
 								<div class="col-xs-12">
@@ -32,15 +33,16 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 							</div>
 						</div><!-- .container-->
 
-					</div><!-- .site-info -->
+                    </div><!-- .site-info -->
 
-				</footer><!-- #colophon -->
+                </footer><!-- #colophon -->
 
-			</div><!--col end -->
+            </div>
+            <!--col end -->
 
-		</div><!-- row end -->
+        </div><!-- row end -->
 
-	</div><!-- container end -->
+    </div><!-- container end -->
 
 </div><!-- wrapper end -->
 
@@ -51,4 +53,3 @@ $container = get_theme_mod( 'cortextoo_container_type' );
 </body>
 
 </html>
-

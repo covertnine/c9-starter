@@ -28,6 +28,28 @@ body {font-size: 1.3rem;}
     max-width: 1140px;
 }
 
+/* with sidebar pages to account for sidebar */
+.left-sidebarpage .editor-styles-wrapper .editor-default-block-appender,
+.left-sidebarpage .editor-styles-wrapper .editor-post-title,
+.left-sidebarpage .editor-styles-wrapper .editor-post-title__block,
+.left-sidebarpage .wp-block[data-type="core/columns"],
+.left-sidebarpage .wp-block[data-type="core/paragraph"],
+.left-sidebarpage .wp-block[data-type="core/heading"],
+.left-sidebarpage .wp-block[data-type="core/block"],
+.left-sidebarpage .wp-block[data-type="core/button"],
+.left-sidebarpage .wp-block[data-type="core/image"],
+.right-sidebarpage .editor-styles-wrapper .editor-default-block-appender,
+.right-sidebarpage .editor-styles-wrapper .editor-post-title,
+.right-sidebarpage .editor-styles-wrapper .editor-post-title__block,
+.right-sidebarpage .wp-block[data-type="core/columns"],
+.right-sidebarpage .wp-block[data-type="core/paragraph"],
+.right-sidebarpage .wp-block[data-type="core/heading"],
+.right-sidebarpage .wp-block[data-type="core/block"],
+.right-sidebarpage .wp-block[data-type="core/button"],
+.right-sidebarpage .wp-block[data-type="core/image"] {
+	max-width: 925px;
+}
+
 .edit-post-layout__content .editor-styles-wrapper {
     width: 100%;
     max-width: 1140px; // The widest container, which is 1140px
@@ -72,6 +94,8 @@ body {font-size: 1.3rem;}
 		max-width: 1140px;
 	}
 
+
+
 	.editor-block-list__layout {
 		padding-left: 0px;
 		padding-right: 0px;
@@ -93,7 +117,8 @@ body {font-size: 1.3rem;}
 	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
 	.wp-block[data-align=full],
 	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
-	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull,
+	body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .editor-block-list__block[data-type="core/columns"][data-align="full"] {
 		width: calc(100vw - 440px);
 		max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
 		margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
@@ -101,7 +126,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
-	.wp-block[data-align=full],
 	body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 316px);
@@ -111,7 +135,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
-	.wp-block[data-align=full],
 	body:not(.folded) .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body:not(.folded) .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 160px);
@@ -121,7 +144,6 @@ body {font-size: 1.3rem;}
 	}
 
 	//set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
-	.wp-block[data-align=full],
 	body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
 	body .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
 		width: calc(100vw - 36px);
@@ -158,10 +180,24 @@ body {font-size: 1.3rem;}
 /****************************************************************************************/
 /***************************** core block edits for backend only
 /****************************************************************************************/
-
-.wp-block[data-type="core/separator"] {
+.wp-block[data-type="core/separator"] .editor-block-list__block-edit {
 	max-width: 1110px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
+
+.wp-block[data-type="core/separator"] .editor-block-list__block-edit .wp-block-separator {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+/****************************************************************************************/
+/***************************** core edits for forms in backend editor
+/****************************************************************************************/
+
+.components-modal__content .input-control, .components-modal__content input[type=checkbox], .components-modal__content input[type=color], .components-modal__content input[type=date], .components-modal__content input[type=datetime-local], .components-modal__content input[type=datetime], .components-modal__content input[type=email], .components-modal__content input[type=month], .components-modal__content input[type=number], .components-modal__content input[type=password], .components-modal__content input[type=radio], .components-modal__content input[type=search], .components-modal__content input[type=tel], .components-modal__content input[type=text], .components-modal__content input[type=time], .components-modal__content input[type=url], .components-modal__content input[type=week], .components-modal__content select, .components-modal__content textarea, .components-popover .input-control, .components-popover input[type=checkbox], .components-popover input[type=color], .components-popover input[type=date], .components-popover input[type=datetime-local], .components-popover input[type=datetime], .components-popover input[type=email], .components-popover input[type=month], .components-popover input[type=number], .components-popover input[type=password], .components-popover input[type=radio], .components-popover input[type=search], .components-popover input[type=tel], .components-popover input[type=text], .components-popover input[type=time], .components-popover input[type=url], .components-popover input[type=week], .components-popover select, .components-popover textarea, .edit-post-sidebar .input-control, .edit-post-sidebar input[type=checkbox], .edit-post-sidebar input[type=color], .edit-post-sidebar input[type=date], .edit-post-sidebar input[type=datetime-local], .edit-post-sidebar input[type=datetime], .edit-post-sidebar input[type=email], .edit-post-sidebar input[type=month], .edit-post-sidebar input[type=number], .edit-post-sidebar input[type=password], .edit-post-sidebar input[type=radio], .edit-post-sidebar input[type=search], .edit-post-sidebar input[type=tel], .edit-post-sidebar input[type=text], .edit-post-sidebar input[type=time], .edit-post-sidebar input[type=url], .edit-post-sidebar input[type=week], .edit-post-sidebar select, .edit-post-sidebar textarea, .editor-block-list__block .input-control, .editor-block-list__block input[type=checkbox], .editor-block-list__block input[type=color], .editor-block-list__block input[type=date], .editor-block-list__block input[type=datetime-local], .editor-block-list__block input[type=datetime], .editor-block-list__block input[type=email], .editor-block-list__block input[type=month], .editor-block-list__block input[type=number], .editor-block-list__block input[type=password], .editor-block-list__block input[type=radio], .editor-block-list__block input[type=search], .editor-block-list__block input[type=tel], .editor-block-list__block input[type=text], .editor-block-list__block input[type=time], .editor-block-list__block input[type=url], .editor-block-list__block input[type=week], .editor-block-list__block select, .editor-block-list__block textarea, .editor-post-permalink .input-control, .editor-post-permalink input[type=checkbox], .editor-post-permalink input[type=color], .editor-post-permalink input[type=date], .editor-post-permalink input[type=datetime-local], .editor-post-permalink input[type=datetime], .editor-post-permalink input[type=email], .editor-post-permalink input[type=month], .editor-post-permalink input[type=number], .editor-post-permalink input[type=password], .editor-post-permalink input[type=radio], .editor-post-permalink input[type=search], .editor-post-permalink input[type=tel], .editor-post-permalink input[type=text], .editor-post-permalink input[type=time], .editor-post-permalink input[type=url], .editor-post-permalink input[type=week], .editor-post-permalink select, .editor-post-permalink textarea, .editor-post-publish-panel .input-control, .editor-post-publish-panel input[type=checkbox], .editor-post-publish-panel input[type=color], .editor-post-publish-panel input[type=date], .editor-post-publish-panel input[type=datetime-local], .editor-post-publish-panel input[type=datetime], .editor-post-publish-panel input[type=email], .editor-post-publish-panel input[type=month], .editor-post-publish-panel input[type=number], .editor-post-publish-panel input[type=password], .editor-post-publish-panel input[type=radio], .editor-post-publish-panel input[type=search], .editor-post-publish-panel input[type=tel], .editor-post-publish-panel input[type=text], .editor-post-publish-panel input[type=time], .editor-post-publish-panel input[type=url], .editor-post-publish-panel input[type=week], .editor-post-publish-panel select, .editor-post-publish-panel textarea {border-radius: 0px;}
 
 /****************************************************************************************/
 /***************************** cortextoo custom block edits for backend only
@@ -204,6 +240,19 @@ body {font-size: 1.3rem;}
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	// move the custom mover to the top so its not hidden
+	body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] > .editor-block-mover {
+		top: -44px;
+		left: auto;
+		right: 0px;
+		width: 86px;
+		height: 24px;
+		opacity: 1;
+	}
+
+	body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] > .editor-block-mover .editor-block-mover__control {float: left;}
+
 }
 
 @media only screen and (min-width: 992px) {

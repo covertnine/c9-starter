@@ -14,9 +14,9 @@ $sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>
-<div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
+<div class="widget-area" id="right-sidebar" role="complementary">
 	<?php else : ?>
-<div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
+<div class="widget-area" id="right-sidebar" role="complementary">
 	<?php endif; ?>
 <?php dynamic_sidebar( 'right-sidebar' ); ?>
 
