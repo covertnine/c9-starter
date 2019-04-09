@@ -54,7 +54,7 @@ $the_theme = wp_get_theme();
     <form role="search" method="get" id="fullscreen" action="/">
         <div>
             <span class="sr-only">Search for:</span>
-            <input type="search" class="search-field" name="s" value="" placeholder="Search for entertainers, photographers, party rentals &amp; more" />
+            <input type="search" class="search-field" name="s" value="" placeholder="Search..." />
             <button type="submit" class="btn btn-cea">Search</button>
         </div>
     </form>

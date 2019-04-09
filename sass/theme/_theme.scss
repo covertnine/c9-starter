@@ -471,18 +471,6 @@ a:hover {text-decoration: none;}
 	width: auto;
 }
 
-.navbar .navbar-nav .nav-item .nav-link,
-.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item {
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	line-height: 1;
-	color: rgba(43,43,43,.77);
-	letter-spacing: .09rem;
-	font-family: $headings-font-family;
-	font-weight: $font-weight-bold;
-	transition: color .3s ease-in;
-}
-
 .navbar-toggler {
 	margin: 0px;
 	padding: 5px;
@@ -505,6 +493,41 @@ a:hover {text-decoration: none;}
 
 .nav-search {margin-right: 10px;}
 
+.navbar .navbar-nav .nav-item .nav-link,
+.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item {
+	text-transform: uppercase;
+	font-size: 2rem;
+	line-height: 1;
+	letter-spacing: .09rem;
+	font-family: $headings-font-family;
+	font-weight: $font-weight-bold;
+	transition: color .3s ease-in;
+}
+
+/* nav colors by default on light theme */
+.navbar-light .navbar-nav .nav-link {color: $gray-500;}
+
+.navbar-light .navbar-toggler,
+.navbar-light .nav-search .btn-nav-search,
+.navbar-light .navbar-nav .dropdown-item {color: $link-color;}
+
+/* homepage has light text  + icon links cause of the large image behind it */
+.page-template-default .navbar-light .navbar-nav .nav-link,
+.page-template-default .navbar-light .navbar-toggler,
+.page-template-default .navbar-light .nav-search .btn-nav-search {color: $light;}
+
+/* nav text links + icons after scrolling with white background fading in */
+.navbar-small .navbar-nav .nav-item .nav-link,
+.navbar-small .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item,
+.navbar-small.navbar-light .navbar-toggler,
+.navbar-small.navbar-light .nav-search .btn-nav-search {color: $gray-900;}
+
+/* hover text links */
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item:hover {
+	color: $link-hover-color;
+}
+
 @media only screen and (min-width: 1px) {
 
 	.navbar-brand .c9-custom-logo {
@@ -524,6 +547,10 @@ a:hover {text-decoration: none;}
 		padding: 5px;
 	}
 
+	.header-navbar.jumpfix {
+		height: 55px;
+	}
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -538,8 +565,7 @@ a:hover {text-decoration: none;}
 	}
 
 	.header-navbar.jumpfix {
-		height: 55px;
-		margin-bottom: 52px;
+		height: 100px;
 	}
 
 }
