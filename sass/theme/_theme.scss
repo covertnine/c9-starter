@@ -450,21 +450,20 @@ a:hover {text-decoration: none;}
 .header-navbar {
 	z-index: 99;
 	position: relative;
-	background-color: $light;
 }
 
 .navbar {
-	padding: 5px 0px;
-	background-color: $light;
+	padding: 0px;
 }
 
 .navbar-primary {
-	background-color: rgba(255,255,255,.95);
+	position: relative;
 }
 
 .navbar-small {
 	max-height: 55px;
 	transition: opacity .4s ease-in-out;
+	background-color: $light;
 }
 
 .navbar-small .navbar-brand .c9-custom-logo {
@@ -472,22 +471,15 @@ a:hover {text-decoration: none;}
 	width: auto;
 }
 
-.navbar-nav li .nav-link {
+.navbar .navbar-nav .nav-item .nav-link,
+.navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-item {
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	line-height: 1;
 	color: rgba(43,43,43,.77);
 	letter-spacing: .09rem;
-}
-
-
-nav ul li .nav-link,
-nav ul li .dropdown-item {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
-}
-
-nav ul li .nav-link {
 	transition: color .3s ease-in;
 }
 
@@ -514,10 +506,6 @@ nav ul li .nav-link {
 .nav-search {margin-right: 10px;}
 
 @media only screen and (min-width: 1px) {
-
-	.header-navbar {
-		height: 55px;
-	}
 
 	.navbar-brand .c9-custom-logo {
 		width: auto;
@@ -2569,8 +2557,6 @@ button:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .right_label li.hidden_label input {
 		margin: 0px;
 	}
-
-
 }
 
 @media only screen and (min-width: 768px) {
