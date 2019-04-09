@@ -18,6 +18,10 @@ body {
 	position: relative;
 }
 
+.footer-wrapper {
+	background-color: $primary;
+}
+
 /* blog index */
 .container-posts article {margin-bottom: 35px;}
 .container-posts .post .entry-content p:last-child {margin-bottom: 5px;}
@@ -374,8 +378,8 @@ a:hover {text-decoration: none;}
 	.page-template-default .entry-content > .wp-block-columns.alignfull {
 		width: 100vw;
 		max-width: 100vw;
-		margin-left: calc((-100vw + 1110px) / 2);
-		margin-right: calc((-100vw + 1110px) / 2);
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
 	}
 
 	.page-template-default .entry-content hr:after {
@@ -446,20 +450,45 @@ a:hover {text-decoration: none;}
 .header-navbar {
 	z-index: 99;
 	position: relative;
+	background-color: $light;
 }
 
-nav ul li a,
+.navbar {
+	padding: 5px 0px;
+	background-color: $light;
+}
+
+.navbar-primary {
+	background-color: rgba(255,255,255,.95);
+}
+
+.navbar-small {
+	max-height: 55px;
+	transition: opacity .4s ease-in-out;
+}
+
+.navbar-small .navbar-brand .c9-custom-logo {
+	max-height: 50px;
+	width: auto;
+}
+
+.navbar-nav li .nav-link {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: rgba(43,43,43,.77);
+	letter-spacing: .09rem;
+}
+
+
+nav ul li .nav-link,
 nav ul li .dropdown-item {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
 }
 
-nav ul li a {
+nav ul li .nav-link {
 	transition: color .3s ease-in;
-}
-
-.navbar-light .navbar-toggler {
-	border: none;
 }
 
 .navbar-toggler {
@@ -467,6 +496,7 @@ nav ul li a {
 	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
+	border: none;
 }
 
 .navbar-toggler:focus {
@@ -474,8 +504,56 @@ nav ul li a {
 	color: $primary;
 }
 
-#navbarNavDropdown {
-	background-color: rgba(255,255,255,.95);
+.nav-search,
+.nav-toggle {
+	display: inline-block;
+	font-size: 2rem;
+	line-height: 2;
+}
+
+.nav-search {margin-right: 10px;}
+
+@media only screen and (min-width: 1px) {
+
+	.header-navbar {
+		height: 55px;
+	}
+
+	.navbar-brand .c9-custom-logo {
+		width: auto;
+		max-height: 50px;
+		height: auto;
+	}
+
+	#page .navbar-small-mobile {padding-bottom: 0px;}
+
+	.navbar {display: block;}
+	.navbar .container .navbar-small-buttons {justify-content: flex-end;}
+
+	.btn-nav-search,
+	.navbar-toggler {
+		margin: 0px;
+		padding: 5px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.navbar-brand .c9-custom-logo {
+		max-height: 95px;
+		height: auto;
+	}
+
+	.header-navbar {
+		max-height: 115px;
+	}
+
+	.header-navbar.jumpfix {
+		height: 55px;
+		margin-bottom: 52px;
+	}
+
 }
 
 @media only screen and (min-width: 1px) and (max-width: 991px) {
@@ -487,27 +565,34 @@ nav ul li a {
 
 	.navbar-small {background-color: rgba(255,255,255,1);}
 
-	#navbarNavDropdown .navbar-nav {
+	.navbar-primary .navbar-nav {
 		width: 100%;
 		display: block;
 	}
 
-	#navbarNavDropdown .navbar-nav .nav-item {
+	.navbar-primary .navbar-nav .nav-item {
 		display: block;
 		padding: 15px 0px;
 	}
 
-	#navbarNavDropdown .navbar-nav .nav-item a {
+	.navbar-primary .navbar-nav .nav-item .nav-link {
 		font-size: 2rem;
 	}
 
-	#navbarNavDropdown .navbar-nav .nav-item .dropdown-menu {
+	.navbar-primary .navbar-nav .nav-item .dropdown-menu {
 		width: 100%;
 		margin: 0px auto;
 		text-align: center;
 	}
 
 }
+
+@media only screen and (min-width: 992px) {
+
+	.nav-search {display: none;}
+
+}
+
 
 
 /****************************************************************************************/

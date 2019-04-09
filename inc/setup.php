@@ -81,7 +81,14 @@ if ( ! function_exists ( 'cortextoo_setup' ) ) {
 		) );
 
 		// Set up the WordPress Theme logo feature.
-		add_theme_support( 'custom-logo' );
+		add_theme_support( 'custom-logo',
+			array(
+				'height'	=> 95,
+				'width'		=> 200,
+				'flex-height' => true,
+				'flex-width' => true,
+			)
+		);
 
 		// Check and setup theme default settings.
 		cortextoo_setup_theme_default_settings();

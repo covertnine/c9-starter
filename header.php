@@ -20,14 +20,12 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
-<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ooo7ivn.css">
 </head>
 
 <body <?php body_class(); ?>>
 
 <div class="hfeed site" id="page">
-
-	<?php include( locate_template( 'inc/topnav.php' ) ); ?>
 
 	<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -47,18 +45,18 @@
 							<span class="sr-only"><?php __('Search', 'cortextoo');?></span>
 						</a>
 					</div>
-					<!--<div class="nav-toggle">
+					<div class="nav-toggle">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<i class="fa fa-bars"></i>
 						</button>
-					</div> .nav-toggle-->
+					</div>
 				</div><!-- .navbar-small-buttons-->
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-md',
+						'container_class' => 'navbar-primary collapse navbar-collapse justify-content-center navbar-expand-md',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 						'fallback_cb'     => '',

@@ -1,1 +1,0 @@
-<iframe src="//cortex.covertnine.com/documentation" width="100%" class="cortex-doc-iframe"></iframe>
