@@ -460,6 +460,8 @@ a:hover {text-decoration: none;}
 	position: relative;
 }
 
+.navbar .navbar-nav {min-width: 80%;}
+
 .navbar-small {
 	max-height: 55px;
 	transition: opacity .4s ease-in-out;
@@ -511,7 +513,7 @@ a:hover {text-decoration: none;}
 .navbar-light .nav-search .btn-nav-search,
 .navbar-light .navbar-nav .dropdown-item {color: $link-color;}
 
-/* homepage has light text  + icon links cause of the large image behind it */
+/* page default has light text  + icon links cause of the large image behind it */
 .page-template-default .navbar-light .navbar-nav .nav-link,
 .page-template-default .navbar-light .navbar-toggler,
 .page-template-default .navbar-light .nav-search .btn-nav-search {color: $light;}
@@ -561,7 +563,8 @@ a:hover {text-decoration: none;}
 	}
 
 	.header-navbar {
-		max-height: 115px;
+		max-height: 100px;
+		height: 100px;
 	}
 
 	.header-navbar.jumpfix {
@@ -577,7 +580,22 @@ a:hover {text-decoration: none;}
 		padding-right: 15px;
 	}
 
-	.navbar-small {background-color: rgba(255,255,255,1);}
+	.navbar-small {background-color: $light;}
+
+	.navbar-primary {
+		position: absolute;
+		top: 0px;
+		right: -100%;
+		height: 100vh;
+		width: 50vw;
+		background-color: $light;
+		text-align: center;
+	}
+
+	.navbar-primary.show {right: 0%;}
+
+	/* page default needs dark text since the nav is collapsed */
+	.page-template-default .navbar-light .navbar-nav .nav-link {color: $primary;}
 
 	.navbar-primary .navbar-nav {
 		width: 100%;
@@ -926,7 +944,7 @@ a:hover {text-decoration: none;}
 	}
 }
 /****************************************************************************************/
-/* C9 Widgets */
+/* C9 Widgets EVENTUALLY MERGE WITH PLUGIN FILE CSS */
 /****************************************************************************************/
 
 .widget_cortex_subscribe_widget ul {
@@ -942,7 +960,7 @@ a:hover {text-decoration: none;}
 }
 
 .widget_cortex_subscribe_widget ul li a {
-	background-color: $secondary;
+	background-color: $primary;
 	height: 30px;
 	width: 30px;
 	display: inline-block;
@@ -955,6 +973,8 @@ a:hover {text-decoration: none;}
 	font: normal normal normal 1.7rem/1 FontAwesome;
 	color: $light;
 }
+
+.widget_cortex_latest_cat_posts .c9-recent-posts .posted-on .updated {display: none;}
 
 /****************************************************************************************/
 /* Footer */
@@ -2698,3 +2718,15 @@ button:hover,
 /********************************************************************************************************************************************************************************/
 /********************************************************************************************************************************************************************************/
 
+.widget_cortex_latest_cat_posts .c9-recent-posts .entry-title a span {
+	font-weight: bold;
+	color: $light;
+}
+
+.widget_cortex_subscribe_widget ul li a {
+	background-color: $secondary;
+}
+
+.widget_cortex_subscribe_widget ul li a:hover {
+	background-color: $primary;
+}

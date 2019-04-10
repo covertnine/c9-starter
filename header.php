@@ -58,7 +58,7 @@
 						'theme_location'  => 'primary',
 						'container_class' => 'navbar-primary collapse navbar-collapse justify-content-end navbar-expand-md',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav nav justify-content-between w-75',
+						'menu_class'      => 'navbar-nav nav justify-content-between',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
