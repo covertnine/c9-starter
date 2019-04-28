@@ -68,8 +68,8 @@ if ( ! function_exists( 'cortextoo_change_logo_class' ) ) {
 	 */
 	function cortextoo_change_logo_class( $html ) {
 
-		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
-		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
+		$html = str_replace( 'class="custom-logo"', 'class="img-fluid c9-custom-logo"', $html );
+		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link c9-custom-logo"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"' , $html );
 
 		return $html;
@@ -112,25 +112,27 @@ if ( ! function_exists ( 'cortextoo_post_nav' ) ) {
 /**
 	 allow svg uploads
 */
-function cc_mime_types($mimes) {
+function c9_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'cc_mime_types');
+add_filter('upload_mimes', 'c9_mime_types');
 
-/*
-	add shortcode for search form on homepage
-*/
-function ceasearchform( $form ) {
+function c9_display_image_size_names_muploader( $sizes ) {
 
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <div class="d-flex p1 justify-content-between align-items-center search-fields-wrap"><label class="searchlabel for="s">' . __('Search') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="entertainers, photographers, perty rentals &amp; more" />
-    <input type="submit" id="homesearchsubmit" class="btn btn-primary" value="'. esc_attr__('Search') .'" />
-    </div>
-    </form>';
+	$new_sizes = array();
 
-    return $form;
+	$added_sizes = get_intermediate_image_sizes();
+
+	// $added_sizes is an indexed array, therefore need to convert it
+	// to associative array, using $value for $key and $value
+	foreach( $added_sizes as $key => $value) {
+		$new_sizes[$value] = $value;
+	}
+
+	// This preserves the labels in $sizes, and merges the two arrays
+	$new_sizes = array_merge( $new_sizes, $sizes );
+
+	return $new_sizes;
 }
-
-add_shortcode('ceasearch', 'ceasearchform');
+add_filter('image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1);

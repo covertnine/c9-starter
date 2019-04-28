@@ -26,9 +26,6 @@
 		//use small nav for mobile
 		jQuery('.navbar').addClass('navbar-small');
 
-		// add class to top for mobile
-		jQuery('.navbar-top').addClass('navbar-small-mobile');
-
 		jQuery(window).scroll(function () {
 
 
@@ -52,12 +49,12 @@
 		    }
 		});
 
-    } else { //end small screens
+    } else { //end small screens so desktop next
 
 		jQuery(window).scroll(function () {
 
-		//scroll position variable
-		var scroll = jQuery(window).scrollTop();
+			//scroll position variable
+			var scroll = jQuery(window).scrollTop();
 
 		    if (scroll >=168) {
 				jQuery('.navbar').addClass('opacity0');
@@ -84,6 +81,16 @@
 (function ($) {
 
 	"use strict";
+
+
+	///////////////////////// Move the content up by the height of the navbar object for a transparent nav effect ////
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if (jQuery(window).width() > 667) {
+
+		var navHeight = $('.header-navbar').height();
+		$('#page-wrapper').css('margin-top', -navHeight);
+
+	}
 
 	///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////

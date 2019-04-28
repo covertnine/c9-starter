@@ -1,13 +1,13 @@
 // cortextoo
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
-:root {font-family: Niveau-Grotesk, times, serif;}
+:root {font-family: brandon-grotesque, sans-serif;}
 
 // Typography
-$headings-font-family: Niveau-Grotesk, 'helvetica neue', helvetica, sans-serif;
-$headings-font-weight: 700;
+$headings-font-family: league-gothic, 'helvetica neue', helvetica, sans-serif;
+$headings-font-weight: 400;
 
-$font-family-sans-serif: Niveau-Grotesk, sans-serif;
-$font-family-base: Niveau-Grotesk, serif;
+$font-family-sans-serif: brandon-grotesque, sans-serif;
+$font-family-base: brandon-grotesque, sans-serif;
 
 $line-height-base: 2;
 
@@ -30,12 +30,15 @@ $display-line-height: 4.2rem;
 $headings-margin-bottom: 1rem;
 $headings-line-height: 1.4;
 
+// Rounded Buttons
 $enable-rounded: false;
 
+// Drop downs
+$dropdown-border-width: 0;
 
 // Colors
-$primary: #006A30;
-$secondary: #D548CA;
+$primary: #121212;
+$secondary: #6fffff;
 $success: #21A77A;
 $info: #F7F7F9;
 $warning: #EC971F;
@@ -43,7 +46,7 @@ $danger: #843534;
 $dark: #000000;
 $light: #ffffff;
 
-$link-hover-color: #006A30;
+$link-hover-color: #00f8ff;
 $link-color: #4A4A4A;
 
 $gray-500: #D2D2D2;

@@ -70,6 +70,7 @@ if ( ! function_exists ( 'cortextoo_tiny_mce_before_init' ) ) {
 /* add theme compiled files to gutenberg editor */
 function cortextoo_editor_style() {
     wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/css/theme.min.css' );
+    wp_enqueue_style( 'cortextoo-typekit-style', '//use.typekit.net/ooo7ivn.css' );
     wp_enqueue_style( 'cortextoo-editor-style', get_template_directory_uri() . '/css/custom-editor-style.css' );
 }
 add_action( 'enqueue_block_editor_assets', 'cortextoo_editor_style' );

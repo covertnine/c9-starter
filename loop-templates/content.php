@@ -58,10 +58,4 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php cortextoo_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
 </article><!-- #post-## -->
