@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "cea.local/",
+    "proxy": "cea2.local/",
     "notify": false
   },
   "browserSyncWatchFiles" : [
@@ -9,14 +9,15 @@
     "./**/*.php"
   ],
   "paths" : {
+    "client": "./client/assets",
     "js": "./js",
     "css": "./css",
     "img": "./img",
-		"imgsrc": "./src/img",
+		"imgsrc": "./img",
     "sass": "./sass",
     "node": "./node_modules/",
     "bower": "./bower_components/",
-    "dev": "./src",
+    "dev": "./",
     "dist": "./dist",
     "distprod": "./dist-product",
     "vendor": ""

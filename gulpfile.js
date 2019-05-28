@@ -63,13 +63,23 @@ gulp.task('clean', () => {
 
 gulp.task('webpack', function () {
     return webpack_stream(webpack_config)
-        .pipe(gulp.dest(paths.dev + '/js/'));
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(gulp.dest('js/'));
 });
+
+gulp.task('build', function() {
+
+})
 
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task('watch', function () {
+gulp.task('watch', ['styles', 'scripts'], function () {
     gulp.watch(paths.sass + '/**/*.scss', ['styles']);
     gulp.watch([paths.dev + '/js/custom-javascript.js'], ['webpack'])
     gulp.watch([paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], ['webpack', 'scripts']);
@@ -154,7 +164,7 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () {
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-gulp.task('scripts', function () {
+gulp.task('scripts', ['webpack'], function () {
     var scripts = [
 
         paths.node + 'babel-polyfill/dist/polyfill.js',
@@ -231,38 +241,4 @@ gulp.task('copy-assets', function () {
     gulp.src(paths.node + 'popper.js/dist/umd/popper.js')
         .pipe(gulp.dest(paths.js + paths.vendor));
     return stream;
-});
-
-// Deleting the files distributed by the copy-assets task
-gulp.task('clean-vendor-assets', function () {
-    return del([paths.dev + '/js/bootstrap4/**', paths.dev + '/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev + '/sass/fontawesome/**', paths.dev + '/sass/underscores/**', paths.dev + '/js/skip-link-focus-fix.js', paths.js + '/**/skip-link-focus-fix.js', paths.js + '/**/popper.min.js', paths.js + '/**/popper.js', (paths.vendor !== '' ? (paths.js + paths.vendor + '/**') : '')]);
-});
-
-// Run
-// gulp dist
-// Copies the files to the /dist folder for distribution as simple theme
-gulp.task('dist', ['clean-dist'], function () {
-    return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore', '!codesniffer.ruleset.xml', '*'], { 'buffer': false })
-        .pipe(replace('/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true }))
-        .pipe(replace('/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', { 'skipBinary': true }))
-        .pipe(replace('/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', { 'skipBinary': true }))
-        .pipe(gulp.dest(paths.dist));
-});
-
-// Deleting any file inside the /dist folder
-gulp.task('clean-dist', function () {
-    return del([paths.dist + '/**']);
-});
-
-// Run
-// gulp dist-product
-// Copies the files to the /dist-prod folder for distribution as theme with all assets
-gulp.task('dist-product', ['clean-dist-product'], function () {
-    return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '*'])
-        .pipe(gulp.dest(paths.distprod));
-});
-
-// Deleting any file inside the /dist-product folder
-gulp.task('clean-dist-product', function () {
-    return del([paths.distprod + '/**']);
 });

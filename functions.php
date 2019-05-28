@@ -72,9 +72,9 @@ if (file_exists(get_template_directory() . '/client/client.php')) {
 function need_client_folder()
 {
     ?>
-<div class="update-nag notice">
-    <p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact sam@covertnine.com'); ?></p>
-</div>
+    <div class="update-nag notice">
+        <p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact sam@covertnine.com'); ?></p>
+    </div>
 <?php
 
 }
