@@ -109,3 +109,6 @@ client
 # track these files, if they exist
 !.gitignore
 !.editorconfig
+!.eslintignore
+!.eslintrc.json
+!.prettierrc

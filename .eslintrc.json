@@ -1,0 +1,44 @@
+{
+	"root": true,
+	"parser": "babel-eslint",
+	"extends": [
+		"wordpress",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:jest/recommended",
+		"prettier",
+		"prettier/react"
+	],
+	"env": {
+		"browser": false,
+		"es6": true,
+		"node": true,
+		"mocha": true,
+		"jest/globals": true
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"globals": {
+		"wp": true,
+		"wpApiSettings": true,
+		"window": true,
+		"document": true
+	},
+	"plugins": ["react", "jsx-a11y", "jest", "lodash"],
+	"settings": {
+		"react": {
+			"pragma": "wp",
+			"version": "detect"
+		}
+	},
+	"rules": {
+		"react/prop-types": 0,
+		"react/jsx-key": 0,
+		"react/display-name": 0
+	}
+}
