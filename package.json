@@ -70,7 +70,6 @@
     "del": "^3.0.0",
     "gulp-print": "^5.0.2",
     "gulp-util": "^3.0.8",
-    "husky": "^2.1.0",
     "validator": "^10.7.0",
     "vinyl-paths": "^2.1.0",
     "webpack-stream": "^5.2.1"
