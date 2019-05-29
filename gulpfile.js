@@ -1,37 +1,34 @@
 // Defining requirements
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sass = require("gulp-sass");
-var watch = require("gulp-watch");
-var cssnano = require("gulp-cssnano");
-var rename = require("gulp-rename");
-var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
-var imagemin = require("gulp-imagemin");
-var ignore = require("gulp-ignore");
-var rimraf = require("gulp-rimraf");
-var sourcemaps = require("gulp-sourcemaps");
-var browserSync = require("browser-sync").create();
-var del = require("del");
-var cleanCSS = require("gulp-clean-css");
-var gulpSequence = require("gulp-sequence");
-var replace = require("gulp-replace");
-var autoprefixer = require("gulp-autoprefixer");
-var babel = require("gulp-babel");
-var del = require("del");
-var webpack_stream = require("webpack-stream");
-var webpack_config = require("./webpack.config.js");
-var vinylPaths = require("vinyl-paths");
-var prettierEslint = require("gulp-prettier-eslint");
-
-var browserSyncOptions = {
-  proxy: "cea2.local",
-  notify: false
-};
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sass = require("gulp-sass");
+const watch = require("gulp-watch");
+const cssnano = require("gulp-cssnano");
+const rename = require("gulp-rename");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const imagemin = require("gulp-imagemin");
+const ignore = require("gulp-ignore");
+const rimraf = require("gulp-rimraf");
+const sourcemaps = require("gulp-sourcemaps");
+const browserSync = require("browser-sync").create();
+const del = require("del");
+const cleanCSS = require("gulp-clean-css");
+const gulpSequence = require("gulp-sequence");
+const replace = require("gulp-replace");
+const autoprefixer = require("gulp-autoprefixer");
+const babel = require("gulp-babel");
+const webpack_stream = require("webpack-stream");
+const webpack_config = require("./webpack.config.js");
+const vinylPaths = require("vinyl-paths");
+const prettierEslint = require("gulp-prettier-eslint");
+// const a11y = require("gulp-a11y");
 
 // Configuration file to keep your code DRY
-var cfg = require("./gulpconfig.json");
-var paths = cfg.paths;
+const cfg = require("./gulpconfig.json");
+const paths = cfg.paths;
+
+const browserSyncOptions = cfg.browserSyncOptions;
 
 gulp.task("watch-scss", ["browser-sync"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["scss-for-dev"]);
@@ -64,7 +61,6 @@ gulp.task("clean", () => {
 });
 
 gulp.task("webpack", function() {
-  console.log("sick");
   return webpack_stream(webpack_config)
     .pipe(
       plumber({
@@ -77,8 +73,6 @@ gulp.task("webpack", function() {
     .pipe(prettierEslint())
     .pipe(gulp.dest("js/"));
 });
-
-gulp.task("build", function() {});
 
 // Run:
 // gulp watch

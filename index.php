@@ -16,37 +16,37 @@ get_header();
 
 <div class="wrapper" id="index-wrapper">
 
-			<main class="site-main" id="main">
-				<div class="container-narrow container-posts cortextoo">
-				<?php if ( have_posts() ) : ?>
+	<main class="site-main" id="main">
+		<div class="container-narrow container-posts cortextoo">
+			<?php if (have_posts()) : ?>
 
-					<?php /* Start the Loop */ ?>
+				<?php /* Start the Loop */ ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 
-						<?php
+					<?php
 
-						/*
+					/*
 						 * Include the Post-Format-specific template for the content.
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+					get_template_part('loop-templates/content', get_post_format());
+					?>
 
-					<?php endwhile; ?>
+				<?php endwhile; ?>
 
-				<?php else : ?>
+			<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+				<?php get_template_part('loop-templates/content', 'none'); ?>
 
-				<?php endif; ?>
-				</div><!-- .container-narrow-->
+			<?php endif; ?>
+		</div><!-- .container-narrow-->
 
-			</main><!-- #main -->
+	</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+	<!-- The pagination component -->
+	<?php cortextoo_pagination(); ?>
 
 </div><!-- Wrapper end -->
 

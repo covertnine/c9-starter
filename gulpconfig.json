@@ -1,19 +1,15 @@
 {
-  "browserSyncOptions" : {
+  "browserSyncOptions": {
     "proxy": "cea2.local/",
     "notify": false
   },
-  "browserSyncWatchFiles" : [
-    "./css/*.min.css",
-    "./js/*.min.js",
-    "./**/*.php"
-  ],
-  "paths" : {
+  "browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
+  "paths": {
     "client": "./client/assets",
     "js": "./js",
     "css": "./css",
     "img": "./img",
-		"imgsrc": "./img",
+    "imgsrc": "./img",
     "sass": "./sass",
     "node": "./node_modules/",
     "bower": "./bower_components/",
