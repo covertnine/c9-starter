@@ -14,7 +14,7 @@ $the_theme = wp_get_theme();
 
 <div class="wrapper footer-wrapper" id="wrapper-footer">
 
-	<div class="container">
+    <div class="container">
 
         <div class="row">
 
@@ -23,15 +23,16 @@ $the_theme = wp_get_theme();
                 <footer class="site-footer" id="colophon">
 
 
-					<div class="site-info">
+                    <div class="site-info">
 
-						<div class="container">
-							<div class="row text-center">
-								<div class="col-xs-12">
-									<p class="text-center">&copy; <?php echo date("Y") . ' '; echo bloginfo('name'); ?></p>
-								</div>
-							</div>
-						</div><!-- .container-->
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-xs-12">
+                                    <p class="text-center">&copy; <?php echo date("Y") . ' ';
+                                                                    echo bloginfo('name'); ?></p>
+                                </div>
+                            </div>
+                        </div><!-- .container-->
 
                     </div><!-- .site-info -->
 
