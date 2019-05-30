@@ -21,5 +21,8 @@
     "window": true,
     "document": true
   },
-  "plugins": ["jquery"]
+  "plugins": ["jquery"],
+  "rules": {
+    "no-console": 0
+  }
 }

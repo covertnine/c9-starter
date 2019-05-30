@@ -2,7 +2,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sass = require("gulp-sass");
-const watch = require("gulp-watch");
 const cssnano = require("gulp-cssnano");
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
@@ -15,7 +14,6 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 const cleanCSS = require("gulp-clean-css");
 const gulpSequence = require("gulp-sequence");
-const replace = require("gulp-replace");
 const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const webpack_stream = require("webpack-stream");
@@ -28,7 +26,7 @@ const prettierEslint = require("gulp-prettier-eslint");
 const cfg = require("./gulpconfig.json");
 const paths = cfg.paths;
 
-const browserSyncOptions = cfg.browserSyncOptions;
+// const browserSyncOptions = cfg.browserSyncOptions;
 
 gulp.task("watch-scss", ["browser-sync"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["scss-for-dev"]);
