@@ -5,7 +5,7 @@ module.exports = {
   mode: "development",
   entry: "./js/main.js",
   output: {
-    filename: "custom-javascript.bundle.js",
+    filename: "main.bundle.js",
     path: path.join(__dirname, "/js/")
   }
 };

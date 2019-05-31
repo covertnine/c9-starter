@@ -26,6 +26,33 @@ const prettierEslint = require("gulp-prettier-eslint");
 const cfg = require("./gulpconfig.json");
 const paths = cfg.paths;
 
+// Run:
+// gulp watch
+// Starts watcher. Watcher runs gulp sass task on changes
+gulp.task("watch", ["styles", "scripts"], function() {
+  gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
+  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
+  gulp.watch(
+    [
+      paths.dev + "/js/**/*.js",
+      "js/**/*.js",
+      "!js/theme.js",
+      "!js/theme.min.js"
+    ],
+    ["webpack", "scripts"]
+  );
+
+  //Inside the watch task.
+  gulp.watch(paths.imgsrc + "/**", ["imagemin-watch"]);
+});
+
+gulp.task("webpack", function() {
+  return webpack_stream(webpack_config)
+    .pipe(plumber())
+    .pipe(prettierEslint())
+    .pipe(gulp.dest("js/"));
+});
+
 // const browserSyncOptions = cfg.browserSyncOptions;
 
 gulp.task("watch-scss", ["browser-sync"], function() {
@@ -59,32 +86,6 @@ gulp.task("sass", function() {
 
 gulp.task("clean", () => {
   return gulp.src(paths.dev + "/js/main.js").pipe(vinylPaths(del));
-});
-
-gulp.task("webpack", function() {
-  return webpack_stream(webpack_config)
-    .pipe(prettierEslint())
-    .pipe(gulp.dest("js/"));
-});
-
-// Run:
-// gulp watch
-// Starts watcher. Watcher runs gulp sass task on changes
-gulp.task("watch", ["styles", "scripts"], function() {
-  gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
-  gulp.watch(
-    [
-      paths.dev + "/js/**/*.js",
-      "js/**/*.js",
-      "!js/theme.js",
-      "!js/theme.min.js"
-    ],
-    ["webpack", "scripts"]
-  );
-
-  //Inside the watch task.
-  gulp.watch(paths.imgsrc + "/**", ["imagemin-watch"]);
 });
 
 /**
@@ -183,7 +184,7 @@ gulp.task("scripts", ["webpack"], function() {
     paths.node + "magnific-popup/dist/*.js",
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    paths.dev + "/js/custom-javascript.bundle.js"
+    paths.dev + "/js/main.bundle.js"
   ];
   gulp
     .src(scripts)
