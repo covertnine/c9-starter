@@ -20,7 +20,6 @@ const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
 const vinylPaths = require("vinyl-paths");
 const prettierEslint = require("gulp-prettier-eslint");
-// const a11y = require("gulp-a11y");
 
 // Configuration file to keep your code DRY
 const cfg = require("./gulpconfig.json");
@@ -50,6 +49,9 @@ gulp.task("webpack", function() {
   return gulp
     .src(paths.dev + "/js/main.js")
     .pipe(webpack_stream(webpack_config))
+    .on("error", function handleError() {
+      this.emit("end"); // Recover from errors
+    })
     .pipe(gulp.dest("js/"));
 });
 

@@ -3,7 +3,9 @@ var path = require("path");
 
 module.exports = {
   mode: "production",
+  bail: false,
   entry: "./js/main.js",
+  watch: true,
   output: {
     filename: "main.bundle.js",
     path: path.join(__dirname, "/js/")
