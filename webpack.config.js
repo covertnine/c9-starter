@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./js/custom-javascript.js",
+  entry: "./js/main.js",
   output: {
     filename: "custom-javascript.bundle.js",
     path: path.join(__dirname, "/js/")

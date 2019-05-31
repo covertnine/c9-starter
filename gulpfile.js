@@ -32,23 +32,9 @@ gulp.task("watch-scss", ["browser-sync"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["scss-for-dev"]);
 });
 
-gulp.task("watch-old", ["styles", "scripts"], function() {
-  gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch([paths.dev + "/js/custom-javascript.js"], ["webpack"]);
-  gulp.watch(
-    [
-      paths.dev + "/js/**/*.js",
-      "js/**/*.js",
-      "!js/theme.js",
-      "!js/theme.min.js"
-    ],
-    ["webpack", "scripts"]
-  );
-
-  //Inside the watch task.
-  gulp.watch(paths.imgsrc + "/**", ["imagemin-watch"]);
+gulp.task("webpack-client", function() {
+  return gulp.src();
 });
-
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
@@ -72,7 +58,7 @@ gulp.task("sass", function() {
 });
 
 gulp.task("clean", () => {
-  return gulp.src(paths.dev + "/js/custom-javascript.js").pipe(vinylPaths(del));
+  return gulp.src(paths.dev + "/js/main.js").pipe(vinylPaths(del));
 });
 
 gulp.task("webpack", function() {
@@ -84,9 +70,9 @@ gulp.task("webpack", function() {
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task("watch-old", ["styles", "scripts"], function() {
+gulp.task("watch", ["styles", "scripts"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch([paths.dev + "/js/custom-javascript.js"], ["webpack"]);
+  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
   gulp.watch(
     [
       paths.dev + "/js/**/*.js",
