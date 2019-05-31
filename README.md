@@ -72,12 +72,12 @@ I highly recommend using Visual Studio Code.
 ### Formatting, Linting, Debugging
 
 #### Javascript
-- coming soong -
 
 #### PHP
 
 Use Xdebug. Follow [this guide](https://gist.github.com/ahmadawais/d6e809d45b8103b2b3a79fa8845f9995) to get xdebug working with Vscode and Local by Flywheel. (Remember, with Local by Flywheel, you're spinning up a virtual environment with its own PHP execution.)
 
+Other links:
 [Xdebug Functions](https://xdebug.org/docs/all_functions)
 
 [PHP in VSCode](https://code.visualstudio.com/docs/languages/php)
@@ -85,3 +85,60 @@ Use Xdebug. Follow [this guide](https://gist.github.com/ahmadawais/d6e809d45b810
 ### Unit Testing
 
 We should do this
+
+## Addendum: VSCode
+
+Access commands with `cmd-shift-p`:
+
+![Command](./vs-command.png)
+
+From this panel, you can navigate to the extension installer and adjust your settings.
+
+### Necessary Extensions:
+
+**PHP**
+
+1. [phpdebug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
+2. [php intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+
+**JS**
+
+1. [Prettier Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+2. [ESLint](https://github.com/microsoft/vscode-eslint)
+
+**CSS**
+
+1. [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+
+### Settings:
+
+Again, use the command panel to access settings.
+![Settings](./vscode-settings.png)
+
+There's a distinction between Workspace settings and User settings. Workspace settings are, as you might expect, specific to your project, and a `.vscode` directory will be added to the root of your project.
+
+#### Relevant User Settings
+
+```
+"editor.formatOnSave": true,
+"prettier.requireConfig": true,
+"files.autoSave": "afterDelay",
+"prettier.eslintIntegration": true,
+```
+
+You might also check out [prettier's options for language-specific settings](https://github.com/prettier/prettier-vscode).
+
+
+### Workspace Settings
+
+Just this one, for
+
+```
+{
+    "php.validate.executablePath": "/Users/{username}/Local Sites/cortex/conf/php"
+}
+```
+
+### In Summary
+1. Install extensions
+2. Update your settings to make the extensions work well with VSCode.
