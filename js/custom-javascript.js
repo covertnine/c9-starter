@@ -1,4 +1,8 @@
 // sidebar functionality
+import "smoothstate";
+
+console.log("cool");
+
 jQuery(window).scroll(function() {
   //scroll position variable
   var scroll = jQuery(window).scrollTop();

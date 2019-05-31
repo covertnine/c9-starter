@@ -62,6 +62,7 @@
     "parallax-js": "^3.1.0",
     "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
+    "smoothstate": "^0.7.2",
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
