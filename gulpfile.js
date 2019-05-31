@@ -19,35 +19,32 @@ const babel = require("gulp-babel");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
 const vinylPaths = require("vinyl-paths");
-const prettierEslint = require("gulp-prettier-eslint");
 
 // Configuration file to keep your code DRY
 const cfg = require("./gulpconfig.json");
 const paths = cfg.paths;
+const gulpwebsrc = paths.dev + "/js/main.js";
 
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task("watch", ["styles"], function() {
+gulp.task("watch", function() {
+  gulpSequence("webpack-once", "styles", "scripts")(function(err) {
+    if (err) console.log(err);
+  });
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
-  gulp.watch(
-    [
-      paths.dev + "/js/**/*.js",
-      "js/**/*.js",
-      "!js/theme.js",
-      "!js/theme.min.js"
-    ]
-    // ["scripts"]
-  );
-
+  gulp.watch(paths.dev + "/js/main.js", function() {
+    gulpSequence("webpack-watch", "scripts")(function(err) {
+      if (err) console.log(err);
+    });
+  });
   //Inside the watch task.
   gulp.watch(paths.imgsrc + "/**", ["imagemin-watch"]);
 });
 
-gulp.task("webpack", function() {
+gulp.task("webpack-watch", function() {
   return gulp
-    .src(paths.dev + "/js/main.js")
+    .src(gulpwebsrc)
     .pipe(webpack_stream(webpack_config))
     .on("error", function handleError() {
       this.emit("end"); // Recover from errors
@@ -55,14 +52,15 @@ gulp.task("webpack", function() {
     .pipe(gulp.dest("js/"));
 });
 
-// const browserSyncOptions = cfg.browserSyncOptions;
-
-gulp.task("watch-scss", ["browser-sync"], function() {
-  gulp.watch(paths.sass + "/**/*.scss", ["scss-for-dev"]);
-});
-
-gulp.task("webpack-client", function() {
-  return gulp.src();
+gulp.task("webpack-once", function() {
+  webpack_config.watch = false;
+  return gulp
+    .src(gulpwebsrc)
+    .pipe(webpack_stream(webpack_config))
+    .on("error", function handleError() {
+      this.emit("end"); // Recover from errors
+    })
+    .pipe(gulp.dest("js/"));
 });
 // Run:
 // gulp sass
@@ -173,33 +171,29 @@ gulp.task("watch-bs", ["browser-sync", "watch", "scripts"], function() {});
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-// gulp.task("scripts", ["webpack"], function() {
-//   var scripts = [
-//     paths.node + "babel-polyfill/dist/polyfill.js",
+gulp.task("scripts", function() {
+  var scripts = [
+    paths.node + "babel-polyfill/dist/polyfill.js",
 
-//     // Start - All BS4 stuff
-//     paths.dev + "/js/bootstrap4/bootstrap.js",
+    paths.dev + "/js/bootstrap4/bootstrap.js",
 
-//     // End - All BS4 stuff
+    paths.dev + "/js/skip-link-focus-fix.js",
+    paths.node + "magnific-popup/dist/*.js",
 
-//     paths.dev + "/js/skip-link-focus-fix.js",
-//     paths.node + "magnific-popup/dist/*.js",
-//     // Adding currently empty javascript file to add on for your own themes´ customizations
-//     // Please add any customizations to this .js file only!
-//     paths.dev + "/js/main.bundle.js"
-//   ];
-//   gulp
-//     .src(scripts)
-//     .pipe(babel({ presets: ["es2015"] }))
-//     .pipe(gulp.dest("theme.min.js"))
-//     .pipe(uglify())
-//     .pipe(gulp.dest(paths.js));
+    paths.dev + "/js/main.bundle.js"
+  ];
+  gulp
+    .src(scripts)
+    .pipe(babel({ presets: ["es2015"] }))
+    .pipe(gulp.dest("theme.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
 
-//   gulp
-//     .src(scripts)
-//     .pipe(concat("theme.js"))
-//     .pipe(gulp.dest(paths.js));
-// });
+  gulp
+    .src(scripts)
+    .pipe(concat("theme.js"))
+    .pipe(gulp.dest(paths.js));
+});
 
 // Deleting any file inside the /src folder
 gulp.task("clean-source", function() {
