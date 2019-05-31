@@ -1,7 +1,6 @@
 // sidebar functionality
 import "smoothState";
-
-console.log("bert");
+import "bootstrap";
 
 jQuery(window).scroll(function() {
   //scroll position variable
