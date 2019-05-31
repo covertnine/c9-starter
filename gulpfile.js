@@ -28,17 +28,17 @@ const paths = cfg.paths;
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task("watch", ["styles", "scripts"], function() {
+gulp.task("watch", ["styles"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  // gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
+  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
   gulp.watch(
     [
       paths.dev + "/js/**/*.js",
       "js/**/*.js",
       "!js/theme.js",
       "!js/theme.min.js"
-    ],
-    ["scripts"]
+    ]
+    // ["scripts"]
   );
 
   //Inside the watch task.
@@ -173,33 +173,33 @@ gulp.task("watch-bs", ["browser-sync", "watch", "scripts"], function() {});
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-gulp.task("scripts", ["webpack"], function() {
-  var scripts = [
-    paths.node + "babel-polyfill/dist/polyfill.js",
+// gulp.task("scripts", ["webpack"], function() {
+//   var scripts = [
+//     paths.node + "babel-polyfill/dist/polyfill.js",
 
-    // Start - All BS4 stuff
-    paths.dev + "/js/bootstrap4/bootstrap.js",
+//     // Start - All BS4 stuff
+//     paths.dev + "/js/bootstrap4/bootstrap.js",
 
-    // End - All BS4 stuff
+//     // End - All BS4 stuff
 
-    paths.dev + "/js/skip-link-focus-fix.js",
-    paths.node + "magnific-popup/dist/*.js",
-    // Adding currently empty javascript file to add on for your own themes´ customizations
-    // Please add any customizations to this .js file only!
-    paths.dev + "/js/main.bundle.js"
-  ];
-  gulp
-    .src(scripts)
-    .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("theme.min.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+//     paths.dev + "/js/skip-link-focus-fix.js",
+//     paths.node + "magnific-popup/dist/*.js",
+//     // Adding currently empty javascript file to add on for your own themes´ customizations
+//     // Please add any customizations to this .js file only!
+//     paths.dev + "/js/main.bundle.js"
+//   ];
+//   gulp
+//     .src(scripts)
+//     .pipe(babel({ presets: ["es2015"] }))
+//     .pipe(gulp.dest("theme.min.js"))
+//     .pipe(uglify())
+//     .pipe(gulp.dest(paths.js));
 
-  gulp
-    .src(scripts)
-    .pipe(concat("theme.js"))
-    .pipe(gulp.dest(paths.js));
-});
+//   gulp
+//     .src(scripts)
+//     .pipe(concat("theme.js"))
+//     .pipe(gulp.dest(paths.js));
+// });
 
 // Deleting any file inside the /src folder
 gulp.task("clean-source", function() {
