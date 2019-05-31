@@ -61,8 +61,7 @@ $the_theme = wp_get_theme();
     </form>
 </div>
 
-<?php wp_footer();
-phpinfo(); ?>
+<?php wp_footer(); ?>
 
 </body>
 
