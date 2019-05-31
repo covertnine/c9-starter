@@ -31,7 +31,7 @@ const paths = cfg.paths;
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", ["styles", "scripts"], function() {
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
+  // gulp.watch([paths.dev + "/js/main.js"], ["webpack"]);
   gulp.watch(
     [
       paths.dev + "/js/**/*.js",
@@ -39,7 +39,7 @@ gulp.task("watch", ["styles", "scripts"], function() {
       "!js/theme.js",
       "!js/theme.min.js"
     ],
-    ["webpack", "scripts"]
+    ["scripts"]
   );
 
   //Inside the watch task.
@@ -47,9 +47,9 @@ gulp.task("watch", ["styles", "scripts"], function() {
 });
 
 gulp.task("webpack", function() {
-  return webpack_stream(webpack_config)
-    .pipe(plumber())
-    .pipe(prettierEslint())
+  return gulp
+    .src(paths.dev + "/js/main.js")
+    .pipe(webpack_stream(webpack_config))
     .pipe(gulp.dest("js/"));
 });
 

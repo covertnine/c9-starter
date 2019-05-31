@@ -2,7 +2,7 @@ var path = require("path");
 // var webpack = require('webpack')
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./js/main.js",
   output: {
     filename: "main.bundle.js",
