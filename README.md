@@ -72,18 +72,16 @@ I highly recommend using Visual Studio Code.
 ### Formatting, Linting, Debugging
 
 #### Javascript
-
-
+- coming soong -
 
 #### PHP
 
-Use Xdebug. Follow [this guide](https://gist.github.com/ahmadawais/d6e809d45b8103b2b3a79fa8845f9995) to get xdebug working with Vscode and Local by Flywheel. (Remember, with Local by Flywheel, you're spinning up a virtual environment with its own PHP configuration.)
+Use Xdebug. Follow [this guide](https://gist.github.com/ahmadawais/d6e809d45b8103b2b3a79fa8845f9995) to get xdebug working with Vscode and Local by Flywheel. (Remember, with Local by Flywheel, you're spinning up a virtual environment with its own PHP execution.)
+
+[Xdebug Functions](https://xdebug.org/docs/all_functions)
+
+[PHP in VSCode](https://code.visualstudio.com/docs/languages/php)
 
 ### Unit Testing
 
 We should do this
-
-## Tooling
-
-### Virtual Environment: Local by Flywheel
-### Code Editor: Visual Studio Code

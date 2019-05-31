@@ -165,7 +165,7 @@
                 }
               });
           }),
-          e(".btn-nav-search").on("click", function(a) {
+          ".btn-nav-search".on("click", function(a) {
             a.preventDefault(),
               e("#search").addClass("open"),
               e('#search > form > div > input[type="search"]').focus();
