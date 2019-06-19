@@ -5,8 +5,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
-
-(function($) {
+export default (function($) {
   // Site title and description.
   wp.customize("blogname", function(value) {
     value.bind(function(to) {

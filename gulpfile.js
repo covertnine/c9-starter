@@ -11,19 +11,21 @@ const ignore = require("gulp-ignore");
 const rimraf = require("gulp-rimraf");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const del = require("del");
 const cleanCSS = require("gulp-clean-css");
 const gulpSequence = require("gulp-sequence");
 const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
-const vinylPaths = require("vinyl-paths");
+// const vinylPaths = require("vinyl-paths");
+// const gzip = require("gulp-gzip");
 
 // Configuration file to keep your code DRY
 const cfg = require("./gulpconfig.json");
 const paths = cfg.paths;
-const gulpwebsrc = paths.dev + "/js/main.js";
+const scriptSrc = "./js/src/";
+const scriptDist = "./js/dist/";
+const styleSrc = "./css/src/";
 
 // Run:
 // gulp watch
@@ -33,7 +35,7 @@ gulp.task("watch", function() {
     if (err) console.log(err);
   });
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch(paths.dev + "/js/main.js", function() {
+  gulp.watch(scriptSrc + "main.js", function() {
     gulpSequence("webpack-watch", "scripts")(function(err) {
       if (err) console.log(err);
     });
@@ -43,24 +45,27 @@ gulp.task("watch", function() {
 });
 
 gulp.task("webpack-watch", function() {
-  return gulp
-    .src(gulpwebsrc)
-    .pipe(webpack_stream(webpack_config))
-    .on("error", function handleError() {
-      this.emit("end"); // Recover from errors
-    })
-    .pipe(gulp.dest("js/"));
+  return (
+    gulp
+      .src(scriptSrc + "main.js")
+      .pipe(webpack_stream(webpack_config))
+      // .pipe(gzip())
+      .on("error", function handleError() {
+        this.emit("end"); // Recover from errors
+      })
+      .pipe(gulp.dest(scriptDist))
+  );
 });
 
 gulp.task("webpack-once", function() {
   webpack_config.watch = false;
   return gulp
-    .src(gulpwebsrc)
+    .src(scriptSrc + "main.js")
     .pipe(webpack_stream(webpack_config))
     .on("error", function handleError() {
       this.emit("end"); // Recover from errors
     })
-    .pipe(gulp.dest("js/"));
+    .pipe(gulp.dest(scriptDist));
 });
 // Run:
 // gulp sass
@@ -82,10 +87,6 @@ gulp.task("sass", function() {
     .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
     .pipe(gulp.dest(paths.css));
   return stream;
-});
-
-gulp.task("clean", () => {
-  return gulp.src(paths.dev + "/js/main.js").pipe(vinylPaths(del));
 });
 
 /**
@@ -175,81 +176,13 @@ gulp.task("scripts", function() {
   var scripts = [
     paths.node + "babel-polyfill/dist/polyfill.js",
 
-    paths.dev + "/js/bootstrap4/bootstrap.js",
+    paths.node + "/js/bootstrap4/bootstrap.js",
 
-    paths.dev + "/js/skip-link-focus-fix.js",
-    paths.node + "magnific-popup/dist/*.js",
-
-    paths.dev + "/js/main.bundle.js"
+    scriptDist + "main.bundle.js"
   ];
   gulp
     .src(scripts)
-    .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("theme.min.js"))
+    .pipe(concat("theme.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
-
-  gulp
-    .src(scripts)
-    .pipe(concat("theme.js"))
-    .pipe(gulp.dest(paths.js));
-});
-
-// Deleting any file inside the /src folder
-gulp.task("clean-source", function() {
-  return del(["src/**/*"]);
-});
-
-// Run:
-// gulp copy-assets.
-// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
-
-////////////////// All Bootstrap SASS  Assets /////////////////////////
-gulp.task("copy-assets", function() {
-  ////////////////// All Bootstrap 4 Assets /////////////////////////
-  // Copy all JS files
-  var stream = gulp
-    .src(paths.node + "bootstrap/dist/js/**/*.js")
-    .pipe(gulp.dest(paths.dev + "/js/bootstrap4"));
-
-  // Copy all Bootstrap SCSS files
-  gulp
-    .src(paths.node + "bootstrap/scss/**/*.scss")
-    .pipe(gulp.dest(paths.dev + "/sass/bootstrap4"));
-
-  ////////////////// End Bootstrap 4 Assets /////////////////////////
-
-  // Copy all Font Awesome Fonts
-  gulp
-    .src(paths.node + "font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}")
-    .pipe(gulp.dest("./fonts"));
-
-  // Copy all Font Awesome SCSS files
-  gulp
-    .src(paths.node + "font-awesome/scss/*.scss")
-    .pipe(gulp.dest(paths.dev + "/sass/fontawesome"));
-
-  // _s SCSS files
-  gulp
-    .src(paths.node + "undescores-for-npm/sass/media/*.scss")
-    .pipe(gulp.dest(paths.dev + "/sass/underscores"));
-
-  // _s JS files into /src/js
-  gulp
-    .src(paths.node + "undescores-for-npm/js/skip-link-focus-fix.js")
-    .pipe(gulp.dest(paths.dev + "/js"));
-
-  // magnific
-  gulp
-    .src(paths.node + "magnific-popup/dist/jquery.magnific-popup.min.js")
-    .pipe(gulp.dest(paths.dev + "/js"));
-
-  // Copy Popper JS files
-  gulp
-    .src(paths.node + "popper.js/dist/umd/popper.min.js")
-    .pipe(gulp.dest(paths.js + paths.vendor));
-  gulp
-    .src(paths.node + "popper.js/dist/umd/popper.js")
-    .pipe(gulp.dest(paths.js + paths.vendor));
-  return stream;
+    .pipe(gulp.dest(scriptDist));
 });

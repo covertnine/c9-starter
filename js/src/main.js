@@ -1,6 +1,16 @@
-// sidebar functionality
+// Main Javascript file. Find Vendor JS Files (like bootstrap, etc) in 'scripts'. Jq
+// https://github.com/miguel-perez/smoothState.js?files=1
 import "smoothState";
-import "bootstrap";
+// https://github.com/FezVrasta/popper.js/
+// import PopperJs from "popper.js";
+// // GSAP animations and such
+// import { TweenMax, Power2, TimelineLite } from "gsap/TweenMax";
+// // Lazyloader: https://github.com/ApoorvSaxena/lozad.js
+// import lozad from "lozad";
+// // lightbox https://github.com/dimsemenov/Magnific-Popup
+import "magnific-popup";
+// WP customizer Import
+// import "./customizer.js";
 
 jQuery(window).scroll(function() {
   //scroll position variable
@@ -76,7 +86,7 @@ if (jQuery(window).width() <= 667) {
 
   ///////////////////////// Move the content up by the height of the navbar object for a transparent nav effect ////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  if (jQuery(window).width() > 667) {
+  if ($(window).width() > 667) {
     var navHeight = $(".header-navbar").height();
     $("#page-wrapper").css("margin-top", -navHeight);
   }
