@@ -115,7 +115,7 @@ From this panel, you can navigate to the extension installer and adjust your set
 ### Settings:
 
 Again, use the command panel to access settings.
-![Settings](./vscode-settings.png)
+![Settings](./assets/images/vscode-settings.png)
 
 There's a distinction between Workspace settings and User settings. Workspace settings are, as you might expect, specific to your project, and a `.vscode` directory will be added to the root of your project.
 
