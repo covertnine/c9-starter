@@ -14,11 +14,11 @@ const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const gulpSequence = require("gulp-sequence");
 const autoprefixer = require("gulp-autoprefixer");
-const babel = require("gulp-babel");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
 // const vinylPaths = require("vinyl-paths");
 // const gzip = require("gulp-gzip");
+// const babel = require("gulp-babel");
 
 // Configuration file to keep your code DRY
 const cfg = require("./buildconfig.json");
@@ -175,11 +175,11 @@ gulp.task("watch-bs", ["browser-sync", "watch", "scripts"], function() {});
 // Uglifies and concat all JS files into one
 gulp.task("scripts", function() {
   var scripts = [
-    paths.node + "babel-polyfill/dist/polyfill.js",
+    paths.node + "/babel-polyfill/dist/polyfill.js",
 
     paths.node + "/js/bootstrap4/bootstrap.js",
 
-    scriptDist + "main.bundle.js"
+    scriptDist + "/main.bundle.js"
   ];
   gulp
     .src(scripts)

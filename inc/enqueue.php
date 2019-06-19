@@ -22,8 +22,8 @@ if (!function_exists('cortextoo_scripts')) {
 
 		wp_enqueue_script('jquery');
 
-		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/theme.min.js');
-		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/theme.min.js', array('jquery'), $js_version, true);
+		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
+		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array('jquery'), $js_version, true);
 
 		if (is_singular() && comments_open() && get_option('thread_comments')) {
 			wp_enqueue_script('comment-reply');

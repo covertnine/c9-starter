@@ -15,8 +15,7 @@
     "img": "./assets/images",
     "imgsrc": "./assets/images",
     "sass": "./assets/styles",
-    "node": "./node_modules/",
-    "bower": "./bower_components/",
+    "node": "./node_modules",
     "dev": "./",
     "dist": "./assets/dist"
   }
