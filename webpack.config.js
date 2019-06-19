@@ -4,7 +4,7 @@ const cfg = require("./buildconfig.json");
 module.exports = {
   mode: "production",
   bail: false,
-  entry: "./js/src/main.js",
+  entry: path.join(__dirname, cfg.paths.js, "main.js"),
   watch: true,
   module: {
     rules: [
@@ -23,6 +23,6 @@ module.exports = {
   },
   output: {
     filename: "main.bundle.js",
-    path: path.join(__dirname, "/js/dist")
+    path: path.join(__dirname, cfg.paths.dist)
   }
 };
