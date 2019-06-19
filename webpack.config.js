@@ -1,5 +1,5 @@
 var path = require("path");
-// var webpack = require('webpack')
+const cfg = require("./buildconfig.json");
 
 module.exports = {
   mode: "production",

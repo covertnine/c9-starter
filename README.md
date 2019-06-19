@@ -92,7 +92,7 @@ We should do this
 
 Access commands with `cmd-shift-p`:
 
-![Command](./vs-command.png)
+![Command](./assets/images/vs-command.png)
 
 From this panel, you can navigate to the extension installer and adjust your settings.
 
@@ -130,7 +130,6 @@ There's a distinction between Workspace settings and User settings. Workspace se
 
 You might also check out [prettier's options for language-specific settings](https://github.com/prettier/prettier-vscode).
 
-
 ### Workspace Settings
 
 Just this one, for
@@ -142,5 +141,6 @@ Just this one, for
 ```
 
 ### In Summary
+
 1. Install extensions
 2. Update your settings to make the extensions work well with VSCode.

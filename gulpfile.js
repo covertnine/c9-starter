@@ -21,7 +21,7 @@ const webpack_config = require("./webpack.config.js");
 // const gzip = require("gulp-gzip");
 
 // Configuration file to keep your code DRY
-const cfg = require("./gulpconfig.json");
+const cfg = require("./buildconfig.json");
 const paths = cfg.paths;
 const scriptSrc = "./js/src/";
 const scriptDist = "./js/dist/";
