@@ -78,3 +78,5 @@ function need_client_folder()
 <?php
 
 }
+
+require get_template_directory() . '/admin/admin-settings.php';
