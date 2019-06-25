@@ -61,7 +61,7 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 require get_template_directory() . '/inc/editor.php';
 
 /**
- * Load Client-Specific Files
+ * Load Client-Specific Hooks
  */
 if (file_exists(get_template_directory() . '/client/client.php')) {
     require get_template_directory() . '/client/client.php';
