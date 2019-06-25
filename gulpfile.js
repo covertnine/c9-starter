@@ -14,18 +14,19 @@ const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const gulpSequence = require("gulp-sequence");
 const autoprefixer = require("gulp-autoprefixer");
-const babel = require("gulp-babel");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
 // const vinylPaths = require("vinyl-paths");
 // const gzip = require("gulp-gzip");
+// const babel = require("gulp-babel");
 
 // Configuration file to keep your code DRY
-const cfg = require("./gulpconfig.json");
+const cfg = require("./buildconfig.json");
 const paths = cfg.paths;
-const scriptSrc = "./js/src/";
-const scriptDist = "./js/dist/";
-const styleSrc = "./css/src/";
+const scriptSrc = paths.js;
+const scriptMain = scriptSrc + "/main.js";
+const scriptDist = paths.dist + "/js";
+const styleDist = paths.dist + "/css";
 
 // Run:
 // gulp watch
@@ -35,7 +36,7 @@ gulp.task("watch", function() {
     if (err) console.log(err);
   });
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
-  gulp.watch(scriptSrc + "main.js", function() {
+  gulp.watch(scriptMain, function() {
     gulpSequence("webpack-watch", "scripts")(function(err) {
       if (err) console.log(err);
     });
@@ -47,7 +48,7 @@ gulp.task("watch", function() {
 gulp.task("webpack-watch", function() {
   return (
     gulp
-      .src(scriptSrc + "main.js")
+      .src(scriptMain)
       .pipe(webpack_stream(webpack_config))
       // .pipe(gzip())
       .on("error", function handleError() {
@@ -60,7 +61,7 @@ gulp.task("webpack-watch", function() {
 gulp.task("webpack-once", function() {
   webpack_config.watch = false;
   return gulp
-    .src(scriptSrc + "main.js")
+    .src(scriptMain)
     .pipe(webpack_stream(webpack_config))
     .on("error", function handleError() {
       this.emit("end"); // Recover from errors
@@ -125,7 +126,7 @@ gulp.task("cssnano", function() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(cssnano({ discardComments: { removeAll: true } }))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(styleDist));
 });
 
 gulp.task("minifycss", function() {
@@ -143,7 +144,7 @@ gulp.task("minifycss", function() {
     )
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(styleDist));
 });
 
 gulp.task("cleancss", function() {
@@ -174,11 +175,11 @@ gulp.task("watch-bs", ["browser-sync", "watch", "scripts"], function() {});
 // Uglifies and concat all JS files into one
 gulp.task("scripts", function() {
   var scripts = [
-    paths.node + "babel-polyfill/dist/polyfill.js",
+    paths.node + "/babel-polyfill/dist/polyfill.js",
 
     paths.node + "/js/bootstrap4/bootstrap.js",
 
-    scriptDist + "main.bundle.js"
+    scriptDist + "/main.bundle.js"
   ];
   gulp
     .src(scripts)
