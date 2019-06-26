@@ -80,3 +80,5 @@ function need_client_folder()
 }
 
 require get_template_directory() . '/admin/admin-settings.php';
+
+require get_template_directory() . '/artist-import.php';

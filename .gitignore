@@ -114,3 +114,6 @@ client
 !.eslintignore
 !.eslintrc.json
 !.prettierrc
+
+
+artist-importer.php
