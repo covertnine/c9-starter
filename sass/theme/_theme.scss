@@ -2546,7 +2546,7 @@ button:hover,
 .mar140T{margin-top:140px}
 .mar10NT{margin-top:-10px}
 .mar20NT{margin-top:-20px}
-.mar30NT{margin-top:-30px}
+.mar30NT{margin-top:-30px !important;}
 .mar40NT{margin-top:-40px}
 .mar50NT{margin-top:-50px}
 .mar60NT{margin-top:-60px}
@@ -3039,8 +3039,8 @@ button:hover,
 	display: block;
 	width: 100%;
 	height: 40px;
-	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') no-repeat;
-	background-size: 100% 100%;
+	background: transparent url('/wp-content/uploads/2019/02/one-divider.svg') center center no-repeat;
+	background-size: cover;
 	margin-bottom: 10px;
 	min-height: 50px;
 }
