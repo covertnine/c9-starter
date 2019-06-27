@@ -45,8 +45,6 @@
 .*
 ~*
 
-assets/dist
-
 js/theme.js
 js/theme.min.js
 src/js/custom-javascript.bundle.js
