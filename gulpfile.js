@@ -32,7 +32,7 @@ const styleDist = paths.dist + "/css";
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", function() {
-  gulpSequence("webpack-once", "styles", "scripts")(function(err) {
+  gulpSequence("webpack-once", "scripts", "cleancss", "styles")(function(err) {
     if (err) console.log(err);
   });
   gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
@@ -149,7 +149,7 @@ gulp.task("minifycss", function() {
 
 gulp.task("cleancss", function() {
   return gulp
-    .src(paths.css + "/*.min.css", { read: false }) // Much faster
+    .src(paths.css + "/**/*.min.css", { read: false }) // Much faster
     .pipe(ignore("theme.css"))
     .pipe(rimraf());
 });
