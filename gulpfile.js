@@ -16,9 +16,6 @@ const gulpSequence = require("gulp-sequence");
 const autoprefixer = require("gulp-autoprefixer");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
-// const vinylPaths = require("vinyl-paths");
-// const gzip = require("gulp-gzip");
-// const babel = require("gulp-babel");
 
 // Configuration file to keep your code DRY
 const cfg = require("./buildconfig.json");
@@ -32,17 +29,17 @@ const styleDist = paths.dist + "/css";
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", function() {
-  gulpSequence("webpack-once", "scripts", "cleancss", "styles")(function(err) {
+  gulpSequence("dropdist", "webpack-once", "scripts", "styles")(function(err) {
     if (err) console.log(err);
   });
-  gulp.watch(paths.sass + "/**/*.scss", ["styles"]);
+  gulp.watch(paths.styles + "/**/*.scss", ["styles"]);
   gulp.watch(scriptMain, function() {
     gulpSequence("webpack-watch", "scripts")(function(err) {
       if (err) console.log(err);
     });
   });
   //Inside the watch task.
-  gulp.watch(paths.imgsrc + "/**", ["imagemin-watch"]);
+  gulp.watch(paths.img + "/**", ["imagemin-watch"]);
 });
 
 gulp.task("webpack-watch", function() {
@@ -73,7 +70,7 @@ gulp.task("webpack-once", function() {
 // Compiles SCSS files in CSS
 gulp.task("sass", function() {
   var stream = gulp
-    .src(paths.sass + "/*.scss")
+    .src(paths.styles + "/*.scss")
     .pipe(
       plumber({
         errorHandler: function(err) {
@@ -86,7 +83,7 @@ gulp.task("sass", function() {
     .pipe(sass({ errLogToConsole: true }))
     .pipe(autoprefixer("last 2 versions"))
     .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.styles));
   return stream;
 });
 
@@ -103,7 +100,7 @@ gulp.task("imagemin-watch", ["imagemin"], function() {
 // Running image optimizing task
 gulp.task("imagemin", function() {
   gulp
-    .src(paths.imgsrc + "/**")
+    .src(paths.img + "/**")
     .pipe(imagemin())
     .pipe(gulp.dest(paths.img));
 });
@@ -113,7 +110,7 @@ gulp.task("imagemin", function() {
 // Minifies CSS files
 gulp.task("cssnano", function() {
   return gulp
-    .src(paths.css + "/theme.css")
+    .src(paths.styles + "/theme.css")
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
@@ -131,7 +128,7 @@ gulp.task("cssnano", function() {
 
 gulp.task("minifycss", function() {
   return gulp
-    .src(paths.css + "/theme.css")
+    .src(paths.styles + "/theme.css")
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cleanCSS({ compatibility: "*" }))
     .pipe(
@@ -147,10 +144,9 @@ gulp.task("minifycss", function() {
     .pipe(gulp.dest(styleDist));
 });
 
-gulp.task("cleancss", function() {
+gulp.task("dropdist", function() {
   return gulp
-    .src(paths.css + "/**/*.min.css", { read: false }) // Much faster
-    .pipe(ignore("theme.css"))
+    .src(paths.dist + "/**/*", { read: false }) // Much faster
     .pipe(rimraf());
 });
 

@@ -11,12 +11,10 @@
   "paths": {
     "client": "./client/assets",
     "js": "./assets/scripts",
-    "css": "./assets/styles",
     "img": "./assets/images",
-    "imgsrc": "./assets/images",
-    "sass": "./assets/styles",
     "node": "./node_modules",
     "dev": "./",
-    "dist": "./assets/dist"
+    "dist": "./assets/dist",
+    "styles": "./assets/styles"
   }
 }
