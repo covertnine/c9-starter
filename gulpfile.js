@@ -103,11 +103,13 @@ gulp.task("styles", function(callback) {
   gulpSequence("sass", "minifycss")(callback);
 });
 
+// Object for describing multiple source/destinations for compiling scss assets (allows for maintaining)
+
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task("sass", function() {
-  var srcDests = [
+  let srcDests = [
     { src: paths.styles + "/*.scss", dest: styleDist },
     { src: paths.client + "/client.scss", dest: paths.client + "/dist" }
   ];
@@ -133,21 +135,31 @@ gulp.task("sass", function() {
 });
 
 gulp.task("minifycss", function() {
-  return gulp
-    .src([styleDist + "/theme.css", styleDist + "custom-editor-style.css"])
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(cleanCSS({ compatibility: "*" }))
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(styleDist));
+  let srcDests = [
+    {
+      src: [styleDist + "/theme.css", styleDist + "custom-editor-style.css"],
+      dest: styleDist
+    },
+    { src: paths.client + "/dist/client.css", dest: paths.client + "/dist" }
+  ];
+  var streams = srcDests.map(function(srcDest) {
+    return gulp
+      .src(srcDest.src)
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(cleanCSS({ compatibility: "*" }))
+      .pipe(
+        plumber({
+          errorHandler: function(err) {
+            console.log(err);
+            this.emit("end");
+          }
+        })
+      )
+      .pipe(rename({ suffix: ".min" }))
+      .pipe(sourcemaps.write("./"))
+      .pipe(gulp.dest(srcDest.dest));
+  });
+  return merge(streams);
 });
 
 // Run:
