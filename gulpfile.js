@@ -28,7 +28,7 @@ const styleDist = paths.dist + "/css";
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", function() {
   // This happens once on running 'gulp watch'
-  gulpSequence("dropdist", "webpack-once", "scripts", "styles")(function(err) {
+  gulpSequence("webpack-once", "scripts", "styles")(function(err) {
     if (err) console.log(err);
   });
   // These happen each time a watched file is saved
@@ -123,7 +123,7 @@ gulp.task("sass", function() {
 
 gulp.task("minifycss", function() {
   return gulp
-    .src(styleDist + "/*.css")
+    .src([styleDist + "/theme.css", styleDist + "custom-editor-style.css"])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cleanCSS({ compatibility: "*" }))
     .pipe(
