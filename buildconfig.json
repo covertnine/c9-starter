@@ -9,7 +9,7 @@
     "./**/*.php"
   ],
   "paths": {
-    "client": "./client/assets",
+    "client": "./client/client-assets",
     "js": "./assets/scripts",
     "img": "./assets/images",
     "node": "./node_modules",

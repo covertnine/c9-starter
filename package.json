@@ -61,6 +61,7 @@
     "jquery": "^3.4.1",
     "lozad": "^1.9.0",
     "magnific-popup": "^1.1.0",
+    "merge-stream": "^2.0.0",
     "merge2": "^1.2.1",
     "parallax-js": "^3.1.0",
     "popper.js": "^1.15.0",

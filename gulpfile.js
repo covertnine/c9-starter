@@ -14,6 +14,7 @@ const gulpSequence = require("gulp-sequence");
 const autoprefixer = require("gulp-autoprefixer");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
+const merge = require("merge-stream");
 
 // Configuration file to keep your code DRY
 const cfg = require("./buildconfig.json");
@@ -37,7 +38,10 @@ gulp.task("watch", function() {
       if (err) console.log(err);
     });
   });
-  gulp.watch(paths.styles + "/**/*.scss", ["styles"]);
+  gulp.watch(
+    [paths.styles + "/**/*.scss", paths.client + "/client.scss"],
+    ["styles"]
+  );
   //Inside the watch task.
   gulp.watch(paths.img + "/**", ["imagemin-watch"]);
 });
@@ -103,22 +107,29 @@ gulp.task("styles", function(callback) {
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task("sass", function() {
-  var stream = gulp
-    .src(paths.styles + "/*.scss")
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sass({ errLogToConsole: true }))
-    .pipe(autoprefixer("last 2 versions"))
-    .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-    .pipe(gulp.dest(styleDist));
-  return stream;
+  var srcDests = [
+    { src: paths.styles + "/*.scss", dest: styleDist },
+    { src: paths.client + "/client.scss", dest: paths.client + "/dist" }
+  ];
+  var streams = srcDests.map(function(srcDest) {
+    return gulp
+      .src(srcDest.src)
+      .pipe(
+        plumber({
+          errorHandler: function(err) {
+            console.log(err);
+            this.emit("end");
+          }
+        })
+      )
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(sass({ errLogToConsole: true }))
+      .pipe(autoprefixer("last 2 versions"))
+      .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+      .pipe(gulp.dest(srcDest.dest));
+  });
+
+  return merge(streams);
 });
 
 gulp.task("minifycss", function() {
