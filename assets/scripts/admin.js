@@ -2,7 +2,7 @@
 
 (function($) {
   $(function() {
-    if ($("#code_editor_page_head").length) {
+    if ($(".code_editor_page_html").length) {
       var editorSettings = wp.codeEditor.defaultSettings
         ? _.clone(wp.codeEditor.defaultSettings)
         : {};
@@ -11,12 +11,12 @@
         tabSize: 2
       });
       var editor = wp.codeEditor.initialize(
-        $("#code_editor_page_head"),
+        $(".code_editor_page_html"),
         editorSettings
       );
     }
 
-    if ($("#code_editor_page_js").length) {
+    if ($(".code_editor_page_js").length) {
       var editorSettings = wp.codeEditor.defaultSettings
         ? _.clone(wp.codeEditor.defaultSettings)
         : {};
@@ -26,7 +26,7 @@
         mode: "javascript"
       });
       var editor = wp.codeEditor.initialize(
-        $("#code_editor_page_js"),
+        $(".code_editor_page_js"),
         editorSettings
       );
     }

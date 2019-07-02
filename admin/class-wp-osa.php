@@ -268,7 +268,7 @@ if (!class_exists('WP_OSA')) :
 					$type = isset($field['type']) ? $field['type'] : 'text';
 
 					// Language (for code inputs)
-					$type = isset($field['language']) ? $field['language'] : 'html';
+					$language = isset($field['language']) ? $field['language'] : 'html';
 
 					// Name.
 					$name = isset($field['name']) ? $field['name'] : 'No Name Added';
@@ -306,6 +306,7 @@ if (!class_exists('WP_OSA')) :
 						'std'               => $default,
 						'placeholder'       => $placeholder,
 						'sanitize_callback' => $sanitize_callback,
+						'language' 			=> $language
 					);
 
 					/**
@@ -464,7 +465,7 @@ if (!class_exists('WP_OSA')) :
 			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
 			$type  = isset($args['type']) ? $args['type'] : 'text';
 
-			$html  = sprintf('<textarea id="%2$s[%3$s]" class="code_editor_page_%1$s" rows="5" name="%2$s[%3$s]" class="widefat textarea">%4$s</textarea>', 'css', $args['section'], $args['id'], $value);
+			$html  = sprintf('<textarea id="%2$s[%3$s]" class="code_editor_page_%1$s" rows="5" name="%2$s[%3$s]" class="widefat textarea">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value);
 
 			// $html  = sprintf('<textarea rows="5" cols="55" class="code_editor_page_%1$s" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value);
 

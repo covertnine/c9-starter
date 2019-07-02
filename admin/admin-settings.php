@@ -312,6 +312,18 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'      => 'custom_js',
+			'type'    => 'code',
+			'language' => 'js',
+			'name'    => __('Custom JS', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+
 	// Field: Separator.
 	$wposa_obj->add_field(
 		'cortex_advanced',
@@ -328,6 +340,18 @@ if (class_exists('WP_OSA')) {
 			'id'   => 'integrations',
 			'type' => 'title',
 			'name' => '<h1>API Integrations</h1>',
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'      => 'custom_js',
+			'type'    => 'code',
+			'language' => 'js',
+			'name'    => __('Custom JS', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
 		)
 	);
 }
