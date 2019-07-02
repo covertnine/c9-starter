@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Main Class file for `WP_OSA`
  *
@@ -68,6 +69,10 @@ if (!class_exists('WP_OSA')) :
 		{
 			// jQuery is needed.
 			wp_enqueue_script('jquery');
+
+			wp_enqueue_code_editor(array('type' => 'text/html'));
+
+			wp_enqueue_script('admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', array('jquery'), '', true);
 
 			// Color Picker.
 			wp_enqueue_script(
@@ -262,6 +267,9 @@ if (!class_exists('WP_OSA')) :
 					// Type.
 					$type = isset($field['type']) ? $field['type'] : 'text';
 
+					// Language (for code inputs)
+					$type = isset($field['language']) ? $field['language'] : 'html';
+
 					// Name.
 					$name = isset($field['name']) ? $field['name'] : 'No Name Added';
 
@@ -444,6 +452,26 @@ if (!class_exists('WP_OSA')) :
 
 			echo $html;
 		}
+		/**
+		 * Displays a text field for a settings field
+		 *
+		 * @param array $args settings field args
+		 */
+		function callback_code($args)
+		{
+
+			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std'], $args['placeholder']));
+			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$type  = isset($args['type']) ? $args['type'] : 'text';
+
+			$html  = sprintf('<textarea id="%2$s[%3$s]" class="code_editor_page_%1$s" rows="5" name="%2$s[%3$s]" class="widefat textarea">%4$s</textarea>', 'css', $args['section'], $args['id'], $value);
+
+			// $html  = sprintf('<textarea rows="5" cols="55" class="code_editor_page_%1$s" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value);
+
+			$html .= $this->get_field_description($args);
+
+			echo $html;
+		}
 
 
 		/**
@@ -568,6 +596,23 @@ if (!class_exists('WP_OSA')) :
 
 			echo $html;
 		}
+
+		// 		/**
+		//  * Displays a textarea for a settings field
+		//  *
+		//  * @param array $args settings field args
+		//  */
+		//  function callback_script_or_style($args)
+		//  {
+
+		// 	 $value = esc_textarea($this->get_option($args['id'], $args['section'], $args['std']));
+		// 	 $size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+
+		// 	 $html  = sprintf('<textarea rows="5" cols="55" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $size, $args['section'], $args['id'], $value);
+		// 	 $html .= $this->get_field_description($args);
+
+		// 	 echo $html;
+		//  }
 
 		/**
 		 * Displays a textarea for a settings field
@@ -940,7 +985,7 @@ if (!class_exists('WP_OSA')) :
 			}
 		</style>
 	<?php
-}
+	}
 } // WP_OSA ended.
 
 endif;

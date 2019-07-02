@@ -93,14 +93,14 @@ if (jQuery(window).width() <= 667) {
 
   ///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  $(".cortex-popup-video").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    mainClass: "mfp-zoom-in",
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
-  });
+  // $(".cortex-popup-video").magnificPopup({
+  //   disableOn: 700,
+  //   type: "iframe",
+  //   mainClass: "mfp-zoom-in",
+  //   removalDelay: 160,
+  //   preloader: false,
+  //   fixedContentPos: false
+  // });
 
   $(
     '.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup'

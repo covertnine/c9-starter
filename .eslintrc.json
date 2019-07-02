@@ -19,7 +19,8 @@
     "wp": true,
     "wpApiSettings": true,
     "window": true,
-    "document": true
+    "document": true,
+    "hljs": true
   },
   "plugins": ["jquery"],
   "rules": {

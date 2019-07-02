@@ -37,7 +37,9 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj = new WP_OSA();
 
 
-	// Section: Basic Settings.
+	// -----------------------------//
+	//---- Start Cortex Branding ---//
+	//------------------------------//
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_branding',
@@ -45,24 +47,6 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Section: Other Settings.
-	$wposa_obj->add_section(
-		array(
-			'id'    => 'cortex_layout',
-			'title' => __('Layout', 'WPOSA'),
-		)
-	);
-
-	// Section: Other Settings.
-	$wposa_obj->add_section(
-		array(
-			'id'    => 'cortex_styles',
-			'title' => __('Styles', 'WPOSA'),
-		)
-	);
-
-
-	// Field: Text.
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
@@ -74,7 +58,6 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Number.
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
@@ -87,7 +70,6 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Password.
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
@@ -183,6 +165,21 @@ if (class_exists('WP_OSA')) {
 			),
 		)
 	);
+	// ---------------------------//
+	//---- End Cortex Branding----//
+	//---------------------------//
+
+	//-------------------------------------------//
+
+	// ---------------------------//
+	//---- Start Cortex Layout ---//
+	//---------------------------//
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_layout',
+			'title' => __('Layout', 'WPOSA'),
+		)
+	);
 
 	// Field: Image.
 	$wposa_obj->add_field(
@@ -232,6 +229,105 @@ if (class_exists('WP_OSA')) {
 			'type' => 'wysiwyg',
 			'name' => __('WP_Editor', 'WPOSA'),
 			'desc' => __('WP_Editor description', 'WPOSA'),
+		)
+	);
+
+	// ---------------------------//
+	//---- End Cortex Layout ----//
+	//---------------------------//
+
+	//-------------------------------------------//
+
+	// ---------------------------//
+	//---- Start Cortex Social ---//
+	//---------------------------//
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_social',
+			'title' => __('Social Media', 'WPOSA'),
+		)
+	);
+
+	// ---------------------------//
+	//---- End Cortex Social ----//
+	//---------------------------//
+
+	//-------------------------------------------//
+
+	// ---------------------------//
+	//---- Start Cortex Posts ---//
+	//---------------------------//
+
+	// Section: Other Settings.
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_posts',
+			'title' => __('Posts', 'WPOSA'),
+		)
+	);
+
+	// ---------------------------//
+	//---- End Cortex Posts -----//
+	//---------------------------//
+
+	//-------------------------------------------//
+
+	// -------------------------------//
+	//---- Start Cortex Typography ---//
+	//--------------------------------//
+
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_typography',
+			'title' => __('Typography', 'WPOSA'),
+		)
+	);
+
+	// ---------------------------//
+	//---- End Cortex Posts -----//
+	//---------------------------//
+
+	//-------------------------------------------//
+
+	// -------------------------------//
+	//---- Start Cortex Typography ---//
+	//--------------------------------//
+
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_advanced',
+			'title' => __('Advanced', 'WPOSA'),
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'      => 'custom_css',
+			'type'    => 'code',
+			'language' => 'css',
+			'name'    => __('Custom CSS', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+
+	// Field: Separator.
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'   => 'separator',
+			'type' => 'separator',
+		)
+	);
+
+	// Field: Title.
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'   => 'integrations',
+			'type' => 'title',
+			'name' => '<h1>API Integrations</h1>',
 		)
 	);
 }
