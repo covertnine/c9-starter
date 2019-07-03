@@ -12,7 +12,6 @@ if (!defined('ABSPATH')) {
  * @since   1.0.0
  */
 
-
 /**
  * Class `WP_OOP_Settings_API`.
  *
@@ -300,6 +299,19 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
+	// Field: Image.
+	$wposa_obj->add_field(
+		'cortex_layout',
+		array(
+			'id'      => 'image',
+			'type'    => 'image',
+			'name'    => __('Image', 'WPOSA'),
+			'desc'    => __('Image description', 'WPOSA'),
+			'options' => array(
+				'button_label' => 'Choose Image',
+			),
+		)
+	);
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
@@ -350,6 +362,28 @@ if (class_exists('WP_OSA')) {
 			'type'    => 'code',
 			'language' => 'js',
 			'name'    => __('Custom JS', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'      => 'google_maps_api',
+			'type'    => 'api_key',
+			'pre_update_option' => 'encrypt_key',
+			'name'    => __('Google Maps API Key', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_advanced',
+		array(
+			'id'      => 'another_api',
+			'type'    => 'api_key',
+			'pre_update_option' => 'encrypt_key',
+			'name'    => __('Another API Key', 'WPOSA'),
 			'desc'    => __('', 'WPOSA'),
 			'default' => '',
 		)

@@ -332,6 +332,14 @@ if (!class_exists('WP_OSA')) :
 						$section,
 						$args
 					);
+
+					/**
+					 * Add filter for adjusting values
+					 */
+
+					if (isset($field['pre_update_option'])) {
+						add_filter('pre_update_option_' . $section, array($this, 'pre_update_' . $field['pre_update_option']), 10, 2);
+					}
 				} // foreach ended.
 			} // foreach ended.
 
@@ -350,7 +358,6 @@ if (!class_exists('WP_OSA')) :
 
 		} // admin_init() ended.
 
-
 		/**
 		 * Sanitize callback for Settings API fields.
 		 *
@@ -359,6 +366,7 @@ if (!class_exists('WP_OSA')) :
 		public function sanitize_fields($fields)
 		{
 			foreach ($fields as $field_slug => $field_value) {
+
 				$sanitize_callback = $this->get_sanitize_callback($field_slug);
 
 				// If callback is set, call it.
@@ -388,7 +396,9 @@ if (!class_exists('WP_OSA')) :
 			// Iterate over registered fields and see if we can find proper callback.
 			foreach ($this->fields_array as $section => $field_array) {
 				foreach ($field_array as $field) {
-					if ($field['name'] != $slug) {
+
+					$field_id = $field['id'];
+					if ($field['id'] != $slug) {
 						continue;
 					}
 
@@ -398,6 +408,31 @@ if (!class_exists('WP_OSA')) :
 			}
 
 			return false;
+		}
+
+		/**
+		 * Sanitize callback for Settings API fields. Encrypts API Keys
+		 *
+		 * @since 1.0.0
+		 */
+		public function pre_update_encrypt_key($section_value)
+		{
+
+			foreach ($this->fields_array[$_POST['option_page']] as $field) {
+				if (isset($field['pre_update_option']) && $field['pre_update_option'] === "encrypt_key") {
+					$plaintext = $section_value[$field['id']];
+					$cipher = "aes-128-gcm";
+					$key = LOGGED_IN_KEY;
+					if (in_array($cipher, openssl_get_cipher_methods())) {
+						$ivlen = openssl_cipher_iv_length($cipher);
+						$iv = openssl_random_pseudo_bytes($ivlen);
+						$ciphertext = base64_encode(openssl_encrypt($plaintext, $cipher, $key, $options = 0, $iv));
+						$section_value[$field['id']] = $ciphertext;
+					}
+				}
+			}
+
+			return $section_value;
 		}
 
 
@@ -453,6 +488,8 @@ if (!class_exists('WP_OSA')) :
 
 			echo $html;
 		}
+
+
 		/**
 		 * Displays a text field for a settings field
 		 *
@@ -710,6 +747,30 @@ if (!class_exists('WP_OSA')) :
 			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
 
 			$html  = sprintf('<input type="password" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
+			$html .= $this->get_field_description($args);
+
+			echo $html;
+		}
+
+		/**
+		 * Displays a password field for a settings field
+		 *
+		 * @param array $args settings field args
+		 */
+		function callback_api_key($args)
+		{
+
+			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
+			$cipher = "aes-128-gcm";
+			$key = LOGGED_IN_KEY;
+			if (in_array($cipher, openssl_get_cipher_methods())) {
+				$ivlen = openssl_cipher_iv_length($cipher);
+				$iv = openssl_random_pseudo_bytes($ivlen);
+				$value = openssl_decrypt(base64_decode($value), $cipher, $key, $options = 0, $iv);
+			}
+			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+
+			$html  = sprintf('<input type="text" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
 			$html .= $this->get_field_description($args);
 
 			echo $html;
