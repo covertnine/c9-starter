@@ -753,30 +753,6 @@ if (!class_exists('WP_OSA')) :
 		}
 
 		/**
-		 * Displays a password field for a settings field
-		 *
-		 * @param array $args settings field args
-		 */
-		function callback_api_key($args)
-		{
-
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			$cipher = "aes-128-gcm";
-			$key = LOGGED_IN_KEY;
-			if (in_array($cipher, openssl_get_cipher_methods())) {
-				$ivlen = openssl_cipher_iv_length($cipher);
-				$iv = openssl_random_pseudo_bytes($ivlen);
-				$value = openssl_decrypt(base64_decode($value), $cipher, $key, $options = 0, $iv);
-			}
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-
-			$html  = sprintf('<input type="text" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
-			$html .= $this->get_field_description($args);
-
-			echo $html;
-		}
-
-		/**
 		 * Displays a color picker field for a settings field
 		 *
 		 * @param array $args settings field args

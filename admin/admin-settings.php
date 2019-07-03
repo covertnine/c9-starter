@@ -79,91 +79,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Textarea.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'   => 'textarea',
-			'type' => 'textarea',
-			'name' => __('Textarea Input', 'WPOSA'),
-			'desc' => __('Textarea description', 'WPOSA'),
-		)
-	);
 
-	// Field: Separator.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'   => 'separator',
-			'type' => 'separator',
-		)
-	);
-
-	// Field: Title.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'   => 'title',
-			'type' => 'title',
-			'name' => '<h1>Title</h1>',
-		)
-	);
-
-	// Field: Checkbox.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'   => 'checkbox',
-			'type' => 'checkbox',
-			'name' => __('Checkbox', 'WPOSA'),
-			'desc' => __('Checkbox Label', 'WPOSA'),
-		)
-	);
-
-	// Field: Radio.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'      => 'radio',
-			'type'    => 'radio',
-			'name'    => __('Radio', 'WPOSA'),
-			'desc'    => __('Radio Button', 'WPOSA'),
-			'options' => array(
-				'yes' => 'Yes',
-				'no'  => 'No',
-			),
-		)
-	);
-
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'      => 'multicheck',
-			'type'    => 'multicheck',
-			'name'    => __('Multile checkbox', 'WPOSA'),
-			'desc'    => __('Multile checkbox description', 'WPOSA'),
-			'options' => array(
-				'yes' => 'Yes',
-				'no'  => 'No',
-			),
-		)
-	);
-
-	// Field: Select.
-	$wposa_obj->add_field(
-		'cortex_branding',
-		array(
-			'id'      => 'select',
-			'type'    => 'select',
-			'name'    => __('A Dropdown', 'WPOSA'),
-			'desc'    => __('A Dropdown description', 'WPOSA'),
-			'options' => array(
-				'yes' => 'Yes',
-				'no'  => 'No',
-			),
-		)
-	);
 	// ---------------------------//
 	//---- End Cortex Branding----//
 	//---------------------------//
@@ -242,8 +158,19 @@ if (class_exists('WP_OSA')) {
 	//---------------------------//
 	$wposa_obj->add_section(
 		array(
-			'id'    => 'cortex_social',
-			'title' => __('Social Media', 'WPOSA'),
+			'id'    => 'cortex_seo',
+			'title' => __('SEO', 'WPOSA'),
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_seo',
+		array(
+			'id'      => 'google_analytics_api',
+			'type'    => 'text',
+			'name'    => __('Google Analytics API Key', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
 		)
 	);
 
@@ -274,11 +201,38 @@ if (class_exists('WP_OSA')) {
 	// -------------------------------//
 	//---- Start Cortex Typography ---//
 	//--------------------------------//
-
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_typography',
 			'title' => __('Typography', 'WPOSA'),
+		)
+	);
+
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'typography_presets',
+			'type'    => 'multicheck',
+			'name'    => __('Font Presets', 'WPOSA'),
+			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
+			'options' => array(
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif'  => 'Droid Serif',
+				'Roboto'  => 'Roboto',
+				'Montserrat'  => 'Montserrat',
+			),
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'typography_code',
+			'type'    => 'code',
+			'name'    => __('Typography Code', 'WPOSA'),
+			'desc'    => __('Add custom typography code here', 'WPOSA'),
+			'language' => 'javascript'
 		)
 	);
 
@@ -327,64 +281,22 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
-			'id'      => 'custom_js',
+			'id'      => 'header_js',
 			'type'    => 'code',
-			'language' => 'js',
-			'name'    => __('Custom JS', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
+			'language' => 'javascript',
+			'name'    => __('Header JS', 'WPOSA'),
+			'desc'    => __('Drop your custom google analytics, google fonts, or Typekit code here', 'WPOSA'),
 			'default' => '',
 		)
 	);
-
-	// Field: Separator.
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
-			'id'   => 'separator',
-			'type' => 'separator',
-		)
-	);
-
-	// Field: Title.
-	$wposa_obj->add_field(
-		'cortex_advanced',
-		array(
-			'id'   => 'integrations',
-			'type' => 'title',
-			'name' => '<h1>API Integrations</h1>',
-		)
-	);
-
-	$wposa_obj->add_field(
-		'cortex_advanced',
-		array(
-			'id'      => 'custom_js',
+			'id'      => 'footer_js',
 			'type'    => 'code',
-			'language' => 'js',
-			'name'    => __('Custom JS', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
-		)
-	);
-	$wposa_obj->add_field(
-		'cortex_advanced',
-		array(
-			'id'      => 'google_maps_api',
-			'type'    => 'api_key',
-			'pre_update_option' => 'encrypt_key',
-			'name'    => __('Google Maps API Key', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
-		)
-	);
-	$wposa_obj->add_field(
-		'cortex_advanced',
-		array(
-			'id'      => 'another_api',
-			'type'    => 'api_key',
-			'pre_update_option' => 'encrypt_key',
-			'name'    => __('Another API Key', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
+			'language' => 'javascript',
+			'name'    => __('Footer JS', 'WPOSA'),
+			'desc'    => __('Drop other Javascript here, maybe', 'WPOSA'),
 			'default' => '',
 		)
 	);

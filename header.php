@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme.
  *
@@ -22,6 +23,14 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="https://use.typekit.net/ooo7ivn.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: ['Droid Sans', 'Droid Serif']
+			}
+		});
+	</script>
 </head>
 
 <body <?php body_class(); ?>>

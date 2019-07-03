@@ -2,48 +2,33 @@
 
 (function($) {
   $(function() {
-    if ($(".code_editor_page_html").length) {
-      var editorSettings = wp.codeEditor.defaultSettings
-        ? _.clone(wp.codeEditor.defaultSettings)
-        : {};
-      editorSettings.codemirror = _.extend({}, editorSettings.codemirror, {
-        indentUnit: 2,
-        tabSize: 2
-      });
-      var editor = wp.codeEditor.initialize(
-        $(".code_editor_page_html"),
-        editorSettings
-      );
-    }
-
-    if ($(".code_editor_page_js").length) {
-      var editorSettings = wp.codeEditor.defaultSettings
-        ? _.clone(wp.codeEditor.defaultSettings)
-        : {};
-      editorSettings.codemirror = _.extend({}, editorSettings.codemirror, {
-        indentUnit: 2,
-        tabSize: 2,
-        mode: "javascript"
-      });
-      var editor = wp.codeEditor.initialize(
-        $(".code_editor_page_js"),
-        editorSettings
-      );
-    }
-
-    if ($(".code_editor_page_css").length) {
+    var modes = RegExp("(html|css|javascript)");
+    $("textarea[class^=code_editor_page_").each(function() {
+      // pulls the class to determine type of editor
+      if (
+        $(this)
+          .attr("class")
+          .match(modes) !== null
+      ) {
+        var mode = $(this)
+          .attr("class")
+          .match(modes)[0];
+      } else {
+        var mode = "html";
+        console.log(
+          "looks like you have something misconfigured in one of your 'code' fields. Did you correctly set the language?",
+          $(this)
+        );
+      }
       var editorSettings = wp.codeEditor.defaultSettings
         ? _.clone(wp.codeEditor.defaultSettings)
         : {};
       editorSettings.codemirror = _.extend({}, editorSettings.codemirror, {
         indentUnit: 2,
         tabSize: 2,
-        mode: "css"
+        mode: mode
       });
-      var editor = wp.codeEditor.initialize(
-        $(".code_editor_page_css"),
-        editorSettings
-      );
-    }
+      var editor = wp.codeEditor.initialize($(this), editorSettings);
+    });
   });
 })(jQuery);
