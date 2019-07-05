@@ -49,33 +49,30 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'      => 'text',
-			'type'    => 'text',
-			'name'    => __('Text Input', 'WPOSA'),
-			'desc'    => __('Text input description', 'WPOSA'),
-			'default' => 'Default Text',
+			'id'      => 'logo',
+			'type'    => 'image',
+			'name'    => __('Theme Logo Upload', 'WPOSA'),
+			'desc'    => __('Upload your logo here', 'WPOSA'),
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'                => 'text_no',
-			'type'              => 'number',
-			'name'              => __('Number Input', 'WPOSA'),
-			'desc'              => __('Number field with validation callback `intval`', 'WPOSA'),
-			'default'           => 1,
-			'sanitize_callback' => 'intval',
+			'id'                => 'apple-touch',
+			'type'              => 'image',
+			'name'              => __('Apple Touch Icon Upload', 'WPOSA'),
+			'desc'              => __('Upload your apple touch icon here', 'WPOSA')
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'   => 'password',
-			'type' => 'password',
-			'name' => __('Password Input', 'WPOSA'),
-			'desc' => __('Password field description', 'WPOSA'),
+			'id'   => 'favicon',
+			'type' => 'image',
+			'name' => __('Favicon Upload', 'WPOSA'),
+			'desc' => __('Upload a favicon here', 'WPOSA'),
 		)
 	);
 
@@ -86,6 +83,104 @@ if (class_exists('WP_OSA')) {
 
 	//-------------------------------------------//
 
+	// -----------------------------//
+	//---- Start Cortex Branding ---//
+	//------------------------------//
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_social',
+			'title' => __('Social', 'WPOSA'),
+		)
+	);
+
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'      => 'fixed_social_links',
+			'type'    => 'radio',
+			'name'    => __('Fixed Social Links', 'WPOSA'),
+			'desc'    => __('Set social links to always visible?', 'WPOSA'),
+			'options' => array(
+				"fixed" => "Fixed",
+				"not_fixec" => "Not Fixed",
+			),
+		)
+	);
+
+	// Field: Separator.
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'   => 'separator_1',
+			'type' => 'separator',
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'      => 'mailchimp_api',
+			'type'    => 'text',
+			'name'    => __('Mailchimp API Key', 'WPOSA'),
+			'desc'    => __('Add your Mailchimp API key here', 'WPOSA'),
+			'default' => '',
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'twitter_api',
+			'type'              => 'text',
+			'name'              => __('Twitter API key', 'WPOSA'),
+			'desc'              => __('Input your Twitter API key here', 'WPOSA'),
+		)
+	);
+
+	// Field: Separator.
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'   => 'separator_2',
+			'type' => 'separator',
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'twitter_username',
+			'type'              => 'text',
+			'name'              => __('Twitter Username', 'WPOSA'),
+			'desc'              => __('Input your Twitter Username Here', 'WPOSA'),
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'facebook_username',
+			'type'              => 'text',
+			'name'              => __('Facebook Username', 'WPOSA'),
+			'desc'              => __('Input your Facebook Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'instagram_username',
+			'type'              => 'text',
+			'name'              => __('Instagram Username', 'WPOSA'),
+			'desc'              => __('Input your Instagram Username Here', 'WPOSA'),
+		)
+	);
+
+
+	// ---------------------------//
+	//---- End Cortex Branding----//
+	//---------------------------//
+
 	// ---------------------------//
 	//---- Start Cortex Layout ---//
 	//---------------------------//
@@ -95,6 +190,26 @@ if (class_exists('WP_OSA')) {
 			'title' => __('Layout', 'WPOSA'),
 		)
 	);
+
+	// Field: Title.
+	$wposa_obj->add_field(
+		'cortex_layout',
+		array(
+			'id'   => 'header',
+			'type' => 'title',
+			'name' => '<h1>Header</h1>',
+		)
+	);
+	// Field: Title.
+	$wposa_obj->add_field(
+		'cortex_layout',
+		array(
+			'id'   => 'footer',
+			'type' => 'title',
+			'name' => '<h1>Footer</h1>',
+		)
+	);
+
 
 	// Field: Image.
 	$wposa_obj->add_field(
@@ -154,33 +269,6 @@ if (class_exists('WP_OSA')) {
 	//-------------------------------------------//
 
 	// ---------------------------//
-	//---- Start Cortex Social ---//
-	//---------------------------//
-	$wposa_obj->add_section(
-		array(
-			'id'    => 'cortex_seo',
-			'title' => __('SEO', 'WPOSA'),
-		)
-	);
-
-	$wposa_obj->add_field(
-		'cortex_seo',
-		array(
-			'id'      => 'google_analytics_api',
-			'type'    => 'text',
-			'name'    => __('Google Analytics API Key', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
-		)
-	);
-
-	// ---------------------------//
-	//---- End Cortex Social ----//
-	//---------------------------//
-
-	//-------------------------------------------//
-
-	// ---------------------------//
 	//---- Start Cortex Posts ---//
 	//---------------------------//
 
@@ -189,6 +277,63 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'    => 'cortex_posts',
 			'title' => __('Posts', 'WPOSA'),
+		)
+	);
+
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_posts',
+		array(
+			'id'      => 'author_visible',
+			'type'    => 'radio',
+			'name'    => __('Author name visibility', 'WPOSA'),
+			'desc'    => __('Do you want to show or hide author posts?', 'WPOSA'),
+			'options' => array(
+				"show" => "Show",
+				"hide" => "Hide",
+			),
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_posts',
+		array(
+			'id'      => 'header_size',
+			'type'    => 'radio',
+			'name'    => __('Header Size', 'WPOSA'),
+			'desc'    => __('What size do you want your header to be?', 'WPOSA'),
+			'options' => array(
+				"big" => "Big",
+				"small" => "Small",
+			),
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_posts',
+		array(
+			'id'      => 'social_icons',
+			'type'    => 'radio',
+			'name'    => __('Social Icon Visibility', 'WPOSA'),
+			'desc'    => __('Do you want your social sharing icons to be visible', 'WPOSA'),
+			'options' => array(
+				"show" => "Show",
+				"hide" => "Hide",
+			),
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_posts',
+		array(
+			'id'      => 'blog_sidebar',
+			'type'    => 'radio',
+			'name'    => __('Blog Sidebar', 'WPOSA'),
+			'desc'    => __('Do you want a sidebar on your posts visible', 'WPOSA'),
+			'options' => array(
+				"show" => "Show Sidebar",
+				"hide" => "Hide Sidebar",
+			),
 		)
 	);
 
@@ -212,18 +357,54 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
-			'id'      => 'typography_presets',
-			'type'    => 'multicheck',
-			'name'    => __('Font Presets', 'WPOSA'),
+			'id'      => 'heading_font',
+			'type'    => 'select',
+			'name'    => __('Heading Font', 'WPOSA'),
 			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
 			'options' => array(
-				'Droid Sans' => 'Droid Sans',
-				'Droid Serif'  => 'Droid Serif',
-				'Roboto'  => 'Roboto',
-				'Montserrat'  => 'Montserrat',
+				"" => "",
+				'Droid Sans',
+				'Droid Serif',
+				'Roboto',
+				'Montserrat',
 			),
 		)
 	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'subheading_font',
+			'type'    => 'select',
+			'name'    => __('Subheading Font', 'WPOSA'),
+			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
+			'options' => array(
+				"" => "",
+				'Droid Sans',
+				'Droid Serif',
+				'Roboto',
+				'Montserrat',
+			),
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'typography_presets',
+			'type'    => 'select',
+			'name'    => __('Body Font', 'WPOSA'),
+			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
+			'options' => array(
+				"" => "",
+				'Droid Sans',
+				'Droid Serif',
+				'Roboto',
+				'Montserrat',
+			),
+		)
+	);
+
 	// Field: Multicheck.
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -237,13 +418,38 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// ---------------------------//
-	//---- End Cortex Posts -----//
+	//---- End Cortex Typography -----//
 	//---------------------------//
 
 	//-------------------------------------------//
+	// ---------------------------//
+	//---- Start Cortex SEO ---//
+	//---------------------------//
+	$wposa_obj->add_section(
+		array(
+			'id'    => 'cortex_seo',
+			'title' => __('SEO', 'WPOSA'),
+		)
+	);
+
+	$wposa_obj->add_field(
+		'cortex_seo',
+		array(
+			'id'      => 'google_analytics_api',
+			'type'    => 'text',
+			'name'    => __('Google Analytics API Key', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+
+	// ---------------------------//
+	//---- End Cortex SEO ----//
+	//---------------------------//
+	//-------------------------------------------//
 
 	// -------------------------------//
-	//---- Start Cortex Typography ---//
+	//---- Start Cortex Advanced ---//
 	//--------------------------------//
 
 	$wposa_obj->add_section(
@@ -281,22 +487,11 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
-			'id'      => 'header_js',
+			'id'      => 'custom_js',
 			'type'    => 'code',
 			'language' => 'javascript',
-			'name'    => __('Header JS', 'WPOSA'),
+			'name'    => __('Custom JS', 'WPOSA'),
 			'desc'    => __('Drop your custom google analytics, google fonts, or Typekit code here', 'WPOSA'),
-			'default' => '',
-		)
-	);
-	$wposa_obj->add_field(
-		'cortex_advanced',
-		array(
-			'id'      => 'footer_js',
-			'type'    => 'code',
-			'language' => 'javascript',
-			'name'    => __('Footer JS', 'WPOSA'),
-			'desc'    => __('Drop other Javascript here, maybe', 'WPOSA'),
 			'default' => '',
 		)
 	);

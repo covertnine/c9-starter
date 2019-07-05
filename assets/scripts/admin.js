@@ -28,7 +28,7 @@
         tabSize: 2,
         mode: mode
       });
-      var editor = wp.codeEditor.initialize($(this), editorSettings);
+      wp.codeEditor.initialize($(this), editorSettings);
     });
   });
 })(jQuery);
