@@ -22,15 +22,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="https://use.typekit.net/ooo7ivn.css">
+	<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-	<script>
-		WebFont.load({
-			google: {
-				families: ['Droid Sans', 'Droid Serif']
-			}
-		});
-	</script>
 </head>
 
 <body <?php body_class(); ?>>
