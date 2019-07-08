@@ -14,7 +14,7 @@
           .attr("class")
           .match(modes)[0];
       } else {
-        var mode = "html";
+        mode = "html";
         console.log(
           "looks like you have something misconfigured in one of your 'code' fields. Did you correctly set the language?",
           $(this)
