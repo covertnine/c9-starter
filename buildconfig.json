@@ -15,6 +15,7 @@
     "node": "./node_modules",
     "dev": "./",
     "dist": "./assets/dist",
-    "styles": "./assets/styles"
+    "styles": "./assets/styles",
+    "vendor": "./assets/vendor"
   }
 }

@@ -17,12 +17,12 @@ if (!function_exists('cortextoo_scripts')) {
 
 		wp_enqueue_style('cortextoo-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css', array());
 
-		// wp_enqueue_style( 'cortextoo-megamenu', get_stylesheet_directory_uri() . '/css/client-assets/vendor/megamenu.css', array(), $css_version );
+		wp_enqueue_script('magnific-popup', get_template_directory_uri() . '/assets/vendor/jquery.magnific-popup.min.js', array('jquery'), true);
 
-		// wp_enqueue_script('jquery');
+		wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), true);
 
 		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
-		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array('jquery'), true);
+		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array('jquery', 'magnific-popup', 'bootstrap-js'), true);
 
 		if (is_singular() && comments_open() && get_option('thread_comments')) {
 			wp_enqueue_script('comment-reply');
