@@ -1,9 +1,12 @@
+import "smoothstate";
+
 jQuery(document).ready(function() {
   (function($) {
+    $(".home").smoothState();
+    
     $(window).scroll(function() {
       //scroll position variable
       var scroll = $(window).scrollTop();
-
       if (scroll >= 633) {
         $("#left-sidebar").addClass("fixed-sidebar");
         $("#right-sidebar").addClass("fixed-sidebar");
@@ -72,8 +75,8 @@ jQuery(document).ready(function() {
     ///////////////////////// Move the content up by the height of the navbar object for a transparent nav effect ////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     if ($(window).width() > 667) {
-      //   var navHeight = $(".header-navbar").height();
-      //   $("#page-wrapper").css("margin-top", -navHeight);
+        // var navHeight = $(".header-navbar").height();
+        // $("#page-wrapper").css("margin-top", -navHeight);
     }
 
     ///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
