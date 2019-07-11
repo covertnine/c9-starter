@@ -86,7 +86,7 @@ if (class_exists('WP_OSA')) {
 	// -----------------------------//
 	//---- Start Cortex Branding ---//
 	//------------------------------//
-	$wposa_obj->add_section(
+	$wposa_obj->add_section( 
 		array(
 			'id'    => 'cortex_social',
 			'title' => __('Social', 'WPOSA'),
@@ -200,6 +200,22 @@ if (class_exists('WP_OSA')) {
 			'name' => '<h1>Header</h1>',
 		)
 	);
+
+	//Field: Top Widget Bar Enable
+	$wposa_obj->add_field(
+		'cortex_layout',
+		array(
+			'id'      => 'topbar_visible',
+			'type'    => 'radio',
+			'name'    => __('Top Widget Area visibility', 'WPOSA'),
+			'desc'    => __('Do you want to show or hide the top widget bar?', 'WPOSA'),
+			'options' => array(
+				"show" => "Show",
+				"hide" => "Hide",
+			),
+		)
+		);
+
 	// Field: Title.
 	$wposa_obj->add_field(
 		'cortex_layout',
@@ -346,13 +362,37 @@ if (class_exists('WP_OSA')) {
 	// -------------------------------//
 	//---- Start Cortex Typography ---//
 	//--------------------------------//
+   
+	//The tab title of the Typography 
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_typography',
 			'title' => __('Typography', 'WPOSA'),
 		)
 	);
+    
+	//Field: Default Font Selector
+	$wposa_obj->add_field(
+			'cortex_typography',
+			array(
+				'id'      => 'defaultFont',
+				'type'    => 'radio',
+				'name'    => __('Use Default Fonts?', 'WPOSA'),
+				'options' => array(
+					"yes" => "Yes",
+					"no" => "No, choose own fonts.",
+				),
+			)
+			);
+	
+	//Run a check on the selected option: predetermine the fonts if default selected
+	//else run the statements 
 
+	$data = get_option('cortex_typography');
+
+
+	//If the user selects no to default fonts
+	if ($data["defaultFont"] == "no"){ 
 	// Field: Multicheck.
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -363,13 +403,15 @@ if (class_exists('WP_OSA')) {
 			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
 			'options' => array(
 				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
 			),
 		)
 	);
+
+
 	// Field: Multicheck.
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -380,13 +422,14 @@ if (class_exists('WP_OSA')) {
 			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
 			'options' => array(
 				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
 			),
 		)
 	);
+
 	// Field: Multicheck.
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -397,13 +440,14 @@ if (class_exists('WP_OSA')) {
 			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
 			'options' => array(
 				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
 			),
 		)
 	);
+
 
 	// Field: Multicheck.
 	$wposa_obj->add_field(
@@ -416,6 +460,9 @@ if (class_exists('WP_OSA')) {
 			'language' => 'javascript'
 		)
 	);
+
+}
+
 
 	// ---------------------------//
 	//---- End Cortex Typography -----//
