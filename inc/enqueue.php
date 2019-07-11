@@ -4,6 +4,7 @@
  *
  * @package cortextoo
  */
+$selection1;
 
 if (!function_exists('cortextoo_scripts')) {
 	/**
@@ -17,12 +18,12 @@ if (!function_exists('cortextoo_scripts')) {
 
 		wp_enqueue_style('cortextoo-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css', array());
 
-		wp_enqueue_script('magnific-popup', get_template_directory_uri() . '/assets/vendor/jquery.magnific-popup.min.js', array('jquery'), true);
+		// wp_enqueue_style( 'cortextoo-megamenu', get_stylesheet_directory_uri() . '/css/client-assets/vendor/megamenu.css', array(), $css_version );
 
-		wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), true);
+		// wp_enqueue_script('jquery');
 
 		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
-		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array('jquery', 'magnific-popup', 'bootstrap-js'), true);
+		wp_enqueue_script('cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array('jquery'), true);
 
 		if (is_singular() && comments_open() && get_option('thread_comments')) {
 			wp_enqueue_script('comment-reply');
@@ -31,6 +32,28 @@ if (!function_exists('cortextoo_scripts')) {
 } // endif function_exists( 'cortextoo_scripts' ).
 
 add_action('wp_enqueue_scripts', 'cortextoo_scripts');
+
+
+//Localize this array object to pass it into the javascript typography-script
+	function load_typography_script(){
+		//Begin by registering the JavaScript Script
+		//Add action to enqueue the CDN script:
+		wp_enqueue_script('webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
+		
+		wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
+
+		//Localize the script with the font data
+		$font_array = get_option('cortex_typography');
+
+		//Use the localize function to localize the script and continue with the code
+		wp_localize_script('typography-script', 'selectedFonts', $font_array);
+
+		//Enqueued script with the data we pulled from earlier selections
+		wp_enqueue_script('typography-script');
+
+	}
+
+add_action('wp_enqueue_scripts', 'load_typography_script');
 
 /**
  * Remove emoji specific code and styling
