@@ -9,7 +9,7 @@
 console.log(selectedFonts);
 
 //If user decided to use their own fonts (clicked no)
-if (selectedFonts["defaultFont"] == "no"){
+if (selectedFonts["defaultFont"] === "no"){
 WebFont.load({
     google: {
        families: [selectedFonts["heading_font"], selectedFonts["subheading_font"], selectedFonts["typography_presets"]]
@@ -18,7 +18,7 @@ WebFont.load({
 }
 
 //If user decided to use default fonts (clicked yes)
-else if (selectedFonts["defaultFont"] == "yes"){
+else if (selectedFonts["defaultFont"] === "yes"){
   selectedFonts["heading_font"] = "Droid Sans";
   selectedFonts["subheading_font"] = "Droid Sans";
   selectedFonts["typography_presets"] = "Droid Sans";
