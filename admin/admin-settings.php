@@ -86,7 +86,7 @@ if (class_exists('WP_OSA')) {
 	// -----------------------------//
 	//---- Start Cortex Branding ---//
 	//------------------------------//
-	$wposa_obj->add_section(
+	$wposa_obj->add_section( 
 		array(
 			'id'    => 'cortex_social',
 			'title' => __('Social', 'WPOSA'),
@@ -200,6 +200,22 @@ if (class_exists('WP_OSA')) {
 			'name' => '<h1>Header</h1>',
 		)
 	);
+
+	//Field: Top Widget Bar Enable
+	$wposa_obj->add_field(
+		'cortex_layout',
+		array(
+			'id'      => 'topbar_visible',
+			'type'    => 'radio',
+			'name'    => __('Top Widget Area visibility', 'WPOSA'),
+			'desc'    => __('Do you want to show or hide the top widget bar?', 'WPOSA'),
+			'options' => array(
+				"show" => "Show",
+				"hide" => "Hide",
+			),
+		)
+		);
+
 	// Field: Title.
 	$wposa_obj->add_field(
 		'cortex_layout',
@@ -346,12 +362,40 @@ if (class_exists('WP_OSA')) {
 	// -------------------------------//
 	//---- Start Cortex Typography ---//
 	//--------------------------------//
+   
+	//The tab title of the Typography 
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_typography',
 			'title' => __('Typography', 'WPOSA'),
 		)
 	);
+	
+	//This is what a default font array will look like:
+	/*
+{defaultFont: "yes", heading_font: "Droid Sans", subheading_font: "Droid Sans", typography_presets: "Droid Sans"}
+defaultFont: "yes"
+heading_font: "Droid Sans"
+subheading_font: "Droid Sans"
+typography_presets: "Droid Sans"
+
+	*/
+	//Field: Default Font Selector
+	$wposa_obj->add_field(
+			'cortex_typography',
+			array(
+				'id'      => 'defaultFont',
+				'type'    => 'radio',
+				'name'    => __('Use Cortex Theme Based Fonts?', 'WPOSA'),
+				'options' => array(
+					"yes" => "Yes.",
+					"no" => "No, I will take care of my fonts.",
+				),
+			)
+			);
+
+	//If the user selects YES and will select the fonts.
+	//The default font will be Helvatic
 
 	// Field: Multicheck.
 	$wposa_obj->add_field(
@@ -360,16 +404,17 @@ if (class_exists('WP_OSA')) {
 			'id'      => 'heading_font',
 			'type'    => 'select',
 			'name'    => __('Heading Font', 'WPOSA'),
-			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
 			'options' => array(
-				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
 			),
 		)
 	);
+
+
 	// Field: Multicheck.
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -377,30 +422,12 @@ if (class_exists('WP_OSA')) {
 			'id'      => 'subheading_font',
 			'type'    => 'select',
 			'name'    => __('Subheading Font', 'WPOSA'),
-			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
 			'options' => array(
-				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
-			),
-		)
-	);
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_typography',
-		array(
-			'id'      => 'typography_presets',
-			'type'    => 'select',
-			'name'    => __('Body Font', 'WPOSA'),
-			'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
-			'options' => array(
-				"" => "",
-				'Droid Sans',
-				'Droid Serif',
-				'Roboto',
-				'Montserrat',
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
 			),
 		)
 	);
@@ -409,13 +436,21 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
-			'id'      => 'typography_code',
-			'type'    => 'code',
-			'name'    => __('Typography Code', 'WPOSA'),
-			'desc'    => __('Add custom typography code here', 'WPOSA'),
-			'language' => 'javascript'
+			'id'      => 'typography_presets',
+			'type'    => 'select',
+			'name'    => __('Body Font', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
+			'options' => array(
+				'Droid Sans' => 'Droid Sans',
+				'Droid Serif' => 'Droid Serif',
+				'Roboto' =>'Roboto',
+				'Montserrat' => 'Montserrat',
+			),
 		)
 	);
+
+
+
 
 	// ---------------------------//
 	//---- End Cortex Typography -----//
