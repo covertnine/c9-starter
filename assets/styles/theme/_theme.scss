@@ -444,13 +444,11 @@ a:hover {
 }
 
 .alignleft {
-	display: inline;
 	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
@@ -1590,6 +1588,7 @@ object {
 	position: fixed;
 	outline: none !important;
 	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .mfp-container {
@@ -2318,7 +2317,6 @@ button:hover,
 	border-radius: 0;
 	padding: 6px 8px 2px;
 	font-size: 1.4rem;
-	height: 34px;
 	line-height: 15px;
 }
 
@@ -2336,7 +2334,6 @@ button:hover,
 }
 
 .widget-area .widget_search label {
-	display: inline-block;
 	float: left;
 }
 
