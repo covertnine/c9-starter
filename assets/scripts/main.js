@@ -2,9 +2,7 @@ import "smoothState";
 import "magnific-popup";
 
 jQuery(document).ready(function() {
-
   (function($) {
-
     jQuery(window).scroll(function() {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
@@ -205,7 +203,20 @@ jQuery(document).ready(function() {
         }
       }
     );
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // sidebar functionality
+    jQuery(window).scroll(function() {
+      //scroll position variable
+      var scroll = jQuery(window).scrollTop();
+
+      if (scroll >= 633) {
+        jQuery("#left-sidebar").addClass("fixed-sidebar");
+        jQuery("#right-sidebar").addClass("fixed-sidebar");
+      }
+      if (scroll <= 632) {
+        jQuery("#left-sidebar").removeClass("fixed-sidebar");
+        jQuery("#right-sidebar").removeClass("fixed-sidebar");
+      }
+    });
   })(jQuery);
 });

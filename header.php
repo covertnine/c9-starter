@@ -28,6 +28,10 @@
 
 	<div class="hfeed site" id="page">
 
+		<?php if (file_exists(locate_template('client/inc/topnav.php'))) {
+			include(locate_template('client/inc/topnav.php'));
+		} ?>
+
 		<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 			<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'cortextoo'); ?></a>
