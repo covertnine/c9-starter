@@ -33,26 +33,12 @@ jQuery(document).ready(function() {
         .smoothState(options)
         .data("smoothState");
 
-    $(window).scroll(function() {
-      //scroll position variablem
-      var scroll = $(window).scrollTop();
-      if (scroll >= 633) {
-        $("#left-sidebar").addClass("fixed-sidebar");
-        $("#right-sidebar").addClass("fixed-sidebar");
-      }
-      if (scroll <= 632) {
-        $("#left-sidebar").removeClass("fixed-sidebar");
-        $("#right-sidebar").removeClass("fixed-sidebar");
-      }
-    });
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
     if ($(window).width() <= 667) {
       // var Parallax = require('parallax-js')
       // var scene = document.getElementById('wrapper-footer-full');
       // var parallaxInstance = new Parallax(scene);
-
-      console.log("sick");
 
       //use small nav for mobile
       $(".navbar").addClass("navbar-small");
