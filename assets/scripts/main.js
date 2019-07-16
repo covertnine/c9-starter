@@ -2,34 +2,36 @@ import "smoothstate";
 
 jQuery(document).ready(function() {
   (function($) {
-
+    var notSmooth =
+      '.mega-menu-item-has-children .mega-menu-link, .wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup';
     var options = {
-      prefetch: true,
-      cacheLength: 2,
-      blacklist: '.mega-menu-item-has-children .mega-menu-link',
-      onStart: {
-        duration: 250, // Duration of our animation
-        render: function ($container) {
-          // Add your CSS animation reversing class
-          $container.addClass('is-exiting');
-  
-          // Restart your animation
-          smoothState.restartCSSAnimations();
+        prefetch: true,
+        cacheLength: 2,
+        blacklist: notSmooth,
+        onStart: {
+          duration: 250, // Duration of our animation
+          render: function($container) {
+            // Add your CSS animation reversing class
+            $container.addClass("is-exiting");
+
+            // Restart your animation
+            smoothState.restartCSSAnimations();
+          }
+        },
+        onReady: {
+          duration: 0,
+          render: function($container, $newContent) {
+            // Remove your CSS animation reversing class
+            $container.removeClass("is-exiting");
+
+            // Inject the new content
+            $container.html($newContent);
+          }
         }
       },
-      onReady: {
-        duration: 0,
-        render: function ($container, $newContent) {
-          // Remove your CSS animation reversing class
-          $container.removeClass('is-exiting');
-  
-          // Inject the new content
-          $container.html($newContent);
-  
-        }
-      }
-    },
-    smoothState = $('#page').smoothState(options).data('smoothState');
+      smoothState = $("#page")
+        .smoothState(options)
+        .data("smoothState");
 
     $(window).scroll(function() {
       //scroll position variablem
@@ -104,8 +106,8 @@ jQuery(document).ready(function() {
     ///////////////////////// Move the content up by the height of the navbar object for a transparent nav effect ////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     if ($(window).width() > 667) {
-        // var navHeight = $(".header-navbar").height();
-        // $("#page-wrapper").css("margin-top", -navHeight);
+      // var navHeight = $(".header-navbar").height();
+      // $("#page-wrapper").css("margin-top", -navHeight);
     }
 
     ///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
