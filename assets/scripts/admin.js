@@ -1,6 +1,8 @@
 "use strict";
 
 (function($) {
+
+  // Code Editor Javascript to accompany 
   $(function() {
     var modes = RegExp("(html|css|javascript)");
     $("textarea[class^=code_editor_page_").each(function() {

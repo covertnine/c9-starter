@@ -108,17 +108,3 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 	}
 } // endif function_exists( 'cortextoo_theme_customize_register' ).
 add_action( 'customize_register', 'cortextoo_theme_customize_register' );
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-if ( ! function_exists( 'cortextoo_customize_preview_js' ) ) {
-	/**
-	 * Setup JS integration for live previewing.
-	 */
-	function cortextoo_customize_preview_js() {
-		wp_enqueue_script( 'cortextoo_customizer', get_template_directory_uri() . '/js/customizer.js',
-			array( 'customize-preview' ), '20130508', true );
-	}
-}
-add_action( 'customize_preview_init', 'cortextoo_customize_preview_js' );
