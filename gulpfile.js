@@ -113,7 +113,8 @@ gulp.task("styles", function(callback) {
 gulp.task("sass", function() {
   let srcDests = [
     { src: paths.styles + "/*.scss", dest: styleDist },
-    { src: paths.client + "/client.scss", dest: paths.client + "/dist" }
+    { src: paths.client + "/client.scss", dest: paths.client + "/dist" },
+    { src: paths.client + "/client-editor.scss", dest: paths.client + "/dist" }
   ];
   var streams = srcDests.map(function(srcDest) {
     return gulp
@@ -142,7 +143,8 @@ gulp.task("minifycss", function() {
       src: [styleDist + "/theme.css", styleDist + "custom-editor-style.css"],
       dest: styleDist
     },
-    { src: paths.client + "/dist/client.css", dest: paths.client + "/dist" }
+    { src: paths.client + "/dist/client.css", dest: paths.client + "/dist" },
+    { src: paths.client + "/dist/client-editor.css", dest: paths.client + "/dist" }
   ];
   var streams = srcDests.map(function(srcDest) {
     return gulp
