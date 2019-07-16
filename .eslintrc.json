@@ -22,7 +22,8 @@
     "document": true,
     "hljs": true,
     "selectedFonts": true,
-    "WebFont": true
+    "WebFont": true,
+    "$": true
   },
   "plugins": ["jquery"],
   "rules": {
