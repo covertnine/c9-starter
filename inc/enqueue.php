@@ -46,8 +46,10 @@ add_action('wp_enqueue_scripts', 'cortextoo_scripts');
 		$font_array = get_option('cortex_typography');
 
 		//Use the localize function to localize the script and continue with the code
-		wp_localize_script('typography-script', 'selectedFonts', $font_array);
-
+		if (!empty($font_array)) {
+			wp_localize_script('typography-script', 'selectedFonts', $font_array);
+		}
+		
 		//Enqueued script with the data we pulled from earlier selections
 		wp_enqueue_script('typography-script');
 
