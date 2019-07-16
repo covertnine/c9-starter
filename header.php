@@ -73,3 +73,4 @@
 				</div><!-- .container -->
 
 			</nav><!-- .site-navigation -->
+			</div><!-- .header-navbar-->
