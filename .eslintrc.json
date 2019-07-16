@@ -20,7 +20,10 @@
     "wpApiSettings": true,
     "window": true,
     "document": true,
-    "hljs": true
+    "hljs": true,
+    "selectedFonts": true,
+    "WebFont": true,
+    "$": true
   },
   "plugins": ["jquery"],
   "rules": {

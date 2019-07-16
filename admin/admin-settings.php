@@ -370,16 +370,7 @@ if (class_exists('WP_OSA')) {
 			'title' => __('Typography', 'WPOSA'),
 		)
 	);
-	
-	//This is what a default font array will look like:
-	/*
-{defaultFont: "yes", heading_font: "Droid Sans", subheading_font: "Droid Sans", typography_presets: "Droid Sans"}
-defaultFont: "yes"
-heading_font: "Droid Sans"
-subheading_font: "Droid Sans"
-typography_presets: "Droid Sans"
 
-	*/
 	//Field: Default Font Selector
 	$wposa_obj->add_field(
 			'cortex_typography',
@@ -397,7 +388,7 @@ typography_presets: "Droid Sans"
 	//If the user selects YES and will select the fonts.
 	//The default font will be Helvatic
 
-	// Field: Multicheck.
+	//Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
@@ -448,7 +439,6 @@ typography_presets: "Droid Sans"
 			),
 		)
 	);
-
 
 
 
