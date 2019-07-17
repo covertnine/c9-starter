@@ -1,16 +1,17 @@
 "use strict";
-(function ($) {
-  // Code Editor Javascript to accompany 
-  $(function () {
-    $(document).ready(function () {
-      console.log("Doc ready");
-      $("#wposa-cortex_typography[defaultFont][no]").click(function () {
-        console.log("clicked!");
-        $("toggle_test").toggle()
-      });
-    });
+(function($) {
+  // Code Editor Javascript to accompany
+  $(function() {
+    $(document).ready(function() {});
     var modes = RegExp("(html|css|javascript)");
-    $("textarea[class^=code_editor_page_").each(function () {
+    console.log("Doc ready");
+    $("#cortex_typography input[value='no']").click(function() {
+      $("label[for='cortex_typography[heading_font]']").hide();
+    });
+    $("#cortex_typography input[value='yes']").click(function() {
+      $("label[for='cortex_typography[heading_font]']").show();
+    });
+    $("textarea[class^=code_editor_page_").each(function() {
       // pulls the class to determine type of editor
       if (
         $(this)
