@@ -14,20 +14,55 @@ body {
     font-size: 1.3rem;
 }
 
+/* giving some space to blocks */
+.block-editor-block-list__layout .block-editor-block-list__block {
+    // padding: 20px;
+}
+
+
 /****************************************************************************************/
 /* Main column width settings */
 /****************************************************************************************/
+
 .editor-styles-wrapper .editor-default-block-appender,
 .editor-styles-wrapper .editor-post-title,
-.editor-styles-wrapper .editor-block-list__block[data-align=wide],
 .editor-styles-wrapper .editor-post-title__block,
-.wp-block[data-type="core/columns"],
 .wp-block[data-type="core/paragraph"],
 .wp-block[data-type="core/heading"],
 .wp-block[data-type="core/block"],
 .wp-block[data-type="core/button"],
+.wp-block[data-type="core/columns"],
 .wp-block[data-type="core/image"] {
     max-width: 1140px;
+}
+
+@media only screen and (min-width: 992px) {
+
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block,
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/heading"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/block"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/button"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/columns"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/image"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/spacer"] {
+        max-width: 910px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+
+    .editor-styles-wrapper .editor-default-block-appender,
+    .editor-styles-wrapper .editor-post-title,
+    .editor-styles-wrapper .editor-post-title__block,
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/heading"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/block"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/button"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/columns"],
+    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/image"] {
+        max-width: 1140px;
+    }
 }
 
 /* with sidebar pages to account for sidebar */
@@ -52,16 +87,6 @@ body {
     max-width: 925px;
 }
 
-.edit-post-layout__content .editor-styles-wrapper {
-    width: 100%;
-    max-width: 1140px; // The widest container, which is 1140px
-    margin: 0px auto;
-}
-
-.wp-block {
-    max-width: 960px;
-}
-
 /****************************************************************************************/
 /***************************** post title + post visual editor widths + alignments
 /****************************************************************************************/
@@ -75,14 +100,23 @@ body {
     font-weight: $headings-font-weight;
 }
 
+.edit-post-layout__content .editor-styles-wrapper {
+    width: 100%;
+    max-width: 100vw; // The widest available screen width -15vw to account for button controls
+    margin: 0px auto;
+    line-height: 2;
+}
+
+.wp-block {
+    max-width: 960px;
+}
 
 @media (min-width: 1px) {
-
 
     //set the alignfull width to be the editable area within gutenberg removing widths of both admin bar and document settings since they are hidden below 600px
     .wp-block[data-align=full],
     body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full] {
-        width: 100vw;
+        width: 100%;
         max-width: 100vw; //subtract the width of the document options sidebar
         margin-left: auto;
         margin-right: auto;
@@ -95,10 +129,9 @@ body {
     .editor-post-title,
     .editor-post-title__block {
         padding: 0px;
+        width: 100%;
         max-width: 1140px;
     }
-
-
 
     .editor-block-list__layout {
         padding-left: 0px;
@@ -113,9 +146,13 @@ body {
     }
 
     .editor-styles-wrapper .editor-block-list__block.wp-block[data-align=wide] {
-        width: 100%;
-        max-width: 1140px;
+        width: 1200px;
+        max-width: 1200px;
         margin: 0px auto;
+    }
+
+    .editor-styles-wrapper .editor-block-list__block[data-align=full] {
+        max-width: 100vw;
     }
 
     //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
@@ -201,6 +238,15 @@ body {
 .wp-block[data-type="core/separator"] .editor-block-list__block-edit .wp-block-separator {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+}
+
+/*square buttons*/
+.editor-rich-text__editable.wp-block-button__link.square {
+    border-radius: 0;
+}
+
+.editor-rich-text__editable.wp-block-button__link {
+    width: 100%;
 }
 
 /****************************************************************************************/
@@ -323,102 +369,3 @@ body {
 .editor-post-publish-panel textarea {
     border-radius: 0px;
 }
-
-/****************************************************************************************/
-/***************************** cortextoo custom block edits for backend only
-/****************************************************************************************/
-
-/*cortex column container innerblocks set to full width + innerblock full width */
-.wp-block[data-type="covertnine-blocks/column-containers"] .editor-inner-blocks {
-    width: 100%;
-}
-
-@media only screen and (min-width: 576px) {
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: 100%;
-        max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
-    body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: 100%;
-        max-width: calc(100vw - 316px); //subtract the width of the document options sidebar
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
-    body:not(.folded) .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: 100%;
-        max-width: calc(100vw - 160px); //subtract the width of the document options sidebar
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
-    body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: 100%;
-        max-width: calc(100vw - 36px); //subtract the width of the document options sidebar
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    // move the custom mover to the top so its not hidden
-    body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"]>.editor-block-mover {
-        top: -44px;
-        left: auto;
-        right: 0px;
-        width: 86px;
-        height: 24px;
-        opacity: 1;
-    }
-
-    body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"]>.editor-block-mover .editor-block-mover__control {
-        float: left;
-    }
-
-}
-
-@media only screen and (min-width: 992px) {
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: calc(100vw - 440px);
-        max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 440px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
-    body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: calc(100vw - 316px);
-        max-width: calc(100vw - 316px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 316px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 316px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
-    body:not(.folded) .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: calc(100vw - 160px);
-        max-width: calc(100vw - 160px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 160px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 160px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
-    body .edit-post-layout .editor-block-list__layout .wp-block[data-type="covertnine-blocks/column-containers"] {
-        width: calc(100vw - 36px);
-        max-width: calc(100vw - 36px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 36px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 36px) / 2 + (100% / 2));
-    }
-
-}
-
-/****************************************************************************************/
-/***************************** cortextoo core block edits for custom theme
-/****************************************************************************************/
