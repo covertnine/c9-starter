@@ -27,6 +27,8 @@
   },
   "plugins": ["jquery"],
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "jquery/no-hide": 0,
+    "jquery/no-show": 0
   }
 }

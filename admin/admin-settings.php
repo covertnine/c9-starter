@@ -86,7 +86,7 @@ if (class_exists('WP_OSA')) {
 	// -----------------------------//
 	//---- Start Cortex Branding ---//
 	//------------------------------//
-	$wposa_obj->add_section(
+	$wposa_obj->add_section( 
 		array(
 			'id'    => 'cortex_social',
 			'title' => __('Social', 'WPOSA'),
@@ -214,7 +214,7 @@ if (class_exists('WP_OSA')) {
 				"hide" => "Hide",
 			),
 		)
-	);
+		);
 
 	// Field: Title.
 	$wposa_obj->add_field(
@@ -362,7 +362,7 @@ if (class_exists('WP_OSA')) {
 	// -------------------------------//
 	//---- Start Cortex Typography ---//
 	//--------------------------------//
-
+   
 	//The tab title of the Typography 
 	$wposa_obj->add_section(
 		array(
@@ -373,82 +373,68 @@ if (class_exists('WP_OSA')) {
 
 	//Field: Default Font Selector
 	$wposa_obj->add_field(
+			'cortex_typography',
+			array(
+				'id'      => 'defaultFont',
+				'type'    => 'radio',
+				'name'    => __('Use Cortex Theme Based Fonts?', 'WPOSA'),
+				'options' => array(
+					"yes" => "Yes.",
+					"no" => "No, I will take care of my fonts.",
+				),
+			)
+			);
+
+	//If the user selects YES and will select the fonts.
+	//The default font will be Helvatic for system fonts:
+
+	//Update an array to contain the fonts that will be used 
+	//throughout each of the font selector fields:
+	$c9fonts = array(
+		'Droid Sans' => 'Droid Sans',
+		'Droid Serif' => 'Droid Serif',
+		'Roboto' =>'Roboto',
+		'Montserrat' => 'Montserrat',
+	);
+
+	
+	//Field: Default Font Selector
+	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
-			'id'      => 'defaultFont',
-			'type'    => 'radio',
-			'name'    => __('Use Cortex Base Theme Fonts?', 'WPOSA'),
-			'options' => array(
-				"yes" => "Yes",
-				"no" => "No, I can handle my own fonts.",
-			),
+			'id'      => 'heading_font',
+			'type'    => 'select',
+			'name'    => __('Heading Font', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
+			'options' => $c9fonts
 		)
 	);
 
-	//Run a check on the selected option: predetermine the fonts if default selected
-	//else run the statements 
 
-	$data = get_option('cortex_typography');
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'subheading_font',
+			'type'    => 'select',
+			'name'    => __('Subheading Font', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
+			'options' => $c9fonts
+		)
+	);
 
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_typography',
+		array(
+			'id'      => 'typography_presets',
+			'type'    => 'select',
+			'name'    => __('Body Font', 'WPOSA'),
+			'desc'    => __('Select fonts here', 'WPOSA'),
+			'options' => $c9fonts
+		)
+	);
 
-	//If the user selects no to default fonts
-	if (isset($data["defaultFont"]) && $data["defaultFont"] === "yes") {
-		// Field: Multicheck.
-		$wposa_obj->add_field(
-			'cortex_typography',
-			array(
-				'id'      => 'heading_font',
-				'type'    => 'select',
-				'name'    => __('Heading Font', 'WPOSA'),
-				'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
-				'options' => array(
-					"" => "",
-					'Droid Sans' => 'Droid Sans',
-					'Droid Serif' => 'Droid Serif',
-					'Roboto' => 'Roboto',
-					'Montserrat' => 'Montserrat',
-				),
-			)
-		);
-
-
-		// Field: Multicheck.
-		$wposa_obj->add_field(
-			'cortex_typography',
-			array(
-				'id'      => 'subheading_font',
-				'type'    => 'select',
-				'name'    => __('Subheading Font', 'WPOSA'),
-				'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
-				'options' => array(
-					"" => "",
-					'Droid Sans' => 'Droid Sans',
-					'Droid Serif' => 'Droid Serif',
-					'Roboto' => 'Roboto',
-					'Montserrat' => 'Montserrat',
-				),
-			)
-		);
-
-		// Field: Multicheck.
-		$wposa_obj->add_field(
-			'cortex_typography',
-			array(
-				'id'      => 'typography_presets',
-				'type'    => 'select',
-				'name'    => __('Body Font', 'WPOSA'),
-				'desc'    => __('Select fonts here or add your custom typography code below', 'WPOSA'),
-				'options' => array(
-					"" => "",
-					'Droid Sans' => 'Droid Sans',
-					'Droid Serif' => 'Droid Serif',
-					'Roboto' => 'Roboto',
-					'Montserrat' => 'Montserrat',
-				),
-			)
-		);
-
-	}
 
 
 	// ---------------------------//
