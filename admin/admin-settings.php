@@ -386,8 +386,18 @@ if (class_exists('WP_OSA')) {
 			);
 
 	//If the user selects YES and will select the fonts.
-	//The default font will be Helvatic
+	//The default font will be Helvatic for system fonts:
 
+	//Update an array to contain the fonts that will be used 
+	//throughout each of the font selector fields:
+	$c9fonts = array(
+		'Droid Sans' => 'Droid Sans',
+		'Droid Serif' => 'Droid Serif',
+		'Roboto' =>'Roboto',
+		'Montserrat' => 'Montserrat',
+	);
+
+	
 	//Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -396,12 +406,7 @@ if (class_exists('WP_OSA')) {
 			'type'    => 'select',
 			'name'    => __('Heading Font', 'WPOSA'),
 			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => array(
-				'Droid Sans' => 'Droid Sans',
-				'Droid Serif' => 'Droid Serif',
-				'Roboto' =>'Roboto',
-				'Montserrat' => 'Montserrat',
-			),
+			'options' => $c9fonts
 		)
 	);
 
@@ -414,12 +419,7 @@ if (class_exists('WP_OSA')) {
 			'type'    => 'select',
 			'name'    => __('Subheading Font', 'WPOSA'),
 			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => array(
-				'Droid Sans' => 'Droid Sans',
-				'Droid Serif' => 'Droid Serif',
-				'Roboto' =>'Roboto',
-				'Montserrat' => 'Montserrat',
-			),
+			'options' => $c9fonts
 		)
 	);
 
@@ -431,12 +431,7 @@ if (class_exists('WP_OSA')) {
 			'type'    => 'select',
 			'name'    => __('Body Font', 'WPOSA'),
 			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => array(
-				'Droid Sans' => 'Droid Sans',
-				'Droid Serif' => 'Droid Serif',
-				'Roboto' =>'Roboto',
-				'Montserrat' => 'Montserrat',
-			),
+			'options' => $c9fonts
 		)
 	);
 

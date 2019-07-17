@@ -4,7 +4,7 @@
  *
  * @package cortextoo
  */
-$selection1;
+
 
 
 if (!function_exists('cortextoo_scripts')) {
@@ -73,7 +73,7 @@ add_action('wp_enqueue_scripts', 'load_typography_scripts');
 		//Add action to enqueue the CDN script:
 		wp_enqueue_script('webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
 		
-		wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
+		wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/admin.js', array('webfont-loader'));
 
 		//Localize the script with the font data
 		$font_array = get_option('cortex_typography');
