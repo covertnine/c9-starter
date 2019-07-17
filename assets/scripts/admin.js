@@ -1,14 +1,15 @@
 "use strict";
 (function ($) {
+  $(document).ready(function () {
+    console.log("Doc is ready");
+    $('wposa-cortex_typography[defaultFont][no]').on('click', '#add', function () {
+      console.log("clicked!");
+      $( this ).slideUp();
+      $("wposa-cortex_typography[defaultFont][no]").toggle()
+    });
+  });
   // Code Editor Javascript to accompany 
   $(function () {
-    $(document).ready(function () {
-      console.log("Doc ready");
-      $("#wposa-cortex_typography[defaultFont][no]").click(function () {
-        console.log("clicked!");
-        $("toggle_test").toggle()
-      });
-    });
     var modes = RegExp("(html|css|javascript)");
     $("textarea[class^=code_editor_page_").each(function () {
       // pulls the class to determine type of editor
