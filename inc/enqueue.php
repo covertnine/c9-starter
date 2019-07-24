@@ -32,7 +32,7 @@ if (!function_exists('cortextoo_scripts')) {
 	}
 } // endif function_exists( 'cortextoo_scripts' ).
 
-//John Lynch : Typography function
+//John Lynch : Typography function. Updated with nav-bar
 //Function that will determine if user selects yes or no to load in fonts,
 //If yes: passes object with specified fonts. If no: no fonts passed
 
@@ -62,10 +62,10 @@ function load_typography_scripts(){
    }
 }
 
+ // endif function_exists( 'cortextoo_scripts' ).
 
 add_action('wp_enqueue_scripts', 'cortextoo_scripts');
 add_action('wp_enqueue_scripts', 'load_typography_scripts');
-
 
 /**
  * Remove emoji specific code and styling
