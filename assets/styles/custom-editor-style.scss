@@ -118,11 +118,13 @@ body {
     //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
     body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="c9-blocks/column-container"] {
         width: 1140px;
+        max-width: 100%;
     }
 
     //set the alignwide width to be the editable area within gutenberg to be 1200px like frontend
     body:not(.folded) .edit-post-layout.is-sidebar-opened .container[data-align="wide"] {
         width: 1200px;
+        max-width: 100%;
     }
 
     .wp-block[data-align=full],
