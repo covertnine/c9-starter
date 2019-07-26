@@ -221,7 +221,6 @@ body {
 	line-height: 1.4;
 }
 
-
 .has-small-font-size {
 	font-size: 1rem !important;
 }
@@ -248,9 +247,23 @@ body {
 	line-height: 1.2;
 }
 
-p.wp-block-subhead {
+p.wp-block-subhead,
+.subhead-h,
+.c9-sh {
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
+}
+
+.c9-h,
+.c9-h.h,
+.c9-txl,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+	font-family: $headings-font-family;
 }
 
 /* links in content */
