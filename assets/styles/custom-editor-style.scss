@@ -148,7 +148,7 @@ body {
     body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/columns"],
     body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/image"],
     body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/spacer"] {
-        max-width: 910px;
+        max-width: 100%;
     }
 
 }
