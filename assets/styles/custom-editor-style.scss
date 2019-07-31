@@ -208,3 +208,124 @@ body {
 .editor-post-publish-panel textarea {
     border-radius: 0px;
 }
+
+
+/****************************************************************************************/
+/***************************** Typography */
+/****************************************************************************************/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-styles-wrapper .h1,
+.editor-styles-wrapper .h2,
+.editor-styles-wrapper .h3,
+.editor-styles-wrapper .h4,
+.editor-styles-wrapper .h5,
+.editor-styles-wrapper .h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: $headings-font-family;
+    font-weight: 700;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .h1,
+.wp-block-heading h1,
+.entry-header h1 {
+    font-size: 4rem
+}
+
+.editor-styles-wrapper .c9-heading .h1 .text-muted,
+.editor-styles-wrapper .c9-heading .h2 .text-muted,
+.editor-styles-wrapper .c9-heading .h3 .text-muted,
+.editor-styles-wrapper .c9-heading .h4 .text-muted,
+.editor-styles-wrapper .c9-heading .h5 .text-muted,
+.editor-styles-wrapper .c9-heading .h6 .text-muted {
+    font-family: $headings-font-family;
+}
+
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .h2,
+.wp-block-heading h2 {
+    font-size: 3.6rem
+}
+
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .h3,
+.wp-block-heading h3 {
+    font-size: 3rem
+}
+
+.editor-styles-wrapper h4,
+.editor-styles-wrapper .h4,
+.wp-block-heading h4 {
+    font-size: 2.8rem
+}
+
+.editor-styles-wrapper h5,
+.editor-styles-wrapper .h5,
+.wp-block-heading h5 {
+    font-size: 2rem
+}
+
+.editor-styles-wrapper h6,
+.editor-styles-wrapper .h6,
+.wp-block-heading h6 {
+    font-size: 1.4rem
+}
+
+.c9-h,
+.c9-h.h,
+.c9-txl,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: $headings-font-family;
+    line-height: 1.1;
+}
+
+.editor-styles-wrapper .h1.c9-txl,
+.editor-styles-wrapper h1.c9-txl {
+    font-size: 8rem;
+}
+
+.editor-styles-wrapper .h2.c9-txl,
+.editor-styles-wrapper h2.c9-txl {
+    font-size: 7.3rem;
+}
+
+.editor-styles-wrapper .h3.c9-txl,
+.editor-styles-wrapper h3.c9-txl {
+    font-size: 6.5rem;
+}
+
+.editor-styles-wrapper .h4.c9-txl,
+.editor-styles-wrapper h4.c9-txl {
+    font-size: 5.8rem;
+}
+
+.editor-styles-wrapper .h5.c9-txl,
+.editor-styles-wrapper h5.c9-txl {
+    font-size: 5rem;
+}
+
+.editor-styles-wrapper .h6.c9-txl,
+.editor-styles-wrapper h6.c9-txl {
+    font-size: 4.3rem;
+}

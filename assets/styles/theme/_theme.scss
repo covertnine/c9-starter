@@ -2597,6 +2597,60 @@ button:hover,
 }
 
 /****************************************************************************************/
+/* c9 Blocks */
+/****************************************************************************************/
+
+/******************************************** tabs **************************************/
+
+.entry-content .nav-tabs .nav-link {
+	border: none;
+	border-radius: 0px;
+	line-height: 1;
+}
+
+.entry-content .nav.nav-tabs {
+	line-height: 1;
+	font-size: 1.5rem;
+	border-bottom: none;
+	margin: 0px;
+}
+
+.entry-content .nav.nav-tabs .nav-item {
+	margin: 0px 18px;
+}
+
+.entry-content .nav.nav-tabs .nav-item:before {
+	display: none;
+}
+
+.nav-tabs .nav-link:hover,
+.c9-horizontal-tabs .nav-tabs .nav-link:hover {
+	color: $gray-800;
+}
+
+.c9-horizontal-tabs .nav-tabs .nav-link {
+	color: $gray-600;
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 13px 55px;
+	font-weight: bold;
+	letter-spacing: .09rem;
+}
+
+.c9-horizontal-tabs .nav-tabs .nav-link.active {
+	color: $gray-700;
+}
+
+.c9-horizontal-tabs .tab-content {
+	padding: 25px 10px;
+}
+
+.c9-horizontal-tabs .tab-content p:only-of-type,
+.c9-horizontal-tabs .tab-content p:last-child {
+	margin-bottom: 0px;
+}
+
+/****************************************************************************************/
 /* Utility Classes
 /****************************************************************************************/
 
