@@ -539,6 +539,9 @@ a:hover {
 .header-navbar {
 	z-index: 99;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 nav ul li a,
@@ -560,6 +563,10 @@ nav ul li a {
 	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
+}
+
+.navbar {
+	width: 75%;
 }
 
 .navbar-toggler:focus {
