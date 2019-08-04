@@ -540,8 +540,13 @@ a:hover {
 	z-index: 99;
 	position: relative;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+	text-align: center;
+}
+
+.header-navbar .navbar:not(.navbar-small) {
+	width: 80%;
 }
 
 nav ul li a,
@@ -563,10 +568,6 @@ nav ul li a {
 	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
-}
-
-.navbar {
-	width: 75%;
 }
 
 .navbar-toggler:focus {
