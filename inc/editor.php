@@ -71,7 +71,9 @@ if ( ! function_exists ( 'cortextoo_tiny_mce_before_init' ) ) {
 function cortextoo_editor_style() {
     wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css' );
     wp_enqueue_style( 'cortextoo-editor-style', get_template_directory_uri() . '/assets/dist/css/custom-editor-style.css' );
+    wp_enqueue_script( 'cortextoo-scripts-theme', get_template_directory_uri() . '/assets/dist/js/theme.min.js' );
 }
+
 add_action( 'enqueue_block_editor_assets', 'cortextoo_editor_style' );
 
 

@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 /**
  * Class `WP_OOP_Settings_API`.
  *
- * @since 1.0.0
+ * @since 1.0.0s
  */
 require get_template_directory() . '/admin/class-wp-osa.php';
 

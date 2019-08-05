@@ -14,88 +14,16 @@ body {
     font-size: 1.3rem;
 }
 
-/* giving some space to blocks */
-.block-editor-block-list__layout .block-editor-block-list__block {
-    // padding: 20px;
-}
-
 
 /****************************************************************************************/
-/* Main column width settings */
-/****************************************************************************************/
-
-.editor-styles-wrapper .editor-default-block-appender,
-.editor-styles-wrapper .editor-post-title,
-.editor-styles-wrapper .editor-post-title__block,
-.wp-block[data-type="core/paragraph"],
-.wp-block[data-type="core/heading"],
-.wp-block[data-type="core/block"],
-.wp-block[data-type="core/button"],
-.wp-block[data-type="core/columns"],
-.wp-block[data-type="core/image"] {
-    max-width: 1140px;
-}
-
-@media only screen and (min-width: 992px) {
-
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block,
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/heading"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/block"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/button"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/columns"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/image"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/spacer"] {
-        max-width: 910px;
-    }
-}
-
-@media only screen and (min-width: 1500px) {
-
-    .editor-styles-wrapper .editor-default-block-appender,
-    .editor-styles-wrapper .editor-post-title,
-    .editor-styles-wrapper .editor-post-title__block,
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/heading"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/block"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/button"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/columns"],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/image"] {
-        max-width: 1140px;
-    }
-}
-
-/* with sidebar pages to account for sidebar */
-.left-sidebarpage .editor-styles-wrapper .editor-default-block-appender,
-.left-sidebarpage .editor-styles-wrapper .editor-post-title,
-.left-sidebarpage .editor-styles-wrapper .editor-post-title__block,
-.left-sidebarpage .wp-block[data-type="core/columns"],
-.left-sidebarpage .wp-block[data-type="core/paragraph"],
-.left-sidebarpage .wp-block[data-type="core/heading"],
-.left-sidebarpage .wp-block[data-type="core/block"],
-.left-sidebarpage .wp-block[data-type="core/button"],
-.left-sidebarpage .wp-block[data-type="core/image"],
-.right-sidebarpage .editor-styles-wrapper .editor-default-block-appender,
-.right-sidebarpage .editor-styles-wrapper .editor-post-title,
-.right-sidebarpage .editor-styles-wrapper .editor-post-title__block,
-.right-sidebarpage .wp-block[data-type="core/columns"],
-.right-sidebarpage .wp-block[data-type="core/paragraph"],
-.right-sidebarpage .wp-block[data-type="core/heading"],
-.right-sidebarpage .wp-block[data-type="core/block"],
-.right-sidebarpage .wp-block[data-type="core/button"],
-.right-sidebarpage .wp-block[data-type="core/image"] {
-    max-width: 925px;
-}
-
-/****************************************************************************************/
-/***************************** post title + post visual editor widths + alignments
+/***************************** post title */
 /****************************************************************************************/
 .editor-styles-wrapper .editor-post-title {
     margin: 0px auto;
 }
 
 .editor-post-title__block .editor-post-title__input {
-    padding: 0px 16px;
+    padding: 16px;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
 }
@@ -105,95 +33,6 @@ body {
     max-width: 100vw; // The widest available screen width -15vw to account for button controls
     margin: 0px auto;
     line-height: 2;
-}
-
-.wp-block {
-    max-width: 960px;
-}
-
-@media (min-width: 1px) {
-
-    //set the alignfull width to be the editable area within gutenberg removing widths of both admin bar and document settings since they are hidden below 600px
-    .wp-block[data-align=full],
-    body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full] {
-        width: 100%;
-        max-width: 100vw; //subtract the width of the document options sidebar
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-}
-
-@media (min-width: 600px) {
-
-    .editor-post-title,
-    .editor-post-title__block {
-        padding: 0px;
-        width: 100%;
-        max-width: 1140px;
-    }
-
-    .editor-block-list__layout {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    .editor-styles-wrapper>*:not(.wp-block[data-align=wide]) {
-        width: 100%;
-        max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .editor-styles-wrapper .editor-block-list__block.wp-block[data-align=wide] {
-        width: 1200px;
-        max-width: 1200px;
-        margin: 0px auto;
-    }
-
-    .editor-styles-wrapper .editor-block-list__block[data-align=full] {
-        max-width: 100vw;
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin side bar
-    .wp-block[data-align=full],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull,
-    body:not(.folded) .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .editor-block-list__block[data-type="core/columns"][data-align="full"] {
-        width: calc(100vw - 440px);
-        max-width: calc(100vw - 440px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 440px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 440px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the document settings sidebar + admin folded side bar
-    body .edit-post-layout.is-sidebar-opened .editor-block-list__layout .editor-block-list__block[data-align=full],
-    body .edit-post-layout.is-sidebar-opened .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
-        width: calc(100vw - 316px);
-        max-width: calc(100vw - 316px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 316px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 316px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin side bar
-    body:not(.folded) .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
-    body:not(.folded) .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
-        width: calc(100vw - 160px);
-        max-width: calc(100vw - 160px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 160px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 160px) / 2 + (100% / 2));
-    }
-
-    //set the alignfull width to be the editable area within gutenberg removing width of the admin folded side bar
-    body .edit-post-layout .editor-block-list__layout .editor-block-list__block[data-align=full],
-    body .edit-post-layout .editor-styles-wrapper .editor-block-list__layout .wp-block-gallery.alignfull {
-        width: calc(100vw - 36px);
-        max-width: calc(100vw - 36px); //subtract the width of the document options sidebar
-        margin-left: calc((-100vw + 36px) / 2 + (100% / 2));
-        margin-right: calc((-100vw + 36px) / 2 + (100% / 2));
-    }
-
-
 }
 
 /****************************************************************************************/
@@ -368,4 +207,125 @@ body {
 .editor-post-publish-panel select,
 .editor-post-publish-panel textarea {
     border-radius: 0px;
+}
+
+
+/****************************************************************************************/
+/***************************** Typography */
+/****************************************************************************************/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-styles-wrapper .h1,
+.editor-styles-wrapper .h2,
+.editor-styles-wrapper .h3,
+.editor-styles-wrapper .h4,
+.editor-styles-wrapper .h5,
+.editor-styles-wrapper .h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: $headings-font-family;
+    font-weight: 700;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .h1,
+.wp-block-heading h1,
+.entry-header h1 {
+    font-size: 4rem
+}
+
+.editor-styles-wrapper .c9-heading .h1 .text-muted,
+.editor-styles-wrapper .c9-heading .h2 .text-muted,
+.editor-styles-wrapper .c9-heading .h3 .text-muted,
+.editor-styles-wrapper .c9-heading .h4 .text-muted,
+.editor-styles-wrapper .c9-heading .h5 .text-muted,
+.editor-styles-wrapper .c9-heading .h6 .text-muted {
+    font-family: $headings-font-family;
+}
+
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .h2,
+.wp-block-heading h2 {
+    font-size: 3.6rem
+}
+
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .h3,
+.wp-block-heading h3 {
+    font-size: 3rem
+}
+
+.editor-styles-wrapper h4,
+.editor-styles-wrapper .h4,
+.wp-block-heading h4 {
+    font-size: 2.8rem
+}
+
+.editor-styles-wrapper h5,
+.editor-styles-wrapper .h5,
+.wp-block-heading h5 {
+    font-size: 2rem
+}
+
+.editor-styles-wrapper h6,
+.editor-styles-wrapper .h6,
+.wp-block-heading h6 {
+    font-size: 1.4rem
+}
+
+.c9-h,
+.c9-h.h,
+.c9-txl,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: $headings-font-family;
+    line-height: 1.1;
+}
+
+.editor-styles-wrapper .h1.c9-txl,
+.editor-styles-wrapper h1.c9-txl {
+    font-size: 8rem;
+}
+
+.editor-styles-wrapper .h2.c9-txl,
+.editor-styles-wrapper h2.c9-txl {
+    font-size: 7.3rem;
+}
+
+.editor-styles-wrapper .h3.c9-txl,
+.editor-styles-wrapper h3.c9-txl {
+    font-size: 6.5rem;
+}
+
+.editor-styles-wrapper .h4.c9-txl,
+.editor-styles-wrapper h4.c9-txl {
+    font-size: 5.8rem;
+}
+
+.editor-styles-wrapper .h5.c9-txl,
+.editor-styles-wrapper h5.c9-txl {
+    font-size: 5rem;
+}
+
+.editor-styles-wrapper .h6.c9-txl,
+.editor-styles-wrapper h6.c9-txl {
+    font-size: 4.3rem;
 }

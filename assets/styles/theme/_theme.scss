@@ -9,7 +9,7 @@ body {
 body {
 	color: $gray-900;
 	font-family: $font-family-base;
-	line-height: 2;
+	line-height: 1.3;
 }
 
 :root {
@@ -44,7 +44,6 @@ body {
 
 @media only screen and (min-width: 576px) {
 
-	.container-narrow,
 	.page-template-default .page .entry-content,
 	.page-container .entry-header,
 	.full-width-page-wrapper>.container {
@@ -221,7 +220,6 @@ body {
 	line-height: 1.4;
 }
 
-
 .has-small-font-size {
 	font-size: 1rem !important;
 }
@@ -248,9 +246,49 @@ body {
 	line-height: 1.2;
 }
 
-p.wp-block-subhead {
+p.wp-block-subhead,
+.subhead-h,
+.c9-sh {
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
+}
+
+.c9-h,
+.c9-h.h,
+.c9-txl,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+	font-family: $headings-font-family;
+	line-height: 1.1;
+}
+
+.display-1 {
+	font-size: 8rem;
+}
+
+.display-2 {
+	font-size: 7.3rem;
+}
+
+.display-3,
+.c9-txl {
+	font-size: 6.5rem;
+}
+
+.display-4 {
+	font-size: 5.8rem;
+}
+
+.display-5 {
+	font-size: 5rem;
+}
+
+.display-6 {
+	font-size: 4.3rem;
 }
 
 /* links in content */
@@ -430,8 +468,8 @@ a:hover {
 	.page-template-default .entry-content>.wp-block-columns.alignfull {
 		width: 100vw;
 		max-width: 100vw;
-		margin-left: calc((-100vw + 1110px) / 2);
-		margin-right: calc((-100vw + 1110px) / 2);
+		margin-left: calc((-100vw + 1140px) / 2);
+		margin-right: calc((-100vw + 1140px) / 2);
 	}
 
 	.page-template-default .entry-content hr:after {
@@ -500,6 +538,14 @@ a:hover {
 .header-navbar {
 	z-index: 99;
 	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+}
+
+.header-navbar .navbar:not(.navbar-small) {
+	width: 80%;
 }
 
 nav ul li a,
@@ -2081,7 +2127,6 @@ screen and (max-height: 300px) {
 /* WordPress Gutenberg Buttons
 /****************************************************************************************/
 .btn,
-.button,
 .editor-styles-wrapper .button,
 .editor-styles-wrapper .button-primary,
 .editor-styles-wrapper .mce-content-body.button,
@@ -2549,6 +2594,60 @@ button:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
 		font-size: 1.8rem;
 	}
+}
+
+/****************************************************************************************/
+/* c9 Blocks */
+/****************************************************************************************/
+
+/******************************************** tabs **************************************/
+
+.entry-content .nav-tabs .nav-link {
+	border: none;
+	border-radius: 0px;
+	line-height: 1;
+}
+
+.entry-content .nav.nav-tabs {
+	line-height: 1;
+	font-size: 1.5rem;
+	border-bottom: none;
+	margin: 0px;
+}
+
+.entry-content .nav.nav-tabs .nav-item {
+	margin: 0px 18px;
+}
+
+.entry-content .nav.nav-tabs .nav-item:before {
+	display: none;
+}
+
+.nav-tabs .nav-link:hover,
+.c9-horizontal-tabs .nav-tabs .nav-link:hover {
+	color: $gray-800;
+}
+
+.c9-horizontal-tabs .nav-tabs .nav-link {
+	color: $gray-600;
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 13px 55px;
+	font-weight: bold;
+	letter-spacing: .09rem;
+}
+
+.c9-horizontal-tabs .nav-tabs .nav-link.active {
+	color: $gray-700;
+}
+
+.c9-horizontal-tabs .tab-content {
+	padding: 25px 10px;
+}
+
+.c9-horizontal-tabs .tab-content p:only-of-type,
+.c9-horizontal-tabs .tab-content p:last-child {
+	margin-bottom: 0px;
 }
 
 /****************************************************************************************/
