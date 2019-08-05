@@ -822,8 +822,8 @@ if (!class_exists('WP_OSA')) :
 		{
 			// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
 			add_options_page(
-				'Cortex Theme Settings',
-				'Cortex Theme Settings',
+				'C9 Theme',
+				'C9 Theme',
 				'manage_options',
 				'wp_osa_settings',
 				array($this, 'plugin_page')
