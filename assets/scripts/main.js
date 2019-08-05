@@ -2,36 +2,36 @@ import "smoothstate";
 
 jQuery(document).ready(function() {
   (function($) {
-    var notSmooth =
-      '.mega-menu-item-has-children .mega-menu-link, .wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup';
-    var options = {
-        prefetch: true,
-        cacheLength: 2,
-        blacklist: notSmooth,
-        onStart: {
-          duration: 250, // Duration of our animation
-          render: function($container) {
-            // Add your CSS animation reversing class
-            $container.addClass("is-exiting");
+    // var notSmooth =
+    //   '.mega-menu-item-has-children .mega-menu-link, .wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup';
+    // var options = {
+    //     prefetch: true,
+    //     cacheLength: 2,
+    //     blacklist: notSmooth,
+    //     onStart: {
+    //       duration: 250, // Duration of our animation
+    //       render: function($container) {
+    //         // Add your CSS animation reversing class
+    //         $container.addClass("is-exiting");
 
-            // Restart your animation
-            smoothState.restartCSSAnimations();
-          }
-        },
-        onReady: {
-          duration: 0,
-          render: function($container, $newContent) {
-            // Remove your CSS animation reversing class
-            $container.removeClass("is-exiting");
+    //         // Restart your animation
+    //         smoothState.restartCSSAnimations();
+    //       }
+    //     },
+    //     onReady: {
+    //       duration: 0,
+    //       render: function($container, $newContent) {
+    //         // Remove your CSS animation reversing class
+    //         $container.removeClass("is-exiting");
 
-            // Inject the new content
-            $container.html($newContent);
-          }
-        }
-      },
-      smoothState = $("#page")
-        .smoothState(options)
-        .data("smoothState");
+    //         // Inject the new content
+    //         $container.html($newContent);
+    //       }
+    //     }
+    //   },
+    //   smoothState = $("#page")
+    //     .smoothState(options)
+    //     .data("smoothState");
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
