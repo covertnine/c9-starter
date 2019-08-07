@@ -293,6 +293,7 @@ p.wp-block-subhead,
 
 /* links in content */
 a {
+	-webkit-transition: .3s color;
 	transition: .3s color;
 }
 
@@ -534,8 +535,14 @@ a:hover {
 .header-navbar {
 	z-index: 99;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
 }
@@ -551,6 +558,7 @@ nav ul li .dropdown-item {
 }
 
 nav ul li a {
+	-webkit-transition: color .3s ease-in;
 	transition: color .3s ease-in;
 }
 
@@ -771,6 +779,7 @@ nav ul li a {
 	width: 100%;
 	opacity: 1;
 	z-index: -1;
+	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 	background-color: $primary;
 }
@@ -826,6 +835,7 @@ nav ul li a {
 .comment-reply-link,
 .comment-author .fn .url,
 .comment-metadata a {
+	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 
@@ -920,6 +930,7 @@ nav ul li a {
 		position: fixed;
 		top: 60px;
 		left: 15px;
+		-webkit-transition: opacity .7s;
 		transition: opacity .7s;
 		opacity: 0;
 		max-width: 115px;
@@ -993,6 +1004,7 @@ nav ul li a {
 	width: 30px;
 	display: inline-block;
 	border-radius: 50%;
+	-webkit-transition: background-color .3s;
 	transition: background-color .3s;
 }
 
@@ -1221,6 +1233,7 @@ object {
 	}
 
 	.wp-block-column {
+		-ms-flex-preferred-size: 100%;
 		flex-basis: 100%;
 		margin: 15px 0px;
 	}
@@ -1236,6 +1249,7 @@ object {
 	}
 
 	.wp-block-column {
+		-ms-flex-preferred-size: 48%;
 		flex-basis: 48%;
 	}
 
@@ -1254,6 +1268,7 @@ object {
 	}
 
 	.has-3-columns .wp-block-column {
+		-ms-flex-preferred-size: 30.66667%;
 		flex-basis: 30.66667%;
 	}
 
@@ -1373,6 +1388,7 @@ object {
 .entry-content table tbody tr td,
 .editor-styles-wrapper table tbody tr td {
 	background: #fff;
+	-webkit-box-shadow: 0 -1px 0 0 #ECEEEF;
 	box-shadow: 0 -1px 0 0 #ECEEEF;
 }
 
@@ -1641,6 +1657,7 @@ object {
 	left: 0;
 	top: 0;
 	padding: 0 8px;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1676,10 +1693,12 @@ object {
 
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+	cursor: -webkit-zoom-out;
 	cursor: zoom-out;
 }
 
 .mfp-zoom {
+	cursor: -webkit-zoom-in;
 	cursor: zoom-in;
 }
 
@@ -1691,6 +1710,9 @@ object {
 .mfp-arrow,
 .mfp-preloader,
 .mfp-counter {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 
@@ -1731,6 +1753,7 @@ button.mfp-arrow {
 	outline: none;
 	padding: 0;
 	z-index: 1046;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -1801,6 +1824,7 @@ button::-moz-focus-inner {
 	height: 30px;
 	background-color: transparent;
 	background-repeat: no-repeat;
+	-webkit-transition: opacity .4s;
 	transition: opacity .4s;
 }
 
@@ -1849,6 +1873,7 @@ button::-moz-focus-inner {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 	background: #000;
 }
@@ -1880,6 +1905,7 @@ img.mfp-img {
 	width: auto;
 	height: auto;
 	z-index: -1;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 	background: #444;
 }
@@ -1949,6 +1975,7 @@ screen and (max-height: 300px) {
 		top: auto;
 		padding: 3px 5px;
 		position: fixed;
+		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -1976,14 +2003,17 @@ screen and (max-height: 300px) {
 
 @media all and (max-width: 900px) {
 	.mfp-arrow {
+		-webkit-transform: scale(0.75);
 		transform: scale(0.75);
 	}
 
 	.mfp-arrow-left {
+		-webkit-transform-origin: 0;
 		transform-origin: 0;
 	}
 
 	.mfp-arrow-right {
+		-webkit-transform-origin: 100%;
 		transform-origin: 100%;
 	}
 
@@ -2027,19 +2057,23 @@ screen and (max-height: 300px) {
 .mfp-zoom-in .mfp-figure,
 .mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler {
 	opacity: 0;
+	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
+	-webkit-transform: scale(0.95);
 	transform: scale(0.95);
 }
 
 .mfp-zoom-in.mfp-bg,
 .mfp-zoom-in .mfp-preloader {
 	opacity: 0;
+	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
 }
 
 .mfp-zoom-in.mfp-image-loaded .mfp-figure,
 .mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler {
 	opacity: 1;
+	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
@@ -2050,6 +2084,7 @@ screen and (max-height: 300px) {
 
 .mfp-zoom-in.mfp-removing .mfp-figure,
 .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler {
+	-webkit-transform: scale(0.95);
 	transform: scale(0.95);
 	opacity: 0;
 }
@@ -2144,6 +2179,7 @@ screen and (max-height: 300px) {
 	width: auto;
 	height: auto;
 	background-color: $primary;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: none;
 	font-family: $font-family-base;
@@ -2151,6 +2187,7 @@ screen and (max-height: 300px) {
 	letter-spacing: .2rem;
 	text-align: center;
 	text-transform: uppercase;
+	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 	white-space: normal;
 	color: #fff;
@@ -2193,6 +2230,7 @@ button:hover,
 	display: inline-block;
 	width: auto;
 	margin: 0px 0px 0px -5px;
+	-webkit-transition: opacity .3s;
 	transition: opacity .3s;
 }
 
@@ -2296,6 +2334,7 @@ button:hover,
 	width: 100%;
 	max-width: 100vw;
 	height: 0px;
+	-webkit-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 	overflow: hidden;
@@ -2316,6 +2355,7 @@ button:hover,
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	width: 80%;
 	font-size: 2.8rem;
@@ -2333,6 +2373,7 @@ button:hover,
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
@@ -2522,6 +2563,7 @@ button:hover,
 	background-color: $dark;
 	color: $light;
 	cursor: pointer;
+	-webkit-transition: .4s opacity;
 	transition: .4s opacity;
 }
 
@@ -2659,7 +2701,9 @@ button:hover,
 }
 
 .img-blurred {
+	-webkit-filter: blur(15px);
 	filter: blur(15px);
+	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
 
