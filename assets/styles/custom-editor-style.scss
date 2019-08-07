@@ -79,6 +79,29 @@ body {
     margin-bottom: 0px !important;
 }
 
+/* for elements appearing in backend editor need to visually represent the frontend available width*/
+@media only screen and (min-width: 768px) {
+    .editor-styles-wrapper .wp-block {
+        width: 94%;
+        max-width: 960px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .editor-styles-wrapper .wp-block {
+        max-width: 1110px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .editor-styles-wrapper .wp-block {
+        max-width: 1140px;
+    }
+
+}
+
 /*square buttons*/
 .editor-rich-text__editable.wp-block-button__link.square {
     border-radius: 0;
