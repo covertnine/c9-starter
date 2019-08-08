@@ -147,6 +147,13 @@ body {
 	line-height: 2;
 }
 
+.entry-content p:last-child,
+.entry-content p:only-of-type,
+.wp-block-pullquote.is-style-solid-color blockquote p:last-child,
+.wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
+	margin-bottom: 0px;
+}
+
 .editor-styles-wrapper .editor-rich-text .wp-block-quote__citation,
 .entry-content .wp-block-quote cite,
 .wp-block-pullquote cite,

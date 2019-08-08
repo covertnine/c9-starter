@@ -12,7 +12,7 @@ $the_theme = wp_get_theme();
 
 <?php get_sidebar('footerfull'); ?>
 
-<div class="wrapper footer-wrapper" id="wrapper-footer">
+<div class="footer-wrapper" id="wrapper-footer">
 
     <div class="container">
 

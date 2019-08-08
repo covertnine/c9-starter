@@ -29,14 +29,14 @@ body {
 }
 
 .edit-post-layout__content .editor-styles-wrapper {
-    width: 100%;
+    width: 98%;
     max-width: 100vw; // The widest available screen width -15vw to account for button controls
     margin: 0px auto;
     line-height: 2;
 }
 
 /****************************************************************************************/
-/***************************** font color changes for editor only (frontend color is on body)
+/***************************** font changes for editor only (frontend color is on body)
 /****************************************************************************************/
 .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-table,
@@ -61,6 +61,17 @@ body {
 .wp-block-button.is-style-squared .wp-block-button__link,
 .wp-block-button .wp-block-button__link {
     color: $light;
+}
+
+.editor-styles-wrapper .editor-rich-text .mce-content-body p:last-child,
+.editor-styles-wrapper .editor-rich-text blockquote p:last-child,
+.editor-styles-wrapper .wp-block-quote p:last-child,
+.wp-block-pullquote.is-style-solid-color blockquote p:last-child,
+.editor-styles-wrapper .editor-rich-text .mce-content-body p:only-of-type,
+.editor-styles-wrapper .editor-rich-text blockquote p:only-of-type,
+.editor-styles-wrapper .wp-block-quote p:only-of-type,
+.wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
+    margin-bottom: 0px;
 }
 
 /****************************************************************************************/
