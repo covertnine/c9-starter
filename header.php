@@ -21,7 +21,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
 </head>
 
 <body <?php body_class(); ?>>
