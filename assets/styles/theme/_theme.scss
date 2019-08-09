@@ -166,6 +166,7 @@ body {
 	font-style: normal;
 }
 
+.c9-site-title,
 .entry-content h1,
 .entry-content .h1,
 .wp-block-heading h1,
@@ -554,7 +555,12 @@ a:hover {
 	text-align: center;
 }
 
-.header-navbar .navbar:not(.navbar-small) {
+.header-navbar .navbar {
+	width: 100%;
+	margin: 0px auto;
+}
+
+.header-navbar .navbar-collapse:not(.navbar-small) {
 	width: 80%;
 }
 
@@ -590,6 +596,13 @@ nav ul li a {
 }
 
 @media only screen and (min-width: 1px) and (max-width: 991px) {
+
+	.navbar-brand img {
+		max-width: 285px;
+		max-height: 92px;
+		width: auto;
+		height: auto;
+	}
 
 	.navbar-expand-lg>.container,
 	.navbar-expand-lg>.container-fluid {

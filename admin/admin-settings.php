@@ -37,7 +37,7 @@ if (class_exists('WP_OSA')) {
 
 
 	// -----------------------------//
-	//---- Start Cortex Branding ---//
+	//---- Start C9 Branding ---//
 	//------------------------------//
 	$wposa_obj->add_section(
 		array(
