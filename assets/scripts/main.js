@@ -47,18 +47,18 @@ jQuery(document).ready(function() {
         //scroll position variable
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 168) {
+        if (scroll >= 288) {
           $(".navbar").addClass("opacity0");
         }
-        if (scroll <= 167) {
+        if (scroll <= 287) {
           $(".navbar").removeClass("opacity0");
         }
 
-        if (scroll >= 218) {
+        if (scroll >= 338) {
           $(".navbar").addClass("fixed-top opacity100");
           $(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
         }
-        if (scroll <= 217) {
+        if (scroll <= 337) {
           $(".navbar").removeClass("fixed-top opacity100");
           $(".header-navbar").removeClass("jumpfix"); //remove extra classes and put navs back at top
         }
