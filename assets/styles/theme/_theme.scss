@@ -564,13 +564,13 @@ a:hover {
 	width: 80%;
 }
 
-nav ul li a,
-nav ul li .dropdown-item {
+.navbar ul li a,
+.navbar ul li .dropdown-item {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
 }
 
-nav ul li a {
+.navbar ul li a {
 	-webkit-transition: color .3s ease-in;
 	transition: color .3s ease-in;
 }

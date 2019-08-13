@@ -30,7 +30,9 @@
 		<?php if (file_exists(locate_template('client/inc/topnav.php'))) {
 			include(locate_template('client/inc/topnav.php'));
 		} ?>
-
+		<?php if (file_exists(locate_template('client/inc/header.php'))) {
+			include(locate_template('client/inc/header.php'));
+		} else { ?>
 		<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 			<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'cortextoo'); ?></a>
@@ -86,3 +88,4 @@
 
 			</nav><!-- .site-navigation -->
 			</div><!-- .header-navbar-->
+				<?php } ?>
