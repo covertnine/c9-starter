@@ -21,7 +21,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="https://use.typekit.net/uqa4rne.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,7 +30,9 @@
 		<?php if (file_exists(locate_template('client/inc/topnav.php'))) {
 			include(locate_template('client/inc/topnav.php'));
 		} ?>
-
+		<?php if (file_exists(locate_template('client/inc/header.php'))) {
+			include(locate_template('client/inc/header.php'));
+		} else { ?>
 		<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 			<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'cortextoo'); ?></a>
@@ -40,7 +41,20 @@
 
 				<div class="container">
 					<?php
-					the_custom_logo();
+
+					// get custom logo, if not set, use customizer logo, if that's not set, show text of site title
+					$c9Logo = get_option('cortex_branding', '');
+					$c9SiteName = get_bloginfo('name');
+
+					if (!empty($c9Logo['logo'])) {
+						?>
+					<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9SiteName . __(' Homepage', 'cortextoo');?>" class="navbar-brand custom-logo-link c9-custom-logo">
+						<img src="<?=$c9Logo['logo'];?>" class="c9-home-logo img-fluid c9-custom-logo" alt="<?php echo $c9SiteName . __(' Logo', 'cortextoo');?>" />
+					</a>
+						<?php
+					} else {
+						the_custom_logo();
+					} 
 					?>
 
 					<div class="navbar-small-buttons">
@@ -74,3 +88,4 @@
 
 			</nav><!-- .site-navigation -->
 			</div><!-- .header-navbar-->
+				<?php } ?>
