@@ -61,7 +61,6 @@
     // e.stopPropagation();
     // console.log(e.isPropagationStopped());
     tabMoved = true;
-    console.log("Before the if statement")
     console.log(tabMoved);
     console.log(isDirty);
     if (isDirty === true && tabMoved === true) {
@@ -99,7 +98,6 @@
       $("label[for='cortex_typography[subheading_font]']").parents("tr").hide();
       $("label[for='cortex_typography[typography_presets]']").parents("tr").hide();
       }
-    console.log("Doc ready");
     $("#cortex_typography input[value='no']").click(function() {
       if ($("#cortex_typography input[value='no']").is(':checked')){
       $("label[for='cortex_typography[heading_font]']").parents("tr").hide();
@@ -113,7 +111,7 @@
       $("label[for='cortex_typography[typography_presets]']").parents("tr").show();
     });
   
-    $("textarea[classs=code_editor_page_").each(function() {
+    $("textarea[class*=code_editor_page_").each(function() {
       // pulls the class to determine type of editor
       if (
         $(this)
