@@ -311,6 +311,9 @@ a:hover {
 
 /* Responsive Typography */
 @media only screen and (min-width: 1px) and (max-width: 575px) {
+	:root {
+		font-size: 50%;
+	}
 
 	.has-large-font-size {
 		font-size: 3rem !important;
@@ -429,6 +432,10 @@ a:hover {
 		max-width: 960px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.entry-content .container .wp-block-gallery:only-child {
+		margin-bottom: 0px;
 	}
 
 	.page-template-default .entry-content .alignwide,
@@ -1100,7 +1107,6 @@ a:hover {
 .entry-content hr,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	text-align: center;
-	width: 100%;
 	margin: 30px auto;
 	max-width: 1140px;
 	border: 0;
@@ -1644,6 +1650,23 @@ object {
 	margin: 0 7px 0 -27px;
 }
 
+.entry-content ul:not(.wp-block-gallery) li,
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
+	position: relative;
+}
+
+.entry-content ul:not(.wp-block-gallery) li:before,
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before {
+	font-family: 'FontAwesome';
+	font-size: 1rem;
+	content: "\f111";
+	margin-left: -12px;
+	position: absolute;
+	top: 6px;
+	left: 0px;
+}
+
+g1102
 /****************************************************************************************/
 /* WordPress Gallery Block Magnific Images */
 /****************************************************************************************/
@@ -2542,7 +2565,7 @@ button:hover,
 
 .cortextoo .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
-	height: 30px;
+	height: 50px;
 }
 
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -11,6 +12,10 @@ $the_theme = wp_get_theme();
 ?>
 
 <?php get_sidebar('footerfull'); ?>
+
+<?php if (file_exists(locate_template('client/inc/footer.php'))) {
+    include(locate_template('client/inc/footer.php'));
+} else { ?>
 
 <div class="footer-wrapper" id="wrapper-footer">
 
@@ -29,7 +34,7 @@ $the_theme = wp_get_theme();
                             <div class="row text-center">
                                 <div class="col-xs-12">
                                     <p class="text-center">&copy; <?php echo date("Y") . ' ';
-                                                                    echo bloginfo('name'); ?></p>
+                                                                        echo bloginfo('name'); ?></p>
                                 </div>
                             </div>
                         </div><!-- .container-->
@@ -46,17 +51,18 @@ $the_theme = wp_get_theme();
     </div><!-- container end -->
 
 </div><!-- wrapper end -->
-
+<?php } //end of checking for client footer.php 
+?>
 </div><!-- #page we need this extra closing tag here -->
 <div id="search">
-<button type="button" class="search-close accent-color-bg"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'cortextoo'); ?></span></button>
-<form role="search" method="get" id="fullscreen" action="/">
-<div>
-<span class="sr-only"><?php _e('Search for:', 'cortextoo'); ?></span>
-<input type="search" class="search-field" name="s" value="" placeholder="<?php _e('Search...', 'cortextoo');?>" />
-<button type="submit" class="btn"><?php _e('Search', 'cortextoo'); ?></button>
-</div>
-</form>
+    <button type="button" class="search-close accent-color-bg"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'cortextoo'); ?></span></button>
+    <form role="search" method="get" id="fullscreen" action="/">
+        <div>
+            <span class="sr-only"><?php _e('Search for:', 'cortextoo'); ?></span>
+            <input type="search" class="search-field" name="s" value="" placeholder="<?php _e('Search...', 'cortextoo'); ?>" />
+            <button type="submit" class="btn"><?php _e('Search', 'cortextoo'); ?></button>
+        </div>
+    </form>
 </div>
 <?php wp_footer(); ?>
 
