@@ -311,6 +311,9 @@ a:hover {
 
 /* Responsive Typography */
 @media only screen and (min-width: 1px) and (max-width: 575px) {
+	:root {
+		font-size: 50%;
+	}
 
 	.has-large-font-size {
 		font-size: 3rem !important;
@@ -429,6 +432,10 @@ a:hover {
 		max-width: 960px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.entry-content .container .wp-block-gallery:only-child {
+		margin-bottom: 0px;
 	}
 
 	.page-template-default .entry-content .alignwide,
@@ -2558,7 +2565,7 @@ button:hover,
 
 .cortextoo .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
-	height: 30px;
+	height: 50px;
 }
 
 
