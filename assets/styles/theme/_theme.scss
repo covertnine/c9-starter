@@ -434,6 +434,10 @@ a:hover {
 		margin-right: auto;
 	}
 
+	.entry-content .container .wp-block-gallery:only-child {
+		margin-bottom: 0px;
+	}
+
 	.page-template-default .entry-content .alignwide,
 	.page-template-default .entry-content>p,
 	.page-template-default .entry-content>h1,
