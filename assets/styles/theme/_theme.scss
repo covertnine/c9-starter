@@ -311,6 +311,9 @@ a:hover {
 
 /* Responsive Typography */
 @media only screen and (min-width: 1px) and (max-width: 575px) {
+	:root {
+		font-size: 50%;
+	}
 
 	.has-large-font-size {
 		font-size: 3rem !important;
