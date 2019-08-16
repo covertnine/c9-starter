@@ -40,19 +40,10 @@ get_header();
 
 
 			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						[ pre-set categories will be linked here hidden on mobile but visible on min-width: 768]
-					</div>
-				</div>
+
 				<div class="row no-gutter">
 
-					<div class="col-xs-12 col-sm-3">
-						[filter by tag]
-
-						[filter by rating]
-					</div>
-					<div class="col-xs-12 col-sm-9">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 						<?php while (have_posts()) : the_post(); ?>
 
 						<?php
