@@ -1,4 +1,5 @@
 <?php
+
 /**
  * cortextoo enqueue scripts
  *
@@ -37,32 +38,32 @@ if (!function_exists('cortextoo_scripts')) {
 //If yes: passes object with specified fonts. If no: no fonts passed
 
 //Localize this array object to pass it into the javascript typography-script
-function load_typography_scripts(){
+function load_typography_scripts()
+{
 
 	//Check to see if this script needs to run:
-   $fontChoice = get_option('cortex_typography')["defaultFont"];
+	$fontChoice = isset(get_option('cortex_typography')["defaultFont"]) ? get_option('cortex_typography')["defaultFont"] : null;
 
-   //Check to see if the array is empty and the user choice is yes to run the font script
-   if (!empty($fontChoice) && $fontChoice==="yes")
-	{
-	//Begin by registering the JavaScript Script
-	//Add action to enqueue the CDN script:
-	wp_enqueue_script('webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
-	
-	wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
+	//Check to see if the array is empty and the user choice is yes to run the font script
+	if (!empty($fontChoice) && $fontChoice === "yes") {
+		//Begin by registering the JavaScript Script
+		//Add action to enqueue the CDN script:
+		wp_enqueue_script('webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
 
-	//Localize the script with the font data
-	$font_array = get_option('cortex_typography');
+		wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
 
-	//Use the localize function to localize the script and continue with the code
-	wp_localize_script('typography-script', 'selectedFonts', $font_array);
+		//Localize the script with the font data
+		$font_array = get_option('cortex_typography');
 
-	//Enqueued script with the data we pulled from earlier selections
-	wp_enqueue_script('typography-script');
-   }
+		//Use the localize function to localize the script and continue with the code
+		wp_localize_script('typography-script', 'selectedFonts', $font_array);
+
+		//Enqueued script with the data we pulled from earlier selections
+		wp_enqueue_script('typography-script');
+	}
 }
 
- // endif function_exists( 'cortextoo_scripts' ).
+// endif function_exists( 'cortextoo_scripts' ).
 
 add_action('wp_enqueue_scripts', 'cortextoo_scripts');
 add_action('wp_enqueue_scripts', 'load_typography_scripts');
