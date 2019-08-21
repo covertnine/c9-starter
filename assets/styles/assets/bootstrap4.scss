@@ -7,29 +7,29 @@
 
 @import "../bootstrap4/functions";
 @import "../bootstrap4/variables";
-@import "../bootstrap4/mixins";
+@import "../bootstrap4/mixins"; //not sure if we're using this
 @import "../bootstrap4/root";
 @import "../bootstrap4/reboot";
 @import "../bootstrap4/type";
 @import "../bootstrap4/images";
-@import "../bootstrap4/code";
+@import "../bootstrap4/code"; //maybe we can get rid of
 @import "../bootstrap4/grid";
 @import "../bootstrap4/tables";
 @import "../bootstrap4/forms";
-@import "../bootstrap4/buttons";
-@import "../bootstrap4/transitions";
+@import "../bootstrap4/buttons"; //maybe we can get rid of
+@import "../bootstrap4/transitions"; //not using
 @import "../bootstrap4/dropdown";
-@import "../bootstrap4/button-group";
+@import "../bootstrap4/button-group"; //not using 
 @import "../bootstrap4/nav";
 @import "../bootstrap4/navbar";
-@import "../bootstrap4/card";
-@import "../bootstrap4/breadcrumb";
+@import "../bootstrap4/card"; //not using
+@import "../bootstrap4/breadcrumb"; //not using
 @import "../bootstrap4/pagination";
-@import "../bootstrap4/jumbotron";
-@import "../bootstrap4/alert";
+@import "../bootstrap4/jumbotron"; //not using
+@import "../bootstrap4/alert"; //not using 
 @import "../bootstrap4/media";
 @import "../bootstrap4/close";
-@import "../bootstrap4/modal";
+@import "../bootstrap4/modal"; //not using 
 @import "../bootstrap4/tooltip";
 @import "../bootstrap4/popover";
 @import "../bootstrap4/carousel";
