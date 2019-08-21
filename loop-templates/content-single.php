@@ -9,7 +9,7 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
-		if ( has_post_thumbnail() ) {
+		if ( has_post_thumbnail() && $post_id ) {
 
 			//grab src, srcset, sizes from featured image for Retina support
 			$c9_img_id		= get_post_thumbnail_id( $post_id );

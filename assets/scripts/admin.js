@@ -126,8 +126,8 @@
         .parents("tr")
         .show();
     });
-
-    $("textarea[classs=code_editor_page_").each(function() {
+  
+    $("textarea[class*=code_editor_page_").each(function() {
       // pulls the class to determine type of editor
       if (
         $(this)
