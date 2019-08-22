@@ -60,6 +60,11 @@ function load_typography_scripts()
 
 		//Enqueued script with the data we pulled from earlier selections
 		wp_enqueue_script('typography-script');
+
+		require_once(get_template_directory() . '/assets/fonts/font-styles.php');
+		$font_css = C9FontStyles::render($font_array);
+
+		wp_add_inline_style('c9-typography-style', $font_css);
 	}
 }
 
