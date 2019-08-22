@@ -75,18 +75,14 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Upload a favicon here', 'WPOSA'),
 		)
 	);
-
-
-	// ---------------------------//
-	//---- End Cortex Branding----//
-	//---------------------------//
-
-	//-------------------------------------------//
-
-	// -----------------------------//
-	//---- Start Cortex Branding ---//
 	//------------------------------//
-	$wposa_obj->add_section( 
+	//---- End Cortex Branding -----//
+	//------------------------------//
+
+	//------------------------------//
+	//----- Start Cortex Social ----//
+	//------------------------------//
+	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_social',
 			'title' => __('Social', 'WPOSA'),
@@ -114,27 +110,6 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'   => 'separator_1',
 			'type' => 'separator',
-		)
-	);
-
-	$wposa_obj->add_field(
-		'cortex_social',
-		array(
-			'id'      => 'mailchimp_api',
-			'type'    => 'text',
-			'name'    => __('Mailchimp API Key', 'WPOSA'),
-			'desc'    => __('Add your Mailchimp API key here', 'WPOSA'),
-			'default' => '',
-		)
-	);
-
-	$wposa_obj->add_field(
-		'cortex_social',
-		array(
-			'id'                => 'twitter_api',
-			'type'              => 'text',
-			'name'              => __('Twitter API key', 'WPOSA'),
-			'desc'              => __('Input your Twitter API key here', 'WPOSA'),
 		)
 	);
 
@@ -214,7 +189,7 @@ if (class_exists('WP_OSA')) {
 				"hide" => "Hide",
 			),
 		)
-		);
+	);
 
 	// Field: Title.
 	$wposa_obj->add_field(
@@ -362,7 +337,7 @@ if (class_exists('WP_OSA')) {
 	// -------------------------------//
 	//---- Start Cortex Typography ---//
 	//--------------------------------//
-   
+
 	//The tab title of the Typography 
 	$wposa_obj->add_section(
 		array(
@@ -373,17 +348,17 @@ if (class_exists('WP_OSA')) {
 
 	//Field: Default Font Selector
 	$wposa_obj->add_field(
-			'cortex_typography',
-			array(
-				'id'      => 'defaultFont',
-				'type'    => 'radio',
-				'name'    => __('Use Cortex Theme Based Fonts?', 'WPOSA'),
-				'options' => array(
-					"yes" => "Yes.",
-					"no" => "No, I will take care of my fonts.",
-				),
-			)
-			);
+		'cortex_typography',
+		array(
+			'id'      => 'defaultFont',
+			'type'    => 'radio',
+			'name'    => __('Use Cortex Theme Based Fonts?', 'WPOSA'),
+			'options' => array(
+				"yes" => "Yes.",
+				"no" => "No, I will take care of my fonts.",
+			),
+		)
+	);
 
 	//If the user selects YES and will select the fonts.
 	//The default font will be Helvatic for system fonts:
@@ -391,13 +366,17 @@ if (class_exists('WP_OSA')) {
 	//Update an array to contain the fonts that will be used 
 	//throughout each of the font selector fields:
 	$c9fonts = array(
-		'Droid Sans' => 'Droid Sans',
-		'Droid Serif' => 'Droid Serif',
-		'Roboto' =>'Roboto',
+		'Roboto' => 'Roboto',
 		'Montserrat' => 'Montserrat',
+		'PT Sans' => 'PT Sans',
+		'Raleway' => 'Raleway',
+		'Montserrat' => 'Montserrat',
+		'Source Sans Pro' => 'Source Sans Pro',
+		'Oswald' => 'Oswald',
+		'Open Sans' => 'Open Sans'
 	);
 
-	
+
 	//Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_typography',
@@ -427,7 +406,7 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
-			'id'      => 'typography_presets',
+			'id'      => 'body_font',
 			'type'    => 'select',
 			'name'    => __('Body Font', 'WPOSA'),
 			'desc'    => __('Select fonts here', 'WPOSA'),
@@ -466,7 +445,6 @@ if (class_exists('WP_OSA')) {
 	// ---------------------------//
 	//---- End Cortex SEO ----//
 	//---------------------------//
-	//-------------------------------------------//
 
 	// -------------------------------//
 	//---- Start Cortex Advanced ---//
