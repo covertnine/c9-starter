@@ -35,7 +35,7 @@ if (!function_exists('cortextoo_scripts')) {
 			//Begin by registering the JavaScript Script
 			//Add action to enqueue the CDN script:
 			wp_enqueue_script('webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
-			
+
 			wp_register_script('typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
 
 			//Localize the script with the font data
@@ -53,7 +53,7 @@ if (!function_exists('cortextoo_scripts')) {
 			$font_css = ob_get_clean();
 			$fonts_minified = C9FontStyles::minifyCss($font_css);
 
-			wp_add_inline_style('cortextoo-styles', '<style>' . $fonts_minified . '</style>');
+			wp_add_inline_style('cortextoo-styles', $fonts_minified);
 		}
 	}
 } // endif function_exists( 'cortextoo_scripts' ).

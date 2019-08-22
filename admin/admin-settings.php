@@ -113,21 +113,12 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Separator.
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'   => 'separator_2',
-			'type' => 'separator',
-		)
-	);
-
-	$wposa_obj->add_field(
-		'cortex_social',
-		array(
-			'id'                => 'twitter_username',
+			'id'                => 'twitter',
 			'type'              => 'text',
-			'name'              => __('Twitter Username', 'WPOSA'),
+			'name'              => __('Twitter', 'WPOSA'),
 			'desc'              => __('Input your Twitter Username Here', 'WPOSA'),
 		)
 	);
@@ -135,19 +126,109 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'facebook_username',
+			'id'                => 'facebook',
 			'type'              => 'text',
-			'name'              => __('Facebook Username', 'WPOSA'),
+			'name'              => __('Facebook', 'WPOSA'),
 			'desc'              => __('Input your Facebook Username Here', 'WPOSA'),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'instagram_username',
+			'id'                => 'instagram',
 			'type'              => 'text',
-			'name'              => __('Instagram Username', 'WPOSA'),
+			'name'              => __('Instagram', 'WPOSA'),
 			'desc'              => __('Input your Instagram Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'pinterest',
+			'type'              => 'text',
+			'name'              => __('Pinterest', 'WPOSA'),
+			'desc'              => __('Input your Pinterest Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'spotify',
+			'type'              => 'text',
+			'name'              => __('Spotify', 'WPOSA'),
+			'desc'              => __('Input your Spotify Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'youtube',
+			'type'              => 'text',
+			'name'              => __('Youtube', 'WPOSA'),
+			'desc'              => __('Input your Youtube Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'flickr',
+			'type'              => 'text',
+			'name'              => __('Flickr', 'WPOSA'),
+			'desc'              => __('Input your Flickr Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'tumblr',
+			'type'              => 'text',
+			'name'              => __('Tumblr', 'WPOSA'),
+			'desc'              => __('Input your Tumblr Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'yelp',
+			'type'              => 'text',
+			'name'              => __('Yelp', 'WPOSA'),
+			'desc'              => __('Input your Yelp Name Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'subreddit',
+			'type'              => 'text',
+			'name'              => __('Subreddit', 'WPOSA'),
+			'desc'              => __('Input your Subreddit Name Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'linkedin',
+			'type'              => 'text',
+			'name'              => __('Linkedin', 'WPOSA'),
+			'desc'              => __('Input your Linkedin Username Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'github',
+			'type'              => 'text',
+			'name'              => __('Github', 'WPOSA'),
+			'desc'              => __('Input your Github Name Here', 'WPOSA'),
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_social',
+		array(
+			'id'                => 'soundcloud',
+			'type'              => 'text',
+			'name'              => __('Soundcloud', 'WPOSA'),
+			'desc'              => __('Input your Soundcloud Name Here', 'WPOSA'),
 		)
 	);
 

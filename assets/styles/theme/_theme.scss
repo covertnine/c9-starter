@@ -1053,6 +1053,7 @@ a:hover {
 
 #wrapper-footer {
 	color: $light;
+	background: $dark;
 }
 
 #footer-full-content {
@@ -1074,6 +1075,8 @@ a:hover {
 #wrapper-footer .site-footer a {
 	color: $light;
 	text-decoration: none;
+	margin-right: 2px;
+	margin-left: 2px;
 }
 
 #wrapper-footer .site-footer a:hover {
