@@ -9,14 +9,14 @@
       wp.hooks.addFilter(
         "editor.PostFeaturedImage",
         "myplugin/myhook",
-        function(original) {
-          return function() {
+        OriginalComponent => {
+          return props => {
             return wp.element.createElement(
               "div",
               { key: "outer" + Math.random() },
               [
                 "Prepend above",
-                _.extend(original({}), { key: "my-key" }),
+                wp.element.createElement(OriginalComponent, props),
                 wp.element.createElement("input", {
                   class: "components-radio-control__input",
                   type: "checkbox",
