@@ -1,10 +1,35 @@
+/* eslint-disable react/react-in-jsx-scope */
 "use strict";
 (function($) {
   // Code Editor Javascript to accompany
   $(function() {
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
-    $(document).ready(function() {});
+    $(document).ready(function() {
+      const el = wp.element.createElement;
+
+      wp.hooks.addFilter(
+        "editor.PostFeaturedImage",
+        "cortextoo/wrap-post-featured-image",
+        OriginalComponent => {
+          return props => {
+            return el("div", {}, [
+              el(OriginalComponent, props),
+              el("div", { class: "cortextoo-check-wrapper" }, [
+                el("input", {
+                  class: "components-radio-control__input",
+                  type: "checkbox",
+                  onClick: value => {
+                    console.log("teawdawdawst", value);
+                  }
+                }),
+                el("p", {}, ["what do i do"])
+              ])
+            ]);
+          };
+        }
+      );
+    });
 
     /*
     John Lynch : Alert when not saved
@@ -126,7 +151,7 @@
         .parents("tr")
         .show();
     });
-  
+
     $("textarea[class*=code_editor_page_").each(function() {
       // pulls the class to determine type of editor
       if (
