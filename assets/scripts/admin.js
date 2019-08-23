@@ -13,17 +13,27 @@
         "cortextoo/wrap-post-featured-image",
         OriginalComponent => {
           return props => {
+            console.log(OriginalComponent);
             return el("div", {}, [
               el(OriginalComponent, props),
-              el("div", { class: "cortextoo-check-wrapper" }, [
+              el("div", { class: "components-base-control" }, [
                 el("input", {
+                  id: "cortextoo-checkbox-featured",
                   class: "components-radio-control__input",
                   type: "checkbox",
-                  onClick: value => {
-                    console.log("teawdawdawst", value);
+                  value: 1,
+                  onClick: ev => {
+                    console.log("teawdawdawst", ev);
                   }
                 }),
-                el("p", {}, ["what do i do"])
+                el(
+                  "label",
+                  {
+                    class: "components-checkbox-control__label",
+                    for: "cortextoo-checkbox-featured"
+                  },
+                  ["what do i do"]
+                )
               ])
             ]);
           };
