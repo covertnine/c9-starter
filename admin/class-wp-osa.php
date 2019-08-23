@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
  * WP Settings API Class.
  *
  * @since 1.0.0
- */
+*/
 
 if (!class_exists('WP_OSA')) :
 

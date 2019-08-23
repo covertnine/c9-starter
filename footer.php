@@ -35,16 +35,20 @@ $the_theme = wp_get_theme();
 
                         <div class="container">
                             <div class="row text-center">
+                                <?php
+                                    $social_links = c9FooterHelpers::build_social();
+                                    if ($social_links) : ?>
                                 <div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
                                     <div class="footer-social text-center">
                                         <?php
-                                            $social_links = c9FooterHelpers::build_social();
-                                            foreach ($social_links as $link_key => $link_value) {
-                                                echo $link_value;
-                                            }
-                                            ?>
+                                                foreach ($social_links as $link_key => $link_value) {
+                                                    echo $link_value;
+                                                }
+                                                ?>
                                     </div>
                                 </div>
+                                <?php endif;
+                                    ?>
                                 <div class="col-xs-6 col-sm-3 col-lg-3 footer-links-wrapper">
                                     <div class="footer-links">
                                         <a href="/terms">Terms</a> |
