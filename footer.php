@@ -51,20 +51,15 @@ $the_theme = wp_get_theme();
                                         <a href="/privacy">Privacy</a>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper">
-                                    <p class="text-center copyright">&copy; 2019 Wells Lamont | A Marmon Group/Berkshire Hathaway Company</p>
-                                </div>
+                                <?php
+                                    $footer_stuff = get_option('cortex_footer');
+                                    if (get_option('cortex_footer')) {
+                                        echo '<div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
+                                    }
+                                    ?>
                                 <div class="col-xs-12 col-sm-12 col-lg-2 text-left footer-search-wrapper">
                                     <div class="footer-search">
-                                        <form method="get" id="searchform" action="https://wl2.covertnine.com/account-profile" role="search">
-                                            <label class="assistive-text sr-only" for="s">Search</label>
-                                            <div class="input-group">
-                                                <input class="field form-control" id="s" name="s" type="text" placeholder="Search &hellip;" value="">
-                                                <span class="input-group-append">
-                                                    <input class="btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
-                                                </span>
-                                            </div>
-                                        </form>
+                                        <?php get_search_form(); ?>
                                     </div>
                                 </div>
                             </div>

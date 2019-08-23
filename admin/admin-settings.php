@@ -89,30 +89,6 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_social',
-		array(
-			'id'      => 'fixed_social_links',
-			'type'    => 'radio',
-			'name'    => __('Fixed Social Links', 'WPOSA'),
-			'desc'    => __('Set social links to always visible?', 'WPOSA'),
-			'options' => array(
-				"fixed" => "Fixed",
-				"not_fixec" => "Not Fixed",
-			),
-		)
-	);
-
-	// Field: Separator.
-	$wposa_obj->add_field(
-		'cortex_social',
-		array(
-			'id'   => 'separator_1',
-			'type' => 'separator',
-		)
-	);
-
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
@@ -232,39 +208,28 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-
 	// ---------------------------//
 	//---- End Cortex Branding----//
-	//---------------------------//
+	//----------------------------//
 
 	// ---------------------------//
-	//---- Start Cortex Layout ---//
-	//---------------------------//
+	//---- Start Cortex Footer ---//
+	//----------------------------//
 	$wposa_obj->add_section(
 		array(
-			'id'    => 'cortex_layout',
-			'title' => __('Layout', 'WPOSA'),
+			'id'    => 'cortex_footer',
+			'title' => __('Footer', 'WPOSA'),
 		)
 	);
 
-	// Field: Title.
+	// Field: Multicheck.
 	$wposa_obj->add_field(
-		'cortex_layout',
+		'cortex_footer',
 		array(
-			'id'   => 'header',
-			'type' => 'title',
-			'name' => '<h1>Header</h1>',
-		)
-	);
-
-	//Field: Top Widget Bar Enable
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'      => 'topbar_visible',
+			'id'      => 'show_search',
 			'type'    => 'radio',
-			'name'    => __('Top Widget Area visibility', 'WPOSA'),
-			'desc'    => __('Do you want to show or hide the top widget bar?', 'WPOSA'),
+			'name'    => __('Display Search', 'WPOSA'),
+			'desc'    => __('Do you want to show or hide the search form?', 'WPOSA'),
 			'options' => array(
 				"show" => "Show",
 				"hide" => "Hide",
@@ -272,65 +237,13 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Title.
 	$wposa_obj->add_field(
-		'cortex_layout',
+		'cortex_footer',
 		array(
-			'id'   => 'footer',
-			'type' => 'title',
-			'name' => '<h1>Footer</h1>',
-		)
-	);
-
-
-	// Field: Image.
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'      => 'image',
-			'type'    => 'image',
-			'name'    => __('Image', 'WPOSA'),
-			'desc'    => __('Image description', 'WPOSA'),
-			'options' => array(
-				'button_label' => 'Choose Image',
-			),
-		)
-	);
-
-	// Field: File.
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'      => 'file',
-			'type'    => 'file',
-			'name'    => __('File', 'WPOSA'),
-			'desc'    => __('File description', 'WPOSA'),
-			'options' => array(
-				'button_label' => 'Choose file',
-			),
-		)
-	);
-
-	// Field: Color.
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'          => 'color',
-			'type'        => 'color',
-			'name'        => __('Color', 'WPOSA'),
-			'desc'        => __('Color description', 'WPOSA'),
-			'placeholder' => __('#5F4B8B', 'WPOSA'),
-		)
-	);
-
-	// Field: WYSIWYG.
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'   => 'wysiwyg',
+			'id'   => 'copyright_content',
 			'type' => 'wysiwyg',
-			'name' => __('WP_Editor', 'WPOSA'),
-			'desc' => __('WP_Editor description', 'WPOSA'),
+			'name' => __('Copyright', 'WPOSA'),
+			'desc' => __('Enter Custom Copyright Content Here', 'WPOSA'),
 		)
 	);
 
