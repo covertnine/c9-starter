@@ -73,6 +73,8 @@
     "@fortawesome/fontawesome-free": "^5.7.2",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "del": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^5.0.0",

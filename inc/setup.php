@@ -136,3 +136,23 @@ if (!function_exists('cortextoo_all_excerpts_get_more_link')) {
 		) . '</a></p>';
 	}
 }
+
+function cortextoo_featured_image_display_settings($content, $post_id)
+{
+	$field_id    = 'show_featured_image';
+	$field_value = esc_attr(get_post_meta($post_id, $field_id, true));
+	$field_text  = esc_html__('Show image.', 'generatewp');
+	$field_state = checked($field_value, 1, false);
+
+	$field_label = sprintf(
+		'<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
+		$field_id,
+		$field_value,
+		$field_state,
+		$field_text
+	);
+
+	return $content .= $field_label;
+}
+
+add_filter('admin_post_thumbnail_html', 'cortextoo_featured_image_display_settings');

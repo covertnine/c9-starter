@@ -4,7 +4,25 @@
   $(function() {
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
-    $(document).ready(function() {});
+    $(document).ready(function() {
+      const { RadioControl } = wp.components;
+      wp.hooks.addFilter(
+        "editor.PostFeaturedImage",
+        "myplugin/myhook",
+        function(original) {
+          return function() {
+            return wp.element.createElement(
+              "div",
+              { key: "outer" + Math.random() },
+              [
+                _.extend(original({}), { key: "my-key" }),
+                <RadioControl></RadioControl>
+              ]
+            );
+          };
+        }
+      );
+    });
 
     /*
     John Lynch : Alert when not saved
@@ -126,7 +144,7 @@
         .parents("tr")
         .show();
     });
-  
+
     $("textarea[class*=code_editor_page_").each(function() {
       // pulls the class to determine type of editor
       if (
