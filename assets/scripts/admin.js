@@ -6,26 +6,26 @@
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
     $(document).ready(function() {
+      const el = wp.element.createElement;
+
       wp.hooks.addFilter(
         "editor.PostFeaturedImage",
-        "myplugin/myhook",
+        "cortextoo/wrap-post-featured-image",
         OriginalComponent => {
           return props => {
-            return wp.element.createElement(
-              "div",
-              { key: "outer" + Math.random() },
-              [
-                "Prepend above",
-                wp.element.createElement(OriginalComponent, props),
-                wp.element.createElement("input", {
+            return el("div", {}, [
+              el(OriginalComponent, props),
+              el("div", { class: "cortextoo-check-wrapper" }, [
+                el("input", {
                   class: "components-radio-control__input",
                   type: "checkbox",
                   onClick: value => {
                     console.log("teawdawdawst", value);
                   }
-                })
-              ]
-            );
+                }),
+                el("p", {}, ["what do i do"])
+              ])
+            ]);
           };
         }
       );
