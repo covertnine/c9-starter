@@ -228,7 +228,7 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'show_search',
 			'type'    => 'radio',
-			'name'    => __('Display Search', 'WPOSA'),
+			'name'    => __('Display Search in Footer', 'WPOSA'),
 			'desc'    => __('Do you want to show or hide the search form?', 'WPOSA'),
 			'options' => array(
 				"show" => "Show",

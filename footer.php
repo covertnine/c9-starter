@@ -52,16 +52,20 @@ $the_theme = wp_get_theme();
                                     </div>
                                 </div>
                                 <?php
-                                    $footer_stuff = get_option('cortex_footer');
-                                    if (get_option('cortex_footer')) {
-                                        echo '<div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
-                                    }
-                                    ?>
+                                    if (get_option('cortex_footer')) :
+                                        if (get_option('cortex_footer')['copyright_content']) :
+                                            echo '<div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
+                                        endif;
+                                        if (get_option('cortex_footer')['show_search'] === 'show') : ?>
                                 <div class="col-xs-12 col-sm-12 col-lg-2 text-left footer-search-wrapper">
                                     <div class="footer-search">
                                         <?php get_search_form(); ?>
                                     </div>
                                 </div>
+                                <?php
+                                        endif;
+                                        ?>
+                                <?php endif; ?>
                             </div>
                         </div><!-- .container-->
 

@@ -25,7 +25,10 @@ if (!class_exists('c9FooterHelpers')) {
         }
         public static function build_twitter_link($input)
         {
-            return '<a href="https://twitter.com/' . $input . '" target="_blank"><i class="fab fa-twitter"></i></a>';
+            $pattern = '/(https|http)?(:\/\/)?(twitter\.com\/)?(.+)/';
+            $replacement = '<a href="https://twitter.com/${4}" target="_blank"><i class="fab fa-twitter"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_facebook_link($input)
         {
