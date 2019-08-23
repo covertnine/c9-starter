@@ -17,7 +17,10 @@
     "node": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+			"jsx": true
+		}
   },
   "globals": {
     "wp": true,
@@ -29,10 +32,19 @@
     "WebFont": true,
     "$": true
   },
-  "plugins": ["jquery"],
+  "plugins": ["jquery", "react", "jsx-a11y"],
+  "settings": {
+		"react": {
+			"pragma": "wp",
+			"version": "detect"
+		}
+	},
   "rules": {
     "no-console": 0,
     "jquery/no-hide": 0,
-    "jquery/no-show": 0
+    "jquery/no-show": 0,
+    "react/prop-types": 0,
+		"react/jsx-key": 0,
+		"react/display-name": 0
   }
 }

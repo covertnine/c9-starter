@@ -15,7 +15,12 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-        test: /\.js$/,
+        test: /.js$/,
+        exclude: /node_modules|admin\.js/,
+        loader: "babel-loader"
+      },
+      {
+        test: /admin\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
         options: {

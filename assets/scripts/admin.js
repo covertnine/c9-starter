@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 "use strict";
 (function($) {
   // Code Editor Javascript to accompany
@@ -5,7 +6,6 @@
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
     $(document).ready(function() {
-      const { RadioControl } = wp.components;
       wp.hooks.addFilter(
         "editor.PostFeaturedImage",
         "myplugin/myhook",
@@ -15,8 +15,15 @@
               "div",
               { key: "outer" + Math.random() },
               [
+                "Prepend above",
                 _.extend(original({}), { key: "my-key" }),
-                <RadioControl></RadioControl>
+                wp.element.createElement("input", {
+                  class: "components-radio-control__input",
+                  type: "checkbox",
+                  onClick: value => {
+                    console.log("teawdawdawst", value);
+                  }
+                })
               ]
             );
           };
