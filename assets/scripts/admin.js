@@ -6,29 +6,29 @@
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
     $(document).ready(function() {
-      const el = wp.element.createElement;
-
-      wp.hooks.addFilter(
-        "editor.PostFeaturedImage",
-        "cortextoo/wrap-post-featured-image",
-        OriginalComponent => {
-          return props => {
-            return el("div", {}, [
-              el(OriginalComponent, props),
-              el("div", { class: "cortextoo-check-wrapper" }, [
-                el("input", {
-                  class: "components-radio-control__input",
-                  type: "checkbox",
-                  onClick: value => {
-                    console.log("teawdawdawst", value);
-                  }
-                }),
-                el("p", {}, ["what do i do"])
-              ])
-            ]);
-          };
-        }
-      );
+      // Commenting Code out while under development
+      // const el = wp.element.createElement;
+      // wp.hooks.addFilter(
+      //   "editor.PostFeaturedImage",
+      //   "cortextoo/wrap-post-featured-image",
+      //   OriginalComponent => {
+      //     return props => {
+      //       return el("div", {}, [
+      //         el(OriginalComponent, props),
+      //         el("div", { class: "cortextoo-check-wrapper" }, [
+      //           el("input", {
+      //             class: "components-radio-control__input",
+      //             type: "checkbox",
+      //             onClick: value => {
+      //               console.log("teawdawdawst", value);
+      //             }
+      //           }),
+      //           el("p", {}, ["what do i do"])
+      //         ])
+      //       ]);
+      //     };
+      //   }
+      // );
     });
 
     /*
