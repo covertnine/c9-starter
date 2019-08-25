@@ -4,7 +4,8 @@
     "type": "wordpress-theme",
     "license": "GPL-2.0",
     "minimum-stability": "stable",
-    "require": {"composer/installers": "^1.5"},
+    "require": {"composer/installers": "^1.5",
+        "league/csv": "^9.3"},
     "keywords": ["wordpress","theme","bootstrap"],
     "homepage": "https://github.com/holger1411/understrap"
 }
