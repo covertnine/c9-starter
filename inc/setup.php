@@ -99,22 +99,3 @@ if (!function_exists('cortextoo_setup')) {
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
 	}
 }
-
-
-add_filter('excerpt_more', 'cortextoo_custom_excerpt_more');
-
-if (!function_exists('cortextoo_custom_excerpt_more')) {
-	/**
-	 * Removes the ... from the excerpt read more link
-	 *
-	 * @param string $more The excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_custom_excerpt_more($more)
-	{
-		return '';
-	}
-}
-
-add_filter('wp_trim_excerpt', 'cortextoo_all_excerpts_get_more_link');
