@@ -111,10 +111,6 @@ body {
 }
 
 /*square buttons*/
-// .editor-styles-wrapper .button,
-// .editor-styles-wrapper .button-primary,
-// .editor-styles-wrapper .mce-content-body.button,
-
 .editor-rich-text__editable.wp-block-button__link.square {
     border-radius: 0;
 }
@@ -248,6 +244,7 @@ body {
 /****************************************************************************************/
 /***************************** Typography */
 /****************************************************************************************/
+.editor-styles-wrapper,
 .h1,
 .h2,
 .h3,
