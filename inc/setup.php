@@ -118,21 +118,3 @@ if (!function_exists('cortextoo_custom_excerpt_more')) {
 }
 
 add_filter('wp_trim_excerpt', 'cortextoo_all_excerpts_get_more_link');
-
-if (!function_exists('cortextoo_all_excerpts_get_more_link')) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_all_excerpts_get_more_link($post_excerpt)
-	{
-
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __(
-			'Read More...',
-			'cortextoo'
-		) . '</a></p>';
-	}
-}
