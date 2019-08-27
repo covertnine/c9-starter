@@ -7,7 +7,7 @@
     // init the form when the document is ready or when the form is populated after an ajax call
     $(document).ready(function() {
       // Commenting Code out while under development
-      // const el = wp.element.createElement;
+      // var el = wp.element.createElement;
       // wp.hooks.addFilter(
       //   "editor.PostFeaturedImage",
       //   "cortextoo/wrap-post-featured-image",
@@ -17,18 +17,22 @@
       //         el(OriginalComponent, props),
       //         el("div", { class: "cortextoo-check-wrapper" }, [
       //           el("input", {
-      //             class: "components-radio-control__input",
+      //             class: "components-checkbox__input",
       //             type: "checkbox",
-      //             onClick: value => {
-      //               console.log("teawdawdawst", value);
+      //             featImageWide: 0,
+      //             onClick: event => {
+      //               update_post_meta(event, props);
       //             }
-      //           }),
-      //           el("p", {}, ["what do i do"])
+      //           })
       //         ])
       //       ]);
       //     };
       //   }
       // );
+
+      // function update_post_meta(event, props) {
+      //   console.log(event.target, props);
+      // }
     });
 
     /*
@@ -122,7 +126,7 @@
       $("label[for='cortex_typography[subheading_font]']")
         .parents("tr")
         .hide();
-      $("label[for='cortex_typography[typography_presets]']")
+      $("label[for='cortex_typography[body_font]']")
         .parents("tr")
         .hide();
     }
@@ -135,7 +139,7 @@
         $("label[for='cortex_typography[subheading_font]']")
           .parents("tr")
           .hide();
-        $("label[for='cortex_typography[typography_presets]']")
+        $("label[for='cortex_typography[body_font]']")
           .parents("tr")
           .hide();
       }
@@ -147,7 +151,7 @@
       $("label[for='cortex_typography[subheading_font]']")
         .parents("tr")
         .show();
-      $("label[for='cortex_typography[typography_presets]']")
+      $("label[for='cortex_typography[body_font]']")
         .parents("tr")
         .show();
     });
