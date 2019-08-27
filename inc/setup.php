@@ -27,8 +27,6 @@ if (!function_exists('cortextoo_setup')) {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on understrap, use a find and replace
-		 * to change 'cortextoo' to the name of your theme in all the template files
 		 */
 		load_theme_textdomain('cortextoo', get_template_directory() . '/languages');
 
@@ -99,60 +97,3 @@ if (!function_exists('cortextoo_setup')) {
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
 	}
 }
-
-
-add_filter('excerpt_more', 'cortextoo_custom_excerpt_more');
-
-if (!function_exists('cortextoo_custom_excerpt_more')) {
-	/**
-	 * Removes the ... from the excerpt read more link
-	 *
-	 * @param string $more The excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_custom_excerpt_more($more)
-	{
-		return '';
-	}
-}
-
-add_filter('wp_trim_excerpt', 'cortextoo_all_excerpts_get_more_link');
-
-if (!function_exists('cortextoo_all_excerpts_get_more_link')) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_all_excerpts_get_more_link($post_excerpt)
-	{
-
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __(
-			'Read More...',
-			'cortextoo'
-		) . '</a></p>';
-	}
-}
-
-function cortextoo_featured_image_display_settings($content, $post_id)
-{
-	$field_id    = 'show_featured_image';
-	$field_value = esc_attr(get_post_meta($post_id, $field_id, true));
-	$field_text  = esc_html__('Show image.', 'generatewp');
-	$field_state = checked($field_value, 1, false);
-
-	$field_label = sprintf(
-		'<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
-		$field_id,
-		$field_value,
-		$field_state,
-		$field_text
-	);
-
-	return $content .= $field_label;
-}
-
-add_filter('admin_post_thumbnail_html', 'cortextoo_featured_image_display_settings');

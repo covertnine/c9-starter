@@ -277,20 +277,7 @@ if (class_exists('WP_OSA')) {
 				"show" => "Show",
 				"hide" => "Hide",
 			),
-		)
-	);
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_posts',
-		array(
-			'id'      => 'header_size',
-			'type'    => 'radio',
-			'name'    => __('Header Size', 'WPOSA'),
-			'desc'    => __('What size do you want your header to be?', 'WPOSA'),
-			'options' => array(
-				"big" => "Big",
-				"small" => "Small",
-			),
+			'default' => 'show'
 		)
 	);
 	// Field: Multicheck.
@@ -305,6 +292,7 @@ if (class_exists('WP_OSA')) {
 				"show" => "Show",
 				"hide" => "Hide",
 			),
+			'default' => 'show'
 		)
 	);
 	// Field: Multicheck.
@@ -316,9 +304,11 @@ if (class_exists('WP_OSA')) {
 			'name'    => __('Blog Sidebar', 'WPOSA'),
 			'desc'    => __('Do you want a sidebar on your posts visible', 'WPOSA'),
 			'options' => array(
-				"show" => "Show Sidebar",
-				"hide" => "Hide Sidebar",
+				"hide" => "No Sidebar",
+				"sidebar-left" => "Left Sidebar",
+				"sidebar-right" => "Right Sidebar",
 			),
+			'default' => 'hide'
 		)
 	);
 
@@ -428,21 +418,43 @@ if (class_exists('WP_OSA')) {
 	$wposa_obj->add_field(
 		'cortex_seo',
 		array(
-			'id'      => 'google_analytics_api',
+			'id'      => 'google_analytics_id',
 			'type'    => 'text',
-			'name'    => __('Google Analytics API Key', 'WPOSA'),
+			'name'    => __('Google Analytics ID', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_seo',
+		array(
+			'id'      => 'matomo_snippet',
+			'type'    => 'code',
+			'language' => 'javascript',
+			'name'    => __('Matomo Snippet', 'WPOSA'),
+			'desc'    => __('', 'WPOSA'),
+			'default' => '',
+		)
+	);
+	$wposa_obj->add_field(
+		'cortex_seo',
+		array(
+			'id'      => 'gtm_snippet',
+			'type'    => 'code',
+			'language' => 'javascript',
+			'name'    => __('Google Tags Manager Snippet', 'WPOSA'),
 			'desc'    => __('', 'WPOSA'),
 			'default' => '',
 		)
 	);
 
-	// ---------------------------//
-	//---- End Cortex SEO ----//
+	//---------------------------//
+	//------ End Cortex SEO -----//
 	//---------------------------//
 
-	// -------------------------------//
+	// -----------------------------//
 	//---- Start Cortex Advanced ---//
-	//--------------------------------//
+	//------------------------------//
 
 	$wposa_obj->add_section(
 		array(

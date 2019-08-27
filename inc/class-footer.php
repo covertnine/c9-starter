@@ -25,58 +25,94 @@ if (!class_exists('c9FooterHelpers')) {
         }
         public static function build_twitter_link($input)
         {
-            $pattern = '/(https|http)?(:\/\/)?(twitter\.com\/)?(.+)/';
-            $replacement = '<a href="https://twitter.com/${4}" target="_blank"><i class="fab fa-twitter"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(twitter\.com\/)?(.+)/';
+            $replacement = '<a href="//twitter.com/${4}" target="_blank"><i class="fab fa-twitter"></i></a>';
             $link = preg_replace($pattern, $replacement, $input);
             return $link;
         }
         public static function build_facebook_link($input)
         {
-            return '<a href="https://facebook.com/' . $input . '" target="_blank"><i class="fab fa-facebook"></i></a>';
+            $pattern = '/(https|http)?(:\/\/)?(facebook\.com\/)?(.+)/';
+            $replacement = '<a href="//facebook.com/${4}" target="_blank"><i class="fab fa-facebook"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_instagram_link($input)
         {
-            return '<a href="https://instagram.com/' . $input . '" target="_blank"><i class="fab fa-instagram"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(instagram\.com\/)?(.+)/';
+            $replacement = '<a href="//instagram.com/${4}" target="_blank"><i class="fab fa-instagram"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_pinterest_link($input)
         {
-            return '<a href="https://pinterest.com/' . $input . '" target="_blank"><i class="fab fa-pinterest"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(pinterest\.com\/)?(.+)/';
+            $replacement = '<a href="//pinterest.com/${4}" target="_blank"><i class="fab fa-pinterest"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_spotify_link($input)
         {
-            return '<a href="https://spotify.com/' . $input . '" target="_blank"><i class="fab fa-spotify"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(open)?(spotify\.com\/)?(.+)/';
+            $replacement = '<a href="//open.spotify.com/${5}" target="_blank"><i class="fab fa-spotify"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_youtube_link($input)
         {
-            return '<a href="https://youtube.com/' . $input . '" target="_blank"><i class="fab fa-youtube"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(youtube\.com\/)?(.+)/';
+            $replacement = '<a href="//youtube.com/${4}" target="_blank"><i class="fab fa-youtube"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_flickr_link($input)
         {
-            return '<a href="https://flickr.com/' . $input . '" target="_blank"><i class="fab fa-flickr"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(flickr\.com\/)?(.+)/';
+            $replacement = '<a href="//flickr.com/${4}" target="_blank"><i class="fab fa-flickr"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_tumblr_link($input)
         {
-            return '<a href="https://tumblr.com/' . $input . '" target="_blank"><i class="fab fa-tumblr"></i></a>';
+            // $pattern = '/(https|http)?(:\/\/)?(.+?)\.(tumblr\.com\/)?/';
+            $link = '<a href="//' . $input . '.tumblr.com" target="_blank"><i class="fab fa-tumblr"></i></a>';
+            // $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_yelp_link($input)
         {
-            return '<a href="https://yelp.com/' . $input . '" target="_blank"><i class="fab fa-yelp"></i></a>';
+            $pattern = '/(https|http)?(:\/\/)?(yelp\.com\/)?(.+)/';
+            $replacement = '<a href="//yelp.com/biz/${4}" target="_blank"><i class="fab fa-yelp"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_subreddit_link($input)
         {
-            return '<a href="https://reddit.com/r/' . $input . '" target="_blank"><i class="fab fa-reddit"></i></a>';
+            $pattern = '/(https|http)?(:\/\/)?(www\.)?(reddit\.com\/r\/)?(.+)/';
+            $replacement = '<a href="//reddit.com/r/${5}" target="_blank"><i class="fab fa-reddit"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_linkedin_link($input)
         {
-            return '<a href="https://linkedin.com/' . $input . '" target="_blank"><i class="fab fa-linkedin"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(linkedin\.com\/)?(.+)/';
+            $replacement = '<a href="//linkedin.com/in/${4}" target="_blank"><i class="fab fa-linkedin"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_github_link($input)
         {
-            return '<a href="https://github.com/' . $input . '" target="_blank"><i class="fab fa-github"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(github\.com\/)?(.+)/';
+            $replacement = '<a href="//github.com/${4}" target="_blank"><i class="fab fa-github"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
         public static function build_soundcloud_link($input)
         {
-            return '<a href="https://soundcloud.com/' . $input . '" target="_blank"><i class="fab fa-soundcloud"></i></a>';
+            $pattern = '/@?(https|http)?(:\/\/)?(soundcloud\.com\/)?(.+)/';
+            $replacement = '<a href="//soundcloud.com/${4}" target="_blank"><i class="fab fa-soundcloud"></i></a>';
+            $link = preg_replace($pattern, $replacement, $input);
+            return $link;
         }
     }
 }
