@@ -34,7 +34,6 @@ else :
                         <div class="site-info">
 
                             <div class="container">
-
                                 <div class="row text-center">
                                     <?php
                                         $social_links = c9FooterHelpers::build_social();
