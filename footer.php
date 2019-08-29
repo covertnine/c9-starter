@@ -13,10 +13,10 @@ $the_theme = wp_get_theme();
 
 <?php get_sidebar('footerfull'); ?>
 
-<?php if (file_exists(locate_template('client/inc/footer.php'))) {
+<?php if (file_exists(locate_template('client/inc/footer.php'))) :
 
     include(locate_template('client/inc/footer.php'));
-} else {
+else :
 
     require_once(get_template_directory() . '/inc/class-footer.php'); ?>
 
@@ -69,23 +69,38 @@ $the_theme = wp_get_theme();
                                         <?php
                                                 endif;
                                                 ?>
-                                    <?php endif; ?>
                                 </div>
-                            </div><!-- .container-->
+                            </div>
+                        <?php endif;
+                            ?>
+                        <?php
+                            if (get_option('cortex_footer')) :
+                                if (get_option('cortex_footer')['copyright_content']) :
+                                    echo '<div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
+                                endif;
+                                if (get_option('cortex_footer')['show_search'] === 'show') : ?>
+                                <div class="col-xs-12 col-sm-12 col-lg-2 text-left footer-search-wrapper">
+                                    <div class="footer-search">
+                                        <?php get_search_form(); ?>
+                                    </div>
+                                </div>
+                        <?php endif;
+                            endif; ?>
+                        </div><!-- .container-->
 
-                        </div><!-- .site-info -->
+                </div><!-- .site-info -->
 
-                    </footer><!-- #colophon -->
+                </footer><!-- #colophon -->
 
-                </div>
-                <!--col end -->
+            </div>
+            <!--col end -->
 
-            </div><!-- row end -->
+        </div><!-- row end -->
 
-        </div><!-- container end -->
+    </div><!-- container end -->
 
     </div><!-- wrapper end -->
-<?php } //end of checking for client footer.php 
+<?php endif; //end of checking for client footer.php 
 ?>
 </div><!-- #page we need this extra closing tag here -->
 <div id="search">
