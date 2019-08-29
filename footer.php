@@ -44,16 +44,10 @@ else :
                                                         foreach ($social_links as $link_key => $link_value) {
                                                             echo $link_value;
                                                         }
-                                                    ?>
+                                                        ?>
                                             </div>
                                         </div>
                                     <?php endif; ?>
-                                    <div class="col-xs-6 col-sm-3 col-lg-3 footer-links-wrapper">
-                                        <div class="footer-links">
-                                            <a href="/terms">Terms</a> |
-                                            <a href="/privacy">Privacy</a>
-                                        </div>
-                                    </div>
                                     <?php
                                         if (get_option('cortex_footer')) :
                                             if (get_option('cortex_footer')['copyright_content']) :
