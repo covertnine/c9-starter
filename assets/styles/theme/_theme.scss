@@ -258,7 +258,8 @@ body {
 
 p.wp-block-subhead,
 .subhead-h,
-.c9-sh {
+.c9-sh,
+.editor-styles-wrapper .c9-cta .c9-sh p {
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
 }
@@ -271,7 +272,8 @@ p.wp-block-subhead,
 .display-3,
 .display-4,
 .display-5,
-.display-6 {
+.display-6,
+.editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
 	line-height: 1.1;
 }
@@ -312,7 +314,7 @@ a:hover {
 }
 
 /* Responsive Typography */
-@media only screen and (min-width: 1px) and (max-width: 575px) {
+@media only screen and (min-width: 1px) and (max-width: 667px) {
 	:root {
 		font-size: 50%;
 	}
@@ -1516,7 +1518,7 @@ object {
 	quotes: """";
 	position: relative;
 	margin: 20px auto 30px auto;
-	padding: 0 40px;
+	padding: 0 30px;
 	border-left: 3px solid $primary;
 }
 
@@ -1526,8 +1528,8 @@ object {
 	letter-spacing: .2rem;
 	text-transform: uppercase;
 	position: absolute;
-	top: -40px;
-	left: -50px;
+	top: -30px;
+	left: -40px;
 	font-size: 7rem;
 	font-weight: $font-weight-normal;
 	font-family: $headings-font-family;
@@ -1597,12 +1599,41 @@ object {
 	}
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 992px) {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
 	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
 		font-size: 2.6rem;
 		line-height: 2;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	.editor-styles-wrapper blockquote,
+	.entry-content blockquote,
+	.wp-block-quote:not(.is-large):not(.is-style-large) {
+		padding: 0 10px;
+	}
+
+	.entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
+		font-size: 1.6rem;
+		line-height: 1.9;
+	}
+
+	.editor-styles-wrapper blockquote:before,
+	.entry-content blockquote:before {
+		content: "\201C";
+		letter-spacing: .2rem;
+		text-transform: uppercase;
+		position: absolute;
+		top: -20px;
+		left: -35px;
+		font-size: 7rem;
+		font-weight: $font-weight-normal;
+		font-family: $headings-font-family;
+		color: $primary;
 	}
 
 }
@@ -2260,10 +2291,11 @@ screen and (max-height: 300px) {
 	border-radius: 28px;
 }
 
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.c9-button-shape-outline {
-	border: 3px solid $primary;
+	border: 3px solid $gray-900;
 	background-color: transparent;
-	color: $primary;
+	color: $gray-900;
 }
 
 .wp-block-button__link.c9-button-size-small {
