@@ -45,7 +45,7 @@ else :
                                                         foreach ($social_links as $link_key => $link_value) {
                                                             echo $link_value;
                                                         }
-                                                        ?>
+                                                    ?>
                                             </div>
                                         </div>
                                     <?php endif;
