@@ -87,18 +87,12 @@ else :
                         <?php endif;
                             endif; ?>
                         </div><!-- .container-->
-
                 </div><!-- .site-info -->
-
                 </footer><!-- #colophon -->
-
             </div>
             <!--col end -->
-
         </div><!-- row end -->
-
     </div><!-- container end -->
-
     </div><!-- wrapper end -->
 <?php endif; //end of checking for client footer.php 
 ?>
