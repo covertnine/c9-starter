@@ -48,8 +48,7 @@ else :
                                                     ?>
                                             </div>
                                         </div>
-                                    <?php endif;
-                                        ?>
+                                    <?php endif; ?>
                                     <div class="col-xs-6 col-sm-3 col-lg-3 footer-links-wrapper">
                                         <div class="footer-links">
                                             <a href="/terms">Terms</a> |
