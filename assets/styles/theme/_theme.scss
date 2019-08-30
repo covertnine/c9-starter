@@ -517,6 +517,12 @@ a:hover {
 	margin-bottom: 1em;
 }
 
+.aligncenter:last-child,
+.alignright:last-child,
+.alignleft:last-child {
+	margin-bottom: 0px;
+}
+
 .wp-block-image .alignleft {
 	margin-left: 0px;
 	margin-right: 30px;
@@ -610,7 +616,7 @@ a:hover {
 
 @media only screen and (min-width: 1px) and (max-width: 991px) {
 
-	.navbar-brand img {
+	.navbar-brand .c9-custom-logo {
 		max-width: 285px;
 		max-height: 92px;
 		width: auto;
@@ -647,6 +653,15 @@ a:hover {
 		text-align: center;
 	}
 
+}
+
+@media only screen and (min-width: 1px) and (max-width: 667px) {
+	.navbar-brand .c9-custom-logo {
+		max-width: 285px;
+		max-height: 45px;
+		width: auto;
+		height: auto;
+	}
 }
 
 
