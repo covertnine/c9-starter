@@ -119,6 +119,11 @@ body {
     width: 100%;
 }
 
+/* list items */
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before {
+    top: 10px;
+}
+
 /****************************************************************************************/
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/
@@ -276,7 +281,6 @@ h6,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
     font-family: $headings-font-family;
-    font-weight: 700;
 }
 
 .editor-styles-wrapper h1,

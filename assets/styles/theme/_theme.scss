@@ -126,6 +126,7 @@ body {
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
+.editor-styles-wrapper ul li,
 .wp-block-pullquote,
 .wp-block-pullquote blockquote p,
 .editor-default-block-appender textarea.editor-default-block-appender__content,
@@ -146,7 +147,7 @@ body {
 .wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
 .wp-block-pullquote blockquote>.editor-rich-text p {
 	margin-bottom: 30px;
-	line-height: 2;
+	line-height: 1.7;
 }
 
 .entry-content p:last-child,
@@ -307,6 +308,7 @@ p.wp-block-subhead,
 a {
 	-webkit-transition: .3s color;
 	transition: .3s color;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -1647,12 +1649,12 @@ object {
 .editor-styles-wrapper .editor-rich-text ol,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) {
 	padding: 0px 20px;
-	margin: 0px 0px 45px 30px;
+	margin: 30px 0px 45px 45px;
 }
 
 .entry-content ul:not(.wp-block-gallery),
 .editor-styles-wrapper ul:not(.wp-block-gallery) {
-	list-style: disc;
+	list-style: none;
 }
 
 .entry-content ol,
@@ -1704,6 +1706,7 @@ object {
 .entry-content ul:not(.wp-block-gallery) li,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
 	position: relative;
+	margin-bottom: 8px;
 }
 
 .entry-content ul:not(.wp-block-gallery) li:before,
@@ -1711,10 +1714,9 @@ object {
 	font-family: 'FontAwesome';
 	font-size: 1rem;
 	content: "\f111";
-	margin-left: -12px;
 	position: absolute;
 	top: 6px;
-	left: 0px;
+	left: -30px;
 }
 
 /****************************************************************************************/
@@ -2293,7 +2295,7 @@ screen and (max-height: 300px) {
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.c9-button-shape-outline {
-	border: 3px solid $gray-900;
+	border: 3px solid;
 	background-color: transparent;
 	color: $gray-900;
 }
