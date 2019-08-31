@@ -88,6 +88,10 @@ body {
     margin-bottom: 0px !important;
 }
 
+.wp-block-table {
+    margin: 0px auto 25px auto;
+}
+
 /* for elements appearing in backend editor need to visually represent the frontend available width*/
 @media only screen and (min-width: 768px) {
     .editor-styles-wrapper .wp-block {
