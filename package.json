@@ -1,5 +1,5 @@
 {
-  "name": "understrap",
+  "name": "cortextoo",
   "version": "0.8.2",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -18,12 +18,13 @@
     "theme",
     "framework",
     "bootstrap",
-    "underscores"
+    "underscores",
+    "gutenberg"
   ],
   "author": "COVERT NINE",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/covertnine/cortex"
+    "url": "https://github.com/covertnine/cortextoo"
   },
   "homepage": "https://covertnine.com",
   "dependencies": {
