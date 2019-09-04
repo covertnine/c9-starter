@@ -463,19 +463,6 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	// Field: Image.
-	$wposa_obj->add_field(
-		'cortex_layout',
-		array(
-			'id'      => 'image',
-			'type'    => 'image',
-			'name'    => __('Image', 'WPOSA'),
-			'desc'    => __('Image description', 'WPOSA'),
-			'options' => array(
-				'button_label' => 'Choose Image',
-			),
-		)
-	);
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
