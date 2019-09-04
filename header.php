@@ -26,6 +26,12 @@
 														} else {
 															echo get_template_directory_uri() . '/img/apple-touch-icon.png';
 														} ?>">
+	<link rel="shortcut icon" href="<?php
+									if (!empty(get_option('cortex_branding')['favicon'])) {
+										echo esc_url(get_option('cortex_branding')["favicon"]);
+									} else {
+										echo get_template_directory_uri() . '/img/favicon.ico';
+									} ?>" type="image/x-icon">
 	<?php wp_head(); ?>
 </head>
 
