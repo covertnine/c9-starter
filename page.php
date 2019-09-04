@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages.
  *
@@ -7,7 +8,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package understrap
+ * @package cortextoo
  */
 
 get_header();
@@ -21,16 +22,17 @@ get_header();
 
 		<main class="site-main" id="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 
-				<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+			<?php get_template_part('loop-templates/content', 'page'); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; // end of the loop. 
+			?>
 
 		</main><!-- #main -->
 
 
-</div><!-- page-container end -->
+	</div><!-- page-container end -->
 
 </div><!-- wrapper end -->
 

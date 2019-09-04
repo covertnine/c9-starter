@@ -1,19 +1,20 @@
 <?php
+
 /**
  * Custom header setup.
  *
  * @package cortextoo
  */
 
-add_action( 'after_setup_theme', 'cortextoo_custom_header_setup' );
+add_action('after_setup_theme', 'cortextoo_custom_header_setup');
 
-if ( ! function_exists ( 'cortextoo_custom_header_setup' ) ) {
-	function cortextoo_custom_header_setup() {
+if (!function_exists('cortextoo_custom_header_setup')) {
+	function cortextoo_custom_header_setup()
+	{
 
 		/**
-		 * Filter UnderStrap custom-header support arguments.
+		 * Filter Cortextoo custom-header support arguments.
 		 *
-		 * @since UnderStrap 0.5.2
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -27,19 +28,19 @@ if ( ! function_exists ( 'cortextoo_custom_header_setup' ) ) {
 		 *     @type string $flex-height     		Flex support for height of header.
 		 * }
 		 */
-		add_theme_support( 'custom-header', apply_filters( 'cortextoo_custom_header_args', array(
-			'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
+		add_theme_support('custom-header', apply_filters('cortextoo_custom_header_args', array(
+			'default-image'      => get_parent_theme_file_uri('/img/header.jpg'),
 			'width'              => 2000,
 			'height'             => 1200,
 			'flex-height'        => true,
-		) ) );
+		)));
 
-		register_default_headers( array(
+		register_default_headers(array(
 			'default-image' => array(
 				'url'           => '%s/img/header.jpg',
 				'thumbnail_url' => '%s/img/header.jpg',
-				'description'   => __( 'Default Header Image', 'cortextoo' ),
+				'description'   => __('Default Header Image', 'cortextoo'),
 			),
-		) );
+		));
 	}
 }

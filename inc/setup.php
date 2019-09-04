@@ -27,8 +27,6 @@ if (!function_exists('cortextoo_setup')) {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on understrap, use a find and replace
-		 * to change 'cortextoo' to the name of your theme in all the template files
 		 */
 		load_theme_textdomain('cortextoo', get_template_directory() . '/languages');
 
@@ -97,42 +95,5 @@ if (!function_exists('cortextoo_setup')) {
 		add_image_size('c9-feature-wide', 960, 411, array('center', 'center'), true);
 		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
-	}
-}
-
-
-add_filter('excerpt_more', 'cortextoo_custom_excerpt_more');
-
-if (!function_exists('cortextoo_custom_excerpt_more')) {
-	/**
-	 * Removes the ... from the excerpt read more link
-	 *
-	 * @param string $more The excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_custom_excerpt_more($more)
-	{
-		return '';
-	}
-}
-
-add_filter('wp_trim_excerpt', 'cortextoo_all_excerpts_get_more_link');
-
-if (!function_exists('cortextoo_all_excerpts_get_more_link')) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function cortextoo_all_excerpts_get_more_link($post_excerpt)
-	{
-
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __(
-			'Read More...',
-			'cortextoo'
-		) . '</a></p>';
 	}
 }

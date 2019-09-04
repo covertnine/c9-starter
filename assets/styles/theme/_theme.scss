@@ -126,6 +126,7 @@ body {
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
+.editor-styles-wrapper ul li,
 .wp-block-pullquote,
 .wp-block-pullquote blockquote p,
 .editor-default-block-appender textarea.editor-default-block-appender__content,
@@ -146,7 +147,7 @@ body {
 .wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
 .wp-block-pullquote blockquote>.editor-rich-text p {
 	margin-bottom: 30px;
-	line-height: 2;
+	line-height: 1.7;
 }
 
 .entry-content p:last-child,
@@ -258,7 +259,8 @@ body {
 
 p.wp-block-subhead,
 .subhead-h,
-.c9-sh {
+.c9-sh,
+.editor-styles-wrapper .c9-cta .c9-sh p {
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
 }
@@ -271,7 +273,8 @@ p.wp-block-subhead,
 .display-3,
 .display-4,
 .display-5,
-.display-6 {
+.display-6,
+.editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
 	line-height: 1.1;
 }
@@ -305,6 +308,7 @@ p.wp-block-subhead,
 a {
 	-webkit-transition: .3s color;
 	transition: .3s color;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -312,7 +316,7 @@ a:hover {
 }
 
 /* Responsive Typography */
-@media only screen and (min-width: 1px) and (max-width: 575px) {
+@media only screen and (min-width: 1px) and (max-width: 667px) {
 	:root {
 		font-size: 50%;
 	}
@@ -513,6 +517,12 @@ a:hover {
 	margin-bottom: 1em;
 }
 
+.aligncenter:last-child,
+.alignright:last-child,
+.alignleft:last-child {
+	margin-bottom: 0px;
+}
+
 .wp-block-image .alignleft {
 	margin-left: 0px;
 	margin-right: 30px;
@@ -604,11 +614,25 @@ a:hover {
 	background-color: rgba(255, 255, 255, .95);
 }
 
+.navbar-small .navbar-brand .c9-custom-logo {
+	max-width: 285px;
+	max-height: 45px;
+	width: auto;
+	height: auto;
+}
+
 @media only screen and (min-width: 1px) and (max-width: 991px) {
 
-	.navbar-brand img {
+	.navbar-brand .c9-custom-logo {
 		max-width: 285px;
 		max-height: 92px;
+		width: auto;
+		height: auto;
+	}
+
+	.navbar-small .navbar-brand .c9-custom-logo {
+		max-width: 285px;
+		max-height: 45px;
 		width: auto;
 		height: auto;
 	}
@@ -643,6 +667,15 @@ a:hover {
 		text-align: center;
 	}
 
+}
+
+@media only screen and (min-width: 1px) and (max-width: 667px) {
+	.navbar-brand .c9-custom-logo {
+		max-width: 285px;
+		max-height: 45px;
+		width: auto;
+		height: auto;
+	}
 }
 
 
@@ -709,6 +742,21 @@ a:hover {
 .widget_nav_menu ul li ul li ul {
 	margin: 8px 0 8px 40px;
 }
+
+/****************************************************************************************/
+/* Search Results */
+/****************************************************************************************/
+.search-results .container article .entry-header img {
+	max-height: 225px;
+	width: auto;
+}
+
+.search-results .container article .entry-header h2 {
+	font-size: 18px;
+	line-height: 1.1;
+}
+
+
 
 /****************************************************************************************/
 /* WordPress Comment, Page, & Post Navigation */
@@ -1108,6 +1156,10 @@ a:hover {
 /****************************************************************************************/
 /* WordPress Core Blocks */
 /****************************************************************************************/
+.entry-content .wp-block-image:only-child,
+.entry-content .wp-block-image:last-child {
+	margin-bottom: 0px;
+}
 
 .entry-content hr,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
@@ -1501,7 +1553,7 @@ object {
 	quotes: """";
 	position: relative;
 	margin: 20px auto 30px auto;
-	padding: 0 40px;
+	padding: 0 30px;
 	border-left: 3px solid $primary;
 }
 
@@ -1511,8 +1563,8 @@ object {
 	letter-spacing: .2rem;
 	text-transform: uppercase;
 	position: absolute;
-	top: -40px;
-	left: -50px;
+	top: -30px;
+	left: -40px;
 	font-size: 7rem;
 	font-weight: $font-weight-normal;
 	font-family: $headings-font-family;
@@ -1582,12 +1634,41 @@ object {
 	}
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 992px) {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
 	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
 		font-size: 2.6rem;
 		line-height: 2;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	.editor-styles-wrapper blockquote,
+	.entry-content blockquote,
+	.wp-block-quote:not(.is-large):not(.is-style-large) {
+		padding: 0 10px;
+	}
+
+	.entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
+		font-size: 1.6rem;
+		line-height: 1.9;
+	}
+
+	.editor-styles-wrapper blockquote:before,
+	.entry-content blockquote:before {
+		content: "\201C";
+		letter-spacing: .2rem;
+		text-transform: uppercase;
+		position: absolute;
+		top: -20px;
+		left: -35px;
+		font-size: 7rem;
+		font-weight: $font-weight-normal;
+		font-family: $headings-font-family;
+		color: $primary;
 	}
 
 }
@@ -1598,15 +1679,15 @@ object {
 /****************************************************************************************/
 .entry-content ul:not(.wp-block-gallery),
 .entry-content ol,
-.editor-styles-wrapper .editor-rich-text ol,
-.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) {
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul:not(.wp-block-gallery) {
 	padding: 0px 20px;
-	margin: 0px 0px 45px 30px;
+	margin: 30px 0px 45px 45px;
 }
 
 .entry-content ul:not(.wp-block-gallery),
 .editor-styles-wrapper ul:not(.wp-block-gallery) {
-	list-style: disc;
+	list-style: none;
 }
 
 .entry-content ol,
@@ -1615,29 +1696,16 @@ object {
 	list-style-type: none;
 }
 
-.entry-content li>ul,
-.entry-content li>ol,
-.editor-styles-wrapper li>ol {
-	margin-bottom: 0px 0px 0px 15px;
-}
-
-.entry-content ol li,
-.editor-styles-wrapper ol li {
-	counter-increment: step-counter;
+.entry-content ul:not(.wp-block-gallery)>li>ul,
+.entry-content ol:not(.wp-block-gallery)>li>ol,
+.editor-styles-wrapper ul:not(.wp-block-gallery)>li>ul,
+.editor-styles-wrapper ol:not(.wp-block-gallery)>li>ol {
+	margin: 0px 0px 0px 15px;
 }
 
 .entry-content ol,
 .editor-styles-wrapper ol {
 	list-style-type: none;
-}
-
-.entry-content ol li:before,
-.editor-styles-wrapper ol li:before {
-	content: counter(step-counter);
-	width: 20px;
-	display: inline-block;
-	font-weight: $font-weight-bold;
-	margin: 0 0 0 -18px;
 }
 
 .entry-content ol li,
@@ -1655,9 +1723,30 @@ object {
 	margin: 0 7px 0 -27px;
 }
 
+.entry-content ol li>ol>li,
+.editor-styles-wrapper ol li>ol>li {
+	counter-increment: inner-step-counter;
+}
+
+.entry-content ol li>ol>li>ol>li,
+.editor-styles-wrapper ol li>ol>li>ol>li {
+	counter-increment: inner-inner-step-counter;
+}
+
+.entry-content ol li>ol>li:before,
+.editor-styles-wrapper ol li>ol>li:before {
+	content: counter(inner-step-counter);
+}
+
+.entry-content ol li>ol>li>ol>li:before,
+.editor-styles-wrapper ol li>ol>li>ol>li:before {
+	content: counter(inner-inner-step-counter);
+}
+
 .entry-content ul:not(.wp-block-gallery) li,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
 	position: relative;
+	margin-bottom: 8px;
 }
 
 .entry-content ul:not(.wp-block-gallery) li:before,
@@ -1665,13 +1754,11 @@ object {
 	font-family: 'FontAwesome';
 	font-size: 1rem;
 	content: "\f111";
-	margin-left: -12px;
 	position: absolute;
 	top: 6px;
-	left: 0px;
+	left: -30px;
 }
 
-g1102
 /****************************************************************************************/
 /* WordPress Gallery Block Magnific Images */
 /****************************************************************************************/
@@ -2246,10 +2333,11 @@ screen and (max-height: 300px) {
 	border-radius: 28px;
 }
 
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.c9-button-shape-outline {
-	border: 3px solid $primary;
+	border: 3px solid;
 	background-color: transparent;
-	color: $primary;
+	color: $gray-900;
 }
 
 .wp-block-button__link.c9-button-size-small {
