@@ -1052,7 +1052,9 @@ a:hover {
 	#left-sidebar,
 	#right-sidebar {
 		left: 60px;
-		top: 160px;
+		top: 25vh;
+		max-height: 75vh;
+		overflow: scroll;
 	}
 
 	#right-sidebar {
@@ -1139,7 +1141,8 @@ a:hover {
 	margin-bottom: 0px;
 }
 
-#wrapper-footer .fab, #wrapper-footer .site-footer .fab {
+#wrapper-footer .fab,
+#wrapper-footer .site-footer .fab {
 	font-family: FontAwesome;
 	font-style: normal;
 }
