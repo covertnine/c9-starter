@@ -16,19 +16,20 @@ if (isset(get_option('cortex_posts')['blog_sidebar'])) {
 ?>
 
 <div class="wrapper" id="single-wrapper">
-	<div class="container-<?php if (!$sidebar) {
-								echo "narrow";
-							} ?> cortextoo" id="content" tabindex="-1">
+	<div class="container-narrow cortextoo" id="content" tabindex="-1">
 		<div class="row no-gutters">
 
 			<?php if ($sidebar_left) : ?>
 
-				<div class="col-12 offset-xs-0 col-sm-10 offset-sm-2 content-area" id="primary">
+				<div class="col-12 col-sm-2">
 
-				<?php get_sidebar('left');
+					<?php dynamic_sidebar('left-sidebar'); ?>
 
-				elseif ($sidebar_right) :
-					?>
+				</div>
+				<div class="col-12 col-sm-10 content-area" id="primary">
+
+				<?php elseif ($sidebar_right) : ?>
+
 					<div class="col-12 col-sm-10 content-area" id="primary">
 
 					<?php else : ?>
@@ -54,16 +55,22 @@ if (isset(get_option('cortex_posts')['blog_sidebar'])) {
 							?>
 
 						</main><!-- #main -->
+
 						<?php if ($sidebar_right) : ?>
-							<div class="col-12 col-sm-2 content-area" id="primary">
-								<?php get_sidebar('right'); ?>
-							</div>
-						<?php endif; ?>
 						</div>
+
+						<div class="col-12 col-sm-2 content-area" id="primary">
+
+							<?php dynamic_sidebar('right-sidebar'); ?>
+
+						</div>
+
+					<?php endif; ?>
 					</div>
-				</div><!-- Container end -->
+				</div>
+		</div><!-- Row end -->
 
-		</div><!-- Wrapper end -->
-	</div>
+	</div><!-- Wrapper end -->
+</div>
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

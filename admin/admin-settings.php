@@ -303,7 +303,7 @@ if (class_exists('WP_OSA')) {
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
 			'name'    => __('Blog Sidebar', 'WPOSA'),
-			'desc'    => __('Do you want a sidebar on your posts visible', 'WPOSA'),
+			'desc'    => __('Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'WPOSA'),
 			'options' => array(
 				"hide" => "No Sidebar",
 				"sidebar-left" => "Left Sidebar",
