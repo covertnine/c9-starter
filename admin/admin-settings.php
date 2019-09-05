@@ -234,6 +234,7 @@ if (class_exists('WP_OSA')) {
 				"show" => "Show",
 				"hide" => "Hide",
 			),
+			'default' => 'show'
 		)
 	);
 
@@ -302,7 +303,7 @@ if (class_exists('WP_OSA')) {
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
 			'name'    => __('Blog Sidebar', 'WPOSA'),
-			'desc'    => __('Do you want a sidebar on your posts visible', 'WPOSA'),
+			'desc'    => __('Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'WPOSA'),
 			'options' => array(
 				"hide" => "No Sidebar",
 				"sidebar-left" => "Left Sidebar",
@@ -462,6 +463,21 @@ if (class_exists('WP_OSA')) {
 			'title' => __('Advanced', 'WPOSA'),
 		)
 	);
+
+	// $wposa_obj->add_field(
+	// 	'cortex_advanced',
+	// 	array(
+	// 		'id'      => 'dev_mode',
+	// 		'type'    => 'radio',
+	// 		'name'    => __('Enable Dev Mode', 'WPOSA'),
+	// 		'desc'    => __('Use unminified files', 'WPOSA'),
+	// 		'options' => array(
+	// 			"enable" => "Enable",
+	// 			"disable" => "Disable",
+	// 		),
+	// 		'default' => 'disable'
+	// 	)
+	// );
 
 	$wposa_obj->add_field(
 		'cortex_advanced',

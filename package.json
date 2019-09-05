@@ -1,5 +1,5 @@
 {
-  "name": "understrap",
+  "name": "c9",
   "version": "0.8.2",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -18,12 +18,13 @@
     "theme",
     "framework",
     "bootstrap",
-    "underscores"
+    "underscores",
+    "gutenberg"
   ],
   "author": "COVERT NINE",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/covertnine/cortex"
+    "url": "https://github.com/covertnine/cortextoo"
   },
   "homepage": "https://covertnine.com",
   "dependencies": {
@@ -68,6 +69,7 @@
     "merge2": "^1.2.1",
     "parallax-js": "^3.1.0",
     "popper.js": "^1.15.0",
+    "react": "^16.9.0",
     "run-sequence": "^2.2.1",
     "smoothstate": "^0.7.2",
     "undescores-for-npm": "^1.0.0"
