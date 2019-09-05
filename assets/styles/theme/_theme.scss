@@ -127,6 +127,7 @@ body {
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
 .editor-styles-wrapper ul li,
+.editor-styles-wrapper ol li,
 .wp-block-pullquote,
 .wp-block-pullquote blockquote p,
 .editor-default-block-appender textarea.editor-default-block-appender__content,
@@ -432,7 +433,6 @@ a:hover {
 
 	.entry-content .container .wp-block-pullquote,
 	.entry-content .container .wp-block-quote,
-	.entry-content .container .wp-block-gallery,
 	.entry-content .container .wp-block-embed {
 		width: 100%;
 		max-width: 960px;
@@ -1679,8 +1679,8 @@ object {
 /****************************************************************************************/
 .entry-content ul:not(.wp-block-gallery),
 .entry-content ol,
-.editor-styles-wrapper ol,
-.editor-styles-wrapper ul:not(.wp-block-gallery) {
+.editor-styles-wrapper .wp-block>ol,
+.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery) {
 	padding: 0px 20px;
 	margin: 30px 0px 45px 45px;
 }
@@ -1744,7 +1744,7 @@ object {
 }
 
 .entry-content ul:not(.wp-block-gallery) li,
-.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li {
+.entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
 	margin-bottom: 8px;
 }
