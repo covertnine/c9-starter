@@ -34,6 +34,23 @@ jQuery(document).ready(function() {
     //     .data("smoothState");
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
+
+    jQuery(window).scroll(function() {
+      //scroll position variable
+      var scroll = jQuery(window).scrollTop();
+
+      if (scroll >= 633) {
+        jQuery("#left-sidebar").addClass("fixed-sidebar");
+        jQuery("#right-sidebar").addClass("fixed-sidebar");
+      }
+      if (scroll <= 632) {
+        jQuery("#left-sidebar").removeClass("fixed-sidebar");
+        jQuery("#right-sidebar").removeClass("fixed-sidebar");
+      }
+    });
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
     if ($(window).width() <= 667) {
       // var Parallax = require('parallax-js')

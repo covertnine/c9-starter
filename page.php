@@ -8,7 +8,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package cortextoo
+ * @package C9
  */
 
 get_header();

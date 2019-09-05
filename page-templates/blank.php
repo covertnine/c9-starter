@@ -1,10 +1,10 @@
 <?php
 /**
- * Template Name: Blank Page Template
+ * Template Name: No Header or Footer Template
  *
- * Template for displaying a blank page.
+ * Template for displaying a blank page with no header or footer
  *
- * @package cortextoo
+ * @package C9
  */
 
 ?>

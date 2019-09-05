@@ -130,6 +130,8 @@ body {
 .editor-styles-wrapper ol li,
 .wp-block-pullquote,
 .wp-block-pullquote blockquote p,
+.editor-styles-wrapper .wp-block-pullquote,
+.editor-styles-wrapper .wp-block-pullquote blockquote p,
 .editor-default-block-appender textarea.editor-default-block-appender__content,
 #wrapper-footer {
 	font-size: 2rem;
@@ -1294,6 +1296,10 @@ object {
 	margin-bottom: 0px;
 }
 
+.wp-block-latest-posts li a {
+	text-decoration: underline;
+}
+
 /****************************************************************************************/
 /***************************** WordPress Gutenberg Column Blocks
 /****************************************************************************************/
@@ -1680,9 +1686,11 @@ object {
 .entry-content ul:not(.wp-block-gallery),
 .entry-content ol,
 .editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery) {
+.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts),
+.editor-styles-wrapper ul {
 	padding: 0px 20px;
 	margin: 30px 0px 45px 45px;
+	list-style-type: none;
 }
 
 .entry-content ul:not(.wp-block-gallery),
@@ -1750,7 +1758,8 @@ object {
 }
 
 .entry-content ul:not(.wp-block-gallery) li:before,
-.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before {
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
+.editor-styles-wrapper .wp-block-latest-posts li:before {
 	font-family: 'FontAwesome';
 	font-size: 1rem;
 	content: "\f111";
@@ -2834,7 +2843,7 @@ screen and (max-height: 300px) {
 	color: $gray-600;
 	text-transform: uppercase;
 	font-size: 15px;
-	padding: 13px 55px;
+	padding: 13px 35px;
 	font-weight: bold;
 	letter-spacing: .09rem;
 }

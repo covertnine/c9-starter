@@ -2,7 +2,9 @@
 /**
  * Blank content partial template.
  *
- * @package cortextoo
+ * @package C9
  */
-
-the_content();
+?>
+<div class="entry-content">
+<?php the_content(); ?>
+</div>
