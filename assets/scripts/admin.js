@@ -1,38 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 "use strict";
+
 (function($) {
   // Code Editor Javascript to accompany
   $(function() {
     //Start typography code :
     // init the form when the document is ready or when the form is populated after an ajax call
     $(document).ready(function() {
-      // Commenting Code out while under development
-      // var el = wp.element.createElement;
-      // wp.hooks.addFilter(
-      //   "editor.PostFeaturedImage",
-      //   "cortextoo/wrap-post-featured-image",
-      //   OriginalComponent => {
-      //     return props => {
-      //       return el("div", {}, [
-      //         el(OriginalComponent, props),
-      //         el("div", { class: "cortextoo-check-wrapper" }, [
-      //           el("input", {
-      //             class: "components-checkbox__input",
-      //             type: "checkbox",
-      //             featImageWide: 0,
-      //             onClick: event => {
-      //               update_post_meta(event, props);
-      //             }
-      //           })
-      //         ])
-      //       ]);
-      //     };
-      //   }
-      // );
-
-      // function update_post_meta(event, props) {
-      //   console.log(event.target, props);
-      // }
+      
     });
 
     /*

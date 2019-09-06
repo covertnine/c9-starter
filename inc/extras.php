@@ -113,9 +113,6 @@ if (!function_exists('cortextoo_post_nav')) {
 		}
 	}
 
-	/**
-	 allow svg uploads
-	 */
 	function c9_mime_types($mimes)
 	{
 		$mimes['svg'] = 'image/svg+xml';

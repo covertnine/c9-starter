@@ -144,7 +144,10 @@ gulp.task("minifycss", function() {
       dest: styleDist
     },
     { src: paths.client + "/dist/client.css", dest: paths.client + "/dist" },
-    { src: paths.client + "/dist/client-editor.css", dest: paths.client + "/dist" }
+    {
+      src: paths.client + "/dist/client-editor.css",
+      dest: paths.client + "/dist"
+    }
   ];
   var streams = srcDests.map(function(srcDest) {
     return gulp

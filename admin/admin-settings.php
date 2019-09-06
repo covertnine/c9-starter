@@ -19,6 +19,65 @@ if (!defined('ABSPATH')) {
  */
 require get_template_directory() . '/admin/class-wp-osa.php';
 
+// function guten_enqueue()
+// {
+// 	wp_enqueue_script(
+// 		'guten-js',
+// 		get_stylesheet_directory_uri() . '/assets/scripts/guten-scripts.js',
+// 		array('jquery', 'wp-blocks', 'wp-element', 'wp-components')
+// 	);
+// }
+// add_action('enqueue_block_editor_assets', 'guten_enqueue');
+
+// function cortextoo_register_post_meta()
+// {
+// 	register_post_meta('post', 'cortextoo_meta_block_field', array(
+// 		'show_in_rest' => true,
+// 		'single' => true,
+// 		'type' => 'string',
+// 	));
+// }
+// add_action('init', 'cortextoo_register_post_meta');
+
+function c9_post_header_size()
+{
+	add_meta_box(
+		'post_header_size',           // Unique ID
+		'Header Size',  // Box title
+		'c9_header_size_html',  // Content callback, must be of type callable
+		'post',				  // Post type
+		'side'
+	);
+}
+add_action('add_meta_boxes', 'c9_post_header_size');
+
+function c9_header_size_html($post)
+{
+	$value = get_post_meta($post->ID, 'c9_post_header_size', true);
+	?>
+	<label for="c9_header_size">Header Size</label>
+	<div>
+		<input type="radio" id="large" name="c9_header_size" value="large" checked>
+		<label for="large">Large</label>
+	</div>
+	<div>
+		<input type="radio" id="small" name="c9_header_size" value="small">
+		<label for="small">Small</label>
+	</div>
+<?php
+}
+
+function c9_save_header_size($post_id)
+{
+	if (array_key_exists('c9_header_size', $_POST)) {
+		update_post_meta(
+			$post_id,
+			'c9_post_header_size',
+			$_POST['c9_header_size']
+		);
+	}
+}
+add_action('save_post', 'c9_save_header_size');
 
 /**
  * Actions/Filters
