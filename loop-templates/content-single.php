@@ -45,6 +45,14 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+		<div class="entry-footer-content mar30B">
+			<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'cortextoo' ),
+			'after'  => '</div>',
+		) );
+		?>
+		</div>
 
 		<?php cortextoo_entry_footer(); ?>
 

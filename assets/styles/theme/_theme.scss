@@ -394,24 +394,6 @@ a:hover {
 
 }
 
-@media only screen and (min-width: 768px) {
-
-	.page-left-sidebar .entry-content .container .alignfull,
-	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
-	.page-left-sidebar .alignfull,
-	.page-left-sidebar .wp-block[data-align="full"] {
-		// margin-left: calc((-100vw + 80%) / 2);
-		// margin-right: calc((-100vw + 100%) / 2);
-	}
-
-	.page-right-sidebar .entry-content .container .alignfull,
-	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
-	.page-right-sidebar .alignfull,
-	.page-right-sidebar .wp-block[data-align="full"] {
-		// margin-left: calc((-100vw + 120%) / 2);
-	}
-}
-
 @media only screen and (min-width: 992px) {
 
 	.entry-content .container .wp-block-pullquote,
@@ -661,6 +643,70 @@ a:hover {
 	}
 }
 
+/****************************************************************************************/
+/* WordPress archive, search, and woocommerce post pagination */
+/****************************************************************************************/
+.page-search-results nav,
+.archive nav {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.page-search-results nav .pagination,
+.archive .pagination {
+	max-width: 1140px;
+	margin: 0px auto;
+	text-align: center;
+	display: inline-block;
+}
+
+.page-search-results nav .pagination .page-item,
+.archive .pagination .page-item {
+	display: inline-block;
+}
+
+.page-search-results nav .pagination .page-item .page-link,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li span,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.archive nav .pagination .page-item .page-link {
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-family: $headings-font-family;
+	padding: 10px;
+}
+
+.page-search-results .navigation .page-item.active .page-link,
+.page-search-results .navigation .pagination li .current,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
+.archive nav .pagination .page-item.active .current {
+	color: $dark;
+}
+
+.page-search-results nav .page-item.active .page-link,
+.page-search-results nav .pagination li .current,
+.archive nav .pagination .page-item.active .current {
+	background-color: #ebe9eb;
+	border: 1px solid #dee2e6;
+}
+
+.page-search-results nav .pagination .page-item .page-link,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.archive .pagination .page-item a {
+	color: $primary;
+	text-decoration: none;
+}
+
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
+.archive .pagination .page-item a:hover {
+	color: $dark;
+}
+
+.theme-c9.woocommerce nav.woocommerce-pagination,
+.page-search-results nav .pagination,
+.archive nav .pagination {
+	margin-bottom: 20px;
+}
+
 
 /****************************************************************************************/
 /* WordPress Core Widgets */
@@ -727,7 +773,7 @@ a:hover {
 }
 
 /****************************************************************************************/
-/* Search Results */
+/* WordPress Search Results */
 /****************************************************************************************/
 .search-results .container article .entry-header img {
 	max-height: 225px;
@@ -739,7 +785,36 @@ a:hover {
 	line-height: 1.1;
 }
 
+/****************************************************************************************/
+/* WordPress Archive */
+/****************************************************************************************/
+@media only screen and (min-width: 1px) {
+	.archive h3.entry-title {
+		font-size: 1.8rem;
+	}
 
+}
+
+@media only screen and (min-width: 667px) {
+	.archive h3.entry-title {
+		font-size: 1.8rem;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.archive h3.entry-title {
+		font-size: 1.4rem;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.archive h3.entry-title {
+		font-size: 1.4rem;
+	}
+
+}
 
 /****************************************************************************************/
 /* WordPress Comment, Page, & Post Navigation */
