@@ -399,8 +399,8 @@ a:hover {
 	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
 	.page-left-sidebar .alignfull,
 	.page-left-sidebar .wp-block[data-align="full"] {
-		margin-left: calc((-100vw + 80%) / 2);
-		margin-right: calc((-100vw + 100%) / 2);
+		// margin-left: calc((-100vw + 80%) / 2);
+		// margin-right: calc((-100vw + 100%) / 2);
 	}
 
 	.page-right-sidebar .entry-content .container .alignfull,
@@ -419,15 +419,15 @@ a:hover {
 	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
 	.page-left-sidebar .alignfull,
 	.page-left-sidebar .wp-block[data-align="full"] {
-		margin-left: calc((-100vw + 80%) / 2);
-		margin-right: calc((-100vw + 100%) / 2);
+		// margin-left: calc((-100vw + 80%) / 2);
+		// margin-right: calc((-100vw + 100%) / 2);
 	}
 
 	.page-right-sidebar .entry-content .container .alignfull,
 	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
 	.page-right-sidebar .alignfull,
 	.page-right-sidebar .wp-block[data-align="full"] {
-		margin-left: calc((-100vw + 120%) / 2);
+		// margin-left: calc((-100vw + 120%) / 2);
 	}
 }
 
@@ -1687,6 +1687,24 @@ object {
 
 }
 
+@media only screen and (max-width: 667px) {
+
+	.editor-styles-wrapper .wp-block-pullquote blockquote:before,
+	.entry-content .wp-block-pullquote blockquote:before {
+		left: -10px;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+
+	.editor-styles-wrapper blockquote:before,
+	.entry-content blockquote:before {
+		left: -30px;
+		font-size: 5.5rem;
+		top: -10px;
+	}
+
+}
 
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
