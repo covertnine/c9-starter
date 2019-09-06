@@ -22,7 +22,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body class="theme-c9 page-template-blank">
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<?php get_template_part( 'loop-templates/content', 'blank' ); ?>
