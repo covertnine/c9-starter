@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package cortextoo
+ * @package C9
  */
 
 ?>

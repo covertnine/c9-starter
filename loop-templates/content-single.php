@@ -3,20 +3,46 @@
 /**
  * Single post partial template.
  *
- * @package cortextoo
+ * @package C9
  */
-
+$header_size = get_post_meta($post->ID, 'c9_header_size', true);
 ?>
+
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php
-	if (has_post_thumbnail() && isset($post_id)) {
+	<header class="entry-big-header">
+		<div class="entry-title-box">
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+
+			<div class="entry-meta">
+				<?php cortextoo_posted_on(); ?>
+
+			</div>
+		</div><!--.entry-title-box-->
+
+		<?php
+	if (has_post_thumbnail()) {
 
 		//grab src, srcset, sizes from featured image for Retina support
 		$c9_img_id		= get_post_thumbnail_id($post_id);
-		$c9_img_src 	= wp_get_attachment_image_url($c9_img_id, 'large');
-		$c9_img_srcset 	= wp_get_attachment_image_srcset($c9_img_id, 'large');
-		$c9_img_sizes	= wp_get_attachment_image_sizes($c9_img_id, 'large');
+		$c9_img_src 	= wp_get_attachment_image_url($c9_img_id, 'c9-feature-hd-wide');
+
+		?>
+		<figure class="entry-header-bgimg" style="background: url(<?php echo esc_url($c9_img_src);?>) center fixed no-repeat;"></figure>
+
+	<?php } ?>
+
+	</header>
+<!--
+<?php
+	if (has_post_thumbnail()) {
+
+		//grab src, srcset, sizes from featured image for Retina support
+		$c9_img_id		= get_post_thumbnail_id($post_id);
+		$c9_img_src 	= wp_get_attachment_image_url($c9_img_id, 'c9-feature-medium-wide');
+		$c9_img_srcset 	= wp_get_attachment_image_srcset($c9_img_id, 'c9-feature-medium-wide');
+		$c9_img_sizes	= wp_get_attachment_image_sizes($c9_img_id, 'c9-feature-medium-wide');
 
 		?>
 	<figure class="entry-image">
@@ -34,9 +60,9 @@
 		<div class="entry-meta">
 			<?php cortextoo_posted_on(); ?>
 
-		</div><!-- .entry-meta -->
+		</div>
 
-	</header><!-- .entry-header -->
+	</header>-->
 
 	<div class="entry-content">
 
