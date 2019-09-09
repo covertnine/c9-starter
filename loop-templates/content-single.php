@@ -34,7 +34,7 @@ $header_size = get_post_meta($post->ID, 'c9_header_size', true);
 	<?php } ?>
 
 	</header>
-<!--
+
 <?php
 	if (has_post_thumbnail()) {
 
@@ -62,7 +62,7 @@ $header_size = get_post_meta($post->ID, 'c9_header_size', true);
 
 		</div>
 
-	</header>-->
+	</header>
 
 	<div class="entry-content">
 

@@ -1255,11 +1255,15 @@ a:hover {
 }
 
 #wrapper-footer .site-footer {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	letter-spacing: .061rem;
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
+}
+
+#wrapper-footer .site-footer .footer-copyright-wrapper .copyright {
+	font-size: 1rem;
 }
 
 #wrapper-footer .site-footer p {
@@ -1269,12 +1273,15 @@ a:hover {
 #wrapper-footer .site-footer a {
 	color: $light;
 	text-decoration: none;
-	margin-right: 2px;
-	margin-left: 2px;
+	margin-right: 6px;
+	margin-left: 6px;
 }
 
 #wrapper-footer .site-footer a:hover {
 	color: $gray-500;
+}
+#wrapper-footer .site-footer .social-wrapper {
+	font-size: 1.8rem;
 }
 
 #wrapper-footer p:only-of-type {
@@ -2761,13 +2768,14 @@ screen and (max-height: 300px) {
 
 /**************************** Wordpress Search Form **********************************/
 .search-form .search-field,
-.widget-area .widget_search .search-field {
+.widget-area .widget_search .search-field,
+.footer-search-wrapper .field {
 	display: inline;
 	vertical-align: top;
 	border-radius: 0;
 	padding: 6px 8px 2px;
 	font-size: 1.4rem;
-	line-height: 15px;
+	line-height: 1;
 }
 
 .widget-area .widget_search label {
@@ -2783,6 +2791,21 @@ screen and (max-height: 300px) {
 	font-size: 1.3rem;
 }
 
+.footer-search-wrapper input[type="submit"] {
+	padding: 5px 8px;
+	line-height: 1;
+	font-size: 1rem;
+	width: auto;
+	min-width: 60px;
+	height: 30px;
+	border-radius: 0;
+	margin: 0px;
+}
+.footer-search-wrapper .footer-search .input-group>.input-group-append>.btn:hover {
+	color: #999999;
+	border-color: #999999;
+	opacity: .95;
+}
 .widget-area .widget_search label {
 	float: left;
 }

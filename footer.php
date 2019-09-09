@@ -34,7 +34,7 @@ else :
                         <div class="site-info">
 
                             <div class="container">
-                                <div class="row text-center">
+                                <div class="row text-center d-flex justify-content-around align-items-center">
                                     <?php
                                         $social_links = c9FooterHelpers::build_social();
                                         if ($social_links) : ?>
@@ -51,10 +51,10 @@ else :
                                     <?php
                                         if (get_option('cortex_footer')) :
                                             if (get_option('cortex_footer')['copyright_content']) :
-                                                echo '<div class="col-xs-12 col-sm-6 col-lg-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
+                                                echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option('cortex_footer')['copyright_content'] . '</p></div>';
                                             endif;
                                             if (get_option('cortex_footer')['show_search'] === 'show') : ?>
-                                            <div class="col-xs-12 col-sm-12 col-lg-2 text-left footer-search-wrapper">
+                                            <div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
                                                 <div class="footer-search">
                                                     <?php get_search_form(); ?>
                                                 </div>
