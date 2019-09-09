@@ -57,11 +57,11 @@ function c9_header_size_html($post)
 	?>
 	<label for="c9_header_size">Header Size</label>
 	<div>
-		<input type="radio" id="large" name="c9_header_size" value="large" checked>
+		<input type="radio" id="large" name="c9_header_size" value="large">
 		<label for="large">Large</label>
 	</div>
 	<div>
-		<input type="radio" id="small" name="c9_header_size" value="small">
+		<input type="radio" id="small" name="c9_header_size" value="small" checked>
 		<label for="small">Small</label>
 	</div>
 <?php
