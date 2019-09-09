@@ -75,6 +75,7 @@ body {
 	.page-container .entry-header,
 	#full-width-page-wrapper>.container {
 		width: 100%;
+		margin: 0px auto;
 	}
 
 	.container-narrow,
@@ -1166,7 +1167,7 @@ a:hover {
 		overflow: hidden;
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
 	.entry-big-header {
 		margin-left: calc((-100vw + 100%) /2);
 		margin-right: calc((-100vw + 100%) /2);
