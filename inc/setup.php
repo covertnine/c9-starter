@@ -97,6 +97,8 @@ if (!function_exists('cortextoo_setup')) {
 		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-crop', 960, 411, true);
+		add_image_size('c9-feature-audio', 850, 400, array( 'center', 'center' ) );
+		add_image_size('c9-tiny-thumb', 120, 56, true );
 	}
 }
 
