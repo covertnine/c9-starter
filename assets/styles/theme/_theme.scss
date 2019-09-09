@@ -394,24 +394,6 @@ a:hover {
 
 }
 
-@media only screen and (min-width: 768px) {
-
-	.page-left-sidebar .entry-content .container .alignfull,
-	.page-left-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
-	.page-left-sidebar .alignfull,
-	.page-left-sidebar .wp-block[data-align="full"] {
-		// margin-left: calc((-100vw + 80%) / 2);
-		// margin-right: calc((-100vw + 100%) / 2);
-	}
-
-	.page-right-sidebar .entry-content .container .alignfull,
-	.page-right-sidebar .entry-content .container [class="wp-block-*"][data-align="full"],
-	.page-right-sidebar .alignfull,
-	.page-right-sidebar .wp-block[data-align="full"] {
-		// margin-left: calc((-100vw + 120%) / 2);
-	}
-}
-
 @media only screen and (min-width: 992px) {
 
 	.entry-content .container .wp-block-pullquote,
@@ -661,6 +643,70 @@ a:hover {
 	}
 }
 
+/****************************************************************************************/
+/* WordPress archive, search, and woocommerce post pagination */
+/****************************************************************************************/
+.page-search-results nav,
+.archive nav {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.page-search-results nav .pagination,
+.archive .pagination {
+	max-width: 1140px;
+	margin: 0px auto;
+	text-align: center;
+	display: inline-block;
+}
+
+.page-search-results nav .pagination .page-item,
+.archive .pagination .page-item {
+	display: inline-block;
+}
+
+.page-search-results nav .pagination .page-item .page-link,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li span,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.archive nav .pagination .page-item .page-link {
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-family: $headings-font-family;
+	padding: 10px;
+}
+
+.page-search-results .navigation .page-item.active .page-link,
+.page-search-results .navigation .pagination li .current,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
+.archive nav .pagination .page-item.active .current {
+	color: $dark;
+}
+
+.page-search-results nav .page-item.active .page-link,
+.page-search-results nav .pagination li .current,
+.archive nav .pagination .page-item.active .current {
+	background-color: #ebe9eb;
+	border: 1px solid #dee2e6;
+}
+
+.page-search-results nav .pagination .page-item .page-link,
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.archive .pagination .page-item a {
+	color: $primary;
+	text-decoration: none;
+}
+
+.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
+.archive .pagination .page-item a:hover {
+	color: $dark;
+}
+
+.theme-c9.woocommerce nav.woocommerce-pagination,
+.page-search-results nav .pagination,
+.archive nav .pagination {
+	margin-bottom: 20px;
+}
+
 
 /****************************************************************************************/
 /* WordPress Core Widgets */
@@ -727,7 +773,7 @@ a:hover {
 }
 
 /****************************************************************************************/
-/* Search Results */
+/* WordPress Search Results */
 /****************************************************************************************/
 .search-results .container article .entry-header img {
 	max-height: 225px;
@@ -739,7 +785,36 @@ a:hover {
 	line-height: 1.1;
 }
 
+/****************************************************************************************/
+/* WordPress Archive */
+/****************************************************************************************/
+@media only screen and (min-width: 1px) {
+	.archive h3.entry-title {
+		font-size: 1.8rem;
+	}
 
+}
+
+@media only screen and (min-width: 667px) {
+	.archive h3.entry-title {
+		font-size: 1.8rem;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.archive h3.entry-title {
+		font-size: 1.4rem;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.archive h3.entry-title {
+		font-size: 1.4rem;
+	}
+
+}
 
 /****************************************************************************************/
 /* WordPress Comment, Page, & Post Navigation */
@@ -1078,6 +1153,87 @@ a:hover {
 }
 
 /****************************************************************************************/
+/* Single Post Headers */
+/****************************************************************************************/
+@media only screen and (min-width: 1px) {
+	.entry-big-header {
+		position: relative;
+		width: 100vw;
+		height: 80vh;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.entry-big-header {
+		margin-left: calc((-100vw + 100%) /2);
+		margin-right: calc((-100vw + 100%) /2);
+		height: 465px;
+		min-height: 50vh;
+	}
+}
+
+.entry-big-header .entry-title-box {
+	z-index: 18;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	max-width: 1140px;
+	text-align: center;
+	padding: 0px 25px;
+}
+.entry-big-header .entry-title-box .entry-title,
+.entry-big-header .entry-title-box .entry-meta {
+	text-shadow: 1px 1px 4px rgba(2,9,14,0.39);
+}
+.entry-big-header .entry-title-box .entry-title {
+	color: #fff;
+	font-size: 5rem;
+}
+.entry-big-header .entry-title-box .entry-meta,
+.entry-big-header .entry-title-box .entry-meta .posted-on,
+.entry-big-header .entry-title-box .entry-meta .posted-on a,
+.entry-big-header .entry-title-box .entry-meta .byline,
+.entry-big-header .entry-title-box .entry-meta .author a {
+	font-size: 1.2rem;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.entry-big-header .entry-title-box .entry-meta .posted-on a:hover,
+.entry-big-header .entry-title-box .entry-meta .author a:hover {
+	color: #fff;
+}
+.entry-big-header .entry-header-bgimg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center fixed;
+	background-size: cover;
+	z-index: 14
+}
+.entry-big-header .entry-header-bgimg:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 16;	
+	background-color: #121212;
+	opacity: .4;
+}
+
+/****************************************************************************************/
 /* Footer */
 /****************************************************************************************/
 
@@ -1099,11 +1255,15 @@ a:hover {
 }
 
 #wrapper-footer .site-footer {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	letter-spacing: .061rem;
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
+}
+
+#wrapper-footer .site-footer .footer-copyright-wrapper .copyright {
+	font-size: 1rem;
 }
 
 #wrapper-footer .site-footer p {
@@ -1113,12 +1273,15 @@ a:hover {
 #wrapper-footer .site-footer a {
 	color: $light;
 	text-decoration: none;
-	margin-right: 2px;
-	margin-left: 2px;
+	margin-right: 6px;
+	margin-left: 6px;
 }
 
 #wrapper-footer .site-footer a:hover {
 	color: $gray-500;
+}
+#wrapper-footer .site-footer .social-wrapper {
+	font-size: 1.8rem;
 }
 
 #wrapper-footer p:only-of-type {
@@ -2605,13 +2768,14 @@ screen and (max-height: 300px) {
 
 /**************************** Wordpress Search Form **********************************/
 .search-form .search-field,
-.widget-area .widget_search .search-field {
+.widget-area .widget_search .search-field,
+.footer-search-wrapper .field {
 	display: inline;
 	vertical-align: top;
 	border-radius: 0;
 	padding: 6px 8px 2px;
 	font-size: 1.4rem;
-	line-height: 15px;
+	line-height: 1;
 }
 
 .widget-area .widget_search label {
@@ -2627,6 +2791,21 @@ screen and (max-height: 300px) {
 	font-size: 1.3rem;
 }
 
+.footer-search-wrapper input[type="submit"] {
+	padding: 5px 8px;
+	line-height: 1;
+	font-size: 1rem;
+	width: auto;
+	min-width: 60px;
+	height: 30px;
+	border-radius: 0;
+	margin: 0px;
+}
+.footer-search-wrapper .footer-search .input-group>.input-group-append>.btn:hover {
+	color: #999999;
+	border-color: #999999;
+	opacity: .95;
+}
 .widget-area .widget_search label {
 	float: left;
 }

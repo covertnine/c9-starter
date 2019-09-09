@@ -3,7 +3,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package cortextoo
+ * @package C9
  */
 
 get_header();

@@ -3,7 +3,7 @@
 /**
  * Theme basic setup.
  *
- * @package cortextoo
+ * @package C9
  */
 
 
@@ -93,7 +93,18 @@ if (!function_exists('cortextoo_setup')) {
 		add_theme_support('responsive-embeds');
 		// C9 custom image sizes
 		add_image_size('c9-feature-wide', 960, 411, array('center', 'center'), true);
+		add_image_size('c9-feature-hd-wide', 1920, 1080, array('center', 'center'), true);
 		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
+		add_image_size('c9-feature-medium-crop', 960, 411, true);
 	}
+}
+
+add_action( 'pre_get_posts', 'cortextoo_posts_per_page' );
+
+function cortextoo_posts_per_page( $query ) {
+    if( !$query->is_main_query() || is_admin() ) return;
+
+    $query->set( 'posts_per_page', 12 );
+    return;
 }

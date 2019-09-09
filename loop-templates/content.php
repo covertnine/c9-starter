@@ -2,20 +2,20 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package cortextoo
+ * @package C9
  */
 
 ?>
-
+<div class="col-xs-12 col-sm-6 col-md-3">
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
 		if ( has_post_thumbnail() ) {
 			//grab src, srcset, sizes from featured image for Retina support
 			$c9_img_id		= get_post_thumbnail_id();
-			$c9_img_src 	= wp_get_attachment_image_url( $c9_img_id, 'c9-feature-wide' );
-			$c9_img_srcset 	= wp_get_attachment_image_srcset( $c9_img_id, 'c9-feature-wide' );
-			$c9_img_sizes	= wp_get_attachment_image_sizes($c9_img_id, 'c9-feature-wide');
+			$c9_img_src 	= wp_get_attachment_image_url( $c9_img_id, 'c9-feature-medium-crop' );
+			$c9_img_srcset 	= wp_get_attachment_image_srcset( $c9_img_id, 'c9-feature-medium-crop' );
+			$c9_img_sizes	= wp_get_attachment_image_sizes($c9_img_id, 'c9-feature-medium-crop');
 
 	?>
 
@@ -30,23 +30,11 @@
 
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 		'</a></h2>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta">
-				<?php cortextoo_posted_on(); ?>
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
 	</header><!-- .entry-header -->
-	<div class="entry-content">
-
-		<?php
-		the_excerpt();
-		?>
+	<div class="post-content mar30B">
 
 		<?php
 		wp_link_pages( array(
@@ -55,6 +43,7 @@
 		) );
 		?>
 
-	</div><!-- .entry-content -->
+	</div><!-- .post-content -->
 
 </article><!-- #post-## -->
+		</div>
