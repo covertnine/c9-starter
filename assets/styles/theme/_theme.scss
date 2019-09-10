@@ -541,7 +541,7 @@ a:hover {
 }
 
 .header-navbar .container {
-	max-width: 100%;
+	max-width: 1140px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -610,9 +610,8 @@ a:hover {
 }
 
 .header-navbar .navbar-toggler,
-.header-navbar .nav-search {
+.header-navbar .nav-search .btn-nav-search {
 	margin: 0px;
-	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
 }
@@ -624,6 +623,11 @@ a:hover {
 
 .header-navbar .navbar-toggler:focus {
 	color: $primary;
+}
+
+.nav-toggle,
+.nav-search {
+	display: inline-block;
 }
 
 .header-navbar .navbar-brand.c9-custom-logo>.c9-home-logo {
@@ -642,40 +646,43 @@ a:hover {
 
 .header-navbar .navbar .nav .nav-item .nav-link,
 .header-navbar .navbar .nav .nav-item .dropdown-item {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 15px;
 }
 
-.nav-toggle {
-	display: inline-block;
-}
-
-.nav-search {
-	display: none;
-}
-
-@media only screen and (min-width: 1px) and (max-width: 667px) {
+@media only screen and (min-width: 1px) {
 	.header-navbar .navbar-brand .c9-custom-logo {
 		max-width: 285px;
 		max-height: 45px;
 		width: auto;
 		height: auto;
 	}
+
+	.header-navbar .navbar .nav .nav-item {
+		display: block;
+		text-align: center;
+	}
+
+	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
+		display: block;
+	}
+
+	.header-navbar .navbar .nav .nav-item.search {
+		display: none;
+	}
+
 }
 
 @media only screen and (min-width: 992px) {
-	.navbar-expand-md .navbar-nav .nav-link {
-		padding-left: 15px;
-		padding-right: 15px;
+	.navbar-small-buttons .nav-search {
+		display: none;
 	}
 
-	.nav-search {
+	.header-navbar .navbar .nav .nav-item.search {
 		display: inline-block;
 	}
 }
 
-@media only screen and (min-width: 1px) and (max-width: 1024px) {
-
+@media only screen and (max-width: 1024px) {
 
 	.navbar-brand>.c9-custom-logo>.c9-custom-logo {
 		max-width: 285px;
@@ -727,32 +734,8 @@ a:hover {
 		display: block;
 	}
 
-	.nav-search {
-		display: inline-block;
-	}
 }
 
-@media only screen and (min-width: 1px) and (max-width: 768px) {
-	.header-navbar .navbar .nav .nav-item {
-		display: block;
-		text-align: center;
-	}
-
-	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
-		display: block;
-	}
-
-	.nav-search {
-		display: inline-block;
-	}
-}
-
-@media only screen and (min-width: 1px) and (max-width: 667px) {
-	.header-navbar .navbar .nav .nav-item.search {
-		display: none;
-	}
-
-}
 
 /****************************************************************************************/
 /* WordPress archive, search, and woocommerce post pagination */
