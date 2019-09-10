@@ -23,7 +23,10 @@
 	<?php wp_head(); ?>
 </head>
 <body class="theme-c9 page-template-blank">
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+the_post();
+?>
 
 	<?php get_template_part( 'loop-templates/content', 'blank' ); ?>
 

@@ -14,7 +14,7 @@ get_header();
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -26,8 +26,7 @@ get_header();
 				<header class="page-header author-header">
 
 					<?php
-					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
-						$author_name ) : get_userdata( intval( $author ) );
+					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
 					?>
 
 					<h1><?php esc_html_e( 'About:', 'c9' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
@@ -50,22 +49,25 @@ get_header();
 						<?php endif; ?>
 					</dl>
 
-					<h2><?php esc_html_e( 'Posts by', 'c9' ); ?> <?php echo esc_html( $curauth->nickname ); ?>
-						:</h2>
+					<h2><?php esc_html_e( 'Posts by', 'c9' ); ?> <?php echo esc_html( $curauth->nickname ); ?>:</h2>
 
 				</header><!-- .page-header -->
 
 				<ul>
-
 					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
+							?>
 							<li>
-								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="<?php esc_html_e( 'Permanent Link:', 'c9' ); ?> <?php the_title(); ?>">
+								<a rel="bookmark" href="<?php the_permalink(); ?>" title="<?php esc_html_e( 'Permanent Link:', 'c9' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
-								<?php cortextoo_posted_on(); ?> <?php esc_html_e( 'in',
-								'c9' ); ?> <?php the_category( '&' ); ?>
+								<?php
+								c9_posted_on();
+								esc_html_e( 'in', 'c9' );
+								the_category( '&' );
+								?>
 							</li>
 						<?php endwhile; ?>
 
@@ -82,7 +84,7 @@ get_header();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+			<?php c9_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

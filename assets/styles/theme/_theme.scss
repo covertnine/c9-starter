@@ -2736,11 +2736,11 @@ screen and (max-height: 300px) {
 	color: $gray-400;
 }
 
-.cortextoo input[type="text"],
-.cortextoo input[type="email"],
-.cortextoo input[type="url"],
-.cortextoo input[type="password"],
-.cortextoo textarea {
+.c9 input[type="text"],
+.c9 input[type="email"],
+.c9 input[type="url"],
+.c9 input[type="password"],
+.c9 textarea {
 	padding: 2px 8px;
 	border: 1px solid $gray-600;
 	line-height: 1;
@@ -2748,19 +2748,19 @@ screen and (max-height: 300px) {
 	font-family: $font-family-base;
 }
 
-.cortextoo input[type="text"] {
+.c9 input[type="text"] {
 	height: 32px;
 }
 
-.cortextoo textarea {
+.c9 textarea {
 	min-height: 90px;
 }
 
-.cortextoo .form-group {
+.c9 .form-group {
 	margin-bottom: 20px;
 }
 
-.cortextoo form label {
+.c9 form label {
 	font-size: 1.8rem;
 	font-weight: 500;
 	letter-spacing: .00094rem;
@@ -2947,8 +2947,8 @@ screen and (max-height: 300px) {
 }
 
 /**************************** Gravity Forms **********************************/
-.cortextoo .gform_wrapper label.gfield_label,
-.cortextoo .gform_wrapper legend.gfield_label,
+.c9 .gform_wrapper label.gfield_label,
+.c9 .gform_wrapper legend.gfield_label,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper legend.gfield_label {
 	font-family: $font-family-base;
@@ -2960,12 +2960,12 @@ screen and (max-height: 300px) {
 	margin-top: 8px;
 }
 
-.cortextoo .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
-.cortextoo .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
-.cortextoo .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox],
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio],
+.c9 .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.c9 .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.c9 .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
+.c9 .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.c9 .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox],
+.c9 .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
@@ -2975,19 +2975,19 @@ screen and (max-height: 300px) {
 	margin-top: 0px;
 }
 
-.cortextoo .gform_wrapper .gfield_time_hour,
-.cortextoo .gform_wrapper .gfield_time_minute,
-.cortextoo .gform_wrapper .gfield_time_hour i,
-.cortextoo .gform_wrapper .gfield_time_minute i,
-.cortextoo .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
-.cortextoo .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label,
-.cortextoo .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label,
-.cortextoo .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
-.cortextoo .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label,
-.cortextoo .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
-.cortextoo .gform_wrapper .gfield_time_ampm,
-.cortextoo .gform_wrapper .gfield_time_hour,
-.cortextoo .gform_wrapper .gfield_time_minute,
+.c9 .gform_wrapper .gfield_time_hour,
+.c9 .gform_wrapper .gfield_time_minute,
+.c9 .gform_wrapper .gfield_time_hour i,
+.c9 .gform_wrapper .gfield_time_minute i,
+.c9 .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+.c9 .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label,
+.c9 .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label,
+.c9 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.c9 .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label,
+.c9 .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+.c9 .gform_wrapper .gfield_time_ampm,
+.c9 .gform_wrapper .gfield_time_hour,
+.c9 .gform_wrapper .gfield_time_minute,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour i,
@@ -3007,14 +3007,14 @@ screen and (max-height: 300px) {
 }
 
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label,
-.cortextoo .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label {
+.c9 .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label {
 	margin-top: 20px;
 }
 
-.cortextoo .gform_wrapper input[type="text"],
-.cortextoo .gform_wrapper input[type="password"],
-.cortextoo .gform_wrapper input[type="tel"],
-.cortextoo .gform_wrapper textarea,
+.c9 .gform_wrapper input[type="text"],
+.c9 .gform_wrapper input[type="password"],
+.c9 .gform_wrapper input[type="tel"],
+.c9 .gform_wrapper textarea,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="password"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="tel"],
@@ -3025,25 +3025,25 @@ screen and (max-height: 300px) {
 	border: 1px solid rgba(151, 151, 151, 1);
 }
 
-.cortextoo .gform_wrapper input[type="text"],
+.c9 .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
 	height: 50px;
 }
 
 
-.cortextoo .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.c9 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
 	padding: 2px 4px;
 }
 
-.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
-.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
-.cortextoo .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
-.cortextoo .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
-.cortextoo .gform_wrapper.gf_browser_safari .gfield_time_ampm select,
-.cortextoo .gform_wrapper .ginput_complex .ginput_right select,
-.cortextoo .gform_wrapper .ginput_complex.ginput_container_creditcard select,
-.cortextoo .gform-wrapper select,
+.c9 .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.c9 .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.c9 .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
+.c9 .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
+.c9 .gform_wrapper.gf_browser_safari .gfield_time_ampm select,
+.c9 .gform_wrapper .ginput_complex .ginput_right select,
+.c9 .gform_wrapper .ginput_complex.ginput_container_creditcard select,
+.c9 .gform-wrapper select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
@@ -3057,7 +3057,7 @@ screen and (max-height: 300px) {
 	padding-left: 4px;
 }
 
-.cortextoo .gform_button.button,
+.c9 .gform_button.button,
 .wp-block[data-type="gravityforms/block"] .gform_button.button {
 	padding: 7px 30px;
 	width: auto;
@@ -3076,27 +3076,27 @@ screen and (max-height: 300px) {
 	transition: .4s opacity;
 }
 
-.cortextoo .gform_button.button:hover,
+.c9 .gform_button.button:hover,
 .wp-block[data-type="gravityforms/block"] .gform_button.button:hover {
 	opacity: .8;
 }
 
-.cortextoo .entry-content .gfield_checkbox li,
+.c9 .entry-content .gfield_checkbox li,
 .wp-block[data-type="gravityforms/block"] .entry-content .gfield_checkbox li {
 	margin-top: 0px;
 }
 
-.cortextoo .gform_wrapper .left_label textarea,
+.c9 .gform_wrapper .left_label textarea,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label textarea {
 	margin-top: 8px;
 }
 
 @media only screen and (min-width: 641px) {
 
-	.cortextoo .gform_wrapper .gform_footer input.button,
-	.cortextoo .gform_wrapper .gform_footer input[type=submit],
-	.cortextoo .gform_wrapper .gform_page_footer input.button,
-	.cortextoo .gform_wrapper .gform_page_footer input[type=submit],
+	.c9 .gform_wrapper .gform_footer input.button,
+	.c9 .gform_wrapper .gform_footer input[type=submit],
+	.c9 .gform_wrapper .gform_page_footer input.button,
+	.c9 .gform_wrapper .gform_page_footer input[type=submit],
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type=submit],
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button,
@@ -3104,10 +3104,10 @@ screen and (max-height: 300px) {
 		font-size: 1.2rem;
 	}
 
-	.cortextoo .gform_wrapper .gform_footer input.button:hover,
-	.cortextoo .gform_wrapper .gform_footer input[type=submit]:hover,
-	.cortextoo .gform_wrapper .gform_page_footer input.button:hover,
-	.cortextoo .gform_wrapper .gform_page_footer input[type=submit]:hover,
+	.c9 .gform_wrapper .gform_footer input.button:hover,
+	.c9 .gform_wrapper .gform_footer input[type=submit]:hover,
+	.c9 .gform_wrapper .gform_page_footer input.button:hover,
+	.c9 .gform_wrapper .gform_page_footer input[type=submit]:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type=submit]:hover,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button:hover,
@@ -3115,8 +3115,8 @@ screen and (max-height: 300px) {
 		opacity: .8;
 	}
 
-	.cortextoo .gform_wrapper .left_label li.hidden_label input,
-	.cortextoo .gform_wrapper .right_label li.hidden_label input,
+	.c9 .gform_wrapper .left_label li.hidden_label input,
+	.c9 .gform_wrapper .right_label li.hidden_label input,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label li.hidden_label input,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .right_label li.hidden_label input {
 		margin: 0px;
@@ -3129,7 +3129,7 @@ screen and (max-height: 300px) {
 
 	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
-	.cortextoo .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+	.c9 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 		font-size: 1.2rem;
 	}

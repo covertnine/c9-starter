@@ -1,31 +1,23 @@
 <?php
-
 /**
  * Main Class file for `WP_OSA`
  *
  * Main class that deals with all other classes.
  *
  * @since   1.0.0
- * @package WPOSA
+ * @package c9
  */
 
 // Exit if accessed directly.
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WP_OSA.
- *
- * WP Settings API Class.
- *
- * @since 1.0.0
- */
-
-if (!class_exists('WP_OSA')) :
-
-	class WP_OSA
-	{
+if ( ! class_exists( 'WP_OSA' ) ) :
+	/**
+	 * WP Settings API Class.
+	 */
+	class WP_OSA {
 
 		/**
 		 * Sections array.
@@ -48,16 +40,15 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since  1.0.0
 		 */
-		public function __construct()
-		{
+		public function __construct() {
 			// Enqueue the admin scripts.
-			add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 
 			// Hook it up.
-			add_action('admin_init', array($this, 'admin_init'));
+			add_action( 'admin_init', array( $this, 'admin_init' ) );
 
 			// Menu.
-			add_action('admin_menu', array($this, 'admin_menu'));
+			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		}
 
 		/**
@@ -65,20 +56,19 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function admin_scripts()
-		{
+		public function admin_scripts() {
 			// jQuery is needed.
-			wp_enqueue_script('jquery');
+			wp_enqueue_script( 'jquery' );
 
-			wp_enqueue_code_editor(array('type' => 'text/html'));
+			wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
 
-			wp_enqueue_script('admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', array('jquery'), '', true);
+			wp_enqueue_script( 'admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', array( 'jquery' ), '', true );
 
 			// Color Picker.
 			wp_enqueue_script(
 				'iris',
-				admin_url('js/iris.min.js'),
-				array('jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch'),
+				admin_url( 'js/iris.min.js' ),
+				array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ),
 				false,
 				1
 			);
@@ -91,13 +81,12 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Set Sections.
 		 *
-		 * @param array $sections
+		 * @param array $sections Assign to class prop.
 		 * @since 1.0.0
 		 */
-		public function set_sections($sections)
-		{
+		public function set_sections( $sections ) {
 			// Bail if not array.
-			if (!is_array($sections)) {
+			if ( ! is_array( $sections ) ) {
 				return false;
 			}
 
@@ -111,13 +100,12 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Add a single section.
 		 *
-		 * @param array $section
+		 * @param array $section Append to class prop.
 		 * @since 1.0.0
 		 */
-		public function add_section($section)
-		{
+		public function add_section( $section ) {
 			// Bail if not array.
-			if (!is_array($section)) {
+			if ( ! is_array( $section ) ) {
 				return false;
 			}
 
@@ -133,10 +121,9 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function set_fields($fields)
-		{
+		public function set_fields( $fields ) {
 			// Bail if not array.
-			if (!is_array($fields)) {
+			if ( ! is_array( $fields ) ) {
 				return false;
 			}
 
@@ -153,8 +140,7 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function add_field($section, $field_array)
-		{
+		public function add_field( $section, $field_array ) {
 			// Set the defaults
 			$defaults = array(
 				'id'   => '',
@@ -164,10 +150,10 @@ if (!class_exists('WP_OSA')) :
 			);
 
 			// Combine the defaults with user's arguements.
-			$arg = wp_parse_args($field_array, $defaults);
+			$arg = wp_parse_args( $field_array, $defaults );
 
 			// Each field is an array named against its section.
-			$this->fields_array[$section][] = $arg;
+			$this->fields_array[ $section ][] = $arg;
 
 			return $this;
 		}
@@ -182,8 +168,7 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since  1.0.0
 		 */
-		function admin_init()
-		{
+		function admin_init() {
 			/**
 			 * Register the sections.
 			 *
@@ -204,22 +189,22 @@ if (!class_exists('WP_OSA')) :
 			 *
 			 * @since 1.0.0
 			 */
-			foreach ($this->sections_array as $section) {
-				if (false == get_option($section['id'])) {
+			foreach ( $this->sections_array as $section ) {
+				if ( false === get_option( $section['id'] ) ) {
 					// Add a new field as section ID.
-					add_option($section['id']);
+					add_option( $section['id'] );
 				}
 
 				// Deals with sections description.
-				if (isset($section['desc']) && !empty($section['desc'])) {
+				if ( isset( $section['desc'] ) && ! empty( $section['desc'] ) ) {
 					// Build HTML.
 					$section['desc'] = '<div class="inside">' . $section['desc'] . '</div>';
 
 					// Create the callback for description.
-					$callback = function () use ($section) {
-						echo str_replace('"', '\"', $section['desc']);
+					$callback = function () use ( $section ) {
+						echo str_replace( '"', '\"', $section['desc'] );
 					};
-				} elseif (isset($section['callback'])) {
+				} elseif ( isset( $section['callback'] ) ) {
 					$callback = $section['callback'];
 				} else {
 					$callback = null;
@@ -234,7 +219,7 @@ if (!class_exists('WP_OSA')) :
 				 * @param string $page | Page is same as section ID.
 				 * @since 1.0.0
 				 */
-				add_settings_section($section['id'], $section['title'], $callback, $section['id']);
+				add_settings_section( $section['id'], $section['title'], $callback, $section['id'] );
 			} // foreach ended.
 
 			/**
@@ -259,40 +244,40 @@ if (!class_exists('WP_OSA')) :
 			 *
 			 * @since 1.0.0
 			 */
-			foreach ($this->fields_array as $section => $field_array) {
-				foreach ($field_array as $field) {
+			foreach ( $this->fields_array as $section => $field_array ) {
+				foreach ( $field_array as $field ) {
 					// ID.
-					$id = isset($field['id']) ? $field['id'] : false;
+					$id = isset( $field['id'] ) ? $field['id'] : false;
 
 					// Type.
-					$type = isset($field['type']) ? $field['type'] : 'text';
+					$type = isset( $field['type'] ) ? $field['type'] : 'text';
 
 					// Language (for code inputs)
-					$language = isset($field['language']) ? $field['language'] : 'html';
+					$language = isset( $field['language'] ) ? $field['language'] : 'html';
 
 					// Name.
-					$name = isset($field['name']) ? $field['name'] : 'No Name Added';
+					$name = isset( $field['name'] ) ? $field['name'] : 'No Name Added';
 
 					// Label for.
 					$label_for = "{$section}[{$field['id']}]";
 
 					// Description.
-					$description = isset($field['desc']) ? $field['desc'] : '';
+					$description = isset( $field['desc'] ) ? $field['desc'] : '';
 
 					// Size.
-					$size = isset($field['size']) ? $field['size'] : null;
+					$size = isset( $field['size'] ) ? $field['size'] : null;
 
 					// Options.
-					$options = isset($field['options']) ? $field['options'] : '';
+					$options = isset( $field['options'] ) ? $field['options'] : '';
 
 					// Standard default value.
-					$default = isset($field['default']) ? $field['default'] : '';
+					$default = isset( $field['default'] ) ? $field['default'] : '';
 
 					// Standard default placeholder.
-					$placeholder = isset($field['placeholder']) ? $field['placeholder'] : '';
+					$placeholder = isset( $field['placeholder'] ) ? $field['placeholder'] : '';
 
 					// Sanitize Callback.
-					$sanitize_callback = isset($field['sanitize_callback']) ? $field['sanitize_callback'] : '';
+					$sanitize_callback = isset( $field['sanitize_callback'] ) ? $field['sanitize_callback'] : '';
 
 					$args = array(
 						'id'                => $id,
@@ -306,7 +291,7 @@ if (!class_exists('WP_OSA')) :
 						'std'               => $default,
 						'placeholder'       => $placeholder,
 						'sanitize_callback' => $sanitize_callback,
-						'language' 			=> $language
+						'language'          => $language,
 					);
 
 					/**
@@ -327,7 +312,7 @@ if (!class_exists('WP_OSA')) :
 					add_settings_field(
 						$field_id,
 						$name,
-						array($this, 'callback_' . $type),
+						array( $this, 'callback_' . $type ),
 						$section,
 						$section,
 						$args
@@ -337,14 +322,14 @@ if (!class_exists('WP_OSA')) :
 					 * Add filter for adjusting values
 					 */
 
-					if (isset($field['pre_update_option'])) {
-						add_filter('pre_update_option_' . $section, array($this, 'pre_update_' . $field['pre_update_option']), 10, 2);
+					if ( isset( $field['pre_update_option'] ) ) {
+						add_filter( 'pre_update_option_' . $section, array( $this, 'pre_update_' . $field['pre_update_option'] ), 10, 2 );
 					}
 				} // foreach ended.
 			} // foreach ended.
 
 			// Creates our settings in the fields table.
-			foreach ($this->sections_array as $section) {
+			foreach ( $this->sections_array as $section ) {
 				/**
 				 * Registers a setting and its sanitization callback.
 				 *
@@ -353,7 +338,7 @@ if (!class_exists('WP_OSA')) :
 				 * @param callable  $sanitize_callback = ''
 				 * @since 1.0.0
 				 */
-				register_setting($section['id'], $section['id'], array($this, 'sanitize_fields'));
+				register_setting( $section['id'], $section['id'], array( $this, 'sanitize_fields' ) );
 			} // foreach ended.
 
 		} // admin_init() ended.
@@ -363,15 +348,14 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function sanitize_fields($fields)
-		{
-			foreach ($fields as $field_slug => $field_value) {
+		public function sanitize_fields( $fields ) {
+			foreach ( $fields as $field_slug => $field_value ) {
 
-				$sanitize_callback = $this->get_sanitize_callback($field_slug);
+				$sanitize_callback = $this->get_sanitize_callback( $field_slug );
 
 				// If callback is set, call it.
-				if ($sanitize_callback) {
-					$fields[$field_slug] = call_user_func($sanitize_callback, $field_value);
+				if ( $sanitize_callback ) {
+					$fields[ $field_slug ] = call_user_func( $sanitize_callback, $field_value );
 					continue;
 				}
 			}
@@ -387,23 +371,22 @@ if (!class_exists('WP_OSA')) :
 		 * @return mixed string | bool false
 		 * @since  1.0.0
 		 */
-		function get_sanitize_callback($slug = '')
-		{
-			if (empty($slug)) {
+		function get_sanitize_callback( $slug = '' ) {
+			if ( empty( $slug ) ) {
 				return false;
 			}
 
 			// Iterate over registered fields and see if we can find proper callback.
-			foreach ($this->fields_array as $section => $field_array) {
-				foreach ($field_array as $field) {
+			foreach ( $this->fields_array as $section => $field_array ) {
+				foreach ( $field_array as $field ) {
 
 					$field_id = $field['id'];
-					if ($field['id'] != $slug) {
+					if ( $field['id'] !== $slug ) {
 						continue;
 					}
 
 					// Return the callback name.
-					return isset($field['sanitize_callback']) && is_callable($field['sanitize_callback']) ? $field['sanitize_callback'] : false;
+					return isset( $field['sanitize_callback'] ) && is_callable( $field['sanitize_callback'] ) ? $field['sanitize_callback'] : false;
 				}
 			}
 
@@ -415,19 +398,18 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function pre_update_encrypt_key($section_value)
-		{
+		public function pre_update_encrypt_key( $section_value ) {
 
-			foreach ($this->fields_array[$_POST['option_page']] as $field) {
-				if (isset($field['pre_update_option']) && $field['pre_update_option'] === "encrypt_key") {
-					$plaintext = $section_value[$field['id']];
-					$cipher = "aes-128-gcm";
-					$key = LOGGED_IN_KEY;
-					if (in_array($cipher, openssl_get_cipher_methods())) {
-						$ivlen = openssl_cipher_iv_length($cipher);
-						$iv = openssl_random_pseudo_bytes($ivlen);
-						$ciphertext = base64_encode(openssl_encrypt($plaintext, $cipher, $key, $options = 0, $iv));
-						$section_value[$field['id']] = $ciphertext;
+			foreach ( $this->fields_array[ $_POST['option_page'] ] as $field ) {
+				if ( 'encrypt_key' === isset( $field['pre_update_option'] ) && $field['pre_update_option'] ) {
+					$plaintext = $section_value[ $field['id'] ];
+					$cipher    = 'aes-128-gcm';
+					$key       = LOGGED_IN_KEY;
+					if ( in_array( $cipher, openssl_get_cipher_methods(), true ) ) {
+						$ivlen                         = openssl_cipher_iv_length( $cipher );
+						$iv                            = openssl_random_pseudo_bytes( $ivlen );
+						$ciphertext                    = base64_encode( openssl_encrypt( $plaintext, $cipher, $key, $options = 0, $iv ) );
+						$section_value[ $field['id'] ] = $ciphertext;
 					}
 				}
 			}
@@ -439,12 +421,11 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Get field description for display
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		public function get_field_description($args)
-		{
-			if (!empty($args['desc'])) {
-				$desc = sprintf('<p class="description">%s</p>', $args['desc']);
+		public function get_field_description( $args ) {
+			if ( ! empty( $args['desc'] ) ) {
+				$desc = sprintf( '<p class="description">%s</p>', $args['desc'] );
 			} else {
 				$desc = '';
 			}
@@ -456,15 +437,15 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a title field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_title($args)
-		{
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			if ('' !== $args['name']) {
+		function callback_title( $args ) {
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			if ( '' !== $args['name'] ) {
 				$name = $args['name'];
-			} else { };
-			$type = isset($args['type']) ? $args['type'] : 'title';
+			} else {
+};
+			$type = isset( $args['type'] ) ? $args['type'] : 'title';
 
 			$html = '';
 			echo $html;
@@ -474,17 +455,16 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a text field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_text($args)
-		{
+		function callback_text( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std'], $args['placeholder']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-			$type  = isset($args['type']) ? $args['type'] : 'text';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'], $args['placeholder'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
+			$type  = isset( $args['type'] ) ? $args['type'] : 'text';
 
-			$html  = sprintf('<input type="%1$s" class="%2$s-text" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"placeholder="%6$s"/>', $type, $size, $args['section'], $args['id'], $value, $args['placeholder']);
-			$html .= $this->get_field_description($args);
+			$html  = sprintf( '<input type="%1$s" class="%2$s-text" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"placeholder="%6$s"/>', $type, $size, $args['section'], $args['id'], $value, $args['placeholder'] );
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
@@ -493,20 +473,19 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a text field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_code($args)
-		{
+		function callback_code( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std'], $args['placeholder']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-			$type  = isset($args['type']) ? $args['type'] : 'text';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'], $args['placeholder'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
+			$type  = isset( $args['type'] ) ? $args['type'] : 'text';
 
-			$html  = sprintf('<textarea id="%2$s[%3$s]" class="code_editor_page_%1$s" rows="5" name="%2$s[%3$s]" class="widefat textarea">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value);
+			$html = sprintf( '<textarea id="%2$s[%3$s]" class="code_editor_page_%1$s" rows="5" name="%2$s[%3$s]" class="widefat textarea">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value );
 
 			// $html  = sprintf('<textarea rows="5" cols="55" class="code_editor_page_%1$s" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $args['language'], $args['section'], $args['id'], $value);
 
-			$html .= $this->get_field_description($args);
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
@@ -515,38 +494,35 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a url field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_url($args)
-		{
-			$this->callback_text($args);
+		function callback_url( $args ) {
+			$this->callback_text( $args );
 		}
 
 		/**
 		 * Displays a number field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_number($args)
-		{
-			$this->callback_text($args);
+		function callback_number( $args ) {
+			$this->callback_text( $args );
 		}
 
 		/**
 		 * Displays a checkbox for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_checkbox($args)
-		{
+		function callback_checkbox( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
 
 			$html  = '<fieldset>';
-			$html .= sprintf('<label for="wposa-%1$s[%2$s]">', $args['section'], $args['id']);
-			$html .= sprintf('<input type="hidden" name="%1$s[%2$s]" value="off" />', $args['section'], $args['id']);
-			$html .= sprintf('<input type="checkbox" class="checkbox" id="wposa-%1$s[%2$s]" name="%1$s[%2$s]" value="on" %3$s />', $args['section'], $args['id'], checked($value, 'on', false));
-			$html .= sprintf('%1$s</label>', $args['desc']);
+			$html .= sprintf( '<label for="wposa-%1$s[%2$s]">', $args['section'], $args['id'] );
+			$html .= sprintf( '<input type="hidden" name="%1$s[%2$s]" value="off" />', $args['section'], $args['id'] );
+			$html .= sprintf( '<input type="checkbox" class="checkbox" id="wposa-%1$s[%2$s]" name="%1$s[%2$s]" value="on" %3$s />', $args['section'], $args['id'], checked( $value, 'on', false ) );
+			$html .= sprintf( '%1$s</label>', $args['desc'] );
 			$html .= '</fieldset>';
 
 			echo $html;
@@ -555,21 +531,20 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a multicheckbox a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_multicheck($args)
-		{
+		function callback_multicheck( $args ) {
 
-			$value = $this->get_option($args['id'], $args['section'], $args['std']);
+			$value = $this->get_option( $args['id'], $args['section'], $args['std'] );
 
 			$html = '<fieldset>';
-			foreach ($args['options'] as $key => $label) {
-				$checked = isset($value[$key]) ? $value[$key] : '0';
-				$html   .= sprintf('<label for="wposa-%1$s[%2$s][%3$s]">', $args['section'], $args['id'], $key);
-				$html   .= sprintf('<input type="checkbox" class="checkbox" id="wposa-%1$s[%2$s][%3$s]" name="%1$s[%2$s][%3$s]" value="%3$s" %4$s />', $args['section'], $args['id'], $key, checked($checked, $key, false));
-				$html   .= sprintf('%1$s</label><br>', $label);
+			foreach ( $args['options'] as $key => $label ) {
+				$checked = isset( $value[ $key ] ) ? $value[ $key ] : '0';
+				$html   .= sprintf( '<label for="wposa-%1$s[%2$s][%3$s]">', $args['section'], $args['id'], $key );
+				$html   .= sprintf( '<input type="checkbox" class="checkbox" id="wposa-%1$s[%2$s][%3$s]" name="%1$s[%2$s][%3$s]" value="%3$s" %4$s />', $args['section'], $args['id'], $key, checked( $checked, $key, false ) );
+				$html   .= sprintf( '%1$s</label><br>', $label );
 			}
-			$html .= $this->get_field_description($args);
+			$html .= $this->get_field_description( $args );
 			$html .= '</fieldset>';
 
 			echo $html;
@@ -578,20 +553,19 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a multicheckbox a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_radio($args)
-		{
+		function callback_radio( $args ) {
 
-			$value = $this->get_option($args['id'], $args['section'], $args['std']);
+			$value = $this->get_option( $args['id'], $args['section'], $args['std'] );
 
 			$html = '<fieldset>';
-			foreach ($args['options'] as $key => $label) {
-				$html .= sprintf('<label for="wposa-%1$s[%2$s][%3$s]">', $args['section'], $args['id'], $key);
-				$html .= sprintf('<input type="radio" class="radio" id="wposa-%1$s[%2$s][%3$s]" name="%1$s[%2$s]" value="%3$s" %4$s />', $args['section'], $args['id'], $key, checked($value, $key, false));
-				$html .= sprintf('%1$s</label><br>', $label);
+			foreach ( $args['options'] as $key => $label ) {
+				$html .= sprintf( '<label for="wposa-%1$s[%2$s][%3$s]">', $args['section'], $args['id'], $key );
+				$html .= sprintf( '<input type="radio" class="radio" id="wposa-%1$s[%2$s][%3$s]" name="%1$s[%2$s]" value="%3$s" %4$s />', $args['section'], $args['id'], $key, checked( $value, $key, false ) );
+				$html .= sprintf( '%1$s</label><br>', $label );
 			}
-			$html .= $this->get_field_description($args);
+			$html .= $this->get_field_description( $args );
 			$html .= '</fieldset>';
 
 			echo $html;
@@ -600,67 +574,63 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a selectbox for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_select($args)
-		{
+		function callback_select( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 
-			$html = sprintf('<select class="%1$s" name="%2$s[%3$s]" id="%2$s[%3$s]">', $size, $args['section'], $args['id']);
-			foreach ($args['options'] as $key => $label) {
-				$html .= sprintf('<option value="%s"%s>%s</option>', $key, selected($value, $key, false), $label);
+			$html = sprintf( '<select class="%1$s" name="%2$s[%3$s]" id="%2$s[%3$s]">', $size, $args['section'], $args['id'] );
+			foreach ( $args['options'] as $key => $label ) {
+				$html .= sprintf( '<option value="%s"%s>%s</option>', $key, selected( $value, $key, false ), $label );
 			}
-			$html .= sprintf('</select>');
-			$html .= $this->get_field_description($args);
+			$html .= sprintf( '</select>' );
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
-
-		/**
-		 * Displays a textarea for a settings field
-		 *
-		 * @param array $args settings field args
-		 */
-		function callback_textarea($args)
-		{
-
-			$value = esc_textarea($this->get_option($args['id'], $args['section'], $args['std']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-
-			$html  = sprintf('<textarea rows="5" cols="55" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $size, $args['section'], $args['id'], $value);
-			$html .= $this->get_field_description($args);
-
-			echo $html;
-		}
-
-		// 		/**
-		//  * Displays a textarea for a settings field
-		//  *
-		//  * @param array $args settings field args
-		//  */
-		//  function callback_script_or_style($args)
-		//  {
-
-		// 	 $value = esc_textarea($this->get_option($args['id'], $args['section'], $args['std']));
-		// 	 $size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-
-		// 	 $html  = sprintf('<textarea rows="5" cols="55" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $size, $args['section'], $args['id'], $value);
-		// 	 $html .= $this->get_field_description($args);
-
-		// 	 echo $html;
-		//  }
 
 		/**
 		 * Displays a textarea for a settings field
 		 *
 		 * @param array $args settings field args.
-		 * @return string
 		 */
-		function callback_html($args)
-		{
-			echo $this->get_field_description($args);
+		function callback_textarea( $args ) {
+
+			$value = esc_textarea( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
+
+			$html  = sprintf( '<textarea rows="5" cols="55" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $size, $args['section'], $args['id'], $value );
+			$html .= $this->get_field_description( $args );
+
+			echo $html;
+		}
+
+		// **
+		// * Displays a textarea for a settings field
+		// *
+		// * @param array $args settings field args
+		// */
+		// function callback_script_or_style($args)
+		// {
+
+		// $value = esc_textarea($this->get_option($args['id'], $args['section'], $args['std']));
+		// $size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+
+		// $html  = sprintf('<textarea rows="5" cols="55" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]">%4$s</textarea>', $size, $args['section'], $args['id'], $value);
+		// $html .= $this->get_field_description($args);
+
+		// echo $html;
+		// }
+
+		/**
+		 * Displays a textarea for a settings field
+		 *
+		 * @param array $args settings field args.
+		 */
+		function callback_html( $args ) {
+			echo $this->get_field_description( $args );
 		}
 
 		/**
@@ -668,11 +638,10 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @param array $args settings field args.
 		 */
-		function callback_wysiwyg($args)
-		{
+		function callback_wysiwyg( $args ) {
 
-			$value = $this->get_option($args['id'], $args['section'], $args['std']);
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : '500px';
+			$value = $this->get_option( $args['id'], $args['section'], $args['std'] );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : '500px';
 
 			echo '<div style="max-width: ' . $size . ';">';
 
@@ -681,15 +650,15 @@ if (!class_exists('WP_OSA')) :
 				'textarea_name' => $args['section'] . '[' . $args['id'] . ']',
 				'textarea_rows' => 10,
 			);
-			if (isset($args['options']) && is_array($args['options'])) {
-				$editor_settings = array_merge($editor_settings, $args['options']);
+			if ( isset( $args['options'] ) && is_array( $args['options'] ) ) {
+				$editor_settings = array_merge( $editor_settings, $args['options'] );
 			}
 
-			wp_editor($value, $args['section'] . '-' . $args['id'], $editor_settings);
+			wp_editor( $value, $args['section'] . '-' . $args['id'], $editor_settings );
 
 			echo '</div>';
 
-			echo $this->get_field_description($args);
+			echo $this->get_field_description( $args );
 		}
 
 		/**
@@ -697,18 +666,17 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @param array $args settings field args.
 		 */
-		function callback_file($args)
-		{
+		function callback_file( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 			$id    = $args['section'] . '[' . $args['id'] . ']';
-			$label = isset($args['options']['button_label']) ?
-				$args['options']['button_label'] : __('Choose File');
+			$label = isset( $args['options']['button_label'] ) ?
+				$args['options']['button_label'] : __( 'Choose File' );
 
-			$html  = sprintf('<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
+			$html  = sprintf( '<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
 			$html .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
-			$html .= $this->get_field_description($args);
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
@@ -718,18 +686,17 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * @param array $args settings field args.
 		 */
-		function callback_image($args)
-		{
+		function callback_image( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 			$id    = $args['section'] . '[' . $args['id'] . ']';
-			$label = isset($args['options']['button_label']) ?
-				$args['options']['button_label'] : __('Choose Image');
+			$label = isset( $args['options']['button_label'] ) ?
+				$args['options']['button_label'] : __( 'Choose Image' );
 
-			$html  = sprintf('<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
+			$html  = sprintf( '<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
 			$html .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
-			$html .= $this->get_field_description($args);
+			$html .= $this->get_field_description( $args );
 			$html .= '<p class="wpsa-image-preview"><img src=""/></p>';
 
 			echo $html;
@@ -738,16 +705,15 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a password field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_password($args)
-		{
+		function callback_password( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 
-			$html  = sprintf('<input type="password" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
-			$html .= $this->get_field_description($args);
+			$html  = sprintf( '<input type="password" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
@@ -755,16 +721,15 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a color picker field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_color($args)
-		{
+		function callback_color( $args ) {
 
-			$value = esc_attr($this->get_option($args['id'], $args['section'], $args['std'], $args['placeholder']));
-			$size  = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'], $args['placeholder'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 
-			$html  = sprintf('<input type="text" class="%1$s-text color-picker" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s" data-default-color="%5$s" placeholder="%6$s" />', $size, $args['section'], $args['id'], $value, $args['std'], $args['placeholder']);
-			$html .= $this->get_field_description($args);
+			$html  = sprintf( '<input type="text" class="%1$s-text color-picker" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s" data-default-color="%5$s" placeholder="%6$s" />', $size, $args['section'], $args['id'], $value, $args['std'], $args['placeholder'] );
+			$html .= $this->get_field_description( $args );
 
 			echo $html;
 		}
@@ -773,11 +738,10 @@ if (!class_exists('WP_OSA')) :
 		/**
 		 * Displays a separator field for a settings field
 		 *
-		 * @param array $args settings field args
+		 * @param array $args settings field args.
 		 */
-		function callback_separator($args)
-		{
-			$type = isset($args['type']) ? $args['type'] : 'separator';
+		function callback_separator( $args ) {
+			$type = isset( $args['type'] ) ? $args['type'] : 'separator';
 
 			$html  = '';
 			$html .= '<div class="wpsa-settings-separator"></div>';
@@ -793,13 +757,12 @@ if (!class_exists('WP_OSA')) :
 		 * @param string $default default text if it's not found.
 		 * @return string
 		 */
-		function get_option($option, $section, $default = '')
-		{
+		function get_option( $option, $section, $default = '' ) {
 
-			$options = get_option($section);
+			$options = get_option( $section );
 
-			if (isset($options[$option])) {
-				return $options[$option];
+			if ( isset( $options[ $option ] ) ) {
+				return $options[ $option ];
 			}
 
 			return $default;
@@ -818,20 +781,24 @@ if (!class_exists('WP_OSA')) :
 		 */
 
 		// public function admin_menu( $page_title = 'Page Title', $menu_title = 'Menu Title', $capability = 'manage_options', $menu_slug = 'settings_page', $callable = 'plugin_page' ) {
-		public function admin_menu()
-		{
+		/**
+		 * Add submenu page for theme.
+		 */
+		public function admin_menu() {
 			// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
 			add_options_page(
 				'C9 Theme',
 				'C9 Theme',
 				'manage_options',
 				'wp_osa_settings',
-				array($this, 'plugin_page')
+				array( $this, 'plugin_page' )
 			);
 		}
 
-		public function plugin_page()
-		{
+		/**
+		 * Sets up the plugin page.
+		 */
+		public function plugin_page() {
 			echo '<div class="wrap">';
 			$this->show_navigation();
 			$this->show_forms();
@@ -843,12 +810,11 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * Shows all the settings section labels as tab
 		 */
-		function show_navigation()
-		{
+		function show_navigation() {
 			$html = '<h2 class="nav-tab-wrapper">';
 
-			foreach ($this->sections_array as $tab) {
-				$html .= sprintf('<a href="#%1$s" class="nav-tab" id="%1$s-tab">%2$s</a>', $tab['id'], $tab['title']);
+			foreach ( $this->sections_array as $tab ) {
+				$html .= sprintf( '<a href="#%1$s" class="nav-tab" id="%1$s-tab">%2$s</a>', $tab['id'], $tab['title'] );
 			}
 
 			$html .= '</h2>';
@@ -861,22 +827,20 @@ if (!class_exists('WP_OSA')) :
 		 *
 		 * This function displays every sections in a different form
 		 */
-		function show_forms()
-		{
-			?>
+		function show_forms() {             ?>
 			<div class="metabox-holder">
-				<?php foreach ($this->sections_array as $form) { ?>
+				<?php foreach ( $this->sections_array as $form ) { ?>
 					<!-- style="display: none;" -->
 					<div id="<?php echo $form['id']; ?>" class="group">
 						<form method="post" action="options.php">
 							<?php
-											do_action('wsa_form_top_' . $form['id'], $form);
-											settings_fields($form['id']);
-											do_settings_sections($form['id']);
-											do_action('wsa_form_bottom_' . $form['id'], $form);
+											do_action( 'wsa_form_top_' . $form['id'], $form );
+											settings_fields( $form['id'] );
+											do_settings_sections( $form['id'] );
+											do_action( 'wsa_form_bottom_' . $form['id'], $form );
 											?>
 							<div style="padding-left: 10px">
-								<?php submit_button(null, 'primary', 'submit_' . $form['id']); ?>
+								<?php submit_button( null, 'primary', 'submit_' . $form['id'] ); ?>
 							</div>
 						</form>
 					</div>
@@ -891,9 +855,8 @@ if (!class_exists('WP_OSA')) :
 				 *
 				 * This code uses localstorage for displaying active tabs
 				 */
-				function script()
-				{
-					?>
+				function script() {
+		?>
 			<script>
 				jQuery(document).ready(function($) {
 

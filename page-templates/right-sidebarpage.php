@@ -10,17 +10,28 @@
 get_header();
 ?>
 
-<div class="wrapper cortextoo" id="page-wrapper">
+<div class="wrapper c9" id="page-wrapper">
 
 	<div class="container page-right-sidebar" id="content">
 
 		<div class="row no-gutters">
 
-			<div class="<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>col-12 col-sm-10<?php else : ?>col-12<?php endif; ?> content-area" id="primary">
+			<div class="
+			<?php
+			if ( is_active_sidebar( 'right-sidebar' ) ) :
+?>
+col-12 col-sm-10
+<?php
+else :
+				?>
+				col-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
+the_post();
+?>
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 

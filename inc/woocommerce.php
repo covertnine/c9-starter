@@ -6,21 +6,21 @@
  */
 
 
-add_action( 'after_setup_theme', 'cortextoo_woocommerce_support' );
-if ( ! function_exists( 'cortextoo_woocommerce_support' ) ) {
+add_action( 'after_setup_theme', 'c9_woocommerce_support' );
+if ( ! function_exists( 'c9_woocommerce_support' ) ) {
 	/**
 	 * Declares WooCommerce theme support.
 	 */
-	function cortextoo_woocommerce_support() {
+	function c9_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
-		
+
 		// Add New Woocommerce 3.0.0 Product Gallery support
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// hook in and customizer form fields.
-		add_filter( 'woocommerce_form_field_args', 'cortextoo_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_args', 'c9_wc_form_field_args', 10, 3 );
 	}
 }
 
@@ -28,17 +28,17 @@ if ( ! function_exists( 'cortextoo_woocommerce_support' ) ) {
 /**
 * First unhook the WooCommerce wrappers
 */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
 /**
 * Then hook in your own functions to display the wrappers your theme requires
 */
-add_action('woocommerce_before_main_content', 'cortextoo_woocommerce_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'cortextoo_woocommerce_wrapper_end', 10);
-if ( ! function_exists( 'cortextoo_woocommerce_wrapper_start' ) ) {
-	function cortextoo_woocommerce_wrapper_start() {
-		$container   = get_theme_mod( 'cortextoo_container_type' );
+add_action( 'woocommerce_before_main_content', 'c9_woocommerce_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'c9_woocommerce_wrapper_end', 10 );
+if ( ! function_exists( 'c9_woocommerce_wrapper_start' ) ) {
+	function c9_woocommerce_wrapper_start() {
+		$container = get_theme_mod( 'c9_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
@@ -46,13 +46,13 @@ if ( ! function_exists( 'cortextoo_woocommerce_wrapper_start' ) ) {
 		echo '<main class="site-main" id="main">';
 	}
 }
-if ( ! function_exists( 'cortextoo_woocommerce_wrapper_end' ) ) {
-function cortextoo_woocommerce_wrapper_end() {
-	echo '</main><!-- #main -->';
-	get_template_part( 'global-templates/right-sidebar-check' );
-  echo '</div><!-- .row -->';
-	echo '</div><!-- Container end -->';
-	echo '</div><!-- Wrapper end -->';
+if ( ! function_exists( 'c9_woocommerce_wrapper_end' ) ) {
+function c9_woocommerce_wrapper_end() {
+		echo '</main><!-- #main -->';
+		get_template_part( 'global-templates/right-sidebar-check' );
+		  echo '</div><!-- .row -->';
+		echo '</div><!-- Container end -->';
+		echo '</div><!-- Wrapper end -->';
 	}
 }
 
@@ -67,12 +67,12 @@ function cortextoo_woocommerce_wrapper_end() {
  *
  * @return mixed
  */
-if ( ! function_exists ( 'cortextoo_wc_form_field_args' ) ) {
-	function cortextoo_wc_form_field_args( $args, $key, $value = null ) {
+if ( ! function_exists( 'c9_wc_form_field_args' ) ) {
+	function c9_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			/* Targets all select input type elements, except the country and state select input types */
-			case 'select' :
+			case 'select':
 				// Add a class to the field's html element wrapper - woocommerce
 				// input types (fields) are often wrapped within a <p></p> tag.
 				$args['class'][] = 'form-group';
@@ -88,13 +88,13 @@ if ( ! function_exists ( 'cortextoo_wc_form_field_args' ) ) {
 				break;
 			// By default WooCommerce will populate a select with the country names - $args
 			// defined for this specific input type targets only the country select element.
-			case 'country' :
+			case 'country':
 				$args['class'][]     = 'form-group single-country';
 				$args['label_class'] = array( 'control-label' );
 				break;
 			// By default WooCommerce will populate a select with state names - $args defined
 			// for this specific input type targets only the country select element.
-			case 'state' :
+			case 'state':
 				// Add class to the field's html element wrapper.
 				$args['class'][] = 'form-group';
 				// add class to the form input itself.
@@ -106,28 +106,28 @@ if ( ! function_exists ( 'cortextoo_wc_form_field_args' ) ) {
 					'aria-hidden'      => 'true',
 				);
 				break;
-			case 'password' :
-			case 'text' :
-			case 'email' :
-			case 'tel' :
-			case 'number' :
+			case 'password':
+			case 'text':
+			case 'email':
+			case 'tel':
+			case 'number':
 				$args['class'][]     = 'form-group';
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
 				break;
-			case 'textarea' :
+			case 'textarea':
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
 				break;
-			case 'checkbox' :
+			case 'checkbox':
 				$args['label_class'] = array( 'custom-control custom-checkbox' );
 				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
 				break;
-			case 'radio' :
+			case 'radio':
 				$args['label_class'] = array( 'custom-control custom-radio' );
 				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
 				break;
-			default :
+			default:
 				$args['class'][]     = 'form-group';
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
@@ -141,11 +141,11 @@ if ( ! function_exists ( 'cortextoo_wc_form_field_args' ) ) {
 /**
 * Change loop add-to-cart button class to Bootstrap
 */
-add_filter( 'woocommerce_loop_add_to_cart_args', 'cortextoo_woocommerce_add_to_cart_args', 10, 2 );
+add_filter( 'woocommerce_loop_add_to_cart_args', 'c9_woocommerce_add_to_cart_args', 10, 2 );
 
-if ( ! function_exists ( 'cortextoo_woocommerce_add_to_cart_args' ) ) {
-	function cortextoo_woocommerce_add_to_cart_args( $args, $product ) {
-		$args['class'] = str_replace('button','btn btn-outline-primary', 'button');
+if ( ! function_exists( 'c9_woocommerce_add_to_cart_args' ) ) {
+	function c9_woocommerce_add_to_cart_args( $args, $product ) {
+		$args['class'] = str_replace( 'button', 'btn btn-outline-primary', 'button' );
 		return $args;
 	}
 }

@@ -2,18 +2,18 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package C9
+ * @package c9
  */
 
 get_header();
 
-$c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
+$c9_sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
 
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -26,22 +26,32 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 						<header class="page-header">
 
 							<h1 class="page-title">
-								<?php 
-								esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'c9' ); ?></h1>
+								<?php
+								esc_html_e(
+									'Oops! That page can&rsquo;t be found.',
+									'c9'
+									);
+							?>
+							</h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'c9' ); ?></p>
+							<p>
+							<?php
+							esc_html_e(
+								'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+								'c9'
+								);
+							?>
+							</p>
 
 							<?php get_search_form(); ?>
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( cortextoo_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<?php if ( c9_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
 							<div class="widget widget_categories">
 
@@ -50,13 +60,15 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 
 								<ul>
 									<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
+										wp_list_categories(
+											array(
+												'orderby' => 'count',
+												'order'   => 'DESC',
+												'show_count' => 1,
+												'title_li' => '',
+												'number'  => 10,
+											)
+											);
 										?>
 								</ul>
 

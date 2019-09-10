@@ -1,75 +1,56 @@
 <?php
+/**
+ *
+ * Add fields and configure admin settings API.
+ *
+ * @since   1.0.0
+ * @package c9
+ */
+
 // Exit if accessed directly.
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WP-OOP-Settings-API Initializer
- *
- * Initializes the WP-OOP-Settings-API.
- *
- * @since   1.0.0
- */
-
-/**
- * Class `WP_OOP_Settings_API`.
- *
- * @since 1.0.0s
- */
 require get_template_directory() . '/admin/class-wp-osa.php';
 
-// function guten_enqueue()
-// {
-// 	wp_enqueue_script(
-// 		'guten-js',
-// 		get_stylesheet_directory_uri() . '/assets/scripts/guten-scripts.js',
-// 		array('jquery', 'wp-blocks', 'wp-element', 'wp-components')
-// 	);
-// }
-// add_action('enqueue_block_editor_assets', 'guten_enqueue');
-
-// function cortextoo_register_post_meta()
-// {
-// 	register_post_meta('post', 'cortextoo_meta_block_field', array(
-// 		'show_in_rest' => true,
-// 		'single' => true,
-// 		'type' => 'string',
-// 	));
-// }
-// add_action('init', 'cortextoo_register_post_meta');
-
-function c9_post_header_size()
-{
+/**
+ * Sets up meta for post header size.
+ */
+function c9_post_header_size() {
 	add_meta_box(
 		'post_header_size',           // Unique ID
 		'Header Size',  // Box title
 		'c9_post_header_size_html',  // Content callback, must be of type callable
-		'post',				  // Post type
+		'post',               // Post type
 		'side'
 	);
 }
-add_action('add_meta_boxes', 'c9_post_header_size');
+add_action( 'add_meta_boxes', 'c9_post_header_size' );
 
-function c9_post_header_size_html($post)
-{
-	$value = get_post_meta($post->ID, 'c9_post_header_size', true);
+/**
+ * Content callback for post header size.
+ */
+function c9_post_header_size_html( $post ) {
+	$value = get_post_meta( $post->ID, 'c9_post_header_size', true );
 	?>
 	<label for="c9_post_header_size">Header Size</label>
 	<div>
-		<input type="radio" id="large" name="c9_post_header_size" value="large" <?php echo $value === 'large' ? 'checked' : ''; ?>>
+		<input type="radio" id="large" name="c9_post_header_size" value="large" <?php echo 'large' === $value ? 'checked' : ''; ?>>
 		<label for="large">Large</label>
 	</div>
 	<div>
-		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo $value === 'small' ? 'checked' : ''; ?>>
+		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo 'small' === $value ? 'checked' : ''; ?>>
 		<label for="small">Small</label>
 	</div>
 <?php
 }
 
-function c9_save_header_size($post_id)
-{
-	if (array_key_exists('c9_post_header_size', $_POST)) {
+/**
+ * Update post meta.
+ */
+function c9_save_header_size( $post_id ) {
+	if ( array_key_exists( 'c9_post_header_size', $_POST ) ) {
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
@@ -77,7 +58,7 @@ function c9_save_header_size($post_id)
 		);
 	}
 }
-add_action('save_post', 'c9_save_header_size');
+add_action( 'save_post', 'c9_save_header_size' );
 
 /**
  * Actions/Filters
@@ -86,7 +67,7 @@ add_action('save_post', 'c9_save_header_size');
  *
  * @since  1.0.0
  */
-if (class_exists('WP_OSA')) {
+if ( class_exists( 'WP_OSA' ) ) {
 	/**
 	 * Object Instantiation.
 	 *
@@ -96,32 +77,32 @@ if (class_exists('WP_OSA')) {
 
 
 	// -----------------------------//
-	//---- Start C9 Branding ---//
-	//------------------------------//
+	// ---- Start C9 Branding ---//
+	// ------------------------------//
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_branding',
-			'title' => __('Branding', 'WPOSA'),
+			'title' => __( 'Branding', 'c9' ),
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'      => 'logo',
-			'type'    => 'image',
-			'name'    => __('Theme Logo Upload', 'WPOSA'),
-			'desc'    => __('Upload your logo here', 'WPOSA'),
+			'id'   => 'logo',
+			'type' => 'image',
+			'name' => __( 'Theme Logo Upload', 'c9' ),
+			'desc' => __( 'Upload your logo here', 'c9' ),
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'                => 'apple-touch',
-			'type'              => 'image',
-			'name'              => __('Apple Touch Icon Upload', 'WPOSA'),
-			'desc'              => __('Upload your apple touch icon here', 'WPOSA')
+			'id'   => 'apple-touch',
+			'type' => 'image',
+			'name' => __( 'Apple Touch Icon Upload', 'c9' ),
+			'desc' => __( 'Upload your apple touch icon here', 'c9' ),
 		)
 	);
 
@@ -130,154 +111,154 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'   => 'favicon',
 			'type' => 'image',
-			'name' => __('Favicon Upload', 'WPOSA'),
-			'desc' => __('Upload a favicon here', 'WPOSA'),
+			'name' => __( 'Favicon Upload', 'c9' ),
+			'desc' => __( 'Upload a favicon here', 'c9' ),
 		)
 	);
-	//------------------------------//
-	//---- End Cortex Branding -----//
-	//------------------------------//
+	// ------------------------------//
+	// ---- End Cortex Branding -----//
+	// ------------------------------//
 
-	//------------------------------//
-	//----- Start Cortex Social ----//
-	//------------------------------//
+	// ------------------------------//
+	// ----- Start Cortex Social ----//
+	// ------------------------------//
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_social',
-			'title' => __('Social', 'WPOSA'),
+			'title' => __( 'Social', 'c9' ),
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'twitter',
-			'type'              => 'text',
-			'name'              => __('Twitter', 'WPOSA'),
-			'desc'              => __('Input your Twitter Username Here', 'WPOSA'),
+			'id'   => 'twitter',
+			'type' => 'text',
+			'name' => __( 'Twitter', 'c9' ),
+			'desc' => __( 'Input your Twitter Username Here', 'c9' ),
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'facebook',
-			'type'              => 'text',
-			'name'              => __('Facebook', 'WPOSA'),
-			'desc'              => __('Input your Facebook Username Here', 'WPOSA'),
+			'id'   => 'facebook',
+			'type' => 'text',
+			'name' => __( 'Facebook', 'c9' ),
+			'desc' => __( 'Input your Facebook Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'instagram',
-			'type'              => 'text',
-			'name'              => __('Instagram', 'WPOSA'),
-			'desc'              => __('Input your Instagram Username Here', 'WPOSA'),
+			'id'   => 'instagram',
+			'type' => 'text',
+			'name' => __( 'Instagram', 'c9' ),
+			'desc' => __( 'Input your Instagram Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'pinterest',
-			'type'              => 'text',
-			'name'              => __('Pinterest', 'WPOSA'),
-			'desc'              => __('Input your Pinterest Username Here', 'WPOSA'),
+			'id'   => 'pinterest',
+			'type' => 'text',
+			'name' => __( 'Pinterest', 'c9' ),
+			'desc' => __( 'Input your Pinterest Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'spotify',
-			'type'              => 'text',
-			'name'              => __('Spotify', 'WPOSA'),
-			'desc'              => __('Input your Spotify Username Here', 'WPOSA'),
+			'id'   => 'spotify',
+			'type' => 'text',
+			'name' => __( 'Spotify', 'c9' ),
+			'desc' => __( 'Input your Spotify Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'youtube',
-			'type'              => 'text',
-			'name'              => __('Youtube', 'WPOSA'),
-			'desc'              => __('Input your Youtube Username Here', 'WPOSA'),
+			'id'   => 'youtube',
+			'type' => 'text',
+			'name' => __( 'Youtube', 'c9' ),
+			'desc' => __( 'Input your Youtube Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'flickr',
-			'type'              => 'text',
-			'name'              => __('Flickr', 'WPOSA'),
-			'desc'              => __('Input your Flickr Username Here', 'WPOSA'),
+			'id'   => 'flickr',
+			'type' => 'text',
+			'name' => __( 'Flickr', 'c9' ),
+			'desc' => __( 'Input your Flickr Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'tumblr',
-			'type'              => 'text',
-			'name'              => __('Tumblr', 'WPOSA'),
-			'desc'              => __('Input your Tumblr Username Here', 'WPOSA'),
+			'id'   => 'tumblr',
+			'type' => 'text',
+			'name' => __( 'Tumblr', 'c9' ),
+			'desc' => __( 'Input your Tumblr Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'yelp',
-			'type'              => 'text',
-			'name'              => __('Yelp', 'WPOSA'),
-			'desc'              => __('Input your Yelp Name Here', 'WPOSA'),
+			'id'   => 'yelp',
+			'type' => 'text',
+			'name' => __( 'Yelp', 'c9' ),
+			'desc' => __( 'Input your Yelp Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'subreddit',
-			'type'              => 'text',
-			'name'              => __('Subreddit', 'WPOSA'),
-			'desc'              => __('Input your Subreddit Name Here', 'WPOSA'),
+			'id'   => 'subreddit',
+			'type' => 'text',
+			'name' => __( 'Subreddit', 'c9' ),
+			'desc' => __( 'Input your Subreddit Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'linkedin',
-			'type'              => 'text',
-			'name'              => __('Linkedin', 'WPOSA'),
-			'desc'              => __('Input your Linkedin Username Here', 'WPOSA'),
+			'id'   => 'linkedin',
+			'type' => 'text',
+			'name' => __( 'Linkedin', 'c9' ),
+			'desc' => __( 'Input your Linkedin Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'github',
-			'type'              => 'text',
-			'name'              => __('Github', 'WPOSA'),
-			'desc'              => __('Input your Github Name Here', 'WPOSA'),
+			'id'   => 'github',
+			'type' => 'text',
+			'name' => __( 'Github', 'c9' ),
+			'desc' => __( 'Input your Github Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
-			'id'                => 'soundcloud',
-			'type'              => 'text',
-			'name'              => __('Soundcloud', 'WPOSA'),
-			'desc'              => __('Input your Soundcloud Name Here', 'WPOSA'),
+			'id'   => 'soundcloud',
+			'type' => 'text',
+			'name' => __( 'Soundcloud', 'c9' ),
+			'desc' => __( 'Input your Soundcloud Name Here', 'c9' ),
 		)
 	);
-
-	// ---------------------------//
-	//---- End Cortex Branding----//
-	//----------------------------//
 
 	// ---------------------------//
-	//---- Start Cortex Footer ---//
-	//----------------------------//
+	// ---- End Cortex Branding----//
+	// ----------------------------//
+
+	// ---------------------------//
+	// ---- Start Cortex Footer ---//
+	// ----------------------------//
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_footer',
-			'title' => __('Footer', 'WPOSA'),
+			'title' => __( 'Footer', 'c9' ),
 		)
 	);
 
@@ -287,13 +268,13 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'show_search',
 			'type'    => 'radio',
-			'name'    => __('Display Search in Footer', 'WPOSA'),
-			'desc'    => __('Do you want to show or hide the search form?', 'WPOSA'),
+			'name'    => __( 'Display Search in Footer', 'c9' ),
+			'desc'    => __( 'Do you want to show or hide the search form?', 'c9' ),
 			'options' => array(
-				"show" => "Show",
-				"hide" => "Hide",
+				'show' => 'Show',
+				'hide' => 'Hide',
 			),
-			'default' => 'show'
+			'default' => 'show',
 		)
 	);
 
@@ -302,26 +283,26 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'   => 'copyright_content',
 			'type' => 'wysiwyg',
-			'name' => __('Copyright', 'WPOSA'),
-			'desc' => __('Enter Custom Copyright Content Here', 'WPOSA'),
+			'name' => __( 'Copyright', 'c9' ),
+			'desc' => __( 'Enter Custom Copyright Content Here', 'c9' ),
 		)
 	);
 
 	// ---------------------------//
-	//---- End Cortex Layout ----//
-	//---------------------------//
+	// ---- End Cortex Layout ----//
+	// ---------------------------//
 
-	//-------------------------------------------//
+	// -------------------------------------------//
 
 	// ---------------------------//
-	//---- Start Cortex Posts ---//
-	//---------------------------//
+	// ---- Start Cortex Posts ---//
+	// ---------------------------//
 
 	// Section: Other Settings.
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_posts',
-			'title' => __('Posts', 'WPOSA'),
+			'title' => __( 'Posts', 'c9' ),
 		)
 	);
 
@@ -331,13 +312,13 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'author_visible',
 			'type'    => 'radio',
-			'name'    => __('Author name visibility', 'WPOSA'),
-			'desc'    => __('Do you want to show or hide author posts?', 'WPOSA'),
+			'name'    => __( 'Author name visibility', 'c9' ),
+			'desc'    => __( 'Do you want to show or hide author posts?', 'c9' ),
 			'options' => array(
-				"show" => "Show",
-				"hide" => "Hide",
+				'show' => 'Show',
+				'hide' => 'Hide',
 			),
-			'default' => 'show'
+			'default' => 'show',
 		)
 	);
 	// Field: Multicheck.
@@ -346,13 +327,13 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'social_icons',
 			'type'    => 'radio',
-			'name'    => __('Social Icon Visibility', 'WPOSA'),
-			'desc'    => __('Do you want your social sharing icons to be visible', 'WPOSA'),
+			'name'    => __( 'Social Icon Visibility', 'c9' ),
+			'desc'    => __( 'Do you want your social sharing icons to be visible', 'c9' ),
 			'options' => array(
-				"show" => "Show",
-				"hide" => "Hide",
+				'show' => 'Show',
+				'hide' => 'Hide',
 			),
-			'default' => 'show'
+			'default' => 'show',
 		)
 	);
 	// Field: Multicheck.
@@ -361,75 +342,75 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
-			'name'    => __('Blog Sidebar', 'WPOSA'),
-			'desc'    => __('Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'WPOSA'),
+			'name'    => __( 'Blog Sidebar', 'c9' ),
+			'desc'    => __( 'Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'c9' ),
 			'options' => array(
-				"hide" => "No Sidebar",
-				"sidebar-left" => "Left Sidebar",
-				"sidebar-right" => "Right Sidebar",
+				'hide'          => 'No Sidebar',
+				'sidebar-left'  => 'Left Sidebar',
+				'sidebar-right' => 'Right Sidebar',
 			),
-			'default' => 'hide'
+			'default' => 'hide',
 		)
 	);
 
 	// ---------------------------//
-	//---- End Cortex Posts -----//
-	//---------------------------//
+	// ---- End Cortex Posts -----//
+	// ---------------------------//
 
-	//-------------------------------------------//
+	// -------------------------------------------//
 
 	// -------------------------------//
-	//---- Start Cortex Typography ---//
-	//--------------------------------//
+	// ---- Start Cortex Typography ---//
+	// --------------------------------//
 
-	//The tab title of the Typography 
+	// The tab title of the Typography
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_typography',
-			'title' => __('Typography', 'WPOSA'),
+			'title' => __( 'Typography', 'c9' ),
 		)
 	);
 
-	//Field: Default Font Selector
+	// Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
 			'id'      => 'defaultFont',
 			'type'    => 'radio',
-			'name'    => __('Use Cortex Theme Based Fonts?', 'WPOSA'),
+			'name'    => __( 'Use Cortex Theme Based Fonts?', 'c9' ),
 			'options' => array(
-				"yes" => "Yes.",
-				"no" => "No, I will take care of my fonts.",
+				'yes' => 'Yes.',
+				'no'  => 'No, I will take care of my fonts.',
 			),
 		)
 	);
 
-	//If the user selects YES and will select the fonts.
-	//The default font will be Helvatic for system fonts:
+	// If the user selects YES and will select the fonts.
+	// The default font will be Helvatic for system fonts:
 
-	//Update an array to contain the fonts that will be used 
-	//throughout each of the font selector fields:
+	// Update an array to contain the fonts that will be used
+	// throughout each of the font selector fields:
 	$c9fonts = array(
-		'Roboto' => 'Roboto',
-		'Montserrat' => 'Montserrat',
-		'PT Sans' => 'PT Sans',
-		'Raleway' => 'Raleway',
-		'Montserrat' => 'Montserrat',
+		'Roboto'          => 'Roboto',
+		'Montserrat'      => 'Montserrat',
+		'PT Sans'         => 'PT Sans',
+		'Raleway'         => 'Raleway',
+		'Montserrat'      => 'Montserrat',
 		'Source Sans Pro' => 'Source Sans Pro',
-		'Oswald' => 'Oswald',
-		'Open Sans' => 'Open Sans'
+		'Oswald'          => 'Oswald',
+		'Open Sans'       => 'Open Sans',
 	);
 
 
-	//Field: Default Font Selector
+	// Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_typography',
 		array(
 			'id'      => 'heading_font',
 			'type'    => 'select',
-			'name'    => __('Heading Font', 'WPOSA'),
-			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => $c9fonts
+			'name'    => __( 'Heading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
 		)
 	);
 
@@ -440,9 +421,9 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'subheading_font',
 			'type'    => 'select',
-			'name'    => __('Subheading Font', 'WPOSA'),
-			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => $c9fonts
+			'name'    => __( 'Subheading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
 		)
 	);
 
@@ -452,26 +433,26 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'body_font',
 			'type'    => 'select',
-			'name'    => __('Body Font', 'WPOSA'),
-			'desc'    => __('Select fonts here', 'WPOSA'),
-			'options' => $c9fonts
+			'name'    => __( 'Body Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
 		)
 	);
 
 
 
 	// ---------------------------//
-	//---- End Cortex Typography -----//
-	//---------------------------//
-
-	//-------------------------------------------//
+	// ---- End Cortex Typography -----//
 	// ---------------------------//
-	//---- Start Cortex SEO ---//
-	//---------------------------//
+
+	// -------------------------------------------//
+	// ---------------------------//
+	// ---- Start Cortex SEO ---//
+	// ---------------------------//
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_seo',
-			'title' => __('SEO', 'WPOSA'),
+			'title' => __( 'SEO', 'c9' ),
 		)
 	);
 
@@ -480,85 +461,70 @@ if (class_exists('WP_OSA')) {
 		array(
 			'id'      => 'google_analytics_id',
 			'type'    => 'text',
-			'name'    => __('Google Analytics ID', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
+			'name'    => __( 'Google Analytics ID', 'c9' ),
+			'desc'    => '',
 			'default' => '',
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_seo',
 		array(
-			'id'      => 'matomo_snippet',
-			'type'    => 'code',
+			'id'       => 'matomo_snippet',
+			'type'     => 'code',
 			'language' => 'javascript',
-			'name'    => __('Matomo Snippet', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
+			'name'     => __( 'Matomo Snippet', 'c9' ),
+			'desc'     => '',
+			'default'  => '',
 		)
 	);
 	$wposa_obj->add_field(
 		'cortex_seo',
 		array(
-			'id'      => 'gtm_snippet',
-			'type'    => 'code',
+			'id'       => 'gtm_snippet',
+			'type'     => 'code',
 			'language' => 'javascript',
-			'name'    => __('Google Tags Manager Snippet', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
+			'name'     => __( 'Google Tags Manager Snippet', 'c9' ),
+			'desc'     => '',
+			'default'  => '',
 		)
 	);
 
-	//---------------------------//
-	//------ End Cortex SEO -----//
-	//---------------------------//
+	// ---------------------------//
+	// ------ End Cortex SEO -----//
+	// ---------------------------//
 
 	// -----------------------------//
-	//---- Start Cortex Advanced ---//
-	//------------------------------//
+	// ---- Start Cortex Advanced ---//
+	// ------------------------------//
 
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_advanced',
-			'title' => __('Advanced', 'WPOSA'),
+			'title' => __( 'Advanced', 'c9' ),
 		)
 	);
-
-	// $wposa_obj->add_field(
-	// 	'cortex_advanced',
-	// 	array(
-	// 		'id'      => 'dev_mode',
-	// 		'type'    => 'radio',
-	// 		'name'    => __('Enable Dev Mode', 'WPOSA'),
-	// 		'desc'    => __('Use unminified files', 'WPOSA'),
-	// 		'options' => array(
-	// 			"enable" => "Enable",
-	// 			"disable" => "Disable",
-	// 		),
-	// 		'default' => 'disable'
-	// 	)
-	// );
 
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
-			'id'      => 'custom_css',
-			'type'    => 'code',
+			'id'       => 'custom_css',
+			'type'     => 'code',
 			'language' => 'css',
-			'name'    => __('Custom CSS', 'WPOSA'),
-			'desc'    => __('', 'WPOSA'),
-			'default' => '',
+			'name'     => __( 'Custom CSS', 'c9' ),
+			'desc'     => '',
+			'default'  => '',
 		)
 	);
 
 	$wposa_obj->add_field(
 		'cortex_advanced',
 		array(
-			'id'      => 'custom_js',
-			'type'    => 'code',
+			'id'       => 'custom_js',
+			'type'     => 'code',
 			'language' => 'javascript',
-			'name'    => __('Custom JS', 'WPOSA'),
-			'desc'    => __('Drop your custom google analytics, google fonts, or Typekit code here', 'WPOSA'),
-			'default' => '',
+			'name'     => __( 'Custom JS', 'c9' ),
+			'desc'     => __( 'Drop your custom google analytics, google fonts, or Typekit code here', 'c9' ),
+			'default'  => '',
 		)
 	);
 }
