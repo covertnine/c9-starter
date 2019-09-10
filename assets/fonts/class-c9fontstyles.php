@@ -1,13 +1,13 @@
 <?php
-
 /**
- * c9 font styles
+ * C9 font styles.
  *
  * @package c9
  */
-
 class C9FontStyles {
-
+	/**
+	 * Gets font settings based on defaults and generates code.-arrow-up
+	 */
 	public static function render( $font_array ) {
 		$heading_font    = $font_array;
 		$headings_font   = "'" . $font_array['heading_font'] . "'";
@@ -213,7 +213,10 @@ class C9FontStyles {
 		<?php
 	}
 
-	public static function minifyCss( $css ) {
+	/**
+	 * Regex powered CSS minifier
+	 */
+	public static function minify_css( $css ) {
 		// some of the following functions to minimize the css-output are directly taken
 		// from the awesome CSS JS Booster: https://github.com/Schepp/CSS-JS-Booster
 		// all credits to Christian Schaefer: http://twitter.com/derSchepp

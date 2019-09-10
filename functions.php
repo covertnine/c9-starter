@@ -1,6 +1,6 @@
 <?php
 /**
- * c9 functions and definitions
+ * C9 functions and definitions.
  *
  * @package c9
  */
@@ -69,13 +69,17 @@ if ( file_exists( get_template_directory() . '/client/client.php' ) ) {
 	add_action( 'admin_notices', 'need_client_folder' );
 }
 
+/**
+ * Add admin notice if the client directory is not present
+ *
+ * @return void
+ */
 function c9_client_folder() {
 	?>
 	<div class="update-nag notice">
 		<p><?php _e( 'You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9' ); ?></p>
 	</div>
 <?php
-
 }
 
 require get_template_directory() . '/admin/admin-settings.php';

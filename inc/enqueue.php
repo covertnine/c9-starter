@@ -1,11 +1,9 @@
 <?php
-
 /**
- * c9 enqueue scripts
+ * C9 enqueue scripts
  *
  * @package c9
  */
-
 
 
 if ( ! function_exists( 'c9_scripts' ) ) {
@@ -13,7 +11,6 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 	 * Load theme's JavaScript and CSS sources.
 	 */
 	function c9_scripts() {
-	  // Get the theme data.
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
@@ -76,11 +73,11 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 			// Enqueued script with the data we pulled from earlier selections
 			wp_enqueue_script( 'typography-script' );
 
-			require_once( get_template_directory() . '/assets/fonts/font-styles.php' );
+			require_once( get_template_directory() . '/assets/fonts/class-c9fontstyles.php' );
 			ob_start();
 			C9FontStyles::render( $font_array );
 			$font_css       = ob_get_clean();
-			$fonts_minified = C9FontStyles::minifyCss( $font_css );
+			$fonts_minified = C9FontStyles::minify_css( $font_css );
 
 			wp_add_inline_style( 'c9-styles', $fonts_minified );
 		}
