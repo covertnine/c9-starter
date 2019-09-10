@@ -2797,7 +2797,7 @@ screen and (max-height: 300px) {
 }
 
 /**************************** Full Screen Search Form **********************************/
-#search {
+#fullscreensearch {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -2813,7 +2813,7 @@ screen and (max-height: 300px) {
 	background-color: rgba(255, 255, 255, 0.95);
 }
 
-#search.open {
+#fullscreensearch.open {
 	position: fixed;
 	opacity: 1;
 	height: 100vh;
@@ -2821,7 +2821,7 @@ screen and (max-height: 300px) {
 	z-index: 1053;
 }
 
-#search input[type="search"] {
+#fullscreensearch input[type="search"] {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2839,7 +2839,7 @@ screen and (max-height: 300px) {
 	border: 1px solid rgba(151, 151, 151, 1);
 }
 
-#search .btn {
+#fullscreensearch .btn {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2848,11 +2848,11 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
-#search .btn:hover {
+#fullscreensearch .btn:hover {
 	color: #fff;
 }
 
-#search .search-close {
+#fullscreensearch .search-close {
 	position: fixed;
 	top: 35px;
 	right: 35px;
@@ -2867,7 +2867,7 @@ screen and (max-height: 300px) {
 	transition: opacity .5s;
 }
 
-#search .search-close:hover {
+#fullscreensearch .search-close:hover {
 	opacity: .4;
 }
 

@@ -80,7 +80,7 @@ else :
 endif; // end of checking for client footer.php
 ?>
 </div><!-- #page we need this extra closing tag here -->
-<div id="search">
+<div id="fullscreensearch">
 	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e( 'Close', 'c9' ); ?></span></button>
 	<form role="search" method="get" id="fullscreen" action="/">
 		<div>
