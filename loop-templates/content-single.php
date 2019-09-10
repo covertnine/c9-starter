@@ -17,7 +17,7 @@ $header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 				<div class="entry-meta">
-					<?php cortextoo_posted_on(); ?>
+					<?php c9_posted_on(); ?>
 
 				</div>
 			</div>
@@ -63,7 +63,7 @@ $header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 			<div class="entry-meta">
-				<?php cortextoo_posted_on(); ?>
+				<?php c9_posted_on(); ?>
 
 			</div>
 
@@ -89,7 +89,7 @@ $header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
 			?>
 		</div>
 
-		<?php cortextoo_entry_footer(); ?>
+		<?php c9_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

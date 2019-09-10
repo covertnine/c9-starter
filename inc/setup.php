@@ -12,9 +12,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 960; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'cortextoo_setup' );
+add_action( 'after_setup_theme', 'c9_setup' );
 
-if ( ! function_exists( 'cortextoo_setup' ) ) {
+if ( ! function_exists( 'c9_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -22,7 +22,7 @@ if ( ! function_exists( 'cortextoo_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function cortextoo_setup() {
+	function c9_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -91,7 +91,7 @@ if ( ! function_exists( 'cortextoo_setup' ) ) {
 		add_theme_support( 'custom-logo' );
 
 		// Check and setup theme default settings.
-		cortextoo_setup_theme_default_settings();
+		c9_setup_theme_default_settings();
 
 		add_theme_support( 'align-wide' );
 
@@ -109,9 +109,9 @@ if ( ! function_exists( 'cortextoo_setup' ) ) {
 	}
 }
 
-add_action( 'pre_get_posts', 'cortextoo_posts_per_page' );
+add_action( 'pre_get_posts', 'c9_posts_per_page' );
 
-function cortextoo_posts_per_page( $query ) {
+function c9_posts_per_page( $query ) {
 	if ( ! $query->is_main_query() || is_admin() ) {
 return;
 	}

@@ -1,6 +1,6 @@
 <?php
 /**
- * cortextoo functions and definitions
+ * c9 functions and definitions
  *
  * @package c9
  */

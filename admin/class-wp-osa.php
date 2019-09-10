@@ -5,7 +5,7 @@
  * Main class that deals with all other classes.
  *
  * @since   1.0.0
- * @package WPOSA
+ * @package c9
  */
 
 // Exit if accessed directly.
@@ -15,14 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'WP_OSA' ) ) :
 	/**
-	 * WP_OSA.
-	 *
 	 * WP Settings API Class.
-	 *
-	 * @since 1.0.0
 	 */
 	class WP_OSA {
-
 
 		/**
 		 * Sections array.

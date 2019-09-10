@@ -20,13 +20,13 @@
 */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'cortextoo_WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'c9_WP_Bootstrap_Navwalker' ) ) {
 	/**
 	 * WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class cortextoo_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class c9_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.

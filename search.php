@@ -12,7 +12,7 @@ get_header();
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="page-search-results cortextoo" id="content" tabindex="-1">
+	<div class="page-search-results c9" id="content" tabindex="-1">
 
 		<main class="site-main" id="main">
 
@@ -77,10 +77,10 @@ the_post();
 		</main><!-- #main -->
 
 		<!-- The pagination component -->
-		<?php cortextoo_pagination(); ?>
+		<?php c9_pagination(); ?>
 
 
-	</div><!-- .cortextoo end -->
+	</div><!-- .c9 end -->
 
 </div><!-- Wrapper end -->
 

@@ -14,13 +14,13 @@
  * See: https://jetpack.me/support/responsive-videos/
  */
 
-add_action( 'after_setup_theme', 'cortextoo_components_jetpack_setup' );
+add_action( 'after_setup_theme', 'c9_components_jetpack_setup' );
 
-if ( ! function_exists( 'cortextoo_components_jetpack_setup' ) ) {
+if ( ! function_exists( 'c9_components_jetpack_setup' ) ) {
 	/**
 	 * Add theme support for Infinite Scroll.
 	 */
-	function cortextoo_components_jetpack_setup() {
+	function c9_components_jetpack_setup() {
 		add_theme_support(
 			'infinite-scroll',
 			array(
@@ -40,11 +40,11 @@ if ( ! function_exists( 'cortextoo_components_jetpack_setup' ) ) {
 }
 
 
-if ( ! function_exists( 'cortextoo_components_infinite_scroll_render' ) ) {
+if ( ! function_exists( 'c9_components_infinite_scroll_render' ) ) {
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function cortextoo_components_infinite_scroll_render() {
+	function c9_components_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :
@@ -56,11 +56,11 @@ if ( ! function_exists( 'cortextoo_components_infinite_scroll_render' ) ) {
 	}
 }
 
-if ( ! function_exists( 'cortextoo_components_social_menu' ) ) {
+if ( ! function_exists( 'c9_components_social_menu' ) ) {
 	/**
 	 * Jetpack Social Menu
 	 */
-	function cortextoo_components_social_menu() {
+	function c9_components_social_menu() {
 		if ( ! function_exists( 'jetpack_social_menu' ) ) {
 			return;
 		} else {

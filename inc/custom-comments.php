@@ -6,7 +6,7 @@
  */
 
 // Comments form.
-add_filter( 'comment_form_default_fields', 'cortextoo_bootstrap_comment_form_fields' );
+add_filter( 'comment_form_default_fields', 'c9_bootstrap_comment_form_fields' );
 
 /**
  * Creates the comments form.
@@ -16,9 +16,9 @@ add_filter( 'comment_form_default_fields', 'cortextoo_bootstrap_comment_form_fie
  * @return array
  */
 
-if ( ! function_exists( 'cortextoo_bootstrap_comment_form_fields' ) ) {
+if ( ! function_exists( 'c9_bootstrap_comment_form_fields' ) ) {
 
-	function cortextoo_bootstrap_comment_form_fields( $fields ) {
+	function c9_bootstrap_comment_form_fields( $fields ) {
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
@@ -43,9 +43,9 @@ if ( ! function_exists( 'cortextoo_bootstrap_comment_form_fields' ) ) {
 
 		return $fields;
 	}
-} // endif function_exists( 'cortextoo_bootstrap_comment_form_fields' )
+} // endif function_exists( 'c9_bootstrap_comment_form_fields' )
 
-add_filter( 'comment_form_defaults', 'cortextoo_bootstrap_comment_form' );
+add_filter( 'comment_form_defaults', 'c9_bootstrap_comment_form' );
 
 /**
  * Builds the form.
@@ -55,9 +55,9 @@ add_filter( 'comment_form_defaults', 'cortextoo_bootstrap_comment_form' );
  * @return mixed
  */
 
-if ( ! function_exists( 'cortextoo_bootstrap_comment_form' ) ) {
+if ( ! function_exists( 'c9_bootstrap_comment_form' ) ) {
 
-	function cortextoo_bootstrap_comment_form( $args ) {
+	function c9_bootstrap_comment_form( $args ) {
 		$args['comment_field'] = '<div class="form-group comment-form-comment">
 	    <label for="comment">' . _x( 'Comment', 'noun', 'c9' ) . ( ' <span class="required">*</span>' ) . '</label>
 	    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
@@ -65,4 +65,4 @@ if ( ! function_exists( 'cortextoo_bootstrap_comment_form' ) ) {
 		$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
 		return $args;
 	}
-} // endif function_exists( 'cortextoo_bootstrap_comment_form' )
+} // endif function_exists( 'c9_bootstrap_comment_form' )

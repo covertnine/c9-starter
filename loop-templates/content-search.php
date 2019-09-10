@@ -25,7 +25,7 @@
 
 			<div class="entry-meta">
 
-				<?php cortextoo_posted_on(); ?>
+				<?php c9_posted_on(); ?>
 
 			</div><!-- .entry-meta -->
 
@@ -41,7 +41,7 @@
 
 		<footer class="entry-footer">
 
-			<?php cortextoo_entry_footer(); ?>
+			<?php c9_entry_footer(); ?>
 
 		</footer><!-- .entry-footer -->
 

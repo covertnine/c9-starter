@@ -7,7 +7,7 @@
   var TextControl       = wp.components.TextControl;
 
 registerBlockType(
-	  "cortextoo/meta-block",
+	  "c9/meta-block",
 	  {
 	  title: "Meta Block",
 	  icon: "smiley",
@@ -17,7 +17,7 @@ registerBlockType(
 					blockValue: {
 			  type: "string",
 			  source: "meta",
-			  meta: "cortextoo_meta_block_field"
+			  meta: "c9_meta_block_field"
 					}
 	  },
 
@@ -53,7 +53,7 @@ registerBlockType(
 
 wp.hooks.addFilter(
 	"editor.PostFeaturedImage",
-	"cortextoo/wrap-post-featured-image",
+	"c9/wrap-post-featured-image",
 	OriginalComponent => {
 	  return props => {
 			return el(
@@ -63,7 +63,7 @@ wp.hooks.addFilter(
 			el( OriginalComponent, props ),
 			el(
 			  "div",
-			  { class: "cortextoo-check-wrapper" },
+			  { class: "c9-check-wrapper" },
 			  [
 			el(
 				"input",

@@ -14,7 +14,7 @@ get_header();
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -64,7 +64,7 @@ get_header();
 								<a rel="bookmark" href="<?php the_permalink(); ?>" title="<?php esc_html_e( 'Permanent Link:', 'c9' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
 								<?php
-								cortextoo_posted_on();
+								c9_posted_on();
 								esc_html_e( 'in', 'c9' );
 								the_category( '&' );
 								?>
@@ -84,7 +84,7 @@ get_header();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+			<?php c9_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

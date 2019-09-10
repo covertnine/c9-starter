@@ -17,7 +17,7 @@ get_header();
 <div class="wrapper" id="index-wrapper">
 
 	<main class="site-main" id="main">
-		<div class="container-narrow container-posts cortextoo">
+		<div class="container-narrow container-posts c9">
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
@@ -49,7 +49,7 @@ the_post();
 	</main><!-- #main -->
 
 	<!-- The pagination component -->
-	<?php cortextoo_pagination(); ?>
+	<?php c9_pagination(); ?>
 
 </div><!-- Wrapper end -->
 

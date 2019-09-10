@@ -13,10 +13,10 @@
 add_theme_support( 'editor-styles' );
 
 // Add TinyMCE style formats.
-add_filter( 'mce_buttons_2', 'cortextoo_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'c9_tiny_mce_style_formats' );
 
-if ( ! function_exists( 'cortextoo_tiny_mce_style_formats' ) ) {
-	function cortextoo_tiny_mce_style_formats( $styles ) {
+if ( ! function_exists( 'c9_tiny_mce_style_formats' ) ) {
+	function c9_tiny_mce_style_formats( $styles ) {
 
 		array_unshift( $styles, 'styleselect' );
 		return $styles;
@@ -24,10 +24,10 @@ if ( ! function_exists( 'cortextoo_tiny_mce_style_formats' ) ) {
 }
 
 
-add_filter( 'tiny_mce_before_init', 'cortextoo_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'c9_tiny_mce_before_init' );
 
-if ( ! function_exists( 'cortextoo_tiny_mce_before_init' ) ) {
-	function cortextoo_tiny_mce_before_init( $settings ) {
+if ( ! function_exists( 'c9_tiny_mce_before_init' ) ) {
+	function c9_tiny_mce_before_init( $settings ) {
 
 		$style_formats = array(
 			array(
@@ -69,22 +69,22 @@ if ( ! function_exists( 'cortextoo_tiny_mce_before_init' ) ) {
 }
 
 /* add theme compiled files to gutenberg editor */
-function cortextoo_editor_style() {
-	 wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css' );
-	wp_enqueue_style( 'cortextoo-editor-style', get_template_directory_uri() . '/assets/dist/css/custom-editor-style.css' );
-	wp_enqueue_script( 'cortextoo-scripts-theme', get_template_directory_uri() . '/assets/dist/js/theme.min.js' );
+function c9_editor_style() {
+	 wp_enqueue_style( 'c9-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css' );
+	wp_enqueue_style( 'c9-editor-style', get_template_directory_uri() . '/assets/dist/css/custom-editor-style.css' );
+	wp_enqueue_script( 'c9-scripts-theme', get_template_directory_uri() . '/assets/dist/js/theme.min.js' );
 }
 
-add_action( 'enqueue_block_editor_assets', 'cortextoo_editor_style' );
+add_action( 'enqueue_block_editor_assets', 'c9_editor_style' );
 
 
 /* add page template name to body_class in admin */
-if ( ! function_exists( 'cortextoo_template_selected' ) ) {
+if ( ! function_exists( 'c9_template_selected' ) ) {
 
-	function cortextoo_template_selected( $classes ) {
+	function c9_template_selected( $classes ) {
 
 		$template_slug = basename( get_page_template(), '.php' );
 		return "$classes $template_slug";
 	}
 }
-add_filter( 'admin_body_class', 'cortextoo_template_selected' );
+add_filter( 'admin_body_class', 'c9_template_selected' );

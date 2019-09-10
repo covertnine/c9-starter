@@ -11,7 +11,7 @@ get_header();
 ?>
 <div class="wrapper" id="archive-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -57,7 +57,7 @@ the_post();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php cortextoo_pagination(); ?>
+			<?php c9_pagination(); ?>
 
 		</div> <!-- .row -->
 

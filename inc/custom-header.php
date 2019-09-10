@@ -6,12 +6,12 @@
  * @package c9
  */
 
-add_action( 'after_setup_theme', 'cortextoo_custom_header_setup' );
+add_action( 'after_setup_theme', 'c9_custom_header_setup' );
 
-if ( ! function_exists( 'cortextoo_custom_header_setup' ) ) {
-	function cortextoo_custom_header_setup() {
+if ( ! function_exists( 'c9_custom_header_setup' ) ) {
+	function c9_custom_header_setup() {
 		/**
-		 * Filter Cortextoo custom-header support arguments.
+		 * Filter C9 custom-header support arguments.
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -28,7 +28,7 @@ if ( ! function_exists( 'cortextoo_custom_header_setup' ) ) {
 		add_theme_support(
 			'custom-header',
 			apply_filters(
-			'cortextoo_custom_header_args',
+			'c9_custom_header_args',
 			array(
 				'default-image' => get_parent_theme_file_uri( '/img/header.jpg' ),
 				'width'         => 2000,

@@ -15,7 +15,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 ?>
 
 <div class="wrapper" id="single-wrapper">
-	<div class="container-narrow cortextoo" id="content" tabindex="-1">
+	<div class="container-narrow c9" id="content" tabindex="-1">
 		<div class="row no-gutters">
 
 			<?php if ( $sidebar_left ) : ?>

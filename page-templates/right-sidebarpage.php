@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="wrapper cortextoo" id="page-wrapper">
+<div class="wrapper c9" id="page-wrapper">
 
 	<div class="container page-right-sidebar" id="content">
 

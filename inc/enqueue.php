@@ -1,34 +1,34 @@
 <?php
 
 /**
- * cortextoo enqueue scripts
+ * c9 enqueue scripts
  *
  * @package c9
  */
 
 
 
-if ( ! function_exists( 'cortextoo_scripts' ) ) {
+if ( ! function_exists( 'c9_scripts' ) ) {
 	/**
 	 * Load theme's JavaScript and CSS sources.
 	 */
-	function cortextoo_scripts() {
+	function c9_scripts() {
 	  // Get the theme data.
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
-		wp_enqueue_style( 'cortextoo-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css', array() );
+		wp_enqueue_style( 'c9-styles', get_stylesheet_directory_uri() . '/assets/dist/css/theme.min.css', array() );
 
 		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
-		wp_enqueue_script( 'cortextoo-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array( 'jquery' ), true );
+		wp_enqueue_script( 'c9-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array( 'jquery' ), true );
 
 		// theme option scripts
 		if ( get_option( 'cortex_advanced' ) ) {
 			if ( get_option( 'cortex_advanced' )['custom_css'] ) {
-				wp_add_inline_style( 'cortextoo-styles', get_option( 'cortex_advanced' )['custom_css'] );
+				wp_add_inline_style( 'c9-styles', get_option( 'cortex_advanced' )['custom_css'] );
 			}
 			if ( get_option( 'cortex_advanced' )['custom_js'] ) {
-				wp_add_inline_script( 'cortextoo-scripts', get_option( 'cortex_advanced' )['custom_js'] );
+				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_advanced' )['custom_js'] );
 			}
 		};
 
@@ -45,10 +45,10 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 				wp_add_inline_script( 'ga-url', $ga_snippet );
 			}
 			if ( get_option( 'cortex_seo' )['matomo_snippet'] ) {
-				wp_add_inline_script( 'cortextoo-scripts', get_option( 'cortex_seo' )['matomo_snippet'] );
+				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_seo' )['matomo_snippet'] );
 			}
 			if ( get_option( 'cortex_seo' )['gtm_snippet'] ) {
-				wp_add_inline_script( 'cortextoo-scripts', get_option( 'cortex_seo' )['gtm_snippet'] );
+				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_seo' )['gtm_snippet'] );
 			}
 		}
 
@@ -82,15 +82,15 @@ if ( ! function_exists( 'cortextoo_scripts' ) ) {
 			$font_css       = ob_get_clean();
 			$fonts_minified = C9FontStyles::minifyCss( $font_css );
 
-			wp_add_inline_style( 'cortextoo-styles', $fonts_minified );
+			wp_add_inline_style( 'c9-styles', $fonts_minified );
 		}
 	}
-} // endif function_exists( 'cortextoo_scripts' ).
+} // endif function_exists( 'c9_scripts' ).
 
 // John Lynch : Typography function. Updated with nav-bar
 // Function that will determine if user selects yes or no to load in fonts,
 // If yes: passes object with specified fonts. If no: no fonts passed
-add_action( 'wp_enqueue_scripts', 'cortextoo_scripts' );
+add_action( 'wp_enqueue_scripts', 'c9_scripts' );
 
 /**
  * Remove emoji specific code and styling

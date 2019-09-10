@@ -11,31 +11,31 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-if ( ! function_exists( 'cortextoo_customize_register' ) ) {
+if ( ! function_exists( 'c9_customize_register' ) ) {
 	/**
 	 * Register basic customizer support.
 	 *
 	 * @param object $wp_customize Customizer reference.
 	 */
-	function cortextoo_customize_register( $wp_customize ) {
+	function c9_customize_register( $wp_customize ) {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	}
 }
-add_action( 'customize_register', 'cortextoo_customize_register' );
+add_action( 'customize_register', 'c9_customize_register' );
 
-if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
+if ( ! function_exists( 'c9_theme_customize_register' ) ) {
 	/**
 	 * Register individual settings through customizer's API.
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
-	function cortextoo_theme_customize_register( $wp_customize ) {
+	function c9_theme_customize_register( $wp_customize ) {
 
 		// Theme layout settings.
 		$wp_customize->add_section(
-			'cortextoo_theme_layout_options',
+			'c9_theme_layout_options',
 			array(
 				'title'       => __( 'Theme Layout Settings', 'c9' ),
 				'capability'  => 'edit_theme_options',
@@ -45,7 +45,7 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 			);
 
 		// select sanitization function
-		function cortextoo_theme_slug_sanitize_select( $input, $setting ) {
+		function c9_theme_slug_sanitize_select( $input, $setting ) {
 
 			// input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
 			$input = sanitize_key( $input );
@@ -58,11 +58,11 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 		}
 
 		$wp_customize->add_setting(
-			'cortextoo_container_type',
+			'c9_container_type',
 			array(
 				'default'           => 'container',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'cortextoo_theme_slug_sanitize_select',
+				'sanitize_callback' => 'c9_theme_slug_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 			);
@@ -70,12 +70,12 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'cortextoo_container_type',
+				'c9_container_type',
 				array(
 					'label'       => __( 'Container Width', 'c9' ),
 					'description' => __( "Choose between Bootstrap's container and container-fluid", 'c9' ),
-					'section'     => 'cortextoo_theme_layout_options',
-					'settings'    => 'cortextoo_container_type',
+					'section'     => 'c9_theme_layout_options',
+					'settings'    => 'c9_container_type',
 					'type'        => 'select',
 					'choices'     => array(
 						'container'       => __( 'Fixed width container', 'c9' ),
@@ -87,7 +87,7 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting(
-			'cortextoo_sidebar_position',
+			'c9_sidebar_position',
 			array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
@@ -99,17 +99,17 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'cortextoo_sidebar_position',
+				'c9_sidebar_position',
 				array(
 					'label'             => __( 'Sidebar Positioning', 'c9' ),
 					'description'       => __(
 						"Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
 						'c9'
 					),
-					'section'           => 'cortextoo_theme_layout_options',
-					'settings'          => 'cortextoo_sidebar_position',
+					'section'           => 'c9_theme_layout_options',
+					'settings'          => 'c9_sidebar_position',
 					'type'              => 'select',
-					'sanitize_callback' => 'cortextoo_theme_slug_sanitize_select',
+					'sanitize_callback' => 'c9_theme_slug_sanitize_select',
 					'choices'           => array(
 						'right' => __( 'Right sidebar', 'c9' ),
 						'left'  => __( 'Left sidebar', 'c9' ),
@@ -120,5 +120,5 @@ if ( ! function_exists( 'cortextoo_theme_customize_register' ) ) {
 			)
 		);
 	}
-} // endif function_exists( 'cortextoo_theme_customize_register' ).
-add_action( 'customize_register', 'cortextoo_theme_customize_register' );
+} // endif function_exists( 'c9_theme_customize_register' ).
+add_action( 'customize_register', 'c9_theme_customize_register' );

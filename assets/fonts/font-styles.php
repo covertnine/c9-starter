@@ -1,7 +1,7 @@
 <?php
 
 /**
- * cortextoo font styles
+ * c9 font styles
  *
  * @package c9
  */
@@ -34,18 +34,18 @@ class C9FontStyles {
 		}
 
 		.c9-site-title,
-		.cortextoo .h1,
-		.cortextoo .h2,
-		.cortextoo .h3,
-		.cortextoo .h4,
-		.cortextoo .h5,
-		.cortextoo .h6,
-		.cortextoo h1,
-		.cortextoo h2,
-		.cortextoo h3,
-		.cortextoo h4,
-		.cortextoo h5,
-		.cortextoo h6,
+		.c9 .h1,
+		.c9 .h2,
+		.c9 .h3,
+		.c9 .h4,
+		.c9 .h5,
+		.c9 .h6,
+		.c9 h1,
+		.c9 h2,
+		.c9 h3,
+		.c9 h4,
+		.c9 h5,
+		.c9 h6,
 		.editor-styles-wrapper .h1,
 		.editor-styles-wrapper .h2,
 		.editor-styles-wrapper .h3,
@@ -123,8 +123,8 @@ class C9FontStyles {
 		.subhead-h,
 		.c9-sh,
 		.text-muted,
-		.cortextoo .c9-sh,
-		.cortextoo .text-muted {
+		.c9 .c9-sh,
+		.c9 .text-muted {
 		font-family: <?php echo $body_font; ?>;
 		color: #fec50a;
 		}

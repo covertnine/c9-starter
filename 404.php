@@ -7,13 +7,13 @@
 
 get_header();
 
-$c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
+$c9_sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
 
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="container cortextoo" id="content" tabindex="-1">
+	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -51,7 +51,7 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( cortextoo_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<?php if ( c9_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
 							<div class="widget widget_categories">
 

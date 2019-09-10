@@ -6,8 +6,8 @@
  * @package c9
  */
 
-if ( ! function_exists( 'cortextoo_pagination' ) ) {
-	function cortextoo_pagination( $args = [], $class = 'pagination' ) {
+if ( ! function_exists( 'c9_pagination' ) ) {
+	function c9_pagination( $args = [], $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 return;

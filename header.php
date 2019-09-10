@@ -106,7 +106,7 @@
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu',
 									'depth'           => 2,
-									'walker'          => new cortextoo_WP_Bootstrap_Navwalker(),
+									'walker'          => new c9_WP_Bootstrap_Navwalker(),
 								)
 							);
 							?>

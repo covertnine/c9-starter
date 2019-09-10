@@ -1,11 +1,10 @@
 <?php
 /**
- * Admin Settings
  *
  * Add fields and configure admin settings API.
  *
  * @since   1.0.0
- * @package cortextoo
+ * @package c9
  */
 
 // Exit if accessed directly.
@@ -13,40 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * WP-OOP-Settings-API Initializer
- *
- * Initializes the WP-OOP-Settings-API.
- *
- * @since   1.0.0
- */
-
-/**
- * Class `WP_OOP_Settings_API`.
- *
- * @since 1.0.0s
- */
 require get_template_directory() . '/admin/class-wp-osa.php';
-
-// function guten_enqueue()
-// {
-// wp_enqueue_script(
-// 'guten-js',
-// get_stylesheet_directory_uri() . '/assets/scripts/guten-scripts.js',
-// array('jquery', 'wp-blocks', 'wp-element', 'wp-components')
-// );
-// }
-// add_action('enqueue_block_editor_assets', 'guten_enqueue');
-
-// function cortextoo_register_post_meta()
-// {
-// register_post_meta('post', 'cortextoo_meta_block_field', array(
-// 'show_in_rest' => true,
-// 'single' => true,
-// 'type' => 'string',
-// ));
-// }
-// add_action('init', 'cortextoo_register_post_meta');
 
 /**
  * Sets up meta for post header size.
@@ -116,7 +82,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_branding',
-			'title' => __( 'Branding', 'WPOSA' ),
+			'title' => __( 'Branding', 'c9' ),
 		)
 	);
 
@@ -125,8 +91,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'logo',
 			'type' => 'image',
-			'name' => __( 'Theme Logo Upload', 'WPOSA' ),
-			'desc' => __( 'Upload your logo here', 'WPOSA' ),
+			'name' => __( 'Theme Logo Upload', 'c9' ),
+			'desc' => __( 'Upload your logo here', 'c9' ),
 		)
 	);
 
@@ -135,8 +101,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'apple-touch',
 			'type' => 'image',
-			'name' => __( 'Apple Touch Icon Upload', 'WPOSA' ),
-			'desc' => __( 'Upload your apple touch icon here', 'WPOSA' ),
+			'name' => __( 'Apple Touch Icon Upload', 'c9' ),
+			'desc' => __( 'Upload your apple touch icon here', 'c9' ),
 		)
 	);
 
@@ -145,8 +111,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'favicon',
 			'type' => 'image',
-			'name' => __( 'Favicon Upload', 'WPOSA' ),
-			'desc' => __( 'Upload a favicon here', 'WPOSA' ),
+			'name' => __( 'Favicon Upload', 'c9' ),
+			'desc' => __( 'Upload a favicon here', 'c9' ),
 		)
 	);
 	// ------------------------------//
@@ -159,7 +125,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_social',
-			'title' => __( 'Social', 'WPOSA' ),
+			'title' => __( 'Social', 'c9' ),
 		)
 	);
 
@@ -168,8 +134,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'twitter',
 			'type' => 'text',
-			'name' => __( 'Twitter', 'WPOSA' ),
-			'desc' => __( 'Input your Twitter Username Here', 'WPOSA' ),
+			'name' => __( 'Twitter', 'c9' ),
+			'desc' => __( 'Input your Twitter Username Here', 'c9' ),
 		)
 	);
 
@@ -178,8 +144,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'facebook',
 			'type' => 'text',
-			'name' => __( 'Facebook', 'WPOSA' ),
-			'desc' => __( 'Input your Facebook Username Here', 'WPOSA' ),
+			'name' => __( 'Facebook', 'c9' ),
+			'desc' => __( 'Input your Facebook Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -187,8 +153,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'instagram',
 			'type' => 'text',
-			'name' => __( 'Instagram', 'WPOSA' ),
-			'desc' => __( 'Input your Instagram Username Here', 'WPOSA' ),
+			'name' => __( 'Instagram', 'c9' ),
+			'desc' => __( 'Input your Instagram Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -196,8 +162,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'pinterest',
 			'type' => 'text',
-			'name' => __( 'Pinterest', 'WPOSA' ),
-			'desc' => __( 'Input your Pinterest Username Here', 'WPOSA' ),
+			'name' => __( 'Pinterest', 'c9' ),
+			'desc' => __( 'Input your Pinterest Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -205,8 +171,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'spotify',
 			'type' => 'text',
-			'name' => __( 'Spotify', 'WPOSA' ),
-			'desc' => __( 'Input your Spotify Username Here', 'WPOSA' ),
+			'name' => __( 'Spotify', 'c9' ),
+			'desc' => __( 'Input your Spotify Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -214,8 +180,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'youtube',
 			'type' => 'text',
-			'name' => __( 'Youtube', 'WPOSA' ),
-			'desc' => __( 'Input your Youtube Username Here', 'WPOSA' ),
+			'name' => __( 'Youtube', 'c9' ),
+			'desc' => __( 'Input your Youtube Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -223,8 +189,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'flickr',
 			'type' => 'text',
-			'name' => __( 'Flickr', 'WPOSA' ),
-			'desc' => __( 'Input your Flickr Username Here', 'WPOSA' ),
+			'name' => __( 'Flickr', 'c9' ),
+			'desc' => __( 'Input your Flickr Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -232,8 +198,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'tumblr',
 			'type' => 'text',
-			'name' => __( 'Tumblr', 'WPOSA' ),
-			'desc' => __( 'Input your Tumblr Username Here', 'WPOSA' ),
+			'name' => __( 'Tumblr', 'c9' ),
+			'desc' => __( 'Input your Tumblr Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -241,8 +207,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'yelp',
 			'type' => 'text',
-			'name' => __( 'Yelp', 'WPOSA' ),
-			'desc' => __( 'Input your Yelp Name Here', 'WPOSA' ),
+			'name' => __( 'Yelp', 'c9' ),
+			'desc' => __( 'Input your Yelp Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -250,8 +216,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'subreddit',
 			'type' => 'text',
-			'name' => __( 'Subreddit', 'WPOSA' ),
-			'desc' => __( 'Input your Subreddit Name Here', 'WPOSA' ),
+			'name' => __( 'Subreddit', 'c9' ),
+			'desc' => __( 'Input your Subreddit Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -259,8 +225,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'linkedin',
 			'type' => 'text',
-			'name' => __( 'Linkedin', 'WPOSA' ),
-			'desc' => __( 'Input your Linkedin Username Here', 'WPOSA' ),
+			'name' => __( 'Linkedin', 'c9' ),
+			'desc' => __( 'Input your Linkedin Username Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -268,8 +234,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'github',
 			'type' => 'text',
-			'name' => __( 'Github', 'WPOSA' ),
-			'desc' => __( 'Input your Github Name Here', 'WPOSA' ),
+			'name' => __( 'Github', 'c9' ),
+			'desc' => __( 'Input your Github Name Here', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -277,8 +243,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'soundcloud',
 			'type' => 'text',
-			'name' => __( 'Soundcloud', 'WPOSA' ),
-			'desc' => __( 'Input your Soundcloud Name Here', 'WPOSA' ),
+			'name' => __( 'Soundcloud', 'c9' ),
+			'desc' => __( 'Input your Soundcloud Name Here', 'c9' ),
 		)
 	);
 
@@ -292,7 +258,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_footer',
-			'title' => __( 'Footer', 'WPOSA' ),
+			'title' => __( 'Footer', 'c9' ),
 		)
 	);
 
@@ -302,8 +268,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'show_search',
 			'type'    => 'radio',
-			'name'    => __( 'Display Search in Footer', 'WPOSA' ),
-			'desc'    => __( 'Do you want to show or hide the search form?', 'WPOSA' ),
+			'name'    => __( 'Display Search in Footer', 'c9' ),
+			'desc'    => __( 'Do you want to show or hide the search form?', 'c9' ),
 			'options' => array(
 				'show' => 'Show',
 				'hide' => 'Hide',
@@ -317,8 +283,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'copyright_content',
 			'type' => 'wysiwyg',
-			'name' => __( 'Copyright', 'WPOSA' ),
-			'desc' => __( 'Enter Custom Copyright Content Here', 'WPOSA' ),
+			'name' => __( 'Copyright', 'c9' ),
+			'desc' => __( 'Enter Custom Copyright Content Here', 'c9' ),
 		)
 	);
 
@@ -336,7 +302,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_posts',
-			'title' => __( 'Posts', 'WPOSA' ),
+			'title' => __( 'Posts', 'c9' ),
 		)
 	);
 
@@ -346,8 +312,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'author_visible',
 			'type'    => 'radio',
-			'name'    => __( 'Author name visibility', 'WPOSA' ),
-			'desc'    => __( 'Do you want to show or hide author posts?', 'WPOSA' ),
+			'name'    => __( 'Author name visibility', 'c9' ),
+			'desc'    => __( 'Do you want to show or hide author posts?', 'c9' ),
 			'options' => array(
 				'show' => 'Show',
 				'hide' => 'Hide',
@@ -361,8 +327,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'social_icons',
 			'type'    => 'radio',
-			'name'    => __( 'Social Icon Visibility', 'WPOSA' ),
-			'desc'    => __( 'Do you want your social sharing icons to be visible', 'WPOSA' ),
+			'name'    => __( 'Social Icon Visibility', 'c9' ),
+			'desc'    => __( 'Do you want your social sharing icons to be visible', 'c9' ),
 			'options' => array(
 				'show' => 'Show',
 				'hide' => 'Hide',
@@ -376,8 +342,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
-			'name'    => __( 'Blog Sidebar', 'WPOSA' ),
-			'desc'    => __( 'Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'WPOSA' ),
+			'name'    => __( 'Blog Sidebar', 'c9' ),
+			'desc'    => __( 'Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'c9' ),
 			'options' => array(
 				'hide'          => 'No Sidebar',
 				'sidebar-left'  => 'Left Sidebar',
@@ -401,7 +367,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_typography',
-			'title' => __( 'Typography', 'WPOSA' ),
+			'title' => __( 'Typography', 'c9' ),
 		)
 	);
 
@@ -411,7 +377,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'defaultFont',
 			'type'    => 'radio',
-			'name'    => __( 'Use Cortex Theme Based Fonts?', 'WPOSA' ),
+			'name'    => __( 'Use Cortex Theme Based Fonts?', 'c9' ),
 			'options' => array(
 				'yes' => 'Yes.',
 				'no'  => 'No, I will take care of my fonts.',
@@ -442,8 +408,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'heading_font',
 			'type'    => 'select',
-			'name'    => __( 'Heading Font', 'WPOSA' ),
-			'desc'    => __( 'Select fonts here', 'WPOSA' ),
+			'name'    => __( 'Heading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
 			'options' => $c9fonts,
 		)
 	);
@@ -455,8 +421,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'subheading_font',
 			'type'    => 'select',
-			'name'    => __( 'Subheading Font', 'WPOSA' ),
-			'desc'    => __( 'Select fonts here', 'WPOSA' ),
+			'name'    => __( 'Subheading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
 			'options' => $c9fonts,
 		)
 	);
@@ -467,8 +433,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'body_font',
 			'type'    => 'select',
-			'name'    => __( 'Body Font', 'WPOSA' ),
-			'desc'    => __( 'Select fonts here', 'WPOSA' ),
+			'name'    => __( 'Body Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
 			'options' => $c9fonts,
 		)
 	);
@@ -486,7 +452,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_seo',
-			'title' => __( 'SEO', 'WPOSA' ),
+			'title' => __( 'SEO', 'c9' ),
 		)
 	);
 
@@ -495,7 +461,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'google_analytics_id',
 			'type'    => 'text',
-			'name'    => __( 'Google Analytics ID', 'WPOSA' ),
+			'name'    => __( 'Google Analytics ID', 'c9' ),
 			'desc'    => '',
 			'default' => '',
 		)
@@ -506,7 +472,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'       => 'matomo_snippet',
 			'type'     => 'code',
 			'language' => 'javascript',
-			'name'     => __( 'Matomo Snippet', 'WPOSA' ),
+			'name'     => __( 'Matomo Snippet', 'c9' ),
 			'desc'     => '',
 			'default'  => '',
 		)
@@ -517,7 +483,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'       => 'gtm_snippet',
 			'type'     => 'code',
 			'language' => 'javascript',
-			'name'     => __( 'Google Tags Manager Snippet', 'WPOSA' ),
+			'name'     => __( 'Google Tags Manager Snippet', 'c9' ),
 			'desc'     => '',
 			'default'  => '',
 		)
@@ -534,24 +500,9 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_advanced',
-			'title' => __( 'Advanced', 'WPOSA' ),
+			'title' => __( 'Advanced', 'c9' ),
 		)
 	);
-
-	// $wposa_obj->add_field(
-	// 'cortex_advanced',
-	// array(
-	// 'id'      => 'dev_mode',
-	// 'type'    => 'radio',
-	// 'name'    => __('Enable Dev Mode', 'WPOSA'),
-	// 'desc'    => __('Use unminified files', 'WPOSA'),
-	// 'options' => array(
-	// "enable" => "Enable",
-	// "disable" => "Disable",
-	// ),
-	// 'default' => 'disable'
-	// )
-	// );
 
 	$wposa_obj->add_field(
 		'cortex_advanced',
@@ -559,7 +510,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'       => 'custom_css',
 			'type'     => 'code',
 			'language' => 'css',
-			'name'     => __( 'Custom CSS', 'WPOSA' ),
+			'name'     => __( 'Custom CSS', 'c9' ),
 			'desc'     => '',
 			'default'  => '',
 		)
@@ -571,8 +522,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'       => 'custom_js',
 			'type'     => 'code',
 			'language' => 'javascript',
-			'name'     => __( 'Custom JS', 'WPOSA' ),
-			'desc'     => __( 'Drop your custom google analytics, google fonts, or Typekit code here', 'WPOSA' ),
+			'name'     => __( 'Custom JS', 'c9' ),
+			'desc'     => __( 'Drop your custom google analytics, google fonts, or Typekit code here', 'c9' ),
 			'default'  => '',
 		)
 	);

@@ -10,8 +10,8 @@
  * Count number of widgets in a sidebar
  * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
  */
-if ( ! function_exists( 'cortextoo_slbd_count_widgets' ) ) {
-	function cortextoo_slbd_count_widgets( $sidebar_id ) {
+if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
+	function c9_slbd_count_widgets( $sidebar_id ) {
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
 		global $_wp_sidebars_widgets;
@@ -45,19 +45,19 @@ if ( ! function_exists( 'cortextoo_slbd_count_widgets' ) ) {
 	}
 }
 
-add_action( 'widgets_init', 'cortextoo_widgets_init' );
+add_action( 'widgets_init', 'c9_widgets_init' );
 
-if ( ! function_exists( 'cortextoo_widgets_init' ) ) {
+if ( ! function_exists( 'c9_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function cortextoo_widgets_init() {
+	function c9_widgets_init() {
 		register_sidebar(
 			array(
 				'name'          => __( 'Footer', 'c9' ),
 				'id'            => 'footerfull',
 				'description'   => 'Full bottom widget with dynmic grid',
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ' . cortextoo_slbd_count_widgets( 'footerfull' ) . '">',
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ' . c9_slbd_count_widgets( 'footerfull' ) . '">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
@@ -88,4 +88,4 @@ if ( ! function_exists( 'cortextoo_widgets_init' ) ) {
 			)
 		);
 	}
-} // endif function_exists( 'cortextoo_widgets_init' ).
+} // endif function_exists( 'c9_widgets_init' ).

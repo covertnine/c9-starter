@@ -1,10 +1,10 @@
-# Cortextoo
+# C9
 
 Based on [understrap](https://understrap.com).
 
 ## Git Repos
 
-In addition to this repo, you will need to create and version a `client` folder, which you will keep at the top level of `cortextoo` and at a minimum contain `client/client.php`.
+In addition to this repo, you will need to create and version a `client` folder, which you will keep at the top level of `c9` and at a minimum contain `client/client.php`.
 
 To start a new project, either clone the client boilerplate (coming soon), or create you own repo.
 

@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'left-sidebar' ) ) {
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>

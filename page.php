@@ -17,7 +17,7 @@ get_header();
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="page-container cortextoo" id="content" tabindex="-1">
+	<div class="page-container c9" id="content" tabindex="-1">
 
 
 		<main class="site-main" id="main">
