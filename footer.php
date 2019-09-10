@@ -76,7 +76,7 @@ else :
 ?>
 </div><!-- #page we need this extra closing tag here -->
 <div id="search">
-    <button type="button" class="search-close accent-color-bg"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'cortextoo'); ?></span></button>
+    <button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'cortextoo'); ?></span></button>
     <form role="search" method="get" id="fullscreen" action="/">
         <div>
             <span class="sr-only"><?php _e('Search for:', 'cortextoo'); ?></span>

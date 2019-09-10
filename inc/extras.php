@@ -158,3 +158,18 @@ if (!function_exists('cortextoo_post_nav')) {
 	</style>
 <?php }
 add_action('login_enqueue_scripts', 'cortex_login_logo');
+
+add_filter('wp_nav_menu_items', 'cortextoo_add_search_form', 10, 2);
+function cortextoo_add_search_form($items, $args)
+{
+    if ($args->theme_location == 'primary')
+		$items .= '<li class="nav-item search">						
+					<div class="navbar-small-buttons">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search nav-link">
+							<i class="fa fa-search"></i>
+							<span class="sr-only">'.__('Search', 'cortextoo') .'</span>
+						</a>
+					</div></li>';
+    return $items;
+}

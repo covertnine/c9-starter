@@ -68,7 +68,7 @@
 							if (!empty($c9Logo['logo'])) {
 								?>
 							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9SiteName . __(' Homepage', 'cortextoo'); ?>" class="navbar-brand custom-logo-link c9-custom-logo">
-								<img src="<?= $c9Logo['logo']; ?>" class="c9-home-logo img-fluid c9-custom-logo" alt="<?php echo $c9SiteName . __(' Logo', 'cortextoo'); ?>" />
+								<img src="<?= $c9Logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9SiteName . __(' Logo', 'cortextoo'); ?>" />
 							</a>
 						<?php
 							} else {
@@ -77,12 +77,6 @@
 							?>
 
 						<div class="navbar-small-buttons">
-							<div class="nav-search">
-								<a href="#" class="btn-nav-search">
-									<i class="fa fa-search"></i>
-									<span class="sr-only"><?php __('Search', 'cortextoo'); ?></span>
-								</a>
-							</div>
 							<div class="nav-toggle">
 								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 									<i class="fa fa-bars"></i>
