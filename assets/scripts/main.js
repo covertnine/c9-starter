@@ -2,7 +2,6 @@
 
 jQuery(document).ready(function() {
   (function($) {
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
@@ -29,6 +28,7 @@ jQuery(document).ready(function() {
 
       //use small nav for mobile
       $(".navbar").addClass("navbar-small");
+      $("body").addClass("navbar-small");
 
       $(window).scroll(function() {
         //scroll position variable

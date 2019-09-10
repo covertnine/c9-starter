@@ -555,6 +555,10 @@ a:hover {
 	min-height: 75px;
 }
 
+.navbar-small .header-navbar.jumpfix {
+	min-height: 60px;
+}
+
 .header-navbar .navbar {
 	width: 100%;
 	margin: 0px auto;
@@ -649,39 +653,6 @@ a:hover {
 	padding: 15px;
 }
 
-@media only screen and (min-width: 1px) {
-	.header-navbar .navbar-brand .c9-custom-logo {
-		max-width: 285px;
-		max-height: 45px;
-		width: auto;
-		height: auto;
-	}
-
-	.header-navbar .navbar .nav .nav-item {
-		display: block;
-		text-align: center;
-	}
-
-	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
-		display: block;
-	}
-
-	.header-navbar .navbar .nav .nav-item.search {
-		display: none;
-	}
-
-}
-
-@media only screen and (min-width: 992px) {
-	.navbar-small-buttons .nav-search {
-		display: none;
-	}
-
-	.header-navbar .navbar .nav .nav-item.search {
-		display: inline-block;
-	}
-}
-
 @media only screen and (max-width: 1024px) {
 
 	.navbar-brand>.c9-custom-logo>.c9-custom-logo {
@@ -734,6 +705,30 @@ a:hover {
 		display: block;
 	}
 
+}
+
+@media only screen and (max-width: 991px) {
+
+	/* centers nav items in a single element per row for mobile/tablet drop down*/
+	.header-navbar .navbar .nav .nav-item {
+		display: block;
+		text-align: center;
+	}
+
+	.header-navbar .navbar .nav .nav-item.search {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.navbar-small-buttons .nav-search {
+		display: none;
+	}
+
+	/*adds search icon at end of nav links*/
+	.header-navbar .navbar .nav .nav-item.search {
+		display: inline-block;
+	}
 }
 
 
