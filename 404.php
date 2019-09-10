@@ -17,76 +17,41 @@ $c9_sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
 
 		<div class="row">
 
-			<div class="col-md-12 content-area" id="primary">
+			<div class="col-12 content-area" id="primary">
 
 				<main class="site-main" id="main">
 
 					<section class="error-404 not-found">
-
-						<header class="page-header">
-
-							<h1 class="page-title">
-								<?php
-								esc_html_e(
-									'Oops! That page can&rsquo;t be found.',
-									'c9'
-									);
-							?>
-							</h1>
-
-						</header><!-- .page-header -->
-
 						<div class="page-content">
 
-							<p>
-							<?php
-							esc_html_e(
-								'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-								'c9'
-								);
-							?>
-							</p>
+							<header class="page-header container-narrow">
 
-							<?php get_search_form(); ?>
-
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-							<?php if ( c9_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-							<div class="widget widget_categories">
-
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'c9' ); ?>
-								</h2>
-
-								<ul>
+								<h1 class="page-title">
 									<?php
-										wp_list_categories(
-											array(
-												'orderby' => 'count',
-												'order'   => 'DESC',
-												'show_count' => 1,
-												'title_li' => '',
-												'number'  => 10,
-											)
-											);
-										?>
-								</ul>
+									esc_html_e(
+										'Oops! That page can&rsquo;t be found.',
+										'c9'
+										);
+								?>
+								</h1>
 
-							</div><!-- .widget -->
+							</header><!-- .page-header -->
 
-							<?php endif; ?>
+							<div class="container-narrow mar30B">
 
-							<?php
+								<p>
+								<?php
+								esc_html_e(
+									'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+									'c9'
+									);
+								?>
+								</p>
 
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'c9' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+								<?php get_search_form(); ?>
 
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
-
-						</div><!-- .page-content -->
-
+							</div><!-- .container-narrow -->
+						</div><!-- .page-content-->
 					</section><!-- .error-404 -->
 
 				</main><!-- #main -->

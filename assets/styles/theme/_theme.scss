@@ -2040,6 +2040,23 @@ object {
 }
 
 /****************************************************************************************/
+/* 404 error pages */
+/****************************************************************************************/
+
+.error-404 {
+	min-height: 50vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+/****************************************************************************************/
 /* WordPress Gallery Block Magnific Images */
 /****************************************************************************************/
 
@@ -2723,6 +2740,20 @@ screen and (max-height: 300px) {
 /* WordPress Forms, Search Forms, + Gravity Forms
 /****************************************************************************************/
 
+/* search results page */
+.page-search-results {
+	min-height: 50vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
 /*************************** Most WordPress Inputs and Forms ****************************/
 ::-webkit-input-placeholder,
 :-moz-placeholder,
@@ -2864,6 +2895,7 @@ screen and (max-height: 300px) {
 	color: $light;
 	background-color: $primary;
 	border: none;
+	-webkit-transition: opacity .5s;
 	transition: opacity .5s;
 }
 
