@@ -44,24 +44,24 @@ function c9_post_header_size()
 	add_meta_box(
 		'post_header_size',           // Unique ID
 		'Header Size',  // Box title
-		'c9_header_size_html',  // Content callback, must be of type callable
+		'c9_post_header_size_html',  // Content callback, must be of type callable
 		'post',				  // Post type
 		'side'
 	);
 }
 add_action('add_meta_boxes', 'c9_post_header_size');
 
-function c9_header_size_html($post)
+function c9_post_header_size_html($post)
 {
 	$value = get_post_meta($post->ID, 'c9_post_header_size', true);
 	?>
-	<label for="c9_header_size">Header Size</label>
+	<label for="c9_post_header_size">Header Size</label>
 	<div>
-		<input type="radio" id="large" name="c9_header_size" value="large" checked>
+		<input type="radio" id="large" name="c9_post_header_size" value="large" <?php echo $value === 'large' ? 'checked' : ''; ?>>
 		<label for="large">Large</label>
 	</div>
 	<div>
-		<input type="radio" id="small" name="c9_header_size" value="small">
+		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo $value === 'small' ? 'checked' : ''; ?>>
 		<label for="small">Small</label>
 	</div>
 <?php
@@ -69,11 +69,11 @@ function c9_header_size_html($post)
 
 function c9_save_header_size($post_id)
 {
-	if (array_key_exists('c9_header_size', $_POST)) {
+	if (array_key_exists('c9_post_header_size', $_POST)) {
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
-			$_POST['c9_header_size']
+			$_POST['c9_post_header_size']
 		);
 	}
 }
