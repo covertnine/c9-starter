@@ -98,7 +98,7 @@ if (!function_exists('cortextoo_theme_customize_register')) {
 					'label'       => __('Sidebar Positioning', 'c9' ),
 					'description' => __(
 						"Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
-						'cortextoo'
+						'c9'
 					),
 					'section'     => 'cortextoo_theme_layout_options',
 					'settings'    => 'cortextoo_sidebar_position',

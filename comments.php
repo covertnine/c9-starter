@@ -43,7 +43,7 @@ if (post_password_required()) {
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'cortextoo'
+						'c9'
 					)),
 					number_format_i18n($comments_number),
 					'<span>' . get_the_title() . '</span>'
@@ -63,13 +63,13 @@ if (post_password_required()) {
 				<?php if (get_previous_comments_link()) { ?>
 					<div class="nav-previous"><?php previous_comments_link(__(
 													'&larr; Older Comments',
-													'cortextoo'
+													'c9'
 												)); ?></div>
 				<?php }
 			if (get_next_comments_link()) { ?>
 					<div class="nav-next"><?php next_comments_link(__(
 												'Newer Comments &rarr;',
-												'cortextoo'
+												'c9'
 											)); ?></div>
 				<?php } ?>
 
@@ -100,13 +100,13 @@ if (post_password_required()) {
 				<?php if (get_previous_comments_link()) { ?>
 					<div class="nav-previous"><?php previous_comments_link(__(
 													'&larr; Older Comments',
-													'cortextoo'
+													'c9'
 												)); ?></div>
 				<?php }
 			if (get_next_comments_link()) { ?>
 					<div class="nav-next"><?php next_comments_link(__(
 												'Newer Comments &rarr;',
-												'cortextoo'
+												'c9'
 											)); ?></div>
 				<?php } ?>
 
