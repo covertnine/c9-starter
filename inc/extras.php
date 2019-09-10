@@ -8,9 +8,9 @@
  * @package c9
  */
 
-add_filter('body_class', 'cortextoo_body_classes');
+add_filter('body_class', 'c9_body_classes');
 
-if (!function_exists('cortextoo_body_classes')) {
+if (!function_exists('c9_body_classes')) {
 	/**
 	 * Adds custom classes to the array of body classes.
 	 *
@@ -18,7 +18,7 @@ if (!function_exists('cortextoo_body_classes')) {
 	 *
 	 * @return array
 	 */
-	function cortextoo_body_classes($classes)
+	function c9_body_classes($classes)
 	{
 		// Adds a class of group-blog to blogs with more than 1 published author.
 		if (is_multi_author()) {
@@ -34,9 +34,9 @@ if (!function_exists('cortextoo_body_classes')) {
 }
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
-add_filter('body_class', 'cortextoo_adjust_body_class');
+add_filter('body_class', 'c9_adjust_body_class');
 
-if (!function_exists('cortextoo_adjust_body_class')) {
+if (!function_exists('c9_adjust_body_class')) {
 	/**
 	 * Setup body classes.
 	 *
@@ -44,7 +44,7 @@ if (!function_exists('cortextoo_adjust_body_class')) {
 	 *
 	 * @return mixed
 	 */
-	function cortextoo_adjust_body_class($classes)
+	function c9_adjust_body_class($classes)
 	{
 
 		foreach ($classes as $key => $value) {
@@ -58,9 +58,9 @@ if (!function_exists('cortextoo_adjust_body_class')) {
 }
 
 // Filter custom logo with correct classes.
-add_filter('get_custom_logo', 'cortextoo_change_logo_class');
+add_filter('get_custom_logo', 'c9_change_logo_class');
 
-if (!function_exists('cortextoo_change_logo_class')) {
+if (!function_exists('c9_change_logo_class')) {
 	/**
 	 * Replaces logo CSS class.
 	 *
@@ -68,7 +68,7 @@ if (!function_exists('cortextoo_change_logo_class')) {
 	 *
 	 * @return mixed
 	 */
-	function cortextoo_change_logo_class($html)
+	function c9_change_logo_class($html)
 	{
 
 		$html = str_replace('class="custom-logo"', 'class="img-fluid c9-custom-logo"', $html);
@@ -83,8 +83,8 @@ if (!function_exists('cortextoo_change_logo_class')) {
  * Display navigation to next/previous post when applicable.
  */
 
-if (!function_exists('cortextoo_post_nav')) {
-	function cortextoo_post_nav()
+if (!function_exists('c9_post_nav')) {
+	function c9_post_nav()
 	{
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
@@ -140,7 +140,7 @@ if (!function_exists('cortextoo_post_nav')) {
 	}
 	add_filter('image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1);
 
-	function cortex_login_logo()
+	function c9_login_logo()
 	{
 		if (!empty(get_option('cortex_branding')['logo'])) { //logo has been uploaded
 			$cortex_logo_image = get_option('cortex_branding')['logo'];
@@ -157,10 +157,10 @@ if (!function_exists('cortextoo_post_nav')) {
 		}
 	</style>
 <?php }
-add_action('login_enqueue_scripts', 'cortex_login_logo');
+add_action('login_enqueue_scripts', 'c9_login_logo');
 
-add_filter('wp_nav_menu_items', 'cortextoo_add_search_form', 10, 2);
-function cortextoo_add_search_form($items, $args) {
+add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
+function c9_add_search_form($items, $args) {
     if ($args->theme_location == 'primary')
 		$items .= '<li class="nav-item search">						
 					<div class="navbar-small-buttons">
