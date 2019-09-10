@@ -26,16 +26,26 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 						<header class="page-header">
 
 							<h1 class="page-title">
-								<?php 
-								esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'c9' ); ?></h1>
+								<?php
+								esc_html_e(
+									 'Oops! That page can&rsquo;t be found.',
+							'c9'
+									);
+							?>
+							</h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'c9' ); ?></p>
+							<p>
+							<?php
+							esc_html_e(
+								 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+							'c9'
+								);
+							?>
+							</p>
 
 							<?php get_search_form(); ?>
 
@@ -50,13 +60,15 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 
 								<ul>
 									<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
+										wp_list_categories(
+											 array(
+												 'orderby' => 'count',
+												 'order'   => 'DESC',
+												 'show_count' => 1,
+												 'title_li' => '',
+												 'number'  => 10,
+											 )
+											);
 										?>
 								</ul>
 

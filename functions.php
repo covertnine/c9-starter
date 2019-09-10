@@ -63,17 +63,17 @@ require get_template_directory() . '/inc/editor.php';
 /**
  * Load Client-Specific Hooks
  */
-if (file_exists(get_template_directory() . '/client/client.php')) {
-    require get_template_directory() . '/client/client.php';
+if ( file_exists( get_template_directory() . '/client/client.php' ) ) {
+	require get_template_directory() . '/client/client.php';
 } else {
-    add_action('admin_notices', 'need_client_folder');
+	add_action( 'admin_notices', 'need_client_folder' );
 }
 
 function c9_client_folder() {
-    ?>
-    <div class="update-nag notice">
-        <p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9'); ?></p>
-    </div>
+	?>
+	<div class="update-nag notice">
+		<p><?php _e( 'You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9' ); ?></p>
+	</div>
 <?php
 
 }

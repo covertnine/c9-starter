@@ -5,7 +5,7 @@
  * @package c9
  */
 
-$container   = get_theme_mod( 'cortextoo_container_type' );
+$container = get_theme_mod( 'cortextoo_container_type' );
 
 ?>
 

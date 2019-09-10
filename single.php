@@ -8,10 +8,10 @@
 
 get_header();
 
-if (isset(get_option('cortex_posts')['blog_sidebar'])) {
-	$sidebar = get_option('cortex_posts')['blog_sidebar'] !== "hide" ? true : false;
-	$sidebar_left = get_option('cortex_posts')['blog_sidebar'] === "sidebar-left" && is_active_sidebar('left-sidebar') ? true : false;
-	$sidebar_right = get_option('cortex_posts')['blog_sidebar'] === "sidebar-right" && is_active_sidebar('right-sidebar') ? true : false;
+if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
+	$sidebar       = get_option( 'cortex_posts' )['blog_sidebar'] !== 'hide' ? true : false;
+	$sidebar_left  = get_option( 'cortex_posts' )['blog_sidebar'] === 'sidebar-left' && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = get_option( 'cortex_posts' )['blog_sidebar'] === 'sidebar-right' && is_active_sidebar( 'right-sidebar' ) ? true : false;
 }
 ?>
 
@@ -19,16 +19,16 @@ if (isset(get_option('cortex_posts')['blog_sidebar'])) {
 	<div class="container-narrow cortextoo" id="content" tabindex="-1">
 		<div class="row no-gutters">
 
-			<?php if ($sidebar_left) : ?>
+			<?php if ( $sidebar_left ) : ?>
 
 				<div class="col-12 col-sm-2">
 
-					<?php dynamic_sidebar('left-sidebar'); ?>
+					<?php dynamic_sidebar( 'left-sidebar' ); ?>
 
 				</div>
 				<div class="col-12 col-sm-10 content-area" id="primary">
 
-				<?php elseif ($sidebar_right) : ?>
+				<?php elseif ( $sidebar_right ) : ?>
 
 					<div class="col-12 col-sm-10 content-area" id="primary">
 
@@ -39,29 +39,33 @@ if (isset(get_option('cortex_posts')['blog_sidebar'])) {
 						<?php endif; ?>
 
 						<main class="site-main" id="main">
-							<?php while (have_posts()) : the_post(); ?>
+							<?php
+							while ( have_posts() ) :
+the_post();
+?>
 								<?php
-									get_template_part('loop-templates/content', 'single');
+									get_template_part( 'loop-templates/content', 'single' );
 									?>
 								<?php cortextoo_post_nav(); ?>
 								<?php
 									// If comments are open or we have at least one comment, load up the comment template.
-									if (comments_open() || get_comments_number()) :
-										comments_template();
+									if ( comments_open() || get_comments_number() ) :
+									comments_template();
 									endif;
 									?>
 
-							<?php endwhile; // end of the loop. 
+							<?php
+							endwhile; // end of the loop.
 							?>
 
 						</main><!-- #main -->
 
-						<?php if ($sidebar_right) : ?>
+						<?php if ( $sidebar_right ) : ?>
 						</div>
 
 						<div class="col-12 col-sm-2 content-area" id="primary">
 
-							<?php dynamic_sidebar('right-sidebar'); ?>
+							<?php dynamic_sidebar( 'right-sidebar' ); ?>
 
 						</div>
 

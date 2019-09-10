@@ -3,10 +3,9 @@
  * Check and setup theme's default settings
  *
  * @package c9
- *
  */
 
-if ( ! function_exists ( 'cortextoo_setup_theme_default_settings' ) ) {
+if ( ! function_exists( 'cortextoo_setup_theme_default_settings' ) ) {
 	function cortextoo_setup_theme_default_settings() {
 
 		// check if settings are set, if not set defaults.
