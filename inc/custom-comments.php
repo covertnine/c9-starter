@@ -53,7 +53,7 @@ if ( ! function_exists( 'cortextoo_bootstrap_comment_form' ) ) {
 
 	function cortextoo_bootstrap_comment_form( $args ) {
 		$args['comment_field'] = '<div class="form-group comment-form-comment">
-	    <label for="comment">' . _x( 'Comment', 'noun', 'cortextoo' ) . ( ' <span class="required">*</span>' ) . '</label>
+	    <label for="comment">' . _x( 'Comment', 'noun', 'c9' ) . ( ' <span class="required">*</span>' ) . '</label>
 	    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
 	    </div>';
 		$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.

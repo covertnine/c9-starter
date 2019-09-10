@@ -65,7 +65,7 @@ get_header();
 								   title="<?php esc_html_e( 'Permanent Link:', 'c9' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
 								<?php cortextoo_posted_on(); ?> <?php esc_html_e( 'in',
-								'cortextoo' ); ?> <?php the_category( '&' ); ?>
+								'c9' ); ?> <?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
 
