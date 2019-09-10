@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package cortextoo
+ * @package c9
  */
 
 /*
@@ -32,7 +32,7 @@ if (post_password_required()) {
 			if (1 === (int)$comments_number) {
 				printf(
 					/* translators: %s: post title */
-					esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'cortextoo'),
+					esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'c9' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -58,7 +58,7 @@ if (post_password_required()) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'cortextoo'); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9' ); ?></h1>
 
 				<?php if (get_previous_comments_link()) { ?>
 					<div class="nav-previous"><?php previous_comments_link(__(
@@ -95,7 +95,7 @@ if (post_password_required()) {
 
 			<nav class="comment-navigation" id="comment-nav-below">
 
-				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'cortextoo'); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9' ); ?></h1>
 
 				<?php if (get_previous_comments_link()) { ?>
 					<div class="nav-previous"><?php previous_comments_link(__(
@@ -123,7 +123,7 @@ if (post_password_required()) {
 	if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
 		?>
 
-		<p class="no-comments"><?php esc_html_e('Comments are closed.', 'cortextoo'); ?></p>
+		<p class="no-comments"><?php esc_html_e('Comments are closed.', 'c9' ); ?></p>
 
 	<?php endif; ?>
 

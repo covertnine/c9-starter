@@ -2,7 +2,7 @@
 /**
  * cortextoo functions and definitions
  *
- * @package cortextoo
+ * @package c9
  */
 
 /**

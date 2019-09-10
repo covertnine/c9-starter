@@ -3,7 +3,7 @@
 /**
  * cortextoo font styles
  *
- * @package cortextoo
+ * @package c9
  */
 
 class C9FontStyles

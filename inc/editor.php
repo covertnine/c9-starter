@@ -3,7 +3,7 @@
 /**
  * COVERT NINE modify editor
  *
- * @package cortextoo
+ * @package c9
  */
 
 /**

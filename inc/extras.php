@@ -5,7 +5,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package cortextoo
+ * @package c9
  */
 
 add_filter('body_class', 'cortextoo_body_classes');
@@ -95,15 +95,15 @@ if (!function_exists('cortextoo_post_nav')) {
 		}
 		?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e('Post navigation', 'cortextoo'); ?></h2>
+			<h2 class="sr-only"><?php _e('Post navigation', 'c9' ); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
 						if (get_previous_post_link()) {
-							previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'cortextoo'));
+							previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'c9' ));
 						}
 						if (get_next_post_link()) {
-							next_post_link('<span class="nav-next">%link</span>',     _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'cortextoo'));
+							next_post_link('<span class="nav-next">%link</span>',     _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9' ));
 						}
 						?>
 			</div><!-- .nav-links -->
@@ -160,15 +160,14 @@ if (!function_exists('cortextoo_post_nav')) {
 add_action('login_enqueue_scripts', 'cortex_login_logo');
 
 add_filter('wp_nav_menu_items', 'cortextoo_add_search_form', 10, 2);
-function cortextoo_add_search_form($items, $args)
-{
+function cortextoo_add_search_form($items, $args) {
     if ($args->theme_location == 'primary')
 		$items .= '<li class="nav-item search">						
 					<div class="navbar-small-buttons">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>
-							<span class="sr-only">'.__('Search', 'cortextoo') .'</span>
+							<span class="sr-only">'.__('Search', 'c9' ) .'</span>
 						</a>
 					</div></li>';
     return $items;

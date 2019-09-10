@@ -2,7 +2,7 @@
 /**
  * The right sidebar containing the main widget area.
  *
- * @package cortextoo
+ * @package c9
  */
 
 if ( ! is_active_sidebar( 'right-sidebar' ) ) {

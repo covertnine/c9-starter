@@ -82,7 +82,7 @@ $header_size = get_post_meta($post->ID, 'c9_post_header_size', true);
 		<div class="entry-footer-content mar30B">
 			<?php
 			wp_link_pages(array(
-				'before' => '<div class="page-links">' . __('Pages:', 'cortextoo'),
+				'before' => '<div class="page-links">' . __('Pages:', 'c9' ),
 				'after'  => '</div>',
 			));
 			?>

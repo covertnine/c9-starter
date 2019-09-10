@@ -5,7 +5,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package cortextoo
+ * @package c9
  */
 
 $the_theme = wp_get_theme();
@@ -76,12 +76,12 @@ else :
 ?>
 </div><!-- #page we need this extra closing tag here -->
 <div id="search">
-    <button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'cortextoo'); ?></span></button>
+    <button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e('Close', 'c9' ); ?></span></button>
     <form role="search" method="get" id="fullscreen" action="/">
         <div>
-            <span class="sr-only"><?php _e('Search for:', 'cortextoo'); ?></span>
-            <input type="search" class="search-field" name="s" value="" placeholder="<?php _e('Search...', 'cortextoo'); ?>" />
-            <button type="submit" class="btn"><?php _e('Search', 'cortextoo'); ?></button>
+            <span class="sr-only"><?php _e('Search for:', 'c9' ); ?></span>
+            <input type="search" class="search-field" name="s" value="" placeholder="<?php _e('Search...', 'c9' ); ?>" />
+            <button type="submit" class="btn"><?php _e('Search', 'c9' ); ?></button>
         </div>
     </form>
 </div>

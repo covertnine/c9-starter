@@ -3,7 +3,7 @@
 /**
  * Custom header setup.
  *
- * @package cortextoo
+ * @package c9
  */
 
 add_action('after_setup_theme', 'cortextoo_custom_header_setup');
@@ -39,7 +39,7 @@ if (!function_exists('cortextoo_custom_header_setup')) {
 			'default-image' => array(
 				'url'           => '%s/img/header.jpg',
 				'thumbnail_url' => '%s/img/header.jpg',
-				'description'   => __('Default Header Image', 'cortextoo'),
+				'description'   => __('Default Header Image', 'c9' ),
 			),
 		));
 	}

@@ -2,7 +2,7 @@
 /**
  * Comment layout.
  *
- * @package cortextoo
+ * @package c9
  */
 
 // Comments form.

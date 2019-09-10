@@ -3,7 +3,7 @@
 /**
  * Declaring widgets
  *
- * @package cortextoo
+ * @package c9
  */
 
 /**
@@ -56,7 +56,7 @@ if (!function_exists('cortextoo_widgets_init')) {
 	{
 
 		register_sidebar(array(
-			'name'          => __('Footer', 'cortextoo'),
+			'name'          => __('Footer', 'c9' ),
 			'id'            => 'footerfull',
 			'description'   => 'Full bottom widget with dynmic grid',
 			'before_widget'  => '<div id="%1$s" class="footer-widget %2$s ' . cortextoo_slbd_count_widgets('footerfull') . '">',
@@ -67,9 +67,9 @@ if (!function_exists('cortextoo_widgets_init')) {
 
 		register_sidebar(
 			array(
-				'name'          => __('Right Sidebar', 'cortextoo'),
+				'name'          => __('Right Sidebar', 'c9' ),
 				'id'            => 'right-sidebar',
-				'description'   => __('Right sidebar widget area', 'cortextoo'),
+				'description'   => __('Right sidebar widget area', 'c9' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -79,9 +79,9 @@ if (!function_exists('cortextoo_widgets_init')) {
 
 		register_sidebar(
 			array(
-				'name'          => __('Left Sidebar', 'cortextoo'),
+				'name'          => __('Left Sidebar', 'c9' ),
 				'id'            => 'left-sidebar',
-				'description'   => __('Left sidebar widget area', 'cortextoo'),
+				'description'   => __('Left sidebar widget area', 'c9' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',

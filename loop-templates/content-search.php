@@ -3,7 +3,7 @@
 /**
  * Search results partial template.
  *
- * @package cortextoo
+ * @package c9
  */
 
 ?>

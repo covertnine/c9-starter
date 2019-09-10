@@ -3,7 +3,7 @@
 /**
  * Theme Customizer
  *
- * @package cortextoo
+ * @package c9
  */
 
 /**
@@ -37,9 +37,9 @@ if (!function_exists('cortextoo_theme_customize_register')) {
 
 		// Theme layout settings.
 		$wp_customize->add_section('cortextoo_theme_layout_options', array(
-			'title'       => __('Theme Layout Settings', 'cortextoo'),
+			'title'       => __('Theme Layout Settings', 'c9' ),
 			'capability'  => 'edit_theme_options',
-			'description' => __('Container width and sidebar defaults', 'cortextoo'),
+			'description' => __('Container width and sidebar defaults', 'c9' ),
 			'priority'    => 160,
 		));
 
@@ -69,14 +69,14 @@ if (!function_exists('cortextoo_theme_customize_register')) {
 				$wp_customize,
 				'cortextoo_container_type',
 				array(
-					'label'       => __('Container Width', 'cortextoo'),
-					'description' => __("Choose between Bootstrap's container and container-fluid", 'cortextoo'),
+					'label'       => __('Container Width', 'c9' ),
+					'description' => __("Choose between Bootstrap's container and container-fluid", 'c9' ),
 					'section'     => 'cortextoo_theme_layout_options',
 					'settings'    => 'cortextoo_container_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'container'       => __('Fixed width container', 'cortextoo'),
-						'container-fluid' => __('Full width container', 'cortextoo'),
+						'container'       => __('Fixed width container', 'c9' ),
+						'container-fluid' => __('Full width container', 'c9' ),
 					),
 					'priority'    => '10',
 				)
@@ -95,7 +95,7 @@ if (!function_exists('cortextoo_theme_customize_register')) {
 				$wp_customize,
 				'cortextoo_sidebar_position',
 				array(
-					'label'       => __('Sidebar Positioning', 'cortextoo'),
+					'label'       => __('Sidebar Positioning', 'c9' ),
 					'description' => __(
 						"Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
 						'cortextoo'
@@ -105,9 +105,9 @@ if (!function_exists('cortextoo_theme_customize_register')) {
 					'type'        => 'select',
 					'sanitize_callback' => 'cortextoo_theme_slug_sanitize_select',
 					'choices'     => array(
-						'right' => __('Right sidebar', 'cortextoo'),
-						'left'  => __('Left sidebar', 'cortextoo'),
-						'none'  => __('No sidebar', 'cortextoo'),
+						'right' => __('Right sidebar', 'c9' ),
+						'left'  => __('Left sidebar', 'c9' ),
+						'none'  => __('No sidebar', 'c9' ),
 					),
 					'priority'    => '20',
 				)

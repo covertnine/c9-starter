@@ -3,7 +3,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package cortextoo
+ * @package c9
  */
 
 get_header();
@@ -28,7 +28,7 @@ get_header();
 								<h1 class="entry-title text-center">
 									<?php printf(
 											/* translators:*/
-											esc_html__('Results for: %s', 'cortextoo'),
+											esc_html__('Results for: %s', 'c9' ),
 											'<span>' . get_search_query() . '</span>'
 										); ?>
 								</h1>

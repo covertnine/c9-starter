@@ -3,7 +3,7 @@
 /**
  * cortextoo enqueue scripts
  *
- * @package cortextoo
+ * @package c9
  */
 
 

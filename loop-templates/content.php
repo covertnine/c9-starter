@@ -41,7 +41,7 @@
 
 			<?php
 			wp_link_pages(array(
-				'before' => '<div class="page-links">' . __('Pages:', 'cortextoo'),
+				'before' => '<div class="page-links">' . __('Pages:', 'c9' ),
 				'after'  => '</div>',
 			));
 			?>

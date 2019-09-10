@@ -3,7 +3,7 @@
 /**
  * Pagination layout.
  *
- * @package cortextoo
+ * @package c9
  */
 
 if (!function_exists('cortextoo_pagination')) {
@@ -15,9 +15,9 @@ if (!function_exists('cortextoo_pagination')) {
 		$args = wp_parse_args($args, [
 			'mid_size'           => 2,
 			'prev_next'          => false,
-			'prev_text'          => __('&laquo;', 'cortextoo'),
-			'next_text'          => __('&raquo;', 'cortextoo'),
-			'screen_reader_text' => __('Posts navigation', 'cortextoo'),
+			'prev_text'          => __('&laquo;', 'c9' ),
+			'next_text'          => __('&raquo;', 'c9' ),
+			'screen_reader_text' => __('Posts navigation', 'c9' ),
 			'type'               => 'array',
 			'current'            => max(1, get_query_var('paged')),
 		]);
@@ -31,9 +31,9 @@ if (!function_exists('cortextoo_pagination')) {
 <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 	<ul class="pagination">
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr($prev_link); ?>" aria-label="<?php echo __('Previous', 'cortextoo'); ?>">
+			<a class="page-link" href="<?php echo esc_attr($prev_link); ?>" aria-label="<?php echo __('Previous', 'c9' ); ?>">
 				<span aria-hidden="true"><?php echo esc_attr($args['prev_text']); ?></span>
-				<span class="sr-only"><?php echo __('Previous', 'cortextoo'); ?></span>
+				<span class="sr-only"><?php echo __('Previous', 'c9' ); ?></span>
 			</a>
 		</li>
 
@@ -50,9 +50,9 @@ if (!function_exists('cortextoo_pagination')) {
 				} ?>
 
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr($next_link); ?>" aria-label="<?php echo __('Next', 'cortextoo'); ?>">
+			<a class="page-link" href="<?php echo esc_attr($next_link); ?>" aria-label="<?php echo __('Next', 'c9' ); ?>">
 				<span aria-hidden="true"><?php echo esc_attr($args['next_text']); ?></span>
-				<span class="sr-only"><?php echo __('Next', 'cortextoo'); ?></span>
+				<span class="sr-only"><?php echo __('Next', 'c9' ); ?></span>
 			</a>
 		</li>
 	</ul>

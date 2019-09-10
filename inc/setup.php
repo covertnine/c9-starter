@@ -43,7 +43,7 @@ if (!function_exists('cortextoo_setup')) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(array(
-			'primary' => __('Top Navigation Menu', 'cortextoo'),
+			'primary' => __('Top Navigation Menu', 'c9' ),
 		));
 
 		/*

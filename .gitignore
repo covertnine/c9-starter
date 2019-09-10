@@ -114,4 +114,7 @@ client
 !.prettierrc
 
 
-artist-importer.php
+#artist-importer.php
+
+#codesniffer rules for WordPress
+wpcs

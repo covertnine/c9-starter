@@ -580,6 +580,14 @@ a:hover {
 	line-height: 1.3;
 }
 
+.header-navbar .nav .nav-item .dropdown-menu {
+	min-width: 225px;
+}
+
+.header-navbar .navbar .nav .nav-item .dropdown-menu .dropdown-item {
+	text-align: left;
+}
+
 .header-navbar .navbar .nav .nav-item .nav-link {
 	-webkit-transition: color .3s ease-in;
 	transition: color .3s ease-in;
@@ -601,11 +609,17 @@ a:hover {
 	border: none;
 }
 
-.header-navbar .navbar-toggler {
+.header-navbar .navbar-toggler,
+.header-navbar .nav-search {
 	margin: 0px;
 	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
+}
+
+.navbar-toggler,
+.nav-search .btn-nav-search {
+	color: $navbar-light-color;
 }
 
 .header-navbar .navbar-toggler:focus {
@@ -626,12 +640,38 @@ a:hover {
 	height: auto;
 }
 
+.header-navbar .navbar .nav .nav-item .nav-link,
+.header-navbar .navbar .nav .nav-item .dropdown-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.nav-toggle {
+	display: inline-block;
+}
+
+.nav-search {
+	display: none;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 667px) {
+	.header-navbar .navbar-brand .c9-custom-logo {
+		max-width: 285px;
+		max-height: 45px;
+		width: auto;
+		height: auto;
+	}
+}
+
 @media only screen and (min-width: 992px) {
 	.navbar-expand-md .navbar-nav .nav-link {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 
+	.nav-search {
+		display: inline-block;
+	}
 }
 
 @media only screen and (min-width: 1px) and (max-width: 1024px) {
@@ -682,6 +722,14 @@ a:hover {
 		border-radius: 0px;
 	}
 
+	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
+		text-align: left;
+		display: block;
+	}
+
+	.nav-search {
+		display: inline-block;
+	}
 }
 
 @media only screen and (min-width: 1px) and (max-width: 768px) {
@@ -690,20 +738,20 @@ a:hover {
 		text-align: center;
 	}
 
-	.header-navbar .navbar .nav .nav-item .nav-link,
-	.header-navbar .navbar .nav .nav-item .dropdown-item {
-		padding-top: 15px;
-		padding-bottom: 15px;
+	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
+		display: block;
+	}
+
+	.nav-search {
+		display: inline-block;
 	}
 }
 
 @media only screen and (min-width: 1px) and (max-width: 667px) {
-	.header-navbar .navbar-brand .c9-custom-logo {
-		max-width: 285px;
-		max-height: 45px;
-		width: auto;
-		height: auto;
+	.header-navbar .navbar .nav .nav-item.search {
+		display: none;
 	}
+
 }
 
 /****************************************************************************************/

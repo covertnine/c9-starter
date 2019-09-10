@@ -2,7 +2,7 @@
 /**
  * Check and setup theme's default settings
  *
- * @package cortextoo
+ * @package c9
  *
  */
 
