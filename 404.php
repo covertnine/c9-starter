@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package C9
+ * @package c9
  */
 
 get_header();
@@ -28,8 +28,8 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 							<h1 class="page-title">
 								<?php
 								esc_html_e(
-									 'Oops! That page can&rsquo;t be found.',
-							'c9'
+									'Oops! That page can&rsquo;t be found.',
+									'c9'
 									);
 							?>
 							</h1>
@@ -41,8 +41,8 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 							<p>
 							<?php
 							esc_html_e(
-								 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'c9'
+								'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+								'c9'
 								);
 							?>
 							</p>
@@ -61,13 +61,13 @@ $c9_sidebar_pos = get_theme_mod( 'cortextoo_sidebar_position' );
 								<ul>
 									<?php
 										wp_list_categories(
-											 array(
-												 'orderby' => 'count',
-												 'order'   => 'DESC',
-												 'show_count' => 1,
-												 'title_li' => '',
-												 'number'  => 10,
-											 )
+											array(
+												'orderby' => 'count',
+												'order'   => 'DESC',
+												'show_count' => 1,
+												'title_li' => '',
+												'number'  => 10,
+											)
 											);
 										?>
 								</ul>

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying all single posts.
  *
@@ -9,9 +8,9 @@
 get_header();
 
 if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
-	$sidebar       = get_option( 'cortex_posts' )['blog_sidebar'] !== 'hide' ? true : false;
-	$sidebar_left  = get_option( 'cortex_posts' )['blog_sidebar'] === 'sidebar-left' && is_active_sidebar( 'left-sidebar' ) ? true : false;
-	$sidebar_right = get_option( 'cortex_posts' )['blog_sidebar'] === 'sidebar-right' && is_active_sidebar( 'right-sidebar' ) ? true : false;
+	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
+	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
 }
 ?>
 
@@ -41,20 +40,19 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 						<main class="site-main" id="main">
 							<?php
 							while ( have_posts() ) :
-the_post();
-?>
-								<?php
-									get_template_part( 'loop-templates/content', 'single' );
-									?>
-								<?php cortextoo_post_nav(); ?>
-								<?php
-									// If comments are open or we have at least one comment, load up the comment template.
-									if ( comments_open() || get_comments_number() ) :
-									comments_template();
-									endif;
-									?>
 
-							<?php
+								the_post();
+
+								get_template_part( 'loop-templates/content', 'single' );
+
+								c9_post_nav();
+
+								// If comments are open or we have at least one comment, load up the comment template.
+								if ( comments_open() || get_comments_number() ) :
+
+									comments_template();
+
+								endif;
 							endwhile; // end of the loop.
 							?>
 

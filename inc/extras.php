@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Custom functions that act independently of the theme templates.
  *
@@ -46,7 +45,7 @@ if ( ! function_exists( 'c9_adjust_body_class' ) ) {
 	function c9_adjust_body_class( $classes ) {
 
 		foreach ( $classes as $key => $value ) {
-			if ( 'tag' == $value ) {
+			if ( 'tag' === $value ) {
 				unset( $classes[ $key ] );
 			}
 		}
@@ -76,11 +75,13 @@ if ( ! function_exists( 'c9_change_logo_class' ) ) {
 	}
 }
 
-/**
- * Display navigation to next/previous post when applicable.
- */
+
 
 if ( ! function_exists( 'c9_post_nav' ) ) {
+
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
 	function c9_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -104,35 +105,44 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 						?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
-
-	<?php
-		}
+<?php
 	}
+}
 
+if ( ! function_exists( 'c9_mime_types' ) ) {
+	/**
+	 * Add different filetypes to allowed uploads
+	 */
 	function c9_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
 	}
-	add_filter( 'upload_mimes', 'c9_mime_types' );
+}
+add_filter( 'upload_mimes', 'c9_mime_types' );
 
+if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
+	/**
+	 * Add image sizes
+	 */
 	function c9_display_image_size_names_muploader( $sizes ) {
 
-	$new_sizes = array();
+		$new_sizes = array();
 
-	$added_sizes = get_intermediate_image_sizes();
+		$added_sizes = get_intermediate_image_sizes();
 
-	// $added_sizes is an indexed array, therefore need to convert it
-	// to associative array, using $value for $key and $value
-	foreach ( $added_sizes as $key => $value ) {
-		$new_sizes[ $value ] = $value;
-		}
+		// $added_sizes is an indexed array, therefore need to convert it
+		// to associative array, using $value for $key and $value
+		foreach ( $added_sizes as $key => $value ) {
+			$new_sizes[ $value ] = $value;
+			}
 
-	// This preserves the labels in $sizes, and merges the two arrays
-	$new_sizes = array_merge( $new_sizes, $sizes );
+		// This preserves the labels in $sizes, and merges the two arrays
+		$new_sizes = array_merge( $new_sizes, $sizes );
 
-	return $new_sizes;
+		return $new_sizes;
 	}
-	add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
+}
+add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
 
 	function c9_login_logo() {
 	if ( ! empty( get_option( 'cortex_branding' )['logo'] ) ) { // logo has been uploaded
