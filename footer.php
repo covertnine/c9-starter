@@ -53,17 +53,18 @@ else :
 									<?php endif; ?>
 									<?php
 										if ( get_option( 'cortex_footer' ) ) :
-										if ( get_option( 'cortex_footer' )['copyright_content'] ) :
-											echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option( 'cortex_footer' )['copyright_content'] . '</p></div>';
-											endif;
-										if ( get_option( 'cortex_footer' )['show_search'] === 'show' ) :
-											?>
-											<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
-												<div class="footer-search">
+											if ( get_option( 'cortex_footer' )['copyright_content'] ) :
+												echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option( 'cortex_footer' )['copyright_content'] . '</p></div>';
+												endif;
+
+											if ( get_option( 'cortex_footer' )['show_search'] === 'show' ) :
+												?>
+												<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
+													<div class="footer-search">
 													<?php get_search_form(); ?>
+													</div>
 												</div>
-											</div>
-									<?php
+										<?php
 											endif;
 										endif;
 										?>

@@ -114,7 +114,10 @@ if ( ! function_exists( 'c9_mime_types' ) ) {
 	 * Add different filetypes to allowed uploads
 	 */
 	function c9_mime_types( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
+	$mimes['svg']     = 'image/svg+xml';
+	$mimes['ogg|oga'] = 'audio/ogg';
+	$mimes['webm']    = 'video/webm';
+
 	return $mimes;
 	}
 }

@@ -13,7 +13,7 @@ if ( ! class_exists( 'c9FooterHelpers' ) ) {
 			if ( $social_options ) {
 				foreach ( $social_options as $opt_key => $opt_value ) {
 					$link_builder = 'build_' . $opt_key . '_link';
-					if ( $opt_key !== 'fixed_social_links' ) {
+					if ( 'fixed_social_links' !== $opt_key && '' !== $opt_value ) {
 						$social_links[ $opt_key ] = self::$link_builder( $opt_value );
 					}
 				}
