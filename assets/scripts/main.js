@@ -2,7 +2,6 @@
 
 jQuery(document).ready(function() {
   (function($) {
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
@@ -29,6 +28,7 @@ jQuery(document).ready(function() {
 
       //use small nav for mobile
       $(".navbar").addClass("navbar-small");
+      $("body").addClass("navbar-small");
 
       $(window).scroll(function() {
         //scroll position variable
@@ -182,29 +182,28 @@ jQuery(document).ready(function() {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     $(".btn-nav-search").on("click", function(e) {
       e.preventDefault();
-      $("#search").addClass("open");
-      $('#search > form > div > input[type="search"]').focus();
+      $("#fullscreensearch").addClass("open");
+      $('#fullscreensearch > form > div > input[type="search"]').focus();
     });
 
-    $("#search, #search .search-close, #search .search-close .fa-close").on(
-      "click keyup",
-      function(e) {
-        if (
-          e.target == this ||
-          e.target.className == "search-close" ||
-          e.keyCode == 27
-        ) {
-          $(this).removeClass("open");
-          $(this)
-            .parent()
-            .removeClass("open");
-          $(this)
-            .parent()
-            .parent()
-            .removeClass("open");
-        }
+    $(
+      "#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
+    ).on("click keyup", function(e) {
+      if (
+        e.target == this ||
+        e.target.className == "search-close" ||
+        e.keyCode == 27
+      ) {
+        $(this).removeClass("open");
+        $(this)
+          .parent()
+          .removeClass("open");
+        $(this)
+          .parent()
+          .parent()
+          .removeClass("open");
       }
-    );
+    });
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   })(jQuery);

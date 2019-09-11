@@ -10,6 +10,7 @@ body {
 	color: $gray-900;
 	font-family: $font-family-base;
 	line-height: 1.3;
+	font-size: 1.2rem;
 }
 
 :root {
@@ -220,8 +221,8 @@ body {
 .entry-meta a {
 	text-transform: uppercase;
 	letter-spacing: .05rem;
-	line-height: 1;
-	font-size: 1.4rem;
+	line-height: 1.2;
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 	color: $gray-500;
 }
@@ -541,7 +542,7 @@ a:hover {
 }
 
 .header-navbar .container {
-	max-width: 100%;
+	max-width: 1140px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -553,6 +554,10 @@ a:hover {
 /* set height so after nav is fixed it doesn't jump from pageheight difference*/
 .header-navbar.jumpfix {
 	min-height: 75px;
+}
+
+.navbar-small .header-navbar.jumpfix {
+	min-height: 60px;
 }
 
 .header-navbar .navbar {
@@ -575,7 +580,7 @@ a:hover {
 .header-navbar .navbar .nav .search {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	text-decoration: none;
 	line-height: 1.3;
 }
@@ -610,9 +615,8 @@ a:hover {
 }
 
 .header-navbar .navbar-toggler,
-.header-navbar .nav-search {
+.header-navbar .nav-search .btn-nav-search {
 	margin: 0px;
-	padding: 5px;
 	font-size: 2rem;
 	line-height: 2;
 }
@@ -624,6 +628,11 @@ a:hover {
 
 .header-navbar .navbar-toggler:focus {
 	color: $primary;
+}
+
+.nav-toggle,
+.nav-search {
+	display: inline-block;
 }
 
 .header-navbar .navbar-brand.c9-custom-logo>.c9-home-logo {
@@ -642,40 +651,10 @@ a:hover {
 
 .header-navbar .navbar .nav .nav-item .nav-link,
 .header-navbar .navbar .nav .nav-item .dropdown-item {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 15px;
 }
 
-.nav-toggle {
-	display: inline-block;
-}
-
-.nav-search {
-	display: none;
-}
-
-@media only screen and (min-width: 1px) and (max-width: 667px) {
-	.header-navbar .navbar-brand .c9-custom-logo {
-		max-width: 285px;
-		max-height: 45px;
-		width: auto;
-		height: auto;
-	}
-}
-
-@media only screen and (min-width: 992px) {
-	.navbar-expand-md .navbar-nav .nav-link {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.nav-search {
-		display: inline-block;
-	}
-}
-
-@media only screen and (min-width: 1px) and (max-width: 1024px) {
-
+@media only screen and (max-width: 1024px) {
 
 	.navbar-brand>.c9-custom-logo>.c9-custom-logo {
 		max-width: 285px;
@@ -727,32 +706,32 @@ a:hover {
 		display: block;
 	}
 
-	.nav-search {
-		display: inline-block;
-	}
 }
 
-@media only screen and (min-width: 1px) and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
+
+	/* centers nav items in a single element per row for mobile/tablet drop down*/
 	.header-navbar .navbar .nav .nav-item {
 		display: block;
 		text-align: center;
 	}
 
-	.header-navbar .navbar .nav .nav-item .dropdown-menu>.menu-item {
-		display: block;
+	.header-navbar .navbar .nav .nav-item.search {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.navbar-small-buttons .nav-search {
+		display: none;
 	}
 
-	.nav-search {
+	/*adds search icon at end of nav links*/
+	.header-navbar .navbar .nav .nav-item.search {
 		display: inline-block;
 	}
 }
 
-@media only screen and (min-width: 1px) and (max-width: 667px) {
-	.header-navbar .navbar .nav .nav-item.search {
-		display: none;
-	}
-
-}
 
 /****************************************************************************************/
 /* WordPress archive, search, and woocommerce post pagination */
@@ -2062,6 +2041,23 @@ object {
 }
 
 /****************************************************************************************/
+/* 404 error pages */
+/****************************************************************************************/
+
+.error-404 {
+	min-height: 50vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+/****************************************************************************************/
 /* WordPress Gallery Block Magnific Images */
 /****************************************************************************************/
 
@@ -2745,6 +2741,11 @@ screen and (max-height: 300px) {
 /* WordPress Forms, Search Forms, + Gravity Forms
 /****************************************************************************************/
 
+/* search results page */
+.page-search-results {
+	min-height: 50vh;
+}
+
 /*************************** Most WordPress Inputs and Forms ****************************/
 ::-webkit-input-placeholder,
 :-moz-placeholder,
@@ -2819,7 +2820,7 @@ screen and (max-height: 300px) {
 }
 
 /**************************** Full Screen Search Form **********************************/
-#search {
+#fullscreensearch {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -2835,7 +2836,7 @@ screen and (max-height: 300px) {
 	background-color: rgba(255, 255, 255, 0.95);
 }
 
-#search.open {
+#fullscreensearch.open {
 	position: fixed;
 	opacity: 1;
 	height: 100vh;
@@ -2843,7 +2844,7 @@ screen and (max-height: 300px) {
 	z-index: 1053;
 }
 
-#search input[type="search"] {
+#fullscreensearch input[type="search"] {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2861,7 +2862,7 @@ screen and (max-height: 300px) {
 	border: 1px solid rgba(151, 151, 151, 1);
 }
 
-#search .btn {
+#fullscreensearch .btn {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2870,11 +2871,11 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
-#search .btn:hover {
+#fullscreensearch .btn:hover {
 	color: #fff;
 }
 
-#search .search-close {
+#fullscreensearch .search-close {
 	position: fixed;
 	top: 35px;
 	right: 35px;
@@ -2886,10 +2887,11 @@ screen and (max-height: 300px) {
 	color: $light;
 	background-color: $primary;
 	border: none;
+	-webkit-transition: opacity .5s;
 	transition: opacity .5s;
 }
 
-#search .search-close:hover {
+#fullscreensearch .search-close:hover {
 	opacity: .4;
 }
 

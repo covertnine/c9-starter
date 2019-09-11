@@ -3,7 +3,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package c9
+ * @package cortextoo
  */
 
 get_header();
@@ -12,11 +12,11 @@ get_header();
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="page-search-results c9" id="content" tabindex="-1">
+	<div class="page-search-results cortextoo" id="content" tabindex="-1">
 
 		<main class="site-main" id="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if (have_posts()) : ?>
 
 
 			<div class="c9-grid mar20B">
@@ -26,13 +26,11 @@ get_header();
 							<div class="entry-search-result">
 
 								<h1 class="entry-title text-center">
-									<?php
-									printf(
+									<?php printf(
 											/* translators:*/
-											esc_html__( 'Results for: %s', 'c9' ),
+											esc_html__('Results for: %s', 'c9' ),
 											'<span>' . get_search_query() . '</span>'
-										);
-										?>
+										); ?>
 								</h1>
 
 							</div>
@@ -49,10 +47,7 @@ get_header();
 
 				<div class="row no-gutter">
 
-					<?php
-					while ( have_posts() ) :
-the_post();
-?>
+					<?php while (have_posts()) : the_post(); ?>
 
 					<?php
 							/**
@@ -60,14 +55,14 @@ the_post();
 							 * If you want to overload this in a child theme then include a file
 							 * called content-search.php and that will be used instead.
 							 */
-							get_template_part( 'loop-templates/content', 'search' );
+							get_template_part('loop-templates/content', 'search');
 							?>
 
 					<?php endwhile; ?>
 
 					<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php get_template_part('loop-templates/content', 'none'); ?>
 
 					<?php endif; ?>
 
@@ -80,7 +75,7 @@ the_post();
 		<?php c9_pagination(); ?>
 
 
-	</div><!-- .c9 end -->
+	</div><!-- .cortextoo end -->
 
 </div><!-- Wrapper end -->
 

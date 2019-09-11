@@ -167,7 +167,6 @@ add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
 function c9_add_search_form( $items, $args ) {
 	if ( $args->theme_location == 'primary' ) {
 		$items .= '<li class="nav-item search">						
-					<div class="navbar-small-buttons">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>
