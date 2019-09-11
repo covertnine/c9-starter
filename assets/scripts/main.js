@@ -83,7 +83,7 @@ jQuery(document).ready(function() {
       // $("#page-wrapper").css("margin-top", -navHeight);
     }
 
-    ///////////////////////// for putting wordpress galleries linked to images/videos in lightbox ////////////////////
+    ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     $(".cortex-popup-video").magnificPopup({
       disableOn: 700,

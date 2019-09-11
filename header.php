@@ -20,25 +20,6 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-	<?php
-	$c9appleIcon = ! empty( get_option( 'cortex_branding' )['apple-touch'] ) ? esc_url( get_option( 'cortex_branding' )['apple-touch'] ) : get_template_directory_uri() . '/img/apple-touch-icon.png';
-	?>
-	<!-- third-generation iPad with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $c9appleIcon; ?>">
-	<!-- iPhone with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $c9appleIcon; ?>">
-	<!-- first- and second-generation iPad: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $c9appleIcon; ?>">
-	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-	<link rel="apple-touch-icon-precomposed" href="<?php echo $c9appleIcon; ?>">
-	<!-- basic favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $c9appleIcon; ?>">
-	<?php
-	// Favicon Code
-	$c9favicon = ! empty( get_option( 'cortex_branding' )['favicon'] ) ? esc_url( get_option( 'cortex_branding' )['favicon'] ) : get_template_directory_uri() . '/img/favicon.ico';
-	?>
-	<link rel="shortcut icon" href="<?php echo $c9favicon; ?>">
 	<?php wp_head(); ?>
 </head>
 

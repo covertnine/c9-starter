@@ -1,30 +1,30 @@
 <?php
-
 /**
  * Declaring widgets
  *
  * @package c9
  */
 
-/**
- * Count number of widgets in a sidebar
- * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
- */
+
 if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
+	/**
+	 * Count number of widgets in a sidebar
+	 * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
+	 */
 	function c9_slbd_count_widgets( $sidebar_id ) {
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
 		global $_wp_sidebars_widgets;
 		if ( empty( $_wp_sidebars_widgets ) ) :
-			$_wp_sidebars_widgets = get_option( 'sidebars_widgets', array() );
+			$sidebars_widgets_count = get_option( 'sidebars_widgets', array() );
+		else :
+			$sidebars_widgets_count = $_wp_sidebars_widgets;
 		endif;
-
-		$sidebars_widgets_count = $_wp_sidebars_widgets;
 
 		if ( isset( $sidebars_widgets_count[ $sidebar_id ] ) ) :
 			$widget_count   = count( $sidebars_widgets_count[ $sidebar_id ] );
 			$widget_classes = 'widget-count-' . count( $sidebars_widgets_count[ $sidebar_id ] );
-			if ( $widget_count % 4 == 0 || $widget_count > 6 || $widget_count % 5 == 0 ) :
+			if ( 0 == $widget_count % 4 || 6 < $widget_count || 0 == $widget_count % 5 ) :
 				// Four widgets per row if there are exactly four or more than six
 				$widget_classes .= ' col-sm-6 col-md-3';
 			elseif ( 6 == $widget_count ) :

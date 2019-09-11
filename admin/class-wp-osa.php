@@ -671,7 +671,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 			$id    = $args['section'] . '[' . $args['id'] . ']';
 			$label = isset( $args['options']['button_label'] ) ?
-				$args['options']['button_label'] : __( 'Choose File' );
+				$args['options']['button_label'] : __( 'Choose File', 'c9' );
 
 			$html  = sprintf( '<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
 			$html .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
@@ -691,7 +691,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 			$id    = $args['section'] . '[' . $args['id'] . ']';
 			$label = isset( $args['options']['button_label'] ) ?
-				$args['options']['button_label'] : __( 'Choose Image' );
+				$args['options']['button_label'] : __( 'Choose Image', 'c9' );
 
 			$html  = sprintf( '<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
 			$html .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
@@ -784,8 +784,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 		 * Add submenu page for theme.
 		 */
 		public function admin_menu() {
-			// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
-			add_options_page(
+			add_theme_page(
 				'C9 Theme',
 				'C9 Theme',
 				'manage_options',
