@@ -5,7 +5,6 @@
  * @package c9
  */
 
-
 if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
 	/**
 	 * Count number of widgets in a sidebar
