@@ -443,8 +443,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
 			if ( '' !== $args['name'] ) {
 				$name = $args['name'];
-			} else {
-};
+			}
 			$type = isset( $args['type'] ) ? $args['type'] : 'title';
 
 			$html = '';
