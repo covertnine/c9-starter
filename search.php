@@ -3,7 +3,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package cortextoo
+ * @package c9
  */
 
 get_header();
@@ -12,7 +12,7 @@ get_header();
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="page-search-results cortextoo" id="content" tabindex="-1">
+	<div class="page-search-results c9" id="content" tabindex="-1">
 
 		<main class="site-main" id="main">
 
@@ -75,7 +75,7 @@ get_header();
 		<?php c9_pagination(); ?>
 
 
-	</div><!-- .cortextoo end -->
+	</div><!-- .c9 end -->
 
 </div><!-- Wrapper end -->
 

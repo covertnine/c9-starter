@@ -5,7 +5,6 @@
  * @package c9
  */
 
-
 if ( ! function_exists( 'c9_scripts' ) ) {
 	/**
 	 * Load theme's JavaScript and CSS sources.
@@ -54,10 +53,10 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		}
 
 		// Check to see if this script needs to run:
-		$fontChoice = isset( get_option( 'cortex_typography' )['defaultFont'] ) ? get_option( 'cortex_typography' )['defaultFont'] : null;
+		$font_choice = isset( get_option( 'cortex_branding' )['defaultFont'] ) ? get_option( 'cortex_branding' )['defaultFont'] : null;
 
 		// Check to see if the array is empty and the user choice is yes to run the font script
-		if ( ! empty( $fontChoice ) && $fontChoice === 'yes' ) {
+		if ( ! empty( $font_choice ) && $font_choice === 'yes' ) {
 			// Begin by registering the JavaScript Script
 			// Add action to enqueue the CDN script:
 			wp_enqueue_script( 'webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
@@ -65,7 +64,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 			wp_register_script( 'typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array( 'webfont-loader' ) );
 
 			// Localize the script with the font data
-			$font_array = get_option( 'cortex_typography' );
+			$font_array = get_option( 'cortex_branding' );
 
 			// Use the localize function to localize the script and continue with the code
 			wp_localize_script( 'typography-script', 'selectedFonts', $font_array );

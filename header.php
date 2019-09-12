@@ -19,6 +19,19 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php
+	$c9_apple_icon = ! empty( get_option( 'cortex_branding' )['apple-touch'] ) ? esc_url( get_option( 'cortex_branding' )['apple-touch'] ) : get_template_directory_uri() . '/img/apple-touch-icon.png';
+	?>
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $c9_apple_icon; ?>">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $c9_apple_icon; ?>">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $c9_apple_icon; ?>">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="<?php echo $c9_apple_icon; ?>">
+	<!-- basic favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $c9_apple_icon; ?>">
 	<?php wp_head(); ?>
 </head>
 
@@ -46,13 +59,13 @@
 						<?php
 
 							// get custom logo, if not set, use customizer logo, if that's not set, show text of site title
-							$c9Logo     = get_option( 'cortex_branding', '' );
-							$c9SiteName = get_bloginfo( 'name' );
+							$c9_logo      = get_option( 'cortex_branding', '' );
+							$c9_site_name = get_bloginfo( 'name' );
 
-							if ( ! empty( $c9Logo['logo'] ) ) {
+							if ( ! empty( $c9_logo['logo'] ) ) {
 							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9SiteName . __( ' Homepage', 'c9' ); ?>" class="navbar-brand custom-logo-link c9-custom-logo">
-								<img src="<?php echo $c9Logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9SiteName . __( ' Logo', 'c9' ); ?>" />
+							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9' ); ?>" class="navbar-brand custom-logo-link c9-custom-logo">
+								<img src="<?php echo $c9_logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' ); ?>" />
 							</a>
 						<?php
 							} else {
