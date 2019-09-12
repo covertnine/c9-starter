@@ -56,7 +56,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		$font_choice = isset( get_option( 'cortex_branding' )['defaultFont'] ) ? get_option( 'cortex_branding' )['defaultFont'] : null;
 
 		// Check to see if the array is empty and the user choice is yes to run the font script
-		if ( ! empty( $font_choice ) && $font_choice === 'yes' ) {
+		if ( ! empty( $font_choice ) && 'yes' === $font_choice ) {
 			// Begin by registering the JavaScript Script
 			// Add action to enqueue the CDN script:
 			wp_enqueue_script( 'webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
