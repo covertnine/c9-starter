@@ -107,15 +107,74 @@ if ( class_exists( 'WP_OSA' ) ) {
 		)
 	);
 
+	// Field: Default Font Selector
 	$wposa_obj->add_field(
 		'cortex_branding',
 		array(
-			'id'   => 'favicon',
-			'type' => 'image',
-			'name' => __( 'Favicon Upload', 'c9' ),
-			'desc' => __( 'Upload a favicon here', 'c9' ),
+			'id'      => 'defaultFont',
+			'type'    => 'radio',
+			'name'    => __( 'Use Cortex Theme Based Fonts?', 'c9' ),
+			'options' => array(
+				'yes' => 'Yes.',
+				'no'  => 'No, I will take care of my fonts.',
+			),
 		)
 	);
+
+	// If the user selects YES and will select the fonts.
+	// The default font will be Helvatic for system fonts:
+
+	// Update an array to contain the fonts that will be used
+	// throughout each of the font selector fields:
+	$c9fonts = array(
+		'Roboto'          => 'Roboto',
+		'Montserrat'      => 'Montserrat',
+		'PT Sans'         => 'PT Sans',
+		'Raleway'         => 'Raleway',
+		'Montserrat'      => 'Montserrat',
+		'Source Sans Pro' => 'Source Sans Pro',
+		'Oswald'          => 'Oswald',
+		'Open Sans'       => 'Open Sans',
+	);
+
+
+	// Field: Default Font Selector
+	$wposa_obj->add_field(
+		'cortex_branding',
+		array(
+			'id'      => 'heading_font',
+			'type'    => 'select',
+			'name'    => __( 'Heading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
+		)
+	);
+
+
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_branding',
+		array(
+			'id'      => 'subheading_font',
+			'type'    => 'select',
+			'name'    => __( 'Subheading Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
+		)
+	);
+
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_branding',
+		array(
+			'id'      => 'body_font',
+			'type'    => 'select',
+			'name'    => __( 'Body Font', 'c9' ),
+			'desc'    => __( 'Select fonts here', 'c9' ),
+			'options' => $c9fonts,
+		)
+	);
+
 	// ------------------------------//
 	// ---- End Cortex Branding -----//
 	// ------------------------------//
@@ -358,95 +417,6 @@ if ( class_exists( 'WP_OSA' ) ) {
 	// ---- End Cortex Posts -----//
 	// ---------------------------//
 
-	// -------------------------------------------//
-
-	// -------------------------------//
-	// ---- Start Cortex Typography ---//
-	// --------------------------------//
-
-	// The tab title of the Typography
-	$wposa_obj->add_section(
-		array(
-			'id'    => 'cortex_typography',
-			'title' => __( 'Typography', 'c9' ),
-		)
-	);
-
-	// Field: Default Font Selector
-	$wposa_obj->add_field(
-		'cortex_typography',
-		array(
-			'id'      => 'defaultFont',
-			'type'    => 'radio',
-			'name'    => __( 'Use Cortex Theme Based Fonts?', 'c9' ),
-			'options' => array(
-				'yes' => 'Yes.',
-				'no'  => 'No, I will take care of my fonts.',
-			),
-		)
-	);
-
-	// If the user selects YES and will select the fonts.
-	// The default font will be Helvatic for system fonts:
-
-	// Update an array to contain the fonts that will be used
-	// throughout each of the font selector fields:
-	$c9fonts = array(
-		'Roboto'          => 'Roboto',
-		'Montserrat'      => 'Montserrat',
-		'PT Sans'         => 'PT Sans',
-		'Raleway'         => 'Raleway',
-		'Montserrat'      => 'Montserrat',
-		'Source Sans Pro' => 'Source Sans Pro',
-		'Oswald'          => 'Oswald',
-		'Open Sans'       => 'Open Sans',
-	);
-
-
-	// Field: Default Font Selector
-	$wposa_obj->add_field(
-		'cortex_typography',
-		array(
-			'id'      => 'heading_font',
-			'type'    => 'select',
-			'name'    => __( 'Heading Font', 'c9' ),
-			'desc'    => __( 'Select fonts here', 'c9' ),
-			'options' => $c9fonts,
-		)
-	);
-
-
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_typography',
-		array(
-			'id'      => 'subheading_font',
-			'type'    => 'select',
-			'name'    => __( 'Subheading Font', 'c9' ),
-			'desc'    => __( 'Select fonts here', 'c9' ),
-			'options' => $c9fonts,
-		)
-	);
-
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_typography',
-		array(
-			'id'      => 'body_font',
-			'type'    => 'select',
-			'name'    => __( 'Body Font', 'c9' ),
-			'desc'    => __( 'Select fonts here', 'c9' ),
-			'options' => $c9fonts,
-		)
-	);
-
-
-
-	// ---------------------------//
-	// ---- End Cortex Typography -----//
-	// ---------------------------//
-
-	// -------------------------------------------//
 	// ---------------------------//
 	// ---- Start Cortex SEO ---//
 	// ---------------------------//
