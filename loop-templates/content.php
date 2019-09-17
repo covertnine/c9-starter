@@ -8,7 +8,6 @@
 ?>
 <div class="col-xs-12 col-sm-6 col-md-3">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
 		<?php
 		if ( has_post_thumbnail() ) {
 			// grab src, srcset, sizes from featured image for Retina support
