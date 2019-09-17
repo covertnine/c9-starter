@@ -19,19 +19,6 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php
-	$c9_apple_icon = ! empty( get_option( 'cortex_branding' )['apple-touch'] ) ? esc_url( get_option( 'cortex_branding' )['apple-touch'] ) : get_template_directory_uri() . '/img/apple-touch-icon.png';
-	?>
-	<!-- third-generation iPad with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $c9_apple_icon; ?>">
-	<!-- iPhone with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $c9_apple_icon; ?>">
-	<!-- first- and second-generation iPad: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $c9_apple_icon; ?>">
-	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-	<link rel="apple-touch-icon-precomposed" href="<?php echo $c9_apple_icon; ?>">
-	<!-- basic favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $c9_apple_icon; ?>">
 	<?php wp_head(); ?>
 </head>
 

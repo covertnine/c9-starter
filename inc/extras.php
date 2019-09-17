@@ -168,7 +168,7 @@ add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 
 add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
 function c9_add_search_form( $items, $args ) {
-	if ( $args->theme_location == 'primary' ) {
+	if ( 'primary' == $args->theme_location) {
 		$items .= '<li class="nav-item search">						
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">

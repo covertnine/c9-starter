@@ -624,7 +624,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 		// }
 
 		/**
-		 * Displays a textarea for a settings field
+		 * Displays html for a settings field
 		 *
 		 * @param array $args settings field args.
 		 */

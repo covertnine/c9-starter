@@ -188,14 +188,13 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'title' => __( 'Social', 'c9' ),
 		)
 	);
-
 	$wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'twitter',
 			'type' => 'text',
 			'name' => __( 'Twitter', 'c9' ),
-			'desc' => __( 'Input your Twitter Username Here', 'c9' ),
+			'desc' => __( 'Input your Twitter Username or full url', 'c9' ),
 		)
 	);
 
@@ -205,7 +204,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'facebook',
 			'type' => 'text',
 			'name' => __( 'Facebook', 'c9' ),
-			'desc' => __( 'Input your Facebook Username Here', 'c9' ),
+			'desc' => __( 'Input your Facebook Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -214,7 +213,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'instagram',
 			'type' => 'text',
 			'name' => __( 'Instagram', 'c9' ),
-			'desc' => __( 'Input your Instagram Username Here', 'c9' ),
+			'desc' => __( 'Input your Instagram Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -223,7 +222,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'pinterest',
 			'type' => 'text',
 			'name' => __( 'Pinterest', 'c9' ),
-			'desc' => __( 'Input your Pinterest Username Here', 'c9' ),
+			'desc' => __( 'Input your Pinterest Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -232,7 +231,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'spotify',
 			'type' => 'text',
 			'name' => __( 'Spotify', 'c9' ),
-			'desc' => __( 'Input your Spotify Username Here', 'c9' ),
+			'desc' => __( 'Input your Spotify Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -241,7 +240,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'youtube',
 			'type' => 'text',
 			'name' => __( 'Youtube', 'c9' ),
-			'desc' => __( 'Input your Youtube Username Here', 'c9' ),
+			'desc' => __( 'Input your Youtube Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -250,7 +249,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'flickr',
 			'type' => 'text',
 			'name' => __( 'Flickr', 'c9' ),
-			'desc' => __( 'Input your Flickr Username Here', 'c9' ),
+			'desc' => __( 'Input your Flickr Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -259,7 +258,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'tumblr',
 			'type' => 'text',
 			'name' => __( 'Tumblr', 'c9' ),
-			'desc' => __( 'Input your Tumblr Username Here', 'c9' ),
+			'desc' => __( 'Input your Tumblr Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -268,7 +267,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'yelp',
 			'type' => 'text',
 			'name' => __( 'Yelp', 'c9' ),
-			'desc' => __( 'Input your Yelp Name Here', 'c9' ),
+			'desc' => __( 'Input your Yelp Name or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -277,7 +276,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'subreddit',
 			'type' => 'text',
 			'name' => __( 'Subreddit', 'c9' ),
-			'desc' => __( 'Input your Subreddit Name Here', 'c9' ),
+			'desc' => __( 'Input your Subreddit Name or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -286,7 +285,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'linkedin',
 			'type' => 'text',
 			'name' => __( 'Linkedin', 'c9' ),
-			'desc' => __( 'Input your Linkedin Username Here', 'c9' ),
+			'desc' => __( 'Input your Linkedin Username or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -295,7 +294,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'github',
 			'type' => 'text',
 			'name' => __( 'Github', 'c9' ),
-			'desc' => __( 'Input your Github Name Here', 'c9' ),
+			'desc' => __( 'Input your Github Name or full url', 'c9' ),
 		)
 	);
 	$wposa_obj->add_field(
@@ -304,7 +303,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 			'id'   => 'soundcloud',
 			'type' => 'text',
 			'name' => __( 'Soundcloud', 'c9' ),
-			'desc' => __( 'Input your Soundcloud Name Here', 'c9' ),
+			'desc' => __( 'Input your Soundcloud Name or full url', 'c9' ),
 		)
 	);
 
