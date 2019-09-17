@@ -12,6 +12,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// Add the posts and pages columns filter
+add_filter( 'manage_posts_columns', 'cortex_add_post_admin_thumbnail_column', 2 );
+add_filter( 'manage_pages_columns', 'cortex_add_post_admin_thumbnail_column', 2 );
+
+/**
+ * Add featured image column
+ */
+function cortex_add_post_admin_thumbnail_column( $cortex_columns ) {
+	$cortex_columns['cortex_thumb'] = __( 'Image' );
+	return $cortex_columns;
+}
+add_action( 'manage_posts_custom_column', 'cortex_show_post_thumbnail_column', 5, 2 );
+add_action( 'manage_pages_custom_column', 'cortex_show_post_thumbnail_column', 5, 2 );
+
+/**
+ * Grab thumbnail image and put it in there
+ */
+function cortex_show_post_thumbnail_column( $cortex_columns, $cortex_id ) {
+	if ( 'cortex_thumb' === $cortex_columns && function_exists( 'the_post_thumbnail' ) ) {
+		echo the_post_thumbnail( 'cortex-tiny-thumb' );
+	} else {
+		echo 'hmm... your theme doesn\'t support featured image...';
+	}
+}
+
+/**
+ * Add cortex image sizes to attachments drop downs
+ */
+function cortex_show_image_sizes( $sizes ) {
+	$sizes['cortex-tiny-thumb']      = __( 'Cortex Tiny Thumb', 'cortex' );
+	$sizes['cortex-featured-medium'] = __( 'Cortex Medium', 'cortex' );
+	$sizes['cortex-featured']        = __( 'Cortex Medium Wide', 'cortex' );
+	$sizes['cortex-featured-header'] = __( 'Cortex Large Wide', 'cortex' );
+	$sizes['cortex-xlarge']          = __( 'Cortex XL', 'cortex' );
+	return $sizes;
+}
+add_filter( 'image_size_names_choose', 'cortex_show_image_sizes' );
+
 require get_template_directory() . '/admin/class-wp-osa.php';
 
 /**
@@ -32,7 +70,7 @@ add_action( 'add_meta_boxes', 'c9_post_header_size' );
  * Content callback for post header size.
  */
 function c9_post_header_size_html( $post ) {
-	$value = get_post_meta( $post->ID, 'c9_post_header_size', true );
+	$value = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] ) ? get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] : 'small';
 	?>
 	<label for="c9_post_header_size">Header Size</label>
 	<div>

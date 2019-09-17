@@ -4,7 +4,7 @@
  *
  * @package c9
  */
-$header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
+$header_size = get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'];
 ?>
 
 
@@ -38,7 +38,9 @@ $header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
 		</header>
 	<?php } ?>
 
-	<?php
+	<?php if ( 'small' === $header_size ) { ?>
+
+		<?php
 	if ( has_post_thumbnail() ) {
 
 		// grab src, srcset, sizes from featured image for Retina support
@@ -55,8 +57,6 @@ $header_size = get_post_meta( $post->ID, 'c9_post_header_size', true );
 		</figure>
 
 	<?php } ?>
-
-	<?php if ( 'small' === $header_size ) { ?>
 
 		<header class="entry-header">
 
