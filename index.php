@@ -17,7 +17,8 @@ get_header();
 <div class="wrapper" id="index-wrapper">
 
 	<main class="site-main" id="main">
-		<div class="container-narrow container-posts c9">
+		<div class="container container-posts c9">
+			<div class="row no-gutter">
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
@@ -41,7 +42,8 @@ get_header();
 				<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 			<?php endif; ?>
-		</div><!-- .container-narrow-->
+			</div><!--end .row-->
+		</div><!-- .container-->
 
 	</main><!-- #main -->
 

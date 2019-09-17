@@ -553,7 +553,7 @@ a:hover {
 
 /* set height so after nav is fixed it doesn't jump from pageheight difference*/
 .header-navbar.jumpfix {
-	min-height: 75px;
+	min-height: 108px;
 }
 
 .navbar-small .header-navbar.jumpfix {
@@ -638,6 +638,7 @@ a:hover {
 .header-navbar .navbar-brand.c9-custom-logo>.c9-home-logo {
 	max-width: 285px;
 	max-height: 92px;
+	min-height: 92px;
 	width: auto;
 	height: auto;
 }
@@ -645,6 +646,7 @@ a:hover {
 .header-navbar .navbar-small .navbar-brand.c9-custom-logo>.c9-home-logo {
 	max-width: 285px;
 	max-height: 45px;
+	min-height: 45px;
 	width: auto;
 	height: auto;
 }
@@ -737,13 +739,15 @@ a:hover {
 /* WordPress archive, search, and woocommerce post pagination */
 /****************************************************************************************/
 .page-search-results nav,
-.archive nav {
+.archive nav,
+.blog nav {
 	margin: 0px auto;
 	text-align: center;
 }
 
 .page-search-results nav .pagination,
-.archive .pagination {
+.archive .pagination,
+.blog .pagination {
 	max-width: 1140px;
 	margin: 0px auto;
 	text-align: center;
@@ -751,14 +755,16 @@ a:hover {
 }
 
 .page-search-results nav .pagination .page-item,
-.archive .pagination .page-item {
+.archive .pagination .page-item,
+.blog .pagination .page-item {
 	display: inline-block;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li span,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
-.archive nav .pagination .page-item .page-link {
+.archive nav .pagination .page-item .page-link,
+.blog nav .pagination .page-item .page-link {
 	font-size: 1.6rem;
 	font-weight: 700;
 	font-family: $headings-font-family;
@@ -768,32 +774,37 @@ a:hover {
 .page-search-results .navigation .page-item.active .page-link,
 .page-search-results .navigation .pagination li .current,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
-.archive nav .pagination .page-item.active .current {
+.archive nav .pagination .page-item.active .current,
+.blog nav .pagination .page-item.active .current {
 	color: $dark;
 }
 
 .page-search-results nav .page-item.active .page-link,
 .page-search-results nav .pagination li .current,
-.archive nav .pagination .page-item.active .current {
+.archive nav .pagination .page-item.active .current,
+.blog nav .pagination .page-item.active .current {
 	background-color: #ebe9eb;
 	border: 1px solid #dee2e6;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
-.archive .pagination .page-item a {
+.archive .pagination .page-item a,
+.blog .pagination .page-item a {
 	color: $primary;
 	text-decoration: none;
 }
 
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
-.archive .pagination .page-item a:hover {
+.archive .pagination .page-item a:hover,
+.blog .pagination .page-item a:hover {
 	color: $dark;
 }
 
 .theme-c9.woocommerce nav.woocommerce-pagination,
 .page-search-results nav .pagination,
-.archive nav .pagination {
+.archive nav .pagination,
+.blog nav .pagination {
 	margin-bottom: 20px;
 }
 
