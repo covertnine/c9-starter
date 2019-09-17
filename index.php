@@ -17,7 +17,7 @@ get_header();
 <div class="wrapper" id="index-wrapper">
 
 	<main class="site-main" id="main">
-		<div class="container-narrow container-posts c9">
+		<div class="container container-posts c9">
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
