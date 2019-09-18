@@ -3518,3 +3518,11 @@ screen and (max-height: 300px) {
 .subheading.h6.heavy {
 	font-weight: 900;
 }
+
+.light-color-text {
+	color: $light;
+}
+
+.dark-color-text {
+	color: $dark;
+}
