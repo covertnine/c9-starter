@@ -12,44 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Add the posts and pages columns filter
-add_filter( 'manage_posts_columns', 'cortex_add_post_admin_thumbnail_column', 2 );
-add_filter( 'manage_pages_columns', 'cortex_add_post_admin_thumbnail_column', 2 );
-
-/**
- * Add featured image column
- */
-function cortex_add_post_admin_thumbnail_column( $cortex_columns ) {
-	$cortex_columns['cortex_thumb'] = __( 'Image' );
-	return $cortex_columns;
-}
-add_action( 'manage_posts_custom_column', 'cortex_show_post_thumbnail_column', 5, 2 );
-add_action( 'manage_pages_custom_column', 'cortex_show_post_thumbnail_column', 5, 2 );
-
-/**
- * Grab thumbnail image and put it in there
- */
-function cortex_show_post_thumbnail_column( $cortex_columns, $cortex_id ) {
-	if ( 'cortex_thumb' === $cortex_columns && function_exists( 'the_post_thumbnail' ) ) {
-		echo the_post_thumbnail( 'cortex-tiny-thumb' );
-	} else {
-		echo 'hmm... your theme doesn\'t support featured image...';
-	}
-}
-
-/**
- * Add cortex image sizes to attachments drop downs
- */
-function cortex_show_image_sizes( $sizes ) {
-	$sizes['cortex-tiny-thumb']      = __( 'Cortex Tiny Thumb', 'cortex' );
-	$sizes['cortex-featured-medium'] = __( 'Cortex Medium', 'cortex' );
-	$sizes['cortex-featured']        = __( 'Cortex Medium Wide', 'cortex' );
-	$sizes['cortex-featured-header'] = __( 'Cortex Large Wide', 'cortex' );
-	$sizes['cortex-xlarge']          = __( 'Cortex XL', 'cortex' );
-	return $sizes;
-}
-add_filter( 'image_size_names_choose', 'cortex_show_image_sizes' );
-
 require get_template_directory() . '/admin/class-wp-osa.php';
 
 /**
@@ -130,7 +92,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'logo',
 			'type' => 'image',
-			'name' => __( 'Theme Logo Upload', 'c9' ),
+			'name' => __( 'Theme Logo', 'c9' ),
 			'desc' => __( 'Upload your logo here', 'c9' ),
 		)
 	);
@@ -140,7 +102,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'   => 'apple-touch',
 			'type' => 'image',
-			'name' => __( 'Apple Touch Icon Upload', 'c9' ),
+			'name' => __( 'Apple Touch Icon', 'c9' ),
 			'desc' => __( 'Upload your apple touch icon here', 'c9' ),
 		)
 	);
@@ -151,7 +113,7 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'defaultFont',
 			'type'    => 'radio',
-			'name'    => __( 'Use Cortex Theme Based Fonts?', 'c9' ),
+			'name'    => __( 'Use C9 Theme Based Fonts?', 'c9' ),
 			'options' => array(
 				'yes' => 'Yes.',
 				'no'  => 'No, I will take care of my fonts.',
@@ -439,12 +401,28 @@ if ( class_exists( 'WP_OSA' ) ) {
 		array(
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
-			'name'    => __( 'Blog Sidebar', 'c9' ),
-			'desc'    => __( 'Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets', 'c9' ),
+			'name'    => __( 'Blog Single Sidebar', 'c9' ),
+			'desc'    => __( 'Do you want a sidebar on your posts visible? Set sidebars under appearance > widgets or nothing will happen!', 'c9' ),
 			'options' => array(
 				'hide'          => 'No Sidebar',
 				'sidebar-left'  => 'Left Sidebar',
 				'sidebar-right' => 'Right Sidebar',
+			),
+			'default' => 'hide',
+		)
+	);
+	// Field: Multicheck.
+	$wposa_obj->add_field(
+		'cortex_posts',
+		array(
+			'id'      => 'archive_sidebar',
+			'type'    => 'radio',
+			'name'    => __( 'Archive Sidebar', 'c9' ),
+			'desc'    => __( 'Do you want a sidebar on your posts archive visible? Set sidebars under appearance > widgets or nothing will happen!', 'c9' ),
+			'options' => array(
+				'hide'          => 'No Sidebar',
+				'archive-left'  => 'Left Sidebar',
+				'archive-right' => 'Right Sidebar',
 			),
 			'default' => 'hide',
 		)

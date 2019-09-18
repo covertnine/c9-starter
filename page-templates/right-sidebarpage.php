@@ -19,10 +19,10 @@ get_header();
 			<div class="
 			<?php
 			if ( is_active_sidebar( 'right-sidebar' ) ) :
-?>
-col-12 col-sm-10
-<?php
-else :
+			?>
+			col-12 col-sm-10
+			<?php
+			else :
 				?>
 				col-12<?php endif; ?> content-area" id="primary">
 
@@ -30,8 +30,8 @@ else :
 
 					<?php
 					while ( have_posts() ) :
-the_post();
-?>
+						the_post();
+						?>
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 

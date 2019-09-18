@@ -26,9 +26,7 @@
 
 		<?php } ?>
 
-
 		<header class="entry-header">
-
 			<?php
 			the_title(
 				sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),

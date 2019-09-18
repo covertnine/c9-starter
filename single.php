@@ -11,6 +11,9 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
 	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
 	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
+} else {
+	$sidebar_right = false;
+	$sidebar_left  = false;
 }
 ?>
 
@@ -58,8 +61,9 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 
 						</main><!-- #main -->
 
+					</div>
+
 						<?php if ( $sidebar_right ) : ?>
-						</div>
 
 						<div class="col-12 col-sm-2 content-area" id="primary">
 

@@ -45,9 +45,7 @@ get_header();
 
 
 			<div class="container">
-
 				<div class="row no-gutter">
-
 						<?php
 						while ( have_posts() ) :
 							the_post();
@@ -60,7 +58,7 @@ get_header();
 						endwhile;
 
 					else :
-					get_template_part( 'loop-templates/content', 'none' );
+							get_template_part( 'loop-templates/content', 'none' );
 					endif;
 					?>
 
@@ -68,7 +66,6 @@ get_header();
 			</div><!-- .container-->
 
 		</main><!-- #main -->
-
 		<!-- The pagination component -->
 		<?php c9_pagination(); ?>
 

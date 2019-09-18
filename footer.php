@@ -20,7 +20,6 @@ else :
 
 	require_once( get_template_directory() . '/inc/class-footer.php' );
 	?>
-
 	<div class="footer-wrapper" id="wrapper-footer">
 
 		<div class="container">

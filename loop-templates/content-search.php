@@ -29,7 +29,7 @@
 		<?php } ?>
 			<?php
 			the_title(
-				sprintf( '<h2 class="entry-title text-left"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				sprintf( '<h2 class="entry-title text-left"><a href="%s" rel="bookmark" class="c9-smooth">', esc_url( get_permalink() ) ),
 				'</a></h2>'
 			);
 

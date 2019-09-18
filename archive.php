@@ -10,7 +10,6 @@
 get_header();
 ?>
 <div class="wrapper" id="archive-wrapper">
-
 	<div class="container c9" id="content" tabindex="-1">
 
 		<div class="row">

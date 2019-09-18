@@ -31,6 +31,10 @@
     // isDirty = false;
     // });
 
+    $('#cortex_advanced-tab, #cortex_seo-tab').on("click", function() {
+      location.reload();
+    });
+
     // This runs the onload function, so that Google Chrome can throw an alert if the user
     // navigates away from the page without saving changes
     window.onload = function() {
@@ -60,9 +64,6 @@
       // e.stopPropagation();
       // console.log(e.isPropagationStopped());
       tabMoved = true;
-      console.log("Before the if statement");
-      console.log(tabMoved);
-      console.log(isDirty);
       if (isDirty === true && tabMoved === true) {
         // var currentTab = $(this).val(localStorage.getItem(this.id))[0];
         var test = window.confirm(
@@ -79,8 +80,6 @@
       tabMoved = false;
       isDirty = false;
       console.log("After the if statement");
-      console.log(tabMoved);
-      console.log(isDirty);
     });
 
     var modes = RegExp("(html|css|javascript)");

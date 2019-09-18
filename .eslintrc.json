@@ -19,8 +19,8 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-			"jsx": true
-		}
+      "jsx": true
+    }
   },
   "globals": {
     "wp": true,
@@ -30,21 +30,23 @@
     "hljs": true,
     "selectedFonts": true,
     "WebFont": true,
-    "$": true
+    "$": true,
+    "location": true,
+    "alert": true
   },
   "plugins": ["jquery", "react", "jsx-a11y"],
   "settings": {
-		"react": {
-			"pragma": "wp",
-			"version": "detect"
-		}
-	},
+    "react": {
+      "pragma": "wp",
+      "version": "detect"
+    }
+  },
   "rules": {
     "no-console": 0,
     "jquery/no-hide": 0,
     "jquery/no-show": 0,
     "react/prop-types": 0,
-		"react/jsx-key": 0,
-		"react/display-name": 0
+    "react/jsx-key": 0,
+    "react/display-name": 0
   }
 }

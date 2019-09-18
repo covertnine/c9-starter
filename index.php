@@ -12,36 +12,72 @@
  */
 
 get_header();
+
+if ( isset( get_option( 'cortex_posts' )['archive_sidebar'] ) ) {
+	$sidebar_left  = 'archive-left' === get_option( 'cortex_posts' )['archive_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'archive-right' === get_option( 'cortex_posts' )['archive_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
+} else {
+	$sidebar_left  = false;
+	$sidebar_right = false;
+}
 ?>
 
 <div class="wrapper" id="index-wrapper">
 
 	<main class="site-main" id="main">
+
 		<div class="container container-posts c9">
+
 			<div class="row no-gutter">
-			<?php if ( have_posts() ) : ?>
 
-				<?php /* Start the Loop */ ?>
+				<?php if ( $sidebar_left ) : ?>
 
+				<div class="col-sm-12 col-md-2">
+					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+				</div>
+
+				<?php echo '<div class="col-sm-12 col-md-10">'; ?>
+
+				<?php elseif ( $sidebar_right ) : ?>
+
+				<?php echo '<div class="col-12 col-sm-10 content-area" id="primary">'; ?>
+
+				<?php else : ?>
+
+				<div class="col-12 content-area" id="primary">
+
+				<?php endif; ?>
+
+					<div class="row">
+						<?php if ( have_posts() ) : ?>
+							<?php
+							while ( have_posts() ) :
+								the_post();
+
+								/*
+								* Include the Post-Format-specific template for the content.
+								* If you want to override this in a child theme, then include a file
+								* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								*/
+								get_template_part( 'loop-templates/content', get_post_format() );
+							endwhile;
+							?>
+						<?php else : ?>
+
+							<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+						<?php endif; ?>
+					</div>
+				</div>
 				<?php
-				while ( have_posts() ) :
-					the_post();
+				if ( $sidebar_right ) :
+				?>
+				<div class="col-12 col-sm-2 content-area" id="primary">
 
-					/*
-					* Include the Post-Format-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					*/
-					get_template_part( 'loop-templates/content', get_post_format() );
-					?>
+					<?php dynamic_sidebar( 'right-sidebar' ); ?>
 
-				<?php endwhile; ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
-			<?php endif; ?>
+				</div>
+				<?php endif; ?>
 			</div><!--end .row-->
 		</div><!-- .container-->
 
