@@ -33,12 +33,8 @@ else :
 
 					<?php
 					while ( have_posts() ) :
-the_post();
-?>
-
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-					<?php
+						the_post();
+						get_template_part( 'loop-templates/content', 'page' );
 					endwhile; // end of the loop.
 					?>
 
