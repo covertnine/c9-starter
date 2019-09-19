@@ -5,6 +5,15 @@
  * @package c9
  */
 $header_size = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] ) ? get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] : 'small';
+
+if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
+	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
+	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
+} else {
+	$sidebar_right = false;
+	$sidebar_left  = false;
+}
 ?>
 
 
@@ -36,11 +45,8 @@ $header_size = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c
 			<?php } ?>
 
 		</header>
-	<?php } ?>
-
-	<?php if ( 'small' === $header_size ) { ?>
-
-		<?php
+	<?php
+	} if ( 'small' === $header_size ) {
 	if ( has_post_thumbnail() ) {
 
 			// grab src, srcset, sizes from featured image for Retina support
@@ -69,13 +75,29 @@ $header_size = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c
 
 		</header>
 
-	<?php } ?>
+	<?php
+	}
+
+	if ( $sidebar_left ) :
+
+		get_sidebar( 'left' );
+
+	endif;
+	?>
 
 	<div class="entry-content">
 
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
+	<?php
+
+	if ( $sidebar_right ) :
+
+	get_sidebar( 'right' );
+
+	endif;
+	?>
 
 	<footer class="entry-footer">
 		<div class="entry-footer-content mar30B">

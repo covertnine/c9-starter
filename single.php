@@ -6,39 +6,13 @@
  */
 
 get_header();
-
-if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
-	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
-	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
-	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
-} else {
-	$sidebar_right = false;
-	$sidebar_left  = false;
-}
 ?>
 
 <div class="wrapper" id="single-wrapper">
 	<div class="container-narrow c9" id="content" tabindex="-1">
 		<div class="row no-gutters">
 
-			<?php if ( $sidebar_left ) : ?>
-
-				<div class="col-12 col-sm-2">
-
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
-
-				</div>
-				<div class="col-12 col-sm-10 content-area" id="primary">
-
-				<?php elseif ( $sidebar_right ) : ?>
-
-					<div class="col-12 col-sm-10 content-area" id="primary">
-
-					<?php else : ?>
-
 						<div class="col-12 content-area" id="primary">
-
-						<?php endif; ?>
 
 						<main class="site-main" id="main">
 							<?php
@@ -62,20 +36,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 						</main><!-- #main -->
 
 					</div>
-
-						<?php if ( $sidebar_right ) : ?>
-
-						<div class="col-12 col-sm-2 content-area" id="primary">
-
-							<?php dynamic_sidebar( 'right-sidebar' ); ?>
-
-						</div>
-
-					<?php endif; ?>
-					</div>
-				</div>
 		</div><!-- Row end -->
-
 	</div><!-- Wrapper end -->
 </div>
 

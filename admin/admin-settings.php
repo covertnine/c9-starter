@@ -384,21 +384,6 @@ if ( class_exists( 'WP_OSA' ) ) {
 	$wposa_obj->add_field(
 		'cortex_posts',
 		array(
-			'id'      => 'social_icons',
-			'type'    => 'radio',
-			'name'    => __( 'Social Icon Visibility', 'c9' ),
-			'desc'    => __( 'Do you want your social sharing icons to be visible', 'c9' ),
-			'options' => array(
-				'show' => 'Show',
-				'hide' => 'Hide',
-			),
-			'default' => 'show',
-		)
-	);
-	// Field: Multicheck.
-	$wposa_obj->add_field(
-		'cortex_posts',
-		array(
 			'id'      => 'blog_sidebar',
 			'type'    => 'radio',
 			'name'    => __( 'Blog Single Sidebar', 'c9' ),
