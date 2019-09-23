@@ -1963,18 +1963,18 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul:not(.wp-block-gallery),
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products),
 .entry-content ol,
 .editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts),
+.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts):not(.wc-block-grid__products),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 20px;
 	margin: 30px 0px 45px 45px;
 	list-style-type: none;
 }
 
-.entry-content ul:not(.wp-block-gallery),
-.editor-styles-wrapper ul:not(.wp-block-gallery) {
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products),
+.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products) {
 	list-style: none;
 }
 
