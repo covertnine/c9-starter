@@ -84,9 +84,13 @@ body {
 		max-width: 960px;
 	}
 
-	.single .entry-header,
+	.single .entry-big-header,
 	.single .entry-image {
 		margin: 0px auto;
+	}
+
+	.single .entry-header {
+		margin: 10px auto 0px auto;
 	}
 
 	.blog .entry-header,
@@ -1963,18 +1967,18 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products),
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
 .entry-content ol,
 .editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts):not(.wc-block-grid__products),
+.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 20px;
 	margin: 30px 0px 45px 45px;
 	list-style-type: none;
 }
 
-.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products),
-.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products) {
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
+.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio) {
 	list-style: none;
 }
 
@@ -3058,13 +3062,12 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
 	height: 50px;
-	padding-left: 14px;
 }
 
 
 .c9 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-	padding: 2px 4px;
+	padding: 2px 4px 2px 14px;
 }
 
 .c9 .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
