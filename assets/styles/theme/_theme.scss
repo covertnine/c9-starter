@@ -3058,6 +3058,7 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper input[type="text"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
 	height: 50px;
+	padding-left: 14px;
 }
 
 
@@ -3081,10 +3082,10 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
 	font-size: 1.6rem;
-	height: 30px;
+	height: 50px;
 	-webkit-appearance: none;
 	background: #fff;
-	padding-left: 4px;
+	padding-left: 14px;
 }
 
 .c9 .gform_button.button,
