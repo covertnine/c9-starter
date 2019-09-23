@@ -820,7 +820,6 @@ a:hover {
 	margin-bottom: 20px;
 }
 
-
 /****************************************************************************************/
 /* WordPress Core Widgets */
 /****************************************************************************************/
@@ -1421,6 +1420,22 @@ a:hover {
 
 .footer-widget p {
 	line-height: 1.6;
+}
+
+/****************************************************************************************/
+/* WooCommerce Specifics */
+/****************************************************************************************/
+.c9 .woocommerce form.checkout_coupon,
+.c9 .woocommerce form.login,
+.c9 .woocommerce form.register,
+.c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+	border-radius: 0px;
+}
+
+.c9 .woocommerce .form-row,
+.c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme {
+	display: block;
+	margin-bottom: 10px;
 }
 
 /********************************************************************************************************************************************************************************/
