@@ -768,11 +768,27 @@ a:hover {
 .theme-c9.woocommerce nav.woocommerce-pagination ul li span,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive nav .pagination .page-item .page-link,
-.blog nav .pagination .page-item .page-link {
+.blog nav .pagination .page-item .page-link,
+.single .navigation .nav-previous,
+.single .navigation .nav-next {
 	font-size: 1.6rem;
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
+}
+
+.single .navigation .nav-previous a,
+.single .navigation .nav-next a {
+	text-decoration: none;
+	color: $link-color;
+}
+
+.single .navigation .nav-previous .fa {
+	margin-left: -12px;
+}
+
+.single .navigation .nav-next .fa {
+	margin-right: -12px;
 }
 
 .page-search-results .navigation .page-item.active .page-link,
