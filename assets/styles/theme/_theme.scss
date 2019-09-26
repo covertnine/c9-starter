@@ -2800,16 +2800,17 @@ screen and (max-height: 300px) {
 .c9 input[type="email"],
 .c9 input[type="url"],
 .c9 input[type="password"],
+.c9 input[type="tel"],
 .c9 textarea {
 	padding: 2px 8px;
-	border: 1px solid $gray-600;
+	border: 1px solid $gray-500;
 	line-height: 1;
 	font-size: 1.8rem;
 	font-family: $font-family-base;
 }
 
 .c9 input[type="text"] {
-	height: 32px;
+	height: 50px;
 }
 
 .c9 textarea {
