@@ -97,10 +97,10 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 				<?php
 
 						if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'c9' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9' ) );
 						}
 						if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9' ) );
 						}
 						?>
 			</div><!-- .nav-links -->

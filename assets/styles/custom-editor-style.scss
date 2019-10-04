@@ -131,7 +131,16 @@ body {
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
     position: relative;
-    color: $gray-900;
+}
+
+.editor-styles-wrapper .wp-block>ol,
+.editor-styles-wrapper .wp-block[data-type="core/list"] ol,
+.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
+.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
+.editor-styles-wrapper ul {
+    padding: 0px 0px 0px 10px;
+    margin: 30px 0px 35px 45px;
+    list-style-type: none;
 }
 
 /****************************************************************************************/

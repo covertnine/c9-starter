@@ -84,9 +84,12 @@ body {
 		max-width: 960px;
 	}
 
-	.single .entry-header,
 	.single .entry-image {
 		margin: 0px auto;
+	}
+
+	.single .entry-header {
+		margin: 10px auto 0px auto;
 	}
 
 	.blog .entry-header,
@@ -764,11 +767,19 @@ a:hover {
 .theme-c9.woocommerce nav.woocommerce-pagination ul li span,
 .theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive nav .pagination .page-item .page-link,
-.blog nav .pagination .page-item .page-link {
+.blog nav .pagination .page-item .page-link,
+.single .navigation .nav-previous a,
+.single .navigation .nav-next a {
 	font-size: 1.6rem;
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
+}
+
+.single .navigation .nav-previous a,
+.single .navigation .nav-next a {
+	text-decoration: none;
+	color: $link-color;
 }
 
 .page-search-results .navigation .page-item.active .page-link,
@@ -807,7 +818,6 @@ a:hover {
 .blog nav .pagination {
 	margin-bottom: 20px;
 }
-
 
 /****************************************************************************************/
 /* WordPress Core Widgets */
@@ -1411,6 +1421,29 @@ a:hover {
 	line-height: 1.6;
 }
 
+/****************************************************************************************/
+/* WooCommerce Specifics */
+/****************************************************************************************/
+.c9 .woocommerce form.checkout_coupon,
+.c9 .woocommerce form.login,
+.c9 .woocommerce form.register,
+.c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+	border-radius: 0px;
+}
+
+.c9 .woocommerce .form-row,
+.c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.c9 .woocommerce #respond input#submit,
+.c9 .woocommerce a.button,
+.c9 .woocommerce button.button,
+.c9 .woocommerce input.button {
+	border-radius: 0px;
+}
+
 /********************************************************************************************************************************************************************************/
 /********************************************************************************************************************************************************************************/
 /***************************************** Block Specific Styles Begin */
@@ -1963,18 +1996,15 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul:not(.wp-block-gallery),
-.entry-content ol,
-.editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts),
-.editor-styles-wrapper ul {
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list),
+.entry-content ol {
 	padding: 0px 0px 0px 20px;
 	margin: 30px 0px 45px 45px;
 	list-style-type: none;
 }
 
-.entry-content ul:not(.wp-block-gallery),
-.editor-styles-wrapper ul:not(.wp-block-gallery) {
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs),
+.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs) {
 	list-style: none;
 }
 
@@ -2769,16 +2799,17 @@ screen and (max-height: 300px) {
 .c9 input[type="email"],
 .c9 input[type="url"],
 .c9 input[type="password"],
+.c9 input[type="tel"],
 .c9 textarea {
 	padding: 2px 8px;
-	border: 1px solid $gray-600;
+	border: 1px solid $gray-500;
 	line-height: 1;
 	font-size: 1.8rem;
 	font-family: $font-family-base;
 }
 
 .c9 input[type="text"] {
-	height: 32px;
+	height: 50px;
 }
 
 .c9 textarea {
@@ -3063,7 +3094,7 @@ screen and (max-height: 300px) {
 
 .c9 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-	padding: 2px 4px;
+	padding: 2px 4px 2px 14px;
 }
 
 .c9 .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
@@ -3081,10 +3112,10 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
 	font-size: 1.6rem;
-	height: 30px;
+	height: 50px;
 	-webkit-appearance: none;
 	background: #fff;
-	padding-left: 4px;
+	padding-left: 14px;
 }
 
 .c9 .gform_button.button,
