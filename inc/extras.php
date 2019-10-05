@@ -168,7 +168,7 @@ add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 
 add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
 function c9_add_search_form( $items, $args ) {
-	if ( 'primary' == $args->theme_location) {
+	if ( 'primary' == $args->theme_location ) {
 		$items .= '<li class="nav-item search">						
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
@@ -179,3 +179,25 @@ function c9_add_search_form( $items, $args ) {
 	}
 	return $items;
 }
+
+// add_filter( 'the_content', 'c9_add_lazy_loading' );
+add_filter( 'wp_get_attachment_image_attributes', 'c9_add_lazy_loading_to_attachment' );
+
+/**
+ * Add lazy-loading attribute to all attachment images
+ */
+function c9_add_lazy_loading_to_attachment( $content ) {
+
+	$content['loading'] = 'lazy';
+	return $content;
+}
+
+/**
+ * Add lazy-loading to content images
+ */
+function c9_add_lazy_loading_to_content( $content ) {
+
+	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
+	return $content;
+}
+add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
