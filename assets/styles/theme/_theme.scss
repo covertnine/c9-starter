@@ -123,36 +123,19 @@ body {
 /* Typography */
 /****************************************************************************************/
 
-.entry-content,
-.editor-styles-wrapper p,
-.editor-styles-wrapper .container p,
-.editor-styles-wrapper .container-narrow p,
-.editor-styles-wrapper .container-fluid p,
-.editor-styles-wrapper .editor-rich-text .mce-content-body p,
-.editor-styles-wrapper .wp-block-paragraph,
-.editor-styles-wrapper .wp-block-quote p,
-.editor-styles-wrapper .wp-block-file,
-.editor-styles-wrapper ul li,
-.editor-styles-wrapper ol li,
+.entry-content {
+	font-size: 10px;
+}
+
 .wp-block-pullquote,
 .wp-block-pullquote blockquote p,
-.editor-styles-wrapper .wp-block-pullquote,
-.editor-styles-wrapper .wp-block-pullquote blockquote p,
-.editor-default-block-appender textarea.editor-default-block-appender__content,
 #wrapper-footer {
-	font-size: 2rem;
 	word-wrap: break-word;
 	font-family: $font-family-base;
 }
 
 .entry-content p,
-.editor-styles-wrapper .wp-block-paragraph,
-.editor-styles-wrapper .editor-rich-text .mce-content-body p,
-.editor-styles-wrapper .editor-rich-text blockquote p,
-.editor-styles-wrapper .wp-block-quote p,
 .wp-block-pullquote.is-style-solid-color blockquote p,
-.editor-styles-wrapper p.mce-content-body,
-.editor-styles-wrapper .editor-rich-text p.mce-content-body,
 .wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
 .wp-block-pullquote blockquote>.editor-rich-text p {
 	margin-bottom: 30px;
@@ -287,6 +270,7 @@ p.wp-block-subhead,
 .editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
 	line-height: 1.1;
+	font-weight: $headings-font-weight;
 }
 
 .display-1 {
