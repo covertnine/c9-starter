@@ -1975,6 +1975,14 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
+.entry-content ol li,
+.entry-content ol li ol li,
+.entry-content p,
+.entry-content ul li,
+.entry-content ul li ul li {
+	font-size: 1.6rem;
+}
+
 .entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list),
 .entry-content ol {
 	padding: 0px 0px 0px 20px;
@@ -2020,7 +2028,7 @@ object {
 	width: 22px;
 	display: inline-block;
 	font-weight: $font-weight-bold;
-	margin: 0 7px 0 -27px;
+	margin: 0 7px 0 -31px;
 }
 
 .entry-content ol li>ol>li,
