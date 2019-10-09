@@ -9,76 +9,71 @@
 
 $the_theme = wp_get_theme();
 ?>
-<div class="footer-entirety">
-<?php get_sidebar( 'footerfull' ); ?>
-
 <?php
-if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) :
+if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 
 	include( locate_template( 'client/inc/footer.php' ) );
-else :
 
+} else {
 	require_once( get_template_directory() . '/inc/class-footer.php' );
+	$social_links = c9FooterHelpers::build_social();
+	if ( is_active_sidebar( 'footerfull' ) || get_option( 'cortex_footer' )['copyright_content'] || 'show' === get_option( 'cortex_footer' )['show_search'] || $social_links ) {
 	?>
-	<div class="footer-wrapper" id="wrapper-footer">
-
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-12">
-
-					<footer class="site-footer" id="colophon">
-
-
-						<div class="site-info">
-
-							<div class="container">
-								<div class="row text-center d-flex justify-content-around align-items-center">
-									<?php
-										$social_links = c9FooterHelpers::build_social();
+	<div class="footer-entirety">
+		<?php
+		get_sidebar( 'footerfull' );
+		?>
+		<div class="footer-wrapper" id="wrapper-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<footer class="site-footer" id="colophon">
+							<div class="site-info">
+								<div class="container">
+									<div class="row text-center d-flex justify-content-between align-items-center">
+										<?php
 										if ( $social_links ) :
 										?>
 										<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
 											<div class="footer-social text-center">
-										<?php
-										foreach ( $social_links as $link_key => $link_value ) {
-											echo $link_value;
-											}
-										?>
+											<?php
+											foreach ( $social_links as $link_key => $link_value ) {
+												echo $link_value;
+												}
+											?>
 											</div>
 										</div>
-									<?php endif; ?>
-									<?php
-										if ( get_option( 'cortex_footer' ) ) :
-											if ( get_option( 'cortex_footer' )['copyright_content'] ) :
-												echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option( 'cortex_footer' )['copyright_content'] . '</p></div>';
-												endif;
+										<?php endif; ?>
+											<?php
+											if ( get_option( 'cortex_footer' ) ) :
+												if ( get_option( 'cortex_footer' )['copyright_content'] ) :
+													echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option( 'cortex_footer' )['copyright_content'] . '</p></div>';
+													endif;
 
-											if ( get_option( 'cortex_footer' )['show_search'] === 'show' ) :
+												if ( 'show' === get_option( 'cortex_footer' )['show_search'] ) :
 												?>
 												<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
 													<div class="footer-search">
-													<?php get_search_form(); ?>
+														<?php get_search_form(); ?>
 													</div>
 												</div>
-										<?php
+												<?php
+												endif;
 											endif;
-										endif;
-										?>
-								</div><!-- .row-->
-							</div><!-- .container-->
-						</div><!-- .site-info -->
-					</footer><!-- #colophon -->
-				</div>
-				<!--col end -->
-			</div><!-- row end -->
-		</div><!-- container end -->
-	</div><!-- wrapper end -->
+											?>
+									</div><!-- .row-->
+								</div><!-- .container-->
+							</div><!-- .site-info -->
+						</footer><!-- #colophon -->
+					</div> <!--col end -->
+				</div><!-- row end -->
+			</div><!-- container end -->
+		</div><!-- wrapper end -->
+	</div><!--end .footer-entirety-->
 <?php
-endif; // end of checking for client footer.php
+	}
+}; // end of checking for client footer.php
 ?>
-</div><!--end .footer-entirety-->
 </div><!-- #page we need this extra closing tag here -->
 <div id="fullscreensearch">
 	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e( 'Close', 'c9' ); ?></span></button>
