@@ -2658,7 +2658,7 @@ screen and (max-height: 300px) {
 .wp-block-file__button,
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
-	padding: 8px 35px;
+	padding: 12px 35px;
 	width: auto;
 	height: auto;
 	background-color: $primary;
@@ -2666,8 +2666,8 @@ screen and (max-height: 300px) {
 	box-shadow: none;
 	border: none;
 	font-family: $font-family-base;
-	font-size: 1.4rem;
-	letter-spacing: .2rem;
+	font-size: 1.4em;
+	letter-spacing: .2em;
 	text-align: center;
 	text-transform: uppercase;
 	-webkit-transition: opacity .4s ease-in-out;
