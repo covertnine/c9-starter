@@ -151,7 +151,7 @@ body {
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation {
-	font-size: 1.3rem;
+	font-size: 1.3em;
 	line-height: 1;
 	color: $gray-500;
 	font-style: normal;
@@ -162,50 +162,50 @@ body {
 .entry-content .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-	font-size: 4rem
+	font-size: 4em;
 }
 
 .entry-content h2,
 .entry-content .h2,
 .wp-block-heading h2 {
-	font-size: 3.6rem
+	font-size: 3.6em;
 }
 
 .entry-content h3,
 .entry-content .h3,
 .wp-block-heading h3 {
-	font-size: 3rem
+	font-size: 3em;
 }
 
 .entry-content h4,
 .entry-content .h4,
 .wp-block-heading h4 {
-	font-size: 2.8rem
+	font-size: 2.8em;
 }
 
 .entry-content h5,
 .entry-content .h5,
 .wp-block-heading h5 {
-	font-size: 2rem
+	font-size: 2em;
 }
 
 .entry-content h6,
 .entry-content .h6,
 .wp-block-heading h6 {
-	font-size: 1.4rem
+	font-size: 1.4em;
 }
 
 .entry-header h2 {
-	font-size: 3rem;
+	font-size: 3em;
 }
 
 .entry-meta,
 .entry-meta a {
 	text-transform: uppercase;
-	letter-spacing: .05rem;
+	letter-spacing: .05em;
 	line-height: 1.2;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
+	font-size: 1.2em;
+	margin-bottom: 1em;
 	color: $gray-500;
 }
 
@@ -220,7 +220,7 @@ body {
 }
 
 .has-small-font-size {
-	font-size: 1rem !important;
+	font-size: 1em !important;
 }
 
 .has-regular-font-size,
@@ -229,16 +229,16 @@ body {
 }
 
 .has-medium-font-size {
-	font-size: 3rem !important;
+	font-size: 3em !important;
 }
 
 .has-large-font-size {
-	font-size: 4rem !important;
+	font-size: 4em !important;
 }
 
 .has-larger-font-size,
 .has-huge-font-size {
-	font-size: 7rem !important;
+	font-size: 7em !important;
 }
 
 .entry-content p[class*="font-size"] {
@@ -269,28 +269,28 @@ p.wp-block-subhead,
 }
 
 .display-1 {
-	font-size: 8rem;
+	font-size: 8em;
 }
 
 .display-2 {
-	font-size: 7.3rem;
+	font-size: 7.3em;
 }
 
 .display-3,
 .c9-txl {
-	font-size: 6.5rem;
+	font-size: 6.5em;
 }
 
 .display-4 {
-	font-size: 5.8rem;
+	font-size: 5.8em;
 }
 
 .display-5 {
-	font-size: 5rem;
+	font-size: 5em;
 }
 
 .display-6 {
-	font-size: 4.3rem;
+	font-size: 4.3em;
 }
 
 /* links in content */
@@ -311,11 +311,11 @@ a:hover {
 	}
 
 	.has-large-font-size {
-		font-size: 3rem !important;
+		font-size: 3em !important;
 	}
 
 	.has-huge-font-size {
-		font-size: 4rem !important;
+		font-size: 4em !important;
 	}
 
 	.has-larger-font-size,
@@ -325,12 +325,12 @@ a:hover {
 
 	.single .entry-header h1 {
 		line-height: 1.2;
-		font-size: 3rem;
+		font-size: 3em;
 	}
 
 	.entry-content p {
 		line-height: 1.8;
-		font-size: 1.6rem;
+		font-size: 1.6em;
 	}
 
 }
@@ -495,8 +495,8 @@ a:hover {
 
 .wp-caption-text {
 	text-align: center;
-	font-size: 1.1rem;
-	line-height: 1.3rem;
+	font-size: 1.1em;
+	line-height: 1.3em;
 	margin-top: 0;
 	text-transform: uppercase;
 	font-weight: $font-weight-bold;
@@ -563,7 +563,7 @@ a:hover {
 .header-navbar .navbar .nav .search {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
-	font-size: 1.4rem;
+	font-size: 1.4em;
 	text-decoration: none;
 	line-height: 1.3;
 }
@@ -600,7 +600,7 @@ a:hover {
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
 	margin: 0px;
-	font-size: 2rem;
+	font-size: 2em;
 	line-height: 2;
 }
 
@@ -676,7 +676,7 @@ a:hover {
 	}
 
 	.header-navbar .nav .nav-item .nav-link {
-		font-size: 2rem;
+		font-size: 2em;
 	}
 
 	.header-navbar .nav .nav-item .dropdown-menu {
@@ -750,7 +750,7 @@ a:hover {
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
 .single .navigation .nav-next a {
-	font-size: 1.6rem;
+	font-size: 1.6em;
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
@@ -829,14 +829,14 @@ a:hover {
 .widget_text ul li,
 .widget_nav_menu ul li,
 .widget ul li {
-	font-size: 1.4rem;
+	font-size: 1.4em;
 	margin: 10px 0;
 	padding-left: 0px;
 }
 
 .widget {
 	margin: 0 0 5em;
-	font-size: 1.4rem;
+	font-size: 1.4em;
 }
 
 .widget:last-child {
@@ -847,8 +847,8 @@ a:hover {
 .widget h2,
 .widget h3 {
 	font-weight: $font-weight-bold;
-	letter-spacing: .08rem;
-	font-size: 2rem;
+	letter-spacing: .08em;
+	font-size: 2em;
 }
 
 .widget select {
@@ -881,28 +881,28 @@ a:hover {
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
 	.archive h3.entry-title {
-		font-size: 1.8rem;
+		font-size: 1.8em;
 	}
 
 }
 
 @media only screen and (min-width: 667px) {
 	.archive h3.entry-title {
-		font-size: 1.8rem;
+		font-size: 1.8em;
 	}
 
 }
 
 @media only screen and (min-width: 768px) {
 	.archive h3.entry-title {
-		font-size: 1.4rem;
+		font-size: 1.4em;
 	}
 
 }
 
 @media only screen and (min-width: 992px) {
 	.archive h3.entry-title {
-		font-size: 1.4rem;
+		font-size: 1.4em;
 	}
 
 }
@@ -916,7 +916,7 @@ a:hover {
 .site-main .post-navigation {
 	margin: 3rem 0;
 	overflow: hidden;
-	font-size: 1.4rem;
+	font-size: 1.4em;
 	line-height: 1.2;
 }
 
@@ -992,7 +992,7 @@ a:hover {
 	line-height: 1;
 	z-index: 1;
 	font-weight: $font-weight-base;
-	letter-spacing: .2rem;
+	letter-spacing: .2em;
 	text-transform: uppercase;
 }
 
@@ -1034,12 +1034,12 @@ a:hover {
 }
 
 .comment-meta a {
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .comment-awaiting-moderation {
 	display: inline;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 .comment-author .fn,
@@ -1096,20 +1096,20 @@ a:hover {
 
 	.comment-metadata a,
 	.comment-reply-link {
-		font-size: 1.1rem;
+		font-size: 1.1em;
 		line-height: 1;
-		letter-spacing: .1rem;
+		letter-spacing: .1em;
 	}
 
 	.comment-author .fn .url,
 	.comment-author .fn {
-		font-size: 1.6rem;
+		font-size: 1.6em;
 	}
 
 	.comment-content p {
 		margin-left: 95px;
 		margin-top: 0px;
-		font-size: 1.4rem;
+		font-size: 1.4em;
 		line-height: 1.4;
 	}
 
@@ -1124,8 +1124,8 @@ a:hover {
 	.comment-author .fn,
 	.comment-author .fn .url {
 		font-weight: $font-weight-bold;
-		letter-spacing: .05rem;
-		font-size: 1.4rem;
+		letter-spacing: .05em;
+		font-size: 1.4em;
 	}
 }
 
@@ -1286,7 +1286,7 @@ a:hover {
 
 .entry-big-header .entry-title-box .entry-title {
 	color: #fff;
-	font-size: 5rem;
+	font-size: 5em;
 }
 
 .entry-big-header .entry-title-box .entry-meta,
@@ -1294,7 +1294,7 @@ a:hover {
 .entry-big-header .entry-title-box .entry-meta .posted-on a,
 .entry-big-header .entry-title-box .entry-meta .byline,
 .entry-big-header .entry-title-box .entry-meta .author a {
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	line-height: 1;
 	text-decoration: none;
 }
@@ -1351,15 +1351,15 @@ a:hover {
 }
 
 #wrapper-footer .site-footer {
-	font-size: 1.4rem;
-	letter-spacing: .061rem;
+	font-size: 1.4em;
+	letter-spacing: .061em;
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
 }
 
 #wrapper-footer .site-footer .footer-copyright-wrapper .copyright {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 #wrapper-footer .site-footer p {
@@ -1378,7 +1378,7 @@ a:hover {
 }
 
 #wrapper-footer .site-footer .social-wrapper {
-	font-size: 1.8rem;
+	font-size: 1.8em;
 }
 
 #wrapper-footer p:only-of-type {
@@ -1394,7 +1394,7 @@ a:hover {
 .footer-widget {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 
 .footer-widget p {
@@ -1508,7 +1508,6 @@ img {
 	.entry-content .container .wp-block-image img,
 	.wp-block-image .alignright,
 	.wp-block-image .alignleft {
-		width: auto;
 		max-width: 100%;
 		height: auto;
 	}
@@ -1532,7 +1531,7 @@ table tr th {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-weight: $font-weight-bold;
-	letter-spacing: .2rem;
+	letter-spacing: .2em;
 	text-transform: uppercase;
 }
 
@@ -1772,7 +1771,7 @@ object {
 	.wp-block-table tr td th,
 	.wp-block-table tr td {
 		padding: 4px;
-		font-size: 1rem;
+		font-size: 1em;
 	}
 
 	.page-template-default .entry-content>.wp-block-table.alignfull {
@@ -1797,7 +1796,7 @@ object {
 	.wp-block-table tr td th,
 	.wp-block-table tr td {
 		padding: 4px;
-		font-size: 1.4rem;
+		font-size: 1.4em;
 	}
 
 }
@@ -1805,7 +1804,7 @@ object {
 @media only screen and (min-width: 768px) {
 
 	.wp-block-table tr td {
-		font-size: 2rem;
+		font-size: 2em;
 		word-wrap: break-word;
 		font-family: $font-family-base;
 	}
@@ -1834,18 +1833,19 @@ object {
 	position: relative;
 	margin: 20px auto 30px auto;
 	padding: 0 30px;
+	margin-left: 15px;
 	border-left: 3px solid $primary;
 }
 
 .editor-styles-wrapper blockquote:before,
 .entry-content blockquote:before {
 	content: "\201C";
-	letter-spacing: .2rem;
+	letter-spacing: .2em;
 	text-transform: uppercase;
 	position: absolute;
 	top: -30px;
 	left: -40px;
-	font-size: 7rem;
+	font-size: 7em;
 	font-weight: $font-weight-normal;
 	font-family: $headings-font-family;
 	color: $primary;
@@ -1909,7 +1909,7 @@ object {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
 	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
-		font-size: 2rem;
+		font-size: 2em;
 		line-height: 2;
 	}
 }
@@ -1918,7 +1918,7 @@ object {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
 	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
-		font-size: 2.6rem;
+		font-size: 2.6em;
 		line-height: 2;
 	}
 
@@ -1933,19 +1933,19 @@ object {
 	}
 
 	.entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
-		font-size: 1.6rem;
+		font-size: 1.6em;
 		line-height: 1.9;
 	}
 
 	.editor-styles-wrapper blockquote:before,
 	.entry-content blockquote:before {
 		content: "\201C";
-		letter-spacing: .2rem;
+		letter-spacing: .2em;
 		text-transform: uppercase;
 		position: absolute;
 		top: -20px;
 		left: -35px;
-		font-size: 7rem;
+		font-size: 7em;
 		font-weight: $font-weight-normal;
 		font-family: $headings-font-family;
 		color: $primary;
@@ -1966,7 +1966,7 @@ object {
 	.editor-styles-wrapper blockquote:before,
 	.entry-content blockquote:before {
 		left: -30px;
-		font-size: 5.5rem;
+		font-size: 5.5em;
 		top: -10px;
 	}
 
@@ -1980,7 +1980,7 @@ object {
 .entry-content p,
 .entry-content ul li,
 .entry-content ul li ul li {
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 
 .entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list),
@@ -2061,7 +2061,7 @@ object {
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before {
 	font-family: 'FontAwesome';
-	font-size: 1rem;
+	font-size: 1em;
 	content: "\f111";
 	position: absolute;
 	top: 6px;
@@ -2240,7 +2240,7 @@ button::-moz-focus-inner {
 	filter: alpha(opacity=65);
 	padding: 0 0 18px 10px;
 	color: $light;
-	font-size: 3rem;
+	font-size: 3em;
 	background-color: transparent;
 }
 
@@ -2401,7 +2401,7 @@ img.mfp-img {
 	padding-right: 36px;
 	color: $light;
 	text-transform: uppercase;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .mfp-image-holder .mfp-content {
@@ -2728,7 +2728,7 @@ screen and (max-height: 300px) {
 	padding: 8px;
 	color: $dark;
 	font: normal 1.4rem/1.1 $font-family-base;
-	letter-spacing: .057rem;
+	letter-spacing: .057em;
 	max-width: 85px;
 }
 
@@ -2738,9 +2738,9 @@ screen and (max-height: 300px) {
 
 #mc_embed_signup input[type="submit"] {
 	background-color: $secondary;
-	padding: 1rem 1.4rem .8rem 1.7rem;
+	padding: 1rem 1.4rem .8rem 1.7em;
 	;
-	font-size: 1.4rem;
+	font-size: 1.4em;
 	line-height: 1;
 	border-radius: 0;
 	display: inline-block;
@@ -2791,7 +2791,7 @@ screen and (max-height: 300px) {
 	padding: 2px 8px;
 	border: 1px solid $gray-500;
 	line-height: 1;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	font-family: $font-family-base;
 }
 
@@ -2808,9 +2808,9 @@ screen and (max-height: 300px) {
 }
 
 .c9 form label {
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	font-weight: 500;
-	letter-spacing: .00094rem;
+	letter-spacing: .00094em;
 	line-height: 1;
 	margin: 0px;
 }
@@ -2823,12 +2823,12 @@ screen and (max-height: 300px) {
 }
 
 .comment-respond h3 {
-	font-size: 2.6rem;
+	font-size: 2.6em;
 }
 
 .comment-notes,
 .form-allowed-tags {
-	font-size: 1rem;
+	font-size: 1em;
 	line-height: 1.2em;
 
 }
@@ -2880,7 +2880,7 @@ screen and (max-height: 300px) {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	width: 80%;
-	font-size: 2.8rem;
+	font-size: 2.8em;
 	line-height: 1;
 	text-align: left;
 	margin: -51px auto 0px auto;
@@ -2910,7 +2910,7 @@ screen and (max-height: 300px) {
 	right: 35px;
 	opacity: 1;
 	padding: 12px 15px;
-	font-size: 2.7rem;
+	font-size: 2.7em;
 	line-height: 1;
 	z-index: 1055;
 	color: $light;
@@ -2932,7 +2932,7 @@ screen and (max-height: 300px) {
 	display: inline;
 	vertical-align: top;
 	padding: 2px 8px;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	line-height: 1;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
@@ -2950,7 +2950,7 @@ screen and (max-height: 300px) {
 	width: 100%;
 	line-height: 1;
 	margin-top: 5px;
-	font-size: 1rem;
+	font-size: 1em;
 	height: 32px;
 	border-radius: 0px;
 }
@@ -2958,7 +2958,7 @@ screen and (max-height: 300px) {
 .footer-search-wrapper input[type="submit"] {
 	padding: 6px 8px;
 	line-height: 1;
-	font-size: 1rem;
+	font-size: 1em;
 	width: auto;
 	min-width: 60px;
 	height: 28px;
@@ -3000,10 +3000,10 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper legend.gfield_label {
 	font-family: $font-family-base;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	line-height: 1.1;
 	font-weight: 500;
-	letter-spacing: .00094rem;
+	letter-spacing: .00094em;
 	color: $gray-700;
 	margin-top: 8px;
 }
@@ -3050,7 +3050,7 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute {
 	line-height: 1.1;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	margin-top: 1px;
 }
 
@@ -3068,7 +3068,7 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="tel"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper textarea {
 	line-height: 1;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	font-family: $font-family-base;
 	border: 1px solid rgba(151, 151, 151, 1);
 }
@@ -3098,7 +3098,7 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
-	font-size: 1.6rem;
+	font-size: 1.6em;
 	height: 50px;
 	-webkit-appearance: none;
 	background: #fff;
@@ -3111,10 +3111,10 @@ screen and (max-height: 300px) {
 	width: auto;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: .2rem;
+	letter-spacing: .2em;
 	font-family: $font-family-base;
-	font-size: 1.2rem;
-	line-height: 1.2rem;
+	font-size: 1.2em;
+	line-height: 1.2em;
 	font-weight: 400;
 	border-radius: 34px;
 	background-color: $dark;
@@ -3149,7 +3149,7 @@ screen and (max-height: 300px) {
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type=submit],
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type=submit] {
-		font-size: 1.2rem;
+		font-size: 1.2em;
 	}
 
 	.c9 .gform_wrapper .gform_footer input.button:hover,
@@ -3179,7 +3179,7 @@ screen and (max-height: 300px) {
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
 	.c9 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
-		font-size: 1.2rem;
+		font-size: 1.2em;
 	}
 }
 
@@ -3187,7 +3187,7 @@ screen and (max-height: 300px) {
 
 	.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
 	.wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
-		font-size: 1.8rem;
+		font-size: 1.8em;
 	}
 }
 
@@ -3205,7 +3205,7 @@ screen and (max-height: 300px) {
 
 .entry-content .nav.nav-tabs {
 	line-height: 1;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	border-bottom: none;
 	margin: 0px;
 }
@@ -3229,7 +3229,7 @@ screen and (max-height: 300px) {
 	font-size: 15px;
 	padding: 13px 35px;
 	font-weight: bold;
-	letter-spacing: .09rem;
+	letter-spacing: .09em;
 }
 
 .c9-horizontal-tabs .nav-tabs .nav-link.active {
