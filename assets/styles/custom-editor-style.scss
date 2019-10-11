@@ -166,6 +166,27 @@
     list-style-type: none;
 }
 
+.editor-styles-wrapper .wp-block-search .wp-block-search__label {
+    margin-bottom: 8px;
+    font-size: 1.8em;
+}
+
+.editor-styles-wrapper .wp-block-search .wp-block-search__button {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: $primary;
+    border-radius: 0px;
+    padding: 2px 25px;
+    color: $light;
+}
+
+/* spacers */
+.editor-styles-wrapper [data-type="core/spacer"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /****************************************************************************************/
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/

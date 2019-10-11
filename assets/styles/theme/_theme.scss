@@ -1573,6 +1573,11 @@ object {
 	text-decoration: underline;
 }
 
+.c9 .wp-block-search .wp-block-search__label {
+	margin-bottom: 8px;
+	font-size: 1.8em;
+}
+
 /****************************************************************************************/
 /***************************** WordPress Gutenberg Column Blocks
 /****************************************************************************************/
@@ -2667,7 +2672,7 @@ screen and (max-height: 300px) {
 	border: none;
 	font-family: $font-family-base;
 	font-size: 1.4em;
-	letter-spacing: .2em;
+	letter-spacing: 1px;
 	text-align: center;
 	text-transform: uppercase;
 	-webkit-transition: opacity .4s ease-in-out;
@@ -2924,11 +2929,12 @@ screen and (max-height: 300px) {
 	opacity: .4;
 }
 
-/**************************** Wordpress Search Form **********************************/
+/**************************** Wordpress Search Forms **********************************/
 .search-form .search-field,
 .widget-area .widget_search .search-field,
 .widget-area .widget_search #s,
-.footer-search-wrapper .field {
+.footer-search-wrapper .field,
+.wp-block-search .wp-block-search__input {
 	display: inline;
 	vertical-align: top;
 	padding: 2px 8px;
@@ -2938,6 +2944,9 @@ screen and (max-height: 300px) {
 	border-bottom-right-radius: 0px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
+	color: #495057;
+	background-color: $light;
+	border: 1px solid #ced4da;
 }
 
 .widget-area .widget_search label {
@@ -2958,7 +2967,8 @@ screen and (max-height: 300px) {
 .footer-search-wrapper input[type="submit"] {
 	padding: 6px 8px;
 	line-height: 1;
-	font-size: 1em;
+	font-size: 16px;
+	font-weight: 500;
 	width: auto;
 	min-width: 60px;
 	height: 28px;
