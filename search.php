@@ -24,7 +24,7 @@ get_header();
 						<div class="container">
 							<div class="entry-search-result">
 
-								<h1 class="entry-title text-center">
+								<h1 class="entry-title text-center mar30T">
 									<?php
 									printf(
 											/* translators:*/

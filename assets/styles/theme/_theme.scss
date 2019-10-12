@@ -199,12 +199,15 @@ body {
 	font-size: 3em;
 }
 
+.entry-meta {
+	font-size: 1.2em;
+}
+
 .entry-meta,
 .entry-meta a {
 	text-transform: uppercase;
 	letter-spacing: .05em;
 	line-height: 1.2;
-	font-size: 1.2em;
 	margin-bottom: 1em;
 	color: $gray-500;
 }
