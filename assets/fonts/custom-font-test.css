@@ -53,7 +53,7 @@
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
 .single .navigation .nav-next a {
-  font-family: "PT Sans";
+  font-family: "heading-font";
 }
 
 p.wp-block-subhead,
@@ -71,7 +71,7 @@ p.wp-block-subhead,
 .editor-styles-wrapper .c9-heading h4.subhead-h4,
 .editor-styles-wrapper .c9-heading h5.subhead-h5,
 .editor-styles-wrapper .c9-heading h6.subhead-h6 {
-  font-family: "Oswald";
+  font-family: "subheading-font";
 }
 
 body,
@@ -122,5 +122,5 @@ p.wp-block-subhead,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
 .editor-default-block-appender textarea.editor-default-block-appender__content {
-  font-family: "Open Sans";
+  font-family: "body-font";
 }
