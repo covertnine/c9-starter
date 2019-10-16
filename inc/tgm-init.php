@@ -93,5 +93,5 @@ function c9_register_required_plugins() {
 
 	);
 
-	tgmpa( $plugins, $config );
+	tgmpa( $plugins );
 }

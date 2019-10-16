@@ -13,26 +13,7 @@ class C9FontStyles {
 		$headings_font   = "'" . $font_array['heading_font'] . "'";
 		$subheading_font = "'" . $font_array['subheading_font'] . "'";
 		$body_font       = "'" . $font_array['body_font'] . "'";
-		// xdebug_break();
 		?>
-		.h1,
-		.h2,
-		.h3,
-		h1,
-		h2,
-		h3 {
-		margin-bottom: 1.5rem;
-		}
-
-		.h4,
-		.h5,
-		.h6,
-		h4,
-		h5,
-		h6 {
-		margin-bottom: 0.25rem;
-		}
-
 		.c9-site-title,
 		.c9 .h1,
 		.c9 .h2,
@@ -60,52 +41,14 @@ class C9FontStyles {
 		.editor-styles-wrapper h6
 		{
 		font-family: <?php echo $headings_font; ?>;
-		font-weight: 700;
 		}
 
-		.navbar
-		#mega-menu-wrap-primary
-		#mega-menu-primary
-		> li.mega-menu-item
-		> a.mega-menu-link,
+		.navbar,
 		.navbar ul li .dropdown-item, .navbar ul li a {
 		font-family: <?php echo $headings_font; ?>;
-		color: #fff;
-		letter-spacing: 0.056rem;
-		font-size: 1.4rem;
-		text-transform: uppercase;
-		font-weight: 400;
-		}
-
-		.navbar.navbar-small
-		#mega-menu-wrap-primary
-		#mega-menu-primary
-		> li.mega-menu-item
-		> a.mega-menu-link {
-		text-shadow: none;
-		color: #000;
-		}
-
-		@media only screen and (max-width: 991px) and (min-width: 1px) {
-		.mega-menu-primary-mobile-open
-		.navbar.fixed-top
-		#mega-menu-wrap-primary
-		#mega-menu-primary {
-		top: 45px;
-		}
 		}
 
 		@media only screen and (max-width: 768px) {
-		.navbar
-		#mega-menu-wrap-primary
-		#mega-menu-primary
-		> li.mega-menu-item
-		> a.mega-menu-link {
-		color: #000;
-		text-shadow: none;
-		}
-		}
-
 		.c9-h,
 		.c9-h.h,
 		.c9-txl,
@@ -116,7 +59,6 @@ class C9FontStyles {
 		.display-5,
 		.display-6 {
 		font-family: <?php echo $headings_font; ?>;
-		line-height: 1.1;
 		}
 
 		p.wp-block-subhead,
@@ -126,11 +68,6 @@ class C9FontStyles {
 		.c9 .c9-sh,
 		.c9 .text-muted {
 		font-family: <?php echo $body_font; ?>;
-		color: #fec50a;
-		}
-
-		.text-muted {
-		color: #fec50a !important;
 		}
 
 		.editor-styles-wrapper p.wp-block-subhead,
@@ -143,7 +80,6 @@ class C9FontStyles {
 		.editor-styles-wrapper .c9-heading h5.subhead-h5,
 		.editor-styles-wrapper .c9-heading h6.subhead-h6 {
 		font-family: <?php echo $body_font; ?>;
-		font-weight: 700;
 		}
 
 		.entry-content,
@@ -157,58 +93,7 @@ class C9FontStyles {
 		.wp-block-pullquote blockquote p,
 		.editor-default-block-appender textarea.editor-default-block-appender__content,
 		#wrapper-footer {
-		font-size: 2rem;
-		word-wrap: break-word;
 		font-family: <?php echo $body_font; ?>;
-		}
-
-		.entry-content h1,
-		.entry-content .h1,
-		.wp-block-heading h1,
-		.entry-header h1,
-		.entry-content h1.c9-txl {
-		font-size: 7.9rem;
-		line-height: 0.9;
-		}
-
-		.entry-content h2,
-		.entry-content .h2,
-		.wp-block-heading h2 {
-		font-size: 5.6rem;
-		line-height: 0.9;
-		}
-
-		.entry-content h3,
-		.entry-content .h3,
-		.wp-block-heading h3 {
-		font-size: 4rem;
-		line-height: 0.9;
-		}
-
-		.entry-content h4,
-		.entry-content .h4,
-		.wp-block-heading h4 {
-		font-size: 2.8rem;
-		line-height: 0.9;
-		}
-
-		.entry-content h5,
-		.entry-content .h5,
-		.wp-block-heading h5 {
-		font-size: 2rem;
-		line-height: 0.9;
-		}
-
-		.entry-content h6,
-		.entry-content .h6,
-		.wp-block-heading h6 {
-		font-size: 1.4rem;
-		line-height: 0.9;
-		}
-
-		.entry-header h2 {
-		font-size: 3rem;
-		line-height: 0.9;
 		}
 		<?php
 	}
