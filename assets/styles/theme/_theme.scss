@@ -199,14 +199,17 @@ body {
 	font-size: 3em;
 }
 
-.entry-meta,
-.entry-meta a {
+.entry-meta {
 	text-transform: uppercase;
 	letter-spacing: .05em;
 	line-height: 1.2;
-	font-size: 1.2em;
 	margin-bottom: 1em;
 	color: $gray-500;
+	font-size: 1.2em;
+}
+
+.entry-meta a {
+	color: $gray-900;
 }
 
 .has-small-font-size,
@@ -298,6 +301,7 @@ a {
 	-webkit-transition: .3s color;
 	transition: .3s color;
 	text-decoration: underline;
+	color: $primary;
 }
 
 a:hover {
@@ -1351,7 +1355,6 @@ a:hover {
 }
 
 #wrapper-footer .site-footer {
-	font-size: 1.4em;
 	letter-spacing: .061em;
 	line-height: 1.6;
 	padding: 45px 0px;
@@ -1371,6 +1374,10 @@ a:hover {
 	text-decoration: none;
 	margin-right: 6px;
 	margin-left: 6px;
+}
+
+#wrapper-footer .footer-social a {
+	font-size: 1.4em;
 }
 
 #wrapper-footer .site-footer a:hover {
@@ -1394,7 +1401,6 @@ a:hover {
 .footer-widget {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	font-size: 1.6em;
 }
 
 .footer-widget p {
@@ -2779,11 +2785,13 @@ screen and (max-height: 300px) {
 	padding: 2px 8px;
 	border: 1px solid $gray-500;
 	line-height: 1;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	font-family: $font-family-base;
 }
 
-.c9 input[type="text"] {
+.c9 input[type="text"],
+.c9 input[type="email"],
+.c9 input[type="url"] {
 	height: 50px;
 }
 
@@ -2796,11 +2804,11 @@ screen and (max-height: 300px) {
 }
 
 .c9 form label {
-	font-size: 1.8em;
 	font-weight: 500;
 	letter-spacing: .00094em;
 	line-height: 1;
 	margin: 0px;
+	font-size: 1.4em;
 }
 
 /**************************** WordPress Comment Form **********************************/
@@ -2816,8 +2824,8 @@ screen and (max-height: 300px) {
 
 .comment-notes,
 .form-allowed-tags {
-	font-size: 1em;
-	line-height: 1.2em;
+	font-size: 1.4em;
+	line-height: 1.2;
 
 }
 

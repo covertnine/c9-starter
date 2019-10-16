@@ -8,12 +8,13 @@
  */
 
 ?>
-
+			<div class="container">
+				<div class="row no-gutter">
 <section class="no-results not-found">
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'c9' ); ?></h1>
+		<h1 class="page-title mar30T"><?php esc_html_e( 'Nothing Found', 'c9' ); ?></h1>
 
 	</header><!-- .page-header -->
 
@@ -55,3 +56,5 @@
 	</div><!-- .page-content -->
 
 </section><!-- .no-results -->
+	</div><!--container -->
+	</div><!--.row-->
