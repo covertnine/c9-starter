@@ -62,7 +62,7 @@ if ( ! class_exists( 'WP_OSA' ) ) :
 
 			wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
 
-			wp_enqueue_script( 'admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', array( 'jquery' ), '', true );
+			wp_enqueue_script( 'admin-js', get_template_directory() . '/assets/scripts/admin.js', array( 'jquery' ), '', true );
 
 			// Color Picker.
 			wp_enqueue_script(
