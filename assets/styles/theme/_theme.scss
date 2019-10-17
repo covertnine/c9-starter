@@ -563,13 +563,16 @@ a:hover {
 }
 
 .header-navbar .navbar .nav .nav-item .nav-link,
-.header-navbar .navbar .nav .nav-item .dropdown-item,
-.header-navbar .navbar .nav .search {
+.header-navbar .navbar .nav .nav-item .dropdown-item {
 	font-family: $headings-font-family;
 	font-weight: $font-weight-bold;
 	font-size: 1.4em;
 	text-decoration: none;
 	line-height: 1.3;
+}
+
+.header-navbar .navbar .nav .search .nav-link .fa-search {
+	font-size: 1.2em;
 }
 
 .header-navbar .nav .nav-item .dropdown-menu {
