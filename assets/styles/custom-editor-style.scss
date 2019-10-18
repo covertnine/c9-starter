@@ -19,6 +19,11 @@
     margin: 0px auto;
 }
 
+/* blog posts are max width of 900px on frontend so minimize it in backend too */
+body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
+    max-width: 930px;
+}
+
 /****************************************************************************************/
 /***************************** font changes for editor only (frontend color is on body)
 /****************************************************************************************/
