@@ -70,15 +70,21 @@ function c9_register_required_plugins() {
 			'name'     => 'C9 Blocks',
 			'slug'     => 'c9-blocks',
 			'source'   => 'https://github.com/covertnine/c9-blocks/archive/master.zip',
-			'required' => false,
+			'required' => true,
 		),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
 			'name'     => 'The Seo Framework',
 			'slug'     => 'autodescription',
 			'required' => false,
 		),
+
+		array(
+			'name'     => 'Autoptimize',
+			'slug'     => 'autoptimize',
+			'required' => false,
+		),
+
 		array(
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
@@ -93,5 +99,9 @@ function c9_register_required_plugins() {
 
 	);
 
-	tgmpa( $plugins );
+	if ( ! isset( $config ) ) {
+		$config = [];
+	}
+
+	tgmpa( $plugins, $config );
 }

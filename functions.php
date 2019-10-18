@@ -63,7 +63,7 @@ require get_template_directory() . '/inc/editor.php';
 /**
  * Notify and download require plugins
  */
-require get_template_directory() . '/inc/tgm-init.php';
+require get_template_directory() . '/admin/tgm-init.php';
 
 /**
  * Load Client-Specific Hooks
