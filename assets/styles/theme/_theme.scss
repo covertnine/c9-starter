@@ -130,13 +130,29 @@ body {
 }
 
 .entry-content p,
-.c9 dl,
-.wp-block-pullquote.is-style-solid-color blockquote p,
-.wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
-.wp-block-pullquote blockquote>.editor-rich-text p {
+.c9 dl {
 	margin-bottom: 30px;
 	line-height: 1.7;
 	font-size: 1.6em;
+}
+
+.editor-styles-wrapper .wp-block-pullquote p,
+.c9 .wp-block-pullquote p,
+.wp-block-pullquote.is-style-solid-color blockquote p,
+.wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty=true]::before,
+.wp-block-pullquote blockquote>.editor-rich-text p,
+.wp-block-pullquote blockquote p:only-of-type,
+.wp-block-pullquote blockquote p:last-child {
+	font-size: 1.6em;
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+
+.editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
+.c9 .wp-block-pullquote .wp-block-pullquote__citation,
+.c9 .wp-block-pullquote cite {
+	color: $gray-500;
+	font-size: 15px;
 }
 
 .entry-content p:last-child,
@@ -152,11 +168,10 @@ body {
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation {
-	font-size: 1.3em;
 	line-height: 1;
-	color: $gray-500;
 	font-style: normal;
 }
+
 
 .c9-site-title,
 .entry-content h1,
