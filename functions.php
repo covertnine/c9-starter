@@ -88,3 +88,9 @@ function c9_client_folder() {
 }
 
 require get_template_directory() . '/admin/admin-settings.php';
+
+
+/**
+ * Functions for managing the information your blog puts out via the WP-Api.
+ */
+require get_template_directory() . '/inc/wpapi.php';
