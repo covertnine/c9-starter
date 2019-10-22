@@ -60,6 +60,10 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
     font-size: 16px;
 }
 
+.editor-styles-wrapper a:not(.wp-block-button__link) {
+    text-decoration: underline;
+}
+
 body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-table,
 .editor-styles-wrapper .wp-block-file,
