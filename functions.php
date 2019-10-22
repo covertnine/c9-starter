@@ -63,7 +63,7 @@ require get_template_directory() . '/inc/editor.php';
 /**
  * Notify and download require plugins
  */
-require get_template_directory() . '/inc/tgm-init.php';
+require get_template_directory() . '/admin/tgm-init.php';
 
 /**
  * Load Client-Specific Hooks
@@ -88,3 +88,9 @@ function c9_client_folder() {
 }
 
 require get_template_directory() . '/admin/admin-settings.php';
+
+
+/**
+ * Functions for managing the information your blog puts out via the WP-Api.
+ */
+require get_template_directory() . '/inc/wpapi.php';
