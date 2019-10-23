@@ -40,7 +40,8 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li,
 .editor-styles-wrapper .wp-block-pullquote,
-.editor-styles-wrapper .wp-block-pullquote blockquote p {
+.editor-styles-wrapper .wp-block-pullquote blockquote p,
+.block-editor-format-toolbar__link-container-value {
     word-wrap: break-word;
     font-family: $font-family-base;
     font-size: 16px;
