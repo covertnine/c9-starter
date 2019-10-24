@@ -2745,8 +2745,8 @@ screen and (max-height: 300px) {
 	opacity: .4;
 }
 
-button:focus,
-:focus {
+.site button:focus,
+.site :focus {
 	-webkit-focus-ring-color: $dark;
 	outline-color: $dark;
 	outline-width: 1px;
