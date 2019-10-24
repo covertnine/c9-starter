@@ -86,7 +86,7 @@ jQuery(document).ready(function() {
     ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     $(
-      ".cortex-popup-video,a.wp-block-button__link[href*='youtube.com']"
+      ".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com']"
     ).magnificPopup({
       disableOn: 700,
       type: "iframe",
