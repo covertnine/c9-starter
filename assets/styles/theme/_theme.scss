@@ -2021,12 +2021,10 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ol li,
-.entry-content ol li ol li,
+.entry-content ol,
 .entry-content p,
-.entry-content ul li,
-.entry-content ul li ul li {
-	font-size: 1.6em;
+.entry-content ul {
+	font-size: 16px;
 }
 
 .entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list),
@@ -2041,8 +2039,8 @@ object {
 	list-style-type: none;
 }
 
-.entry-content ul:not(.wp-block-gallery)>li>ul,
-.entry-content ol:not(.wp-block-gallery)>li>ol,
+.entry-content ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list)>li>ul,
+.entry-content ol:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list)>li>ol,
 .editor-styles-wrapper ul:not(.wp-block-gallery)>li>ul,
 .editor-styles-wrapper ol:not(.wp-block-gallery)>li>ol {
 	margin: 0px 0px 0px 15px;
