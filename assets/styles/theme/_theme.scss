@@ -2047,11 +2047,11 @@ object {
 }
 
 .entry-content ol,
-.editor-styles-wrapper ol {
+.editor-styles-wrapper .block-library-list ol {
 	list-style-type: none;
 	padding-left: 0px;
 	padding-right: 0px;
-	margin: 30px 0px 45px 30px;
+	margin: 30px 0px 30px 30px;
 }
 
 .entry-content ol li,
@@ -2092,7 +2092,6 @@ object {
 .entry-content ul:not(.wp-block-gallery) li,
 .entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
-	margin-bottom: 8px;
 }
 
 /****************************************************************************************/
