@@ -196,6 +196,12 @@ body .editor-styles-wrapper,
     margin-bottom: 20px;
 }
 
+/* tightening other blocks */
+.editor-styles-wrapper [data-block] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 /****************************************************************************************/
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/
