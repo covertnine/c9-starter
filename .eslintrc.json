@@ -32,7 +32,10 @@
     "WebFont": true,
     "$": true,
     "location": true,
-    "alert": true
+    "alert": true,
+    "gsap": true,
+    "Power2": true,
+    "ScrollMagic": true
   },
   "plugins": ["jquery", "react", "jsx-a11y"],
   "settings": {
