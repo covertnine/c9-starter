@@ -94,11 +94,11 @@ if ( ! function_exists( 'c9_setup' ) ) {
 
 		add_theme_support( 'align-wide' );
 
-		//Apply theme's stylesheet to the visual editor.
- 		add_editor_style();
-
     	// For the Block Editor.
 		add_theme_support( 'editor-styles' );
+
+		//Apply empty stylesheet to visual editor to remove that doesn't work right yet for some reason.
+ 		add_editor_style( get_template_directory() . '/editor-style.css');
 
 		add_theme_support( 'responsive-embeds' );
 
