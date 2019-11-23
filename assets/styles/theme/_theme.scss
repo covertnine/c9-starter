@@ -99,7 +99,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .container-narrow {
+  .page-template-default .container-narrow {
     width: 960px;
     margin: 0px auto;
   }
@@ -1996,7 +1996,7 @@ object {
   font-size: 16px;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list),
+.entry-content ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products),
 .entry-content ol {
   padding: 0px 0px 0px 20px;
   margin: 30px 0px 45px 45px;
