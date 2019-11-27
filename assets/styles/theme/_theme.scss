@@ -526,6 +526,7 @@ pre {
 /* WordPress Navigation*/
 /****************************************************************************************/
 .header-navbar {
+  height: 108px;
   z-index: 99;
   position: relative;
   display: -webkit-box;
@@ -2714,6 +2715,19 @@ screen and (max-height: 300px) {
   outline-color: $dark;
   outline-width: 1px;
   outline-style: dotted;
+}
+
+/****************************************************************************************/
+/* Gutenberg Group Blocks */
+/****************************************************************************************/
+
+.editor-styles-wrapper .wp-block-group.has-background,
+.wp-block-group.has-background {
+  padding: 20px 25px;
+}
+
+.editor-styles-wrapper .wp-block-group.has-background .wp-block-group__inner-container {
+  padding: 20px 0px;
 }
 
 /****************************************************************************************/
