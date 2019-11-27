@@ -526,7 +526,6 @@ pre {
 /* WordPress Navigation*/
 /****************************************************************************************/
 .header-navbar {
-  height: 108px;
   z-index: 99;
   position: relative;
   display: -webkit-box;
@@ -549,6 +548,12 @@ pre {
 
 .header-navbar .navbar {
   background-color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .header-navbar {
+    height: 108px;
+  }
 }
 
 /* set height so after nav is fixed it doesn't jump from pageheight difference*/
