@@ -201,6 +201,15 @@ body .editor-styles-wrapper,
     margin-bottom: 0px;
 }
 
+/* cover block on post edit (not page edit) */
+@media only screen and (min-width: 768px) {
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align=full] {
+        margin-left: calc((-100vw + 100%)/ 2);
+        margin-right: calc((-100vw + 100%)/ 2);
+    }
+}
+
+
 /****************************************************************************************/
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/

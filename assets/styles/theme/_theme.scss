@@ -785,7 +785,6 @@ pre {
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
 .single .navigation .nav-next a {
-  font-size: 1.6em;
   font-weight: 700;
   font-family: $headings-font-family;
   padding: 10px;
@@ -832,6 +831,12 @@ pre {
 .archive nav .pagination,
 .blog nav .pagination {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 414px) {
+  .entry-footer {
+    padding: 0px 20px;
+  }
 }
 
 /****************************************************************************************/
@@ -1721,6 +1726,7 @@ object {
 @media only screen and (min-width: 768px) {
 
   .page-template-default .entry-content .wp-block-cover.alignwide,
+  .post-template-default .entry-content .wp-block-cover.alignwide,
   .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
     width: 100%;
     max-width: 100%;
@@ -1744,6 +1750,7 @@ object {
 @media only screen and (min-width: 992px) {
 
   .page-template-default .entry-content .wp-block-cover.alignwide,
+  .post-template-default .entry-content .wp-block-cover.alignwide,
   .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
     width: 100vw;
     max-width: 100vw;
@@ -1755,6 +1762,7 @@ object {
 @media only screen and (min-width: 1200px) {
 
   .page-template-default .entry-content .wp-block-cover.alignwide,
+  .post-template-default .entry-content .wp-block-cover.alignwide,
   .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
     width: 120%;
     max-width: 1482px;
