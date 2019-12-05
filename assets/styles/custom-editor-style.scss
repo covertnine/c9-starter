@@ -209,6 +209,26 @@ body .editor-styles-wrapper,
     }
 }
 
+@media only screen and (min-width: 992px) {
+
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc((-100vw + 100%) / 2);
+        margin-right: calc((-100vw + 100%) / 2);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
+        width: 120%;
+        max-width: 1482px;
+        margin-left: -10%;
+        margin-right: -10%;
+    }
+
+}
 
 /****************************************************************************************/
 /***************************** core edits for forms in backend editor
