@@ -7,7 +7,7 @@ C9 uses `npm` to compile files and an untracked `client` folder for website-spec
 Navigate to the themes directory then:
 
 ```
-git clone https://github.com/covertnine/cortextoo.git c9
+git clone https://github.com/covertnine/c9.git c9
 cd c9
 git clone https://github.com/covertnine/client-boilerplate.git client
 ```

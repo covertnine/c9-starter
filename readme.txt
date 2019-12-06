@@ -144,3 +144,11 @@ Just this one, for
 
 1. Install extensions
 2. Update your settings to make the extensions work well with VSCode.
+
+
+## Changelog
+2.0.1
+Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
+
+2.0
+Initial release of starter theme with support for all WordPress 5.3 blocks
