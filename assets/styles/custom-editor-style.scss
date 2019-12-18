@@ -116,6 +116,16 @@ body .editor-styles-wrapper,
     margin: 0px auto 25px auto;
 }
 
+.editor-styles-wrapper .wp-block-table,
+.editor-styles-wrapper .wp-block-tablee tbody,
+.editor-styles-wrapper .wp-block-table tbody tr,
+.editor-styles-wrapper .wp-block-table tbody tr td {
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
 .editor-styles-wrapper .wp-block-table thead,
 .editor-styles-wrapper .wp-block-table thead tr th,
 .editor-styles-wrapper .wp-block-table tfoot,
@@ -123,9 +133,18 @@ body .editor-styles-wrapper,
     border: none;
 }
 
+.editor-styles-wrapper .wp-block-table tbody tr:nth-child(odd) td {
+    background: $gray-100;
+}
+
 .editor-styles-wrapper .wp-block-table__cell-content {
     padding: 0px;
     line-height: 1.7;
+}
+
+.editor-styles-wrapper .wp-block-table tfoot tr td {
+    -webkit-box-shadow: 0 -1px 0 0 #eceeef;
+    box-shadow: 0 -1px 0 0 #eceeef;
 }
 
 /* for elements appearing in backend editor need to visually represent the frontend available width*/

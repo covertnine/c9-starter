@@ -1772,26 +1772,38 @@ object {
 /****************************************************************************************/
 /* WordPress Gutenberg Table Block */
 /****************************************************************************************/
-.entry-content table,
-.entry-content table tbody,
-.entry-content table tbody tr,
-.entry-content table tbody tr td,
-.editor-styles-wrapper table,
-.editor-styles-wrapper table tbody,
-.editor-styles-wrapper table tbody tr,
-.editor-styles-wrapper table tbody tr td {
+.entry-content .wp-block-table,
+.entry-content .wp-block-table tbody,
+.entry-content .wp-block-table tbody tr,
+.entry-content .wp-block-table tbody tr td {
   border: none;
   border-left: none;
   border-right: none;
   border-bottom: none;
 }
 
-.entry-content table tbody tr td,
-.editor-styles-wrapper table tbody tr td {
-  background: #fff;
-  -webkit-box-shadow: 0 -1px 0 0 #eceeef;
-  box-shadow: 0 -1px 0 0 #eceeef;
+.entry-content .wp-block-table tbody tr td,
+.editor-styles-wrapper .wp-block-table tbody tr td,
+.entry-content .wp-block-table.is-style-regular tfoot tr td,
+.editor-styles-wrapper .wp-block-table.is-style-regular tfoot tr td {
+  background: $light;
+  -webkit-box-shadow: 0 -1px 0 0 $gray-200;
+  box-shadow: 0 -1px 0 0 $gray-200;
   line-height: 1.7;
+}
+
+.entry-content .wp-block-table tbody tr:nth-child(odd) td {
+  background: $gray-100;
+}
+
+.entry-content .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td,
+.editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
+  background: $light;
+}
+
+.wp-block-table.is-style-stripes tfoot tr td {
+  -webkit-box-shadow: 0 -1px 0 0 $gray-200;
+  box-shadow: 0 -1px 0 0 $gray-200;
 }
 
 @media only screen and (min-width: 1px) {
@@ -1799,7 +1811,7 @@ object {
     margin: 0px auto;
   }
 
-  .wp-block-table tr td th,
+  .wp-block-table tr th,
   .wp-block-table tr td {
     padding: 4px;
     font-size: 1em;
