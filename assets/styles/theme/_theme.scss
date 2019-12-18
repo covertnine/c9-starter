@@ -1563,10 +1563,8 @@ table tr td {
 }
 
 table tr th {
-  padding-top: 20px;
-  padding-bottom: 20px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -1793,10 +1791,7 @@ object {
   background: #fff;
   -webkit-box-shadow: 0 -1px 0 0 #eceeef;
   box-shadow: 0 -1px 0 0 #eceeef;
-}
-
-.wp-block-table td {
-  padding: 15px;
+  line-height: 1.7;
 }
 
 @media only screen and (min-width: 1px) {
@@ -1827,7 +1822,7 @@ object {
 
 @media only screen and (min-width: 576px) {
 
-  .wp-block-table tr td th,
+  .wp-block-table tr th,
   .wp-block-table tr td {
     padding: 4px;
     font-size: 1.4em;
@@ -1835,9 +1830,12 @@ object {
 }
 
 @media only screen and (min-width: 768px) {
+
+  .wp-block-table tr th,
   .wp-block-table tr td {
     word-wrap: break-word;
     font-family: $font-family-base;
+    padding: 15px;
   }
 }
 

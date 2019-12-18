@@ -112,8 +112,20 @@ body .editor-styles-wrapper,
     margin-bottom: 0px !important;
 }
 
-.wp-block-table {
+.editor-styles-wrapper .wp-block-table {
     margin: 0px auto 25px auto;
+}
+
+.editor-styles-wrapper .wp-block-table thead,
+.editor-styles-wrapper .wp-block-table thead tr th,
+.editor-styles-wrapper .wp-block-table tfoot,
+.editor-styles-wrapper .wp-block-table tfoot tr td {
+    border: none;
+}
+
+.editor-styles-wrapper .wp-block-table__cell-content {
+    padding: 0px;
+    line-height: 1.7;
 }
 
 /* for elements appearing in backend editor need to visually represent the frontend available width*/
