@@ -86,7 +86,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 // John Lynch : Typography function. Updated with nav-bar
 // Function that will determine if user selects yes or no to load in fonts,
 // If yes: passes object with specified fonts. If no: no fonts passed
-add_action( 'wp_enqueue_scripts', 'c9_scripts' );
+add_action( 'wp_enqueue_scripts', 'c9_scripts', 10 );
 
 /**
  * Remove emoji specific code and styling
