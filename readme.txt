@@ -147,8 +147,11 @@ Just this one, for
 
 
 ## Changelog
+2.0.3
+Adjustments to Gravity Forms font size support and footer copyright/social sizes and ilnks
+
 2.0.2
-Adjustments to Gravity Forms font size support
+Bug fixes to loading order of stylesheets, fixes to table styles from gutenberg to match with new styles.
 
 2.0.1
 Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
