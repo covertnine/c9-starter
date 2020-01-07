@@ -1399,14 +1399,18 @@ pre {
 }
 
 #wrapper-footer .site-footer a {
-  color: $gray-800;
   text-decoration: none;
+}
+
+#wrapper-footer .site-footer .footer-social-wrapper a {
+  color: $gray-800;
   margin-right: 6px;
   margin-left: 6px;
 }
 
 #wrapper-footer .footer-social a {
   font-size: 1.4em;
+  color: $gray-800;
 }
 
 #wrapper-footer .site-footer a:hover {
@@ -2845,11 +2849,8 @@ screen and (max-height: 300px) {
 }
 
 .c9 form label {
-  font-weight: 500;
-  letter-spacing: 0.00094em;
   line-height: 1;
   margin: 0px;
-  font-size: 1.4em;
 }
 
 /**************************** WordPress Comment Form **********************************/
@@ -3040,10 +3041,7 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper legend.gfield_label {
   font-family: $font-family-base;
-  font-size: 1.8em;
   line-height: 1.1;
-  font-weight: 500;
-  letter-spacing: 0.00094em;
   color: $gray-700;
   margin-top: 8px;
 }
@@ -3090,7 +3088,6 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute {
   line-height: 1.1;
-  font-size: 1.8em;
   margin-top: 1px;
 }
 
@@ -3108,7 +3105,6 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="tel"],
 .wp-block[data-type="gravityforms/block"] .gform_wrapper textarea {
   line-height: 1;
-  font-size: 1.8em;
   font-family: $font-family-base;
   border: 1px solid rgba(151, 151, 151, 1);
 }
@@ -3137,7 +3133,6 @@ screen and (max-height: 300px) {
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
 .wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
   border-radius: 0px;
-  font-size: 1.6em;
   height: 50px;
   -webkit-appearance: none;
   background: #fff;
@@ -3152,8 +3147,6 @@ screen and (max-height: 300px) {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: $font-family-base;
-  font-size: 1.2em;
-  line-height: 1.2em;
   font-weight: 400;
   border-radius: 34px;
   background-color: $dark;
@@ -3180,17 +3173,6 @@ screen and (max-height: 300px) {
 
 @media only screen and (min-width: 641px) {
 
-  .c9 .gform_wrapper .gform_footer input.button,
-  .c9 .gform_wrapper .gform_footer input[type="submit"],
-  .c9 .gform_wrapper .gform_page_footer input.button,
-  .c9 .gform_wrapper .gform_page_footer input[type="submit"],
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button,
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type="submit"],
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button,
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type="submit"] {
-    font-size: 1.2em;
-  }
-
   .c9 .gform_wrapper .gform_footer input.button:hover,
   .c9 .gform_wrapper .gform_footer input[type="submit"]:hover,
   .c9 .gform_wrapper .gform_page_footer input.button:hover,
@@ -3210,26 +3192,8 @@ screen and (max-height: 300px) {
   }
 }
 
-@media only screen and (min-width: 768px) {
-
-  .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
-  .c9 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
-    font-size: 1.2em;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-
-  .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label,
-  .wp-block[data-type="gravityforms/block"] .gform_wrapper ul.gform_fields:not(.top_label) .gfield_label {
-    font-size: 1.8em;
-  }
-}
-
 /****************************************************************************************/
-/* c9 Blocks */
+/* C9 Blocks */
 /****************************************************************************************/
 
 /******************************************** tabs **************************************/
