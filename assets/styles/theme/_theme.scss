@@ -253,10 +253,6 @@ body {
   font-size: 7em !important;
 }
 
-.entry-content p[class*="font-size"] {
-  line-height: 1.2;
-}
-
 p.wp-block-subhead,
 .subhead-h,
 .c9-sh,
@@ -2016,12 +2012,11 @@ object {
 /* WordPress Gutenberg ol ul li (Ordered and unordered lists) */
 /****************************************************************************************/
 .entry-content ol,
-.entry-content p,
 .entry-content ul {
-  font-size: 16px;
+  font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products),
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
 .entry-content ol {
   padding: 0px 0px 0px 20px;
   margin: 30px 0px 45px 45px;
