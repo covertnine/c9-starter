@@ -125,8 +125,8 @@ body {
 
 .entry-content p,
 .c9 dl {
-  margin-bottom: 30px;
-  line-height: 1.7;
+  margin-bottom: 20px;
+  line-height: 1.5;
   font-size: 1.6em;
 }
 
@@ -1700,6 +1700,10 @@ object {
 /****************************************************************************************/
 
 @media only screen and (min-width: 1px) {
+
+  .wp-block-cover {
+    margin-bottom: 20px;
+  }
 
   .page-template-default .entry-content .wp-block-cover.alignwide,
   .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
