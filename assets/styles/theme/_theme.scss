@@ -430,6 +430,14 @@ pre {
     margin-left: calc((-100vw + 100%) / 2);
     margin-right: calc((-100vw + 100%) / 2);
   }
+
+  .wp-block-pullquote.alignright {
+    margin-right: -50px;
+  }
+
+  .wp-block-pullquote.alignleft {
+    margin-left: -50px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -460,16 +468,40 @@ pre {
     clear: both;
     padding-bottom: 60px;
   }
+
+  .wp-block-pullquote.alignright {
+    margin-right: -250px;
+  }
+
+  .wp-block-pullquote.alignleft {
+    margin-left: -250px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .wp-block-pullquote.alignwide {
+    max-width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wp-block-pullquote.alignwide {
+    max-width: 140%;
+    margin-left: -20%;
+    margin-right: -20%;
+  }
 }
 
 .alignleft {
   float: left;
-  margin-right: 1.5em;
+  margin-right: 50px;
 }
 
 .alignright {
   float: right;
-  margin-left: 1.5em;
+  margin-left: 50px;
 }
 
 .aligncenter {
@@ -1937,7 +1969,7 @@ object {
 
 .wp-block-quote.has-text-align-right:before {
   left: auto;
-  right: -80px;
+  right: -60px;
   content: "\201D";
 }
 
@@ -2032,12 +2064,17 @@ object {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: -35px;
+    left: -40px;
     font-size: 7em;
     font-weight: $font-weight-normal;
     font-family: $headings-font-family;
     color: $primary;
   }
+
+  .wp-block-quote.has-text-align-right:before {
+    right: -50px;
+  }
+
 }
 
 @media only screen and (max-width: 667px) {
