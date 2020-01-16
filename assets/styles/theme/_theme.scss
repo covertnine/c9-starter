@@ -401,6 +401,7 @@ pre {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 10px;
   }
 
   .entry-content .container .wp-block-gallery:only-child {
@@ -1914,7 +1915,6 @@ object {
   border-left: 3px solid $primary;
 }
 
-
 .editor-styles-wrapper blockquote:before,
 .entry-content blockquote:before {
   content: "\201C";
@@ -1933,7 +1933,6 @@ object {
 .wp-block-quote.has-text-align-right {
   border-left: 3px solid transparent;
   border-right: 3px solid $primary;
-
 }
 
 .wp-block-quote.has-text-align-right:before {

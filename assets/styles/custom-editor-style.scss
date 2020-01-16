@@ -100,6 +100,7 @@ body .editor-styles-wrapper,
 /****************************************************************************************/
 /***************************** core block edits for backend only
 /****************************************************************************************/
+/*WordPress core separator */
 .wp-block[data-type="core/separator"] .editor-block-list__block-edit {
     max-width: 1110px;
     padding-top: 10px;
@@ -113,6 +114,7 @@ body .editor-styles-wrapper,
     margin-bottom: 0px !important;
 }
 
+/* WordPress core tables */
 .editor-styles-wrapper .wp-block-table {
     margin: 0px auto 25px auto;
 }
@@ -170,7 +172,7 @@ body .editor-styles-wrapper,
 
 }
 
-/*square buttons*/
+/*WordPress core square buttons*/
 .editor-rich-text__editable.wp-block-button__link.square {
     border-radius: 0;
 }
@@ -179,7 +181,7 @@ body .editor-styles-wrapper,
     width: 100%;
 }
 
-/* list items */
+/* WordPress core list items */
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
     position: relative;
@@ -221,7 +223,7 @@ body .editor-styles-wrapper,
     color: $light;
 }
 
-/* spacers */
+/* WordPress core spacers */
 .editor-styles-wrapper [data-type="core/spacer"] {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -249,10 +251,16 @@ body .editor-styles-wrapper,
     left: 30px;
 }
 
-/* cover block and core image block on post edit (not page edit) */
+/* WordPress cover block and core image block on post edit (not page edit) */
 .wp-block-image {
     font-size: 10px;
 }
+
+/* WordPress core quote blocks on Posts and elsewhere */
+.editor-styles-wrapper .wp-block-quote {
+    font-size: 10px;
+}
+
 
 @media only screen and (min-width: 768px) {
 
