@@ -3063,6 +3063,15 @@ screen and (max-height: 300px) {
   border: 1px solid #ced4da;
 }
 
+.wp-block-search {
+  margin-bottom: 25px;
+  font-size: 10px;
+}
+
+.wp-block-search label {
+  font-weight: bold;
+}
+
 .widget-area .widget_search label {
   max-width: 100%;
 }
