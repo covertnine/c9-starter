@@ -46,16 +46,17 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
     font-size: 16px;
 }
 
-.editor-styles-wrapper p {
+.editor-styles-wrapper p,
+.block-editor-block-list__block[data-type="core/paragraph"] p {
     line-height: 1.7;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .editor-styles-wrapper .editor-rich-text blockquote p,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper p.mce-content-body,
 .editor-styles-wrapper .editor-rich-text p.mce-content-body {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     line-height: 1.7;
     font-size: 16px;
 }
@@ -232,12 +233,47 @@ body .editor-styles-wrapper,
     margin-bottom: 0px;
 }
 
-/* cover block on post edit (not page edit) */
+/* includes adjustment to movers so they are visible when alignfull is selected */
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full].is-multi-selected>.block-editor-block-mover,
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit>.block-editor-block-mover {
+    left: 60px;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full].is-multi-selected>.block-editor-block-mover,
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit>.block-editor-block-mover {
+    left: 185px;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide].is-multi-selected>.block-editor-block-mover,
+.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide]>.block-editor-block-list__block-edit>.block-editor-block-mover {
+    left: 30px;
+}
+
+/* cover block and core image block on post edit (not page edit) */
+.wp-block-image {
+    font-size: 10px;
+}
+
 @media only screen and (min-width: 768px) {
-    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align=full] {
+
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align=full],
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/image"][data-align=full] {
         margin-left: calc((-100vw + 100%)/ 2);
         margin-right: calc((-100vw + 100%)/ 2);
     }
+
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-align=wide] {
+        margin-left: -20%;
+        margin-right: -20%;
+        width: 140%;
+        max-width: 140%;
+    }
+
+    body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/image"][data-align=full] {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
 }
 
 @media only screen and (min-width: 992px) {

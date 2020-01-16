@@ -126,7 +126,7 @@ body {
 .entry-content p,
 .c9 dl {
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 1.6em;
 }
 
@@ -1473,6 +1473,7 @@ pre {
   margin-bottom: 0px;
 }
 
+/* horizontal rules or separators */
 .entry-content hr,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   text-align: center;
@@ -1509,6 +1510,7 @@ pre {
   border: 0;
 }
 
+/* definition lists */
 .entry-content dt {
   font-weight: $font-weight-bold;
 }
@@ -1517,6 +1519,7 @@ pre {
   margin: 0 1.5em 1.5em;
 }
 
+/* WordPress Core Image Blocks */
 img {
   height: auto;
   max-width: 100%;
@@ -1536,6 +1539,14 @@ img {
     max-width: 100%;
     height: auto;
   }
+
+  .wp-block-image figcaption {
+    font-size: 1em;
+    color: $secondary;
+    text-align: center;
+    margin: 10px 0px 25px 0px;
+  }
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -1546,8 +1557,30 @@ img {
     max-width: 100%;
     height: auto;
   }
+
+  @media only screen and (min-width: 768px) {
+
+    .post .entry-content .wp-block-image.alignwide {
+      margin-left: -10%;
+      margin-right: -10%;
+      width: 120%;
+      max-width: 120%;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .post .entry-content .wp-block-image.alignwide {
+      margin-left: -20%;
+      margin-right: -20%;
+      width: 140%;
+      max-width: 140%;
+    }
+  }
+
 }
 
+/* WordPress Core Table Blocks */
 table {
   margin: 0 0 1em;
 }
@@ -1881,6 +1914,7 @@ object {
   border-left: 3px solid $primary;
 }
 
+
 .editor-styles-wrapper blockquote:before,
 .entry-content blockquote:before {
   content: "\201C";
@@ -1893,6 +1927,19 @@ object {
   font-weight: $font-weight-normal;
   font-family: $headings-font-family;
   color: $primary;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large).has-text-align-right,
+.wp-block-quote.has-text-align-right {
+  border-left: 3px solid transparent;
+  border-right: 3px solid $primary;
+
+}
+
+.wp-block-quote.has-text-align-right:before {
+  left: auto;
+  right: -80px;
+  content: "\201D";
 }
 
 /* editor pull quote has lines style */
