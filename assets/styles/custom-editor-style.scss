@@ -40,7 +40,9 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
 .editor-styles-wrapper ol li,
 .editor-styles-wrapper .wp-block-pullquote,
 .editor-styles-wrapper .wp-block-pullquote blockquote p,
-.block-editor-format-toolbar__link-container-value {
+.block-editor-format-toolbar__link-container-value,
+.block-editor-block-list__block[data-type="core/pullquote"][data-align=left] .block-editor-rich-text p,
+.block-editor-block-list__block[data-type="core/pullquote"][data-align=right] .block-editor-rich-text p {
     word-wrap: break-word;
     font-family: $font-family-base;
     font-size: 16px;
@@ -95,6 +97,10 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-quote p:only-of-type,
 .wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
     margin-bottom: 0px;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote:before {
+    top: -48px;
 }
 
 /****************************************************************************************/
@@ -208,6 +214,7 @@ body .editor-styles-wrapper,
     list-style-type: none;
 }
 
+/* WordPress Core search widget block */
 .editor-styles-wrapper .wp-block-search .wp-block-search__label {
     margin-bottom: 8px;
     font-size: 1.8em;
