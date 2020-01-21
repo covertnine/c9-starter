@@ -58,7 +58,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 			?>
 		<figure class="entry-image">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<img src="<?php echo esc_url( $c9_img_src ); ?>" srcset="<?php echo esc_attr( $c9_img_srcset ); ?>" class="img-fluid mx-auto  mar30T d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr( $c9_img_sizes ); ?>" />
+				<img src="<?php echo esc_url( $c9_img_src ); ?>" srcset="<?php echo esc_attr( $c9_img_srcset ); ?>" class="img-fluid mx-auto  d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr( $c9_img_sizes ); ?>" />
 			</a>
 		</figure>
 

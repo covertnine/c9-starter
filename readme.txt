@@ -147,6 +147,9 @@ Just this one, for
 
 
 ## Changelog
+2.0.2
+Adjustments to Gravity Forms font size support
+
 2.0.1
 Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
 
