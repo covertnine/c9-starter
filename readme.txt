@@ -147,10 +147,10 @@ Just this one, for
 
 
 ## Changelog
-2.0.3
+2.0.4
 Tweaks to core WP blocks for display on posts and pages with C9 Grids
 
-2.0.2
+2.0.3
 Adjustments to Gravity Forms font size support
 
 2.0.1
