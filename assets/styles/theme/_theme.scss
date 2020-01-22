@@ -2014,12 +2014,16 @@ object {
 }
 
 .editor-styles-wrapper .editor-rich-text .wp-block-quote__citation,
+.editor-styles-wrapper .wp-block-quote .wp-block-quote__citation,
 .entry-content .wp-block-quote cite,
 .wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation {
 	display: block;
+	font-size: 1.3em;
+	color: $gray-700;
+	margin-top: 8px;
 }
 
 .wp-block-pullquote cite,
