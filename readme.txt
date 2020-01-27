@@ -147,6 +147,9 @@ Just this one, for
 
 
 ## Changelog
+2.0.5
+Added C9 outer class element
+
 2.0.4
 Tweaks to core WP blocks for display on posts and pages with C9 Grids
 
