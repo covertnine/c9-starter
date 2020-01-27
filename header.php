@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="hfeed site" id="page">
+	<div class="hfeed site c9" id="page">
 
 		<?php
 		if ( file_exists( locate_template( 'client/inc/topnav.php' ) ) ) {
