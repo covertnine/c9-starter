@@ -147,6 +147,9 @@ Just this one, for
 
 
 ## Changelog
+2.0.6
+Removed heading declaration from cta bar from parent theme
+
 2.0.5
 Added C9 outer class element
 
