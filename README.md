@@ -7,12 +7,12 @@ C9 uses `npm` to compile files and an untracked `client` folder for website-spec
 Navigate to the themes directory then:
 
 ```
-git clone https://github.com/covertnine/c9.git c9
-cd c9
-git clone https://github.com/covertnine/client-boilerplate.git client
+git clone https://github.com/covertnine/c9-starter.git c9-starter
+cd c9-starter
+git clone https://github.com/covertnine/client-starter.git client
 ```
 
-This will create a theme directory called `c9` and a client directory called `client`. The client directory has been added to the c9 `.gitignore`, so if you want to track the whole thing together or want to rename your client directory and stil don't want it to be tracked, make sure to change your `.gitignore` accordingly.
+This will create a theme directory called `c9-starter` and a client directory called `client`. The client directory has been added to the c9-starter `.gitignore`, so if you want to track the whole thing together or want to rename your client directory and stil don't want it to be tracked, make sure to change your `.gitignore` accordingly.
 
 ## Development
 

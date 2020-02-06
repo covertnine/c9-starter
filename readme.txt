@@ -1,4 +1,4 @@
-# C9
+# C9 Starter
 
 Based on [understrap](https://understrap.com).
 
@@ -8,7 +8,7 @@ In addition to this repo, you will need to create and version a `client` folder,
 
 To start a new project, either clone the client boilerplate (coming soon), or create you own repo.
 
-- {client name}-client (e.g., [cea-client](https://github.com/covertnine/cea-client) )
+- {client name}-client (e.g., [client-starter](https://github.com/covertnine/client-starter) )
 
 ## Git Branches
 
@@ -67,7 +67,7 @@ You will hook up any new build steps starting in this file.
 
 ### Code Editor
 
-I highly recommend using Visual Studio Code.
+Visual Studio is highly recommended.
 
 ### Formatting, Linting, Debugging
 
@@ -83,10 +83,6 @@ Other links:
 [Xdebug Functions](https://xdebug.org/docs/all_functions)
 
 [PHP in VSCode](https://code.visualstudio.com/docs/languages/php)
-
-### Unit Testing
-
-We should do this
 
 ## Addendum: VSCode
 
@@ -147,6 +143,9 @@ Just this one, for
 
 
 ## Changelog
+2.0.7
+Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
+
 2.0.6
 Removed heading declaration from cta bar from parent theme
 
