@@ -55,7 +55,7 @@
 								<img src="<?php echo $c9_logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' ); ?>" />
 							</a>
 						<?php
-							} elseif (the_custom_logo()) {
+							} elseif (has_custom_logo()) {
 								the_custom_logo();
 							} else {
 							?>
