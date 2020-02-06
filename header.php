@@ -55,8 +55,15 @@
 								<img src="<?php echo $c9_logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' ); ?>" />
 							</a>
 						<?php
+							} elseif (the_custom_logo()) {
+								the_custom_logo();
 							} else {
-							the_custom_logo();
+							?>
+							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9' ); ?>" class="navbar-brand c9-custom-logo">
+								<img src="<?php echo get_template_directory_uri() . '/assets/c9-black-text-logo.svg'; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' );
+								?>" />
+							</a>
+							<?php
 							}
 							?>
 
@@ -67,12 +74,17 @@
 									<span class="sr-only"><?php __( 'Search', 'c9' ); ?></span>
 								</a>
 							</div>
+							<?php if (has_nav_menu('primary')) { ?>
+
 							<div class="nav-toggle">
 								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 									<i class="fa fa-bars"></i>
 								</button>
 							</div>
 							<!--.nav-toggle-->
+							<?php
+							}
+							?>
 						</div><!-- .navbar-small-buttons-->
 
 						<!-- The WordPress Menu goes here -->

@@ -651,6 +651,10 @@ pre {
 	transition: color 0.3s ease-in;
 }
 
+.navbar-small-buttons {
+	margin-left: auto;
+}
+
 .header-navbar .nav .search {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -665,6 +669,8 @@ pre {
 
 .header-navbar .navbar-light .navbar-toggler {
 	border: none;
+	padding: 12px;
+	margin-right: 10px;
 }
 
 .header-navbar .navbar-toggler,
@@ -2914,9 +2920,9 @@ screen and (max-height: 300px) {
 	font-family: $font-family-base;
 }
 
-.c9 input[type="text"],
-.c9 input[type="email"],
-.c9 input[type="url"] {
+.c9 .entry-content input[type="text"],
+.c9 .entry-content input[type="email"],
+.c9 .entry-content input[type="url"] {
 	height: 50px;
 }
 
