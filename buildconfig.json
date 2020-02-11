@@ -1,6 +1,6 @@
 {
   "browserSyncOptions": {
-    "proxy": "cea2.local/",
+    "proxy": "",
     "notify": false
   },
   "browserSyncWatchFiles": [

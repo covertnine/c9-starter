@@ -1,5 +1,3 @@
-//import "smoothstate";
-
 jQuery(document).ready(function() {
   (function($) {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +51,8 @@ jQuery(document).ready(function() {
     } else {
       //end small screens so desktop next
 
+      //var logoHeight = $(".c9-custom-logo").height();
+
       $(window).scroll(function() {
         //scroll position variable
         var scroll = $(window).scrollTop();
@@ -67,6 +67,7 @@ jQuery(document).ready(function() {
         if (scroll >= 218) {
           $(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
           $(".header-navbar").addClass("jumpfix");
+          //$(".header-navbar.jumpfix").css("height", "108px");
         }
         if (scroll <= 217) {
           $(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
@@ -75,13 +76,6 @@ jQuery(document).ready(function() {
       });
     } //end regular
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////// Move the content up by the height of the navbar object for a transparent nav effect ////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if ($(window).width() > 667) {
-      // var navHeight = $(".header-navbar").height();
-      // $("#page-wrapper").css("margin-top", -navHeight);
-    }
 
     ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

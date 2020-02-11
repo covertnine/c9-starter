@@ -1,4 +1,4 @@
-# C9
+# C9 Starter
 
 Based on [understrap](https://understrap.com).
 
@@ -8,7 +8,7 @@ In addition to this repo, you will need to create and version a `client` folder,
 
 To start a new project, either clone the client boilerplate (coming soon), or create you own repo.
 
-- {client name}-client (e.g., [cea-client](https://github.com/covertnine/cea-client) )
+- {client name}-client (e.g., [client-starter](https://github.com/covertnine/client-starter) )
 
 ## Git Branches
 
@@ -67,7 +67,7 @@ You will hook up any new build steps starting in this file.
 
 ### Code Editor
 
-I highly recommend using Visual Studio Code.
+Visual Studio is highly recommended.
 
 ### Formatting, Linting, Debugging
 
@@ -83,10 +83,6 @@ Other links:
 [Xdebug Functions](https://xdebug.org/docs/all_functions)
 
 [PHP in VSCode](https://code.visualstudio.com/docs/languages/php)
-
-### Unit Testing
-
-We should do this
 
 ## Addendum: VSCode
 
@@ -144,3 +140,26 @@ Just this one, for
 
 1. Install extensions
 2. Update your settings to make the extensions work well with VSCode.
+
+
+## Changelog
+2.0.7
+Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
+
+2.0.6
+Removed heading declaration from cta bar from parent theme
+
+2.0.5
+Added C9 outer class element
+
+2.0.4
+Tweaks to core WP blocks for display on posts and pages with C9 Grids
+
+2.0.3
+Adjustments to Gravity Forms font size support
+
+2.0.1
+Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
+
+2.0
+Initial release of starter theme with support for all WordPress 5.3 blocks

@@ -4,8 +4,7 @@
  * Theme basic setup.
  *
  * @package C9
- */
-
+ */	
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
@@ -95,9 +94,14 @@ if ( ! function_exists( 'c9_setup' ) ) {
 
 		add_theme_support( 'align-wide' );
 
+    	// For the Block Editor.
 		add_theme_support( 'editor-styles' );
 
+		//Apply empty stylesheet to visual editor to remove that doesn't work right yet for some reason.
+ 		add_editor_style( get_template_directory() . '/editor-style.css');
+
 		add_theme_support( 'responsive-embeds' );
+
 		// C9 custom image sizes
 		add_image_size( 'c9-feature-wide', 960, 411, array( 'center', 'center' ), true );
 		add_image_size( 'c9-feature-hd-wide', 1920, 1080, array( 'center', 'center' ), true );

@@ -15,9 +15,16 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 	include( locate_template( 'client/inc/footer.php' ) );
 
 } else {
-	require_once( get_template_directory() . '/inc/class-footer.php' );
-	$social_links = c9FooterHelpers::build_social();
-	if ( is_active_sidebar( 'footerfull' ) || get_option( 'cortex_footer' )['copyright_content'] || 'show' === get_option( 'cortex_footer' )['show_search'] || $social_links ) {
+		require_once( get_template_directory() . '/inc/class-footer.php' );
+		$c9_social_links = c9FooterHelpers::build_social();
+
+		if (empty(get_option( 'cortex_footer' )['show_search'])) {
+			$c9_footer_search = 'hide';
+		} else {
+			$c9_footer_search = get_option( 'cortex_footer' )['show_search'];
+		}
+
+	if ( is_active_sidebar( 'footerfull' ) || !empty(get_option( 'cortex_footer' )['copyright_content']) || 'show' === $c9_footer_search  || $c9_social_links ) {
 	?>
 	<div class="footer-entirety">
 		<?php
@@ -32,12 +39,12 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 								<div class="container">
 									<div class="row text-center d-flex justify-content-between align-items-center">
 										<?php
-										if ( $social_links ) :
+										if ( $c9_social_links ) :
 										?>
 										<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
 											<div class="footer-social text-center">
 											<?php
-											foreach ( $social_links as $link_key => $link_value ) {
+											foreach ( $c9_social_links as $link_key => $link_value ) {
 												echo $link_value;
 												}
 											?>
