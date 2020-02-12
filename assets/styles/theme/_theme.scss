@@ -3113,8 +3113,8 @@ screen and (max-height: 300px) {
 /**************************** Gravity Forms **********************************/
 .c9 .gform_wrapper label.gfield_label,
 .c9 .gform_wrapper legend.gfield_label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper label.gfield_label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper legend.gfield_label {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper label.gfield_label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper legend.gfield_label {
 	font-family: $font-family-base;
 	line-height: 1.1;
 	color: $gray-700;
@@ -3127,12 +3127,12 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
 .c9 .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
 .c9 .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"] {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"] {
 	margin-top: 0px;
 }
 
@@ -3149,24 +3149,24 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper .gfield_time_ampm,
 .c9 .gform_wrapper .gfield_time_hour,
 .c9 .gform_wrapper .gfield_time_minute,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour i,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute i,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above div[class*="gfield_date_"].ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above div[class*="gfield_time_"].ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below div[class*="gfield_date_"].ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_below div[class*="gfield_time_"].ginput_container label,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_ampm,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_hour,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .gfield_time_minute {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_hour,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_minute,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_hour i,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_minute i,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_above div[class*="gfield_date_"].ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_above div[class*="gfield_time_"].ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_below div[class*="gfield_date_"].ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_below div[class*="gfield_time_"].ginput_container label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_ampm,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_hour,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_time_minute {
 	line-height: 1.1;
 	margin-top: 1px;
 }
 
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label,
 .c9 .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container.ginput_container_creditcard label {
 	margin-top: 20px;
 }
@@ -3175,22 +3175,22 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper input[type="password"],
 .c9 .gform_wrapper input[type="tel"],
 .c9 .gform_wrapper textarea,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="password"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="tel"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper textarea {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper input[type="text"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper input[type="password"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper input[type="tel"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper textarea {
 	line-height: 1;
 	font-family: $font-family-base;
 	border: 1px solid rgba(151, 151, 151, 1);
 }
 
 .c9 .gform_wrapper input[type="text"],
-.wp-block[data-type="gravityforms/block"] .gform_wrapper input[type="text"] {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper input[type="text"] {
 	height: 50px;
 }
 
 .c9 .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
-.wp-block[data-type="gravityforms/block"] .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
 	padding: 2px 4px 2px 14px;
 }
 
@@ -3202,11 +3202,11 @@ screen and (max-height: 300px) {
 .c9 .gform_wrapper .ginput_complex .ginput_right select,
 .c9 .gform_wrapper .ginput_complex.ginput_container_creditcard select,
 .c9 .gform-wrapper select,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_time_ampm select,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_time_ampm select {
 	border-radius: 0px;
 	height: 50px;
 	-webkit-appearance: none;
@@ -3215,7 +3215,7 @@ screen and (max-height: 300px) {
 }
 
 .c9 .gform_button.button,
-.wp-block[data-type="gravityforms/block"] .gform_button.button {
+.wp-block[data-type="gravityforms/form"] .gform_button.button {
 	padding: 7px 30px;
 	width: auto;
 	text-align: center;
@@ -3232,17 +3232,17 @@ screen and (max-height: 300px) {
 }
 
 .c9 .gform_button.button:hover,
-.wp-block[data-type="gravityforms/block"] .gform_button.button:hover {
+.wp-block[data-type="gravityforms/form"] .gform_button.button:hover {
 	opacity: 0.8;
 }
 
 .c9 .entry-content .gfield_checkbox li,
-.wp-block[data-type="gravityforms/block"] .entry-content .gfield_checkbox li {
+.wp-block[data-type="gravityforms/form"] .entry-content .gfield_checkbox li {
 	margin-top: 0px;
 }
 
 .c9 .gform_wrapper .left_label textarea,
-.wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label textarea {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .left_label textarea {
 	margin-top: 8px;
 }
 
@@ -3252,17 +3252,17 @@ screen and (max-height: 300px) {
 	.c9 .gform_wrapper .gform_footer input[type="submit"]:hover,
 	.c9 .gform_wrapper .gform_page_footer input.button:hover,
 	.c9 .gform_wrapper .gform_page_footer input[type="submit"]:hover,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input.button:hover,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_footer input[type="submit"]:hover,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input.button:hover,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .gform_page_footer input[type="submit"]:hover {
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .gform_footer input.button:hover,
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .gform_footer input[type="submit"]:hover,
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .gform_page_footer input.button:hover,
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .gform_page_footer input[type="submit"]:hover {
 		opacity: 0.8;
 	}
 
 	.c9 .gform_wrapper .left_label li.hidden_label input,
 	.c9 .gform_wrapper .right_label li.hidden_label input,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .left_label li.hidden_label input,
-	.wp-block[data-type="gravityforms/block"] .gform_wrapper .right_label li.hidden_label input {
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .left_label li.hidden_label input,
+	.wp-block[data-type="gravityforms/form"] .gform_wrapper .right_label li.hidden_label input {
 		margin: 0px;
 	}
 }
