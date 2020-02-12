@@ -1,4 +1,5 @@
 <?php
+
 /**
  * C9 functions and definitions.
  *
@@ -68,10 +69,10 @@ require get_template_directory() . '/admin/tgm-init.php';
 /**
  * Load Client-Specific Hooks
  */
-if ( file_exists( get_template_directory() . '/client/client.php' ) ) {
+if (file_exists(get_template_directory() . '/client/client.php')) {
 	require get_template_directory() . '/client/client.php';
 } else {
-	add_action( 'admin_notices', 'need_client_folder' );
+	add_action('admin_notices', 'need_client_folder');
 }
 
 /**
@@ -79,15 +80,16 @@ if ( file_exists( get_template_directory() . '/client/client.php' ) ) {
  *
  * @return void
  */
-function c9_client_folder() {
-	?>
+function need_client_folder()
+{
+?>
 	<div class="update-nag notice">
-		<p><?php _e( 'You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9' ); ?></p>
+		<p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9'); ?></p>
 	</div>
 <?php
 }
 
-require get_template_directory() . '/admin/admin-settings.php';
+require_once get_template_directory() . '/admin/admin-settings.php';
 
 
 /**
@@ -95,4 +97,4 @@ require get_template_directory() . '/admin/admin-settings.php';
  */
 require get_template_directory() . '/inc/wpapi.php';
 
-add_editor_style(  get_template_directory_uri() . '/assets/dist/css/gutenberg-editor-reset.css');
+add_editor_style(get_template_directory_uri() . '/assets/dist/css/gutenberg-editor-reset.css');
