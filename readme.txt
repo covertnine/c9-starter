@@ -144,7 +144,7 @@ Just this one, for
 
 ## Changelog
 2.0.8
-Fix size text issues on list items
+Fix size text issues on list items. Adjusted admin settings so client folders can add/overwrite settings.
 
 2.0.7
 Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
