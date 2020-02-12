@@ -74,7 +74,8 @@ if ( class_exists( 'WP_OSA' ) ) {
 	 *
 	 * Object for the class `WP_OSA`.
 	 */
-	$wposa_obj = new WP_OSA();
+	if (empty($wposa_obj))
+		$wposa_obj = new WP_OSA();
 
 
 	// -----------------------------//
