@@ -30,4 +30,4 @@ We recommend that you only make changes in the `client` directory:
 
 #### PHP:
 
-The main entry point for client files is in `c9/client/client.php`, which includes `c9/client/inc/client-functions.php`.
+The main entry point for client files is in `c9-starter/client/client.php`, which includes `c9-starter/client/inc/client-functions.php`.
