@@ -143,6 +143,9 @@ Just this one, for
 
 
 ## Changelog
+2.0.9
+Removed defunct theme settings. Moved admin settings above client folder to make it easier to add settings. Adjustments to fonts from theme settings.
+
 2.0.8
 Fix size text issues on list items. Adjusted admin settings so client folders can add/overwrite settings. Changed Gravity Forms block CSS declarations.
 

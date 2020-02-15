@@ -16,7 +16,7 @@ This will create a theme directory called `c9-starter` and a client directory ca
 
 ## Development
 
-From the `c9` directory run `npm run start`. This process watches `.scss` and `.js` in both the assets directory and in the client assets directory.
+From the `c9-starter` directory run `npm run start`. This process watches `.scss` and `.js` in both the assets directory and in the client assets directory.
 
 We recommend that you only make changes in the `client` directory:
 
