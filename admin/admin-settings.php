@@ -126,19 +126,32 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// If the user selects YES and will select the fonts.
-	// The default font will be Helvatic for system fonts:
+	// The default font will be Helvetica for system fonts:
 
 	// Update an array to contain the fonts that will be used
 	// throughout each of the font selector fields:
 	$c9fonts = array(
-		'Roboto'          => 'Roboto',
-		'Montserrat'      => 'Montserrat',
-		'PT Sans'         => 'PT Sans',
-		'Raleway'         => 'Raleway',
-		'Montserrat'      => 'Montserrat',
-		'Source Sans Pro' => 'Source Sans Pro',
-		'Oswald'          => 'Oswald',
-		'Open Sans'       => 'Open Sans',
+		'Abel'			  		=> 'Abel',
+		'Bebas Neue'	  		=> 'Bebas Neue',
+		'Lato'			  		=> 'Lato',
+		'Lobster'		  		=> 'Lobster',
+		'Merriweather'			=> 'Merriweather',
+		'Montserrat'      		=> 'Montserrat',
+		'Muli',					=> 'Muli',
+		'Nunito',				=> 'Nunito',
+		'Open Sans'       		=> 'Open Sans',
+		'Open Sans Condensed'   => 'Open Sans Condensed',
+		'Oswald'          		=> 'Oswald',
+		'Playfair Display',   	=> 'Playfair Display',
+		'PT Sans'         		=> 'PT Sans',
+		'PT Serif'         		=> 'PT Serif',
+		'Quicksand'         	=> 'Quicksand',
+		'Raleway'         		=> 'Raleway',
+		'Roboto'          		=> 'Roboto',
+		'Roboto Condensed'		=> 'Roboto Condensed',
+		'Roboto Slab'			=> 'Roboto Slab',
+		'Source Sans Pro' 		=> 'Source Sans Pro',
+		'Work Sans'         	=> 'Work Sans',
 	);
 
 

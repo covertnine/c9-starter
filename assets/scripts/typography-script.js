@@ -7,21 +7,19 @@
 // If user decided to use their own fonts (clicked no)
 
 if (selectedFonts.defaultFont === "yes") {
-console.log(
-	selectedFonts.heading_font,
-	selectedFonts.subheading_font,
-	selectedFonts.body_font
-  );
-WebFont.load(
-	  {
-	  google: {
-					families: [
+	console.log(
+		selectedFonts.heading_font,
+		selectedFonts.subheading_font,
+		selectedFonts.body_font
+	);
+	WebFont.load({
+		google: {
+			families: [
 				selectedFonts.heading_font,
 				selectedFonts.subheading_font,
 				selectedFonts.body_font
-					]
-	  }
-  }
-	  );
+			]
+		}
+	});
 }
-console.log( selectedFonts );
+console.log(selectedFonts);
