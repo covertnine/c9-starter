@@ -89,9 +89,6 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
-		// Check and setup theme default settings.
-		c9_setup_theme_default_settings();
-
 		add_theme_support( 'align-wide' );
 
     	// For the Block Editor.

@@ -7,9 +7,9 @@
  */
 
 /**
- * Initialize theme default settings
+ * Include settings for Theme
  */
-require get_template_directory() . '/inc/theme-settings.php';
+require_once get_template_directory() . '/admin/admin-settings.php';
 
 /**
  * Theme setup and custom theme supports.
@@ -66,6 +66,7 @@ require get_template_directory() . '/inc/editor.php';
  */
 require get_template_directory() . '/admin/tgm-init.php';
 
+
 /**
  * Load Client-Specific Hooks
  */
@@ -88,9 +89,6 @@ function need_client_folder()
 	</div>
 <?php
 }
-
-require_once get_template_directory() . '/admin/admin-settings.php';
-
 
 /**
  * Functions for managing the information your blog puts out via the WP-Api.
