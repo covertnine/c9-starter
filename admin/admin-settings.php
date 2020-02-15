@@ -137,12 +137,12 @@ if (class_exists('WP_OSA')) {
 		'Lobster'		  		=> 'Lobster',
 		'Merriweather'			=> 'Merriweather',
 		'Montserrat'      		=> 'Montserrat',
-		'Muli',					=> 'Muli',
-		'Nunito',				=> 'Nunito',
+		'Muli'					=> 'Muli',
+		'Nunito'				=> 'Nunito',
 		'Open Sans'       		=> 'Open Sans',
 		'Open Sans Condensed'   => 'Open Sans Condensed',
 		'Oswald'          		=> 'Oswald',
-		'Playfair Display',   	=> 'Playfair Display',
+		'Playfair Display'   	=> 'Playfair Display',
 		'PT Sans'         		=> 'PT Sans',
 		'PT Serif'         		=> 'PT Serif',
 		'Quicksand'         	=> 'Quicksand',
@@ -151,7 +151,7 @@ if (class_exists('WP_OSA')) {
 		'Roboto Condensed'		=> 'Roboto Condensed',
 		'Roboto Slab'			=> 'Roboto Slab',
 		'Source Sans Pro' 		=> 'Source Sans Pro',
-		'Work Sans'         	=> 'Work Sans',
+		'Work Sans'         	=> 'Work Sans'
 	);
 
 
