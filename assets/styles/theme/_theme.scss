@@ -33,7 +33,8 @@ body {
 
 	.blog .entry-content,
 	.single .entry-content,
-	.single .entry-header {
+	.single .entry-header,
+	.single .entry-footer {
 		padding: 0px 15px;
 	}
 }
@@ -1382,7 +1383,7 @@ pre {
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background-position: center fixed;
+	background-position: center;
 	background-size: cover;
 	z-index: 14;
 }
@@ -1598,27 +1599,6 @@ img {
 		max-width: 100%;
 		height: auto;
 	}
-
-	@media only screen and (min-width: 768px) {
-
-		.post .entry-content .wp-block-image.alignwide {
-			margin-left: -10%;
-			margin-right: -10%;
-			width: 120%;
-			max-width: 120%;
-		}
-	}
-
-	@media only screen and (min-width: 1200px) {
-
-		.post .entry-content .wp-block-image.alignwide {
-			margin-left: -20%;
-			margin-right: -20%;
-			width: 140%;
-			max-width: 140%;
-		}
-	}
-
 }
 
 /* WordPress Core Table Blocks */
@@ -1801,8 +1781,8 @@ object {
 
 @media only screen and (min-width: 768px) {
 
-	.page-template-default .entry-content .wp-block-cover.alignwide,
-	.post-template-default .entry-content .wp-block-cover.alignwide,
+	.page-template-default .entry-content .alignwide,
+	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 100%;
 		max-width: 100%;
@@ -1810,7 +1790,7 @@ object {
 		margin-right: 0px;
 	}
 
-	.page-template-default .entry-content .wp-block-cover.alignfull,
+	.page-template-default .entry-content .alignfull,
 	.wp-block[data-type="core/cover"][data-align="full"] {
 		width: 100vw;
 		max-width: 100vw;
@@ -1825,8 +1805,8 @@ object {
 
 @media only screen and (min-width: 992px) {
 
-	.page-template-default .entry-content .wp-block-cover.alignwide,
-	.post-template-default .entry-content .wp-block-cover.alignwide,
+	.page-template-default .entry-content .alignwide,
+	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 100vw;
 		max-width: 100vw;
@@ -1837,8 +1817,8 @@ object {
 
 @media only screen and (min-width: 1200px) {
 
-	.page-template-default .entry-content .wp-block-cover.alignwide,
-	.post-template-default .entry-content .wp-block-cover.alignwide,
+	.page-template-default .entry-content .alignwide,
+	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 120%;
 		max-width: 1482px;
@@ -2101,7 +2081,12 @@ object {
 /****************************************************************************************/
 .entry-content ol,
 .entry-content ul {
-	font-size: 16px;
+	font-size: 1em;
+}
+
+.entry-content ul li,
+.entry-content ol li {
+	font-size: 1.6em;
 }
 
 .entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),

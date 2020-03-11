@@ -40,7 +40,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 				$c9_img_src = wp_get_attachment_image_url( $c9_img_id, 'c9-feature-hd-wide' );
 
 				?>
-				<figure class="entry-header-bgimg" style="background: url(<?php echo esc_url( $c9_img_src ); ?>) center fixed no-repeat;"></figure>
+				<figure class="entry-header-bgimg" style="background-image: url(<?php echo esc_url( $c9_img_src ); ?>);"></figure>
 
 			<?php } ?>
 
