@@ -14,13 +14,13 @@
 	font-weight: $headings-font-weight;
 }
 
-.edit-post-layout__content .editor-styles-wrapper {
+.block-editor-editor-skeleton__content .editor-styles-wrapper {
 	margin: 0px auto;
 }
 
 /* blog posts are max width of 900px on frontend so minimize it in backend too */
-body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
-	max-width: 930px;
+body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper {
+	max-width: 990px;
 }
 
 /****************************************************************************************/
@@ -32,7 +32,7 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
 .editor-styles-wrapper .container p,
 .editor-styles-wrapper .container-narrow p,
 .editor-styles-wrapper .container-fluid p,
-.editor-styles-wrapper .editor-rich-text .mce-content-body p,
+.editor-styles-wrapper .mce-content-body p,
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
@@ -54,10 +54,10 @@ body.post-type-post .edit-post-layout__content .editor-styles-wrapper {
 	margin-bottom: 25px;
 }
 
-.editor-styles-wrapper .editor-rich-text blockquote p,
+.editor-styles-wrapper blockquote p,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper p.mce-content-body,
-.editor-styles-wrapper .editor-rich-text p.mce-content-body {
+.editor-styles-wrapper p.mce-content-body {
 	margin-bottom: 25px;
 	line-height: 1.7;
 	font-size: 16px;
@@ -88,12 +88,12 @@ body .editor-styles-wrapper,
 	color: $light;
 }
 
-.editor-styles-wrapper .editor-rich-text .mce-content-body p:last-child,
-.editor-styles-wrapper .editor-rich-text blockquote p:last-child,
+.editor-styles-wrapper .mce-content-body p:last-child,
+.editor-styles-wrapper blockquote p:last-child,
 .editor-styles-wrapper .wp-block-quote p:last-child,
 .wp-block-pullquote.is-style-solid-color blockquote p:last-child,
-.editor-styles-wrapper .editor-rich-text .mce-content-body p:only-of-type,
-.editor-styles-wrapper .editor-rich-text blockquote p:only-of-type,
+.editor-styles-wrapper .mce-content-body p:only-of-type,
+.editor-styles-wrapper blockquote p:only-of-type,
 .editor-styles-wrapper .wp-block-quote p:only-of-type,
 .wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
 	margin-bottom: 0px;
@@ -106,6 +106,40 @@ body .editor-styles-wrapper,
 /****************************************************************************************/
 /***************************** core block edits for backend only
 /****************************************************************************************/
+
+/* for elements appearing in backend editor need to visually represent the frontend available width*/
+@media only screen and (min-width: 768px) {
+	.editor-styles-wrapper .wp-block {
+		max-width: 960px;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.editor-styles-wrapper .wp-block {
+		max-width: 1110px;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+	.editor-styles-wrapper .wp-block {
+		max-width: 1140px;
+	}
+}
+
+/* embeddable tweets */
+.wp-block[data-type="core-embed/twitter"] .wp-block-embed iframe {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	min-width: 550px;
+}
+
+.wp-block[data-type="core-embed/twitter"] .wp-block-embed .wp-block-embed__wrapper {
+	text-align: center;
+}
+
 /*WordPress core separator */
 .wp-block[data-type="core/separator"] .editor-block-list__block-edit {
 	max-width: 1110px;
@@ -152,30 +186,7 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper .wp-block-table tfoot tr td {
-	-webkit-box-shadow: 0 -1px 0 0 #eceeef;
 	box-shadow: 0 -1px 0 0 #eceeef;
-}
-
-/* for elements appearing in backend editor need to visually represent the frontend available width*/
-@media only screen and (min-width: 768px) {
-	.editor-styles-wrapper .wp-block {
-		max-width: 960px;
-	}
-
-}
-
-@media only screen and (min-width: 992px) {
-	.editor-styles-wrapper .wp-block {
-		max-width: 1110px;
-	}
-
-}
-
-@media only screen and (min-width: 1200px) {
-	.editor-styles-wrapper .wp-block {
-		max-width: 1140px;
-	}
-
 }
 
 /*WordPress core square buttons*/
@@ -197,8 +208,8 @@ body .editor-styles-wrapper,
 	margin: 30px 0 45px 45px;
 }
 
-.editor-styles-wrapper .editor-rich-text ol li,
-.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery):not(.nav-tabs):not(.c9-share-list) li,
+.editor-styles-wrapper ol li,
+.editor-styles-wrapper ul:not(.wp-block-gallery):not(.nav-tabs):not(.c9-share-list) li,
 .editor-styles-wrapper ol li,
 .editor-styles-wrapper ul:not(.wp-block-gallery):not(.nav-tabs):not(.c9-share-list) li {
 	margin: 10px 0px;
@@ -242,22 +253,6 @@ body .editor-styles-wrapper,
 	margin-bottom: 0px;
 }
 
-/* includes adjustment to movers so they are visible when alignfull is selected */
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full].is-multi-selected>.block-editor-block-mover,
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit>.block-editor-block-mover {
-	left: 60px;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full].is-multi-selected>.block-editor-block-mover,
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit>.block-editor-block-mover {
-	left: 185px;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide].is-multi-selected>.block-editor-block-mover,
-.editor-styles-wrapper .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide]>.block-editor-block-list__block-edit>.block-editor-block-mover {
-	left: 30px;
-}
-
 /* WordPress cover block and core image block on post edit (not page edit) */
 .wp-block-image {
 	font-size: 10px;
@@ -268,46 +263,58 @@ body .editor-styles-wrapper,
 	font-size: 10px;
 }
 
-
+/* Gutenberg blocks alignwide and alignfull */
 @media only screen and (min-width: 768px) {
 
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align=full],
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/image"][data-align=full] {
+	// Posts align full width
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
 		margin-left: calc((-100vw + 100%)/ 2);
 		margin-right: calc((-100vw + 100%)/ 2);
 	}
 
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-align=wide] {
-		margin-left: -20%;
-		margin-right: -20%;
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+		width: 100vw;
+		max-width: 100vw;
+	}
+
+	// Posts with slightly more narrow alignfull version for when the admin inspector is open
+	body.post-type-post .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+		width: calc(100vw - 280px);
+		max-width: calc(100vw - 280px);
+		margin-left: calc((-100vw + 100% + 280px)/ 2);
+		margin-right: calc((-100vw + 100% + 280px)/ 2);
+	}
+
+	// Posts default alignwide widths
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+		margin-left: calc((-140% + 100%)/ 2);
+		margin-right: calc((-140% + 100%)/ 2);
 		width: 140%;
-		max-width: 140%;
-	}
-
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/image"][data-align=full] {
-		width: 100vw;
 		max-width: 100vw;
 	}
 
-}
-
-@media only screen and (min-width: 992px) {
-
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
-		width: 100vw;
-		max-width: 100vw;
-		margin-left: calc((-100vw + 100%) / 2);
-		margin-right: calc((-100vw + 100%) / 2);
+	// Posts with slightly more narrow alignwide version for when the admin inspector is open
+	body.post-type-post .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+		margin-left: calc((-120% + 100%)/ 2);
+		margin-right: calc((-120% + 100%)/ 2);
+		width: 120%;
+		max-width: 1160px;
 	}
+
 }
 
 @media only screen and (min-width: 1200px) {
 
-	body.post-type-post .edit-post-layout__content .editor-styles-wrapper .editor-block-list__block[data-type="core/cover"][data-align="wide"] {
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
 		width: 120%;
 		max-width: 1482px;
 		margin-left: -10%;
 		margin-right: -10%;
+	}
+
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+		width: 100vw;
+		max-width: 100vw;
 	}
 
 }
