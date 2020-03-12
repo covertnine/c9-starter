@@ -57,9 +57,13 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 }
 
 @media only screen and (min-width: 1500px) {
-	body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper {
-		max-width: 1140px;
+
+	/* full screen width on large screens */
+	body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper,
+	body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper {
+		max-width: 94%;
 	}
+
 }
 
 
@@ -285,18 +289,15 @@ body .editor-styles-wrapper,
 @media only screen and (min-width: 768px) {
 
 	// Posts/pages align full width
-	body .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
-		margin-left: calc((-100vw + 100%)/ 2);
-		margin-right: calc((-100vw + 100%)/ 2);
-	}
-
-	body .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
-		width: 100vw;
-		max-width: 100vw;
+	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+		margin-left: calc((-100vw + 100% + 116px) / 2);
+		margin-right: calc((-100vw + 100% + 116px) / 2);
+		width: calc(100vw - 116px);
+		max-width: calc(100vw - 116px);
 	}
 
 	// Posts/pages with slightly more narrow alignfull version for when the admin inspector is open
-	body .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
 		width: calc(100vw - 280px);
 		max-width: calc(100vw - 280px);
 		margin-left: calc((-100vw + 100% + 280px)/ 2);
@@ -304,7 +305,7 @@ body .editor-styles-wrapper,
 	}
 
 	// Posts/pages default alignwide widths
-	body .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
 		margin-left: calc((-120% + 100%)/ 2);
 		margin-right: calc((-120% + 100%)/ 2);
 		width: 120%;
@@ -332,21 +333,11 @@ body .editor-styles-wrapper,
 
 @media only screen and (min-width: 1200px) {
 
-	body .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
-		width: 120%;
-		max-width: 1368px;
-		margin-left: -10%;
-		margin-right: -10%;
-	}
-
 	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
-		width: 1020px;
-		max-width: 1020px;
-		margin-left: -24px;
-		margin-right: -24px;
+		width: 100%;
 	}
 
-	body .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
 		max-width: calc(100vw - 280px - 72px);
 		margin-left: -58px;
 		margin-right: -58px;
@@ -355,21 +346,29 @@ body .editor-styles-wrapper,
 }
 
 @media only screen and (min-width: 1500px) {
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+
+	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
 		width: 120%;
 		max-width: 1368px;
-		margin-left: -10%;
-		margin-right: -10%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	body .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
-		width: 100vw;
-		max-width: 100vw;
+	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 
-	body .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+		width: calc(100vw - 116px);
+		margin-left: -58px;
+		margin-right: -58px;
+	}
+
+	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
 		max-width: calc(100vw - 280px);
-		width: calc(100vw - 280px);
+		width: calc(100% + 116px);
 	}
 }
 
