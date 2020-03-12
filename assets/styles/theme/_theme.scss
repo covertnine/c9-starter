@@ -1759,7 +1759,7 @@ object {
 		margin-bottom: 20px;
 	}
 
-	.page-template-default .entry-content .wp-block-cover.alignwide,
+	.page-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 108%;
 		max-width: 768px;
@@ -1770,18 +1770,16 @@ object {
 
 @media only screen and (min-width: 576px) {
 
-	.page-template-default .entry-content .wp-block-cover.alignwide,
-	.wp-block[data-type="core/cover"][data-align="wide"] {
-		width: 106%;
-		max-width: 768px;
-		margin-left: -3%;
+	.page-template-default .entry-content .alignwide {
+		width: 100%;
+		max-width: 100vw;
+		margin-left: 0;
 		margin-right: 0;
 	}
 }
 
 @media only screen and (min-width: 768px) {
 
-	.page-template-default .entry-content .alignwide,
 	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 100%;
