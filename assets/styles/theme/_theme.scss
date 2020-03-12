@@ -445,7 +445,6 @@ pre {
 
 @media only screen and (min-width: 1200px) {
 
-	.page-template-default .entry-content .alignwide,
 	.page-template-default .entry-content>p,
 	.page-template-default .entry-content>h1,
 	.page-template-default .entry-content>h2,
@@ -1502,10 +1501,9 @@ pre {
 	border-radius: 0px;
 }
 
-/********************************************************************************************************************************************************************************/
+/****************************************************************************************/
 /***************************************** Block Specific Styles Begin */
-/********************************************************************************************************************************************************************************/
-
+/****************************************************************************************/
 /****************************************************************************************/
 /* WordPress Core Blocks */
 /****************************************************************************************/
@@ -1750,16 +1748,21 @@ object {
 }
 
 /****************************************************************************************/
-/***************************** WordPress Gutenberg Cover Block
+/********* WordPress Gutenberg Cover Block & alignwide + alignfull settings
 /****************************************************************************************/
 
 @media only screen and (min-width: 1px) {
 
-	.wp-block-cover {
+	.wp-block-cover,
+	.wp-block-cover-image {
 		margin-bottom: 20px;
+		height: auto;
 	}
 
+	.page-template-containerwidthpage .entry-content .alignwide,
+	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
+	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 108%;
 		max-width: 768px;
@@ -1770,7 +1773,11 @@ object {
 
 @media only screen and (min-width: 576px) {
 
-	.page-template-default .entry-content .alignwide {
+	.page-template-containerwidthpage .entry-content .alignwide,
+	.page-template-blank .entry-content .alignwide,
+	.page-template-default .entry-content .alignwide,
+	.post-template-default .entry-content .alignwide,
+	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 100%;
 		max-width: 100vw;
 		margin-left: 0;
@@ -1780,6 +1787,9 @@ object {
 
 @media only screen and (min-width: 768px) {
 
+	.page-template-containerwidthpage .entry-content .alignwide,
+	.page-template-blank .entry-content .alignwide,
+	.page-template-default .entry-content .alignwide,
 	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 100%;
@@ -1803,6 +1813,8 @@ object {
 
 @media only screen and (min-width: 992px) {
 
+	.page-template-containerwidthpage .entry-content .alignwide,
+	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
 	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
@@ -1815,6 +1827,8 @@ object {
 
 @media only screen and (min-width: 1200px) {
 
+	.page-template-containerwidthpage .entry-content .alignwide,
+	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
 	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
