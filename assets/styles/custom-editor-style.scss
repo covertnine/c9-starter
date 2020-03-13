@@ -54,6 +54,11 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 		max-width: 1140px;
 	}
 
+	.edit-post-layout:not(.is-sidebar-opened) .editor-styles-wrapper .block-editor-block-list__layout {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
 }
 
 @media only screen and (min-width: 1500px) {
@@ -163,7 +168,7 @@ body .editor-styles-wrapper,
 }
 
 /*WordPress core separator */
-.wp-block[data-type="core/separator"] .editor-block-list__block-edit {
+.wp-block[data-type="core/separator"] .block-editor-block-list__block-edit {
 	max-width: 1110px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -171,7 +176,7 @@ body .editor-styles-wrapper,
 	margin-bottom: 0px;
 }
 
-.wp-block[data-type="core/separator"] .editor-block-list__block-edit .wp-block-separator {
+.wp-block[data-type="core/separator"] .block-editor-block-list__block-edit .wp-block-separator {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }
@@ -275,12 +280,18 @@ body .editor-styles-wrapper,
 	margin-bottom: 0px;
 }
 
-/* WordPress cover block and core image block on post edit (not page edit) */
-.wp-block-image {
-	font-size: 10px;
+/* pullquote blocks */
+@media only screen and (min-width: 992px) {
+	.editor-styles-wrapper .wp-block[data-type="core/pullquote"] .wp-block-pullquote {
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
+/* WordPress cover block and core image block on post edit (not page edit) */
 /* WordPress core quote blocks on Posts and elsewhere */
+.wp-block-image,
 .editor-styles-wrapper .wp-block-quote {
 	font-size: 10px;
 }
@@ -457,25 +468,25 @@ body .editor-styles-wrapper,
 .edit-post-sidebar input[type=week],
 .edit-post-sidebar select,
 .edit-post-sidebar textarea,
-.editor-block-list__block .input-control,
-.editor-block-list__block input[type=checkbox],
-.editor-block-list__block input[type=color],
-.editor-block-list__block input[type=date],
-.editor-block-list__block input[type=datetime-local],
-.editor-block-list__block input[type=datetime],
-.editor-block-list__block input[type=email],
-.editor-block-list__block input[type=month],
-.editor-block-list__block input[type=number],
-.editor-block-list__block input[type=password],
-.editor-block-list__block input[type=radio],
-.editor-block-list__block input[type=search],
-.editor-block-list__block input[type=tel],
-.editor-block-list__block input[type=text],
-.editor-block-list__block input[type=time],
-.editor-block-list__block input[type=url],
-.editor-block-list__block input[type=week],
-.editor-block-list__block select,
-.editor-block-list__block textarea,
+.block-editor-block-list__block .input-control,
+.block-editor-block-list__block input[type=checkbox],
+.block-editor-block-list__block input[type=color],
+.block-editor-block-list__block input[type=date],
+.block-editor-block-list__block input[type=datetime-local],
+.block-editor-block-list__block input[type=datetime],
+.block-editor-block-list__block input[type=email],
+.block-editor-block-list__block input[type=month],
+.block-editor-block-list__block input[type=number],
+.block-editor-block-list__block input[type=password],
+.block-editor-block-list__block input[type=radio],
+.block-editor-block-list__block input[type=search],
+.block-editor-block-list__block input[type=tel],
+.block-editor-block-list__block input[type=text],
+.block-editor-block-list__block input[type=time],
+.block-editor-block-list__block input[type=url],
+.block-editor-block-list__block input[type=week],
+.block-editor-block-list__block select,
+.block-editor-block-list__block textarea,
 .editor-post-permalink .input-control,
 .editor-post-permalink input[type=checkbox],
 .editor-post-permalink input[type=color],
@@ -522,7 +533,6 @@ body .editor-styles-wrapper,
 /***************************** Typography */
 /****************************************************************************************/
 .editor-styles-wrapper,
-.edit-post-visual-editor.editor-styles-wrapper,
 .editor-styles-wrapper .c9-grid,
 .editor-styles-wrapper .c9-post-grid {
 	font-family: $font-family-base;
@@ -555,12 +565,27 @@ h6,
 	font-family: $headings-font-family;
 }
 
-.editor-styles-wrapper .editor-block-list__layout h1,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] {
+	font-size: 1em;
+}
+
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h1,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h2,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h3,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h4,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h5,
+.editor-styles-wrapper .wp-block[data-type="core/heading"] h6 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout h1,
 .editor-styles-wrapper h1,
 .editor-styles-wrapper .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-	font-size: 4rem
+	font-size: 4em
 }
 
 .editor-styles-wrapper .c9-heading .h1 .text-muted,
@@ -572,39 +597,39 @@ h6,
 	font-family: $headings-font-family;
 }
 
-.editor-styles-wrapper .editor-block-list__layout h2,
+.editor-styles-wrapper .block-editor-block-list__layout h2,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
 .wp-block-heading h2 {
-	font-size: 3.6rem
+	font-size: 3.6em
 }
 
-.editor-styles-wrapper .editor-block-list__layout h3,
+.editor-styles-wrapper .block-editor-block-list__layout h3,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3,
 .wp-block-heading h3 {
-	font-size: 3rem
+	font-size: 3em
 }
 
-.editor-styles-wrapper .editor-block-list__layout h4,
+.editor-styles-wrapper .block-editor-block-list__layout h4,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4,
 .wp-block-heading h4 {
-	font-size: 2.8rem
+	font-size: 2.8em
 }
 
-.editor-styles-wrapper .editor-block-list__layout h5,
+.editor-styles-wrapper .block-editor-block-list__layout h5,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5,
 .wp-block-heading h5 {
-	font-size: 2rem
+	font-size: 2em
 }
 
-.editor-styles-wrapper .editor-block-list__layout h6,
+.editor-styles-wrapper .block-editor-block-list__layout h6,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6,
 .wp-block-heading h6 {
-	font-size: 1.4rem
+	font-size: 1.4em
 }
 
 .c9-h,
@@ -622,30 +647,37 @@ h6,
 
 .editor-styles-wrapper .h1.c9-txl,
 .editor-styles-wrapper h1.c9-txl {
-	font-size: 8rem;
+	font-size: 8em;
 }
 
 .editor-styles-wrapper .h2.c9-txl,
 .editor-styles-wrapper h2.c9-txl {
-	font-size: 7.3rem;
+	font-size: 7.3em;
 }
 
 .editor-styles-wrapper .h3.c9-txl,
 .editor-styles-wrapper h3.c9-txl {
-	font-size: 6.5rem;
+	font-size: 6.5em;
 }
 
 .editor-styles-wrapper .h4.c9-txl,
 .editor-styles-wrapper h4.c9-txl {
-	font-size: 5.8rem;
+	font-size: 5.8em;
 }
 
 .editor-styles-wrapper .h5.c9-txl,
 .editor-styles-wrapper h5.c9-txl {
-	font-size: 5rem;
+	font-size: 5em;
 }
 
 .editor-styles-wrapper .h6.c9-txl,
 .editor-styles-wrapper h6.c9-txl {
-	font-size: 4.3rem;
+	font-size: 4.3em;
+}
+
+p.wp-block-subhead,
+.subhead-h,
+.c9-sh,
+.editor-styles-wrapper .c9-cta .c9-sh p {
+	font-weight: 300;
 }

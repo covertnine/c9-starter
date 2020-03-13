@@ -134,8 +134,8 @@ body {
 .editor-styles-wrapper .wp-block-pullquote p,
 .c9 .wp-block-pullquote p,
 .wp-block-pullquote.is-style-solid-color blockquote p,
-.wp-block-pullquote blockquote>.block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
-.wp-block-pullquote blockquote>.editor-rich-text p,
+.wp-block-pullquote blockquote>.block-library-pullquote__content .block-editor-rich-text[data-is-empty="true"]::before,
+.wp-block-pullquote blockquote>.block-editor-rich-text p,
 .wp-block-pullquote blockquote p:only-of-type,
 .wp-block-pullquote blockquote p:last-child {
 	font-size: 1.6em;
@@ -162,7 +162,7 @@ body {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation,
-.wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation {
+.wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation {
 	line-height: 1;
 	font-style: normal;
 }
@@ -454,8 +454,7 @@ pre {
 	.page-template-default .entry-content>h6,
 	.page-template-default .entry-content>.wp-block-columns,
 	.page-template-default .entry-content>.wp-block-button {
-		width: 1140px;
-		max-width: 100%;
+		max-width: 1140px;
 	}
 
 	.page-template-default .entry-content .alignfull,
@@ -1996,8 +1995,8 @@ object {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote cite,
-.wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation,
-.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
+.wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation,
+.wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
 	text-align: left;
 }
 
@@ -2010,7 +2009,7 @@ object {
 .editor-styles-wrapper .wp-block-quote__citation,
 .editor-styles-wrapper .wp-block-quote .wp-block-quote__citation,
 .entry-content .wp-block-quote cite,
-.wp-block-pullquote.is-style-solid-color blockquote .editor-rich-text .wp-block-pullquote__citation,
+.wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation {
@@ -2032,7 +2031,7 @@ object {
 @media only screen and (min-width: 1px) {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
-	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
+	.wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
 		font-size: 2em;
 		line-height: 2;
 	}
@@ -2041,7 +2040,7 @@ object {
 @media only screen and (min-width: 992px) {
 
 	.wp-block-pullquote.is-style-solid-color blockquote p,
-	.wp-block-pullquote.is-style-solid-color blockquote>.editor-rich-text p {
+	.wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
 		font-size: 2.6em;
 		line-height: 2;
 	}
