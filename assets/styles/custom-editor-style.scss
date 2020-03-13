@@ -285,6 +285,30 @@ body .editor-styles-wrapper,
 	font-size: 10px;
 }
 
+/* make mobile editing on gutenberg possible */
+@media only screen and (max-width: 414px) {
+
+	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper,
+	body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper {
+		max-width: 100vw;
+		margin: 0px auto;
+		width: 100%;
+	}
+
+	.block-editor-block-list__layout {
+		max-width: 100%;
+	}
+
+	.wp-block {
+		max-width: 100%;
+	}
+
+	.block-editor-block-list__layout .block-editor-block-list__block[data-align=wide],
+	.block-editor-block-list__layout .block-editor-block-list__block[data-align=full] {
+		width: 100vw;
+	}
+}
+
 /* Gutenberg blocks alignwide and alignfull */
 @media only screen and (min-width: 768px) {
 
