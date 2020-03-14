@@ -3320,11 +3320,6 @@ screen and (max-height: 300px) {
 	padding: 25px;
 }
 
-.c9-horizontal-tabs .tab-content p:only-of-type,
-.c9-horizontal-tabs .tab-content p:last-child {
-	margin-bottom: 0px;
-}
-
 /******************************************** grid **************************************/
 //for sidebar page template grid stacking and container width stacking
 @media only screen and (max-width: 667px) {
