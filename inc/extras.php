@@ -151,7 +151,7 @@ add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 
 	if ( ! empty( get_option( 'cortex_branding' )['logo'] ) ) { // logo has been uploaded
 		$cortex_logo_image = get_option( 'cortex_branding' )['logo'];
 		} else {
-		$cortex_logo_image = get_template_directory_uri() . '/assets/images/cortex-logo-gray.png';
+		$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
 		}
 	?>
 	<style type="text/css">
