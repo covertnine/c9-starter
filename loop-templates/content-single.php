@@ -51,9 +51,9 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 
 			// grab src, srcset, sizes from featured image for Retina support
 			$c9_img_id     = get_post_thumbnail_id( $post->ID );
-			$c9_img_src    = wp_get_attachment_image_url( $c9_img_id, 'c9-feature-medium-wide' );
-			$c9_img_srcset = wp_get_attachment_image_srcset( $c9_img_id, 'c9-feature-medium-wide' );
-			$c9_img_sizes  = wp_get_attachment_image_sizes( $c9_img_id, 'c9-feature-medium-wide' );
+			$c9_img_src    = wp_get_attachment_image_url( $c9_img_id, 'large' );
+			$c9_img_srcset = wp_get_attachment_image_srcset( $c9_img_id, 'large' );
+			$c9_img_sizes  = wp_get_attachment_image_sizes( $c9_img_id, 'large' );
 
 			?>
 		<figure class="entry-image">

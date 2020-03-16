@@ -1369,7 +1369,8 @@ pre {
 	color: #ccc;
 }
 
-.entry-big-header .entry-title-box .entry-meta .updated {
+.entry-big-header .entry-title-box .entry-meta .updated,
+.entry-header .entry-meta .updated {
 	display: none;
 }
 

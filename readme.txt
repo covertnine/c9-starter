@@ -143,6 +143,9 @@ Just this one, for
 
 
 ## Changelog
+2.1
+Adjustments to markup for WordPress 5.4 release changes to Gutenberg.
+
 2.0.9
 Removed defunct theme settings. Moved admin settings above client folder to make it easier to add settings. Adjustments to fonts from theme settings.
 
