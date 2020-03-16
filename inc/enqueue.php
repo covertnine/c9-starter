@@ -35,7 +35,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 				$ga_snippet = "window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
-				
+
 				gtag('config', '" . get_option( 'cortex_seo' )['google_analytics_id'] . "')";
 
 				wp_add_inline_script( 'ga-url', $ga_snippet );
@@ -97,3 +97,11 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// remove inline styles added by WP to Gutenberg
+add_filter('block_editor_settings', 'c9_kill_goot_styles');
+
+function c9_kill_goot_styles($editor_settings) {
+	unset($editor_settings['styles'][0]);
+	return $editor_settings;
+}
