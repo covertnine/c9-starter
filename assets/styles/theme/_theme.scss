@@ -1837,6 +1837,15 @@ object {
 		margin-left: -10%;
 		margin-right: -10%;
 	}
+
+	.page-template-default .entry-content .alignfull,
+	.wp-block[data-type="core/cover"][data-align="full"] {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 }
 
 /****************************************************************************************/
