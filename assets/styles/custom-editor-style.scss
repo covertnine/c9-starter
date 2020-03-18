@@ -290,6 +290,12 @@ body .editor-styles-wrapper,
 	display: block;
 }
 
+[data-align="center"] .wp-block-image .components-resizable-box__container,
+[data-align="center"] .wp-block-image img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* WordPress cover block and core image block on post edit (not page edit) */
 /* WordPress core quote blocks on Posts and elsewhere */
 .wp-block-image,
