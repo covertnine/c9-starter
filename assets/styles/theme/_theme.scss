@@ -1502,64 +1502,19 @@ pre {
 }
 
 /****************************************************************************************/
-/***************************************** Block Specific Styles Begin */
-/****************************************************************************************/
 /****************************************************************************************/
 /* WordPress Core Blocks */
 /****************************************************************************************/
+/****************************************************************************************/
 
+/****************************************************************************************/
+/* WordPress Image Blocks */
+/****************************************************************************************/
 .entry-content .wp-block-image:only-child,
 .entry-content .wp-block-image:last-child {
 	margin-bottom: 0px;
 }
 
-/* horizontal rules or separators */
-.entry-content hr,
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	text-align: center;
-	margin: 30px auto;
-	max-width: 1140px;
-	border: 0;
-	height: 2px;
-	width: 33%;
-	background-color: $gray-500;
-}
-
-.entry-content .wp-block-separator.is-style-wide,
-.wp-block-separator.is-style-wide {
-	width: 100%;
-	height: 2px;
-	background-color: $gray-500;
-	border: 0;
-}
-
-.entry-content .wp-block-separator.is-style-dots,
-.wp-block-separator.is-style-dots {
-	width: 100%;
-	background-color: transparent;
-	height: 2px;
-	border: 0;
-}
-
-.entry-content .wp-block-separator.is-style-dots:before,
-.wp-block-separator.is-style-dots:before {
-	color: $gray-500;
-	height: 2px;
-	margin-top: -8px;
-	display: block;
-	border: 0;
-}
-
-/* definition lists */
-.entry-content dt {
-	font-weight: $font-weight-bold;
-}
-
-.entry-content dd {
-	margin: 0 1.5em 1.5em;
-}
-
-/* WordPress Core Image Blocks */
 img {
 	height: auto;
 	max-width: 100%;
@@ -1599,75 +1554,75 @@ img {
 	}
 }
 
-/* WordPress Core Table Blocks */
-table {
-	margin: 0 0 1em;
+/****************************************************************************************/
+/* horizontal rules or core block separators */
+/****************************************************************************************/
+.entry-content hr,
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	text-align: center;
+	margin: 30px auto;
+	max-width: 1140px;
+	border: 0;
+	height: 2px;
+	width: 33%;
+	background-color: $gray-500;
 }
 
-table tr td,
-table tr th {
-	padding: 15px;
-	text-align: left;
-}
-
-table tr td {
-	vertical-align: top;
-}
-
-table tr th {
-	font-weight: $font-weight-bold;
-	letter-spacing: 0.02em;
-	text-transform: uppercase;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
-
-.wp-block-embed-twitter .twitter-tweet {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
-	position: relative;
-}
-
-.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before {
-	content: "";
-	display: block;
-	padding-top: 56.25%;
-}
-
-.entry-content .wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe,
-.wp-embed-responsive .wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.entry-content .wp-block-separator.is-style-wide,
+.wp-block-separator.is-style-wide {
 	width: 100%;
-	height: 100%;
+	height: 2px;
+	background-color: $gray-500;
+	border: 0;
 }
 
-.wp-embed-aspect-16-9:only-child {
-	margin-bottom: 0px;
+.entry-content .wp-block-separator.is-style-dots,
+.wp-block-separator.is-style-dots {
+	width: 100%;
+	background-color: transparent;
+	height: 2px;
+	border: 0;
 }
+
+.entry-content .wp-block-separator.is-style-dots:before,
+.wp-block-separator.is-style-dots:before {
+	color: $gray-500;
+	height: 2px;
+	margin-top: -8px;
+	display: block;
+	border: 0;
+}
+
+/****************************************************************************************/
+/* WordPress Core definition lists */
+/****************************************************************************************/
+.entry-content dt {
+	font-weight: $font-weight-bold;
+}
+
+.entry-content dd {
+	margin: 0 1.5em 1.5em;
+}
+
+
+/****************************************************************************************/
+/* WordPress Core latest posts block */
+/****************************************************************************************/
 
 .wp-block-latest-posts li a {
 	text-decoration: underline;
 }
 
+/****************************************************************************************/
+/* WordPress Core search block */
+/****************************************************************************************/
 .c9 .wp-block-search .wp-block-search__label {
 	margin-bottom: 8px;
 	font-size: 1.8em;
 }
 
 /****************************************************************************************/
-/***************************** WordPress Gutenberg Column Blocks
+/* WordPress Gutenberg Column Blocks
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
 	.wp-block-column {
@@ -1823,6 +1778,14 @@ object {
 		margin-left: calc((-100vw + 100%) / 2);
 		margin-right: calc((-100vw + 100%) / 2);
 	}
+
+	.page-template-default .entry-content .alignfull,
+	.wp-block[data-type="core/cover"][data-align="full"] {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1838,19 +1801,31 @@ object {
 		margin-right: -10%;
 	}
 
-	.page-template-default .entry-content .alignfull,
-	.wp-block[data-type="core/cover"][data-align="full"] {
-		width: 100vw;
-		max-width: 100vw;
-		margin-left: 0;
-		margin-right: 0;
-	}
-
 }
 
 /****************************************************************************************/
 /* WordPress Gutenberg Table Block */
 /****************************************************************************************/
+table {
+	margin: 0 0 1em;
+}
+
+table tr td,
+table tr th {
+	padding: 15px;
+	text-align: left;
+}
+
+table tr td {
+	vertical-align: top;
+}
+
+table tr th {
+	font-weight: $font-weight-bold;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
 .entry-content .wp-block-table,
 .entry-content .wp-block-table tbody,
 .entry-content .wp-block-table tbody tr,
@@ -2175,6 +2150,52 @@ object {
 .entry-content ul:not(.wp-block-gallery) li,
 .entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
+}
+
+/****************************************************************************************/
+/* WordPress Core Embed Blocks */
+/****************************************************************************************/
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+.wp-block-embed iframe {
+	width: 100%;
+}
+
+/* twitter */
+.wp-block-embed-twitter .twitter-tweet {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 16 by 9 ratio blocks */
+.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
+	position: relative;
+}
+
+.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before {
+	content: "";
+	display: block;
+	padding-top: 56.25%;
+}
+
+.entry-content .wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wp-embed-aspect-16-9:only-child {
+	margin-bottom: 0px;
 }
 
 /****************************************************************************************/

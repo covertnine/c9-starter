@@ -157,6 +157,12 @@ body .editor-styles-wrapper,
 /***************************** core block edits for backend only
 /****************************************************************************************/
 
+/* tightening other blocks */
+.editor-styles-wrapper [data-block] {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 /* embeddable tweets */
 .wp-block[data-type="core-embed/twitter"] .wp-block-embed iframe {
 	margin-left: auto;
@@ -276,10 +282,19 @@ body .editor-styles-wrapper,
 	margin-bottom: 20px;
 }
 
-/* tightening other blocks */
-.editor-styles-wrapper [data-block] {
-	margin-top: 0px;
-	margin-bottom: 0px;
+/* WordPress image blocks */
+.wp-block-image .aligncenter>figcaption,
+.wp-block-image .alignleft>figcaption,
+.wp-block-image .alignright>figcaption,
+.wp-block-image.is-resized>figcaption {
+	display: block;
+}
+
+/* WordPress cover block and core image block on post edit (not page edit) */
+/* WordPress core quote blocks on Posts and elsewhere */
+.wp-block-image,
+.editor-styles-wrapper .wp-block-quote {
+	font-size: 10px;
 }
 
 /* pullquote blocks */
@@ -289,13 +304,6 @@ body .editor-styles-wrapper,
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
-
-/* WordPress cover block and core image block on post edit (not page edit) */
-/* WordPress core quote blocks on Posts and elsewhere */
-.wp-block-image,
-.editor-styles-wrapper .wp-block-quote {
-	font-size: 10px;
 }
 
 /* make mobile editing on gutenberg possible */
