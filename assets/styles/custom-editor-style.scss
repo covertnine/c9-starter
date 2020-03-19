@@ -244,16 +244,16 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.wp-block-gallery):not(.nav-tabs):not(.c9-share-list) li,
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li,
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.wp-block-gallery):not(.nav-tabs):not(.c9-share-list) li {
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li {
 	margin: 10px 0px;
 }
 
 .editor-styles-wrapper .wp-block>ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"] ol,
-.editor-styles-wrapper .wp-block>ul:not(.wp-block-gallery):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
-.editor-styles-wrapper ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs),
+.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 10px;
 	margin: 30px 0px 35px 45px;
