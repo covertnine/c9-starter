@@ -2101,9 +2101,15 @@ table tr th {
 }
 
 .entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
 .entry-content ol {
 	padding: 0px 0px 0px 20px;
-	margin: 30px 0px 45px 45px;
+	margin: 30px 0px 30px 15px;
+}
+
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+	list-style-type: disc;
 }
 
 .entry-content ol,
@@ -2124,22 +2130,22 @@ table tr th {
 	list-style-type: none;
 	padding-left: 0px;
 	padding-right: 0px;
-	margin: 30px 0px 30px 30px;
+	margin: 30px 0px 30px 15px;
 }
 
 .entry-content ol li,
 .editor-styles-wrapper ol li {
 	counter-increment: step-counter;
-	padding-left: 40px;
+	padding-left: 14px;
 }
 
 .entry-content ol li:before,
 .editor-styles-wrapper ol li:before {
 	content: counter(step-counter);
-	width: 22px;
+	width: 20px;
 	display: inline-block;
 	font-weight: $font-weight-bold;
-	margin: 0 7px 0 -31px;
+	margin: 0px 0px 0px -12px;
 }
 
 .entry-content ol li>ol>li,
