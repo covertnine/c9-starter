@@ -1808,6 +1808,14 @@ img {
 		margin-right: -10%;
 	}
 
+	.page-template-default .entry-content .alignfull,
+	.wp-block[data-type="core/cover"][data-align="full"] {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: calc((-100vw + 100%) / 2);
+		margin-right: calc((-100vw + 100%) / 2);
+	}
+
 }
 
 /****************************************************************************************/
