@@ -1,6 +1,10 @@
 // used to match Gutenberg Editor backend with frontend of site
 @import "theme/_theme_variables.scss";
 
+.block-editor-rich-text__editable a {
+	color: $primary;
+}
+
 /****************************************************************************************/
 /***************************** post title */
 /****************************************************************************************/
@@ -266,13 +270,20 @@ body .editor-styles-wrapper,
 	font-size: 1.8em;
 }
 
-.editor-styles-wrapper .wp-block-search .wp-block-search__button {
+.editor-styles-wrapper .wp-block-search .wp-block-search__input {
+	min-height: 38px;
+}
+
+.editor-styles-wrapper .wp-block-search .wp-block-search__button,
+.editor-styles-wrapper .wp-block-search__button {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 14px;
-	background-color: $primary;
+	background: $primary;
+	box-shadow: none;
 	border-radius: 0px;
-	padding: 2px 25px;
+	border: none;
+	padding: 12px 35px;
 	color: $light;
 }
 
