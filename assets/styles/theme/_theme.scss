@@ -2875,8 +2875,8 @@ screen and (max-height: 300px) {
 
 .site button:focus,
 .site :focus {
-	-webkit-focus-ring-color: $dark;
-	outline-color: $dark;
+	-webkit-focus-ring-color: $gray-300;
+	outline-color: $gray-300;
 	outline-width: 1px;
 	outline-style: dotted;
 }

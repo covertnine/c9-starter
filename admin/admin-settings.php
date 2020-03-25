@@ -122,6 +122,7 @@ if (class_exists('WP_OSA')) {
 				'yes' => 'Yes.',
 				'no'  => 'No, I will take care of my fonts.',
 			),
+			'default' => 'no'
 		)
 	);
 
@@ -143,6 +144,7 @@ if (class_exists('WP_OSA')) {
 		'Open Sans Condensed'   => 'Open Sans Condensed',
 		'Oswald'          		=> 'Oswald',
 		'Playfair Display'   	=> 'Playfair Display',
+		'Poppins'				=> 'Poppins',
 		'PT Sans'         		=> 'PT Sans',
 		'PT Serif'         		=> 'PT Serif',
 		'Quicksand'         	=> 'Quicksand',

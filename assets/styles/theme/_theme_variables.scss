@@ -1,22 +1,15 @@
 // c9
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 :root {
-    font-family: 'helvetica neue', helvetica, sans-serif;
+	font-family: 'helvetica neue', helvetica, sans-serif;
 }
 
 // Typography
-$headings-font-family: 'helvetica neue',
-helvetica,
-sans-serif;
+$headings-font-family: inherit;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: 'helvetica neue',
-helvetica,
-sans-serif;
-;
-$font-family-base: 'helvetica neue',
-helvetica,
-sans-serif;
+$font-family-sans-serif: inherit;
+$font-family-base: inherit;
 
 $line-height-base: 1.3;
 
