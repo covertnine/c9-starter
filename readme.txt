@@ -143,6 +143,9 @@ Just this one, for
 
 
 ## Changelog
+2.1.1
+Adjustments to font settings to account for new markup and setting defaults on theme fonts
+
 2.1
 Adjustments to markup for WordPress 5.4 release changes to Gutenberg.
 
