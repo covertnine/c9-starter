@@ -652,11 +652,16 @@ pre,
 	margin: 0px;
 	font-size: 2em;
 	line-height: 2;
+	cursor: pointer;
 }
 
 .navbar-toggler,
 .nav-search .btn-nav-search {
 	color: $navbar-light-color;
+}
+
+.nav-search .btn-nav-search:focus {
+	outline: none;
 }
 
 .header-navbar .navbar-toggler:focus {
@@ -3090,6 +3095,7 @@ screen and (max-height: 300px) {
 	border: none;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
+	cursor: pointer;
 }
 
 #fullscreensearch .search-close:hover {
