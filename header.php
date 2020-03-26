@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 
 	<div class="hfeed site c9" id="page">
-
+		<div id="smoothwrapper" <?php body_class(); ?>>
 		<?php
 		if ( file_exists( locate_template( 'client/inc/topnav.php' ) ) ) {
 			include( locate_template( 'client/inc/topnav.php' ) );
