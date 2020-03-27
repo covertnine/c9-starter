@@ -1,1 +1,269 @@
-!function(e){var a={};function r(t){if(a[t])return a[t].exports;var n=a[t]={i:t,l:!1,exports:{}};return e[t].call(n.exports,n,n.exports,r),n.l=!0,n.exports}r.m=e,r.c=a,r.d=function(e,a,t){r.o(e,a)||Object.defineProperty(e,a,{enumerable:!0,get:t})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,a){if(1&a&&(e=r(e)),8&a)return e;if(4&a&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(r.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&a&&"string"!=typeof e)for(var n in e)r.d(t,n,function(a){return e[a]}.bind(null,n));return t},r.n=function(e){var a=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(a,"a",a),a},r.o=function(e,a){return Object.prototype.hasOwnProperty.call(e,a)},r.p="",r(r.s=0)}([function(e,a){jQuery(document).ready(function(){var e;e=jQuery,jQuery(window).scroll(function(){var e=jQuery(window).scrollTop();e>=633&&(jQuery("#left-sidebar").addClass("fixed-sidebar"),jQuery("#right-sidebar").addClass("fixed-sidebar")),e<=632&&(jQuery("#left-sidebar").removeClass("fixed-sidebar"),jQuery("#right-sidebar").removeClass("fixed-sidebar"))}),e(window).width()<=667?(e(".navbar").addClass("navbar-small"),e("body").addClass("navbar-small"),e(window).scroll(function(){var a=e(window).scrollTop();a>=288&&e(".navbar").addClass("opacity0"),a<=287&&e(".navbar").removeClass("opacity0"),a>=338&&(e(".navbar").addClass("fixed-top opacity100"),e(".header-navbar").addClass("jumpfix")),a<=337&&(e(".navbar").removeClass("fixed-top opacity100"),e(".header-navbar").removeClass("jumpfix"))})):e(window).scroll(function(){var a=e(window).scrollTop();a>=168&&e(".navbar").addClass("opacity0"),a<=167&&e(".navbar").removeClass("opacity0"),a>=218&&(e(".navbar").addClass("navbar-small fixed-top opacity100"),e(".header-navbar").addClass("jumpfix")),a<=217&&(e(".navbar").removeClass("navbar-small fixed-top opacity100"),e(".header-navbar").removeClass("jumpfix"))}),e(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({disableOn:700,type:"iframe",mainClass:"mfp-zoom-in",removalDelay:160,preloader:!1,fixedContentPos:!1}),e('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a').click(function(a){a.preventDefault();var r=[],t=e(this).attr("href"),n=e(this).attr("title");r.push({src:t,title:n}),e(this).parent().parent().nextAll().children().find("a").each(function(){var a=e(this).attr("href"),t=e(this).attr("title");r.push({src:a,title:t})}),e(this).parent().parent().prevAll().children().find("a").each(function(){var a=e(this).attr("href"),t=e(this).attr("title");r.push({src:a,title:t})}),e.magnificPopup.open({items:r,type:"image",gallery:{enabled:!0},mainClass:"mfp-zoom-in",callbacks:{open:function(){e.magnificPopup.instance.next=function(){var a=this;a.wrap.removeClass("mfp-image-loaded"),setTimeout(function(){e.magnificPopup.proto.next.call(a)},120)},e.magnificPopup.instance.prev=function(){var a=this;a.wrap.removeClass("mfp-image-loaded"),setTimeout(function(){e.magnificPopup.proto.prev.call(a)},120)}},imageLoadComplete:function(){var e=this;setTimeout(function(){e.wrap.addClass("mfp-image-loaded")},16)}}})}),e(".btn-nav-search").on("click",function(a){a.preventDefault(),e("#fullscreensearch").addClass("open"),e('#fullscreensearch > form > div > input[type="search"]').focus()}),e("#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click keyup",function(a){a.target!=this&&"search-close"!=a.target.className&&27!=a.keyCode||(e(this).removeClass("open"),e(this).parent().removeClass("open"),e(this).parent().parent().removeClass("open"))})})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+jQuery(document).ready(function () {
+  c9Page.init();
+});
+
+var c9Page = function ($) {
+  var c9PageInit = {};
+
+  c9PageInit.init = function () {
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
+    jQuery(window).scroll(function () {
+      //scroll position variable
+      var scroll = jQuery(window).scrollTop();
+
+      if (scroll >= 633) {
+        jQuery("#left-sidebar").addClass("fixed-sidebar");
+        jQuery("#right-sidebar").addClass("fixed-sidebar");
+      }
+
+      if (scroll <= 632) {
+        jQuery("#left-sidebar").removeClass("fixed-sidebar");
+        jQuery("#right-sidebar").removeClass("fixed-sidebar");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
+
+    if ($(window).width() <= 667) {
+      //use small nav for mobile
+      $(".navbar").addClass("navbar-small");
+      $("body").addClass("navbar-small");
+      $(window).scroll(function () {
+        //scroll position variable
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 288) {
+          $(".navbar").addClass("opacity0");
+        }
+
+        if (scroll <= 287) {
+          $(".navbar").removeClass("opacity0");
+        }
+
+        if (scroll >= 338) {
+          $(".navbar").addClass("fixed-top opacity100");
+          $(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
+        }
+
+        if (scroll <= 337) {
+          $(".navbar").removeClass("fixed-top opacity100");
+          $(".header-navbar").removeClass("jumpfix"); //remove extra classes and put navs back at top
+        }
+      });
+    } else {
+      //end small screens so desktop next
+      //var logoHeight = $(".c9-custom-logo").height();
+      $(window).scroll(function () {
+        //scroll position variable
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 168) {
+          $(".navbar").addClass("opacity0");
+        }
+
+        if (scroll <= 167) {
+          $(".navbar").removeClass("opacity0");
+        }
+
+        if (scroll >= 218) {
+          $(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
+
+          $(".header-navbar").addClass("jumpfix"); //$(".header-navbar.jumpfix").css("height", "108px");
+        }
+
+        if (scroll <= 217) {
+          $(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
+
+          $(".header-navbar").removeClass("jumpfix");
+        }
+      });
+    } //end regular
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-zoom-in",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    });
+    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a').click(function (e) {
+      e.preventDefault();
+      var items = [];
+      var firstItem = $(this).attr("href");
+      var firstCaption = $(this).attr("title");
+      items.push({
+        src: firstItem,
+        title: firstCaption
+      }); //items after
+
+      $(this).parent().parent().nextAll().children().find("a").each(function () {
+        var imageLink = $(this).attr("href");
+        var imageCaption = $(this).attr("title");
+        items.push({
+          src: imageLink,
+          title: imageCaption
+        });
+      }); //items before
+
+      $(this).parent().parent().prevAll().children().find("a").each(function () {
+        var imageLink = $(this).attr("href");
+        var imageCaption = $(this).attr("title");
+        items.push({
+          src: imageLink,
+          title: imageCaption
+        });
+      });
+      $.magnificPopup.open({
+        items: items,
+        type: "image",
+        gallery: {
+          enabled: true
+        },
+        mainClass: "mfp-zoom-in",
+        callbacks: {
+          open: function () {
+            //overwrite default prev + next function. Add timeout for css3 crossfade animation
+            $.magnificPopup.instance.next = function () {
+              var self = this;
+              self.wrap.removeClass("mfp-image-loaded");
+              setTimeout(function () {
+                $.magnificPopup.proto.next.call(self);
+              }, 120);
+            };
+
+            $.magnificPopup.instance.prev = function () {
+              var self = this;
+              self.wrap.removeClass("mfp-image-loaded");
+              setTimeout(function () {
+                $.magnificPopup.proto.prev.call(self);
+              }, 120);
+            };
+          },
+          imageLoadComplete: function () {
+            var self = this;
+            setTimeout(function () {
+              self.wrap.addClass("mfp-image-loaded");
+            }, 16);
+          }
+        }
+      });
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////       full screen search        ///////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    $(".btn-nav-search").on("click", function (e) {
+      e.preventDefault();
+      $("#fullscreensearch").addClass("open");
+      $('#fullscreensearch > form > div > input[type="search"]').focus();
+    });
+    $("#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click keyup", function (e) {
+      if (e.target == this || e.target.className == "search-close" || e.keyCode == 27) {
+        $(this).removeClass("open");
+        $(this).parent().removeClass("open");
+        $(this).parent().parent().removeClass("open");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  };
+
+  return c9PageInit;
+}(jQuery);
+
+/***/ })
+/******/ ]);
