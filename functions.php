@@ -73,7 +73,7 @@ require get_template_directory() . '/admin/tgm-init.php';
 if (file_exists(get_template_directory() . '/client/client.php')) {
 	require get_template_directory() . '/client/client.php';
 } else {
-	add_action('admin_notices', 'need_client_folder');
+	add_action('admin_notices', 'c9_need_client_folder');
 }
 
 /**
@@ -81,7 +81,7 @@ if (file_exists(get_template_directory() . '/client/client.php')) {
  *
  * @return void
  */
-function need_client_folder()
+function c9_need_client_folder()
 {
 ?>
 	<div class="update-nag notice">

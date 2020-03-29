@@ -10,10 +10,10 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
+$c9_sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
 ?>
 
-<?php if ( 'both' === $sidebar_pos ) : ?>
+<?php if ( 'both' === $c9_sidebar_pos ) : ?>
 <div class="widget-area" id="right-sidebar" role="complementary">
 	<?php else : ?>
 <div class="widget-area" id="right-sidebar" role="complementary">

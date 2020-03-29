@@ -1,177 +1,69 @@
-# C9 Starter
+=== C9 Starter ===
+Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
+Donate link: https://www.covertnine.com/about
+Requires at least: 5.3.2
+Tested up to: 5.4
+Requires PHP: 7.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable Tag: 2.1.1
 
-Based on [understrap](https://understrap.com).
+A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
-## Git Repos
+== Description ==
+A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin.
 
-In addition to this repo, you will need to create and version a `client` folder, which you will keep at the top level of `c9` and at a minimum contain `client/client.php`.
+== Frequently Asked Questions ==
 
-To start a new project, either clone the client boilerplate (coming soon), or create you own repo.
+= Is there source code for this theme? =
 
-- {client name}-client (e.g., [client-starter](https://github.com/covertnine/client-starter) )
+Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-starter).
 
-## Git Branches
+= Does this theme support Gutenberg? =
 
-There are two main branches:
+Yes! Use the C9 Blocks plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
 
-- main
-- develop
+== Changelog ==
 
-Unless you have a clear reason not to, default to the `develop` branch. When you develop, pull from develop, commit often, and push back to `develop` at the end of your work. Once the code is **production-ready**, merge your changes back into `main`.
-
-If you make a change to the parent theme _and_ the client folder, make _sure_ to follow the same update process for the client.
-
-### For developing hotfixes and specific features that might break things
-
-Follow the steps and naming conventions per [this guide](https://nvie.com/posts/a-successful-git-branching-model/). Or ask @samirillian.
-
-## NPM Build Steps
-
-### Installing Dependencies
-
-- Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
-- Then open your terminal and browse to the location of your UnderStrap copy
-- Run: `npm install`
-
-### Running
-
-To work with and compile your Sass files on the fly start: `npm run start`.
-
-## Build Implementation Details
-
-### Overview
-
-The files relevant to your build in rough order of execution:
-`package.json`, `gulpfile.js`, `webpack.config.js`
-
-The files relevant to formatting and linting in order of importance:
-`.eslintrc.json`, `.eslintignore`, and `.prettierrc`.
-
-Right now, most everything happens in `.eslintrc.json`. This is where you define the rulesets for formatting and linting.
-
-#### package.json
-
-The package.json file handles the `npm run start` command, and triggers the `gulp watch` command.
-
-#### gulpfile.js
-
-`gulp watch` runs the following code in the gulpfile:
-
-```
-gulp.task("watch", ["styles", "scripts"], function() {...});
-```
-
-`gulp.task("{taskname}")` allows you to define any job you want to done when building or developing. In the above code, `"styles"` and `"scripts"` are also gulp tasks defined in the gulpfile, which are triggered as part of the `watch` task.
-
-You will hook up any new build steps starting in this file.
-
-### Code Editor
-
-Visual Studio is highly recommended.
-
-### Formatting, Linting, Debugging
-
-#### Javascript
-
-Follow [this debug]()
-
-#### PHP
-
-Use Xdebug. Follow [this guide](https://gist.github.com/ahmadawais/d6e809d45b8103b2b3a79fa8845f9995) to get xdebug working with Vscode and Local by Flywheel. (Remember, with Local by Flywheel, you're spinning up a virtual environment with its own PHP execution.)
-
-Other links:
-[Xdebug Functions](https://xdebug.org/docs/all_functions)
-
-[PHP in VSCode](https://code.visualstudio.com/docs/languages/php)
-
-## Addendum: VSCode
-
-Access commands with `cmd-shift-p`:
-
-![Command](./assets/images/vs-command.png)
-
-From this panel, you can navigate to the extension installer and adjust your settings.
-
-### Necessary Extensions:
-
-**PHP**
-
-1. [phpdebug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
-2. [php intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-
-**JS**
-
-1. [Prettier Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-2. [ESLint](https://github.com/microsoft/vscode-eslint)
-
-**CSS**
-
-1. [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
-
-### Settings:
-
-Again, use the command panel to access settings.
-![Settings](./assets/images/vscode-settings.png)
-
-There's a distinction between Workspace settings and User settings. Workspace settings are, as you might expect, specific to your project, and a `.vscode` directory will be added to the root of your project.
-
-#### Relevant User Settings
-
-```
-"editor.formatOnSave": true,
-"prettier.requireConfig": true,
-"files.autoSave": "afterDelay",
-"prettier.eslintIntegration": true,
-```
-
-You might also check out [prettier's options for language-specific settings](https://github.com/prettier/prettier-vscode).
-
-### Workspace Settings
-
-Just this one, for
-
-```
-{
-    "php.validate.executablePath": "/Users/{username}/Local Sites/cortex/conf/php"
-}
-```
-
-### In Summary
-
-1. Install extensions
-2. Update your settings to make the extensions work well with VSCode.
-
-
-## Changelog
-2.1.1
+= 2.1.1 =
 Adjustments to font settings to account for new markup and setting defaults on theme fonts
 
-2.1
+= 2.1 =
 Adjustments to markup for WordPress 5.4 release changes to Gutenberg.
 
-2.0.9
+= 2.0.9 =
 Removed defunct theme settings. Moved admin settings above client folder to make it easier to add settings. Adjustments to fonts from theme settings.
 
-2.0.8
+= 2.0.8 = 
 Fix size text issues on list items. Adjusted admin settings so client folders can add/overwrite settings. Changed Gravity Forms block CSS declarations.
 
-2.0.7
+= 2.0.7 = 
 Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
 
-2.0.6
+= 2.0.6 = 
 Removed heading declaration from cta bar from parent theme
 
-2.0.5
+= 2.0.5 = 
 Added C9 outer class element
 
-2.0.4
+= 2.0.4 = 
 Tweaks to core WP blocks for display on posts and pages with C9 Grids
 
-2.0.3
+= 2.0.3 = 
 Adjustments to Gravity Forms font size support
 
-2.0.1
+= 2.0.1 = 
 Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
 
-2.0
+= 2.0 = 
 Initial release of starter theme with support for all WordPress 5.3 blocks
+
+
+== Upgrade Notice ==
+
+= 2.1.1 =
+* This version of the theme works with the latest version of WordPress version 5.4
+
+== Resources ==
+* [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
+* [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
