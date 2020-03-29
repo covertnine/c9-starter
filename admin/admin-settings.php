@@ -78,20 +78,20 @@ if (class_exists('WP_OSA')) {
 	 *
 	 * Object for the class `WP_OSA`.
 	 */
-	$wposa_obj = new WP_OSA();
+	$c9_wposa_obj = new WP_OSA();
 
 
 	// -----------------------------//
 	// ---- Start C9 Branding ---//
 	// ------------------------------//
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_branding',
 			'title' => __('Branding', 'c9'),
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'   => 'logo',
@@ -101,7 +101,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'   => 'apple-touch',
@@ -112,7 +112,7 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// Field: Default Font Selector
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'      => 'defaultFont',
@@ -158,7 +158,7 @@ if (class_exists('WP_OSA')) {
 
 
 	// Field: Default Font Selector
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'      => 'heading_font',
@@ -171,7 +171,7 @@ if (class_exists('WP_OSA')) {
 
 
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'      => 'subheading_font',
@@ -183,7 +183,7 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_branding',
 		array(
 			'id'      => 'body_font',
@@ -201,13 +201,13 @@ if (class_exists('WP_OSA')) {
 	// ------------------------------//
 	// ----- Start Cortex Social ----//
 	// ------------------------------//
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_social',
 			'title' => __('Social', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'twitter',
@@ -217,7 +217,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'facebook',
@@ -226,7 +226,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Facebook Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'instagram',
@@ -235,7 +235,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Instagram Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'pinterest',
@@ -244,7 +244,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Pinterest Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'spotify',
@@ -253,7 +253,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Spotify Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'youtube',
@@ -262,7 +262,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Youtube Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'flickr',
@@ -271,7 +271,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Flickr Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'tumblr',
@@ -280,7 +280,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Tumblr Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'yelp',
@@ -289,7 +289,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Yelp Name or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'subreddit',
@@ -298,7 +298,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Subreddit Name or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'linkedin',
@@ -307,7 +307,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Linkedin Username or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'github',
@@ -316,7 +316,7 @@ if (class_exists('WP_OSA')) {
 			'desc' => __('Input your Github Name or full url', 'c9'),
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_social',
 		array(
 			'id'   => 'soundcloud',
@@ -333,7 +333,7 @@ if (class_exists('WP_OSA')) {
 	// ---------------------------//
 	// ---- Start Cortex Footer ---//
 	// ----------------------------//
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_footer',
 			'title' => __('Footer', 'c9'),
@@ -341,7 +341,7 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_footer',
 		array(
 			'id'      => 'show_search',
@@ -356,7 +356,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_footer',
 		array(
 			'id'   => 'copyright_content',
@@ -377,7 +377,7 @@ if (class_exists('WP_OSA')) {
 	// ---------------------------//
 
 	// Section: Other Settings.
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_posts',
 			'title' => __('Posts', 'c9'),
@@ -385,7 +385,7 @@ if (class_exists('WP_OSA')) {
 	);
 
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_posts',
 		array(
 			'id'      => 'author_visible',
@@ -400,7 +400,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_posts',
 		array(
 			'id'      => 'blog_sidebar',
@@ -416,7 +416,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 	// Field: Multicheck.
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_posts',
 		array(
 			'id'      => 'archive_sidebar',
@@ -439,14 +439,14 @@ if (class_exists('WP_OSA')) {
 	// ---------------------------//
 	// ---- Start Cortex SEO ---//
 	// ---------------------------//
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_seo',
 			'title' => __('SEO', 'c9'),
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_seo',
 		array(
 			'id'      => 'google_analytics_id',
@@ -456,7 +456,7 @@ if (class_exists('WP_OSA')) {
 			'default' => '',
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_seo',
 		array(
 			'id'       => 'matomo_snippet',
@@ -467,7 +467,7 @@ if (class_exists('WP_OSA')) {
 			'default'  => '',
 		)
 	);
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_seo',
 		array(
 			'id'       => 'gtm_snippet',
@@ -487,14 +487,14 @@ if (class_exists('WP_OSA')) {
 	// ---- Start Cortex Advanced ---//
 	// ------------------------------//
 
-	$wposa_obj->add_section(
+	$c9_wposa_obj->add_section(
 		array(
 			'id'    => 'cortex_advanced',
 			'title' => __('Advanced', 'c9'),
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_advanced',
 		array(
 			'id'       => 'custom_css',
@@ -506,7 +506,7 @@ if (class_exists('WP_OSA')) {
 		)
 	);
 
-	$wposa_obj->add_field(
+	$c9_wposa_obj->add_field(
 		'cortex_advanced',
 		array(
 			'id'       => 'custom_js',
