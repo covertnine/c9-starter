@@ -67,3 +67,5 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
+* [_s](https://underscores.me)
+* [Understrap](https://understrap.com)
