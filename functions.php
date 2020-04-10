@@ -94,5 +94,3 @@ function c9_need_client_folder()
  * Functions for managing the information your blog puts out via the WP-Api.
  */
 require get_template_directory() . '/inc/wpapi.php';
-
-add_editor_style(get_template_directory_uri() . '/assets/dist/css/gutenberg-editor-reset.css');

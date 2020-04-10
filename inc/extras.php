@@ -67,7 +67,7 @@ if ( ! function_exists( 'c9_change_logo_class' ) ) {
 	 */
 	function c9_change_logo_class( $html ) {
 
-		$html = str_replace( 'class="custom-logo"', 'class="img-fluid c9-custom-logo"', $html );
+		$html = str_replace( 'class="custom-logo"', 'class="img-fluid navbar-brand c9-custom-logo"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link c9-custom-logo"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 

@@ -96,6 +96,18 @@ function c9_register_required_plugins() {
 			'required' => false,
 		),
 
+		array(
+			'name'		=> 'WooCommerce',
+			'slug'		=> 'woocommerce',
+			'required'	=> false,
+		),
+
+		array(
+			'name'		=> 'WooCommerce Order Delivery',
+			'slug'		=> 'byconsole-woo-order-delivery-time',
+			'required'	=> false,
+		),
+
 	);
 
 	if ( ! isset( $config ) ) {
