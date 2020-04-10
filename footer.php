@@ -6,8 +6,6 @@
  *
  * @package c9
  */
-
-$the_theme = wp_get_theme();
 ?>
 <?php
 if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
@@ -15,16 +13,14 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 	include( locate_template( 'client/inc/footer.php' ) );
 
 } else {
+
+		$c9_footer_search = get_theme_mod('c9_show_search', 'show');
+		$c9_footer_copyright = get_theme_mod( 'c9_copyright_content', '&copy; 2020 COVERT NINE LLC. All Rights Reserved. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">Website designed by COVERT NINE</a>.' );
+
 		require_once( get_template_directory() . '/inc/class-footer.php' );
-		$c9_social_links = c9FooterHelpers::build_social();
+		$c9_social_links = c9FooterHelpers::build_c9_social();
 
-		if (empty(get_option( 'cortex_footer' )['show_search'])) {
-			$c9_footer_search = 'hide';
-		} else {
-			$c9_footer_search = get_option( 'cortex_footer' )['show_search'];
-		}
-
-	if ( is_active_sidebar( 'footerfull' ) || !empty(get_option( 'cortex_footer' )['copyright_content']) || 'show' === $c9_footer_search  || $c9_social_links ) {
+	if ( is_active_sidebar( 'footerfull' ) || !empty($c9_footer_copyright) || 'show' === $c9_footer_search  || $c9_social_links ) {
 	?>
 		<div class="footer-entirety">
 			<?php
@@ -52,12 +48,11 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 											</div>
 											<?php endif; ?>
 												<?php
-												if ( get_option( 'cortex_footer' ) ) :
-													if ( get_option( 'cortex_footer' )['copyright_content'] ) :
-														echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_option( 'cortex_footer' )['copyright_content'] . '</p></div>';
+													if ( !empty(get_theme_mod( 'c9_copyright_content' )) ) :
+														echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_theme_mod( 'c9_copyright_content' ) . '</p></div>';
 														endif;
 
-													if ( 'show' === get_option( 'cortex_footer' )['show_search'] ) :
+													if ( 'show' === $c9_footer_search ) :
 													?>
 													<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
 														<div class="footer-search">
@@ -66,7 +61,6 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 													</div>
 													<?php
 													endif;
-												endif;
 												?>
 										</div><!-- .row-->
 									</div><!-- .container-->
