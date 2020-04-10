@@ -13,8 +13,6 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-//require get_template_directory() . '/admin/class-wp-osa.php';
-
 /**
  * Sets up meta for post header size.
  */

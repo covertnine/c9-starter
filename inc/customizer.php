@@ -22,7 +22,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 				$wp_customize->add_section(
-					'cortex_footer',
+					'c9_footer',
 					array(
 						'title'    => __( 'Footer', 'c9' ),
 						'priority' => 140,
@@ -30,7 +30,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 				);
 
 				$wp_customize->add_setting(
-					'show_search',
+					'c9_show_search',
 					array(
 						'default'           => 'show',
 						'sanitize_callback' => 'sanitize_html_class',
@@ -38,11 +38,11 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 				);
 
 				$wp_customize->add_control(
-					'show_search',
+					'c9_show_search',
 					array(
 						'type'        => 'radio',
 						'label'       => __( 'Display search in footer', 'c9' ),
-						'section'     => 'cortex_footer',
+						'section'     => 'c9_footer',
 						'description' => __( 'Hide or show the search form in the footer', 'c9' ),
 						'choices'     => array(
 							'show' => __( 'Show', 'c9' ),
@@ -52,7 +52,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 				);
 
 				$wp_customize->add_setting(
-					'copyright_content',
+					'c9_copyright_content',
 					array(
 						'default'           => __(
 							'&copy; 2020 COVERT NINE LLC. All Rights Reserved.
@@ -60,146 +60,148 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 							'c9'
 						),
 						'sanitize_callback' => 'wp_filter_post_kses',
+						'transport' => 'postMessage',
 					)
 				);
 
 				$wp_customize->add_control(
-					'copyright_content',
+					'c9_copyright_content',
 					array(
 						'type'        => 'textarea',
 						'label'       => __( 'Copyright', 'c9' ),
-						'section'     => 'cortex_footer',
+						'section'     => 'c9_footer',
 						'description' => __( 'Enter in any copyright information, links to privacy policies or terms.', 'c9' ),
 					)
 				);
 
 				$wp_customize->add_section(
-					'cortex_branding',
+					'c9_branding',
 					array(
 						'title'    => __( 'Branding', 'c9' ),
-						'priority' => 120,
+						'priority' => 20,
 					)
 				);
 
 				$wp_customize->add_setting(
-					'cortex_apple_touch',
+					'c9_default_font',
 					array(
-						'default'           => '',
-							'c9'
-						),
-						'sanitize_callback' => 'wp_filter_post_kses',
-					)
+						'default'		=>	'no',
+						'transport' => 'postMessage',
+						'sanitize_callback' => 'sanitize_html_class'
+					),
 				);
 
 				$wp_customize->add_control(
-					'copyright_content',
+					'c9_default_font',
 					array(
-						'type'        => 'textarea',
-						'label'       => __( 'Copyright', 'c9' ),
-						'section'     => 'cortex_branding',
-						'description' => __( 'Enter in any copyright information, links to privacy policies or terms.', 'c9' ),
+						'type'		=> 'radio',
+						'label'		=> __( 'Use C9 Theme Fonts?', 'c9'),
+						'section'     => 'c9_branding',
+						'choices'	=> array(
+							'yes'	=> __('Yes', 'c9'),
+							'no'	=> __('No, I will queue my own fonts.', 'c9')
+						)
 					)
 				);
+
+
+				// If the user selects YES and will select the fonts.
+				// The default font will be Helvetica for system fonts:
+				// if ( get_theme_mod ( 'c9_default_font') === 'yes') {
+
+
+				// Update an array to contain the fonts that will be used
+				// throughout each of the font selector fields:
+				$c9fonts = array(
+				'Abel'                  => 'Abel',
+				'Bebas Neue'            => 'Bebas Neue',
+				'Lato'                  => 'Lato',
+				'Lobster'               => 'Lobster',
+				'Merriweather'          => 'Merriweather',
+				'Montserrat'            => 'Montserrat',
+				'Muli'                  => 'Muli',
+				'Nunito'                => 'Nunito',
+				'Open Sans'             => 'Open Sans',
+				'Open Sans Condensed'   => 'Open Sans Condensed',
+				'Oswald'                => 'Oswald',
+				'Playfair Display'      => 'Playfair Display',
+				'Poppins'               => 'Poppins',
+				'PT Sans'               => 'PT Sans',
+				'PT Serif'              => 'PT Serif',
+				'Quicksand'             => 'Quicksand',
+				'Raleway'               => 'Raleway',
+				'Roboto'                => 'Roboto',
+				'Roboto Condensed'      => 'Roboto Condensed',
+				'Roboto Slab'           => 'Roboto Slab',
+				'Sen'					=> 'Sen',
+				'Source Sans Pro'       => 'Source Sans Pro',
+				'Work Sans'             => 'Work Sans'
+				);
+
+				$wp_customize->add_setting(
+					'c9_heading_font',
+					array(
+						'default'			=>	'Sen',
+						'transport' 		=> 'postMessage',
+						'sanitize_callback' => 'wp_filter_post_kses'
+					),
+				);
+
+				$wp_customize->add_control(
+					'c9_heading_font',
+					array(
+						'type'			=> 'select',
+						'label'			=> __( 'Heading Font', 'c9'),
+						'description'	=> __( 'Select your heading font family.', 'c9'),
+						'section'     	=> 'c9_branding',
+						'choices' => $c9fonts,
+					)
+				);
+
+				$wp_customize->add_setting(
+					'c9_subheading_font',
+					array(
+						'default'		=>	'Sen',
+						'transport' => 'postMessage',
+						'sanitize_callback' => 'wp_filter_post_kses'
+					),
+				);
+
+				$wp_customize->add_control(
+					'c9_subheading_font',
+					array(
+						'type'			=> 'select',
+						'label'			=> __( 'Subheading Font', 'c9'),
+						'description'	=> __( 'Select your subheading font family.', 'c9'),
+						'section'     	=> 'c9_branding',
+						'choices' => $c9fonts,
+					)
+				);
+				$wp_customize->add_setting(
+					'c9_body_font',
+					array(
+						'default'			=>	'Sen',
+						'transport' 		=> 'postMessage',
+						'sanitize_callback' => 'wp_filter_post_kses'
+					),
+				);
+				$wp_customize->add_control(
+					'c9_body_font',
+					array(
+						'type'			=> 'select',
+						'label'			=> __( 'Body Paragraph Font', 'c9'),
+						'description'	=> __( 'Select your base font family.', 'c9'),
+						'section'     	=> 'c9_branding',
+						'choices' => $c9fonts,
+					)
+				);
+
+				// } //end checking for theme_mod being set
+
 	}
 }
 add_action( 'customize_register', 'c9_customize_register' );
 
-// $c9_wposa_obj->add_field(
-// 'cortex_branding',
-// array(
-// 'id'   => 'apple-touch',
-// 'type' => 'image',
-// 'name' => __('Apple Touch Icon', 'c9'),
-// 'desc' => __('Upload your apple touch icon here', 'c9'),
-// )
-// );
-
-// Field: Default Font Selector
-// $c9_wposa_obj->add_field(
-// 'cortex_branding',
-// array(
-// 'id'      => 'defaultFont',
-// 'type'    => 'radio',
-// 'name'    => __('Use C9 Theme Based Fonts?', 'c9'),
-// 'options' => array(
-// 'yes' => 'Yes.',
-// 'no'  => 'No, I will take care of my fonts.',
-// ),
-// 'default' => 'no'
-// )
-// );
-
-// If the user selects YES and will select the fonts.
-// The default font will be Helvetica for system fonts:
-
-// Update an array to contain the fonts that will be used
-// throughout each of the font selector fields:
-// $c9fonts = array(
-// 'Abel'                  => 'Abel',
-// 'Bebas Neue'            => 'Bebas Neue',
-// 'Lato'                  => 'Lato',
-// 'Lobster'               => 'Lobster',
-// 'Merriweather'          => 'Merriweather',
-// 'Montserrat'            => 'Montserrat',
-// 'Muli'                  => 'Muli',
-// 'Nunito'                => 'Nunito',
-// 'Open Sans'             => 'Open Sans',
-// 'Open Sans Condensed'   => 'Open Sans Condensed',
-// 'Oswald'                => 'Oswald',
-// 'Playfair Display'      => 'Playfair Display',
-// 'Poppins'               => 'Poppins',
-// 'PT Sans'               => 'PT Sans',
-// 'PT Serif'              => 'PT Serif',
-// 'Quicksand'             => 'Quicksand',
-// 'Raleway'               => 'Raleway',
-// 'Roboto'                => 'Roboto',
-// 'Roboto Condensed'      => 'Roboto Condensed',
-// 'Roboto Slab'           => 'Roboto Slab',
-// 'Source Sans Pro'       => 'Source Sans Pro',
-// 'Work Sans'             => 'Work Sans'
-// );
-
-
-// Field: Default Font Selector
-// $c9_wposa_obj->add_field(
-// 'cortex_branding',
-// array(
-// 'id'      => 'heading_font',
-// 'type'    => 'select',
-// 'name'    => __('Heading Font', 'c9'),
-// 'desc'    => __('Select fonts here', 'c9'),
-// 'options' => $c9fonts,
-// )
-// );
-
-
-// Field: Multicheck.
-// $c9_wposa_obj->add_field(
-// 'cortex_branding',
-// array(
-// 'id'      => 'subheading_font',
-// 'type'    => 'select',
-// 'name'    => __('Subheading Font', 'c9'),
-// 'desc'    => __('Select fonts here', 'c9'),
-// 'options' => $c9fonts,
-// )
-// );
-
-// Field: Multicheck.
-// $c9_wposa_obj->add_field(
-// 'cortex_branding',
-// array(
-// 'id'      => 'body_font',
-// 'type'    => 'select',
-// 'name'    => __('Body Font', 'c9'),
-// 'desc'    => __('Select fonts here', 'c9'),
-// 'options' => $c9fonts,
-// )
-// );
-
-// ------------------------------//
-// ---- End Cortex Branding -----//
-// ------------------------------//
 
 // ------------------------------//
 // ----- Start Cortex Social ----//

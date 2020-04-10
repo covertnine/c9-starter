@@ -20,9 +20,6 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 
 		// theme option scripts
 		if ( get_option( 'cortex_advanced' ) ) {
-			if ( get_option( 'cortex_advanced' )['custom_css'] ) {
-				wp_add_inline_style( 'c9-styles', get_option( 'cortex_advanced' )['custom_css'] );
-			}
 			if ( get_option( 'cortex_advanced' )['custom_js'] ) {
 				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_advanced' )['custom_js'] );
 			}
@@ -87,6 +84,16 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 // Function that will determine if user selects yes or no to load in fonts,
 // If yes: passes object with specified fonts. If no: no fonts passed
 add_action( 'wp_enqueue_scripts', 'c9_scripts', 10 );
+
+// adds conditional JS for font selections in customizer
+add_action( 'customize_controls_enqueue_scripts', 'c9_customizer_scripts', 20);
+if ( ! function_exists( 'c9_customizer_scripts' ) ) {
+
+	function c9_customizer_scripts() {
+		wp_enqueue_script( 'c9_field_conditionals', get_template_directory_uri() . '/assets/scripts/c9-conditional-customizer.js', array('jquery') );
+	}
+
+}
 
 /**
  * Remove emoji specific code and styling
