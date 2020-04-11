@@ -27,7 +27,7 @@ else :
 				?>
 				col-12<?php endif; ?> content-area" id="primary">
 
-				<?php get_sidebar( 'left' ); ?>
+				<?php get_sidebar( 'left-sidebar' ); ?>
 
 				<main class="site-main" id="main" role="main">
 

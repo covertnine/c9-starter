@@ -892,7 +892,6 @@ pre,
 
 .widget {
 	margin: 0 0 5em;
-	font-size: 1.4em;
 }
 
 .widget:last-child {
@@ -917,6 +916,10 @@ pre,
 
 .widget_nav_menu ul li ul li ul {
 	margin: 8px 0 8px 40px;
+}
+
+.widget_search input[type="submit"] {
+	width: auto;
 }
 
 /****************************************************************************************/
@@ -2840,6 +2843,10 @@ screen and (max-height: 300px) {
 	white-space: normal;
 	color: #fff;
 	line-height: 1;
+}
+
+.btn-primary:hover {
+	background-color: $primary;
 }
 
 .wp-block-button__link.c9-button-shape-square {

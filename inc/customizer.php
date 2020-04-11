@@ -516,7 +516,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					'c9_archive_sidebar',
 					array(
 						'type'    => 'radio',
-						'label'   => __( 'Display a sidebar on single posts?', 'c9' ),
+						'label'   => __( 'Display a sidebar on archive pages?', 'c9' ),
 						'section' => 'c9_posts',
 						'choices' => array(
 							'hide'          => __( 'No Sidebar', 'c9' ),

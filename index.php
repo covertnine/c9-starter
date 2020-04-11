@@ -12,10 +12,11 @@
  */
 
 get_header();
+$archive_sidebar = get_theme_mod( 'c9_archive_sidebar', 'hide' );
 
-if ( isset( get_option( 'cortex_posts' )['archive_sidebar'] ) ) {
-	$sidebar_left  = 'archive-left' === get_option( 'cortex_posts' )['archive_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
-	$sidebar_right = 'archive-right' === get_option( 'cortex_posts' )['archive_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
+if ( $archive_sidebar != 'hide' ) {
+	$sidebar_left  = 'archive-left' === get_theme_mod( 'c9_archive_sidebar' ) && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'archive-right' === get_theme_mod( 'c9_archive_sidebar' ) && is_active_sidebar( 'right-sidebar' ) ? true : false;
 } else {
 	$sidebar_left  = false;
 	$sidebar_right = false;
@@ -32,7 +33,7 @@ if ( isset( get_option( 'cortex_posts' )['archive_sidebar'] ) ) {
 
 				<?php if ( $sidebar_left ) : ?>
 
-				<div class="col-sm-12 col-md-2">
+				<div class="col-sm-12 col-md-2 content-area sidebar">
 					<?php dynamic_sidebar( 'left-sidebar' ); ?>
 				</div>
 
@@ -72,7 +73,7 @@ if ( isset( get_option( 'cortex_posts' )['archive_sidebar'] ) ) {
 				<?php
 				if ( $sidebar_right ) :
 				?>
-				<div class="col-12 col-sm-2 content-area" id="primary">
+				<div class="col-12 col-sm-2 sidebar content-area" id="primary">
 
 					<?php dynamic_sidebar( 'right-sidebar' ); ?>
 

@@ -7,8 +7,6 @@
 
 get_header();
 
-$c9_sidebar_pos = get_theme_mod( 'c9_sidebar_position' );
-
 ?>
 
 <div class="wrapper" id="error-404-wrapper">

@@ -39,7 +39,7 @@ get_header();
 
 				</main><!-- #main -->
 
-				<?php get_sidebar( 'right' ); ?>
+				<?php get_sidebar( 'right-sidebar' ); ?>
 
 			</div><!-- #primary -->
 

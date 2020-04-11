@@ -5,15 +5,18 @@
  * @package c9
  */
 $header_size = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] ) ? get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] : 'small';
+$c9_blog_sidebar = get_theme_mod( 'c9_blog_sidebar', 'hide' );
 
-if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
-	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
-	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
-	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
+if ( $c9_blog_sidebar != 'hide' ) {
+	// $sidebar       = 'hide' !== get_theme_mod( 'c9_blog_sidebar' ) ? true : false;
+	$sidebar_left  = 'sidebar-left' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'sidebar-right' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'right-sidebar' ) ? true : false;
 } else {
-	$sidebar_right = false;
+	$sidebar 	   = false;
 	$sidebar_left  = false;
+	$sidebar_right = false;
 }
+
 ?>
 
 
@@ -80,7 +83,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 
 	if ( $sidebar_left ) :
 
-		get_sidebar( 'left' );
+		dynamic_sidebar( 'left-sidebar' );
 
 	endif;
 	?>
@@ -94,7 +97,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 
 	if ( $sidebar_right ) :
 
-	get_sidebar( 'right' );
+		dynamic_sidebar( 'right-sidebar' );
 
 	endif;
 	?>
