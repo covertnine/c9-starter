@@ -83,7 +83,7 @@ if ( $c9_blog_sidebar != 'hide' ) {
 
 	if ( $sidebar_left ) :
 
-		dynamic_sidebar( 'left-sidebar' );
+		get_sidebar( 'left' );
 
 	endif;
 	?>
@@ -97,7 +97,7 @@ if ( $c9_blog_sidebar != 'hide' ) {
 
 	if ( $sidebar_right ) :
 
-		dynamic_sidebar( 'right-sidebar' );
+		get_sidebar( 'right' );
 
 	endif;
 	?>
