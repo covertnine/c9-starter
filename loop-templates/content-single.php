@@ -17,8 +17,13 @@ if ( $c9_blog_sidebar != 'hide' ) {
 	$sidebar_right = false;
 }
 
-?>
 
+	if ( $sidebar_left ) :
+
+		get_sidebar( 'left' );
+
+	endif;
+	?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
@@ -77,30 +82,17 @@ if ( $c9_blog_sidebar != 'hide' ) {
 			</div>
 
 		</header>
-
 	<?php
-	}
-
-	if ( $sidebar_left ) :
-
-		get_sidebar( 'left' );
-
-	endif;
-	?>
+	} //end small header
+		?>
 
 	<div class="entry-content">
 
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
-	<?php
 
-	if ( $sidebar_right ) :
 
-		get_sidebar( 'right' );
-
-	endif;
-	?>
 
 	<footer class="entry-footer">
 		<div class="entry-footer-content mar30B">
@@ -119,3 +111,12 @@ if ( $c9_blog_sidebar != 'hide' ) {
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+	<?php
+
+
+	if ( $sidebar_right ) :
+
+		get_sidebar( 'right' );
+
+	endif;
+	?>

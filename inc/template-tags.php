@@ -33,7 +33,7 @@ if (!function_exists('c9_posted_on')) {
 
 		$c9_posted_on = '<span class="posted-on">' . $posted_on . '</span>';
 
-		if (get_theme_mod('c9_author_visible', 'hide') === "show") {
+		if (get_theme_mod('c9_author_visible') === "show") {
 			$byline = sprintf(
 				esc_html_x('by %s', 'post author', 'c9' ),
 				'<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
