@@ -148,10 +148,14 @@ if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
 
 	function c9_login_logo() {
-	if ( ! empty( get_option( 'cortex_branding' )['logo'] ) ) { // logo has been uploaded
-		$cortex_logo_image = get_option( 'cortex_branding' )['logo'];
+
+		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+
+		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+			$cortex_logo_image = $c9_logo_image[0];
 		} else {
-		$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
 		}
 	?>
 	<style type="text/css">
