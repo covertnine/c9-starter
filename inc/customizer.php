@@ -327,7 +327,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					'c9_default_font',
 					array(
 						'default'           => 'no',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_html_class',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
@@ -384,7 +384,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					'c9_heading_font',
 					array(
 						'default'           => 'Sen',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
@@ -406,7 +406,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					'c9_subheading_font',
 					array(
 						'default'           => 'Sen',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
@@ -427,7 +427,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					'c9_body_font',
 					array(
 						'default'           => 'Sen',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
