@@ -18,32 +18,18 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
 		wp_enqueue_script( 'c9-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array( 'jquery' ), true );
 
-		// theme option scripts
-		if ( get_option( 'cortex_advanced' ) ) {
-			if ( get_option( 'cortex_advanced' )['custom_js'] ) {
-				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_advanced' )['custom_js'] );
-			}
-		};
+		if ( !empty( get_theme_mod('c9_google_analytics_id') ) ) {
+			wp_enqueue_script( 'ga-gtag', 'https://www.googletagmanager.com/gtag/js?id=' . get_theme_mod('c9_google_analytics_id') );
 
-		if ( get_option( 'cortex_seo' ) ) {
-			if ( get_option( 'cortex_seo' )['google_analytics_id'] ) {
-				wp_enqueue_script( 'ga-url', 'https://www.googletagmanager.com/gtag/js?id=' . get_option( 'cortex_seo' )['google_analytics_id'] );
+			$c9_ga_snippet = "window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-				$ga_snippet = "window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
+			gtag('config', '" . get_theme_mod('c9_google_analytics_id') . "')";
 
-				gtag('config', '" . get_option( 'cortex_seo' )['google_analytics_id'] . "')";
-
-				wp_add_inline_script( 'ga-url', $ga_snippet );
-			}
-			if ( get_option( 'cortex_seo' )['matomo_snippet'] ) {
-				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_seo' )['matomo_snippet'] );
-			}
-			if ( get_option( 'cortex_seo' )['gtm_snippet'] ) {
-				wp_add_inline_script( 'c9-scripts', get_option( 'cortex_seo' )['gtm_snippet'] );
-			}
+			wp_add_inline_script( 'ga-gtag', $c9_ga_snippet );
 		}
+
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -80,9 +66,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 	}
 } // endif function_exists( 'c9_scripts' ).
 
-// John Lynch : Typography function. Updated with nav-bar
 // Function that will determine if user selects yes or no to load in fonts,
-// If yes: passes object with specified fonts. If no: no fonts passed
 add_action( 'wp_enqueue_scripts', 'c9_scripts', 10 );
 
 // adds conditional JS for font selections in customizer
