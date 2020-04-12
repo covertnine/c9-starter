@@ -9,9 +9,9 @@ class C9FontStyles {
 	 * Gets font settings based on defaults and generates code.-arrow-up
 	 */
 	public static function render( $font_array ) {
-		$heading_font    = "'" . $font_array['heading_font'] . "'";
-		$subheading_font = "'" . $font_array['subheading_font'] . "'";
-		$body_font       = "'" . $font_array['body_font'] . "'";
+		$heading_font    = "'" . $font_array['c9_heading_font'] . "'";
+		$subheading_font = "'" . $font_array['c9_subheading_font'] . "'";
+		$body_font       = "'" . $font_array['c9_body_font'] . "'";
 		?>
 		.c9-site-title,
 		.c9.site .h1,
@@ -48,7 +48,8 @@ class C9FontStyles {
 		.archive nav .pagination .page-item .page-link,
 		.blog nav .pagination .page-item .page-link,
 		.single .navigation .nav-previous a,
-		.single .navigation .nav-next a {
+		.single .navigation .nav-next a,
+		.c9 .c9-vertical-tabs .nav-pills .nav-link {
 		font-family: <?php echo $heading_font; ?>;
 		}
 
@@ -57,7 +58,14 @@ class C9FontStyles {
 		.c9-sh,
 		.text-muted,
 		.c9 .c9-sh,
-		.c9 .text-muted {
+		.c9 .text-muted,
+		.c9 .c9-heading .c9-h .text-muted,
+		.c9 .c9-heading .c9-sh .text-muted,
+		.c9 .c9-heading .c9-txl .text-muted,
+		.c9-heading.section-heading >.c9-sh,
+		.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+		.c9 .header-navbar .navbar .nav .nav-item .dropdown-item,
+		.c9 .header-navbar .navbar .nav .nav-item .nav-link {
 			font-family: <?php echo $subheading_font; ?>;
 		}
 

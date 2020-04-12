@@ -6,20 +6,20 @@
 // heading names of the specific fonts (heading_font/subheading_font/typography_presets)
 // If user decided to use their own fonts (clicked no)
 
-if (selectedFonts.defaultFont === "yes") {
+if (c9SelectedFonts.c9_default_font === "yes") {
 	console.log(
-		selectedFonts.heading_font,
-		selectedFonts.subheading_font,
-		selectedFonts.body_font
+		c9SelectedFonts.c9_heading_font,
+		c9SelectedFonts.c9_subheading_font,
+		c9SelectedFonts.c9_body_font
 	);
 	WebFont.load({
 		google: {
 			families: [
-				selectedFonts.heading_font,
-				selectedFonts.subheading_font,
-				selectedFonts.body_font
+				c9SelectedFonts.c9_heading_font,
+				c9SelectedFonts.c9_subheading_font,
+				c9SelectedFonts.c9_body_font
 			]
 		}
 	});
 }
-console.log(selectedFonts);
+console.log(c9SelectedFonts);
