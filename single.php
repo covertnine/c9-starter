@@ -6,38 +6,68 @@
  */
 
 get_header();
+
+$c9_blog_sidebar = get_theme_mod( 'c9_blog_sidebar', 'hide' );
+
+//set sidebar variables pending on theme options and sidebars being active
+if ( $c9_blog_sidebar != 'hide' ) {
+	$sidebar       = true;
+	$sidebar_left  = 'sidebar-left' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right = 'sidebar-right' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'right-sidebar' ) ? true : false;
+} else {
+	$sidebar 	   = false;
+	$sidebar_left  = false;
+	$sidebar_right = false;
+}
 ?>
 
 <div class="wrapper" id="single-wrapper">
 	<div class="container-narrow c9" id="content" tabindex="-1">
 		<div class="row no-gutters">
+			<div class="col-12 content-area" id="primary">
 
-						<div class="col-12 content-area" id="primary">
+			<?php
 
-						<main class="site-main" id="main">
-							<?php
-							while ( have_posts() ) :
+			if ( $sidebar_left ) :
 
-								the_post();
+				get_sidebar( 'left' );
 
-								get_template_part( 'loop-templates/content', 'single' );
+			endif;
+			?>
+				<main class="site-main" id="main">
 
-								c9_post_nav();
+				<?php
+				while ( have_posts() ) :
 
-								// If comments are open or we have at least one comment, load up the comment template.
-								if ( comments_open() || get_comments_number() ) :
+					the_post();
 
-									comments_template();
+					get_template_part( 'loop-templates/content', 'single' );
 
-								endif;
-							endwhile; // end of the loop.
-							?>
+					c9_post_nav();
 
-						</main><!-- #main -->
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
 
-					</div>
+						comments_template();
+
+					endif;
+				endwhile; // end of the loop.
+				?>
+
+
+				</main><!-- #main -->
+			<?php
+
+
+			if ( $sidebar_right ) :
+
+				get_sidebar( 'right' );
+
+			endif;
+			?>
+			</div><!--end primary-->
 		</div><!-- Row end -->
-	</div><!-- Wrapper end -->
-</div>
+	</div><!--container--narrow end-->
+</div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

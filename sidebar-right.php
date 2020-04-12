@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 ?>
 
 
-<div class="widget-area" id="right-sidebar" role="complementary">
+<div class="widget-area sidebar" id="right-sidebar" role="complementary">
 
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 

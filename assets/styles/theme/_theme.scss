@@ -672,14 +672,14 @@ pre,
 	display: inline-block;
 }
 
-.header-navbar .navbar-brand.c9-custom-logo>.c9-home-logo {
+.header-navbar .navbar-brand.c9-custom-logo {
 	max-width: 285px;
 	max-height: 92px;
 	width: auto;
 	height: auto;
 }
 
-.header-navbar .navbar-small .navbar-brand.c9-custom-logo>.c9-home-logo {
+.header-navbar .navbar-small .navbar-brand.c9-custom-logo {
 	max-width: 285px;
 	max-height: 45px;
 	width: auto;
@@ -1192,6 +1192,36 @@ pre,
 /****************************************************************************************/
 /* Sidebars */
 /****************************************************************************************/
+.sidebar .input-group-append {
+	margin-left: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.entry-content.sidebar-right,
+	.entry-header.sidebar-right {
+		margin-right: 200px;
+	}
+
+	.entry-content.sidebar-left,
+	.entry-header.sidebar-left {
+		margin-left: 200px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+
+	.entry-content.sidebar-right,
+	.entry-header.sidebar-right {
+		margin-right: 0px;
+	}
+
+	.entry-content.sidebar-left,
+	.entry-header.sidebar-left {
+		margin-left: 0px;
+	}
+}
+
 @media only screen and (min-width: 1px) {
 
 	#left-sidebar,
@@ -1211,9 +1241,10 @@ pre,
 		-webkit-transition: opacity 0.7s;
 		transition: opacity 0.7s;
 		opacity: 0;
-		max-width: 115px;
+		max-width: 150px;
 		max-height: 75vh;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: visible;
 	}
 
 	#right-sidebar {
@@ -1234,14 +1265,20 @@ pre,
 	#right-sidebar {
 		top: 80px;
 	}
+
+	#left-sidebar,
+	#right-sidebar {
+		max-width: 180px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
 
 	#left-sidebar,
 	#right-sidebar {
-		top: 80px;
-		max-width: 200px;
+		top: 100px;
+		min-width: 150px;
+		max-width: 180px;
 	}
 
 	#right-sidebar {

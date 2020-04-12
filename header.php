@@ -46,16 +46,9 @@
 						<?php
 
 							// get custom logo, if not set, use customizer logo, if that's not set, show text of site title
-							$c9_logo      = get_option( 'cortex_branding', '' );
 							$c9_site_name = get_bloginfo( 'name' );
 
-							if ( ! empty( $c9_logo['logo'] ) ) {
-							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9' ); ?>" class="navbar-brand custom-logo-link c9-custom-logo">
-								<img src="<?php echo $c9_logo['logo']; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' ); ?>" />
-							</a>
-						<?php
-							} elseif (has_custom_logo()) {
+							if (has_custom_logo()) {
 								the_custom_logo();
 							} else {
 							?>

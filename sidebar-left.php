@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'left-sidebar' ) ) {
 }
 ?>
 
-<div class="widget-area" id="left-sidebar" role="complementary">
+<div class="widget-area sidebar" id="left-sidebar" role="complementary">
 
 	<?php dynamic_sidebar( 'left-sidebar' ); ?>
 
