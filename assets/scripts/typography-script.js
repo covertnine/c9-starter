@@ -12,6 +12,7 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 		c9SelectedFonts.c9_subheading_font,
 		c9SelectedFonts.c9_body_font
 	);
+	//alert(c9SelectedFonts.c9_body_font);
 	WebFont.load({
 		google: {
 			families: [
@@ -22,4 +23,4 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 		}
 	});
 }
-console.log(c9SelectedFonts);
+// console.log(c9SelectedFonts);

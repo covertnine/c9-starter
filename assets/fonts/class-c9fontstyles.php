@@ -9,9 +9,63 @@ class C9FontStyles {
 	 * Gets font settings based on defaults and generates code.-arrow-up
 	 */
 	public static function render( $font_array ) {
-		$heading_font    = "'" . $font_array['c9_heading_font'] . "'";
-		$subheading_font = "'" . $font_array['c9_subheading_font'] . "'";
-		$body_font       = "'" . $font_array['c9_body_font'] . "'";
+		$heading_font    = $font_array['c9_heading_font'];
+		$subheading_font = $font_array['c9_subheading_font'];
+		$body_font       = $font_array['c9_body_font'];
+
+		//assign CSS name of font based on selected font in customizer
+		$c9fonts = array(
+			'Abel'                													=> 'Abel',
+			'Bebas+Neue'          													=> 'Bebas Neue',
+			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   					=> 'Lato',
+			'Lobster'             													=> 'Lobster',
+			'Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'        	=> 'Merriweather',
+			'MontserratMontserrat:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'	=> 'Montserrat',
+			'Muli'                													=> 'Muli',
+			'Nunito:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'              	=> 'Nunito',
+			'Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,700'           	=> 'Open Sans',
+			'Open+Sans+Condensed:wght@300;700' 										=> 'Open Sans Condensed',
+			'Oswald:wght@300;400;700'              									=> 'Oswald',
+			'Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700'    			=> 'Playfair Display',
+			'Poppins:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'             	=> 'Poppins',
+			'PT+Sans:ital,wght@0,400;0,700;1,400;1,700'             				=> 'PT Sans',
+			'PT+Serif:ital,wght@0,400;0,700;1,400;1,700'            				=> 'PT Serif',
+			'Quicksand:wght@300;400;700'           									=> 'Quicksand',
+			'Raleway:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'             	=> 'Raleway',
+			'Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'              	=> 'Roboto',
+			'Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700'    			=> 'Roboto Condensed',
+			'Roboto+Slab:wght@300;400;700;900'         								=> 'Roboto Slab',
+			'Sen:wght@400;700;800'                 									=> 'Sen',
+			'Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'     	=> 'Source Sans Pro',
+			'Work+Sans:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'           	=> 'Work Sans',
+		);
+
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+			// echo "<h1>set: " . $body_font . "body font key: " . $c9key . " body font value:" . $c9value . "</h1>";
+			if ( $body_font == $c9key ) {
+				$body_font = $c9value;
+			}
+
+		}
+
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+
+			if (  $subheading_font == $c9key  ) {
+				$subheading_font = $c9value;
+			}
+
+		}
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+
+			if (  $heading_font == $c9key  ) {
+				$heading_font = $c9value;
+			}
+
+		}
+
 		?>
 		.c9-site-title,
 		.c9.site .h1,
