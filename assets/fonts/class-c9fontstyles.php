@@ -15,29 +15,30 @@ class C9FontStyles {
 
 		//assign CSS name of font based on selected font in customizer
 		$c9fonts = array(
-			'Abel'                													=> 'Abel',
-			'Bebas+Neue'          													=> 'Bebas Neue',
-			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   					=> 'Lato',
-			'Lobster'             													=> 'Lobster',
-			'Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'        	=> 'Merriweather',
-			'MontserratMontserrat:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'	=> 'Montserrat',
-			'Muli'                													=> 'Muli',
-			'Nunito:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'              	=> 'Nunito',
-			'Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,700'           	=> 'Open Sans',
-			'Open+Sans+Condensed:wght@300;700' 										=> 'Open Sans Condensed',
-			'Oswald:wght@300;400;700'              									=> 'Oswald',
-			'Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700'    			=> 'Playfair Display',
-			'Poppins:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'             	=> 'Poppins',
-			'PT+Sans:ital,wght@0,400;0,700;1,400;1,700'             				=> 'PT Sans',
-			'PT+Serif:ital,wght@0,400;0,700;1,400;1,700'            				=> 'PT Serif',
-			'Quicksand:wght@300;400;700'           									=> 'Quicksand',
-			'Raleway:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'             	=> 'Raleway',
-			'Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'              	=> 'Roboto',
-			'Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700'    			=> 'Roboto Condensed',
-			'Roboto+Slab:wght@300;400;700;900'         								=> 'Roboto Slab',
-			'Sen:wght@400;700;800'                 									=> 'Sen',
-			'Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'     	=> 'Source Sans Pro',
-			'Work+Sans:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'           	=> 'Work Sans',
+					''																=> '',
+					'Abel'                											=> 'Abel',
+					'Bebas+Neue'          											=> 'Bebas Neue',
+					'Lato:300,400,700,900,400italic,700italic'   					=> 'Lato',
+					'Lobster'             											=> 'Lobster',
+					'Merriweather:300,400,700,900,400italic,700italic'        		=> 'Merriweather',
+					'Montserrat:300,400,700,900,400italic,700italic'				=> 'Montserrat',
+					'Muli'                											=> 'Muli',
+					'Nunito:300,400,700,900,400italic,700italic'              		=> 'Nunito',
+					'Open+Sans:300,400,700,800,400italic,700italic'           		=> 'Open Sans',
+					'Open+Sans+Condensed:300;700' 									=> 'Open Sans Condensed',
+					'Oswald:300;400;700'              								=> 'Oswald',
+					'Playfair+Display:400,700,900,400italic,700italic'    			=> 'Playfair Display',
+					'Poppins:300,400,700,900,400italic,700italic'             		=> 'Poppins',
+					'PT+Sans:400,700,400italic,700italic'             				=> 'PT Sans',
+					'PT+Serif:400,700,400italic,700italic'            				=> 'PT Serif',
+					'Quicksand:300;400;700'           								=> 'Quicksand',
+					'Raleway:300,400,700,900,400italic,700italic'             		=> 'Raleway',
+					'Roboto:300,400,700,900,400italic,700italic'              		=> 'Roboto',
+					'Roboto+Condensed:300,400,700,400italic,700italic'    			=> 'Roboto Condensed',
+					'Roboto+Slab:300,400,700,900'         							=> 'Roboto Slab',
+					'Sen:400,700,800'                 								=> 'Sen',
+					'Source+Sans+Pro:300,400,700,900,400italic,700italic'     		=> 'Source Sans Pro',
+					'Work+Sans:300,400,700,900,400italic,700italic'           		=> 'Work Sans',
 		);
 
 		//make the font label human readable so it'll work in css
@@ -104,7 +105,7 @@ class C9FontStyles {
 		.single .navigation .nav-previous a,
 		.single .navigation .nav-next a,
 		.c9 .c9-vertical-tabs .nav-pills .nav-link {
-		font-family: <?php echo $heading_font; ?>;
+		font-family: <?php echo $heading_font; ?>, helvetica, sans-serif;
 		}
 
 		p.wp-block-subhead,
@@ -120,7 +121,7 @@ class C9FontStyles {
 		.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 		.c9 .header-navbar .navbar .nav .nav-item .dropdown-item,
 		.c9 .header-navbar .navbar .nav .nav-item .nav-link {
-			font-family: <?php echo $subheading_font; ?>;
+			font-family: <?php echo $subheading_font; ?>, helvetica, sans-serif;
 		}
 
 		:root,
@@ -157,7 +158,7 @@ class C9FontStyles {
 		.c9 .gform_wrapper textarea,
 		.c9 .gform_button.button,
 		.c9 .entry-content {
-			font-family: <?php echo $body_font; ?>;
+			font-family: <?php echo $body_font; ?>, helvetica, sans-serif;
 		}
 		<?php
 	}
