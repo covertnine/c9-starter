@@ -205,3 +205,20 @@ function c9_add_lazy_loading_to_content( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
+
+/**
+ * Add more sizes for site icon
+ */
+function c9_custom_site_icon_size( $sizes ) {
+   $sizes[] = 256;
+
+   return $sizes;
+}
+add_filter( 'site_icon_image_sizes', 'c9_custom_site_icon_size' );
+
+function c9_custom_site_icon_tag( $meta_tags ) {
+   $meta_tags[] = sprintf( '<link rel="icon" href="%s" sizes="256x256" />', esc_url( get_site_icon_url( 256, null ) ) );
+
+   return $meta_tags;
+}
+add_filter( 'site_icon_meta_tags', 'c9_custom_site_icon_tag' );
