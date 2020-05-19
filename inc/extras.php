@@ -177,22 +177,31 @@ add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 /**
  * Add logo to admin menu
  */
-// if ( ! function_exists('c9_addlogo_to_menu') ) {
-// 	function c9_addlogo_to_menu() {
+if ( ! function_exists('c9_addlogo_to_menu') ) {
+	function c9_addlogo_to_menu() {
 
-// 		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
-// 		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
 
-// 		if ( !empty($c9_logo_id) ) { // logo has been uploaded
-// 			$cortex_logo_image = $c9_logo_image[0];
-// 		} else {
-// 			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
-// 		}
+		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+			$cortex_logo_image = $c9_logo_image[0];
+		} else {
+			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+		}
+	?>
 
-// 		return '<li><img src="'.$cortex_logo_image.'" style="margin-left: 15px; max-width: 90%;" /></li>';
-// 	}
-// }
-// add_action('admin_menu', 'c9_addlogo_to_menu', 99);
+	<style type="text/css">
+		#adminmenu {
+			background-image: url('<?php echo $cortex_logo_image; ?>');
+			background-size: 90%;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
+	</style>
+	<?php
+	}
+}
+add_action('admin_head', 'c9_addlogo_to_menu', 99);
 
 /**
  * Add search icon to main navigation
