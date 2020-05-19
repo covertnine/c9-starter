@@ -147,6 +147,10 @@ if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 }
 add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
 
+
+/**
+ * Add logo to WordPress Admin Login
+ */
 	function c9_login_logo() {
 
 		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
@@ -170,6 +174,29 @@ add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 
 }
 add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 
+/**
+ * Add logo to admin menu
+ */
+// if ( ! function_exists('c9_addlogo_to_menu') ) {
+// 	function c9_addlogo_to_menu() {
+
+// 		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+// 		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+
+// 		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+// 			$cortex_logo_image = $c9_logo_image[0];
+// 		} else {
+// 			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+// 		}
+
+// 		return '<li><img src="'.$cortex_logo_image.'" style="margin-left: 15px; max-width: 90%;" /></li>';
+// 	}
+// }
+// add_action('admin_menu', 'c9_addlogo_to_menu', 99);
+
+/**
+ * Add search icon to main navigation
+ */
 add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
 function c9_add_search_form( $items, $args ) {
 	if ( 'primary' == $args->theme_location ) {
