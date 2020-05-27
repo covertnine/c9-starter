@@ -222,3 +222,39 @@ function c9_custom_site_icon_tag( $meta_tags ) {
    return $meta_tags;
 }
 add_filter( 'site_icon_meta_tags', 'c9_custom_site_icon_tag' );
+
+/**
+ * Add logo to backend
+ */
+if ( ! function_exists('c9_addlogo_to_menu') ) {
+	function c9_addlogo_to_menu() {
+
+		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+
+		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+			$cortex_logo_image = $c9_logo_image[0];
+		} else {
+			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+		}
+	?>
+
+	<style type="text/css">
+		#adminmenu:before {
+			content: ' ';
+			display: block;
+			width: 100%;
+			height: 90px;
+			background-image: url('<?php echo $cortex_logo_image; ?>');
+			background-size: contain;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
+		.folded #adminmenu:before {
+			height: 20px;
+		}
+	</style>
+	<?php
+	}
+}
+add_action('admin_head', 'c9_addlogo_to_menu', 99);
