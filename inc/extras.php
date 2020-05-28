@@ -250,7 +250,8 @@ if ( ! function_exists('c9_addlogo_to_menu') ) {
 		#adminmenu:before {
 			content: ' ';
 			display: block;
-			width: 100%;
+			width: 90%;
+			margin: 0px auto;
 			height: 90px;
 			background-image: url('<?php echo $cortex_logo_image; ?>');
 			background-size: contain;
