@@ -1,12 +1,12 @@
 === C9 Starter ===
 Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.3.2
-Tested up to: 5.4
+Requires at least: 5.3
+Tested up to: 5.4.2
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable Tag: 2.1.1
+Stable Tag: 2.1.3
 
 A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
@@ -25,6 +25,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 
 == Changelog ==
 
+= 2.1.3 =
+Updating color settings for seperators, tested with C9 Blocks 1.1.1 and theme now supports customizer for theme settings.
+
 = 2.1.1 =
 Adjustments to font settings to account for new markup and setting defaults on theme fonts
 
@@ -34,35 +37,41 @@ Adjustments to markup for WordPress 5.4 release changes to Gutenberg.
 = 2.0.9 =
 Removed defunct theme settings. Moved admin settings above client folder to make it easier to add settings. Adjustments to fonts from theme settings.
 
-= 2.0.8 = 
+= 2.0.8 =
 Fix size text issues on list items. Adjusted admin settings so client folders can add/overwrite settings. Changed Gravity Forms block CSS declarations.
 
-= 2.0.7 = 
+= 2.0.7 =
 Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
 
-= 2.0.6 = 
+= 2.0.6 =
 Removed heading declaration from cta bar from parent theme
 
-= 2.0.5 = 
+= 2.0.5 =
 Added C9 outer class element
 
-= 2.0.4 = 
+= 2.0.4 =
 Tweaks to core WP blocks for display on posts and pages with C9 Grids
 
-= 2.0.3 = 
+= 2.0.3 =
 Adjustments to Gravity Forms font size support
 
-= 2.0.1 = 
+= 2.0.1 =
 Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
 
-= 2.0 = 
+= 2.0 =
 Initial release of starter theme with support for all WordPress 5.3 blocks
 
 
 == Upgrade Notice ==
 
+= 2.1.3 =
+* This version of the theme works witih the latest version of WordPress version 5.4.2 and includes customizer support for theme settings.
+
+= 2.1.2 =
+* Review C9 Grid components for new appender buttons on grid columns
+
 = 2.1.1 =
-* This version of the theme works with the latest version of WordPress version 5.4
+* This version of the theme works with the latest version of WordPress version 5.4. Make sure to double check font settings after updating to this version as we have updated theme font option settings.
 
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
