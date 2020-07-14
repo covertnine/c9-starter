@@ -331,7 +331,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'sanitize_html_class',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -389,7 +389,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -411,7 +411,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -432,7 +432,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 				$wp_customize->add_control(
 					'c9_body_font',
@@ -461,7 +461,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'sanitize_html_class',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -485,7 +485,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'sanitize_html_class',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -510,7 +510,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'sanitize_callback' => 'sanitize_html_class',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
@@ -543,7 +543,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 						'transport'         => 'postMessage',
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
-					),
+					)
 				);
 
 				$wp_customize->add_control(
