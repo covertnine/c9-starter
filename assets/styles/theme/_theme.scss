@@ -803,7 +803,8 @@ pre,
 }
 
 .single .navigation .nav-previous a,
-.single .navigation .nav-next a {
+.single .navigation .nav-next a,
+.single .navigation .dots {
 	text-decoration: none;
 	color: $link-color;
 }
