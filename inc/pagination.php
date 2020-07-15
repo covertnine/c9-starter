@@ -35,9 +35,9 @@ return;
 <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 	<ul class="pagination">
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr( $prev_link ); ?>" aria-label="<?php echo __( 'Previous', 'c9' ); ?>">
+			<a class="page-link" href="<?php echo esc_attr( $prev_link ); ?>" aria-label="<?php echo __( 'Previous', 'c9-work' ); ?>">
 				<span aria-hidden="true"><?php echo esc_html( $args['prev_text'] ); ?></span>
-				<span class="sr-only"><?php echo __( 'Previous', 'c9' ); ?></span>
+				<span class="sr-only"><?php echo __( 'Previous', 'c9-work' ); ?></span>
 			</a>
 		</li>
 
@@ -61,9 +61,9 @@ return;
 				?>
 
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr( $next_link ); ?>" aria-label="<?php echo __( 'Next', 'c9' ); ?>">
+			<a class="page-link" href="<?php echo esc_attr( $next_link ); ?>" aria-label="<?php echo __( 'Next', 'c9-work' ); ?>">
 				<span aria-hidden="true"><?php echo esc_html( $args['next_text'] ); ?></span>
-				<span class="sr-only"><?php echo __( 'Next', 'c9' ); ?></span>
+				<span class="sr-only"><?php echo __( 'Next', 'c9-work' ); ?></span>
 			</a>
 		</li>
 	</ul>

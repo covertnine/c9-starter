@@ -31,22 +31,22 @@ get_header();
 						<?php endif; ?>
 						<div class="col-xs-12 col-sm-8">
 
-							<h1><?php esc_html_e( 'About: ', 'c9' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+							<h1><?php esc_html_e( 'About: ', 'c9-work' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
 
 							<dl>
 								<?php if ( ! empty( $curauth->user_url ) ) : ?>
-									<dt><?php esc_html_e( 'Website', 'c9' ); ?></dt>
+									<dt><?php esc_html_e( 'Website', 'c9-work' ); ?></dt>
 									<dd>
 										<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 									</dd>
 								<?php endif; ?>
 
 								<?php if ( ! empty( $curauth->user_description ) ) : ?>
-									<dt><?php esc_html_e( 'Profile', 'c9' ); ?></dt>
+									<dt><?php esc_html_e( 'Profile', 'c9-work' ); ?></dt>
 									<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 								<?php endif; ?>
 							</dl>
-						
+
 						</div><!--.col-->
 </div>
 					</div><!--.container-narrow-->
@@ -54,7 +54,7 @@ get_header();
 				<div class="container-narrow">
 					<div class="row pl-5">
 						<div class="col">
-								<h2><?php esc_html_e( 'Posts by', 'c9' ); ?> <?php echo esc_html( $curauth->nickname ); ?></h2>
+								<h2><?php esc_html_e( 'Posts by', 'c9-work' ); ?> <?php echo esc_html( $curauth->nickname ); ?></h2>
 						</div>
 					</div>
 				</div>

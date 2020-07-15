@@ -2270,10 +2270,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_advise_type_text( $required ) {
 			if ( true === $required ) {
-				return __( 'Required', 'c9' );
+				return __( 'Required', 'c9-work' );
 			}
 
-			return __( 'Recommended', 'c9' );
+			return __( 'Recommended', 'c9-work' );
 		}
 
 		/**
@@ -2289,13 +2289,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			switch ( $type ) {
 				case 'repo':
-					$string = __( 'WordPress Repository', 'c9' );
+					$string = __( 'WordPress Repository', 'c9-work' );
 					break;
 				case 'external':
-					$string = __( 'External Source', 'c9' );
+					$string = __( 'External Source', 'c9-work' );
 					break;
 				case 'bundled':
-					$string = __( 'Pre-Packaged', 'c9' );
+					$string = __( 'Pre-Packaged', 'c9-work' );
 					break;
 			}
 
@@ -2312,25 +2312,25 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_status_text( $slug ) {
 			if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
-				return __( 'Not Installed', 'c9' );
+				return __( 'Not Installed', 'c9-work' );
 			}
 
 			if ( ! $this->tgmpa->is_plugin_active( $slug ) ) {
-				$install_status = __( 'Installed But Not Activated', 'c9' );
+				$install_status = __( 'Installed But Not Activated', 'c9-work' );
 			} else {
-				$install_status = __( 'Active', 'c9' );
+				$install_status = __( 'Active', 'c9-work' );
 			}
 
 			$update_status = '';
 
 			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = __( 'Required Update not Available', 'c9' );
+				$update_status = __( 'Required Update not Available', 'c9-work' );
 
 			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
-				$update_status = __( 'Requires Update', 'c9' );
+				$update_status = __( 'Requires Update', 'c9-work' );
 
 			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = __( 'Update recommended', 'c9' );
+				$update_status = __( 'Update recommended', 'c9-work' );
 			}
 
 			if ( '' === $update_status ) {
@@ -2385,19 +2385,19 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				switch ( $type ) {
 					case 'all':
 						/* translators: 1: number of plugins. */
-						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'c9' );
+						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'c9-work' );
 						break;
 					case 'install':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'c9' );
+						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'c9-work' );
 						break;
 					case 'update':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'c9' );
+						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'c9-work' );
 						break;
 					case 'activate':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'c9' );
+						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'c9-work' );
 						break;
 					default:
 						$text = '';
@@ -2479,7 +2479,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$output = array();
 
 			if ( $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
-				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'c9' );
+				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'c9-work' );
 
 				$color = '';
 				if ( ! empty( $item['minimum_version'] ) && $this->tgmpa->does_plugin_require_update( $item['slug'] ) ) {
@@ -2550,8 +2550,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			);
 
 			if ( 'all' === $this->view_context || 'update' === $this->view_context ) {
-				$columns['version'] = __( 'Version', 'c9' );
-				$columns['status']  = __( 'Status', 'c9' );
+				$columns['version'] = __( 'Version', 'c9-work' );
+				$columns['status']  = __( 'Status', 'c9-work' );
 			}
 
 			return apply_filters( 'tgmpa_table_columns', $columns );
@@ -2600,18 +2600,18 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			// Display the 'Install' action link if the plugin is not yet available.
 			if ( ! $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
-				$actions['install'] = __( 'Install %2$s', 'c9' );
+				$actions['install'] = __( 'Install %2$s', 'c9-work' );
 			} else {
 				// Display the 'Update' action link if an update is available and WP complies with plugin minimum.
 				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['update'] = __( 'Update %2$s', 'c9' );
+					$actions['update'] = __( 'Update %2$s', 'c9-work' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
 				if ( $this->tgmpa->can_plugin_activate( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['activate'] = __( 'Activate %2$s', 'c9' );
+					$actions['activate'] = __( 'Activate %2$s', 'c9-work' );
 				}
 			}
 
@@ -2714,16 +2714,16 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
 				if ( current_user_can( 'install_plugins' ) ) {
-					$actions['tgmpa-bulk-install'] = __( 'Install', 'c9' );
+					$actions['tgmpa-bulk-install'] = __( 'Install', 'c9-work' );
 				}
 			}
 
 			if ( 'install' !== $this->view_context ) {
 				if ( current_user_can( 'update_plugins' ) ) {
-					$actions['tgmpa-bulk-update'] = __( 'Update', 'c9' );
+					$actions['tgmpa-bulk-update'] = __( 'Update', 'c9-work' );
 				}
 				if ( current_user_can( 'activate_plugins' ) ) {
-					$actions['tgmpa-bulk-activate'] = __( 'Activate', 'c9' );
+					$actions['tgmpa-bulk-activate'] = __( 'Activate', 'c9-work' );
 				}
 			}
 
@@ -2754,9 +2754,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Did user actually select any plugins to install/update ?
 				if ( empty( $_POST['plugin'] ) ) {
 					if ( 'install' === $install_type ) {
-						$message = __( 'No plugins were selected to be installed. No action taken.', 'c9' );
+						$message = __( 'No plugins were selected to be installed. No action taken.', 'c9-work' );
 					} else {
-						$message = __( 'No plugins were selected to be updated. No action taken.', 'c9' );
+						$message = __( 'No plugins were selected to be updated. No action taken.', 'c9-work' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2797,9 +2797,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// No need to proceed further if we have no plugins to handle.
 				if ( empty( $plugins_to_install ) ) {
 					if ( 'install' === $install_type ) {
-						$message = __( 'No plugins are available to be installed at this time.', 'c9' );
+						$message = __( 'No plugins are available to be installed at this time.', 'c9-work' );
 					} else {
-						$message = __( 'No plugins are available to be updated at this time.', 'c9' );
+						$message = __( 'No plugins are available to be updated at this time.', 'c9-work' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -3155,8 +3155,8 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @since 2.2.0
 					 */
 					public function activate_strings() {
-						$this->strings['activation_failed']  = __( 'Plugin activation failed.', 'c9' );
-						$this->strings['activation_success'] = __( 'Plugin activated successfully.', 'c9' );
+						$this->strings['activation_failed']  = __( 'Plugin activation failed.', 'c9-work' );
+						$this->strings['activation_success'] = __( 'Plugin activated successfully.', 'c9-work' );
 					}
 
 					/**
@@ -3495,29 +3495,29 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						if ( 'update' === $this->options['install_type'] ) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = __( 'Updating Plugin %1$s (%2$d/%3$d)', 'c9' );
+							$this->upgrader->strings['skin_before_update_header'] = __( 'Updating Plugin %1$s (%2$d/%3$d)', 'c9-work' );
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'c9' );
+							$this->upgrader->strings['skin_update_failed_error'] = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'c9-work' );
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = __( 'The installation of %1$s failed.', 'c9' );
+							$this->upgrader->strings['skin_update_failed'] = __( 'The installation of %1$s failed.', 'c9-work' );
 
 							if ( $this->tgmpa->is_automatic ) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'c9' );
+								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-work' );
 								/* translators: 1: plugin name. */
 								$this->upgrader->strings['skin_update_successful'] = __( '%1$s installed and activated successfully.', 'c9' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'c9' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'c9' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations and activations have been completed.', 'c9' );
+								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations and activations have been completed.', 'c9-work' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'c9' );
+								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'c9-work' );
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'c9' );
+								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-work' );
 								/* translators: 1: plugin name. */
 								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'c9' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'c9' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'c9' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations have been completed.', 'c9' );
+								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations have been completed.', 'c9-work' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'c9' );
+								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'c9-work' );
 							}
 						}
 					}
