@@ -96,6 +96,8 @@ if ( ! function_exists( 'c9_setup' ) ) {
 			)
 		);
 
+		add_theme_support( 'custom-background' );
+
 		add_theme_support( 'align-wide' );
 
     	// For the Block Editor.

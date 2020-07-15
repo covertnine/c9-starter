@@ -36,7 +36,7 @@ return;
 	<ul class="pagination">
 		<li class="page-item">
 			<a class="page-link" href="<?php echo esc_attr( $prev_link ); ?>" aria-label="<?php echo __( 'Previous', 'c9' ); ?>">
-				<span aria-hidden="true"><?php echo esc_attr( $args['prev_text'] ); ?></span>
+				<span aria-hidden="true"><?php echo esc_html( $args['prev_text'] ); ?></span>
 				<span class="sr-only"><?php echo __( 'Previous', 'c9' ); ?></span>
 			</a>
 		</li>
@@ -45,12 +45,12 @@ return;
 				$i = 1;
 				foreach ( $links as $link ) {
 		?>
-		<li class="page-item 
+		<li class="page-item
 		<?php
 		if ( $i == $args['current'] ) {
-												echo 'active';
-			};
-			?>
+			echo 'active';
+		};
+		?>
 											">
 			<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
 		</li>
@@ -62,7 +62,7 @@ return;
 
 		<li class="page-item">
 			<a class="page-link" href="<?php echo esc_attr( $next_link ); ?>" aria-label="<?php echo __( 'Next', 'c9' ); ?>">
-				<span aria-hidden="true"><?php echo esc_attr( $args['next_text'] ); ?></span>
+				<span aria-hidden="true"><?php echo esc_html( $args['next_text'] ); ?></span>
 				<span class="sr-only"><?php echo __( 'Next', 'c9' ); ?></span>
 			</a>
 		</li>

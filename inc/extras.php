@@ -109,20 +109,6 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 	}
 }
 
-if ( ! function_exists( 'c9_mime_types' ) ) {
-	/**
-	 * Add different filetypes to allowed uploads
-	 */
-	function c9_mime_types( $mimes ) {
-	$mimes['svg']     = 'image/svg+xml';
-	$mimes['ogg|oga'] = 'audio/ogg';
-	$mimes['webm']    = 'video/webm';
-
-	return $mimes;
-	}
-}
-add_filter( 'upload_mimes', 'c9_mime_types' );
-
 if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 	/**
 	 * Add image sizes
