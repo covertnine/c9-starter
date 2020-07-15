@@ -18,19 +18,6 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
 		wp_enqueue_script( 'c9-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array( 'jquery' ), true );
 
-		if ( !empty( get_theme_mod('c9_google_analytics_id') ) ) {
-			wp_enqueue_script( 'ga-gtag', 'https://www.googletagmanager.com/gtag/js?id=' . get_theme_mod('c9_google_analytics_id') );
-
-			$c9_ga_snippet = "window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', '" . get_theme_mod('c9_google_analytics_id') . "')";
-
-			wp_add_inline_script( 'ga-gtag', $c9_ga_snippet );
-		}
-
-
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
