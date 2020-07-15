@@ -791,8 +791,8 @@ pre,
 }
 
 .page-search-results nav .pagination .page-item .page-link,
-.theme-c9.woocommerce nav.woocommerce-pagination ul li span,
-.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.c9.woocommerce nav.woocommerce-pagination ul li span,
+.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive nav .pagination .page-item .page-link,
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
@@ -800,6 +800,7 @@ pre,
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
+	color: $link-color;
 }
 
 .single .navigation .nav-previous a,
@@ -812,35 +813,47 @@ pre,
 
 .page-search-results .navigation .page-item.active .page-link,
 .page-search-results .navigation .pagination li .current,
-.theme-c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
+.c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
 .archive nav .pagination .page-item.active .current,
 .blog nav .pagination .page-item.active .current {
 	color: $dark;
 }
 
+.page-link,
+.page-item.active .page-link {
+	background-color: $light;
+	border: 1px solid $gray-100;
+}
+
 .page-search-results nav .page-item.active .page-link,
 .page-search-results nav .pagination li .current,
 .archive nav .pagination .page-item.active .current,
-.blog nav .pagination .page-item.active .current {
-	background-color: #ebe9eb;
-	border: 1px solid #dee2e6;
+.blog nav .pagination .page-item.active .current,
+.page-link.current {
+	background-color: $gray-100;
+	border: 1px solid $gray-100;
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+	border: 1px solid transparent;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
-.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive .pagination .page-item a,
 .blog .pagination .page-item a {
 	color: $primary;
 	text-decoration: none;
 }
 
-.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
+.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
 .archive .pagination .page-item a:hover,
 .blog .pagination .page-item a:hover {
 	color: $dark;
 }
 
-.theme-c9.woocommerce nav.woocommerce-pagination,
+.c9.woocommerce nav.woocommerce-pagination,
 .page-search-results nav .pagination,
 .archive nav .pagination,
 .blog nav .pagination {
