@@ -525,34 +525,34 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 					)
 				);
 
-				$wp_customize->add_section(
-					'c9_seo',
-					array(
-						'title'    => __( 'SEO', 'c9' ),
-						'priority' => 98,
-					)
-				);
+				// $wp_customize->add_section(
+				// 	'c9_seo',
+				// 	array(
+				// 		'title'    => __( 'SEO', 'c9' ),
+				// 		'priority' => 98,
+				// 	)
+				// );
 
-				$wp_customize->add_setting(
-					'c9_google_analytics_id',
-					array(
-						'default'           => '',
-						'sanitize_callback' => 'wp_filter_post_kses',
-						'transport'         => 'postMessage',
-						'type' 				=> 'theme_mod',
-						'capability' 		=> 'edit_theme_options',
-					)
-				);
+				// $wp_customize->add_setting(
+				// 	'c9_google_analytics_id',
+				// 	array(
+				// 		'default'           => '',
+				// 		'sanitize_callback' => 'wp_filter_post_kses',
+				// 		'transport'         => 'postMessage',
+				// 		'type' 				=> 'theme_mod',
+				// 		'capability' 		=> 'edit_theme_options',
+				// 	)
+				// );
 
-				$wp_customize->add_control(
-					'c9_google_analytics_id',
-					array(
-						'type'        => 'text',
-						'label'       => __( 'Google Analytics ID', 'c9' ),
-						'section'     => 'c9_seo',
-						'description' => __( 'Enter your Google Analytics tracking ID to have the tracking code inserted in your pages. Should begin with UA-', 'c9' ),
-					)
-				);
+				// $wp_customize->add_control(
+				// 	'c9_google_analytics_id',
+				// 	array(
+				// 		'type'        => 'text',
+				// 		'label'       => __( 'Google Analytics ID', 'c9' ),
+				// 		'section'     => 'c9_seo',
+				// 		'description' => __( 'Enter your Google Analytics tracking ID to have the tracking code inserted in your pages. Should begin with UA-', 'c9' ),
+				// 	)
+				// );
 
 				// } //end checking for theme_mod being set
 	}
