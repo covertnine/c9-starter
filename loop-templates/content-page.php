@@ -17,7 +17,7 @@
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'c9' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-work' ),
 					'after'  => '</div>',
 				)
 				);

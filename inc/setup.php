@@ -26,7 +26,7 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'c9', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'c9-work', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -42,7 +42,7 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Top Navigation Menu', 'c9' ),
+				'primary' => __( 'Top Navigation Menu', 'c9-work' ),
 			)
 			);
 

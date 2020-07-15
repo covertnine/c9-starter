@@ -97,10 +97,10 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 				<?php
 
 						if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-work' ) );
 						}
 						if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-work' ) );
 						}
 						?>
 			</div><!-- .nav-links -->
@@ -170,7 +170,7 @@ function c9_add_search_form( $items, $args ) {
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>
-							<span class="sr-only">' . __( 'Search', 'c9' ) . '</span>
+							<span class="sr-only">' . __( 'Search', 'c9-work' ) . '</span>
 						</a>
 					</div></li>';
 	}

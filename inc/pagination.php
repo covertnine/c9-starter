@@ -18,9 +18,9 @@ return;
 			[
 				'mid_size'           => 2,
 				'prev_next'          => false,
-				'prev_text'          => __( '&laquo;', 'c9' ),
-				'next_text'          => __( '&raquo;', 'c9' ),
-				'screen_reader_text' => __( 'Posts navigation', 'c9' ),
+				'prev_text'          => __( '&laquo;', 'c9-work' ),
+				'next_text'          => __( '&raquo;', 'c9-work' ),
+				'screen_reader_text' => __( 'Posts navigation', 'c9-work' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			]

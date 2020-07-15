@@ -27,7 +27,7 @@ if (!function_exists('c9_posted_on')) {
 			esc_html(get_the_modified_date())
 		);
 		$posted_on = sprintf(
-			esc_html_x('Posted on %s', 'post date', 'c9' ),
+			esc_html_x('Posted on %s', 'post date', 'c9-work' ),
 			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -35,7 +35,7 @@ if (!function_exists('c9_posted_on')) {
 
 		if (get_theme_mod('c9_author_visible') === "show") {
 			$byline = sprintf(
-				esc_html_x('by %s', 'post author', 'c9' ),
+				esc_html_x('by %s', 'post author', 'c9-work' ),
 				'<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
 			);
 			$c9_posted_on .= '<span class="byline"> ' . $byline . '</span>';
@@ -56,25 +56,25 @@ if (!function_exists('c9_entry_footer')) {
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list(esc_html__(', ', 'c9' ));
+			$categories_list = get_the_category_list(esc_html__(', ', 'c9-work' ));
 			if ($categories_list && c9_categorized_blog()) {
-				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'c9' ) . '</span>', $categories_list); // WPCS: XSS OK.
+				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'c9-work' ) . '</span>', $categories_list); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html__(', ', 'c9' ));
+			$tags_list = get_the_tag_list('', esc_html__(', ', 'c9-work' ));
 			if ($tags_list) {
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'c9' ) . '</span>', $tags_list); // WPCS: XSS OK.
+				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'c9-work' ) . '</span>', $tags_list); // WPCS: XSS OK.
 			}
 		}
 		if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
 			echo '<span class="comments-link">';
-			comments_popup_link(esc_html__('Leave a comment', 'c9' ), esc_html__('1 Comment', 'c9' ), esc_html__('% Comments', 'c9' ));
+			comments_popup_link(esc_html__('Leave a comment', 'c9-work' ), esc_html__('1 Comment', 'c9-work' ), esc_html__('% Comments', 'c9-work' ));
 			echo '</span>';
 		}
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				esc_html__('Edit %s', 'c9' ),
+				esc_html__('Edit %s', 'c9-work' ),
 				the_title('<span class="screen-reader-text">"', '"</span>', false)
 			),
 			'<span class="edit-link">',

@@ -28,7 +28,7 @@ get_header();
 									<?php
 									esc_html_e(
 										'Oops! That page can&rsquo;t be found.',
-										'c9'
+										'c9-work'
 										);
 								?>
 								</h1>
@@ -41,7 +41,7 @@ get_header();
 								<?php
 								esc_html_e(
 									'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-									'c9'
+									'c9-work'
 									);
 								?>
 								</p>

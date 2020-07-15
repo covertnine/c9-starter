@@ -28,7 +28,7 @@ get_header();
 									<?php
 									printf(
 											/* translators:*/
-											esc_html__( 'Results for: %s', 'c9' ),
+											esc_html__( 'Results for: %s', 'c9-work' ),
 											'<span>' . get_search_query() . '</span>'
 										);
 										?>
