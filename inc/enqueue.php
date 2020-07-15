@@ -84,16 +84,6 @@ if ( ! function_exists( 'c9_customizer_scripts' ) ) {
 
 }
 
-/**
- * Remove emoji specific code and styling
- */
-
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
-
 // remove inline styles added by WP to Gutenberg
 add_filter('block_editor_settings', 'c9_kill_goot_styles');
 

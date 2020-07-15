@@ -56,8 +56,6 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 				$wp_customize->add_setting(
 					'c9_copyright_content',
 					array(
-						'default'           => __(
-							'&copy; 2020 COVERT NINE. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">Website design by COVERT NINE</a>.', 'c9'),
 						'type' 				=> 'theme_mod',
 						'capability' 		=> 'edit_theme_options',
 						'sanitize_callback' => 'wp_kses',

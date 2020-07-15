@@ -15,7 +15,7 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 } else {
 
 		$c9_footer_search = get_theme_mod('c9_show_search', 'show');
-		$c9_footer_copyright = get_theme_mod( 'c9_copyright_content', '&copy; 2020 COVERT NINE LLC. All Rights Reserved. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">Website designed by COVERT NINE</a>.' );
+		$c9_footer_copyright = get_theme_mod( 'c9_copyright_content', '&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.' );
 
 		require_once( get_template_directory() . '/inc/class-footer.php' );
 		$c9_social_links = c9FooterHelpers::build_c9_social();
@@ -48,9 +48,12 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 											</div>
 											<?php endif; ?>
 												<?php
-													if ( !empty(get_theme_mod( 'c9_copyright_content' )) ) :
+													if ( !empty(get_theme_mod( 'c9_copyright_content' )) ) {
 														echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_theme_mod( 'c9_copyright_content' ) . '</p></div>';
-														endif;
+													} else {
+														echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.</p></div>';
+													}
+
 
 													if ( 'show' === $c9_footer_search ) :
 													?>
