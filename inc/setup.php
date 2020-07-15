@@ -118,14 +118,3 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		add_image_size( 'c9-tiny-thumb', 120, 56, true );
 	}
 }
-
-add_action( 'pre_get_posts', 'c9_posts_per_page' );
-
-function c9_posts_per_page( $query ) {
-	if ( ! $query->is_main_query() || is_admin() ) {
-return;
-	}
-
-	$query->set( 'posts_per_page', 12 );
-	return;
-}
