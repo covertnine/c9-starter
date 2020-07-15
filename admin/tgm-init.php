@@ -94,13 +94,7 @@ function c9_register_required_plugins() {
 			'name'     => 'WP Retina 2x',
 			'slug'     => 'wp-retina-2x',
 			'required' => false,
-		),
-
-		array(
-			'name'		=> 'WooCommerce',
-			'slug'		=> 'woocommerce',
-			'required'	=> false,
-		),
+		)
 
 	);
 
