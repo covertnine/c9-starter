@@ -29,6 +29,24 @@ body {
 	margin-bottom: 5px;
 }
 
+/* blog sticky posts */
+.blog .sticky,
+.sticky {
+	background-color: $gray-100;
+}
+
+.blog .sticky .entry-header,
+.sticky .entry-header {
+	padding: 0em 1em 0.5em 1em;
+}
+
+.blog .sticky h3:before,
+.sticky h3:before {
+	font-family: FontAwesome;
+	content: '\f08d"';
+	display: inline-block;
+}
+
 @media only screen and (min-width: 1px) {
 	.blog .entry-content,
 	.single .entry-content,
