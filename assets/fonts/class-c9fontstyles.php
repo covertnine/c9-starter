@@ -105,7 +105,7 @@ class C9FontStyles {
 		.single .navigation .nav-previous a,
 		.single .navigation .nav-next a,
 		.c9 .c9-vertical-tabs .nav-pills .nav-link {
-		font-family: <?php echo $heading_font; ?>, helvetica, sans-serif;
+		font-family: <?php echo esc_html( $heading_font ); ?>, helvetica, sans-serif;
 		}
 
 		p.wp-block-subhead,
@@ -121,7 +121,7 @@ class C9FontStyles {
 		.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 		.c9 .header-navbar .navbar .nav .nav-item .dropdown-item,
 		.c9 .header-navbar .navbar .nav .nav-item .nav-link {
-			font-family: <?php echo $subheading_font; ?>, helvetica, sans-serif;
+			font-family: <?php echo esc_html( $subheading_font ); ?>, helvetica, sans-serif;
 		}
 
 		:root,
@@ -158,7 +158,7 @@ class C9FontStyles {
 		.c9 .gform_wrapper textarea,
 		.c9 .gform_button.button,
 		.c9 .entry-content {
-			font-family: <?php echo $body_font; ?>, helvetica, sans-serif;
+			font-family: <?php echo esc_html( $body_font ); ?>, helvetica, sans-serif;
 		}
 		<?php
 	}
