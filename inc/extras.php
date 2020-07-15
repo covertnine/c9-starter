@@ -160,23 +160,6 @@ add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 
 }
 add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 
-/**
- * Add search icon to main navigation
- */
-add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
-function c9_add_search_form( $items, $args ) {
-	if ( 'primary' == $args->theme_location ) {
-		$items .= '<li class="nav-item search">
-					<div class="nav-search">
-						<a href="#" class="btn-nav-search nav-link">
-							<i class="fa fa-search"></i>
-							<span class="sr-only">' . __( 'Search', 'c9-work' ) . '</span>
-						</a>
-					</div></li>';
-	}
-	return $items;
-}
-
 // add_filter( 'the_content', 'c9_add_lazy_loading' );
 add_filter( 'wp_get_attachment_image_attributes', 'c9_add_lazy_loading_to_attachment' );
 
