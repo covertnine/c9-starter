@@ -23,7 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	<?php wp_body_open(); ?>
 	<div class="hfeed site c9" id="page">
 		<div id="smoothwrapper" <?php body_class(); ?>>
 		<?php

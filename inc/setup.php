@@ -4,7 +4,7 @@
  * Theme basic setup.
  *
  * @package C9
- */	
+ */
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
@@ -87,7 +87,14 @@ if ( ! function_exists( 'c9_setup' ) ) {
 			);
 
 		// Set up the WordPress Theme logo feature.
-		add_theme_support( 'custom-logo' );
+		add_theme_support( 'custom-logo',
+			array(
+				'height' => '92',
+				'width'	 => '285',
+				'flex-height'	=> true,
+				'flex-width'	=> true
+			)
+		);
 
 		add_theme_support( 'align-wide' );
 

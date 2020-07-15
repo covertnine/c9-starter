@@ -69,7 +69,7 @@ function c9_register_required_plugins() {
 		array(
 			'name'     => 'C9 Blocks',
 			'slug'     => 'c9-blocks',
-			'required' => true,
+			'required' => false,
 		),
 
 		array(
