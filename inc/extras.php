@@ -175,12 +175,12 @@ function c9_add_lazy_loading_to_attachment( $content ) {
 /**
  * Add lazy-loading to content images
  */
-function c9_add_lazy_loading_to_content( $content ) {
+// function c9_add_lazy_loading_to_content( $content ) {
 
-	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
-	return $content;
-}
-add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
+// 	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
+// 	return $content;
+// }
+// add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
 
 /**
  * Add logo to backend

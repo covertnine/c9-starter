@@ -115,7 +115,7 @@ class C9FontStyles {
 		.c9-heading.section-heading >.c9-sh {
 			font-family: <?php echo esc_html( $subheading_font ); ?>, helvetica, sans-serif;
 		}
-
+<?php if ( !empty($body_font) ) { ?>
 		:root,
 		body,
 		.c9 .wp-block-pullquote,
@@ -156,7 +156,8 @@ class C9FontStyles {
 			font-family: <?php echo esc_html( $body_font ); ?>, helvetica, sans-serif;
 		}
 		<?php
-	}
+} //end checking for body_font setting
+	} //end render function
 
 	/**
 	 * Regex powered CSS minifier
