@@ -91,8 +91,6 @@ class C9FontStyles {
 		.display-4,
 		.display-5,
 		.display-6,
-		.header-navbar .navbar .nav .nav-item .nav-link,
-		.header-navbar .navbar .nav .nav-item .dropdown-item,
 		.header-navbar .navbar .nav .search,
 		.page-search-results nav .pagination .page-item .page-link,
 		.c9.woocommerce nav.woocommerce-pagination ul li span,
