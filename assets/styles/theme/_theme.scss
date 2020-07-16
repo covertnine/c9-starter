@@ -157,7 +157,10 @@ body {
 	font-size: 1.6em;
 }
 
-.entry-content address {
+.entry-content address,
+.entry-content table,
+table,
+.post-content > .page-links {
 	font-size: 1.6em;
 	margin-bottom: 20px;
 }
@@ -210,6 +213,8 @@ body {
 .wp-block-heading h1,
 .entry-header h1 {
 	font-size: 4em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .entry-content h2,
@@ -1044,6 +1049,12 @@ pre,
 	max-width: 960px;
 	margin: 0px auto;
 	padding: 15px;
+	font-size: 10px;
+}
+
+.comment-content > ul,
+.comment-content > ol {
+	font-size: 1.6em;
 }
 
 .comment-list {
@@ -1133,10 +1144,6 @@ pre,
 	padding: 0;
 }
 
-.comment-meta a {
-	font-size: 1.2em;
-}
-
 .comment-awaiting-moderation {
 	display: inline;
 	font-size: 1em;
@@ -1164,11 +1171,19 @@ pre,
 	transition: all 0.4s ease-in-out;
 }
 
-.comment-metadata a {
+.comment-metadata a,
+.reply a {
 	font-weight: $font-weight-base;
 	text-transform: uppercase;
+	text-decoration: none;
+	color: $primary;
 }
-
+.reply a {
+	color: $light;
+}
+.reply a:hover {
+	color: $gray-100;
+}
 .comment.bypostauthor {
 	border-left: 3px solid $primary;
 }
@@ -1183,10 +1198,6 @@ pre,
 	display: block;
 }
 
-.comment-metadata a {
-	color: $primary;
-}
-
 .comment-respond .form-submit {
 	margin-bottom: 0px;
 }
@@ -1199,9 +1210,10 @@ pre,
 		letter-spacing: 0.1em;
 	}
 
-	.comment-author .fn .url,
-	.comment-author .fn {
-		font-size: 1.6em;
+	.comment-author {
+		font-size: 1.4em;
+		font-weight: $font-weight-bold;
+		letter-spacing: 0.05em;
 	}
 
 	.comment-content p {
@@ -1213,15 +1225,6 @@ pre,
 
 	.comment-list .comment article {
 		padding-bottom: 20px;
-	}
-}
-
-@media only screen and (min-width: 576px) {
-	.comment-author .fn,
-	.comment-author .fn .url {
-		font-weight: $font-weight-bold;
-		letter-spacing: 0.05em;
-		font-size: 1.4em;
 	}
 }
 
