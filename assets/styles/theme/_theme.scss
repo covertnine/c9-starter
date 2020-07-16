@@ -37,7 +37,7 @@ body {
 
 .blog .sticky .entry-header,
 .sticky .entry-header {
-	padding: 0em 1em 0.5em 1em;
+	padding: 1em 1em 0.5em 1em;
 }
 
 .blog .sticky h3:before,
@@ -45,6 +45,11 @@ body {
 	font-family: FontAwesome;
 	content: '\f08d"';
 	display: inline-block;
+}
+
+.blog .sticky figure,
+.sticky figure {
+	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 1px) {

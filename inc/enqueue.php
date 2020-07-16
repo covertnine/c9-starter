@@ -23,7 +23,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		}
 
 		// Check to see if this script needs to run:
-		$c9_fonts 	 = get_theme_mod('c9_default_font');
+		$c9_fonts 	 = get_theme_mod('c9_default_font', 'yes');
 		$font_choice = isset( $c9_fonts ) ? $c9_fonts : null;
 
 		// Check to see if the array is empty and the user choice is yes to run the font script
@@ -36,8 +36,8 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 
 			// Localize the script with the font data
 			$font_array 						= array();
-			$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font' );
-			$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font' );
+			$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font', 'Bebas+Neue' );
+			$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font', 'Lobster' );
 			$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font' );
 			$font_array['c9_default_font']		= $c9_fonts;
 

@@ -82,9 +82,6 @@ class C9FontStyles {
 		.c9.site h5,
 		.c9.site h6,
 		.entry-content blockquote:before,
-		.navbar,
-		.navbar ul li .dropdown-item,
-		.navbar ul li a,
 		.c9-h,
 		.c9-h.h,
 		.c9-txl,
@@ -117,10 +114,7 @@ class C9FontStyles {
 		.c9 .c9-heading .c9-h .text-muted,
 		.c9 .c9-heading .c9-sh .text-muted,
 		.c9 .c9-heading .c9-txl .text-muted,
-		.c9-heading.section-heading >.c9-sh,
-		.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
-		.c9 .header-navbar .navbar .nav .nav-item .dropdown-item,
-		.c9 .header-navbar .navbar .nav .nav-item .nav-link {
+		.c9-heading.section-heading >.c9-sh {
 			font-family: <?php echo esc_html( $subheading_font ); ?>, helvetica, sans-serif;
 		}
 
@@ -157,7 +151,10 @@ class C9FontStyles {
 		.c9 .gform_wrapper input[type="tel"],
 		.c9 .gform_wrapper textarea,
 		.c9 .gform_button.button,
-		.c9 .entry-content {
+		.c9 .entry-content,
+		.navbar,
+		.navbar ul li .dropdown-item,
+		.navbar ul li a {
 			font-family: <?php echo esc_html( $body_font ); ?>, helvetica, sans-serif;
 		}
 		<?php
