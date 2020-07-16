@@ -160,7 +160,8 @@ body {
 .entry-content address,
 .entry-content table,
 table,
-.post-content > .page-links {
+.post-content > .page-links,
+.entry-content > .page-links {
 	font-size: 1.6em;
 	margin-bottom: 20px;
 }
@@ -1296,6 +1297,7 @@ pre,
 	#right-sidebar.fixed-sidebar {
 		opacity: 1;
 		z-index: 1;
+		padding-bottom: 175px;
 	}
 }
 
