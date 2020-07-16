@@ -10,12 +10,8 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 	 * Load theme's JavaScript and CSS sources.
 	 */
 	function c9_scripts() {
-		$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
 
 		wp_enqueue_style( 'c9-styles', get_template_directory_uri() . '/assets/dist/css/theme.min.css', array() );
-
-		// $js_version = $theme_version . '.' . filemtime(get_template_directory() . '/assets/dist/js/theme.min.js');
 		wp_enqueue_script( 'c9-scripts', get_template_directory_uri() . '/assets/dist/js/theme.min.js', array( 'jquery' ), true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
