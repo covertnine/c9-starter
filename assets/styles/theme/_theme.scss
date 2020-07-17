@@ -47,6 +47,15 @@ body {
 	padding: 1em 1em 0.5em 1em;
 }
 
+.sticky .c9-block-post-grid-header,
+.sticky .c9-block-post-grid-excerpt {
+	padding: 0px 1em;
+}
+
+.c9-block-post-grid .sticky .c9-block-post-grid-excerpt {
+	margin-bottom: 1em;
+}
+
 .blog .sticky h3:before,
 .sticky h3:before {
 	font-family: FontAwesome;
