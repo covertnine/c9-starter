@@ -946,9 +946,12 @@ pre,
 .widget_text ul li,
 .widget_nav_menu ul li,
 .widget ul li {
-	font-size: 1.4em;
 	margin: 10px 0;
 	padding-left: 0px;
+}
+
+.widget {
+	font-size: 1.4em;
 }
 
 .widget {
@@ -3215,7 +3218,8 @@ p ~ .wp-block-button {
 .widget-area .widget_search .search-field,
 .widget-area .widget_search #s,
 .footer-search-wrapper .field,
-.wp-block-search .wp-block-search__input {
+.wp-block-search .wp-block-search__input,
+.widget-area .widget_product_search input[type="search"] {
 	display: inline;
 	vertical-align: top;
 	padding: 2px 8px;
@@ -3235,15 +3239,18 @@ p ~ .wp-block-button {
 	font-size: 10px;
 }
 
-.wp-block-search label {
+.wp-block-search label,
+.widget-area .widget_product_search label {
 	font-weight: bold;
 }
 
-.widget-area .widget_search label {
+.widget-area .widget_search label,
+.widget-area .widget_product_search label {
 	max-width: 100%;
 }
 
-.widget-area .widget_search input[type="submit"] {
+.widget-area .widget_search input[type="submit"],
+.widget-area .widget_product_search button {
 	padding: 7px 16px;
 	display: block;
 	width: 100%;
@@ -3252,6 +3259,15 @@ p ~ .wp-block-button {
 	font-size: 1em;
 	height: 32px;
 	border-radius: 0px;
+}
+
+.widget-area .widget_product_search button {
+	display: inline-block;
+	background-color: $dark;
+	color: $light;
+	text-transform: uppercase;
+	border: 0px;
+	letter-spacing: 1px;
 }
 
 .footer-search-wrapper input[type="submit"] {
@@ -3276,23 +3292,27 @@ p ~ .wp-block-button {
 	opacity: 0.95;
 }
 
-.widget-area .widget_search label {
+.widget-area .widget_search label,
+.widget-area .widget_product_search label {
 	float: left;
 }
 
-.widget-area .widget_search input[type="text"] {
+.widget-area .widget_search input[type="text"],
+.widget-area .widget_product_search input[type="search"] {
 	height: 32px;
 	overflow: hidden;
 	width: 100%;
 }
 
-.search-form label {
+.search-form label,
+.widget-area .widget_product_search label {
 	width: 50%;
 	margin: 0;
 	float: left;
 }
 
-.search-form .search-field {
+.search-form .search-field,
+.widget-area .widget_product_search input[type="search"] {
 	display: inline;
 	vertical-align: top;
 }
