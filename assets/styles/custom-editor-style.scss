@@ -28,13 +28,20 @@
 	border-right: 1px solid #d6d6d6;
 }
 
-body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper {
+body.post-type-page
+	.is-sidebar-opened
+	.block-editor-editor-skeleton__content
+	.editor-styles-wrapper {
 	max-width: 1140px;
 }
 
 /* minimize outer container in backend to accoutn for limited space and the blog post frontend width of 990px */
-body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper,
-body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper {
+body.post-type-post
+	.block-editor-editor-skeleton__content
+	.editor-styles-wrapper,
+body.post-type-page
+	.block-editor-editor-skeleton__content
+	.editor-styles-wrapper {
 	max-width: 990px;
 }
 
@@ -43,14 +50,12 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 	.editor-styles-wrapper .wp-block {
 		max-width: 960px;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
 	.editor-styles-wrapper .wp-block {
 		max-width: 1110px;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -58,23 +63,26 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 		max-width: 1140px;
 	}
 
-	.edit-post-layout:not(.is-sidebar-opened) .editor-styles-wrapper .block-editor-block-list__layout {
+	.edit-post-layout:not(.is-sidebar-opened)
+		.editor-styles-wrapper
+		.block-editor-block-list__layout {
 		padding-left: 0px;
 		padding-right: 0px;
 	}
-
 }
 
 @media only screen and (min-width: 1500px) {
-
 	/* full screen width on large screens */
-	body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper,
-	body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper {
+	body.post-type-page
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper,
+	body.post-type-page
+		.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper {
 		max-width: 94%;
 	}
-
 }
-
 
 /****************************************************************************************/
 /***************************** font changes for editor only (frontend color is on body)
@@ -93,10 +101,18 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 .editor-styles-wrapper .wp-block-pullquote,
 .editor-styles-wrapper .wp-block-pullquote blockquote p,
 .block-editor-format-toolbar__link-container-value,
-.wp-block[data-type="core/pullquote"][data-align=left] .block-editor-rich-text p,
-.wp-block[data-type="core/pullquote"][data-align=right] .block-editor-rich-text p,
-.editor-styles-wrapper .block-editor-rich-text__editable [data-rich-text-placeholder],
-.editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+.wp-block[data-type="core/pullquote"][data-align="left"]
+	.block-editor-rich-text
+	p,
+.wp-block[data-type="core/pullquote"][data-align="right"]
+	.block-editor-rich-text
+	p,
+.editor-styles-wrapper
+	.block-editor-rich-text__editable
+	[data-rich-text-placeholder],
+.editor-styles-wrapper
+	.block-editor-default-block-appender
+	textarea.block-editor-default-block-appender__content {
 	word-wrap: break-word;
 	font-family: $font-family-base;
 	font-size: 16px;
@@ -104,7 +120,7 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 
 .editor-styles-wrapper p,
 .wp-block[data-type="core/paragraph"] p {
-	line-height: 1.7;
+	line-height: 1.6;
 	margin-bottom: 25px;
 }
 
@@ -175,7 +191,9 @@ body .editor-styles-wrapper,
 	min-width: 550px;
 }
 
-.wp-block[data-type="core-embed/twitter"] .wp-block-embed .wp-block-embed__wrapper {
+.wp-block[data-type="core-embed/twitter"]
+	.wp-block-embed
+	.wp-block-embed__wrapper {
 	text-align: center;
 }
 
@@ -188,7 +206,9 @@ body .editor-styles-wrapper,
 	margin-bottom: 0px;
 }
 
-.wp-block[data-type="core/separator"] .block-editor-block-list__block-edit .wp-block-separator {
+.wp-block[data-type="core/separator"]
+	.block-editor-block-list__block-edit
+	.wp-block-separator {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }
@@ -248,16 +268,23 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li,
+.editor-styles-wrapper
+	ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list)
+	li,
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li {
+.editor-styles-wrapper
+	ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list)
+	li {
 	margin: 10px 0px;
 }
 
-.editor-styles-wrapper .wp-block>ol,
+.editor-styles-wrapper .wp-block > ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"] ol,
-.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs),
+.editor-styles-wrapper
+	.wp-block
+	> ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
+.editor-styles-wrapper
+	ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 10px;
 	margin: 30px 0px 35px 45px;
@@ -294,10 +321,10 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress image blocks */
-.wp-block-image .aligncenter>figcaption,
-.wp-block-image .alignleft>figcaption,
-.wp-block-image .alignright>figcaption,
-.wp-block-image.is-resized>figcaption {
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image.is-resized > figcaption {
 	display: block;
 }
 
@@ -316,7 +343,9 @@ body .editor-styles-wrapper,
 
 /* pullquote blocks */
 @media only screen and (min-width: 992px) {
-	.editor-styles-wrapper .wp-block[data-type="core/pullquote"] .wp-block-pullquote {
+	.editor-styles-wrapper
+		.wp-block[data-type="core/pullquote"]
+		.wp-block-pullquote {
 		max-width: 960px;
 		margin-left: auto;
 		margin-right: auto;
@@ -325,9 +354,12 @@ body .editor-styles-wrapper,
 
 /* make mobile editing on gutenberg possible */
 @media only screen and (max-width: 414px) {
-
-	body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper,
-	body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper {
+	body.post-type-post
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper,
+	body.post-type-page
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper {
 		max-width: 100vw;
 		margin: 0px auto;
 		width: 100%;
@@ -341,17 +373,21 @@ body .editor-styles-wrapper,
 		max-width: 100%;
 	}
 
-	.block-editor-block-list__layout .block-editor-block-list__block[data-align=wide],
-	.block-editor-block-list__layout .block-editor-block-list__block[data-align=full] {
+	.block-editor-block-list__layout
+		.block-editor-block-list__block[data-align="wide"],
+	.block-editor-block-list__layout
+		.block-editor-block-list__block[data-align="full"] {
 		width: 100vw;
 	}
 }
 
 /* Gutenberg blocks alignwide and alignfull */
 @media only screen and (min-width: 768px) {
-
 	// Posts/pages align full width
-	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.edit-post-layout:not(.is-sidebar-opened)
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="full"] {
 		margin-left: calc((-100vw + 100% + 116px) / 2);
 		margin-right: calc((-100vw + 100% + 116px) / 2);
 		width: calc(100vw - 116px);
@@ -359,76 +395,99 @@ body .editor-styles-wrapper,
 	}
 
 	// Posts/pages with slightly more narrow alignfull version for when the admin inspector is open
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="full"] {
 		width: calc(100vw - 280px);
 		max-width: calc(100vw - 280px);
-		margin-left: calc((-100vw + 100% + 280px)/ 2);
-		margin-right: calc((-100vw + 100% + 280px)/ 2);
+		margin-left: calc((-100vw + 100% + 280px) / 2);
+		margin-right: calc((-100vw + 100% + 280px) / 2);
 	}
 
 	// Posts/pages default alignwide widths
-	.block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
-		margin-left: calc((-120% + 100%)/ 2);
-		margin-right: calc((-120% + 100%)/ 2);
+	.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
+		margin-left: calc((-120% + 100%) / 2);
+		margin-right: calc((-120% + 100%) / 2);
 		width: 120%;
 		max-width: 100vw;
 	}
 
 	// Posts/pages with slightly more narrow alignwide version for when the admin inspector is open
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
-
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
-
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
 		width: 100%;
 	}
 
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="full"] {
 		max-width: calc(100vw - 280px - 72px);
 		margin-left: -58px;
 		margin-right: -58px;
 	}
-
 }
 
 @media only screen and (min-width: 1500px) {
-
-	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.edit-post-layout:not(.is-sidebar-opened)
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
 		width: 120%;
 		max-width: 1368px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=wide] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="wide"] {
 		width: 100%;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 
-	.edit-post-layout:not(.is-sidebar-opened) .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.edit-post-layout:not(.is-sidebar-opened)
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="full"] {
 		width: calc(100vw - 116px);
 		margin-left: -58px;
 		margin-right: -58px;
 	}
 
-	.is-sidebar-opened .block-editor-editor-skeleton__content .editor-styles-wrapper .wp-block[data-align=full] {
+	.is-sidebar-opened
+		.block-editor-editor-skeleton__content
+		.editor-styles-wrapper
+		.wp-block[data-align="full"] {
 		max-width: calc(100vw - 280px);
 		width: calc(100% + 116px);
 	}
@@ -439,122 +498,121 @@ body .editor-styles-wrapper,
 /****************************************************************************************/
 
 .components-modal__content .input-control,
-.components-modal__content input[type=checkbox],
-.components-modal__content input[type=color],
-.components-modal__content input[type=date],
-.components-modal__content input[type=datetime-local],
-.components-modal__content input[type=datetime],
-.components-modal__content input[type=email],
-.components-modal__content input[type=month],
-.components-modal__content input[type=number],
-.components-modal__content input[type=password],
-.components-modal__content input[type=radio],
-.components-modal__content input[type=search],
-.components-modal__content input[type=tel],
-.components-modal__content input[type=text],
-.components-modal__content input[type=time],
-.components-modal__content input[type=url],
-.components-modal__content input[type=week],
+.components-modal__content input[type="checkbox"],
+.components-modal__content input[type="color"],
+.components-modal__content input[type="date"],
+.components-modal__content input[type="datetime-local"],
+.components-modal__content input[type="datetime"],
+.components-modal__content input[type="email"],
+.components-modal__content input[type="month"],
+.components-modal__content input[type="number"],
+.components-modal__content input[type="password"],
+.components-modal__content input[type="radio"],
+.components-modal__content input[type="search"],
+.components-modal__content input[type="tel"],
+.components-modal__content input[type="text"],
+.components-modal__content input[type="time"],
+.components-modal__content input[type="url"],
+.components-modal__content input[type="week"],
 .components-modal__content select,
 .components-modal__content textarea,
 .components-popover .input-control,
-.components-popover input[type=checkbox],
-.components-popover input[type=color],
-.components-popover input[type=date],
-.components-popover input[type=datetime-local],
-.components-popover input[type=datetime],
-.components-popover input[type=email],
-.components-popover input[type=month],
-.components-popover input[type=number],
-.components-popover input[type=password],
-.components-popover input[type=radio],
-.components-popover input[type=search],
-.components-popover input[type=tel],
-.components-popover input[type=text],
-.components-popover input[type=time],
-.components-popover input[type=url],
-.components-popover input[type=week],
+.components-popover input[type="checkbox"],
+.components-popover input[type="color"],
+.components-popover input[type="date"],
+.components-popover input[type="datetime-local"],
+.components-popover input[type="datetime"],
+.components-popover input[type="email"],
+.components-popover input[type="month"],
+.components-popover input[type="number"],
+.components-popover input[type="password"],
+.components-popover input[type="radio"],
+.components-popover input[type="search"],
+.components-popover input[type="tel"],
+.components-popover input[type="text"],
+.components-popover input[type="time"],
+.components-popover input[type="url"],
+.components-popover input[type="week"],
 .components-popover select,
 .components-popover textarea,
 .edit-post-sidebar .input-control,
-.edit-post-sidebar input[type=checkbox],
-.edit-post-sidebar input[type=color],
-.edit-post-sidebar input[type=date],
-.edit-post-sidebar input[type=datetime-local],
-.edit-post-sidebar input[type=datetime],
-.edit-post-sidebar input[type=email],
-.edit-post-sidebar input[type=month],
-.edit-post-sidebar input[type=number],
-.edit-post-sidebar input[type=password],
-.edit-post-sidebar input[type=radio],
-.edit-post-sidebar input[type=search],
-.edit-post-sidebar input[type=tel],
-.edit-post-sidebar input[type=text],
-.edit-post-sidebar input[type=time],
-.edit-post-sidebar input[type=url],
-.edit-post-sidebar input[type=week],
+.edit-post-sidebar input[type="checkbox"],
+.edit-post-sidebar input[type="color"],
+.edit-post-sidebar input[type="date"],
+.edit-post-sidebar input[type="datetime-local"],
+.edit-post-sidebar input[type="datetime"],
+.edit-post-sidebar input[type="email"],
+.edit-post-sidebar input[type="month"],
+.edit-post-sidebar input[type="number"],
+.edit-post-sidebar input[type="password"],
+.edit-post-sidebar input[type="radio"],
+.edit-post-sidebar input[type="search"],
+.edit-post-sidebar input[type="tel"],
+.edit-post-sidebar input[type="text"],
+.edit-post-sidebar input[type="time"],
+.edit-post-sidebar input[type="url"],
+.edit-post-sidebar input[type="week"],
 .edit-post-sidebar select,
 .edit-post-sidebar textarea,
 .block-editor-block-list__block .input-control,
-.block-editor-block-list__block input[type=checkbox],
-.block-editor-block-list__block input[type=color],
-.block-editor-block-list__block input[type=date],
-.block-editor-block-list__block input[type=datetime-local],
-.block-editor-block-list__block input[type=datetime],
-.block-editor-block-list__block input[type=email],
-.block-editor-block-list__block input[type=month],
-.block-editor-block-list__block input[type=number],
-.block-editor-block-list__block input[type=password],
-.block-editor-block-list__block input[type=radio],
-.block-editor-block-list__block input[type=search],
-.block-editor-block-list__block input[type=tel],
-.block-editor-block-list__block input[type=text],
-.block-editor-block-list__block input[type=time],
-.block-editor-block-list__block input[type=url],
-.block-editor-block-list__block input[type=week],
+.block-editor-block-list__block input[type="checkbox"],
+.block-editor-block-list__block input[type="color"],
+.block-editor-block-list__block input[type="date"],
+.block-editor-block-list__block input[type="datetime-local"],
+.block-editor-block-list__block input[type="datetime"],
+.block-editor-block-list__block input[type="email"],
+.block-editor-block-list__block input[type="month"],
+.block-editor-block-list__block input[type="number"],
+.block-editor-block-list__block input[type="password"],
+.block-editor-block-list__block input[type="radio"],
+.block-editor-block-list__block input[type="search"],
+.block-editor-block-list__block input[type="tel"],
+.block-editor-block-list__block input[type="text"],
+.block-editor-block-list__block input[type="time"],
+.block-editor-block-list__block input[type="url"],
+.block-editor-block-list__block input[type="week"],
 .block-editor-block-list__block select,
 .block-editor-block-list__block textarea,
 .editor-post-permalink .input-control,
-.editor-post-permalink input[type=checkbox],
-.editor-post-permalink input[type=color],
-.editor-post-permalink input[type=date],
-.editor-post-permalink input[type=datetime-local],
-.editor-post-permalink input[type=datetime],
-.editor-post-permalink input[type=email],
-.editor-post-permalink input[type=month],
-.editor-post-permalink input[type=number],
-.editor-post-permalink input[type=password],
-.editor-post-permalink input[type=radio],
-.editor-post-permalink input[type=search],
-.editor-post-permalink input[type=tel],
-.editor-post-permalink input[type=text],
-.editor-post-permalink input[type=time],
-.editor-post-permalink input[type=url],
-.editor-post-permalink input[type=week],
+.editor-post-permalink input[type="checkbox"],
+.editor-post-permalink input[type="color"],
+.editor-post-permalink input[type="date"],
+.editor-post-permalink input[type="datetime-local"],
+.editor-post-permalink input[type="datetime"],
+.editor-post-permalink input[type="email"],
+.editor-post-permalink input[type="month"],
+.editor-post-permalink input[type="number"],
+.editor-post-permalink input[type="password"],
+.editor-post-permalink input[type="radio"],
+.editor-post-permalink input[type="search"],
+.editor-post-permalink input[type="tel"],
+.editor-post-permalink input[type="text"],
+.editor-post-permalink input[type="time"],
+.editor-post-permalink input[type="url"],
+.editor-post-permalink input[type="week"],
 .editor-post-permalink select,
 .editor-post-permalink textarea,
 .editor-post-publish-panel .input-control,
-.editor-post-publish-panel input[type=checkbox],
-.editor-post-publish-panel input[type=color],
-.editor-post-publish-panel input[type=date],
-.editor-post-publish-panel input[type=datetime-local],
-.editor-post-publish-panel input[type=datetime],
-.editor-post-publish-panel input[type=email],
-.editor-post-publish-panel input[type=month],
-.editor-post-publish-panel input[type=number],
-.editor-post-publish-panel input[type=password],
-.editor-post-publish-panel input[type=radio],
-.editor-post-publish-panel input[type=search],
-.editor-post-publish-panel input[type=tel],
-.editor-post-publish-panel input[type=text],
-.editor-post-publish-panel input[type=time],
-.editor-post-publish-panel input[type=url],
-.editor-post-publish-panel input[type=week],
+.editor-post-publish-panel input[type="checkbox"],
+.editor-post-publish-panel input[type="color"],
+.editor-post-publish-panel input[type="date"],
+.editor-post-publish-panel input[type="datetime-local"],
+.editor-post-publish-panel input[type="datetime"],
+.editor-post-publish-panel input[type="email"],
+.editor-post-publish-panel input[type="month"],
+.editor-post-publish-panel input[type="number"],
+.editor-post-publish-panel input[type="password"],
+.editor-post-publish-panel input[type="radio"],
+.editor-post-publish-panel input[type="search"],
+.editor-post-publish-panel input[type="tel"],
+.editor-post-publish-panel input[type="text"],
+.editor-post-publish-panel input[type="time"],
+.editor-post-publish-panel input[type="url"],
+.editor-post-publish-panel input[type="week"],
 .editor-post-publish-panel select,
 .editor-post-publish-panel textarea {
 	border-radius: 0px;
 }
-
 
 /****************************************************************************************/
 /***************************** Typography */
@@ -612,7 +670,7 @@ h6,
 .editor-styles-wrapper .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-	font-size: 4em
+	font-size: 4em;
 }
 
 .editor-styles-wrapper .c9-heading .h1 .text-muted,
@@ -628,35 +686,35 @@ h6,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
 .wp-block-heading h2 {
-	font-size: 3.6em
+	font-size: 3.6em;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h3,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3,
 .wp-block-heading h3 {
-	font-size: 3em
+	font-size: 3em;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h4,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4,
 .wp-block-heading h4 {
-	font-size: 2.8em
+	font-size: 2.8em;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h5,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5,
 .wp-block-heading h5 {
-	font-size: 2em
+	font-size: 2em;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h6,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6,
 .wp-block-heading h6 {
-	font-size: 1.4em
+	font-size: 1.4em;
 }
 
 .c9-h,

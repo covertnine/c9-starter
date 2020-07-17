@@ -281,32 +281,31 @@ table,
 .has-large-font-size,
 .has-larger-font-size,
 .has-huge-font-size {
-	line-height: 1.4;
+	line-height: 1.3;
 }
 
-.has-small-font-size {
-	font-size: 1em !important;
+.entry-content .has-small-font-size {
+	font-size: 1em;
 }
 
-.has-regular-font-size,
-.has-normal-font-size {
-	font-size: 1.6em !important;
+.entry-content .has-regular-font-size,
+.entry-content .has-normal-font-size {
+	font-size: 1.6em;
 }
 
-.has-medium-font-size {
-	font-size: 3em !important;
+.entry-content .has-medium-font-size {
+	font-size: 2em;
 }
 
-.has-large-font-size {
-	font-size: 4em !important;
+.entry-content .has-large-font-size {
+	font-size: 3.6em;
 }
 
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: 7em !important;
+.entry-content .has-huge-font-size {
+	font-size: 4.8em;
 }
 
-p.wp-block-subhead,
+.entry-content p.wp-block-subhead,
 .subhead-h,
 .c9-sh,
 .editor-styles-wrapper .c9-cta .c9-sh p {
@@ -1726,7 +1725,25 @@ img {
 }
 
 /****************************************************************************************/
-/* horizontal rules or core block separators */
+/* WordPress File Download block */
+/****************************************************************************************/
+.wp-block-file {
+	font-size: 1.6em;
+}
+
+/****************************************************************************************/
+/* WordPress Video block */
+/****************************************************************************************/
+
+.wp-block-video figcaption {
+	font-weight: $font-weight-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $gray-700;
+}
+
+/****************************************************************************************/
+/* WordPress horizontal rules or core block separators */
 /****************************************************************************************/
 .entry-content hr,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
@@ -2351,6 +2368,13 @@ table tr th {
 .entry-content ul:not(.wp-block-gallery) li,
 .entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
+}
+
+.wp-block-gallery figcaption {
+	font-weight: $font-weight-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $gray-700;
 }
 
 /****************************************************************************************/
