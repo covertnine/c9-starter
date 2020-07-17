@@ -986,6 +986,19 @@ pre,
 	width: auto;
 }
 
+/* calendar widget */
+.widget-area .calendar_wrap table,
+.footer-widget .calendar_wrap table {
+	font-size: 0.8em;
+}
+
+.widget-area .calendar_wrap table tr td,
+.widget-area .calendar_wrap table tr th,
+.footer-widget .calendar_wrap table tr td,
+.footer-widget .calendar_wrap table tr th {
+	padding: 6px;
+}
+
 /****************************************************************************************/
 /* WordPress Search Results */
 /****************************************************************************************/
