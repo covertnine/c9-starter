@@ -842,8 +842,8 @@ pre,
 }
 
 .page-search-results nav .pagination .page-item .page-link,
-.c9.woocommerce nav.woocommerce-pagination ul li span,
-.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.c9 .woocommerce nav.woocommerce-pagination ul li span,
+.c9 .woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive nav .pagination .page-item .page-link,
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
@@ -866,7 +866,7 @@ pre,
 
 .page-search-results .navigation .page-item.active .page-link,
 .page-search-results .navigation .pagination li .current,
-.c9.woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
+.c9 .woocommerce nav.woocommerce-pagination ul li .current.page-numbers,
 .archive nav .pagination .page-item.active .current,
 .blog nav .pagination .page-item.active .current {
 	color: $dark;
@@ -897,7 +897,7 @@ pre,
 .c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive .pagination .page-item a,
 .blog .pagination .page-item a {
-	color: $primary;
+	color: $link-color;
 	text-decoration: none;
 }
 
