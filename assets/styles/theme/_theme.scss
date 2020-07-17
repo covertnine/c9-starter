@@ -827,7 +827,8 @@ pre,
 
 .page-search-results nav .pagination,
 .archive .pagination,
-.blog .pagination {
+.blog .pagination,
+.entry-footer-content .page-links {
 	max-width: 1140px;
 	margin: 0px auto;
 	text-align: center;
@@ -846,7 +847,8 @@ pre,
 .archive nav .pagination .page-item .page-link,
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
-.single .navigation .nav-next a {
+.single .navigation .nav-next a,
+.post-page-numbers {
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
@@ -856,7 +858,8 @@ pre,
 .single .navigation .nav-previous a,
 .single .navigation .nav-next a,
 .navigation .dots,
-.page-link.dots {
+.page-link.dots,
+.post-page-numbers {
 	text-decoration: none;
 	color: $link-color;
 }
@@ -870,7 +873,8 @@ pre,
 }
 
 .page-link,
-.page-item.active .page-link {
+.page-item.active .page-link,
+.post-page-numbers {
 	background-color: $light;
 	border: 1px solid $gray-100;
 }
@@ -899,8 +903,13 @@ pre,
 
 .c9.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
 .archive .pagination .page-item a:hover,
-.blog .pagination .page-item a:hover {
+.blog .pagination .page-item a:hover,
+.post-page-numbers:hover {
 	color: $dark;
+}
+
+.post-page-numbers:hover {
+	border: 1px solid $gray-500;
 }
 
 .c9.woocommerce nav.woocommerce-pagination,
