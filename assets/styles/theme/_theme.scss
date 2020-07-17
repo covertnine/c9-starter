@@ -926,7 +926,7 @@ pre,
 }
 
 /****************************************************************************************/
-/* WordPress Core Widgets */
+/* WordPress Core Widgets + Widget Blocks (archives, calendar, etc.) */
 /****************************************************************************************/
 .widget_archive ul,
 .widget_categories ul,
@@ -1006,6 +1006,28 @@ pre,
 .footer-widget .calendar_wrap table tr td,
 .footer-widget .calendar_wrap table tr th {
 	padding: 6px;
+}
+
+.wp-calendar-nav {
+	font-size: 1.6em;
+}
+
+.wp-block-calendar,
+.wp-block-categories,
+.wp-block-archives {
+	margin-bottom: 3em;
+}
+
+/* wp block latest comments */
+.entry-content
+	.wp-block-latest-comments
+	.wp-block-latest-comments__comment:before {
+	display: none;
+}
+
+.entry-content .wp-block-latest-comments p {
+	font-size: 16px;
+	line-height: 1.25;
 }
 
 /****************************************************************************************/
@@ -3030,7 +3052,7 @@ img.mfp-img {
 }
 
 /* add some spacing to block buttons preceded by paragraphs*/
-p ~ .wp-block-button {
+p ~ .wp-block-button:not(.alignleft) {
 	margin-top: 20px;
 }
 
@@ -3121,6 +3143,14 @@ p ~ .wp-block-button {
 	border: 1px solid $gray-500;
 	line-height: 1;
 	font-family: $font-family-base;
+}
+
+.c9 select {
+	font-size: 1.6em;
+	min-height: 55px;
+	border-radius: 0px;
+	border: 1px solid $gray-500;
+	color: $gray-600;
 }
 
 .c9 .entry-content input[type="text"],
