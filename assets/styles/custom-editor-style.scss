@@ -256,6 +256,11 @@ body .editor-styles-wrapper,
 	width: 100%;
 }
 
+.wp-block[data-type="core/paragraph"]
+	~ .wp-block[data-type="core/button"]:not(.alignleft) {
+	margin-top: 20px;
+}
+
 /* WordPress core list items */
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
