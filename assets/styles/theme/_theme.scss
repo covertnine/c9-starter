@@ -2290,10 +2290,30 @@ table tr th {
 .entry-content
 	ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
 .editor-styles-wrapper
-	ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
-.entry-content ol {
+	ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
 	padding: 0px 0px 0px 20px;
 	margin: 30px 0px 30px 15px;
+}
+
+.entry-content ol,
+.editor-styles-wrapper ol {
+	list-style-type: none;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 30px 0px 30px 15px;
+}
+
+.entry-content
+	ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)
+	> li
+	> ul,
+.entry-content ol > li > ol,
+.editor-styles-wrapper
+	ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)
+	> li
+	> ul,
+.editor-styles-wrapper ol > li > ol {
+	margin: 0px 0px 0px 15px;
 }
 
 .entry-content
@@ -2307,27 +2327,6 @@ table tr th {
 .editor-styles-wrapper ol,
 .editor-styles-wrapper ol li {
 	list-style-type: none;
-}
-
-.entry-content
-	ul:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list)
-	> li
-	> ul,
-.entry-content
-	ol:not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list)
-	> li
-	> ol,
-.editor-styles-wrapper ul:not(.wp-block-gallery) > li > ul,
-.editor-styles-wrapper ol:not(.wp-block-gallery) > li > ol {
-	margin: 0px 0px 0px 15px;
-}
-
-.entry-content ol,
-.editor-styles-wrapper .block-library-list ol {
-	list-style-type: none;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin: 30px 0px 30px 15px;
 }
 
 .entry-content ol li,
