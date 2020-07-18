@@ -260,6 +260,18 @@ body .editor-styles-wrapper,
 	~ .wp-block[data-type="core/button"]:not(.alignleft) {
 	margin-top: 20px;
 }
+.wp-block[data-type="core/button"][data-align="left"],
+.wp-block[data-type="core/button"][data-align="right"] {
+	display: block;
+	width: auto;
+}
+.wp-block[data-type="core/button"][data-align="left"] {
+	float: left;
+}
+
+.wp-block[data-type="core/button"][data-align="right"] {
+	float: right;
+}
 
 /* WordPress core list items */
 .editor-styles-wrapper ul li,
