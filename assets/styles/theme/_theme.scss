@@ -2364,6 +2364,16 @@ table tr th {
 	content: counter(inner-inner-step-counter);
 }
 
+.entry-content ol li > ul > li,
+.editor-styles-wrapper ol li > ul > li {
+	padding-left: 0px;
+}
+
+.editor-styles-wrapper ol li > ul > li:before,
+.entry-content ol li > ul > li:before {
+	display: none;
+}
+
 .entry-content ul:not(.wp-block-gallery) li,
 .entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
