@@ -14,13 +14,16 @@ if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
 		global $_wp_sidebars_widgets;
+
+		$c9_fresh_status = get_option( 'fresh_site' );
+
 		if ( empty( $_wp_sidebars_widgets ) ) :
 			$sidebars_widgets_count = get_option( 'sidebars_widgets', array() );
 		else :
 			$sidebars_widgets_count = $_wp_sidebars_widgets;
 		endif;
 
-		if ( isset( $sidebars_widgets_count[ $sidebar_id ] ) ) :
+		if ( isset( $sidebars_widgets_count[ $sidebar_id ] ) ) {
 			$widget_count   = count( $sidebars_widgets_count[ $sidebar_id ] );
 			$widget_classes = 'widget-count-' . count( $sidebars_widgets_count[ $sidebar_id ] );
 			if ( 0 == $widget_count % 4 || 6 < $widget_count || 0 == $widget_count % 5 ) :
@@ -40,7 +43,14 @@ if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
 				$widget_classes .= ' col-md-12';
 			endif;
 			return $widget_classes;
-		endif;
+
+		} elseif ( $c9_fresh_status === '1' ) { // This is a fresh install
+
+			$widget_classes = ' col-sm-6 col-md-3';
+
+			return $widget_classes;
+		}
+
 	}
 }
 
@@ -55,8 +65,8 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 			array(
 				'name'          => __( 'Footer', 'c9-work' ),
 				'id'            => 'footerfull',
-				'description'   => 'Full bottom widget with dynamic grid',
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ' . c9_slbd_count_widgets( 'footerfull' ) . '">',
+				'description'   => 'Full bottom widget with dynamic responsive grid that shows on every page. Suggested 3-6 widgets.',
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s' . c9_slbd_count_widgets( 'footerfull' ) . '">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
@@ -67,7 +77,7 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 			array(
 				'name'          => __( 'Right Sidebar', 'c9-work' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'c9-work' ),
+				'description'   => __( 'Right sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on frontend..', 'c9-work' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -79,7 +89,7 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 			array(
 				'name'          => __( 'Left Sidebar', 'c9-work' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'c9-work' ),
+				'description'   => __( 'Left sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on the frontend.', 'c9-work' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
