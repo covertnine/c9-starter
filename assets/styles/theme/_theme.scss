@@ -943,6 +943,10 @@ pre,
 	padding: 0;
 }
 
+.footer-entirety .textwidget {
+	margin: 15px 0px;
+}
+
 .widget_archive ul li,
 .widget_categories ul li,
 .widget_categories ul li,
@@ -958,7 +962,8 @@ pre,
 	padding-left: 0px;
 }
 
-.widget {
+.widget,
+.footer-entirety .textwidget {
 	font-size: 1.4em;
 }
 
