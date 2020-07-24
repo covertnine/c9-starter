@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-07-15 17:16-0500\n"
-"PO-Revision-Date: 2020-07-15 17:17-0500\n"
+"POT-Creation-Date: 2020-07-23 19:18-0500\n"
+"PO-Revision-Date: 2020-07-23 19:22-0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -501,6 +501,22 @@ msgstr "All installations have been completed."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Installing Plugin %1$s (%2$d/%3$d)"
 
+#: author.php:34
+msgid "About: "
+msgstr "About: "
+
+#: author.php:38 inc/custom-comments.php:31
+msgid "Website"
+msgstr "Website"
+
+#: author.php:45
+msgid "Profile"
+msgstr "Profile"
+
+#: author.php:57
+msgid "Posts by"
+msgstr "Posts by"
+
 #: client/client.php:66
 msgid "Product Features"
 msgstr "Product Features"
@@ -546,8 +562,8 @@ msgstr "Add New Product Feature"
 msgid "New Product Feature Name"
 msgstr "New Product Feature Name"
 
-#: client/inc/client-functions.php:77 client/inc/header.php:38
-#: inc/extras.php:173
+#: client/inc/client-functions.php:77 client/inc/header.php:38 footer.php:90
+#: header.php:67 searchform.php:10 searchform.php:14
 msgid "Search"
 msgstr "Search"
 
@@ -575,15 +591,75 @@ msgstr "Second Heading"
 msgid "Black Bar Behind"
 msgstr "Black Bar Behind"
 
-#: client/inc/header.php:12
+#: client/inc/client-setup.php:95
+msgid "Our History"
+msgstr "Our History"
+
+#: client/inc/client-setup.php:101
+msgid "Services"
+msgstr "Services"
+
+#: client/inc/client-setup.php:107
+msgid "Style Guide"
+msgstr "Style Guide"
+
+#: client/inc/client-setup.php:115
+msgid ""
+"This page will show all of the news posts once you have populated your "
+"database with news items."
+msgstr ""
+"This page will show all of the news posts once you have populated your "
+"database with news items."
+
+#: client/inc/client-setup.php:124
+msgid ""
+"A WordPress Theme for small businesses with WooCommerce product catalogs, "
+"forms, and mega menu support."
+msgstr ""
+"A WordPress Theme for small businesses with WooCommerce product catalogs, "
+"forms, and mega menu support."
+
+#: client/inc/client-setup.php:140 inc/setup.php:45
+msgid "Top Navigation Menu"
+msgstr "Top Navigation Menu"
+
+#: client/inc/client-setup.php:168
+msgid "Resources Menu"
+msgstr "Resources Menu"
+
+#: client/inc/client-setup.php:191
+msgid "Company Menu"
+msgstr "Company Menu"
+
+#: client/inc/client-setup.php:212
+msgid "WordPress Meta"
+msgstr "WordPress Meta"
+
+#: client/inc/client-setup.php:217
+msgid "About C9 Work Theme"
+msgstr "About C9 Work Theme"
+
+#: client/inc/client-setup.php:218
+msgid ""
+"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
+"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
+"toggles, and the responsive grid system that makes the theme look super "
+"duper."
+msgstr ""
+"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
+"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
+"toggles, and the responsive grid system that makes the theme look super "
+"duper."
+
+#: client/inc/header.php:12 header.php:41
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: client/inc/header.php:25
+#: client/inc/header.php:25 header.php:55
 msgid " Homepage"
 msgstr " Homepage"
 
-#: client/inc/header.php:26
+#: client/inc/header.php:26 header.php:56
 msgid " Logo"
 msgstr " Logo"
 
@@ -592,6 +668,59 @@ msgstr " Logo"
 #, php-format
 msgid "Results for: %s"
 msgstr "Results for: %s"
+
+#. translators: %s: post title
+#: comments.php:32
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "One thought on &ldquo;%s&rdquo;"
+
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:61 comments.php:116
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:68 comments.php:123
+msgid "&larr; Older Comments"
+msgstr "&larr; Older Comments"
+
+#: comments.php:82 comments.php:137
+msgid "Newer Comments &rarr;"
+msgstr "Newer Comments &rarr;"
+
+#: comments.php:160
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: footer.php:85
+msgid "Close"
+msgstr "Close"
+
+#: footer.php:88
+msgid "Search for:"
+msgstr "Search for:"
+
+#: footer.php:89
+msgid "Search..."
+msgstr "Search..."
+
+#: functions.php:88
+msgid ""
+"You need a client! If you have no client-specific code, add an empty client/"
+"client.php to the parent theme. If you still dont know what&#39;s going on, "
+"contact connect@covertnine.com"
+msgstr ""
+"You need a client! If you have no client-specific code, add an empty client/"
+"client.php to the parent theme. If you still dont know what&#39;s going on, "
+"contact connect@covertnine.com"
 
 #: inc/class-wp-bootstrap-navwalker.php:366
 msgid "Add a menu"
@@ -605,16 +734,12 @@ msgstr "Name"
 msgid "Email"
 msgstr "Email"
 
-#: inc/custom-comments.php:31
-msgid "Website"
-msgstr "Website"
-
 #: inc/custom-comments.php:53
 msgctxt "noun"
 msgid "Comment"
 msgstr "Comment"
 
-#: inc/customizer.php:27 inc/widgets.php:56
+#: inc/customizer.php:27 inc/widgets.php:66
 msgid "Footer"
 msgstr "Footer"
 
@@ -799,11 +924,11 @@ msgstr "Display a sidebar on single posts?"
 msgid "No Sidebar"
 msgstr "No Sidebar"
 
-#: inc/customizer.php:497 inc/customizer.php:522 inc/widgets.php:80
+#: inc/customizer.php:497 inc/customizer.php:522 inc/widgets.php:90
 msgid "Left Sidebar"
 msgstr "Left Sidebar"
 
-#: inc/customizer.php:498 inc/customizer.php:523 inc/widgets.php:68
+#: inc/customizer.php:498 inc/customizer.php:523 inc/widgets.php:78
 msgid "Right Sidebar"
 msgstr "Right Sidebar"
 
@@ -844,10 +969,6 @@ msgstr "Previous"
 #: inc/pagination.php:64 inc/pagination.php:66
 msgid "Next"
 msgstr "Next"
-
-#: inc/setup.php:45
-msgid "Top Navigation Menu"
-msgstr "Top Navigation Menu"
 
 #: inc/template-tags.php:30
 #, php-format
@@ -894,13 +1015,21 @@ msgstr "% Comments"
 msgid "Edit %s"
 msgstr "Edit %s"
 
-#: inc/widgets.php:70
-msgid "Right sidebar widget area"
-msgstr "Right sidebar widget area"
+#: inc/widgets.php:80
+msgid ""
+"Right sidebar widget area displayed when using the Right Sidebar Layout page "
+"template. Widget content fades in after scrolling down on frontend.."
+msgstr ""
+"Right sidebar widget area displayed when using the Right Sidebar Layout page "
+"template. Widget content fades in after scrolling down on frontend.."
 
-#: inc/widgets.php:82
-msgid "Left sidebar widget area"
-msgstr "Left sidebar widget area"
+#: inc/widgets.php:92
+msgid ""
+"Left sidebar widget area displayed when using the Right Sidebar Layout page "
+"template. Widget content fades in after scrolling down on the frontend."
+msgstr ""
+"Left sidebar widget area displayed when using the Right Sidebar Layout page "
+"template. Widget content fades in after scrolling down on the frontend."
 
 #: loop-templates/content-none.php:17
 msgid "Nothing Found"
@@ -938,6 +1067,10 @@ msgstr "Edit"
 #: loop-templates/content.php:43
 msgid "Pages:"
 msgstr "Pages:"
+
+#: searchform.php:12
+msgid "Search &hellip;"
+msgstr "Search &hellip;"
 
 #. Theme Name of the plugin/theme
 msgid "C9 Starter"
