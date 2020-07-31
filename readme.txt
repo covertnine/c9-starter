@@ -15,7 +15,7 @@ The C9 Work theme was made for building out complex responsive landing pages wit
 
 == Frequently Asked Questions ==
 
-= How do I install sample content, and setup the theme with a fresh WordPress install =
+= How do I install sample content, and setup the theme with a fresh WordPress install? =
 
 Glad you asked, the sample content and C9 Work theme install guide can be found at [here](https://work.covertnine.com/setup).
 
