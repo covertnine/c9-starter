@@ -94,6 +94,12 @@ function c9_register_required_plugins() {
 			'name'     => 'WP Retina 2x',
 			'slug'     => 'wp-retina-2x',
 			'required' => false,
+		),
+
+		array(
+			'name'     => 'Max Mega Menu',
+			'slug'     => 'megamenu',
+			'required' => false,
 		)
 
 	);
