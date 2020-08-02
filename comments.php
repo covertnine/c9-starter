@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 			if ( 1 === (int) $comments_number ) {
 				printf(
 					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'c9-work' ),
+					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'c9-togo' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'c9-work'
+						'c9-togo'
 					)
 						),
 					number_format_i18n( $comments_number ),
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'c9-work' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'c9-togo' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
@@ -66,7 +66,7 @@ if ( post_password_required() ) {
 					previous_comments_link(
 						__(
 													'&larr; Older Comments',
-													'c9-work'
+													'c9-togo'
 												)
 						);
 												?>
@@ -80,7 +80,7 @@ if ( post_password_required() ) {
 					next_comments_link(
 						__(
 												'Newer Comments &rarr;',
-												'c9-work'
+												'c9-togo'
 											)
 							);
 												?>
@@ -113,7 +113,7 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-below">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'c9-work' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'c9-togo' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
@@ -121,7 +121,7 @@ if ( post_password_required() ) {
 					previous_comments_link(
 						__(
 													'&larr; Older Comments',
-													'c9-work'
+													'c9-togo'
 												)
 						);
 												?>
@@ -135,7 +135,7 @@ if ( post_password_required() ) {
 					next_comments_link(
 						__(
 												'Newer Comments &rarr;',
-												'c9-work'
+												'c9-togo'
 											)
 							);
 												?>
@@ -157,7 +157,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'c9-work' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'c9-togo' ); ?></p>
 
 	<?php endif; ?>
 

@@ -104,7 +104,7 @@ if ( $c9_blog_sidebar  != 'hide' ) {
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-work' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-togo' ),
 					'after'  => '</div>',
 				)
 				);

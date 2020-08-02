@@ -18,9 +18,9 @@ return;
 			[
 				'mid_size'           => 2,
 				'prev_next'          => false,
-				'prev_text'          => __( '&laquo;', 'c9-work' ),
-				'next_text'          => __( '&raquo;', 'c9-work' ),
-				'screen_reader_text' => __( 'Posts navigation', 'c9-work' ),
+				'prev_text'          => __( '&laquo;', 'c9-togo' ),
+				'next_text'          => __( '&raquo;', 'c9-togo' ),
+				'screen_reader_text' => __( 'Posts navigation', 'c9-togo' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			]
@@ -35,9 +35,9 @@ return;
 <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 	<ul class="pagination">
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr( $prev_link ); ?>" aria-label="<?php echo __( 'Previous', 'c9-work' ); ?>">
+			<a class="page-link" href="<?php echo esc_attr( $prev_link ); ?>" aria-label="<?php echo __( 'Previous', 'c9-togo' ); ?>">
 				<span aria-hidden="true"><?php echo esc_html( $args['prev_text'] ); ?></span>
-				<span class="sr-only"><?php echo __( 'Previous', 'c9-work' ); ?></span>
+				<span class="sr-only"><?php echo __( 'Previous', 'c9-togo' ); ?></span>
 			</a>
 		</li>
 
@@ -61,9 +61,9 @@ return;
 				?>
 
 		<li class="page-item">
-			<a class="page-link" href="<?php echo esc_attr( $next_link ); ?>" aria-label="<?php echo __( 'Next', 'c9-work' ); ?>">
+			<a class="page-link" href="<?php echo esc_attr( $next_link ); ?>" aria-label="<?php echo __( 'Next', 'c9-togo' ); ?>">
 				<span aria-hidden="true"><?php echo esc_html( $args['next_text'] ); ?></span>
-				<span class="sr-only"><?php echo __( 'Next', 'c9-work' ); ?></span>
+				<span class="sr-only"><?php echo __( 'Next', 'c9-togo' ); ?></span>
 			</a>
 		</li>
 	</ul>
