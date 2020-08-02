@@ -10,7 +10,7 @@
 <?php
 if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 
-	include( locate_template( 'client/inc/footer.php' ) );
+	get_template_part( 'client/inc','footer' );
 
 } else {
 
