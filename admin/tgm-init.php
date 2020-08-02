@@ -85,6 +85,12 @@ function c9_register_required_plugins() {
 		),
 
 		array(
+			'name'     => 'Matomo Analytics',
+			'slug'     => 'matomo',
+			'required' => false,
+		),
+
+		array(
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
 			'required' => false,
@@ -103,11 +109,22 @@ function c9_register_required_plugins() {
 		),
 
 		array(
+			'name'		=> 'Store Hours Manager for WooCommerce'
+			'slug'		=> 'order-hours-scheduler-for-woocommerce',
+			'required'	=> false,
+		),
+
+		array(
 			'name'		=> 'WooCommerce Order Delivery',
 			'slug'		=> 'byconsole-woo-order-delivery-time',
 			'required'	=> false,
 		),
 
+		array(
+			'name'		=> 'WP SMS',
+			'slug'		=> 'wp-sms',
+			'required'	=> false,
+		),
 	);
 
 	if ( ! isset( $config ) ) {
