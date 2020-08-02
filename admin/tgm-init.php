@@ -109,7 +109,7 @@ function c9_register_required_plugins() {
 		),
 
 		array(
-			'name'		=> 'Store Hours Manager for WooCommerce'
+			'name'		=> 'Store Hours Manager for WooCommerce',
 			'slug'		=> 'order-hours-scheduler-for-woocommerce',
 			'required'	=> false,
 		),
