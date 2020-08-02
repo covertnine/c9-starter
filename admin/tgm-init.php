@@ -101,6 +101,12 @@ function c9_register_required_plugins() {
 			'slug'     => 'wp-retina-2x',
 			'required' => false,
 		),
+,
+		array(
+			'name'		=> 'Smash Balloon Social Photo Feed',
+			'slug'		=> 'instagram-feed',
+			'required'	=> false,
+		),
 
 		array(
 			'name'     => 'WooCommerce',
