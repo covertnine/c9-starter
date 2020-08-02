@@ -75,7 +75,20 @@ if ( ! function_exists( 'c9_change_logo_class' ) ) {
 	}
 }
 
-
+// add a full screen search icon to navigation
+add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
+function c9_add_search_form( $items, $args ) {
+	if ( 'primary' == $args->theme_location ) {
+		$items .= '<li class="nav-item search">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search nav-link">
+							<i class="fa fa-search"></i>
+							<span class="sr-only">' . __( 'Search', 'c9' ) . '</span>
+						</a>
+					</div></li>';
+	}
+	return $items;
+}
 
 if ( ! function_exists( 'c9_post_nav' ) ) {
 
