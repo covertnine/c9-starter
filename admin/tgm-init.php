@@ -101,7 +101,7 @@ function c9_register_required_plugins() {
 			'slug'     => 'wp-retina-2x',
 			'required' => false,
 		),
-,
+
 		array(
 			'name'		=> 'Smash Balloon Social Photo Feed',
 			'slug'		=> 'instagram-feed',
@@ -112,6 +112,18 @@ function c9_register_required_plugins() {
 			'name'     => 'WooCommerce',
 			'slug'     => 'woocommerce',
 			'required' => false,
+		),
+
+		array(
+			'name'		=> 'Leave At Door For WooCommerce',
+			'slug'		=> 'leave-at-door-for-woocommerce',
+			'required'	=> false,
+		),
+
+		array(
+			'name'		=> 'Order Delivery or Pickup with Date/Time',
+			'slug'		=> 'byconsole-woo-order-delivery-time',
+			'required'	=> false,
 		),
 
 		array(
