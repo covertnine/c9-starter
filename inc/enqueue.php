@@ -32,9 +32,9 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 
 			// Localize the script with the font data
 			$font_array 						= array();
-			$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font', 'Bebas+Neue' );
-			$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font', 'Lobster' );
-			$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font' );
+			$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font','Sen' );
+			$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font', 'Sen' );
+			$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font', 'Sen' );
 			$font_array['c9_default_font']		= $c9_fonts;
 
 			// Use the localize function to localize the script and continue with the code
