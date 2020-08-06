@@ -19,11 +19,15 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		}
 
 		// Check to see if this script needs to run:
-		$c9_fonts 	 = get_theme_mod('c9_default_font', 'yes');
-		$font_choice = isset( $c9_fonts ) ? $c9_fonts : null;
+		$c9_fonts 	 						= get_theme_mod('c9_default_font', 'no');
+		$font_choice 						= isset( $c9_fonts ) ? $c9_fonts : null;
+		$font_array							= array();
+		$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font');
+		$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font' );
+		$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font' );
 
 		// Check to see if the array is empty and the user choice is yes to run the font script
-		if ( ! empty( $font_choice ) && 'yes' === $font_choice ) {
+		if (  ($font_choice === 'yes') && ( !empty($font_array) ) ) {
 			// Begin by registering the JavaScript Script
 			// Add action to enqueue the CDN script:
 			wp_enqueue_script( 'webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
@@ -31,25 +35,27 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 			wp_register_script( 'c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array( 'webfont-loader' ) );
 
 			// Localize the script with the font data
-			$font_array 						= array();
-			$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font', 'Helvetica Neue' );
-			$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font', 'Helvetica Neue' );
-			$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font', 'Helvetica Neue' );
 			$font_array['c9_default_font']		= $c9_fonts;
+			$font_unset_default					= 'Helvetica Neue';
 
-			// Use the localize function to localize the script and continue with the code
-			wp_localize_script( 'c9-typography-script', 'c9SelectedFonts', $font_array );
+			if ( ($font_array['c9_heading_font'] !== $font_unset_default ) && ($font_array['c9_subheading_font'] !== $font_unset_default ) && ($font_array['c9_body_font'] !== $font_unset_default ) ) {
 
-			// Enqueued script with the data we pulled from earlier selections
-			wp_enqueue_script( 'c9-typography-script' );
+				// Use the localize function to localize the script and continue with the code
+				wp_localize_script( 'c9-typography-script', 'c9SelectedFonts', $font_array );
 
-			require_once( get_template_directory() . '/assets/fonts/class-c9fontstyles.php' );
-			ob_start();
-			C9FontStyles::render( $font_array );
-			$font_css       = ob_get_clean();
-			$fonts_minified = C9FontStyles::minify_css( $font_css );
+				// Enqueued script with the data we pulled from earlier selections
+				wp_enqueue_script( 'c9-typography-script' );
 
-			wp_add_inline_style( 'c9-styles', $fonts_minified );
+				require_once( get_template_directory() . '/assets/fonts/class-c9fontstyles.php' );
+				ob_start();
+				C9FontStyles::render( $font_array );
+				$font_css       = ob_get_clean();
+				$fonts_minified = C9FontStyles::minify_css( $font_css );
+
+				wp_add_inline_style( 'c9-styles', $fonts_minified );
+
+			}
+
 		}
 	}
 } // endif function_exists( 'c9_scripts' ).

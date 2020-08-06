@@ -25,10 +25,13 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 		c9QueuedFonts.push(c9SelectedFonts.c9_body_font);
 	}
 
+	//check if the settings were actually set, if so push the font css
 	WebFont.load({
 		google: {
 			families: c9QueuedFonts
 		}
 	});
+
 }
-// console.log(c9SelectedFonts);
+//console.log(c9SelectedFonts);
+//console.log(c9QueuedFonts);
