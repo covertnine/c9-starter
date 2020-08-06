@@ -30,7 +30,7 @@
 			get_template_part( 'client/inc','topnav' );
 		?>
 		<?php
-		if ( file_exists( 'client/inc/header.php' ) ) {
+		if ( file_exists( get_template_directory() . 'client/inc/header.php' ) ) {
 			get_template_part( 'client/inc','header' );
 		} else {
 		?>
@@ -48,13 +48,6 @@
 
 							if (has_custom_logo()) {
 								the_custom_logo();
-							} else {
-							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9-starter' ); ?>" class="navbar-brand c9-custom-logo">
-								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg' ); ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9-starter' );
-								?>" />
-							</a>
-							<?php
 							}
 							?>
 
