@@ -17,7 +17,7 @@
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-togo' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-starter' ),
 					'after'  => '</div>',
 				)
 				);

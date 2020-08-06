@@ -36,7 +36,7 @@
 		?>
 			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-				<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9-togo' ); ?></a>
+				<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9-starter' ); ?></a>
 
 				<nav class="navbar navbar-expand-lg navbar-light">
 
@@ -50,8 +50,8 @@
 								the_custom_logo();
 							} else {
 							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9-togo' ); ?>" class="navbar-brand c9-custom-logo">
-								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg' ); ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9-togo' );
+							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9-starter' ); ?>" class="navbar-brand c9-custom-logo">
+								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg' ); ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9-starter' );
 								?>" />
 							</a>
 							<?php
@@ -62,7 +62,7 @@
 							<div class="nav-search">
 								<a href="#" class="btn-nav-search">
 									<i class="fa fa-search"></i>
-									<span class="sr-only"><?php __( 'Search', 'c9-togo' ); ?></span>
+									<span class="sr-only"><?php __( 'Search', 'c9-starter' ); ?></span>
 								</a>
 							</div>
 							<?php if (has_nav_menu('primary')) { ?>

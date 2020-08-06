@@ -27,7 +27,7 @@
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'c9-togo' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'c9-starter' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
 

@@ -63,7 +63,7 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 	function c9_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer', 'c9-togo' ),
+				'name'          => __( 'Footer', 'c9-starter' ),
 				'id'            => 'footerfull',
 				'description'   => 'Full bottom widget with dynamic responsive grid that shows on every page. Suggested 3-6 widgets.',
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ' . c9_slbd_count_widgets( 'footerfull' ) . '">',
@@ -75,9 +75,9 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'c9-togo' ),
+				'name'          => __( 'Right Sidebar', 'c9-starter' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on frontend..', 'c9-togo' ),
+				'description'   => __( 'Right sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on frontend..', 'c9-starter' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -87,9 +87,9 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'c9-togo' ),
+				'name'          => __( 'Left Sidebar', 'c9-starter' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on the frontend.', 'c9-togo' ),
+				'description'   => __( 'Left sidebar widget area displayed when using the Right Sidebar Layout page template. Widget content fades in after scrolling down on the frontend.', 'c9-starter' ),
 				'before_widget' => '<aside id="%1$s" class="widget sidebar-widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',

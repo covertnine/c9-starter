@@ -83,7 +83,7 @@ function c9_add_search_form( $items, $args ) {
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>
-							<span class="sr-only">' . __( 'Search', 'c9-togo' ) . '</span>
+							<span class="sr-only">' . __( 'Search', 'c9-starter' ) . '</span>
 						</a>
 					</div></li>';
 	}
@@ -105,15 +105,15 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 		}
 		?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e( 'Post navigation', 'c9-togo' ); ?></h2>
+			<h2 class="sr-only"><?php _e( 'Post navigation', 'c9-starter' ); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
 						if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-togo' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-starter' ) );
 						}
 						if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-togo' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-starter' ) );
 						}
 						?>
 			</div><!-- .nav-links -->
