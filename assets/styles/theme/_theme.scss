@@ -12,7 +12,6 @@ body {
 
 body {
 	color: $gray-900;
-	font-family: $font-family-base;
 	line-height: 1.3;
 	font-size: 1em;
 }
@@ -155,13 +154,6 @@ body {
 /****************************************************************************************/
 /* Typography */
 /****************************************************************************************/
-.wp-block-pullquote,
-.wp-block-pullquote blockquote p,
-#wrapper-footer {
-	word-wrap: break-word;
-	font-family: $font-family-base;
-}
-
 .entry-content p,
 .c9 dl,
 .entry-footer {
@@ -307,22 +299,7 @@ table,
 .subhead-h,
 .c9-sh,
 .editor-styles-wrapper .c9-cta .c9-sh p {
-	font-family: $font-family-sans-serif;
 	font-weight: 300;
-}
-
-.c9-h,
-.c9-h.h,
-.c9-txl,
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-	font-family: $headings-font-family;
-	line-height: 1.1;
-	font-weight: $headings-font-weight;
 }
 
 .display-1 {
@@ -3002,7 +2979,7 @@ screen and (max-height: 300px) {
 .wp-block-button__link,
 .wp-block-file__button,
 .wp-block-file .wp-block-file__button,
- .wp-block-button__link:not([href]):not([tabindex]) {
+.wp-block-button__link:not([href]):not([tabindex]) {
 	display: inline-block;
 	padding: 12px 35px;
 	width: auto;

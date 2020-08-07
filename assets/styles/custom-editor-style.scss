@@ -40,7 +40,6 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 	max-width: 990px;
 }
 
-
 /* for elements appearing in backend editor need to visually represent the frontend available width*/
 
 @media only screen and (min-width: 768px) {
@@ -81,9 +80,7 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 	}
 }
 
-
 /****************************************************************************************/
-
 
 /***************************** font changes for editor only (frontend color is on body)
 /****************************************************************************************/
@@ -165,7 +162,6 @@ body .editor-styles-wrapper,
 	top: -48px;
 }
 
-
 /****************************************************************************************/
 /***************************** core block edits for backend only
 /****************************************************************************************/
@@ -231,7 +227,6 @@ body .editor-styles-wrapper,
 	box-shadow: 0 -1px 0 0 #eceeef;
 }
 
-
 /*WordPress core square buttons*/
 
 .editor-rich-text__editable.wp-block-button__link.square {
@@ -260,7 +255,6 @@ body .editor-styles-wrapper,
 	float: right;
 }
 
-
 /* WordPress core list items */
 
 .editor-styles-wrapper ul li,
@@ -288,7 +282,6 @@ body .editor-styles-wrapper,
 	list-style-type: none;
 }
 
-
 /* WordPress Core search widget block */
 
 .editor-styles-wrapper .wp-block-search .wp-block-search__label {
@@ -313,14 +306,12 @@ body .editor-styles-wrapper,
 	color: $light;
 }
 
-
 /* WordPress core spacers */
 
 .editor-styles-wrapper [data-type="core/spacer"] {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
 
 /* WordPress image blocks */
 
@@ -337,9 +328,7 @@ body .editor-styles-wrapper,
 	margin-right: auto;
 }
 
-
 /* WordPress cover block and core image block on post edit (not page edit) */
-
 
 /* WordPress core quote blocks on Posts and elsewhere */
 
@@ -347,7 +336,6 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-quote {
 	font-size: 10px;
 }
-
 
 /* pullquote blocks */
 
@@ -358,7 +346,6 @@ body .editor-styles-wrapper,
 		margin-right: auto;
 	}
 }
-
 
 /* make mobile editing on gutenberg possible */
 
@@ -384,7 +371,6 @@ body .editor-styles-wrapper,
 		width: 100vw;
 	}
 }
-
 
 /* Gutenberg blocks alignwide and alignfull */
 
@@ -469,9 +455,7 @@ body .editor-styles-wrapper,
 	}
 }
 
-
 /****************************************************************************************/
-
 
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/
@@ -593,47 +577,9 @@ body .editor-styles-wrapper,
 	border-radius: 0px;
 }
 
-
 /****************************************************************************************/
-
-
-/***************************** Typography */
-
-
+/* Typography */
 /****************************************************************************************/
-
-.editor-styles-wrapper,
-.editor-styles-wrapper .c9-grid,
-.editor-styles-wrapper .c9-post-grid {
-	font-family: $font-family-base;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.editor-styles-wrapper .h1,
-.editor-styles-wrapper .h2,
-.editor-styles-wrapper .h3,
-.editor-styles-wrapper .h4,
-.editor-styles-wrapper .h5,
-.editor-styles-wrapper .h6,
-.editor-styles-wrapper h1,
-.editor-styles-wrapper h2,
-.editor-styles-wrapper h3,
-.editor-styles-wrapper h4,
-.editor-styles-wrapper h5,
-.editor-styles-wrapper h6 {
-	font-family: $headings-font-family;
-}
 
 .editor-styles-wrapper .wp-block[data-type="core/heading"] h1,
 .editor-styles-wrapper .wp-block[data-type="core/heading"] h2,
@@ -643,7 +589,6 @@ h6,
 .editor-styles-wrapper .wp-block[data-type="core/heading"] h6 {
 	margin-top: 0px;
 	margin-bottom: 5px;
-	font-weight: 500;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h1,
@@ -698,9 +643,6 @@ h6,
 	font-size: 1.4em;
 }
 
-.c9-h,
-.c9-h.h,
-.c9-txl,
 .display-1,
 .display-2,
 .display-3,

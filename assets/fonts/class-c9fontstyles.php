@@ -118,6 +118,7 @@ class C9FontStyles {
 <?php if ( !empty($body_font) ) { ?>
 		:root,
 		body,
+		body .editor-styles-wrapper,
 		.c9 .wp-block-pullquote,
 		.c9 .wp-block-pullquote blockquote p,
 		.c9 #wrapper-footer,
