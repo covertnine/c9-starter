@@ -85,8 +85,7 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 }
 
 /****************************************************************************************/
-
-/***************************** font changes for editor only (frontend color is on body)
+/* font changes for editor only (frontend color is on body)
 /****************************************************************************************/
 
 .editor-styles-wrapper p,
@@ -112,7 +111,8 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 }
 
 .editor-styles-wrapper p,
-.wp-block[data-type="core/paragraph"] p {
+.wp-block[data-type="core/paragraph"] p,
+.editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
 	line-height: 1.6;
 	margin-bottom: 20px;
 	margin-top: 0px;
