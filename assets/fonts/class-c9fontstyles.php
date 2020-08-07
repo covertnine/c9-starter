@@ -82,6 +82,8 @@ class C9FontStyles {
 		.c9.site h5,
 		.c9.site h6,
 		.entry-content blockquote:before,
+		.c9-heading,
+		.wp-block[data-type="core/heading"],
 		.c9-h,
 		.c9-h.h,
 		.c9-txl,
@@ -118,7 +120,7 @@ class C9FontStyles {
 <?php if ( !empty($body_font) ) { ?>
 		:root,
 		body,
-		body .editor-styles-wrapper,
+		body .editor-styles-wrapper .is-root-container,
 		.c9 .wp-block-pullquote,
 		.c9 .wp-block-pullquote blockquote p,
 		.c9 #wrapper-footer,

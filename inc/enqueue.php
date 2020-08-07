@@ -36,9 +36,8 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 
 			// Localize the script with the font data
 			$font_array['c9_default_font']		= $c9_fonts;
-			$font_unset_default					= 'Helvetica Neue';
 
-			if ( ($font_array['c9_heading_font'] !== $font_unset_default ) && ($font_array['c9_subheading_font'] !== $font_unset_default ) && ($font_array['c9_body_font'] !== $font_unset_default ) ) {
+			if  ($c9_fonts != 'no' ) {
 
 				// Use the localize function to localize the script and continue with the code
 				wp_localize_script( 'c9-typography-script', 'c9SelectedFonts', $font_array );
