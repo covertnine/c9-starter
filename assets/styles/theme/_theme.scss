@@ -274,7 +274,7 @@ table,
 }
 
 .entry-content .has-small-font-size {
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 .entry-content .has-regular-font-size,
@@ -327,10 +327,11 @@ table,
 }
 
 /* links in content */
-a {
+a,
+.editor-styles-wrapper .block-editor-rich-text__editable a {
 	transition: 0.3s color;
 	text-decoration: underline;
-	color: $primary;
+	color: $link-color;
 }
 
 a:hover {
