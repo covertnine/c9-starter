@@ -113,14 +113,15 @@ body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrappe
 .editor-styles-wrapper p,
 .wp-block[data-type="core/paragraph"] p {
 	line-height: 1.6;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
+	margin-top: 0px;
 }
 
 .editor-styles-wrapper blockquote p,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper p.mce-content-body,
 .editor-styles-wrapper p.mce-content-body {
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 	line-height: 1.7;
 	font-size: 16px;
 }

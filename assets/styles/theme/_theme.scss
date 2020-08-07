@@ -3001,7 +3001,8 @@ screen and (max-height: 300px) {
 .entry-content input[type="submit"],
 .wp-block-button__link,
 .wp-block-file__button,
-.wp-block-file .wp-block-file__button {
+.wp-block-file .wp-block-file__button,
+ .wp-block-button__link:not([href]):not([tabindex]) {
 	display: inline-block;
 	padding: 12px 35px;
 	width: auto;
@@ -3016,7 +3017,7 @@ screen and (max-height: 300px) {
 	text-transform: uppercase;
 	transition: opacity 0.4s ease-in-out;
 	white-space: normal;
-	color: #fff;
+	color: $light;
 	line-height: 1;
 }
 
