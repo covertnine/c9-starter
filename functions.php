@@ -1,5 +1,4 @@
 <?php
-
 /**
  * C9 functions and definitions.
  *

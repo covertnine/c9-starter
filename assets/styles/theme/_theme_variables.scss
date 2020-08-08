@@ -1,4 +1,4 @@
-// c9
+// c9-starter
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 :root {
 	font-family: "helvetica neue", helvetica, sans-serif;
@@ -44,11 +44,12 @@ $danger: #843534;
 $dark: #000000;
 $light: #ffffff;
 
-$link-hover-color: #006a30;
+$link-hover-color: #000000;
 $link-color: #4a4a4a;
 
 $gray-100: #f1f1f1;
 $gray-200: #eceeef;
+$gray-300: #dee2e6;
 $gray-500: #d2d2d2;
 $gray-600: rgba(151, 151, 151, 1);
 $gray-700: #2b2b2b;
