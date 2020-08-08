@@ -24,8 +24,6 @@ if (!function_exists('c9-admin-font-styles')) {
 	function c9_admin_font_styles()
 	{
 
-		wp_enqueue_style('c9-styles', get_template_directory_uri() . '/assets/dist/css/theme.min.css');
-
 		// Check to see if this script needs to run:
 		$c9_fonts 	 						= get_theme_mod('c9_default_font', 'no');
 		$font_choice 						= isset($c9_fonts) ? $c9_fonts : null;
