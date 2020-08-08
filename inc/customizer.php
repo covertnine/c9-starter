@@ -2,7 +2,7 @@
 /**
  * Theme Customizer
  *
- * @package c9
+ * @package c9-starter
  */
 
 /**

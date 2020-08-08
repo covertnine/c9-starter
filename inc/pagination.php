@@ -3,7 +3,7 @@
 /**
  * Pagination layout.
  *
- * @package c9
+ * @package c9-starter
  */
 
 if ( ! function_exists( 'c9_pagination' ) ) {

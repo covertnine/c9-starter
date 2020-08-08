@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package c9
+ * @package c9-starter
  */
 
 add_filter( 'body_class', 'c9_body_classes' );

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package c9
+ * @package c9-starter
  */
 
 ?>

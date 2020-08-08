@@ -2,7 +2,7 @@
 /**
  * C9 font styles.
  *
- * @package c9
+ * @package c9-starter
  */
 class C9FontStyles {
 	/**

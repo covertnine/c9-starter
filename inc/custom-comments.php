@@ -2,7 +2,7 @@
 /**
  * Comment layout.
  *
- * @package c9
+ * @package c9-starter
  */
 
 // Comments form.

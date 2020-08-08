@@ -5,7 +5,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package c9
+ * @package c9-starter
  */
 
 /**

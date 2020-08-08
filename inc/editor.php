@@ -3,7 +3,7 @@
 /**
  * COVERT NINE modify editor
  *
- * @package c9
+ * @package c9-starter
  */
 
 /**

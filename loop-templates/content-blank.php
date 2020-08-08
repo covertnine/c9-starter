@@ -2,7 +2,7 @@
 /**
  * Blank content partial template.
  *
- * @package C9
+ * @package c9-starter
  */
 ?>
 <div class="entry-content">

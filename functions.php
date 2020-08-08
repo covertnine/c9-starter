@@ -3,7 +3,7 @@
 /**
  * C9 functions and definitions.
  *
- * @package c9
+ * @package c9-starter
  */
 
 /**
@@ -71,9 +71,9 @@ require get_template_directory() . '/admin/tgm-init.php';
  * Load Client-Specific Hooks
  */
 if (file_exists(get_template_directory() . '/client/client.php')) {
-	require get_template_directory() . '/client/client.php';
+    include get_template_directory() . '/client/client.php';
 } else {
-	add_action('admin_notices', 'c9_need_client_folder');
+    add_action('admin_notices', 'c9_need_client_folder');
 }
 
 /**
@@ -83,11 +83,11 @@ if (file_exists(get_template_directory() . '/client/client.php')) {
  */
 function c9_need_client_folder()
 {
-?>
-	<div class="update-nag notice">
-		<p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9-starter' ); ?></p>
-	</div>
-<?php
+    ?>
+    <div class="update-nag notice">
+        <p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9-starter'); ?></p>
+    </div>
+    <?php
 }
 
 /**
