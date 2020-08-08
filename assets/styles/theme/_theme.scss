@@ -8,6 +8,7 @@
 html,
 body {
 	height: 100%;
+	margin: 0;
 }
 
 body {
@@ -559,7 +560,7 @@ pre,
 }
 
 /****************************************************************************************/
-/* WordPress Navigation*/
+/* WordPress C9 Top Navigation */
 /****************************************************************************************/
 .header-navbar {
 	z-index: 99;
@@ -574,10 +575,6 @@ pre,
 	max-width: 1140px;
 	padding-left: 0px;
 	padding-right: 0px;
-}
-
-.header-navbar .navbar {
-	background-color: rgba(255, 255, 255, 1);
 }
 
 @media only screen and (min-width: 768px) {
@@ -599,6 +596,7 @@ pre,
 	width: 100%;
 	margin: 0px auto;
 	transition: opacity 0.5s ease-in;
+	padding: 0 1em;
 }
 
 .header-navbar .navbar-collapse:not(.navbar-small) {
@@ -694,6 +692,8 @@ pre,
 	max-height: 92px;
 	width: auto;
 	height: auto;
+	margin: 0;
+	padding: 0;
 }
 
 .header-navbar .navbar-small .navbar-brand.c9-custom-logo {
@@ -751,10 +751,6 @@ pre,
 	.navbar-expand-lg>.container-fluid {
 		padding-left: 0px;
 		padding-right: 0px;
-	}
-
-	.navbar-small {
-		background-color: rgba(255, 255, 255, 1);
 	}
 
 	.header-navbar .navbar-collapse:not(.navbar-small) {
@@ -3570,7 +3566,6 @@ label {
 .c9-horizontal-tabs .nav-tabs .nav-link {
 	color: $gray-600;
 	text-transform: uppercase;
-	padding: 13px 35px;
 	font-weight: bold;
 	letter-spacing: 0.09em;
 }
