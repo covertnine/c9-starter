@@ -90,6 +90,7 @@ body {
 	.entry-content {
 		overflow: visible;
 	}
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -102,6 +103,10 @@ body {
 
 	.single .entry-image {
 		margin-top: 30px;
+	}
+
+	.single .entry-footer {
+		padding: 0px;
 	}
 }
 
@@ -256,12 +261,12 @@ table,
 	letter-spacing: 0.05em;
 	line-height: 1.2;
 	margin-bottom: 1em;
-	color: $gray-500;
+	color: $gray-800;
 	font-size: 1.2em;
 }
 
 .entry-meta a {
-	color: $gray-900;
+	color: $link-color;
 }
 
 .has-small-font-size,
@@ -788,6 +793,7 @@ pre,
 .archive .pagination .page-item,
 .blog .pagination .page-item {
 	display: inline-block;
+	font-size: 1.6em;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
@@ -1455,13 +1461,14 @@ pre,
 	text-decoration: none;
 }
 
+.entry-big-header .entry-title-box .entry-meta,
 .entry-big-header .entry-title-box .entry-meta a {
-	color: #fff;
+	color: $light;
 }
 
 .entry-big-header .entry-title-box .entry-meta .posted-on a:hover,
 .entry-big-header .entry-title-box .entry-meta .author a:hover {
-	color: #ccc;
+	color: $gray-300;
 }
 
 .entry-big-header .entry-title-box .entry-meta .updated,
@@ -3367,7 +3374,7 @@ label {
 	vertical-align: top;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 667px) {
 	.footer-search-wrapper .footer-search {
 		margin: 20px auto;
 	}

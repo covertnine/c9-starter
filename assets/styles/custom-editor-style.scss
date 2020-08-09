@@ -38,10 +38,10 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 }
 
 /* minimize outer container in backend to accoutn for limited space and the blog post frontend width of 990px */
-
-body.post-type-post .block-editor-editor-skeleton__content .editor-styles-wrapper,
-body.post-type-page .block-editor-editor-skeleton__content .editor-styles-wrapper {
-	max-width: 990px;
+body.post-type-post .editor-styles-wrapper {
+	max-width: 930px;
+	padding: 0px 15px;
+	margin: 0px auto;
 }
 
 /* for elements appearing in backend editor need to visually represent the frontend available width*/

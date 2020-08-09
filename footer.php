@@ -49,9 +49,9 @@ if (file_exists(locate_template('client/inc/footer.php')) ) {
                                             <?php endif; ?>
                                                 <?php
                                                 if (!empty(get_theme_mod('c9_copyright_content')) ) {
-                                                    echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_theme_mod('c9_copyright_content') . '</p></div>';
+                                                    echo '<div class="col-xs-12 col-sm-12 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . get_theme_mod('c9_copyright_content') . '</p></div>';
                                                 } else {
-                                                    echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.</p></div>';
+                                                    echo '<div class="col-xs-12 col-sm-12 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.</p></div>';
                                                 }
 
 
