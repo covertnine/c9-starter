@@ -629,11 +629,10 @@ pre,
 }
 
 .header-navbar .nav .nav-item .dropdown-header {
-	font-size: 1.8em;
-	font-weight: 200;
 	font-family: $headings-font-family;
-	color: $gray-700;
-	letter-spacing: 0.06em;
+	font-size: 1.6em;
+	color: $body-color;
+	padding: 15px;
 }
 
 .dropdown-item.active,
@@ -706,6 +705,7 @@ pre,
 		position: absolute;
 		top: 100%;
 		width: 100%;
+		left: 0;
 	}
 
 	.header-navbar .nav .nav-item .dropdown-menu .dropdown-item {
