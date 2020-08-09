@@ -669,24 +669,6 @@ pre,
 	cursor: pointer;
 }
 
-.navbar-toggler,
-.nav-search .btn-nav-search {
-	color: $navbar-light-color;
-}
-
-.nav-search .btn-nav-search:focus {
-	outline: none;
-}
-
-.header-navbar .navbar-toggler:focus {
-	color: $primary;
-}
-
-.nav-toggle,
-.nav-search {
-	display: inline-block;
-}
-
 .header-navbar .navbar-brand.c9-custom-logo {
 	max-width: 285px;
 	max-height: 92px;
@@ -1538,6 +1520,12 @@ pre,
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
+}
+
+@media only screen and (max-width: 414px) {
+	#wrapper-footer .site-footer {
+		padding: 20px 0px;
+	}
 }
 
 #wrapper-footer .site-footer .footer-copyright-wrapper .copyright {
@@ -3301,6 +3289,10 @@ label {
 	font-size: 10px;
 }
 
+.wp-block-search:only-child {
+	margin-bottom: 0px;
+}
+
 .wp-block-search label,
 .widget-area .widget_product_search label {
 	font-weight: bold;
@@ -3373,6 +3365,12 @@ label {
 .widget-area .widget_product_search input[type="search"] {
 	display: inline;
 	vertical-align: top;
+}
+
+@media only screen and (max-width: 414px) {
+	.footer-search-wrapper .footer-search {
+		margin: 20px auto;
+	}
 }
 
 /**************************** Gravity Forms **********************************/
