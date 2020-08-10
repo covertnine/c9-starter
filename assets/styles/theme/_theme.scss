@@ -1962,13 +1962,19 @@ img {
 	.page-template-containerwidthpage .entry-content .alignwide,
 	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
-	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
 		width: 120%;
-		max-width: 1482px;
+		max-width: 1368px;
 		margin-left: -10%;
 		margin-right: -10%;
 	}
+
+	.post-template-default .entry-content>.alignwide {
+		width: 1368px;
+		margin-left: calc((-100vw + 1368px) / 2);
+		margin-right: calc((-100vw + 1368px) / 2);
+	}
+
 
 	.page-template-default .entry-content .alignfull,
 	.wp-block[data-type="core/cover"][data-align="full"] {

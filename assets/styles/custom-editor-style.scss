@@ -39,9 +39,9 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 
 /* minimize outer container in backend to accoutn for limited space and the blog post frontend width of 990px */
 body.post-type-post .editor-styles-wrapper {
-	max-width: 930px;
-	padding: 0px 15px;
-	margin: 0px auto;
+	// max-width: 930px;
+	// padding: 0px 15px;
+	// margin: 0px auto;
 }
 
 /* for elements appearing in backend editor need to visually represent the frontend available width*/
@@ -67,19 +67,31 @@ body.post-type-post .editor-styles-wrapper {
 @media only screen and (min-width: 1200px) {
 	.editor-styles-wrapper .wp-block {
 		max-width: 1140px;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
-	.post-type-post .editor-styles-wrapper .is-root-container .wp-block[data-align="wide"] {
-		width: 120%;
-		max-width: 1482px;
-		margin-left: -10%;
-		margin-right: -10%;
+	body.post-type-post .editor-styles-wrapper .wp-block {
+		max-width: 900px;
 	}
 
-	.post-type-post .editor-styles-wrapper .is-root-container .wp-block[data-align="full"] {
+	.post-type-post .editor-styles-wrapper .is-root-container>.wp-block[data-align="wide"] {
+		width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
 		max-width: 100vw;
-		margin-left: calc((-100vw + 100%)/ 2);
-		margin-right: calc((-100vw + 100%)/ 2);
+	}
+
+	.post-type-page .editor-styles-wrapper .is-root-container>.wp-block[data-align="wide"] {
+		max-width: 1368px;
+	}
+
+	.post-type-page .is-sidebar-opened .editor-styles-wrapper .is-root-container>.wp-block[data-align="full"],
+	.post-type-post .is-sidebar-opened .editor-styles-wrapper .is-root-container>.wp-block[data-align="full"] {
+		max-width: calc(100vw - 280px);
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.edit-post-layout:not(.is-sidebar-opened) .editor-styles-wrapper .block-editor-block-list__layout {
