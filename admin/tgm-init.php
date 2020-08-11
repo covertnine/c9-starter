@@ -60,7 +60,7 @@ function c9_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => 'C9 Admin',
+			'name'     => 'C9 Admin Dashboard',
 			'slug'     => 'c9-admin-dashboard',
 			'required' => false,
 		),
@@ -72,7 +72,7 @@ function c9_register_required_plugins() {
 		),
 
 		array(
-			'name'     => 'The Seo Framework',
+			'name'     => 'The SEO Framework',
 			'slug'     => 'autodescription',
 			'required' => false,
 		),
