@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-08-08 11:44-0500\n"
-"PO-Revision-Date: 2020-08-08 11:45-0500\n"
+"POT-Creation-Date: 2020-08-11 18:33-0500\n"
+"PO-Revision-Date: 2020-08-11 18:33-0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,6 @@ msgstr ""
 "Language: en_US\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -565,7 +564,7 @@ msgstr "Search..."
 msgid "Search"
 msgstr "Search"
 
-#: functions.php:88
+#: functions.php:87
 msgid ""
 "You need a client! If you have no client-specific code, add an empty client/"
 "client.php to the parent theme. If you still dont know what&#39;s going on, "
