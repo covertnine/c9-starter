@@ -2,21 +2,34 @@
 /**
  * Single post partial template.
  *
- * @package c9
+ * @package c9-starter
  */
-$header_size = isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] ) ? get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] : 'small';
+$header_size 	 		= isset( get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] ) ? get_post_meta( $post->ID, 'c9_post_header_size', true )['c9_post_header_size'] : 'small';
+$c9_blog_sidebar 		= get_theme_mod( 'c9_blog_sidebar', 'hide' );
 
-if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
-	$sidebar       = 'hide' !== get_option( 'cortex_posts' )['blog_sidebar'] ? true : false;
-	$sidebar_left  = 'sidebar-left' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'left-sidebar' ) ? true : false;
-	$sidebar_right = 'sidebar-right' === get_option( 'cortex_posts' )['blog_sidebar'] && is_active_sidebar( 'right-sidebar' ) ? true : false;
-} else {
-	$sidebar_right = false;
-	$sidebar_left  = false;
+//set sidebar variables pending on theme options and sidebars being active
+if ( $c9_blog_sidebar  != 'hide' ) {
+	$sidebar       		= true;
+	$sidebar_left  		= 'sidebar-left' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'left-sidebar' ) ? true : false;
+	$sidebar_right 		= 'sidebar-right' === get_theme_mod( 'c9_blog_sidebar' ) && is_active_sidebar( 'right-sidebar' ) ? true : false;
+
+	// set container classes based on sidebar selection
+	if ( $c9_blog_sidebar == 'sidebar-left' ) {
+
+		$sidebar_class = ' sidebar-left';
+
+	} elseif ( $c9_blog_sidebar == 'sidebar-right' ) {
+
+		$sidebar_class = ' sidebar-right';
+
+	} //end setting sidebar classes
+
+} else { //no sidebar on single posts
+	$sidebar 	   		= false;
+	$sidebar_left  		= false;
+	$sidebar_right 		= false;
 }
 ?>
-
-
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if ( 'large' === $header_size ) { ?>
@@ -64,7 +77,7 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 
 			<?php } ?>
 
-		<header class="entry-header">
+		<header class="entry-header<?php if (!empty($sidebar_class)) { echo $sidebar_class; } ?>">
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
@@ -74,37 +87,24 @@ if ( isset( get_option( 'cortex_posts' )['blog_sidebar'] ) ) {
 			</div>
 
 		</header>
-
 	<?php
-	}
+	} //end small header
+		?>
 
-	if ( $sidebar_left ) :
-
-		get_sidebar( 'left' );
-
-	endif;
-	?>
-
-	<div class="entry-content">
+	<div class="entry-content<?php if (!empty($sidebar_class)) { echo $sidebar_class; } ?>">
 
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
-	<?php
 
-	if ( $sidebar_right ) :
 
-	get_sidebar( 'right' );
-
-	endif;
-	?>
 
 	<footer class="entry-footer">
 		<div class="entry-footer-content mar30B">
 			<?php
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'c9' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'c9-starter' ),
 					'after'  => '</div>',
 				)
 				);

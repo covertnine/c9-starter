@@ -60,20 +60,19 @@ function c9_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => 'C9 Admin',
-			'slug'     => 'c9-admin',
-			'source'   => 'https://github.com/covertnine/c9-admin/archive/master.zip',
+			'name'     => 'C9 Admin Dashboard',
+			'slug'     => 'c9-admin-dashboard',
 			'required' => false,
 		),
 
 		array(
 			'name'     => 'C9 Blocks',
 			'slug'     => 'c9-blocks',
-			'required' => true,
+			'required' => false,
 		),
 
 		array(
-			'name'     => 'The Seo Framework',
+			'name'     => 'The SEO Framework',
 			'slug'     => 'autodescription',
 			'required' => false,
 		),
@@ -81,6 +80,12 @@ function c9_register_required_plugins() {
 		array(
 			'name'     => 'Autoptimize',
 			'slug'     => 'autoptimize',
+			'required' => false,
+		),
+
+		array(
+			'name'     => 'Matomo Analytics',
+			'slug'     => 'matomo',
 			'required' => false,
 		),
 
@@ -94,6 +99,12 @@ function c9_register_required_plugins() {
 			'name'     => 'WP Retina 2x',
 			'slug'     => 'wp-retina-2x',
 			'required' => false,
+		),
+
+		array(
+			'name'		=> 'Smash Balloon Social Photo Feed',
+			'slug'		=> 'instagram-feed',
+			'required'	=> false,
 		),
 
 	);

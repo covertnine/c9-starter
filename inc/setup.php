@@ -3,8 +3,8 @@
 /**
  * Theme basic setup.
  *
- * @package C9
- */	
+ * @package c9-starter
+ */
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
@@ -26,7 +26,7 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'c9', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'c9-starter', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -42,7 +42,7 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Top Navigation Menu', 'c9' ),
+				'primary' => __( 'Top Navigation Menu', 'c9-starter' ),
 			)
 			);
 
@@ -87,7 +87,16 @@ if ( ! function_exists( 'c9_setup' ) ) {
 			);
 
 		// Set up the WordPress Theme logo feature.
-		add_theme_support( 'custom-logo' );
+		add_theme_support( 'custom-logo',
+			array(
+				'height' => '92',
+				'width'	 => '285',
+				'flex-height'	=> true,
+				'flex-width'	=> true
+			)
+		);
+
+		add_theme_support( 'custom-background' );
 
 		add_theme_support( 'align-wide' );
 
@@ -108,15 +117,4 @@ if ( ! function_exists( 'c9_setup' ) ) {
 		add_image_size( 'c9-feature-audio', 850, 400, array( 'center', 'center' ) );
 		add_image_size( 'c9-tiny-thumb', 120, 56, true );
 	}
-}
-
-add_action( 'pre_get_posts', 'c9_posts_per_page' );
-
-function c9_posts_per_page( $query ) {
-	if ( ! $query->is_main_query() || is_admin() ) {
-return;
-	}
-
-	$query->set( 'posts_per_page', 12 );
-	return;
 }

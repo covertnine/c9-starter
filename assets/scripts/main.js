@@ -1,15 +1,15 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 	c9Page.init();
 });
 
-var c9Page = (function($) {
+var c9Page = (function ($) {
 	var c9PageInit = {};
 
-	c9PageInit.init = function() {
+	c9PageInit.init = function () {
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
-		jQuery(window).scroll(function() {
+		jQuery(window).scroll(function () {
 			//scroll position variable
 			var scroll = jQuery(window).scrollTop();
 
@@ -30,7 +30,7 @@ var c9Page = (function($) {
 			$(".navbar").addClass("navbar-small");
 			$("body").addClass("navbar-small");
 
-			$(window).scroll(function() {
+			$(window).scroll(function () {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -55,7 +55,7 @@ var c9Page = (function($) {
 
 			//var logoHeight = $(".c9-custom-logo").height();
 
-			$(window).scroll(function() {
+			$(window).scroll(function () {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -87,16 +87,24 @@ var c9Page = (function($) {
 			".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']"
 		).magnificPopup({
 			disableOn: 700,
-			type: "iframe",
+			type: 'iframe',
 			mainClass: "mfp-zoom-in",
 			removalDelay: 160,
 			preloader: false,
 			fixedContentPos: false
 		});
-
+		$('.wp-block-image a[href$=".jpg"]').magnificPopup({
+			disableOn: 700,
+			type: 'image',
+			mainClass: "mfp-zoom-in",
+			tError: '<a href="%url%">The image</a> could not be loaded.',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
+		});
 		$(
 			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a'
-		).click(function(e) {
+		).click(function (e) {
 			e.preventDefault();
 
 			var items = [];
@@ -115,7 +123,7 @@ var c9Page = (function($) {
 				.nextAll()
 				.children()
 				.find("a")
-				.each(function() {
+				.each(function () {
 					var imageLink = $(this).attr("href");
 					var imageCaption = $(this).attr("title");
 					items.push({
@@ -131,7 +139,7 @@ var c9Page = (function($) {
 				.prevAll()
 				.children()
 				.find("a")
-				.each(function() {
+				.each(function () {
 					var imageLink = $(this).attr("href");
 					var imageCaption = $(this).attr("title");
 					items.push({
@@ -148,26 +156,26 @@ var c9Page = (function($) {
 				},
 				mainClass: "mfp-zoom-in",
 				callbacks: {
-					open: function() {
+					open: function () {
 						//overwrite default prev + next function. Add timeout for css3 crossfade animation
-						$.magnificPopup.instance.next = function() {
+						$.magnificPopup.instance.next = function () {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function() {
+							setTimeout(function () {
 								$.magnificPopup.proto.next.call(self);
 							}, 120);
 						};
-						$.magnificPopup.instance.prev = function() {
+						$.magnificPopup.instance.prev = function () {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function() {
+							setTimeout(function () {
 								$.magnificPopup.proto.prev.call(self);
 							}, 120);
 						};
 					},
-					imageLoadComplete: function() {
+					imageLoadComplete: function () {
 						var self = this;
-						setTimeout(function() {
+						setTimeout(function () {
 							self.wrap.addClass("mfp-image-loaded");
 						}, 16);
 					}
@@ -180,7 +188,7 @@ var c9Page = (function($) {
 
 		//////////////////////////////////////       full screen search        ///////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$(".btn-nav-search").on("click", function(e) {
+		$(".btn-nav-search").on("click", function (e) {
 			e.preventDefault();
 			$("#fullscreensearch").addClass("open");
 			$('#fullscreensearch > form > div > input[type="search"]').focus();
@@ -188,7 +196,7 @@ var c9Page = (function($) {
 
 		$(
 			"#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
-		).on("click keyup", function(e) {
+		).on("click keyup", function (e) {
 			if (
 				e.target == this ||
 				e.target.className == "search-close" ||

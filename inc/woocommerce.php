@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package c9
+ * @package c9-starter
  */
 
 
@@ -38,7 +38,7 @@ add_action( 'woocommerce_before_main_content', 'c9_woocommerce_wrapper_start', 1
 add_action( 'woocommerce_after_main_content', 'c9_woocommerce_wrapper_end', 10 );
 if ( ! function_exists( 'c9_woocommerce_wrapper_start' ) ) {
 	function c9_woocommerce_wrapper_start() {
-		$container = get_theme_mod( 'c9_container_type' );
+		$container = 'container';
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';

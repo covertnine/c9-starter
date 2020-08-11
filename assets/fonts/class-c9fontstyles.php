@@ -2,16 +2,71 @@
 /**
  * C9 font styles.
  *
- * @package c9
+ * @package c9-starter
  */
 class C9FontStyles {
 	/**
 	 * Gets font settings based on defaults and generates code.-arrow-up
 	 */
 	public static function render( $font_array ) {
-		$heading_font    = "'" . $font_array['heading_font'] . "'";
-		$subheading_font = "'" . $font_array['subheading_font'] . "'";
-		$body_font       = "'" . $font_array['body_font'] . "'";
+		$heading_font    = $font_array['c9_heading_font'];
+		$subheading_font = $font_array['c9_subheading_font'];
+		$body_font       = $font_array['c9_body_font'];
+
+		//assign CSS name of font based on selected font in customizer
+		$c9fonts = array(
+					''																=> '',
+					'Abel'                											=> 'Abel',
+					'Bebas+Neue'          											=> 'Bebas Neue',
+					'Lato:300,400,700,900,400italic,700italic'   					=> 'Lato',
+					'Lobster'             											=> 'Lobster',
+					'Merriweather:300,400,700,900,400italic,700italic'        		=> 'Merriweather',
+					'Montserrat:300,400,700,900,400italic,700italic'				=> 'Montserrat',
+					'Muli'                											=> 'Muli',
+					'Nunito:300,400,700,900,400italic,700italic'              		=> 'Nunito',
+					'Open+Sans:300,400,700,800,400italic,700italic'           		=> 'Open Sans',
+					'Open+Sans+Condensed:300;700' 									=> 'Open Sans Condensed',
+					'Oswald:300;400;700'              								=> 'Oswald',
+					'Playfair+Display:400,700,900,400italic,700italic'    			=> 'Playfair Display',
+					'Poppins:300,400,700,900,400italic,700italic'             		=> 'Poppins',
+					'PT+Sans:400,700,400italic,700italic'             				=> 'PT Sans',
+					'PT+Serif:400,700,400italic,700italic'            				=> 'PT Serif',
+					'Quicksand:300;400;700'           								=> 'Quicksand',
+					'Raleway:300,400,700,900,400italic,700italic'             		=> 'Raleway',
+					'Roboto:300,400,700,900,400italic,700italic'              		=> 'Roboto',
+					'Roboto+Condensed:300,400,700,400italic,700italic'    			=> 'Roboto Condensed',
+					'Roboto+Slab:300,400,700,900'         							=> 'Roboto Slab',
+					'Sen:400,700,800'                 								=> 'Sen',
+					'Source+Sans+Pro:300,400,700,900,400italic,700italic'     		=> 'Source Sans Pro',
+					'Work+Sans:300,400,700,900,400italic,700italic'           		=> 'Work Sans',
+		);
+
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+			// echo "<h1>set: " . $body_font . "body font key: " . $c9key . " body font value:" . $c9value . "</h1>";
+			if ( $body_font == $c9key ) {
+				$body_font = $c9value;
+			}
+
+		}
+
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+
+			if (  $subheading_font == $c9key  ) {
+				$subheading_font = $c9value;
+			}
+
+		}
+		//make the font label human readable so it'll work in css
+		foreach ($c9fonts as $c9key => $c9value) {
+
+			if (  $heading_font == $c9key  ) {
+				$heading_font = $c9value;
+			}
+
+		}
+
 		?>
 		.c9-site-title,
 		.c9.site .h1,
@@ -27,9 +82,8 @@ class C9FontStyles {
 		.c9.site h5,
 		.c9.site h6,
 		.entry-content blockquote:before,
-		.navbar,
-		.navbar ul li .dropdown-item,
-		.navbar ul li a,
+		.c9-heading,
+		.wp-block[data-type="core/heading"],
 		.c9-h,
 		.c9-h.h,
 		.c9-txl,
@@ -39,8 +93,6 @@ class C9FontStyles {
 		.display-4,
 		.display-5,
 		.display-6,
-		.header-navbar .navbar .nav .nav-item .nav-link,
-		.header-navbar .navbar .nav .nav-item .dropdown-item,
 		.header-navbar .navbar .nav .search,
 		.page-search-results nav .pagination .page-item .page-link,
 		.c9.woocommerce nav.woocommerce-pagination ul li span,
@@ -48,8 +100,9 @@ class C9FontStyles {
 		.archive nav .pagination .page-item .page-link,
 		.blog nav .pagination .page-item .page-link,
 		.single .navigation .nav-previous a,
-		.single .navigation .nav-next a {
-		font-family: <?php echo $heading_font; ?>;
+		.single .navigation .nav-next a,
+		.c9 .c9-vertical-tabs .nav-pills .nav-link {
+		font-family: <?php echo esc_html( $heading_font ); ?>, helvetica, sans-serif;
 		}
 
 		p.wp-block-subhead,
@@ -57,12 +110,17 @@ class C9FontStyles {
 		.c9-sh,
 		.text-muted,
 		.c9 .c9-sh,
-		.c9 .text-muted {
-			font-family: <?php echo $subheading_font; ?>;
+		.c9 .text-muted,
+		.c9 .c9-heading .c9-h .text-muted,
+		.c9 .c9-heading .c9-sh .text-muted,
+		.c9 .c9-heading .c9-txl .text-muted,
+		.c9-heading.section-heading >.c9-sh {
+			font-family: <?php echo esc_html( $subheading_font ); ?>, helvetica, sans-serif;
 		}
-
+<?php if ( !empty($body_font) ) { ?>
 		:root,
 		body,
+		body .editor-styles-wrapper .is-root-container,
 		.c9 .wp-block-pullquote,
 		.c9 .wp-block-pullquote blockquote p,
 		.c9 #wrapper-footer,
@@ -94,11 +152,15 @@ class C9FontStyles {
 		.c9 .gform_wrapper input[type="tel"],
 		.c9 .gform_wrapper textarea,
 		.c9 .gform_button.button,
-		.c9 .entry-content {
-			font-family: <?php echo $body_font; ?>;
+		.c9 .entry-content,
+		.navbar,
+		.navbar ul li .dropdown-item,
+		.navbar ul li a {
+			font-family: <?php echo esc_html( $body_font ); ?>, helvetica, sans-serif;
 		}
 		<?php
-	}
+} //end checking for body_font setting
+	} //end render function
 
 	/**
 	 * Regex powered CSS minifier

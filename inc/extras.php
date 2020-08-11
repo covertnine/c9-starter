@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package c9
+ * @package c9-starter
  */
 
 add_filter( 'body_class', 'c9_body_classes' );
@@ -67,7 +67,7 @@ if ( ! function_exists( 'c9_change_logo_class' ) ) {
 	 */
 	function c9_change_logo_class( $html ) {
 
-		$html = str_replace( 'class="custom-logo"', 'class="img-fluid c9-custom-logo"', $html );
+		$html = str_replace( 'class="custom-logo"', 'class="img-fluid navbar-brand c9-custom-logo"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link c9-custom-logo"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 
@@ -75,7 +75,20 @@ if ( ! function_exists( 'c9_change_logo_class' ) ) {
 	}
 }
 
-
+// add a full screen search icon to navigation
+add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
+function c9_add_search_form( $items, $args ) {
+	if ( 'primary' == $args->theme_location ) {
+		$items .= '<li class="nav-item search">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search nav-link">
+							<i class="fa fa-search"></i>
+							<span class="sr-only">' . __( 'Search', 'c9-starter' ) . '</span>
+						</a>
+					</div></li>';
+	}
+	return $items;
+}
 
 if ( ! function_exists( 'c9_post_nav' ) ) {
 
@@ -92,15 +105,15 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 		}
 		?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e( 'Post navigation', 'c9' ); ?></h2>
+			<h2 class="sr-only"><?php _e( 'Post navigation', 'c9-starter' ); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
 						if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-starter' ) );
 						}
 						if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( 'Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-starter' ) );
 						}
 						?>
 			</div><!-- .nav-links -->
@@ -108,20 +121,6 @@ if ( ! function_exists( 'c9_post_nav' ) ) {
 <?php
 	}
 }
-
-if ( ! function_exists( 'c9_mime_types' ) ) {
-	/**
-	 * Add different filetypes to allowed uploads
-	 */
-	function c9_mime_types( $mimes ) {
-	$mimes['svg']     = 'image/svg+xml';
-	$mimes['ogg|oga'] = 'audio/ogg';
-	$mimes['webm']    = 'video/webm';
-
-	return $mimes;
-	}
-}
-add_filter( 'upload_mimes', 'c9_mime_types' );
 
 if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 	/**
@@ -147,11 +146,19 @@ if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 }
 add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
 
+
+/**
+ * Add logo to WordPress Admin Login
+ */
 	function c9_login_logo() {
-	if ( ! empty( get_option( 'cortex_branding' )['logo'] ) ) { // logo has been uploaded
-		$cortex_logo_image = get_option( 'cortex_branding' )['logo'];
+
+		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+
+		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+			$cortex_logo_image = $c9_logo_image[0];
 		} else {
-		$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
 		}
 	?>
 	<style type="text/css">
@@ -165,20 +172,6 @@ add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 
 <?php
 }
 add_action( 'login_enqueue_scripts', 'c9_login_logo' );
-
-add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
-function c9_add_search_form( $items, $args ) {
-	if ( 'primary' == $args->theme_location ) {
-		$items .= '<li class="nav-item search">
-					<div class="nav-search">
-						<a href="#" class="btn-nav-search nav-link">
-							<i class="fa fa-search"></i>
-							<span class="sr-only">' . __( 'Search', 'c9' ) . '</span>
-						</a>
-					</div></li>';
-	}
-	return $items;
-}
 
 // add_filter( 'the_content', 'c9_add_lazy_loading' );
 add_filter( 'wp_get_attachment_image_attributes', 'c9_add_lazy_loading_to_attachment' );
@@ -195,9 +188,46 @@ function c9_add_lazy_loading_to_attachment( $content ) {
 /**
  * Add lazy-loading to content images
  */
-function c9_add_lazy_loading_to_content( $content ) {
+// function c9_add_lazy_loading_to_content( $content ) {
 
-	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
-	return $content;
+// 	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
+// 	return $content;
+// }
+// add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
+
+/**
+ * Add logo to backend
+ */
+if ( ! function_exists('c9_addlogo_to_menu') ) {
+	function c9_addlogo_to_menu() {
+
+		$c9_logo_id 	= get_theme_mod( 'custom_logo' );
+		$c9_logo_image  = wp_get_attachment_image_src( $c9_logo_id , 'full' );
+
+		if ( !empty($c9_logo_id) ) { // logo has been uploaded
+			$cortex_logo_image = $c9_logo_image[0];
+		} else {
+			$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
+		}
+	?>
+
+	<style type="text/css">
+		#adminmenu:before {
+			content: ' ';
+			display: block;
+			width: 90%;
+			margin: 0px auto;
+			height: 90px;
+			background-image: url('<?php echo $cortex_logo_image; ?>');
+			background-size: contain;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
+		.folded #adminmenu:before {
+			height: 20px;
+		}
+	</style>
+	<?php
+	}
 }
-add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
+add_action('admin_head', 'c9_addlogo_to_menu', 99);

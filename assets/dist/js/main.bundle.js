@@ -175,8 +175,17 @@ var c9Page = function ($) {
 
     $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
       disableOn: 700,
-      type: "iframe",
+      type: 'iframe',
       mainClass: "mfp-zoom-in",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    });
+    $('.wp-block-image a[href$=".jpg"]').magnificPopup({
+      disableOn: 700,
+      type: 'image',
+      mainClass: "mfp-zoom-in",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false

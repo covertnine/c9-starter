@@ -6,20 +6,32 @@
 // heading names of the specific fonts (heading_font/subheading_font/typography_presets)
 // If user decided to use their own fonts (clicked no)
 
-if (selectedFonts.defaultFont === "yes") {
-	console.log(
-		selectedFonts.heading_font,
-		selectedFonts.subheading_font,
-		selectedFonts.body_font
+if (c9SelectedFonts.c9_default_font === "yes") {
+	/*console.log(
+		c9SelectedFonts.c9_heading_font,
+		c9SelectedFonts.c9_subheading_font,
+		c9SelectedFonts.c9_body_font
 	);
+	alert(c9SelectedFonts.c9_body_font);*/
+
+	c9QueuedFonts = [];
+	c9QueuedFonts.push(c9SelectedFonts.c9_heading_font);
+
+	if (c9SelectedFonts.c9_subheading_font != c9SelectedFonts.c9_heading_font) {
+		c9QueuedFonts.push(c9SelectedFonts.c9_subheading_font);
+	}
+
+	if (c9SelectedFonts.c9_body_font != c9SelectedFonts.c9_heading_font) {
+		c9QueuedFonts.push(c9SelectedFonts.c9_body_font);
+	}
+
+	//check if the settings were actually set, if so push the font css
 	WebFont.load({
 		google: {
-			families: [
-				selectedFonts.heading_font,
-				selectedFonts.subheading_font,
-				selectedFonts.body_font
-			]
+			families: c9QueuedFonts
 		}
 	});
+
 }
-console.log(selectedFonts);
+//console.log(c9SelectedFonts);
+console.log(c9QueuedFonts);

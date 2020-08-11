@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package c9
+ * @package c9-starter
  */
 
 ?>
@@ -32,7 +32,7 @@
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'c9' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'c9-starter' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
 

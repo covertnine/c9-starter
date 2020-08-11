@@ -5,7 +5,7 @@
  *
  * This template can be used to override the default template and sidebar setup
  *
- * @package c9
+ * @package c9-starter
  */
 
 get_header();
@@ -17,15 +17,7 @@ get_header();
 
 		<div class="row no-gutters">
 
-			<div class="
-			<?php
-			if ( is_active_sidebar( 'left-sidebar' ) ) :
-?>
-col-12 offset-xs-0 col-sm-10 offset-sm-2
-<?php
-else :
-				?>
-				col-12<?php endif; ?> content-area" id="primary">
+			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) { echo "col-12 offset-xs-0 col-sm-10 offset-sm-2"; } else { echo "col-12"; } ?> content-area" id="primary">
 
 				<?php get_sidebar( 'left' ); ?>
 
