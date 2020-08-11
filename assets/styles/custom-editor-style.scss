@@ -253,6 +253,12 @@ body .editor-styles-wrapper,
 	text-align: center;
 }
 
+.editor-styles-wrapper .wp-block-buttons .wp-block-button {
+	margin-right: 8px;
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
 .editor-rich-text__editable.wp-block-button__link.square {
 	border-radius: 0;
 }
