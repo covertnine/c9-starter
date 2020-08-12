@@ -99,7 +99,32 @@ class C9FontStyles {
 		.blog nav .pagination .page-item .page-link,
 		.single .navigation .nav-previous a,
 		.single .navigation .nav-next a,
-		.c9 .c9-vertical-tabs .nav-pills .nav-link {
+		.c9 .c9-vertical-tabs .nav-pills .nav-link,
+		.c9 .entry-content button, .editor-styles-wrapper .button-primary,
+		.editor-styles-wrapper .c9-cta .c9-cta-button .wp-block-button__link,
+		.editor-styles-wrapper .mce-content-body.button,
+		.editor-styles-wrapper .wp-block-button__link,
+		.editor-styles-wrapper .wp-block-search__button, .entry-content .btn, .entry-content .btn:visited,
+		.entry-content .button, .entry-content
+		.wp-block-button:not(.is-style-outline) .wp-block-button__link,
+		.entry-content .wp-block-button__link,
+		.entry-content button,
+		.entry-content input[type=button],
+		.entry-content input[type=reset],
+		.entry-content input[type=submit],
+		.wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
+		.wp-block-button__link, .wp-block-file .wp-block-file__button,
+		.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+		.wp-block-file__button,
+		.header-navbar .search #s,
+		.c9 .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
+		.editor-styles-wrapper .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
+		.editor-styles-wrapper .c9-heading .h1 .text-muted,
+		.editor-styles-wrapper .c9-heading .h2 .text-muted,
+		.editor-styles-wrapper .c9-heading .h3 .text-muted,
+		.editor-styles-wrapper .c9-heading .h4 .text-muted,
+		.editor-styles-wrapper .c9-heading .h5 .text-muted,
+		.editor-styles-wrapper .c9-heading .h6 .text-muted {
 		font-family: <?php echo esc_html( $heading_font ); ?>, helvetica, sans-serif;
 		}
 

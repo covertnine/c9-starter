@@ -382,7 +382,7 @@ if ( ! function_exists( 'c9_customize_register' ) ) {
 				$wp_customize->add_setting(
 					'c9_heading_font',
 					array(
-						'default'           => 'Bebas Neue',
+						'default'           => 'Bebas+Neue',
 						'transport'         => 'refresh',
 						'sanitize_callback' => 'wp_filter_post_kses',
 						'type' 				=> 'theme_mod',
