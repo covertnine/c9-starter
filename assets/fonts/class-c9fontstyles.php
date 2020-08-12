@@ -81,6 +81,12 @@ class C9FontStyles {
 		.c9.site h4,
 		.c9.site h5,
 		.c9.site h6,
+		.editor-styles-wrapper h1,
+		.editor-styles-wrapper h2,
+		.editor-styles-wrapper h3,
+		.editor-styles-wrapper h4,
+		.editor-styles-wrapper h5,
+		.editor-styles-wrapper h6
 		.entry-content blockquote:before,
 		.c9-h,
 		.c9-h.h,
