@@ -61,8 +61,7 @@ function c9_register_required_plugins() {
 
 		array(
 			'name'     => 'C9 Admin Dashboard',
-			'slug'     => 'c9-admin',
-			'source'   => 'c9-admin-dashboard',
+			'slug'     => 'c9-admin-dashboard',
 			'required' => false,
 		),
 
