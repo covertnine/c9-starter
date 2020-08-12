@@ -27,11 +27,13 @@
 	<div class="hfeed site c9" id="page">
 		<div id="smoothwrapper" <?php body_class(); ?>>
 		<?php
-			get_template_part( 'client/inc/topnav.php' );
+		if ( file_exists( locate_template( 'client/inc/topnav.php' ) ) ) {
+			include( locate_template( 'client/inc/topnav.php' ) );
+		}
 		?>
 		<?php
 		if ( file_exists( locate_template( 'client/inc/header.php' ) ) ) {
-			get_template_part( 'client/inc/header.php' );
+			include( locate_template( 'client/inc/header.php' ) );
 		} else {
 		?>
 			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
