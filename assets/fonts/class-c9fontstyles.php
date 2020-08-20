@@ -118,6 +118,7 @@ class C9FontStyles {
 		.entry-content input[type=button],
 		.entry-content input[type=reset],
 		.entry-content input[type=submit],
+		input[type="submit"],
 		.wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
 		.wp-block-button__link, .wp-block-file .wp-block-file__button,
 		.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
