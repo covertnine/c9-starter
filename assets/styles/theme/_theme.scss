@@ -33,14 +33,11 @@ body {
 
 
 /* blog index */
-
 .container-posts .post .entry-content p:last-child {
 	margin-bottom: 5px;
 }
 
-
 /* blog sticky posts */
-
 .blog .sticky,
 .sticky {
 	background-color: $gray-100;
@@ -70,6 +67,34 @@ body {
 .blog .sticky figure,
 .sticky figure {
 	margin-bottom: 0;
+}
+
+.skip-link:focus {
+	display: block;
+	position: fixed !important;
+	color: $light;
+	border-radius: 0px;
+	background-color: $dark;
+	padding: 8px 20px;
+	margin: 0px;
+	border: 1px solid transparent;
+	border-radius: 0px;
+	height: auto;
+	width: auto;
+	overflow: visible;
+	line-height: 1;
+	left: auto;
+	right: 8px;
+	top: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	z-index: 100000;
+	clip: auto;
+	box-shadow: none;
+	outline-color: $primary;
 }
 
 @media only screen and (min-width: 1px) {
@@ -792,11 +817,7 @@ pre,
 
 
 /****************************************************************************************/
-
-
 /* WordPress archive, search, and woocommerce post pagination */
-
-
 /****************************************************************************************/
 
 .page-search-results nav,
@@ -3181,6 +3202,17 @@ screen and (max-height: 300px) {
 	white-space: normal;
 	color: $light;
 	line-height: 1;
+}
+
+.wp-block-button__link:focus,
+.btn:focus,
+.wp-block-file__button:focus,
+.c9 .entry-content button:focus,
+.wp-block-button__link:not([href]):not([tabindex]):focus,
+.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:focus,
+.entry-content .wp-block-button__link:focus {
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+	outline: 1px dotted $light;
 }
 
 .btn-primary:hover {
