@@ -6,7 +6,7 @@ Tested up to: 5.4.2
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable Tag: 2.1.4
+Stable Tag: 2.1.6
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -27,7 +27,16 @@ Yes! Use the [C9 Blocks](https://c9.covertnine.com) plugin, which you are prompt
 
 The C9 Work theme includes the theme styling for the mega menu with it. After installing and activating plugins, you can make changes to the styling from the Max Mega Menu settings page. To learn more about building Mega Menus head over to the [Max Mega Menu Documentation](https://www.megamenu.com/documentation/theme-editor/).
 
+= Is there sub-menu levels of drop downs in the top navigation? =
+
+If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
+
 == Changelog ==
+= 2.1.6 =
+Added escaping, better translations, better accessibility, skip buttons, and better visual link focus
+
+= 2.1.5 =
+Added new path to C9 Admin Dashboard plugin and new markup for starter content
 
 = 2.1.4 =
 Adjustments to Max Megamenu and Navbar for Bootstrap with some media queries.
@@ -105,3 +114,10 @@ C9 Starter Theme is distributed under the terms of the GNU GPL version 2.0
 * [_s](https://underscores.me) (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * [Understrap](https://understrap.com)
 
+Image for theme screenshot, Copyright Jason Blackeye
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/4B83RD7BV9
+
+Image for sample theme content, Copyright Pixabay
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
