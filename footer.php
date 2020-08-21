@@ -82,12 +82,12 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 	?>
 	</div><!--end smoothwrapper-->
 	<div id="fullscreensearch">
-		<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php _e( 'Close', 'c9-work' ); ?></span></button>
+		<button type="button" class="search-close" tabindex="-1"><i class="fa fa-close"></i><span class="sr-only"><?php _e( 'Close', 'c9-work' ); ?></span></button>
 		<form role="search" method="get" id="fullscreen" action="/">
 			<div>
 				<span class="sr-only"><?php _e( 'Search for:', 'c9-work' ); ?></span>
-				<input type="search" class="search-field" name="s" value="" placeholder="<?php _e( 'Search...', 'c9-work' ); ?>" />
-				<button type="submit" class="btn"><?php _e( 'Search', 'c9-work' ); ?></button>
+				<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php _e( 'Search...', 'c9-work' ); ?>" />
+				<button type="submit" class="btn" tabindex="-1"><?php _e( 'Search', 'c9-work' ); ?></button>
 			</div>
 		</form>
 	</div>
