@@ -16,9 +16,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+	<meta name="apple-mobile-web-app-title" content="<?php esc_attr(bloginfo( 'name' )); ?> - <?php esc_attr(bloginfo( 'description' )); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php
+	if ( (is_singular()) && (pings_open( get_queried_object() )) ) { ?>
+	<link rel="pingback" href="<?php esc_url(bloginfo( 'pingback_url' )); ?>">
+	<?php
+	}
+	?>
 	<?php wp_head(); ?>
 </head>
 
@@ -44,18 +49,8 @@
 					<div class="container">
 						<?php
 
-							// get custom logo, if not set, use customizer logo, if that's not set, show text of site title
-							$c9_site_name = get_bloginfo( 'name' );
-
 							if (has_custom_logo()) {
 								the_custom_logo();
-							} else {
-							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9-work' ); ?>" class="navbar-brand c9-custom-logo">
-								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg' ); ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9-work' );
-								?>" />
-							</a>
-							<?php
 							}
 							?>
 
@@ -69,7 +64,7 @@
 							<?php if (has_nav_menu('primary')) { ?>
 
 							<div class="nav-toggle">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr__('Toggle Navigation', 'c9-work'); ?>">
 									<i class="fa fa-bars"></i>
 								</button>
 							</div>
