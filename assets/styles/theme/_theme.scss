@@ -2134,8 +2134,9 @@ img {
 
 	.post-template-default .entry-content>.alignwide {
 		width: 1368px;
-		margin-left: calc((-100vw + 1368px) / 2);
-		margin-right: calc((-100vw + 1368px) / 2);
+		margin-left: calc((-1368px + 100%) / 2);
+		/* subtracting width of entry-content at 900px */
+		margin-right: calc((-1368px + 100%) / 2);
 	}
 
 	.page-template-default .entry-content .alignfull,
@@ -3221,8 +3222,10 @@ screen and (max-height: 300px) {
 .c9 .entry-content button:focus,
 .wp-block-button__link:not([href]):not([tabindex]):focus,
 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:focus,
-.entry-content .wp-block-button__link:focus {
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+.entry-content .wp-block-button__link:focus,
+.entry-content input[type="text"]:focus,
+#fullscreensearch input[type="search"]:focus,
+.search-close:focus {
 	outline: 1px dotted $light;
 }
 
