@@ -69,6 +69,11 @@ body {
 	margin-bottom: 0;
 }
 
+a.skip-link {
+	right: auto;
+	left: 0;
+}
+
 .skip-link:focus {
 	display: block;
 	position: fixed !important;
@@ -83,9 +88,9 @@ body {
 	width: auto;
 	overflow: visible;
 	line-height: 1;
-	left: auto;
-	right: 8px;
-	top: 8px;
+	left: 15px;
+	right: auto;
+	top: 65px;
 	font-size: 12px;
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -95,6 +100,12 @@ body {
 	clip: auto;
 	box-shadow: none;
 	outline-color: $primary;
+}
+
+@media only screen and (min-width: 768px) {
+	.skip-link:focus {
+		top: 115px;
+	}
 }
 
 @media only screen and (min-width: 1px) {
