@@ -99,7 +99,7 @@ C9 Work is derived from the C9 Starter Theme, Copyright 2019 COVERT NINE LLC
 C9 Starter Theme is distributed under the terms of the GNU GPL version 2.0
 
 == Resources ==
-* [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
+* [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter) c9-work branch
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
 * [C9 Work Client Folder Boilerplate](https://github.com/covertnine/client-work)
 * [_s](https://underscores.me) (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
