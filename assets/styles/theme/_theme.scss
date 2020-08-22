@@ -2125,18 +2125,12 @@ img {
 	.page-template-containerwidthpage .entry-content .alignwide,
 	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
-	.wp-block[data-type="core/cover"][data-align="wide"] {
+	.wp-block[data-type="core/cover"][data-align="wide"],
+	.post-template-default .entry-content>.alignwide {
 		width: 120%;
 		max-width: 1368px;
 		margin-left: -10%;
 		margin-right: -10%;
-	}
-
-	.post-template-default .entry-content>.alignwide {
-		width: 1368px;
-		margin-left: calc((-1368px + 100%) / 2);
-		/* subtracting width of entry-content at 900px */
-		margin-right: calc((-1368px + 100%) / 2);
 	}
 
 	.page-template-default .entry-content .alignfull,
