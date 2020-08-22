@@ -114,10 +114,26 @@ C9 Starter Theme is distributed under the terms of the GNU GPL version 2.0
 * [_s](https://underscores.me) (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * [Understrap](https://understrap.com)
 
-Image for theme screenshot, Copyright Jason Blackeye
+Image for theme screenshot, Copyright Jezael Melgoza
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/4B83RD7BV9
+Source: https://unsplash.com/photos/HYQvV8wWX18
 
 Image for sample theme content, Copyright Pixabay
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
+
+Image for sample theme content, Copyright Clark Young
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/fQxMGkYXqFU
+
+Image for sample theme content, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://flickr.covertnine.com
+
+Image for sample theme content, Copyright Krzysztof Kowalik
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/djdoRnnKLyo
+
+Image for sample theme content, Copyright Suliman Sallehi
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.pexels.com/photo/man-standing-in-front-of-the-building-1540969
