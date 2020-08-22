@@ -141,3 +141,7 @@ Source: https://www.pexels.com/photo/man-standing-in-front-of-the-building-15409
 Image for sample theme content, Copyright Pexels
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pixabay.com/photos/drive-digger-excavator-engine-1867268/
+
+Image for sample theme content, Copyright Jonathan Borba
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/Hnws8oSFcgU
