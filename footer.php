@@ -83,7 +83,7 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 		<form role="search" method="get" id="fullscreen" action="/">
 			<div>
 				<span class="sr-only"><?php esc_html_e( 'Search for:', 'c9-work' ); ?></span>
-				<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php esc_html_e( 'Search...', 'c9-work' ); ?>" />
+				<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php esc_attr_e( 'Search...', 'c9-work' ); ?>" />
 				<button type="submit" class="btn"><?php esc_html_e( 'Search', 'c9-work' ); ?></button>
 			</div>
 		</form>

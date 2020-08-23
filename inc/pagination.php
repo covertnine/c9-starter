@@ -36,7 +36,7 @@ if (! function_exists('c9_pagination') ) {
     <ul class="pagination">
         <li class="page-item">
             <a class="page-link" href="<?php echo esc_url($prev_link); ?>" aria-label="<?php esc_attr__('Previous', 'c9-work'); ?>">
-                <span aria-hidden="true"><?php esc_html_e($args['prev_text']); ?></span>
+                <span aria-hidden="true"><?php esc_html($args['prev_text']); ?></span>
                 <span class="sr-only"><?php esc_html_e('Previous', 'c9-work'); ?></span>
             </a>
         </li>
@@ -62,7 +62,7 @@ if (! function_exists('c9_pagination') ) {
 
         <li class="page-item">
             <a class="page-link" href="<?php echo esc_url($next_link); ?>" aria-label="<?php esc_attr__('Next', 'c9-work'); ?>">
-                <span aria-hidden="true"><?php esc_html_e($args['next_text']); ?></span>
+                <span aria-hidden="true"><?php esc_html($args['next_text']); ?></span>
                 <span class="sr-only"><?php esc_html_e('Next', 'c9-work'); ?></span>
             </a>
         </li>
