@@ -147,24 +147,6 @@ if ( ! function_exists( 'c9_display_image_size_names_muploader' ) ) {
 }
 add_filter( 'image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1 );
 
-	function c9_login_logo() {
-	if ( ! empty( get_option( 'cortex_branding' )['logo'] ) ) { // logo has been uploaded
-		$cortex_logo_image = get_option( 'cortex_branding' )['logo'];
-		} else {
-		$cortex_logo_image = get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg';
-		}
-	?>
-	<style type="text/css">
-		#login h1 a,
-		.login h1 a {
-			background-image: url('<?php echo $cortex_logo_image; ?>');
-			background-size: contain;
-			width: 200px;
-		}
-	</style>
-<?php
-}
-add_action( 'login_enqueue_scripts', 'c9_login_logo' );
 
 add_filter( 'wp_nav_menu_items', 'c9_add_search_form', 10, 2 );
 function c9_add_search_form( $items, $args ) {
@@ -179,25 +161,3 @@ function c9_add_search_form( $items, $args ) {
 	}
 	return $items;
 }
-
-// add_filter( 'the_content', 'c9_add_lazy_loading' );
-add_filter( 'wp_get_attachment_image_attributes', 'c9_add_lazy_loading_to_attachment' );
-
-/**
- * Add lazy-loading attribute to all attachment images
- */
-function c9_add_lazy_loading_to_attachment( $content ) {
-
-	$content['loading'] = 'lazy';
-	return $content;
-}
-
-/**
- * Add lazy-loading to content images
- */
-function c9_add_lazy_loading_to_content( $content ) {
-
-	$content = preg_replace( '/src="/', 'loading="lazy" src="', $content );
-	return $content;
-}
-add_filter( 'the_content', 'c9_add_lazy_loading_to_content' );
