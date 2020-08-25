@@ -23,7 +23,29 @@ Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-s
 
 Yes! Use the C9 Blocks plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
 
+= Does this theme support dropdown menus =
+
+Yes, but only one tier of dropdowns are currently supported.
+
 == Changelog ==
+
+= 2.1.8 =
+Escaping social urls.
+
+= 2.1.7 =
+Escaping and translation string fixes in navigation text
+
+= 2.1.6 =
+Added escaping, better translations, better accessibility, skip buttons, and better visual link focus
+
+= 2.1.5 =
+Added new path to C9 Admin Dashboard plugin and new markup for starter content
+
+= 2.1.4 =
+Adjustments to Max Megamenu and Navbar for Bootstrap with some media queries.
+
+= 2.1.3 =
+Updating color settings for seperators, tested with C9 Blocks 1.1.1 and theme now supports customizer for theme settings.
 
 = 2.1.1 =
 Adjustments to font settings to account for new markup and setting defaults on theme fonts
@@ -61,6 +83,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+= 2.1.8 =
+* This version of the theme works with WordPress 5.5 and C9 Blocks 1.1.3
+
 = 2.1.1 =
 * This version of the theme works with the latest version of WordPress version 5.4
 
@@ -69,3 +94,7 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
+
+Image for theme screenshot, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://flickr.covertnine.com

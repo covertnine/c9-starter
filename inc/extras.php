@@ -73,7 +73,7 @@ if (!function_exists('c9_change_logo_class')) {
 
 		$html = str_replace('class="custom-logo"', 'class="img-fluid navbar-brand c9-custom-logo"', $html);
 		$html = str_replace('class="custom-logo-link"', 'class="navbar-brand custom-logo-link c9-custom-logo"', $html);
-		$html = str_replace('alt=""', 'title="' . esc_attr__('Home', 'c9-work') . '" alt="' . esc_attr__('logo', 'c9-work') . '"', $html);
+		$html = str_replace('alt=""', 'title="' . esc_attr__('Home', 'c9-starter') . '" alt="' . esc_attr__('logo', 'c9-starter') . '"', $html);
 		$html = wp_kses_post($html);
 		return $html;
 	}
@@ -97,15 +97,15 @@ if (!function_exists('c9_post_nav')) {
 		}
 ?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e('Post navigation', 'c9-work'); ?></h2>
+			<h2 class="sr-only"><?php _e('Post navigation', 'c9-starter'); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
 				if (get_previous_post_link()) {
-					previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-work'));
+					previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp; Previous Post', 'Previous post link', 'c9-starter'));
 				}
 				if (get_next_post_link()) {
-					next_post_link('<span class="nav-next">%link</span>', _x('Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-work'));
+					next_post_link('<span class="nav-next">%link</span>', _x('Next Post&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'c9-starter'));
 				}
 				?>
 			</div><!-- .nav-links -->
