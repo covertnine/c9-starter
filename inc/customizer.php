@@ -3,7 +3,7 @@
 /**
  * Theme Customizer
  *
- * @package c9
+ * @package C9
  */
 
 /**
@@ -113,7 +113,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_twitter',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'wp_filter_post_kses',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -132,7 +132,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_facebook',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -150,7 +150,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_instagram',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -168,7 +168,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_pinterest',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -187,7 +187,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_spotify',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -206,7 +206,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_youtube',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -225,7 +225,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_yelp',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -244,7 +244,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_subreddit',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -263,7 +263,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_linkedin',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -282,7 +282,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_github',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
@@ -301,7 +301,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_soundcloud',
 			array(
 				'default'           => '',
-				'sanitize_callback' => 'escape_url_raw',
+				'sanitize_callback' => 'esc_url_raw',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)
