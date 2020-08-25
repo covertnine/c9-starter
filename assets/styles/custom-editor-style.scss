@@ -629,15 +629,6 @@ body .editor-styles-wrapper,
 	font-size: 4em;
 }
 
-.editor-styles-wrapper .c9-heading .h1 .text-muted,
-.editor-styles-wrapper .c9-heading .h2 .text-muted,
-.editor-styles-wrapper .c9-heading .h3 .text-muted,
-.editor-styles-wrapper .c9-heading .h4 .text-muted,
-.editor-styles-wrapper .c9-heading .h5 .text-muted,
-.editor-styles-wrapper .c9-heading .h6 .text-muted {
-	font-family: $headings-font-family;
-}
-
 .editor-styles-wrapper .block-editor-block-list__layout h2,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
@@ -679,7 +670,6 @@ body .editor-styles-wrapper,
 .display-4,
 .display-5,
 .display-6 {
-	font-family: $headings-font-family;
 	line-height: 1.1;
 }
 

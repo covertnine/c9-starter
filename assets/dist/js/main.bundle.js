@@ -175,7 +175,7 @@ var c9Page = function ($) {
 
     $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
       disableOn: 700,
-      type: 'iframe',
+      type: "iframe",
       mainClass: "mfp-zoom-in",
       removalDelay: 160,
       preloader: false,
@@ -183,7 +183,7 @@ var c9Page = function ($) {
     });
     $('.wp-block-image a[href$=".jpg"]').magnificPopup({
       disableOn: 700,
-      type: 'image',
+      type: "image",
       mainClass: "mfp-zoom-in",
       tError: '<a href="%url%">The image</a> could not be loaded.',
       removalDelay: 160,
@@ -255,17 +255,58 @@ var c9Page = function ($) {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Will hold previously focused element
 
-    $(".btn-nav-search").on("click", function (e) {
-      e.preventDefault();
+    var focusedElementBeforeModal;
+    var modal = $("#fullscreensearch"); //open modal for search
+
+    $(".btn-nav-search").on("click", fullScreenSearch);
+
+    function fullScreenSearch(e) {
+      e.preventDefault(); //refocus on this when closed
+
+      focusedElementBeforeModal = document.activeElement; //listen for tab keying to trab tabs in modal
+
+      $("body").on("keydown", modal, trapTabKey); // Find all focusable children
+
+      var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
+      focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements); // Convert NodeList to Array
+
+      focusableElements = Array.prototype.slice.call(focusableElements);
+      var firstTabStop = focusableElements[0];
+      var lastTabStop = focusableElements[focusableElements.length - 1];
       $("#fullscreensearch").addClass("open");
-      $('#fullscreensearch > form > div > input[type="search"]').focus();
-    });
-    $("#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click keyup", function (e) {
+      focusableElements[0].focus();
+
+      function trapTabKey(e) {
+        // Check for TAB key press
+        if (e.keyCode === 9) {
+          // SHIFT + TAB
+          if (e.shiftKey) {
+            if (document.activeElement === firstTabStop) {
+              e.preventDefault();
+              lastTabStop.focus();
+            } // TAB
+
+          } else {
+            if (document.activeElement === lastTabStop) {
+              e.preventDefault();
+              firstTabStop.focus();
+            }
+          }
+        }
+      }
+    } //end fullScreenSearch
+    //close modal
+
+
+    $("#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click", function (e) {
+      // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == "search-close" || e.keyCode == 27) {
         $(this).removeClass("open");
         $(this).parent().removeClass("open");
         $(this).parent().parent().removeClass("open");
+        focusedElementBeforeModal.focus();
       }
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
