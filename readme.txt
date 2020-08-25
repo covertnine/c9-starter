@@ -6,7 +6,7 @@ Tested up to: 5.4
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable Tag: 2.1.1
+Stable Tag: 2.1.8
 
 A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
@@ -34,28 +34,28 @@ Adjustments to markup for WordPress 5.4 release changes to Gutenberg.
 = 2.0.9 =
 Removed defunct theme settings. Moved admin settings above client folder to make it easier to add settings. Adjustments to fonts from theme settings.
 
-= 2.0.8 = 
+= 2.0.8 =
 Fix size text issues on list items. Adjusted admin settings so client folders can add/overwrite settings. Changed Gravity Forms block CSS declarations.
 
-= 2.0.7 = 
+= 2.0.7 =
 Added logic for field settings, navigation, navbar logo, if they are blank, added right nav margin auto
 
-= 2.0.6 = 
+= 2.0.6 =
 Removed heading declaration from cta bar from parent theme
 
-= 2.0.5 = 
+= 2.0.5 =
 Added C9 outer class element
 
-= 2.0.4 = 
+= 2.0.4 =
 Tweaks to core WP blocks for display on posts and pages with C9 Grids
 
-= 2.0.3 = 
+= 2.0.3 =
 Adjustments to Gravity Forms font size support
 
-= 2.0.1 = 
+= 2.0.1 =
 Bug maintenance release with additional post support for cover images and adjustments to bulleted lists and galleries
 
-= 2.0 = 
+= 2.0 =
 Initial release of starter theme with support for all WordPress 5.3 blocks
 
 
