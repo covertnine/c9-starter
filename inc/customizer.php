@@ -384,7 +384,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_heading_font',
 			array(
-				'default'           => 'Bebas+Neue',
+				'default'           => '',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -406,7 +406,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_subheading_font',
 			array(
-				'default'           => 'Lobster',
+				'default'           => '',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
