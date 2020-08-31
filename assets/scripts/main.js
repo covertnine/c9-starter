@@ -1,15 +1,15 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 	c9Page.init();
 });
 
-var c9Page = (function($) {
+var c9Page = (function ($) {
 	var c9PageInit = {};
 
-	c9PageInit.init = function() {
+	c9PageInit.init = function () {
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
-		jQuery(window).scroll(function() {
+		jQuery(window).scroll(function () {
 			//scroll position variable
 			var scroll = jQuery(window).scrollTop();
 
@@ -30,7 +30,7 @@ var c9Page = (function($) {
 			$(".navbar").addClass("navbar-small");
 			$("body").addClass("navbar-small");
 
-			$(window).scroll(function() {
+			$(window).scroll(function () {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -55,7 +55,7 @@ var c9Page = (function($) {
 
 			//var logoHeight = $(".c9-custom-logo").height();
 
-			$(window).scroll(function() {
+			$(window).scroll(function () {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -93,10 +93,18 @@ var c9Page = (function($) {
 			preloader: false,
 			fixedContentPos: false
 		});
-
+		$('.wp-block-image a[href$=".jpg"]').magnificPopup({
+			disableOn: 700,
+			type: "image",
+			mainClass: "mfp-zoom-in",
+			tError: '<a href="%url%">The image</a> could not be loaded.',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
+		});
 		$(
 			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a'
-		).click(function(e) {
+		).click(function (e) {
 			e.preventDefault();
 
 			var items = [];
@@ -115,7 +123,7 @@ var c9Page = (function($) {
 				.nextAll()
 				.children()
 				.find("a")
-				.each(function() {
+				.each(function () {
 					var imageLink = $(this).attr("href");
 					var imageCaption = $(this).attr("title");
 					items.push({
@@ -131,7 +139,7 @@ var c9Page = (function($) {
 				.prevAll()
 				.children()
 				.find("a")
-				.each(function() {
+				.each(function () {
 					var imageLink = $(this).attr("href");
 					var imageCaption = $(this).attr("title");
 					items.push({
@@ -148,26 +156,26 @@ var c9Page = (function($) {
 				},
 				mainClass: "mfp-zoom-in",
 				callbacks: {
-					open: function() {
+					open: function () {
 						//overwrite default prev + next function. Add timeout for css3 crossfade animation
-						$.magnificPopup.instance.next = function() {
+						$.magnificPopup.instance.next = function () {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function() {
+							setTimeout(function () {
 								$.magnificPopup.proto.next.call(self);
 							}, 120);
 						};
-						$.magnificPopup.instance.prev = function() {
+						$.magnificPopup.instance.prev = function () {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function() {
+							setTimeout(function () {
 								$.magnificPopup.proto.prev.call(self);
 							}, 120);
 						};
 					},
-					imageLoadComplete: function() {
+					imageLoadComplete: function () {
 						var self = this;
-						setTimeout(function() {
+						setTimeout(function () {
 							self.wrap.addClass("mfp-image-loaded");
 						}, 16);
 					}
@@ -180,15 +188,61 @@ var c9Page = (function($) {
 
 		//////////////////////////////////////       full screen search        ///////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$(".btn-nav-search").on("click", function(e) {
-			e.preventDefault();
-			$("#fullscreensearch").addClass("open");
-			$('#fullscreensearch > form > div > input[type="search"]').focus();
-		});
+		// Will hold previously focused element
+		var focusedElementBeforeModal;
+		var modal = $("#fullscreensearch");
 
+		//open modal for search
+		$(".btn-nav-search").on("click", fullScreenSearch);
+
+		function fullScreenSearch(e) {
+			e.preventDefault();
+
+			//refocus on this when closed
+			focusedElementBeforeModal = document.activeElement;
+
+			//listen for tab keying to trab tabs in modal
+			$("body").on("keydown", modal, trapTabKey);
+
+			// Find all focusable children
+			var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
+			focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements);
+
+			// Convert NodeList to Array
+			focusableElements = Array.prototype.slice.call(focusableElements);
+
+			var firstTabStop = focusableElements[0];
+			var lastTabStop = focusableElements[focusableElements.length - 1];
+
+			$("#fullscreensearch").addClass("open");
+			focusableElements[0].focus();
+
+			function trapTabKey(e) {
+				// Check for TAB key press
+				if (e.keyCode === 9) {
+					// SHIFT + TAB
+					if (e.shiftKey) {
+						if (document.activeElement === firstTabStop) {
+							e.preventDefault();
+							lastTabStop.focus();
+						}
+
+						// TAB
+					} else {
+						if (document.activeElement === lastTabStop) {
+							e.preventDefault();
+							firstTabStop.focus();
+						}
+					}
+				}
+			}
+		} //end fullScreenSearch
+
+		//close modal
 		$(
-			"#fullscreensearch, #fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
-		).on("click keyup", function(e) {
+			"#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
+		).on("click", function (e) {
+			// if escape is hit or if search close is clicked
 			if (
 				e.target == this ||
 				e.target.className == "search-close" ||
@@ -202,6 +256,7 @@ var c9Page = (function($) {
 					.parent()
 					.parent()
 					.removeClass("open");
+				focusedElementBeforeModal.focus();
 			}
 		});
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
