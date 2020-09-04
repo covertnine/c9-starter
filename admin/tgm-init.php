@@ -75,13 +75,7 @@ function c9_register_required_plugins() {
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
 			'required' => false,
-		),
-
-		array(
-			'name'     => 'WP Retina 2x',
-			'slug'     => 'wp-retina-2x',
-			'required' => false,
-		),
+		)
 
 	);
 
