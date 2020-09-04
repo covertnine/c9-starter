@@ -29,8 +29,8 @@ function c9_editor_style() {
 
 		// Localize the script with the font data
 		$font_array 						= array();
-		$font_array['c9_heading_font'] 		= esc_html( get_theme_mod( 'c9_heading_font', 'Bebas+Neue' ) );
-		$font_array['c9_subheading_font'] 	= esc_html( get_theme_mod( 'c9_subheading_font', 'Lobster' ) );
+		$font_array['c9_heading_font'] 		= esc_html( get_theme_mod( 'c9_heading_font' ) );
+		$font_array['c9_subheading_font'] 	= esc_html( get_theme_mod( 'c9_subheading_font' ) );
 		$font_array['c9_body_font'] 		= esc_html( get_theme_mod( 'c9_body_font' ) );
 		$font_array['c9_default_font']		= $c9_fonts;
 
