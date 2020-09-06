@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-08-11 18:33-0500\n"
-"PO-Revision-Date: 2020-08-11 18:33-0500\n"
+"POT-Creation-Date: 2020-08-27 09:10-0400\n"
+"PO-Revision-Date: 2020-08-27 09:10-0400\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -516,6 +516,74 @@ msgstr "Profile"
 msgid "Posts by"
 msgstr "Posts by"
 
+#: client/inc/client-setup.php:42
+msgid "About"
+msgstr "About"
+
+#: client/inc/client-setup.php:48
+msgid "Setup"
+msgstr "Setup"
+
+#: client/inc/client-setup.php:54
+msgid "Style Guide"
+msgstr "Style Guide"
+
+#: client/inc/client-setup.php:58
+msgid ""
+"This page will show all of the blog posts once you have populated your "
+"database with blog items."
+msgstr ""
+"This page will show all of the blog posts once you have populated your "
+"database with blog items."
+
+#: client/inc/client-setup.php:66
+msgid ""
+"A blocks-based WordPress Theme starter theme for musicians, events, small "
+"businesses, restaurants, dispensaries, and bloggers."
+msgstr ""
+"A blocks-based WordPress Theme starter theme for musicians, events, small "
+"businesses, restaurants, dispensaries, and bloggers."
+
+#: client/inc/client-setup.php:79 inc/setup.php:45
+msgid "Top Navigation Menu"
+msgstr "Top Navigation Menu"
+
+#: client/inc/client-setup.php:106
+msgid "Resources Menu"
+msgstr "Resources Menu"
+
+#: client/inc/client-setup.php:129
+msgid "Company Menu"
+msgstr "Company Menu"
+
+#: client/inc/client-setup.php:150
+msgid "WordPress Meta"
+msgstr "WordPress Meta"
+
+#: client/inc/client-setup.php:155
+msgid "About C9 Starter"
+msgstr "About C9 Starter"
+
+#: client/inc/client-setup.php:156
+msgid ""
+"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
+"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
+"toggles, and the responsive grid system that makes the theme look super "
+"duper."
+msgstr ""
+"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
+"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
+"toggles, and the responsive grid system that makes the theme look super "
+"duper."
+
+#: client/inc/client-setup.php:260
+msgid "Light Color Text"
+msgstr "Light Color Text"
+
+#: client/inc/client-setup.php:268
+msgid "Dark Color Text"
+msgstr "Dark Color Text"
+
 #. translators: %s: post title
 #: comments.php:32
 #, php-format
@@ -547,22 +615,29 @@ msgstr "Newer Comments &rarr;"
 msgid "Comments are closed."
 msgstr "Comments are closed."
 
-#: footer.php:85
-msgid "Close"
-msgstr "Close"
+#: footer.php:17
+msgid "Web design company in Chicago"
+msgstr "Web design company in Chicago"
 
-#: footer.php:88
+#: footer.php:17
+msgid "WordPress Website design by COVERT NINE"
+msgstr "WordPress Website design by COVERT NINE"
+
+#: footer.php:85
 msgid "Search for:"
 msgstr "Search for:"
 
-#: footer.php:89
+#: footer.php:86
 msgid "Search..."
 msgstr "Search..."
 
-#: footer.php:90 header.php:58 inc/extras.php:86 searchform.php:10
-#: searchform.php:14
+#: footer.php:87 header.php:61 searchform.php:10 searchform.php:14
 msgid "Search"
 msgstr "Search"
+
+#: footer.php:90
+msgid "Close"
+msgstr "Close"
 
 #: functions.php:87
 msgid ""
@@ -574,9 +649,13 @@ msgstr ""
 "client.php to the parent theme. If you still dont know what&#39;s going on, "
 "contact connect@covertnine.com"
 
-#: header.php:39
+#: header.php:32
 msgid "Skip to content"
 msgstr "Skip to content"
+
+#: header.php:67
+msgid "Toggle Navigation"
+msgstr "Toggle Navigation"
 
 #: inc/class-wp-bootstrap-navwalker.php:366
 msgid "Add a menu"
@@ -595,213 +674,221 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Comment"
 
-#: inc/customizer.php:27 inc/widgets.php:66
+#: inc/customizer.php:29 inc/widgets.php:66
 msgid "Footer"
 msgstr "Footer"
 
-#: inc/customizer.php:46
+#: inc/customizer.php:48
 msgid "Display search in footer"
 msgstr "Display search in footer"
 
-#: inc/customizer.php:48
+#: inc/customizer.php:50
 msgid "Hide or show the search form in the footer"
 msgstr "Hide or show the search form in the footer"
 
-#: inc/customizer.php:50 inc/customizer.php:103 inc/customizer.php:472
+#: inc/customizer.php:52 inc/customizer.php:105 inc/customizer.php:474
 msgid "Show"
 msgstr "Show"
 
-#: inc/customizer.php:51 inc/customizer.php:104 inc/customizer.php:473
+#: inc/customizer.php:53 inc/customizer.php:106 inc/customizer.php:475
 msgid "Hide"
 msgstr "Hide"
 
-#: inc/customizer.php:71
+#: inc/customizer.php:73
 msgid "Copyright"
 msgstr "Copyright"
 
-#: inc/customizer.php:73
+#: inc/customizer.php:75
 msgid "Enter in any copyright information, links to privacy policies or terms."
 msgstr ""
 "Enter in any copyright information, links to privacy policies or terms."
 
-#: inc/customizer.php:79
+#: inc/customizer.php:81
 msgid "Social Media"
 msgstr "Social Media"
 
-#: inc/customizer.php:99
+#: inc/customizer.php:101
 msgid "Display social icons in footer"
 msgstr "Display social icons in footer"
 
-#: inc/customizer.php:101
+#: inc/customizer.php:103
 msgid "Hide or show social icons in the footer"
 msgstr "Hide or show social icons in the footer"
 
-#: inc/customizer.php:124
+#: inc/customizer.php:126
 msgid "Twitter Link"
 msgstr "Twitter Link"
 
-#: inc/customizer.php:126
+#: inc/customizer.php:128
 msgid "Input your Twitter Username or full url"
 msgstr "Input your Twitter Username or full url"
 
-#: inc/customizer.php:142
+#: inc/customizer.php:144
 msgid "Facebook Link"
 msgstr "Facebook Link"
 
-#: inc/customizer.php:144
+#: inc/customizer.php:146
 msgid "Input your Facebook username or full url"
 msgstr "Input your Facebook username or full url"
 
-#: inc/customizer.php:160
+#: inc/customizer.php:162
 msgid "Instagram Link"
 msgstr "Instagram Link"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:164
 msgid "Input your Instagram username or full url"
 msgstr "Input your Instagram username or full url"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:180
 msgid "Pinterest Link"
 msgstr "Pinterest Link"
 
-#: inc/customizer.php:180
+#: inc/customizer.php:182
 msgid "Input your Pinterest username or full url"
 msgstr "Input your Pinterest username or full url"
 
-#: inc/customizer.php:197
+#: inc/customizer.php:199
 msgid "Spotify Link"
 msgstr "Spotify Link"
 
-#: inc/customizer.php:199
+#: inc/customizer.php:201
 msgid "Input your Spotify username or full url"
 msgstr "Input your Spotify username or full url"
 
-#: inc/customizer.php:216
+#: inc/customizer.php:218
 msgid "YouTube Link"
 msgstr "YouTube Link"
 
-#: inc/customizer.php:218
+#: inc/customizer.php:220
 msgid "Input your YouTube username or full url"
 msgstr "Input your YouTube username or full url"
 
-#: inc/customizer.php:235
+#: inc/customizer.php:237
 msgid "Yelp Link"
 msgstr "Yelp Link"
 
-#: inc/customizer.php:237
+#: inc/customizer.php:239
 msgid "Input your Yelp username or full url"
 msgstr "Input your Yelp username or full url"
 
-#: inc/customizer.php:254
+#: inc/customizer.php:256
 msgid "Subreddit Link"
 msgstr "Subreddit Link"
 
-#: inc/customizer.php:256
+#: inc/customizer.php:258
 msgid "Input your Subreddit url"
 msgstr "Input your Subreddit url"
 
-#: inc/customizer.php:273
+#: inc/customizer.php:275
 msgid "LinkedIn Link"
 msgstr "LinkedIn Link"
 
-#: inc/customizer.php:275
+#: inc/customizer.php:277
 msgid "Input your LinkedIn url"
 msgstr "Input your LinkedIn url"
 
-#: inc/customizer.php:292
+#: inc/customizer.php:294
 msgid "Github Link"
 msgstr "Github Link"
 
-#: inc/customizer.php:294
+#: inc/customizer.php:296
 msgid "Input your Github username or full url"
 msgstr "Input your Github username or full url"
 
-#: inc/customizer.php:311
+#: inc/customizer.php:313
 msgid "SoundCloud Link"
 msgstr "SoundCloud Link"
 
-#: inc/customizer.php:313
+#: inc/customizer.php:315
 msgid "Input your SoundCloud username or full url"
 msgstr "Input your SoundCloud username or full url"
 
-#: inc/customizer.php:319
+#: inc/customizer.php:321
 msgid "Branding"
 msgstr "Branding"
 
-#: inc/customizer.php:339
+#: inc/customizer.php:341
 msgid "Use C9 Theme Fonts?"
 msgstr "Use C9 Theme Fonts?"
 
-#: inc/customizer.php:342
+#: inc/customizer.php:344
 msgid "Yes"
 msgstr "Yes"
 
-#: inc/customizer.php:343
+#: inc/customizer.php:345
 msgid "No, I will queue my own fonts."
 msgstr "No, I will queue my own fonts."
 
-#: inc/customizer.php:397
+#: inc/customizer.php:399
 msgid "Heading Font"
 msgstr "Heading Font"
 
-#: inc/customizer.php:398
+#: inc/customizer.php:400
 msgid "Select your heading font family."
 msgstr "Select your heading font family."
 
-#: inc/customizer.php:419
+#: inc/customizer.php:421
 msgid "Subheading Font"
 msgstr "Subheading Font"
 
-#: inc/customizer.php:420
+#: inc/customizer.php:422
 msgid "Select your subheading font family."
 msgstr "Select your subheading font family."
 
-#: inc/customizer.php:439
+#: inc/customizer.php:441
 msgid "Body Paragraph Font"
 msgstr "Body Paragraph Font"
 
-#: inc/customizer.php:440
+#: inc/customizer.php:442
 msgid "Select your base font family."
 msgstr "Select your base font family."
 
-#: inc/customizer.php:449
+#: inc/customizer.php:451
 msgid "Posts"
 msgstr "Posts"
 
-#: inc/customizer.php:469
+#: inc/customizer.php:471
 msgid "Do you want to show or hide the author name on posts?"
 msgstr "Do you want to show or hide the author name on posts?"
 
-#: inc/customizer.php:493
+#: inc/customizer.php:495
 msgid "Display a sidebar on single posts?"
 msgstr "Display a sidebar on single posts?"
 
-#: inc/customizer.php:496 inc/customizer.php:521
+#: inc/customizer.php:498 inc/customizer.php:523
 msgid "No Sidebar"
 msgstr "No Sidebar"
 
-#: inc/customizer.php:497 inc/customizer.php:522 inc/widgets.php:90
+#: inc/customizer.php:499 inc/customizer.php:524 inc/widgets.php:90
 msgid "Left Sidebar"
 msgstr "Left Sidebar"
 
-#: inc/customizer.php:498 inc/customizer.php:523 inc/widgets.php:78
+#: inc/customizer.php:500 inc/customizer.php:525 inc/widgets.php:78
 msgid "Right Sidebar"
 msgstr "Right Sidebar"
 
-#: inc/customizer.php:518
+#: inc/customizer.php:520
 msgid "Display a sidebar on archive pages?"
 msgstr "Display a sidebar on archive pages?"
 
-#: inc/extras.php:108
+#: inc/extras.php:76
+msgid "Home"
+msgstr "Home"
+
+#: inc/extras.php:76
+msgid "logo"
+msgstr "logo"
+
+#: inc/extras.php:100
 msgid "Post navigation"
 msgstr "Post navigation"
 
-#: inc/extras.php:113
+#: inc/extras.php:105
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp; Previous Post"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp; Previous Post"
 
-#: inc/extras.php:116
+#: inc/extras.php:108
 msgctxt "Next post link"
 msgid "Next Post&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "Next Post&nbsp;<i class=\"fa fa-angle-right\"></i>"
@@ -825,10 +912,6 @@ msgstr "Previous"
 #: inc/pagination.php:64 inc/pagination.php:66
 msgid "Next"
 msgstr "Next"
-
-#: inc/setup.php:45
-msgid "Top Navigation Menu"
-msgstr "Top Navigation Menu"
 
 #: inc/template-tags.php:30
 #, php-format
@@ -874,6 +957,14 @@ msgstr "% Comments"
 #, php-format
 msgid "Edit %s"
 msgstr "Edit %s"
+
+#: inc/widgets.php:68
+msgid ""
+"Full bottom widget with dynamic responsive grid that shows on every page. "
+"Suggested 3-6 widgets."
+msgstr ""
+"Full bottom widget with dynamic responsive grid that shows on every page. "
+"Suggested 3-6 widgets."
 
 #: inc/widgets.php:80
 msgid ""
@@ -949,10 +1040,10 @@ msgstr "https://c9.covertnine.com"
 #. Description of the plugin/theme
 msgid ""
 "C9 is a starter theme for WordPress 5 that uses Bootstrap's responsive grid "
-"system and Gutenberg blocks"
+"system, dropdown menu navbar, and Gutenberg blocks"
 msgstr ""
 "C9 is a starter theme for WordPress 5 that uses Bootstrap's responsive grid "
-"system and Gutenberg blocks"
+"system, dropdown menu navbar, and Gutenberg blocks"
 
 #. Author of the plugin/theme
 msgid "COVERT NINE"

@@ -72,40 +72,10 @@ function c9_register_required_plugins() {
 		),
 
 		array(
-			'name'     => 'The SEO Framework',
-			'slug'     => 'autodescription',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'Autoptimize',
-			'slug'     => 'autoptimize',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'Matomo Analytics',
-			'slug'     => 'matomo',
-			'required' => false,
-		),
-
-		array(
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
 			'required' => false,
-		),
-
-		array(
-			'name'     => 'WP Retina 2x',
-			'slug'     => 'wp-retina-2x',
-			'required' => false,
-		),
-
-		array(
-			'name'		=> 'Smash Balloon Social Photo Feed',
-			'slug'		=> 'instagram-feed',
-			'required'	=> false,
-		),
+		)
 
 	);
 
