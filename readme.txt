@@ -2,7 +2,7 @@
 Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.3.2
-Tested up to: 5.4
+Tested up to: 5.5.1
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,7 +30,7 @@ Yes, but only one tier of dropdowns are currently supported.
 == Changelog ==
 
 = 2.1.8 =
-Escaping social urls.
+Escaping social urls, and preparing sample content for WordPress.org
 
 = 2.1.7 =
 Escaping and translation string fixes in navigation text
@@ -96,5 +96,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 * [Understrap](https://understrap.com)
 
 Image for theme screenshot, Copyright Timothy Toomey
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://flickr.covertnine.com
+License: GPL Compatible v2 or later
+Source: https://www.covertnine.com
+
+Images for sample content, Copyright Timothy Toomey
+License: GPL Compatible v2 or later
+Source: https://www.covertnine.com
