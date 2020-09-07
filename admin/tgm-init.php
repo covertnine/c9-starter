@@ -75,7 +75,25 @@ function c9_register_required_plugins() {
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
 			'required' => false,
-		)
+		),
+
+		array(
+			'name'     => 'WP Retina 2x',
+			'slug'     => 'wp-retina-2x',
+			'required' => false,
+		),
+
+		array(
+			'name'     => 'WooCommerce',
+			'slug'     => 'woocommerce',
+			'required' => false,
+		),
+
+		array(
+			'name'		=> 'WooCommerce Order Delivery',
+			'slug'		=> 'byconsole-woo-order-delivery-time',
+			'required'	=> false,
+		),
 
 	);
 
