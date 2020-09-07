@@ -94,7 +94,11 @@ function c9_register_required_plugins() {
 			'slug'		=> 'byconsole-woo-order-delivery-time',
 			'required'	=> false,
 		),
-
+		array(
+			'name'		=> 'Leave at Door for WooCommerce',
+			'slug'		=> 'leave-at-door-for-woocommerce',
+			'required'	=> false,
+		),
 	);
 
 	if ( ! isset( $config ) ) {
