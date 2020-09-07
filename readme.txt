@@ -1,5 +1,5 @@
-=== C9 Starter ===
-Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
+=== C9 Togo ===
+Contributors: ttoomey, samirillion, malzdesigns
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.3.2
 Tested up to: 5.5.1
@@ -8,20 +8,20 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable Tag: 2.1.8
 
-A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
+C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering and delivery through their WordPress website. Fully compatible with WordPress 5.5--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
 
 == Description ==
-A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin.
+A restaurant ordering and delivery theme for WordPress 5.5 that makes it easy to add online ordering for any food and beverage concept with local pickup/delivery options instead of just shipping. Uses of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin to simplify the creation of menus and landing pages for marketing campaigns.
 
 == Frequently Asked Questions ==
 
 = Is there source code for this theme? =
 
-Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-starter).
+Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-starter) in the c9-togo branch along with the help of the C9 Togo client folder that you can download [here](https://github.com/covertnine/client-togo).
 
 = Does this theme support Gutenberg? =
 
-Yes! Use the C9 Blocks plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
+Yes! Use the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
 
 = Does this theme support dropdown menus =
 
