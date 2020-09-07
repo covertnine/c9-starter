@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package c9
+ * @package c9-starter
  */
 
 /**

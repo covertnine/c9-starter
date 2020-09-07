@@ -4,7 +4,7 @@
  *
  * Template for displaying a blank page with no header or footer
  *
- * @package C9
+ * @package c9-starter
  */
 
 ?>

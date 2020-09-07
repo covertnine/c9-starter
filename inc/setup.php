@@ -3,7 +3,7 @@
 /**
  * Theme basic setup.
  *
- * @package C9
+ * @package c9-starter
  */
 
 // Set the content width based on the theme's design and stylesheet.

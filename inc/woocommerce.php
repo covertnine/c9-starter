@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package c9
+ * @package c9-starter
  */
 
 

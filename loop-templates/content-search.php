@@ -2,7 +2,7 @@
 /**
  * Search results partial template.
  *
- * @package c9
+ * @package c9-starter
  */
 
 ?>

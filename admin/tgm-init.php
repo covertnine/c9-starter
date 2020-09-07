@@ -60,9 +60,8 @@ function c9_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => 'C9 Admin',
-			'slug'     => 'c9-admin',
-			'source'   => 'https://github.com/covertnine/c9-admin/archive/master.zip',
+			'name'     => 'C9 Admin Dashboard',
+			'slug'     => 'c9-admin-dashboard',
 			'required' => false,
 		),
 
@@ -73,76 +72,11 @@ function c9_register_required_plugins() {
 		),
 
 		array(
-			'name'     => 'The Seo Framework',
-			'slug'     => 'autodescription',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'Autoptimize',
-			'slug'     => 'autoptimize',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'Matomo Analytics',
-			'slug'     => 'matomo',
-			'required' => false,
-		),
-
-		array(
 			'name'     => 'Regenerate Thumbnails',
 			'slug'     => 'regenerate-thumbnails',
 			'required' => false,
-		),
+		)
 
-		array(
-			'name'     => 'WP Retina 2x',
-			'slug'     => 'wp-retina-2x',
-			'required' => false,
-		),
-
-		array(
-			'name'		=> 'Smash Balloon Social Photo Feed',
-			'slug'		=> 'instagram-feed',
-			'required'	=> false,
-		),
-
-		array(
-			'name'     => 'WooCommerce',
-			'slug'     => 'woocommerce',
-			'required' => false,
-		),
-
-		array(
-			'name'		=> 'Leave At Door For WooCommerce',
-			'slug'		=> 'leave-at-door-for-woocommerce',
-			'required'	=> false,
-		),
-
-		array(
-			'name'		=> 'Order Delivery or Pickup with Date/Time',
-			'slug'		=> 'byconsole-woo-order-delivery-time',
-			'required'	=> false,
-		),
-
-		array(
-			'name'		=> 'Store Hours Manager for WooCommerce',
-			'slug'		=> 'order-hours-scheduler-for-woocommerce',
-			'required'	=> false,
-		),
-
-		array(
-			'name'		=> 'WooCommerce Order Delivery',
-			'slug'		=> 'byconsole-woo-order-delivery-time',
-			'required'	=> false,
-		),
-
-		array(
-			'name'		=> 'WP SMS',
-			'slug'		=> 'wp-sms',
-			'required'	=> false,
-		),
 	);
 
 	if ( ! isset( $config ) ) {

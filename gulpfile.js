@@ -87,8 +87,6 @@ gulp.task("webpack-watch", function () {
 // Uglifies and concat all JS files into one
 gulp.task("scripts", function () {
 	var scripts = [
-		paths.node + "/babel-polyfill/dist/polyfill.js",
-
 		paths.node + "/bootstrap/dist/js/bootstrap.min.js",
 
 		paths.node + "/magnific-popup/dist/jquery.magnific-popup.js",

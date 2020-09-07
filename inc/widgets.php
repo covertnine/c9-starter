@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package c9
+ * @package c9-starter
  */
 
 if ( ! function_exists( 'c9_slbd_count_widgets' ) ) {
@@ -65,7 +65,7 @@ if ( ! function_exists( 'c9_widgets_init' ) ) {
 			array(
 				'name'          => __( 'Footer', 'c9-togo' ),
 				'id'            => 'footerfull',
-				'description'   => 'Full bottom widget with dynamic responsive grid that shows on every page. Suggested 3-6 widgets.',
+				'description'   => __('Full bottom widget with dynamic responsive grid that shows on every page. Suggested 3-6 widgets.', 'c9-togo'),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ' . c9_slbd_count_widgets( 'footerfull' ) . '">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',

@@ -3,7 +3,7 @@
 /**
  * COVERT NINE modify editor
  *
- * @package c9
+ * @package C9
  */
 
 /**
@@ -23,15 +23,15 @@ function c9_editor_style() {
 	if ( ! empty( $font_choice ) && 'yes' === $font_choice ) {
 		// Begin by registering the JavaScript Script
 		// Add action to enqueue the CDN script:
-		wp_enqueue_script( 'webfont-loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
+		wp_enqueue_script( 'webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js', );
 
 		wp_register_script( 'c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array( 'webfont-loader' ) );
 
 		// Localize the script with the font data
 		$font_array 						= array();
-		$font_array['c9_heading_font'] 		= get_theme_mod( 'c9_heading_font', 'Bebas+Neue' );
-		$font_array['c9_subheading_font'] 	= get_theme_mod( 'c9_subheading_font', 'Lobster' );
-		$font_array['c9_body_font'] 		= get_theme_mod( 'c9_body_font' );
+		$font_array['c9_heading_font'] 		= esc_html( get_theme_mod( 'c9_heading_font' ) );
+		$font_array['c9_subheading_font'] 	= esc_html( get_theme_mod( 'c9_subheading_font' ) );
+		$font_array['c9_body_font'] 		= esc_html( get_theme_mod( 'c9_body_font' ) );
 		$font_array['c9_default_font']		= $c9_fonts;
 
 		// Use the localize function to localize the script and continue with the code
