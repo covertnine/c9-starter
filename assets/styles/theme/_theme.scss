@@ -31,7 +31,6 @@ body {
 	display: flex;
 }
 
-
 /* blog index */
 .container-posts .post .entry-content p:last-child {
 	margin-bottom: 5px;
@@ -385,8 +384,14 @@ a,
 	color: $link-color;
 }
 
-a:hover {
-	text-decoration: none;
+a:hover,
+a:focus {
+	color: $link-hover-color;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 1px dotted $dark;
 }
 
 pre,
