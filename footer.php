@@ -14,7 +14,7 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 
 } else {
 
-		$c9_footer_default = '&copy; ' . date("Y") . '. <a href="https://www.covertnine.com" title="' . __('Web design company in Chicago', 'c9-work') . '" target="_blank">' . __('WordPress Website design by COVERT NINE', 'c9-work') . '</a>.';
+		$c9_footer_default = '&copy; ' . date("Y") . ' ' . get_bloginfo( 'name' ) . '. <a href="https://www.covertnine.com" title="' . __('Web design company in Chicago', 'c9-work') . '" target="_blank">' . __('WordPress Website design by COVERT NINE', 'c9-work') . '</a>.';
 		$c9_footer_search = get_theme_mod('c9_show_search', 'show');
 		$c9_footer_copyright = get_theme_mod( 'c9_copyright_content', $c9_footer_default );
 

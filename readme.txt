@@ -4,9 +4,9 @@ Donate link: https://www.covertnine.com/about
 Requires at least: 5.3
 Tested up to: 5.4.2
 Requires PHP: 7.1
-License: GPLv2 or later
+License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable Tag: 2.1.8
+Stable Tag: 2.1.9
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -32,6 +32,15 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.1.9 =
+Escaping fields and attributes, copyright update, licensing updates, usability updates.
+
+= 2.1.8 =
+Bugs related to WordPress.org submission, translations, hidden files removed.
+
+= 2.1.7 =
+Escaping URLs and preparing for WordPress.org submission, translations.
+
 = 2.1.6 =
 Added escaping, better translations, better accessibility, skip buttons, and better visual link focus
 
@@ -111,8 +120,17 @@ C9 Starter Theme is distributed under the terms of the GNU GPL version 2.0
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter) c9-work branch
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
 * [C9 Work Client Folder Boilerplate](https://github.com/covertnine/client-work)
+* [C9 Logo + Client Assets](https://c9.covertnine.com) | GNU GPL v2
 * [_s](https://underscores.me) (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * [Understrap](https://understrap.com)
+* [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
+* [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+* [Owl Carousel 2](http://www.owlcarousel.owlgraphic.com/) | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+* [jQuery](https://jquery.org) | (Code licensed under MIT)
+* [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL
+* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
+* [Web Font Loader](https://github.com/typekit/webfontloader) | Apache 2.0
 
 Image for theme screenshot, Copyright Jezael Melgoza
 License: CC0 1.0 Universal (CC0 1.0)
