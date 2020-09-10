@@ -727,12 +727,17 @@ pre,
 	margin-right: 10px;
 }
 
+.header-navbar .navbar-toggler {
+	width: 40px;
+}
+
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
-	margin: 0px;
+	margin: 0px 10px 0px 0px;
 	font-size: 2em;
 	line-height: 2;
 	cursor: pointer;
+	border: 1px solid transparent;
 }
 
 .header-navbar .navbar-brand.c9-custom-logo {

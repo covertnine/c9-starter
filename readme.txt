@@ -33,7 +33,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.1.9 =
-Escaping fields and attributes, copyright update, licensing updates, usability updates.
+Escaping fields and attributes, copyright update, licensing updates, usability updates, focus style updates.
 
 = 2.1.8 =
 Bugs related to WordPress.org submission, translations, hidden files removed.
@@ -130,7 +130,7 @@ and of course
 * [jQuery](https://jquery.org) | (Code licensed under MIT)
 * [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL
 * [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
-* [Web Font Loader](https://github.com/typekit/webfontloader) | Apache 2.0
+* [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
 
 Image for theme screenshot, Copyright Jezael Melgoza
 License: CC0 1.0 Universal (CC0 1.0)
