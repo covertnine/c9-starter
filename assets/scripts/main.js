@@ -263,6 +263,69 @@ var c9Page = (function ($) {
 		//////////////////////////////////////       Navbar Accessibility        /////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+		// Will hold previously focused element
+		var focusedElementBeforeNavbar;
+		var c9workNavbar = $("#wrapper-navbar");
+
+		$(".navbar-toggler").on("click", c9workNavbarUse);
+
+		function c9workNavbarUse(e) {
+			e.preventDefault();
+
+			//listen for tab keying to trab tabs in modal
+			$("body").on("keydown", c9workNavbar, trapTabKey);
+
+			focusedElementBeforeNavbar = document.activeElement;
+
+			// Find all focusable children
+			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
+			focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements);
+
+			// Convert NodeList to Array
+			focusableElements = Array.prototype.slice.call(focusableElements);
+
+			var firstTabStop = focusableElements[0];
+			var lastTabStop = focusableElements[focusableElements.length - 1];
+
+			focusableElements[0].focus();
+
+			function trapTabKey(e) {
+				// Check for TAB key press
+				if (e.keyCode === 9) {
+					// SHIFT + TAB
+					if (e.shiftKey) {
+						if (document.activeElement === firstTabStop) {
+							e.preventDefault();
+							lastTabStop.focus();
+						}
+
+						// TAB
+					} else {
+
+						if (document.activeElement === lastTabStop) {
+							e.preventDefault();
+							firstTabStop.focus();
+						}
+					}
+				}
+			}
+
+		} //end c9workNavbarUse
+
+		//close navbar
+		$('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
+			// if escape is hit or if search close is clicked
+			if (
+				e.target == this ||
+				e.target.className == ".navbar-toggler" ||
+				e.keyCode == 27
+			) {
+				$(this).addClass("collapsed");
+				$(this).attr("aria-expanded", "false");
+				focusedElementBeforeNavbar.focus();
+			}
+		});
+
 	};
 	return c9PageInit;
 })(jQuery);
