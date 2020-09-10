@@ -26,7 +26,7 @@ if ( ! function_exists( 'c9_scripts' ) ) {
 		if ( ! empty( $font_choice ) && 'yes' === $font_choice ) {
 			// Begin by registering the JavaScript Script
 			// Add action to enqueue the CDN script:
-			wp_enqueue_script( 'webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js', );
+			wp_enqueue_script( 'webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js' );
 
 			wp_register_script( 'c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array( 'webfont-loader' ) );
 
