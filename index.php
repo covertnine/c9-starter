@@ -27,7 +27,7 @@ if ( $archive_sidebar != 'hide' ) {
 
 	<main class="site-main" id="main">
 
-		<div class="container container-posts c9">
+		<div class="container container-posts c9" id="content">
 
 			<div class="row no-gutter">
 
