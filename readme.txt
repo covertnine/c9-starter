@@ -132,47 +132,17 @@ and of course
 * [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
 * [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
 
-Image for theme screenshot, Copyright Jezael Melgoza
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/HYQvV8wWX18
-
 Image for sample theme content, Copyright Pixabay
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
-
-Image for sample theme content, Copyright Clark Young
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/fQxMGkYXqFU
 
 Image for sample theme content, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://flickr.covertnine.com
 
-Image for sample theme content, Copyright Krzysztof Kowalik
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/djdoRnnKLyo
-
 Image for sample theme content, Copyright Suliman Sallehi
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/man-standing-in-front-of-the-building-1540969
-
-Image for sample theme content, Copyright Pexels
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pixabay.com/photos/drive-digger-excavator-engine-1867268/
-
-Image for sample theme content, Copyright Jonathan Borba
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/Hnws8oSFcgU
-Source: https://unsplash.com/photos/ex-cZIK0omU
-
-Image for sample theme content, Copyright Max
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/qEEQ5wkggCE
-Source: https://unsplash.com/photos/N2_oYBGScDQ
-
-Image for sample theme content, Copyright Max LaRochelle
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/QzP1GcDOSC8
 
 Image for sample theme content, Copyright Quintin Gellar
 License: CC0 1.0 Universal (CC0 1.0)
@@ -182,14 +152,6 @@ Image for sample theme content, Copyright Javon Swaby
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/ko-kr/photo/1708463/
 
-Image for sample theme content, Copyright DagMary
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pixabay.com/de/photos/treppen-metallkonstruktion-1406204/
-
 Image for sample theme content, Copyright Johnny Mckane
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/architecture-black-and-white-business-construction-237836/
-
-Image for sample theme content, Copyright Pashminu Mansukhani
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pixabay.com/de/photos/gabelstapler-lagerhaus-maschine-835340/
