@@ -4,8 +4,8 @@ Donate link: https://www.covertnine.com/about
 Requires at least: 5.3
 Tested up to: 5.4.2
 Requires PHP: 7.1
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Stable Tag: 2.1.9
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
@@ -136,10 +136,6 @@ Image for theme screenshot, Copyright PxHere
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/61195
 
-Image for sample theme content, Copyright Pixabay
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
-
 Image for sample theme content, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.flickr.com/photos/assaultshirts/8773535416/in/dateposted/
@@ -154,4 +150,8 @@ Source: https://pxhere.com/en/photo/126475
 Source: https://pxhere.com/en/photo/1072797
 Source: https://pxhere.com/en/photo/506968
 Source: https://pxhere.com/en/photo/500004
+
+Image for sample theme content, Copyright Pexels
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
 

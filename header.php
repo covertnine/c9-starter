@@ -31,7 +31,7 @@
 	<?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9-work' ); ?></a>
 	<div class="hfeed site c9" id="page">
-		<div id="smoothwrapper" <?php esc_attr_e(body_class()); ?>>
+		<div id="smoothwrapper" <?php esc_attr(body_class()); ?>>
 		<?php
 		if ( file_exists( locate_template( 'client/inc/topnav.php' ) ) ) {
 			include( locate_template( 'client/inc/topnav.php' ) );
