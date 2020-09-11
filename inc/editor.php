@@ -1,9 +1,9 @@
 <?php
 
 /**
- * COVERT NINE modify editor
+ * C9 modify editor
  *
- * @package C9
+ * @package c9
  */
 
 /**
@@ -23,7 +23,7 @@ function c9_editor_style() {
 	if ( ! empty( $font_choice ) && 'yes' === $font_choice ) {
 		// Begin by registering the JavaScript Script
 		// Add action to enqueue the CDN script:
-		wp_enqueue_script( 'webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js', );
+		wp_enqueue_script( 'webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js' );
 
 		wp_register_script( 'c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array( 'webfont-loader' ) );
 

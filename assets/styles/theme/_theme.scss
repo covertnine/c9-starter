@@ -717,16 +717,17 @@ pre,
 }
 
 .header-navbar .navbar-light .navbar-toggler {
-	border: none;
+	border: 1px solid transparent;
 	padding: 12px;
 	margin-right: 10px;
+	width: 45px;
 }
 
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
 	margin: 0px;
 	font-size: 2em;
-	line-height: 2;
+	line-height: 1;
 	cursor: pointer;
 }
 
