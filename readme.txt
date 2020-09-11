@@ -139,19 +139,5 @@ Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
 Image for sample theme content, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://flickr.covertnine.com
+Source: https://www.flickr.com/photos/assaultshirts/14328521667/
 
-Image for sample theme content, Copyright Suliman Sallehi
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/photo/man-standing-in-front-of-the-building-1540969
-
-Image for sample theme content, Copyright Quintin Gellar
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/photo/artisan-business-carpenter-carpentry-313776/
-
-Image for sample theme content, Copyright Javon Swaby
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/ko-kr/photo/1708463/
-
-Image for sample theme content, Copyright Johnny Mckane
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/photo/architecture-black-and-white-business-construction-237836/
