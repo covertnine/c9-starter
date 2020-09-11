@@ -132,12 +132,26 @@ and of course
 * [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
 * [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
 
+Image for theme screenshot, Copyright PxHere
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/61195
+
 Image for sample theme content, Copyright Pixabay
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/set-of-tool-wrench-162553/
 
 Image for sample theme content, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://flickr.covertnine.com
-Source: https://www.flickr.com/photos/assaultshirts/14328521667/
+Source: https://www.flickr.com/photos/assaultshirts/8773535416/in/dateposted/
+
+Image for sample theme content, Copyright Stocksnap.io
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/person-craftsman-YJ5A5WPFYV
+
+Additional images for sample theme content, Copyright PxHere
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://pxhere.com/en/photo/126475
+Source: https://pxhere.com/en/photo/1072797
+Source: https://pxhere.com/en/photo/506968
+Source: https://pxhere.com/en/photo/500004
 
