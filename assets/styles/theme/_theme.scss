@@ -31,7 +31,6 @@ body {
 	display: flex;
 }
 
-
 /* blog index */
 .container-posts .post .entry-content p:last-child {
 	margin-bottom: 5px;
@@ -385,8 +384,14 @@ a,
 	color: $link-color;
 }
 
-a:hover {
-	text-decoration: none;
+a:hover,
+a:focus {
+	color: $link-hover-color;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 1px dotted $dark;
 }
 
 pre,
@@ -722,12 +727,17 @@ pre,
 	margin-right: 10px;
 }
 
+.header-navbar .navbar-toggler {
+	width: 40px;
+}
+
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
-	margin: 0px;
+	margin: 0px 10px 0px 0px;
 	font-size: 2em;
 	line-height: 2;
 	cursor: pointer;
+	border: 1px solid transparent;
 }
 
 .header-navbar .navbar-brand.c9-custom-logo {
