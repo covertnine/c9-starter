@@ -16,7 +16,7 @@ function c9_editor_style() {
 	wp_enqueue_script( 'c9-scripts-theme', get_template_directory_uri() . '/assets/dist/js/theme.min.js' );
 
 	// Check to see if this script needs to run:
-	$c9_fonts 	 = get_theme_mod('c9_default_font', 'yes');
+	$c9_fonts 	 = get_theme_mod('c9_default_font', 'no');
 	$font_choice = isset( $c9_fonts ) ? $c9_fonts : null;
 
 	// Check to see if the array is empty and the user choice is yes to run the font script
