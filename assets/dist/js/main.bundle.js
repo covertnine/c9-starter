@@ -324,8 +324,8 @@ var c9Page = function ($) {
       $("body").on("keydown", c9workNavbar, trapTabKey);
       focusedElementBeforeNavbar = document.activeElement; // Find all focusable children
 
-      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-      focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
+      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
+      focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
@@ -333,7 +333,10 @@ var c9Page = function ($) {
       focusableElements[0].focus();
 
       function trapTabKey(e) {
-        // Check for TAB key press
+        console.log(focusableElements);
+        console.log(' ');
+        console.log(document.activeElement); // Check for TAB key press
+
         if (e.keyCode === 9) {
           // SHIFT + TAB
           if (e.shiftKey) {

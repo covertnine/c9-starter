@@ -239,9 +239,7 @@ var c9Page = (function ($) {
 		} //end fullScreenSearch
 
 		//close modal
-		$(
-			"#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
-		).on("click", function (e) {
+		$("#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click", function (e) {
 			// if escape is hit or if search close is clicked
 			if (
 				e.target == this ||
@@ -280,8 +278,9 @@ var c9Page = (function ($) {
 			focusedElementBeforeNavbar = document.activeElement;
 
 			// Find all focusable children
-			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-			focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements);
+			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
+			focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements);
+
 
 			// Convert NodeList to Array
 			focusableElements = Array.prototype.slice.call(focusableElements);
@@ -292,7 +291,11 @@ var c9Page = (function ($) {
 			focusableElements[0].focus();
 
 			function trapTabKey(e) {
+				console.log(focusableElements);
+				console.log(' ');
+				console.log(document.activeElement);
 				// Check for TAB key press
+
 				if (e.keyCode === 9) {
 					// SHIFT + TAB
 					if (e.shiftKey) {
@@ -303,7 +306,6 @@ var c9Page = (function ($) {
 
 						// TAB
 					} else {
-
 						if (document.activeElement === lastTabStop) {
 							e.preventDefault();
 							firstTabStop.focus();
@@ -327,6 +329,7 @@ var c9Page = (function ($) {
 				focusedElementBeforeNavbar.focus();
 			}
 		});
+
 	};
 	return c9PageInit;
 })(jQuery);
