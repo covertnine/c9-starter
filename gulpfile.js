@@ -75,6 +75,7 @@ gulp.task("watch", function () {
 	);
 	// Inside the watch task.
 	gulp.watch(paths.img + "/**", gulp.series('imagemin-watch'));
+	gulp.watch(paths.clientImg + "/**", gulp.series('imagemin-watch'));
 });
 
 // Removes all files in the /dist directory. Runs at start of 'gulp watch'
@@ -238,6 +239,9 @@ gulp.task("imagemin", function () {
 	gulp.src(paths.img + "/**")
 		.pipe(imagemin())
 		.pipe(gulp.dest(paths.img));
+	gulp.src(paths.clientImg + "/**")
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.clientImg));
 });
 
 /**

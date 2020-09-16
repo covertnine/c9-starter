@@ -326,7 +326,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_default_font',
 			array(
-				'default'           => 'yes',
+				'default'           => 'no',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -384,7 +384,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_heading_font',
 			array(
-				'default'           => 'Sen',
+				'default'           => '',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -406,7 +406,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_subheading_font',
 			array(
-				'default'           => 'Sen',
+				'default'           => '',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -427,7 +427,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_body_font',
 			array(
-				'default'           => 'Sen',
+				'default'           => '',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',

@@ -11,7 +11,8 @@
   "paths": {
     "client": "./client/client-assets",
     "js": "./assets/scripts",
-    "img": "./assets/images",
+	"img": "./assets/images",
+	"clientImg": "./client/client-assets/img",
     "node": "./node_modules",
     "dev": "./",
     "dist": "./assets/dist",
