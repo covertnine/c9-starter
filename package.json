@@ -1,5 +1,5 @@
 {
-    "name": "c9",
+    "name": "c9-togo",
     "version": "0.8.2",
     "description": "WordPress C9 Theme framework",
     "main": "index.js",
@@ -91,6 +91,7 @@
         "gulp-print": "^5.0.2",
         "gulp-uglify": "^3.0.2",
         "gulp-util": "^3.0.8",
+        "gulp-zip": "^5.0.2",
         "prettier": "^1.19.1",
         "prettier-eslint": "^8.8.1",
         "prettier-stylelint": "^0.4.2",
