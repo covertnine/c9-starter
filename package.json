@@ -1,7 +1,7 @@
 {
-    "name": "c9",
+    "name": "c9-work",
     "version": "0.8.2",
-    "description": "WordPress Theme framework",
+    "description": "WordPress Theme",
     "main": "index.js",
     "scripts": {
         "start": "gulp watch"
@@ -40,7 +40,6 @@
         "fitvids": "^2.1.1",
         "font-awesome": "^4.7.0",
         "gsap": "^2.1.3",
-        "gulp": "^3.9.1",
         "gulp-a11y": "^0.1.2",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-babel": "^8.0.0",
@@ -62,6 +61,7 @@
         "gulp-sourcemaps": "2.6.4",
         "gulp-uglify": "^3.0.2",
         "gulp-watch": "^5.0.1",
+        "gulp-zip": "^5.0.2",
         "jquery": "^3.5.1",
         "lozad": "^1.15.0",
         "magnific-popup": "^1.1.0",
@@ -87,6 +87,7 @@
         "eslint-config-prettier": "^5.0.0",
         "eslint-loader": "^2.2.1",
         "eslint-plugin-jquery": "^1.5.1",
+        "gulp": "^4.0.2",
         "gulp-gzip": "^1.4.2",
         "gulp-print": "^5.0.2",
         "gulp-util": "^3.0.8",

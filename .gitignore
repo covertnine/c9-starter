@@ -45,6 +45,9 @@
 .*
 ~*
 
+#ignore theme built zip file
+bundle/
+
 js/theme.js
 js/theme.min.js
 src/js/custom-javascript.bundle.js
