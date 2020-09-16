@@ -95,6 +95,8 @@ gulp.task("watch", ["styles", "scripts"], function() {...});
 
 You will hook up any new build steps starting in this file.
 
+`gulp compress` will build a production version of the theme name located in the bundle directory (which is in your .gitignore file) and will be named whatever the themename is in the package.json name field. In the c9-starter theme case, gulp compress will create a file in the theme /bundle/ directory called c9-starter.zip.
+
 ### Code Editor
 
 Visual Studio is highly recommended.
