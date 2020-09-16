@@ -14,6 +14,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const webpack_stream = require("webpack-stream");
 const webpack_config = require("./webpack.config.js");
 const merge = require("merge-stream");
+const zip = require("gulp-zip");
+const info = require("./package.json");
 
 // Configuration file to keep your code DRY
 const cfg = require("./buildconfig.json");
@@ -22,6 +24,32 @@ const paths = cfg.paths;
 const scriptMain = paths.js + "/main.js";
 const scriptDist = paths.dist + "/js";
 const styleDist = paths.dist + "/css";
+
+const compress = function () {
+	return gulp.src([
+			"**/*",
+			"!node_modules{,/**}",
+			"!bundled{,/**}",
+			"!.*",
+			"!src{,/**}",
+			"!.gitignore",
+			"!.git{,/**}",
+			"!gulpfile.js",
+			"!package.json",
+			"!package-lock.json",
+			"!composer.json",
+			"!composer.lock",
+			"!buildconfig.json",
+			"!client/README.md",
+			"!client/sample-content{,/**}",
+			"!README.md",
+			"!webpack.config.js",
+			"!**/*.scss",
+			"!**/*.css.map",
+		])
+		.pipe(zip(`${info.name}.zip`))
+		.pipe(gulp.dest('bundled'));
+};
 
 // Run:
 // gulp watch
@@ -47,6 +75,7 @@ gulp.task("watch", function () {
 	);
 	// Inside the watch task.
 	gulp.watch(paths.img + "/**", gulp.series('imagemin-watch'));
+	gulp.watch(paths.clientImg + "/**", gulp.series('imagemin-watch'));
 });
 
 // Removes all files in the /dist directory. Runs at start of 'gulp watch'
@@ -104,22 +133,6 @@ gulp.task("scripts", function () {
 		})
 		.pipe(gulp.dest(scriptDist))
 	);
-	// gulp.src(scripts)
-	// 	.pipe(concat("theme.min.js"))
-	// 	.on("error", function handleError(err) {
-	// 		console.log(err);
-	// 		this.emit("end"); // Recover from errors
-	// 	})
-	// 	.pipe(uglify())
-	// 	.on("error", function handleError(err) {
-	// 		console.log(err);
-	// 		this.emit("end"); // Recover from errors
-	// 	})
-	// 	.pipe(gulp.dest(scriptDist))
-	// 	.on("error", function handleError(err) {
-	// 		console.log(err);
-	// 		this.emit("end"); // Recover from errors
-	// 	});
 
 });
 
@@ -226,6 +239,9 @@ gulp.task("imagemin", function () {
 	gulp.src(paths.img + "/**")
 		.pipe(imagemin())
 		.pipe(gulp.dest(paths.img));
+	gulp.src(paths.clientImg + "/**")
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.clientImg));
 });
 
 /**
@@ -248,3 +264,5 @@ gulp.task("browser-sync", function () {
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task("watch-bs", gulp.parallel('browser-sync', 'watch', 'scripts'), function () {});
+
+gulp.task("compress", compress);
