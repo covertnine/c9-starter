@@ -6,7 +6,7 @@ Tested up to: 5.5.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.1.9
+Stable Tag: 2.2.0
 
 A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
+
+= 2.2.0 =
+Fixing font settings drop down fields, adding new gulp task for compressing files from dev. Font adjustments to footer.
 
 = 2.1.9 =
 Escaping fields and attributes, copyright update, licensing updates, usability updates, focus style updates.
@@ -86,8 +89,11 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+=2.2.0=
+* Font settings in customizer may need to be set again as we fixed the esaping issues from 2.1.9
+
 = 2.1.8 =
-* This version of the theme works with WordPress 5.5 and C9 Blocks 1.1.3
+* This version of the theme works with WordPress 5.5 and C9 Blocks 1.1.3 with the customizer for theme settings. The C9 Theme settings will need to be transferred to the Appearance > Customizer portion of the WordPress admin.
 
 = 2.1.1 =
 * This version of the theme works with the latest version of WordPress version 5.4
