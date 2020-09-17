@@ -89,7 +89,7 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 		</form>
 		<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e( 'Close', 'c9-togo' ); ?></span></button>
 	</div>
-	<div id="backtotop" class="backtotop-container opacity0">
+	<div id="backtotop" class="backtotop-container">
 		<a href="#page" title="<?php esc_attr_e('Back to top', 'c9-togo' ); ?>" class="btn-back-to-top"><span class="sr-only"><?php esc_html_e('Back to top', 'c9-togo' ); ?></span><i class="fa fa-arrow-up"></i></a>
 	</div>
 </div><!-- #page we need this extra closing tag here -->

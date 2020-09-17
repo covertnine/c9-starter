@@ -98,37 +98,27 @@ var c9Page = function ($) {
   c9PageInit.init = function () {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
-    // Figure out total height so back to top button can fade in and out
-    var totalHeight = jQuery(document).height();
-    var backToTopBtn = Number(totalHeight) - 100;
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
+      var scrollHeight = $(document).height();
+      var scrollPosition = $(window).height() + $(window).scrollTop();
 
-      if (scroll >= 633) {
+      if (scroll > 633) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
         jQuery("#right-sidebar").addClass("fixed-sidebar");
       }
 
-      if (scroll <= 632) {
+      if (scroll < 632) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
-      } // console.log("Total Height: ");
-      // console.log(totalHeight);
-      // console.log(" Total Scroll: ");
-      // console.log(scroll);
-      // console.log(" Total Height - 60: ");
-      // console.log(totalHeight - 60);
+      } //back to top button fade insss
 
 
-      console.log(scroll + " scroll vs backToTopBtn " + backToTopBtn);
-
-      if (scroll >= backToTopBtn) {
-        jQuery("#backtotop").removeClass("opacity0").addClass("opacity100");
-      }
-
-      if (scroll < backToTopBtn) {
-        jQuery("#backtotop").toggleClass("opacity0");
+      if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+        jQuery(".btn-back-to-top").css('opacity', '1');
+      } else {
+        jQuery(".btn-back-to-top").css('opacity', '0');
       }
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////

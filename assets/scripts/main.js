@@ -9,13 +9,12 @@ var c9Page = (function ($) {
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
-		// Figure out total height so back to top button can fade in and out
-		var totalHeight = jQuery(document).height();
-		var backToTopBtn = Number(totalHeight) - 100;
-
 		jQuery(window).scroll(function () {
+
 			//scroll position variable
 			var scroll = jQuery(window).scrollTop();
+			var scrollHeight = $(document).height();
+			var scrollPosition = $(window).height() + $(window).scrollTop();
 
 			if (scroll > 633) {
 				jQuery("#left-sidebar").addClass("fixed-sidebar");
@@ -25,20 +24,14 @@ var c9Page = (function ($) {
 				jQuery("#left-sidebar").removeClass("fixed-sidebar");
 				jQuery("#right-sidebar").removeClass("fixed-sidebar");
 			}
-			// console.log("Total Height: ");
-			// console.log(totalHeight);
-			// console.log(" Total Scroll: ");
-			// console.log(scroll);
-			// console.log(" Total Height - 60: ");
-			// console.log(totalHeight - 60);
-			console.log(scroll + " scroll vs backToTopBtn " + backToTopBtn);
 
-			if (scroll > backToTopBtn) {
-				jQuery("#backtotop").removeClass("opacity0").addClass("opacity100");
+			//back to top button fade in
+			if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+				jQuery(".btn-back-to-top").css('opacity', '1');
+			} else {
+				jQuery(".btn-back-to-top").css('opacity', '0');
 			}
-			if (scroll < backToTopBtn) {
-				jQuery("#backtotop").toggleClass("opacity0");
-			}
+
 		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////

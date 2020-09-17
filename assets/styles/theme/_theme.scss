@@ -1677,7 +1677,6 @@ pre,
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
-	transition: opacity .3s ease-out;
 }
 
 .btn-back-to-top {
@@ -1690,11 +1689,9 @@ pre,
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	z-index: -1;
-}
-
-.btn-back-to-top.opacity100 {
 	z-index: 1050;
+	opacity: 0;
+	transition: opacity .4s ease-out;
 }
 
 .btn-back-to-top:hover,
