@@ -6,12 +6,12 @@ Tested up to: 5.4.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.0
+Stable Tag: 2.2.1
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
 == Description ==
-The C9 Work theme was made for building out complex responsive landing pages with ease for marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin. The C9 Work theme supports the use of Max Mega Menu and Woocommerce for online sales or catalogs. Build landing pages with blocks from scratch, or use the C9 Blocks landing page templates to buil an entire site in minutes instead of weeks.
+The C9 Work theme was made for building out complex responsive landing pages with ease for marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin. The C9 Work theme supports the use of Max Mega Menu and Woocommerce for online sales or catalogs. Build landing pages with blocks from scratch, or use the C9 Blocks landing page templates to build an entire site in minutes instead of hours. This theme makes use of custom pagination instead of the_posts_pagination.
 
 == Frequently Asked Questions ==
 
@@ -32,6 +32,9 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.2.1 =
+Fixed backend body font changes not showing up from theme settings. Updated readme and link focus in sidebars.
+
 = 2.2.0 =
 Fixed escape field breaking font settings.
 

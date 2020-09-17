@@ -1371,15 +1371,15 @@ pre,
 
 
 /****************************************************************************************/
-
-
 /* Sidebars */
-
-
 /****************************************************************************************/
 
 .sidebar .input-group-append {
 	margin-left: 0px;
+}
+
+.sidebar a:focus {
+	outline: 1px dotted $dark;
 }
 
 @media only screen and (max-width: 1024px) {
