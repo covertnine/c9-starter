@@ -1677,6 +1677,7 @@ pre,
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
+	z-index: -1;
 }
 
 .btn-back-to-top {
@@ -1689,21 +1690,22 @@ pre,
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	z-index: 1050;
 	opacity: 0;
 	transition: opacity .4s ease-out;
+	cursor: pointer;
+	border: none;
 }
 
-.btn-back-to-top:hover,
-.btn-back-to-top:focus {
+.btn-back-to-top:hover {
 	color: $light;
+	text-decoration: none;
+	opacity: .8 !important;
 }
 
 .btn-back-to-top .fa {
 	font-size: 14px;
 	font-weight: 200;
 }
-
 
 /****************************************************************************************/
 /* WooCommerce Specifics */

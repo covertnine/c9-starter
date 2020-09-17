@@ -90,7 +90,7 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 		<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e( 'Close', 'c9-togo' ); ?></span></button>
 	</div>
 	<div id="backtotop" class="backtotop-container">
-		<a href="#page" title="<?php esc_attr_e('Back to top', 'c9-togo' ); ?>" class="btn-back-to-top"><span class="sr-only"><?php esc_html_e('Back to top', 'c9-togo' ); ?></span><i class="fa fa-arrow-up"></i></a>
+		<button type="button" class="btn-back-to-top" type="button"><span class="sr-only"><?php esc_html_e('Back to top', 'c9-togo' ); ?></span><i class="fa fa-arrow-up"></i></button>
 	</div>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>

@@ -25,13 +25,31 @@ var c9Page = (function ($) {
 				jQuery("#right-sidebar").removeClass("fixed-sidebar");
 			}
 
-			//back to top button fade in
+			//back to top button fade ins
 			if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-				jQuery(".btn-back-to-top").css('opacity', '1');
+				jQuery(".btn-back-to-top").css('opacity', '1').parent().css('z-index', '1050');
 			} else {
-				jQuery(".btn-back-to-top").css('opacity', '0');
+				jQuery(".btn-back-to-top").css('opacity', '0').parent().css('z-index', '-1');
 			}
 
+		});
+
+		$("#backtotop").on("click", ".btn-back-to-top", function (event) {
+			event.preventDefault();
+
+			//grab #page
+			var sectionLink = '#page';
+
+			// scroll to that part of the page
+			gsap.to(window, {
+				duration: 1.5,
+				scrollTo: {
+					y: sectionLink
+				},
+				ease: "power1.out"
+			});
+			$(".btn-back-to-top").css('opacity', '0');
+			$(sectionLink).focus();
 		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
