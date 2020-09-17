@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-08-27 09:10-0400\n"
-"PO-Revision-Date: 2020-08-27 09:09-0400\n"
+"Project-Id-Version: C9 Togo\n"
+"POT-Creation-Date: 2020-09-17 18:44-0500\n"
+"PO-Revision-Date: 2020-09-17 18:43-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -496,64 +497,82 @@ msgstr ""
 msgid "Posts by"
 msgstr ""
 
-#: client/inc/client-setup.php:42
-msgid "About"
+#: client/inc/client-admin-settings.php:39
+msgid "Link Hover"
 msgstr ""
 
-#: client/inc/client-setup.php:48
-msgid "Setup"
+#: client/inc/client-admin-settings.php:62
+msgid "Top Navigation Link"
 msgstr ""
 
-#: client/inc/client-setup.php:54
-msgid "Style Guide"
+#: client/inc/client-admin-settings.php:85
+msgid "Top Navigation Link Active/Hover"
 msgstr ""
 
-#: client/inc/client-setup.php:58
-msgid ""
-"This page will show all of the blog posts once you have populated your "
-"database with blog items."
+#: client/inc/client-admin-settings.php:108
+msgid "Top Navigation Dropdown Background"
 msgstr ""
 
-#: client/inc/client-setup.php:66
-msgid ""
-"A blocks-based WordPress Theme starter theme for musicians, events, small "
-"businesses, restaurants, dispensaries, and bloggers."
+#: client/inc/client-admin-settings.php:131
+msgid "Top Navigation Dropdown Link"
 msgstr ""
 
-#: client/inc/client-setup.php:79 inc/setup.php:45
-msgid "Top Navigation Menu"
+#: client/inc/client-admin-settings.php:154
+msgid "Top Navigation Dropdown Link Background Hover"
 msgstr ""
 
-#: client/inc/client-setup.php:106
-msgid "Resources Menu"
+#: client/inc/client-admin-settings.php:177
+msgid "Top Navigation Dropdown Link Active/Hover"
 msgstr ""
 
-#: client/inc/client-setup.php:129
-msgid "Company Menu"
+#: client/inc/client-admin-settings.php:200
+msgid "Mobile Top Navigation Background"
 msgstr ""
 
-#: client/inc/client-setup.php:150
-msgid "WordPress Meta"
+#: client/inc/client-admin-settings.php:224
+msgid "WooCommerce Store Notice Background"
 msgstr ""
 
-#: client/inc/client-setup.php:155
-msgid "About C9 Starter"
+#: client/inc/client-admin-settings.php:247
+msgid "WooCommerce Store Notice Text"
 msgstr ""
 
-#: client/inc/client-setup.php:156
-msgid ""
-"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
-"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
-"toggles, and the responsive grid system that makes the theme look super "
-"duper."
+#: client/inc/client-extras.php:29
+msgid "Navigation Link Style"
 msgstr ""
 
-#: client/inc/client-setup.php:260
-msgid "Light Color Text"
+#: client/inc/client-extras.php:36
+msgid "Green Button"
 msgstr ""
 
-#: client/inc/client-setup.php:268
-msgid "Dark Color Text"
+#: client/inc/client-extras.php:37
+msgid "Yellow Button"
+msgstr ""
+
+#: client/inc/client-setup.php:15
+msgid "White Text"
+msgstr ""
+
+#: client/inc/client-setup.php:24
+msgid "White Links"
+msgstr ""
+
+#: client/inc/client-setup.php:33
+msgid "Green Gradient"
+msgstr ""
+
+#: client/inc/client-woocommerce.php:63 client/inc/client-woocommerce.php:65
+#: client/inc/header.php:39 client/inc/header.php:41
+msgid "View Cart"
+msgstr ""
+
+#: client/inc/client-woocommerce.php:97
+msgid "Deliver to different address?"
+msgstr ""
+
+#: client/inc/header.php:29 footer.php:87 header.php:61 inc/extras.php:171
+#: searchform.php:10 searchform.php:14
+msgid "Search"
 msgstr ""
 
 #. translators: %s: post title
@@ -603,12 +622,12 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: footer.php:87 header.php:61 searchform.php:10 searchform.php:14
-msgid "Search"
-msgstr ""
-
 #: footer.php:90
 msgid "Close"
+msgstr ""
+
+#: footer.php:93
+msgid "Back to top"
 msgstr ""
 
 #: functions.php:87
@@ -881,6 +900,10 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
+#: inc/setup.php:45
+msgid "Top Navigation Menu"
+msgstr ""
+
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
@@ -987,17 +1010,18 @@ msgid "Search &hellip;"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "C9 Starter"
+msgid "C9 Togo"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://c9.covertnine.com"
+msgid "https://get.covertnine.com"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"C9 is a starter theme for WordPress 5 that uses Bootstrap's responsive grid "
-"system, dropdown menu navbar, and Gutenberg blocks"
+"C9 Togo is a block-driven restaurant ordering+delivery theme for WordPess 5 "
+"based on the C9 Starter theme that uses Bootstrap's responsive grid system "
+"and Gutenberg blocks"
 msgstr ""
 
 #. Author of the plugin/theme
