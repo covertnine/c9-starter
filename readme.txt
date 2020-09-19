@@ -1,5 +1,5 @@
 === C9 Togo ===
-Contributors: ttoomey, samirillion, malzdesigns
+Contributors: ttoomey, samirillion, malzdesigns, htmercury, lgdrew
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.3.2
 Tested up to: 5.5.1
@@ -92,6 +92,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+= 2.2.1 =
+* This version fixes a font issue in the backend, and accommodates WordPress.org Theme Repo requirements.
+
 = 2.1.8 =
 * This version of the theme works with WordPress 5.5 and C9 Blocks 1.1.3
 
@@ -100,14 +103,14 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
-* [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
+* [C9 Client Folder Boilerplate](https://github.com/covertnine/client-togo)
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
 
 Image for theme screenshot, Copyright Timothy Toomey
-License: GPL Compatible v2 or later
-Source: https://www.covertnine.com
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.flickr.com/photos/assaultshirts/albums/72157649867085700
 
 Images for sample content, Copyright Timothy Toomey
-License: GPL Compatible v2 or later
-Source: https://www.covertnine.com
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.flickr.com/photos/assaultshirts/albums/72157649867085700
