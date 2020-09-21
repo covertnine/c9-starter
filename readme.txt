@@ -4,7 +4,7 @@ Donate link: https://www.covertnine.com/about
 Requires at least: 5.3.2
 Tested up to: 5.5.1
 Requires PHP: 7.1
-License: GPLv2 or later
+License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable Tag: 2.2.1
 
@@ -106,6 +106,14 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-togo)
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
+* [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
+* [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+* [Owl Carousel 2](http://www.owlcarousel.owlgraphic.com/) | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+* [jQuery](https://jquery.org) | (Code licensed under MIT)
+* [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL
+* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
+* [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
 
 Image for theme screenshot, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
