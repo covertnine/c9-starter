@@ -29,9 +29,9 @@ if ( ! class_exists( 'c9FooterHelpers' ) ) {
 					$link_builder = 'build_' . $opt_key . '_link';
 					if ( '' !== $opt_key && '' !== $opt_value ) {
 						if ( filter_var( $opt_value, FILTER_VALIDATE_URL ) ) {
-							$social_links[ $opt_key ] = self::$link_builder( sanitize_text_field( $opt_value ), 'url' );
+							$social_links[ $opt_key ] = self::$link_builder( sanitize_text_field( esc_url($opt_value) ), 'url' );
 						} else {
-							$social_links[ $opt_key ] = self::$link_builder( sanitize_text_field( $opt_value ), 'username' );
+							$social_links[ $opt_key ] = self::$link_builder( sanitize_text_field( esc_attr($opt_value) ), 'username' );
 						}
 					}
 				}

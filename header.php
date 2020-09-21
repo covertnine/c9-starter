@@ -64,7 +64,7 @@
 							<?php if (has_nav_menu('primary')) { ?>
 
 							<div class="nav-toggle">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr__('Toggle Navigation', 'c9-togo'); ?>">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle Navigation', 'c9-togo'); ?>">
 									<i class="fa fa-bars"></i>
 								</button>
 							</div>
