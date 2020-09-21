@@ -8,10 +8,10 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable Tag: 2.2.1
 
-C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering and delivery through their WordPress website. Fully compatible with WordPress 5.5--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
+C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering, local pickup and delivery through their WordPress website. Fully compatible with WordPress 5.5--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
 
 == Description ==
-A restaurant ordering and delivery theme for WordPress 5.5 that makes it easy to add online ordering for any food and beverage concept with local pickup/delivery options instead of just shipping. Uses of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin to simplify the creation of menus and landing pages for marketing campaigns.
+A restaurant ordering and delivery theme for WordPress 5.5 that makes it easy to add online ordering for any food and beverage concept with local pickup/delivery options instead of just shipping. Uses of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin to simplify the creation of menus and landing pages for marketing campaigns. This theme uses custom markup for post and page navigation, and supports one tier of dropdown menu.
 
 == Frequently Asked Questions ==
 
@@ -30,7 +30,7 @@ Yes, but only one tier of dropdowns are currently supported.
 == Changelog ==
 
 = 2.2.1 =
-Updated with latest starter theme bug fixes and patches. Fixing button styles, list items, bugs related to theme framework updates, adding colors and button styles to inspector and customizer.
+Updated with latest starter theme bug fixes and patches. Fixing button styles, list items, escaping, translation strings, bugs related to theme framework updates, adding colors and button styles to inspector and customizer.
 
 = 2.2.0 =
 Fixed escape field breaking font settings.

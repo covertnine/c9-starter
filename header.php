@@ -58,7 +58,7 @@
 							<div class="nav-search">
 								<a href="#" class="btn-nav-search">
 									<i class="fa fa-search"></i>
-									<span class="sr-only"><?php __( 'Search', 'c9-togo' ); ?></span>
+									<span class="sr-only"><?php esc_html_e( 'Search', 'c9-togo' ); ?></span>
 								</a>
 							</div>
 							<?php if (has_nav_menu('primary')) { ?>
