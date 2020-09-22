@@ -1675,7 +1675,7 @@ pre,
 	height: 40px;
 	display: block;
 	position: fixed;
-	bottom: 15px;
+	bottom: 125px;
 	right: 15px;
 	z-index: -1;
 }
@@ -1683,6 +1683,7 @@ pre,
 .btn-back-to-top {
 	width: 40px;
 	height: 40px;
+	border-radius: 20px;
 	background-color: $dark;
 	color: $light;
 	display: -ms-flex;
