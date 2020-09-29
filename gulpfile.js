@@ -63,7 +63,7 @@ gulp.task("watch", function () {
 	});
 	// These happen each time a watched file is saved
 	gulp.watch(scriptMain, function () {
-		gulp.series("webpack-watch", "scripts")(function (err) {
+		gulp.series("webpack-watch", "webpack-once", "scripts")(function (err) {
 			if (err) {
 				console.log(err);
 			}
@@ -131,7 +131,7 @@ gulp.task("scripts", function () {
 		.on("error", function handleError() {
 			this.emit("end"); // Recover from errors
 		})
-		.pipe(gulp.dest(scriptDist))
+		.pipe(gulp.dest(scriptDist)).pipe(browserSync.stream())
 	);
 
 });
@@ -183,7 +183,7 @@ gulp.task("sass", function () {
 			.pipe(sourcemaps.write(undefined, {
 				sourceRoot: null
 			}))
-			.pipe(gulp.dest(srcDest.dest));
+			.pipe(gulp.dest(srcDest.dest)).pipe(browserSync.stream());
 	});
 
 	return merge(streams);
@@ -227,7 +227,7 @@ gulp.task("minifycss", function () {
 				suffix: ".min"
 			}))
 			.pipe(sourcemaps.write("./"))
-			.pipe(gulp.dest(srcDest.dest));
+			.pipe(gulp.dest(srcDest.dest)).pipe(browserSync.stream());
 	});
 	return merge(streams);
 });
@@ -241,7 +241,7 @@ gulp.task("imagemin", function () {
 		.pipe(gulp.dest(paths.img));
 	gulp.src(paths.clientImg + "/**")
 		.pipe(imagemin())
-		.pipe(gulp.dest(paths.clientImg));
+		.pipe(gulp.dest(paths.clientImg)).pipe(browserSync.stream());
 });
 
 /**
