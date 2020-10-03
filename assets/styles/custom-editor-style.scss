@@ -119,7 +119,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 .block-editor-format-toolbar__link-container-value,
 .wp-block[data-type="core/pullquote"][data-align="left"] .block-editor-rich-text p,
 .wp-block[data-type="core/pullquote"][data-align="right"] .block-editor-rich-text p,
-.editor-styles-wrapper .block-editor-rich-text__editable [data-rich-text-placeholder],
+[data-rich-text-placeholder],
 .editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
 	word-wrap: break-word;
 	font-family: $font-family-base;
