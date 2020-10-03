@@ -101,6 +101,7 @@ class C9FontStyles {
 		.page-search-results nav .pagination .page-item .page-link,
 		.c9.woocommerce nav.woocommerce-pagination ul li span,
 		.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
+		.woocommerce .site-main .woocommerce-breadcrumb,
 		.archive nav .pagination .page-item .page-link,
 		.blog nav .pagination .page-item .page-link,
 		.single .navigation .nav-previous a,
