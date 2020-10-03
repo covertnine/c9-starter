@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "",
+		"proxy": "https://c9work.local/",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [

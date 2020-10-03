@@ -3057,6 +3057,7 @@ screen and (max-height: 300px) {
 	border-radius: 28px;
 }
 
+.wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.c9-button-shape-outline {
 	border: 3px solid;
