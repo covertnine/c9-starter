@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "",
+		"proxy": "https://c9starter-v218.local/",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [
