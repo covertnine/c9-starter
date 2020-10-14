@@ -6,12 +6,12 @@ Tested up to: 5.5.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.0
+Stable Tag: 2.2.3
 
 A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
 == Description ==
-A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin.
+A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
 
 == Frequently Asked Questions ==
 
@@ -23,11 +23,20 @@ Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-s
 
 Yes! Use the C9 Blocks plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
 
-= Does this theme support dropdown menus =
+= Is there sub-menu levels of drop downs in the top navigation? =
 
-Yes, but only one tier of dropdowns are currently supported.
+If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.2.3 =
+Further styling edits for WooCommerce, outlined button bug fix, mobile drop down covering logo bug, adjustments to breadcrumb fonts, heading font sizes
+
+= 2.2.2 =
+Fixing non Max Mega Menu dropdown alignments, mega menu top nav :focus style, and pagination escaping issue.
+
+= 2.2.1 =
+Fixed backend body font changes not showing up from theme settings. Updated readme and link focus in sidebars.
 
 = 2.2.0 =
 Fixing font settings drop down fields, adding new gulp task for compressing files from dev. Font adjustments to footer.
@@ -88,6 +97,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 
 == Upgrade Notice ==
+
+=2.2.3=
+* Updated font settings may require re-saving customizer fields.
 
 =2.2.0=
 * Font settings in customizer may need to be set again as we fixed the esaping issues from 2.1.9
