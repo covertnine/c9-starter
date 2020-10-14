@@ -9,7 +9,7 @@
 /* post title */
 /****************************************************************************************/
 :root,
-body .editor-styles-wrapper {
+body .is-root-container {
 	font-family: "helvetica neue", helvetica, sans-serif;
 }
 
@@ -19,7 +19,6 @@ body .editor-styles-wrapper {
 
 .editor-post-title__block .editor-post-title__input {
 	padding: 16px;
-	font-family: $headings-font-family;
 	font-weight: $headings-font-weight;
 }
 
