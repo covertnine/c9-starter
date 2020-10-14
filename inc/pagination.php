@@ -32,7 +32,7 @@ if (! function_exists('c9_pagination') ) {
 
         ?>
 
-<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+<nav aria-label="<?php echo esc_attr($args['screen_reader_text']); ?>">
     <ul class="pagination">
         <li class="page-item">
             <a class="page-link" href="<?php echo esc_url($prev_link); ?>" aria-label="<?php esc_attr__('Previous', 'c9-starter'); ?>">
