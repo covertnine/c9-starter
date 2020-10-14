@@ -109,12 +109,6 @@ class C9FontStyles {
 		.header-navbar .search #s,
 		.c9 .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
 		.editor-styles-wrapper .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
-		.editor-styles-wrapper .c9-heading .h1 .text-muted,
-		.editor-styles-wrapper .c9-heading .h2 .text-muted,
-		.editor-styles-wrapper .c9-heading .h3 .text-muted,
-		.editor-styles-wrapper .c9-heading .h4 .text-muted,
-		.editor-styles-wrapper .c9-heading .h5 .text-muted,
-		.editor-styles-wrapper .c9-heading .h6 .text-muted,
 		.editor-post-title__block .editor-post-title__input {
 		font-family: <?php echo esc_html( $heading_font ); ?>, helvetica, sans-serif;
 		}

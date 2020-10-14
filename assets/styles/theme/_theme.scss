@@ -382,8 +382,14 @@ a,
 	color: $link-color;
 }
 
-a:hover {
-	text-decoration: none;
+a:hover,
+a:focus {
+	color: $link-hover-color;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 1px dotted $dark;
 }
 
 pre,
@@ -3006,7 +3012,11 @@ screen and (max-height: 300px) {
 .wp-block-button__link,
 .wp-block-file__button,
 .wp-block-file .wp-block-file__button,
-.wp-block-button__link:not([href]):not([tabindex]) {
+.wp-block-button__link:not([href]):not([tabindex]),
+.c9 .woocommerce #respond input#submit,
+.c9 .woocommerce a.button,
+.c9 .woocommerce button.button,
+.c9 .woocommerce input.button {
 	display: inline-block;
 	padding: 12px 35px;
 	width: auto;
@@ -3022,6 +3032,17 @@ screen and (max-height: 300px) {
 	white-space: normal;
 	color: $light;
 	line-height: 1;
+}
+
+@media only screen and (max-width: 414px) {
+
+	.c9 .woocommerce #respond input#submit,
+	.c9 .woocommerce a.button,
+	.c9 .woocommerce button.button,
+	.c9 .woocommerce input.button {
+		padding: 12px 15px;
+		font-size: 12px;
+	}
 }
 
 .wp-block-button__link:focus,
@@ -3178,9 +3199,16 @@ p~.wp-block-button:not(.alignleft) {
 	font-family: $font-family-base;
 }
 
+.c9 input[type="text"],
+.c9 input[type="email"],
+.c9 input[type="url"],
+.c9 input[type="password"],
+.c9 input[type="tel"],
+.c9 input[type="number"],
+.c9 textarea,
 .c9 select {
 	font-size: 16px;
-	min-height: 55px;
+	min-height: 47px;
 	border-radius: 0px;
 	border: 1px solid $gray-500;
 	color: $gray-600;
@@ -3334,6 +3362,11 @@ label {
 	color: #495057;
 	background-color: $light;
 	border: 1px solid #ced4da;
+}
+
+.footer-search-wrapper .field[type="text"] {
+	min-height: auto;
+	font-size: 14px
 }
 
 .wp-block-search {

@@ -27,7 +27,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php esc_attr(body_class()); ?>>
 	<?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9-starter' ); ?></a>
 	<div class="hfeed site c9" id="page">
