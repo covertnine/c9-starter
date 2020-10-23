@@ -35,7 +35,7 @@ if (! function_exists('c9_pagination') ) {
 <nav aria-label="<?php echo esc_attr($args['screen_reader_text']); ?>">
     <ul class="pagination">
         <li class="page-item">
-            <a class="page-link" href="<?php echo esc_url($prev_link); ?>" aria-label="<?php esc_attr__('Previous', 'c9-starter'); ?>">
+            <a class="page-link" href="<?php echo esc_url($prev_link); ?>" aria-label="<?php esc_attr_e('Previous', 'c9-starter'); ?>">
                 <span aria-hidden="true"><?php esc_html($args['prev_text']); ?></span>
                 <span class="sr-only"><?php esc_html_e('Previous', 'c9-starter'); ?></span>
             </a>

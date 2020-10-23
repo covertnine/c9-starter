@@ -16,11 +16,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="<?php esc_attr(bloginfo( 'name' )); ?> - <?php esc_attr(bloginfo( 'description' )); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php
 	if ( (is_singular()) && (pings_open( get_queried_object() )) ) { ?>
-	<link rel="pingback" href="<?php esc_url(bloginfo( 'pingback_url' )); ?>">
+	<link rel="pingback" href="<?php get_bloginfo( 'pingback_url' ); ?>">
 	<?php
 	}
 	?>
