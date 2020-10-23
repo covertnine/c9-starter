@@ -2307,7 +2307,7 @@ table tr th {
 
 .entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
-	padding: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 30px;
 	margin: 30px 0px 30px 15px;
 }
 
@@ -2315,7 +2315,7 @@ table tr th {
 .editor-styles-wrapper ol,
 .editor-styles-wrapper .is-root-container ol[data-block] {
 	list-style-type: none;
-	padding-left: 0px;
+	padding-left: 20px;
 	padding-right: 0px;
 	margin: 30px 0px 30px 15px;
 }
@@ -2347,10 +2347,10 @@ table tr th {
 .entry-content ol li:before,
 .editor-styles-wrapper ol li:before {
 	content: counter(step-counter);
-	width: 20px;
+	width: 30px;
 	display: inline-block;
 	font-weight: $font-weight-bold;
-	margin: 0px 0px 0px -21px;
+	margin: 0px 0px 0px -30px;
 }
 
 .entry-content ol li>ol>li,
@@ -2386,6 +2386,11 @@ table tr th {
 .entry-content ul:not(.wp-block-gallery) li,
 .entry-content ol:not(.wp-block-gallery) li {
 	position: relative;
+}
+
+.entry-content ul:not(.wp-block-gallery) li {
+	padding-left: 5px;
+	margin-left: -5px;
 }
 
 .wp-block-gallery figcaption {
