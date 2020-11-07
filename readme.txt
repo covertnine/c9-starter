@@ -116,8 +116,17 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
 * [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
+* [C9 Logo + Client Assets](https://c9.covertnine.com) | GNU GPL v3
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
+* [Owl Carousel 2](http://www.owlcarousel.owlgraphic.com/) | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+* [jQuery](https://jquery.org) | (Code licensed under MIT)
+* [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL v3
+* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v3
+* [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
+* [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
+* [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
 
 Image for theme screenshot, Copyright Timothy Toomey
 License: GPL Compatible v2 or later
