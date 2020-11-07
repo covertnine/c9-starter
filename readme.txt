@@ -32,6 +32,9 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.2.5 =
+Button styling fixes for WooCommerce.
+
 = 2.2.3 =
 Further styling edits for WooCommerce, outlined button bug fix, mobile drop down covering logo bug, adjustments to breadcrumb fonts, heading font sizes
 
