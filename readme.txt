@@ -2,11 +2,11 @@
 Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.3.2
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.4
+Stable Tag: 2.2.5
 
 A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.2.5 =
+Adding styles for WooCommerce, fixing escaping bugs, updates for C9 Blocks v1.2
 
 = 2.2.4 =
 Escaping a few missed settings, list item spacing adjustments, C9 Blocks updates.
