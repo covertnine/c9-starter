@@ -6,7 +6,7 @@ Tested up to: 5.4.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.3
+Stable Tag: 2.2.5
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
