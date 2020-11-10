@@ -132,9 +132,19 @@ and of course
 * [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
 
 Image for theme screenshot, Copyright Timothy Toomey
-License: GPL Compatible v2 or later
+License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.covertnine.com
 
 Images for sample content, Copyright Timothy Toomey
-License: GPL Compatible v2 or later
-Source: https://www.covertnine.com
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.flickr.com/photos/assaultshirts/50576210098/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576223128/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576947041/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576220148/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50577082787/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576216478/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576939861/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50577074742/in/album-72157716790081691/
+Source: https://www.flickr.com/photos/assaultshirts/50576212893/in/album-72157716790081691/
+
+
