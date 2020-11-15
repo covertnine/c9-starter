@@ -181,6 +181,18 @@ var c9Page = function ($) {
       preloader: false,
       fixedContentPos: false
     });
+    $("a.wp-block-button__link[href*='youtu.be']").magnificPopup({
+      type: "iframe",
+      iframe: {
+        patterns: {
+          youtube_short: {
+            index: 'youtu.be/',
+            id: 'youtu.be/',
+            src: '//www.youtube.com/embed/%id%?autoplay=1'
+          }
+        }
+      }
+    });
     $('.wp-block-image a[href$=".jpg"]').magnificPopup({
       disableOn: 700,
       type: "image",

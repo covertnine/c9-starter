@@ -83,15 +83,25 @@ var c9Page = (function ($) {
 
 		///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$(
-			".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']"
-		).magnificPopup({
+		$(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
 			disableOn: 700,
 			type: "iframe",
 			mainClass: "mfp-zoom-in",
 			removalDelay: 160,
 			preloader: false,
 			fixedContentPos: false
+		});
+		$("a.wp-block-button__link[href*='youtu.be']").magnificPopup({
+			type: "iframe",
+			iframe: {
+				patterns: {
+					youtube_short: {
+						index: 'youtu.be/',
+						id: 'youtu.be/',
+						src: '//www.youtube.com/embed/%id%?autoplay=1'
+					}
+				}
+			}
 		});
 		$('.wp-block-image a[href$=".jpg"]').magnificPopup({
 			disableOn: 700,
