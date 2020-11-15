@@ -393,7 +393,7 @@ if (!function_exists('c9_customize_register')) {
 			'Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,700'           => 'Open Sans',
 			'Open+Sans+Condensed:wght@300;700' 									=> 'Open Sans Condensed',
 			'Oswald:wght@200,300,400,700'              							=> 'Oswald',
-			'Oxygen:wght@300;400;700',											=> 'Oxygen',
+			'Oxygen:wght@300,400,700'											=> 'Oxygen',
 			'Pacifico'															=> 'Pacifico',
 			'Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400'    		=> 'Playfair Display',
 			'Poppins:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,400'       => 'Poppins',
