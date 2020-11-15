@@ -20,9 +20,17 @@ class C9FontStyles
 		$c9fonts = array(
 			''																	=> '',
 			'Abel'                												=> 'Abel',
+			'Anton'																=> 'Anton',
+			'Barlow:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,400'		=> 'Barlow',
 			'Bebas+Neue'          												=> 'Bebas Neue',
 			'Goldman:wght@400,700'												=> 'Goldman',
+			'Heebo:wght@200;400;700;800;900'									=> 'Heebo',
 			'Hind+Siliguri:wght@300,400,700'									=> 'Hind Siliguri',
+			'IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,400'					=> 'IBM Plex Sans',
+			'IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,700;1,400'	=> 'IBM Plex Sans Condensed',
+			'IBM+Plex+Serif:ital,wght@0,200;0,400;0,600;0,700;1,400'			=> 'IBM Plex Serif',
+			'IBM+Plex+Mono:ital,wght@0,200;0,400;0,700;1,400'					=> 'IBM Plex Mono',
+			'Karla:ital,wght@0,400;0,700;1,400'									=> 'Karla',
 			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   				=> 'Lato',
 			'Lobster'             												=> 'Lobster',
 			'Lora:ital,wght@0,400;0,700;1,400;1,500;1,700'						=> 'Lora',
@@ -36,6 +44,7 @@ class C9FontStyles
 			'Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,700'           => 'Open Sans',
 			'Open+Sans+Condensed:wght@300;700' 									=> 'Open Sans Condensed',
 			'Oswald:wght@200,300,400,700'              							=> 'Oswald',
+			'Pacifico'															=> 'Pacifico',
 			'Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400'    		=> 'Playfair Display',
 			'Poppins:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,400'       => 'Poppins',
 			'PT+Sans:ital,wght@0,400;0,700;1,400'             					=> 'PT Sans',
@@ -48,9 +57,9 @@ class C9FontStyles
 			'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700'						=> 'Rubik',
 			'Sen:wght@400,700,800'                 								=> 'Sen',
 			'Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'     => 'Source Sans Pro',
-			'Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400'					=> 'Ubunutu',
-			'Work+Sans:ital,wght@0,200;0,400;0,700;0,800;0,900;1,400&'          => 'Work Sans',
-			'Xanh+Mono:ital@0;1'           										=> 'Xanh Mono'
+			'Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400'					=> 'Ubuntu',
+			'Work+Sans:ital,wght@0,200;0,400;0,700;0,800;0,900;1,400'           => 'Work Sans',
+			'Xanh+Mono'           												=> 'Xanh Mono'
 		);
 
 		//make the font label human readable so it'll work in css
