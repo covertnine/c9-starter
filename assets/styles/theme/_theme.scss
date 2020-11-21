@@ -1,5 +1,5 @@
 /****************************************************************************************/
-/* Page Setup */
+/* C9 Page Setup */
 /****************************************************************************************/
 :root {
 	font-size: 62.5%;
@@ -437,11 +437,6 @@ pre,
 		font-size: 3em;
 	}
 
-	.entry-content p,
-	.page-content p {
-		line-height: 1.8;
-		font-size: 1.6em;
-	}
 }
 
 /****************************************************************************************/
@@ -1766,6 +1761,7 @@ img {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: $gray-700;
+	text-align: left;
 }
 
 /****************************************************************************************/
@@ -2047,6 +2043,14 @@ table tr th {
 	text-transform: uppercase;
 }
 
+.wp-block-table figcaption {
+	font-weight: $font-weight-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $gray-700;
+	text-align: left;
+}
+
 .entry-content .wp-block-table,
 .entry-content .wp-block-table tbody,
 .entry-content .wp-block-table tbody tr,
@@ -2295,27 +2299,19 @@ table tr th {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ol,
-.entry-content ul {
-	font-size: 10px;
-}
-
 .entry-content ul>li,
 .entry-content ol>li {
 	font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
 	padding: 0px 0px 0px 30px;
 	margin: 30px 0px 30px 15px;
 }
 
-.entry-content ol,
-.editor-styles-wrapper ol,
-.editor-styles-wrapper .is-root-container ol[data-block] {
+.entry-content>ol {
 	list-style-type: none;
-	padding-left: 20px;
+	padding-left: 30px;
 	padding-right: 0px;
 	margin: 30px 0px 30px 15px;
 }
@@ -3486,7 +3482,8 @@ label {
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
-.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"] {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper li.hidden_label input[type="checkbox"] {
 	margin-top: 0px;
 }
 
@@ -3571,6 +3568,8 @@ label {
 .c9 .gform_button.button,
 .wp-block[data-type="gravityforms/form"] .gform_button.button {
 	padding: 7px 30px;
+	min-height: 30px;
+	line-height: 1;
 	width: auto;
 	text-align: center;
 	text-transform: uppercase;
