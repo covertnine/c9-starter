@@ -1761,6 +1761,7 @@ img {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: $gray-700;
+	text-align: left;
 }
 
 /****************************************************************************************/
@@ -2040,6 +2041,14 @@ table tr th {
 	font-weight: $font-weight-bold;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
+}
+
+.wp-block-table figcaption {
+	font-weight: $font-weight-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $gray-700;
+	text-align: left;
 }
 
 .entry-content .wp-block-table,
