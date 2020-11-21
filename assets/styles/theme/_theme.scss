@@ -3473,7 +3473,8 @@ label {
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
-.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"] {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper li.hidden_label input[type="checkbox"] {
 	margin-top: 0px;
 }
 
@@ -3558,6 +3559,8 @@ label {
 .c9 .gform_button.button,
 .wp-block[data-type="gravityforms/form"] .gform_button.button {
 	padding: 7px 30px;
+	min-height: 30px;
+	line-height: 1;
 	width: auto;
 	text-align: center;
 	text-transform: uppercase;
