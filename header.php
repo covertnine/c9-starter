@@ -29,7 +29,7 @@
 
 <body <?php esc_attr(body_class()); ?>>
 	<?php wp_body_open(); ?>
-	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'c9-starter'); ?></a>
+	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'c9-music'); ?></a>
 	<div class="hfeed site c9" id="page">
 		<div id="smoothwrapper" <?php esc_attr(body_class()); ?>>
 			<?php
@@ -58,13 +58,13 @@
 								<div class="nav-search">
 									<a href="#" class="btn-nav-search">
 										<i class="fa fa-search"></i>
-										<span class="sr-only"><?php esc_html_e('Search', 'c9-starter'); ?></span>
+										<span class="sr-only"><?php esc_html_e('Search', 'c9-music'); ?></span>
 									</a>
 								</div>
 								<?php if (has_nav_menu('primary')) { ?>
 
 									<div class="nav-toggle">
-										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle Navigation', 'c9-starter'); ?>">
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle Navigation', 'c9-music'); ?>">
 											<i class="fa fa-bars"></i>
 										</button>
 									</div>

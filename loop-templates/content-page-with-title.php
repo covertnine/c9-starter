@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Partial template for content in page.php
  *
@@ -12,7 +13,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 				</div>
 			</div>
 		</div>
@@ -27,7 +28,7 @@
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'c9-starter' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link(__('Edit', 'c9-music'), '<span class="edit-link">', '</span>'); ?>
 
 	</footer><!-- .entry-footer -->
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying comments.
  *
@@ -13,151 +14,151 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if (post_password_required() ) {
+if (post_password_required()) {
     return;
 }
 ?>
 
 <div class="comments-area" id="comments">
 
-    <?php if (have_comments() ) : ?>
+    <?php if (have_comments()) : ?>
 
         <h2 class="comments-title">
 
-        <?php
-        $comments_number = get_comments_number();
-        if (1 === (int) $comments_number ) {
-            printf(
-            /* translators: %s: post title */
-                esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'c9-starter'),
-                '<span>' . get_the_title() . '</span>'
-            );
-        } else {
-            printf( // WPCS: XSS OK.
-            /* translators: 1: number of comments, 2: post title */
-                esc_html(
-                    _nx(
-                        '%1$s thought on &ldquo;%2$s&rdquo;',
-                        '%1$s thoughts on &ldquo;%2$s&rdquo;',
-                        $comments_number,
-                        'comments title',
-                        'c9-starter'
-                    )
-                ),
-                number_format_i18n($comments_number),
-                '<span>' . get_the_title() . '</span>'
-            );
-        }
-        ?>
+            <?php
+            $comments_number = get_comments_number();
+            if (1 === (int) $comments_number) {
+                printf(
+                    /* translators: %s: post title */
+                    esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'c9-music'),
+                    '<span>' . get_the_title() . '</span>'
+                );
+            } else {
+                printf( // WPCS: XSS OK.
+                    /* translators: 1: number of comments, 2: post title */
+                    esc_html(
+                        _nx(
+                            '%1$s thought on &ldquo;%2$s&rdquo;',
+                            '%1$s thoughts on &ldquo;%2$s&rdquo;',
+                            $comments_number,
+                            'comments title',
+                            'c9-music'
+                        )
+                    ),
+                    number_format_i18n($comments_number),
+                    '<span>' . get_the_title() . '</span>'
+                );
+            }
+            ?>
 
         </h2><!-- .comments-title -->
 
         <?php
-        if (get_comment_pages_count() > 1 && get_option('page_comments') ) :
-            ?>
+        if (get_comment_pages_count() > 1 && get_option('page_comments')) :
+        ?>
 
             <nav class="comment-navigation" id="comment-nav-above">
 
-                <h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9-starter'); ?></h1>
+                <h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9-music'); ?></h1>
 
-            <?php if (get_previous_comments_link() ) { ?>
+                <?php if (get_previous_comments_link()) { ?>
                     <div class="nav-previous">
+                        <?php
+                        previous_comments_link(
+                            __(
+                                '&larr; Older Comments',
+                                'c9-music'
+                            )
+                        );
+                        ?>
+                    </div>
                 <?php
-                previous_comments_link(
-                    __(
-                        '&larr; Older Comments',
-                        'c9-starter'
-                    )
-                );
-                ?>
-                                                </div>
-                <?php
-            }
-            if (get_next_comments_link() ) {
+                }
+                if (get_next_comments_link()) {
                 ?>
                     <div class="nav-next">
-                <?php
-                next_comments_link(
-                    __(
-                        'Newer Comments &rarr;',
-                        'c9-starter'
-                    )
-                );
-                ?>
-                                            </div>
-            <?php } ?>
+                        <?php
+                        next_comments_link(
+                            __(
+                                'Newer Comments &rarr;',
+                                'c9-music'
+                            )
+                        );
+                        ?>
+                    </div>
+                <?php } ?>
 
             </nav><!-- #comment-nav-above -->
 
-            <?php
+        <?php
         endif;
         ?>
 
         <ol class="comment-list">
 
-        <?php
-        wp_list_comments(
-            array(
-            'style'       => 'ol',
-            'short_ping'  => true,
-            'avatar_size' => 80,
-            )
-        );
-        ?>
+            <?php
+            wp_list_comments(
+                array(
+                    'style'       => 'ol',
+                    'short_ping'  => true,
+                    'avatar_size' => 80,
+                )
+            );
+            ?>
 
         </ol><!-- .comment-list -->
 
         <?php
-        if (get_comment_pages_count() > 1 && get_option('page_comments') ) :
-            ?>
+        if (get_comment_pages_count() > 1 && get_option('page_comments')) :
+        ?>
 
             <nav class="comment-navigation" id="comment-nav-below">
 
-                <h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9-starter'); ?></h1>
+                <h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'c9-music'); ?></h1>
 
-            <?php if (get_previous_comments_link() ) { ?>
+                <?php if (get_previous_comments_link()) { ?>
                     <div class="nav-previous">
+                        <?php
+                        previous_comments_link(
+                            __(
+                                '&larr; Older Comments',
+                                'c9-music'
+                            )
+                        );
+                        ?>
+                    </div>
                 <?php
-                previous_comments_link(
-                    __(
-                        '&larr; Older Comments',
-                        'c9-starter'
-                    )
-                );
-                ?>
-                                                </div>
-                <?php
-            }
-            if (get_next_comments_link() ) {
+                }
+                if (get_next_comments_link()) {
                 ?>
                     <div class="nav-next">
-                <?php
-                next_comments_link(
-                    __(
-                        'Newer Comments &rarr;',
-                        'c9-starter'
-                    )
-                );
-                ?>
-                                            </div>
-            <?php } ?>
+                        <?php
+                        next_comments_link(
+                            __(
+                                'Newer Comments &rarr;',
+                                'c9-music'
+                            )
+                        );
+                        ?>
+                    </div>
+                <?php } ?>
 
             </nav><!-- #comment-nav-below -->
 
-            <?php
+        <?php
         endif;
         ?>
 
-        <?php
+    <?php
     endif;
     ?>
 
     <?php
     // If comments are closed and there are comments, let's leave a little note, shall we?
-    if (! comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments') ) :
-        ?>
+    if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
+    ?>
 
-        <p class="no-comments"><?php esc_html_e('Comments are closed.', 'c9-starter'); ?></p>
+        <p class="no-comments"><?php esc_html_e('Comments are closed.', 'c9-music'); ?></p>
 
     <?php endif; ?>
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying 404 pages (not found).
  *
@@ -28,7 +29,7 @@ get_header();
                                     <?php
                                     esc_html_e(
                                         'Oops! That page can&rsquo;t be found.',
-                                        'c9-starter'
+                                        'c9-music'
                                     );
                                     ?>
                                 </h1>
@@ -38,12 +39,12 @@ get_header();
                             <div class="container-narrow mar30B">
 
                                 <p>
-                                <?php
-                                esc_html_e(
-                                    'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-                                    'c9-starter'
-                                );
-                                ?>
+                                    <?php
+                                    esc_html_e(
+                                        'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+                                        'c9-music'
+                                    );
+                                    ?>
                                 </p>
 
                                 <?php get_search_form(); ?>

@@ -26,7 +26,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_section(
 			'c9_footer',
 			array(
-				'title'    => __('Footer', 'c9-starter'),
+				'title'    => __('Footer', 'c9-music'),
 				'priority' => 97,
 			)
 		);
@@ -45,12 +45,12 @@ if (!function_exists('c9_customize_register')) {
 			'c9_show_search',
 			array(
 				'type'        => 'radio',
-				'label'       => __('Display search in footer', 'c9-starter'),
+				'label'       => __('Display search in footer', 'c9-music'),
 				'section'     => 'c9_footer',
-				'description' => __('Hide or show the search form in the footer', 'c9-starter'),
+				'description' => __('Hide or show the search form in the footer', 'c9-music'),
 				'choices'     => array(
-					'show' => __('Show', 'c9-starter'),
-					'hide' => __('Hide', 'c9-starter'),
+					'show' => __('Show', 'c9-music'),
+					'hide' => __('Hide', 'c9-music'),
 				),
 			)
 		);
@@ -70,15 +70,15 @@ if (!function_exists('c9_customize_register')) {
 			'c9_copyright_content',
 			array(
 				'type'        => 'textarea',
-				'label'       => __('Copyright', 'c9-starter'),
+				'label'       => __('Copyright', 'c9-music'),
 				'section'     => 'c9_footer',
-				'description' => __('Enter in any copyright information, links to privacy policies or terms.', 'c9-starter'),
+				'description' => __('Enter in any copyright information, links to privacy policies or terms.', 'c9-music'),
 			)
 		);
 		$wp_customize->add_section(
 			'c9_social',
 			array(
-				'title'    => __('Social Media', 'c9-starter'),
+				'title'    => __('Social Media', 'c9-music'),
 				'priority' => 92,
 			)
 		);
@@ -98,12 +98,12 @@ if (!function_exists('c9_customize_register')) {
 			'c9_show_social',
 			array(
 				'type'        => 'radio',
-				'label'       => __('Display social icons in footer', 'c9-starter'),
+				'label'       => __('Display social icons in footer', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Hide or show social icons in the footer', 'c9-starter'),
+				'description' => __('Hide or show social icons in the footer', 'c9-music'),
 				'choices'     => array(
-					'show' => __('Show', 'c9-starter'),
-					'hide' => __('Hide', 'c9-starter'),
+					'show' => __('Show', 'c9-music'),
+					'hide' => __('Hide', 'c9-music'),
 				),
 			)
 		);
@@ -123,9 +123,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_twitter',
 			array(
 				'type'        => 'text',
-				'label'       => __('Twitter Link', 'c9-starter'),
+				'label'       => __('Twitter Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Twitter Username or full url', 'c9-starter'),
+				'description' => __('Input your Twitter Username or full url', 'c9-music'),
 			)
 		);
 		$wp_customize->add_setting(
@@ -141,9 +141,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_facebook',
 			array(
 				'type'        => 'text',
-				'label'       => __('Facebook Link', 'c9-starter'),
+				'label'       => __('Facebook Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Facebook username or full url', 'c9-starter'),
+				'description' => __('Input your Facebook username or full url', 'c9-music'),
 			)
 		);
 		$wp_customize->add_setting(
@@ -159,9 +159,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_instagram',
 			array(
 				'type'        => 'text',
-				'label'       => __('Instagram Link', 'c9-starter'),
+				'label'       => __('Instagram Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Instagram username or full url', 'c9-starter'),
+				'description' => __('Input your Instagram username or full url', 'c9-music'),
 			)
 		);
 		$wp_customize->add_setting(
@@ -177,9 +177,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_pinterest',
 			array(
 				'type'        => 'text',
-				'label'       => __('Pinterest Link', 'c9-starter'),
+				'label'       => __('Pinterest Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Pinterest username or full url', 'c9-starter'),
+				'description' => __('Input your Pinterest username or full url', 'c9-music'),
 			)
 		);
 
@@ -196,9 +196,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_spotify',
 			array(
 				'type'        => 'text',
-				'label'       => __('Spotify Link', 'c9-starter'),
+				'label'       => __('Spotify Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Spotify username or full url', 'c9-starter')
+				'description' => __('Input your Spotify username or full url', 'c9-music')
 			)
 		);
 
@@ -215,9 +215,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_youtube',
 			array(
 				'type'        => 'text',
-				'label'       => __('YouTube Link', 'c9-starter'),
+				'label'       => __('YouTube Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your YouTube username or full url', 'c9-starter'),
+				'description' => __('Input your YouTube username or full url', 'c9-music'),
 			)
 		);
 
@@ -234,9 +234,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_yelp',
 			array(
 				'type'        => 'text',
-				'label'       => __('Yelp Link', 'c9-starter'),
+				'label'       => __('Yelp Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Yelp username or full url', 'c9-starter'),
+				'description' => __('Input your Yelp username or full url', 'c9-music'),
 			)
 		);
 
@@ -253,9 +253,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_subreddit',
 			array(
 				'type'        => 'text',
-				'label'       => __('Subreddit Link', 'c9-starter'),
+				'label'       => __('Subreddit Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Subreddit url', 'c9-starter'),
+				'description' => __('Input your Subreddit url', 'c9-music'),
 			)
 		);
 
@@ -272,9 +272,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_linkedin',
 			array(
 				'type'        => 'text',
-				'label'       => __('LinkedIn Link', 'c9-starter'),
+				'label'       => __('LinkedIn Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your LinkedIn url', 'c9-starter'),
+				'description' => __('Input your LinkedIn url', 'c9-music'),
 			)
 		);
 
@@ -291,9 +291,9 @@ if (!function_exists('c9_customize_register')) {
 			'c9_github',
 			array(
 				'type'        => 'text',
-				'label'       => __('Github Link', 'c9-starter'),
+				'label'       => __('Github Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your Github username or full url', 'c9-starter'),
+				'description' => __('Input your Github username or full url', 'c9-music'),
 			)
 		);
 
@@ -310,15 +310,15 @@ if (!function_exists('c9_customize_register')) {
 			'c9_soundcloud',
 			array(
 				'type'        => 'text',
-				'label'       => __('SoundCloud Link', 'c9-starter'),
+				'label'       => __('SoundCloud Link', 'c9-music'),
 				'section'     => 'c9_social',
-				'description' => __('Input your SoundCloud username or full url', 'c9-starter'),
+				'description' => __('Input your SoundCloud username or full url', 'c9-music'),
 			)
 		);
 		$wp_customize->add_section(
 			'c9_branding',
 			array(
-				'title'    => __('Branding', 'c9-starter'),
+				'title'    => __('Branding', 'c9-music'),
 				'priority' => 20,
 			)
 		);
@@ -338,11 +338,11 @@ if (!function_exists('c9_customize_register')) {
 			'c9_default_font',
 			array(
 				'type'    => 'radio',
-				'label'   => __('Use C9 Theme Fonts?', 'c9-starter'),
+				'label'   => __('Use C9 Theme Fonts?', 'c9-music'),
 				'section' => 'c9_branding',
 				'choices' => array(
-					'yes' => __('Yes', 'c9-starter'),
-					'no'  => __('No, I will queue my own fonts.', 'c9-starter'),
+					'yes' => __('Yes', 'c9-music'),
+					'no'  => __('No, I will queue my own fonts.', 'c9-music'),
 				),
 			)
 		);
@@ -427,8 +427,8 @@ if (!function_exists('c9_customize_register')) {
 			'c9_heading_font',
 			array(
 				'type'        => 'select',
-				'label'       => __('Heading Font', 'c9-starter'),
-				'description' => __('Select your heading font family.', 'c9-starter'),
+				'label'       => __('Heading Font', 'c9-music'),
+				'description' => __('Select your heading font family.', 'c9-music'),
 				'section'     => 'c9_branding',
 				'choices'     => $c9fonts,
 			)
@@ -449,8 +449,8 @@ if (!function_exists('c9_customize_register')) {
 			'c9_subheading_font',
 			array(
 				'type'        => 'select',
-				'label'       => __('Subheading Font', 'c9-starter'),
-				'description' => __('Select your subheading font family.', 'c9-starter'),
+				'label'       => __('Subheading Font', 'c9-music'),
+				'description' => __('Select your subheading font family.', 'c9-music'),
 				'section'     => 'c9_branding',
 				'choices'     => $c9fonts,
 			)
@@ -469,8 +469,8 @@ if (!function_exists('c9_customize_register')) {
 			'c9_body_font',
 			array(
 				'type'        => 'select',
-				'label'       => __('Body Paragraph Font', 'c9-starter'),
-				'description' => __('Select your base font family.', 'c9-starter'),
+				'label'       => __('Body Paragraph Font', 'c9-music'),
+				'description' => __('Select your base font family.', 'c9-music'),
 				'section'     => 'c9_branding',
 				'choices'     => $c9fonts,
 			)
@@ -479,7 +479,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_section(
 			'c9_posts',
 			array(
-				'title'    => __('Posts', 'c9-starter'),
+				'title'    => __('Posts', 'c9-music'),
 				'priority' => 90,
 			)
 		);
@@ -499,11 +499,11 @@ if (!function_exists('c9_customize_register')) {
 			'c9_author_visible',
 			array(
 				'type'    => 'radio',
-				'label'   => __('Do you want to show or hide the author name on posts?', 'c9-starter'),
+				'label'   => __('Do you want to show or hide the author name on posts?', 'c9-music'),
 				'section' => 'c9_posts',
 				'choices' => array(
-					'show' => __('Show', 'c9-starter'),
-					'hide' => __('Hide', 'c9-starter'),
+					'show' => __('Show', 'c9-music'),
+					'hide' => __('Hide', 'c9-music'),
 				),
 			)
 		);
@@ -523,12 +523,12 @@ if (!function_exists('c9_customize_register')) {
 			'c9_blog_sidebar',
 			array(
 				'type'    => 'radio',
-				'label'   => __('Display a sidebar on single posts?', 'c9-starter'),
+				'label'   => __('Display a sidebar on single posts?', 'c9-music'),
 				'section' => 'c9_posts',
 				'choices' => array(
-					'hide'          => __('No Sidebar', 'c9-starter'),
-					'sidebar-left'  => __('Left Sidebar', 'c9-starter'),
-					'sidebar-right' => __('Right Sidebar', 'c9-starter'),
+					'hide'          => __('No Sidebar', 'c9-music'),
+					'sidebar-left'  => __('Left Sidebar', 'c9-music'),
+					'sidebar-right' => __('Right Sidebar', 'c9-music'),
 				),
 			)
 		);
@@ -548,12 +548,12 @@ if (!function_exists('c9_customize_register')) {
 			'c9_archive_sidebar',
 			array(
 				'type'    => 'radio',
-				'label'   => __('Display a sidebar on archive pages?', 'c9-starter'),
+				'label'   => __('Display a sidebar on archive pages?', 'c9-music'),
 				'section' => 'c9_posts',
 				'choices' => array(
-					'hide'          => __('No Sidebar', 'c9-starter'),
-					'archive-left'  => __('Left Sidebar', 'c9-starter'),
-					'archive-right' => __('Right Sidebar', 'c9-starter'),
+					'hide'          => __('No Sidebar', 'c9-music'),
+					'archive-left'  => __('Left Sidebar', 'c9-music'),
+					'archive-right' => __('Right Sidebar', 'c9-music'),
 				),
 			)
 		);

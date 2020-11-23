@@ -35,14 +35,14 @@ function c9_post_header_size_html($post)
 {
 	$value = isset(get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size']) ? get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size'] : 'small';
 ?>
-	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-starter' ); ?></label>
+	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-music'); ?></label>
 	<div>
 		<input type="radio" id="large" name="c9_post_header_size" value="large" <?php echo 'large' === $value ? 'checked' : ''; ?>>
-		<label for="large"><?php echo esc_html('Large', 'c9-starter' ); ?></label>
+		<label for="large"><?php echo esc_html('Large', 'c9-music'); ?></label>
 	</div>
 	<div>
 		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo 'small' === $value ? 'checked' : ''; ?>>
-		<label for="small"><?php echo esc_html('Small', 'c9-starter' ); ?></label>
+		<label for="small"><?php echo esc_html('Small', 'c9-music'); ?></label>
 	</div>
 <?php
 }
