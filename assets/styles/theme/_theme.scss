@@ -1403,7 +1403,9 @@ pre,
 	#right-sidebar {
 		top: 100px;
 		min-width: 150px;
-		max-width: 180px;
+		max-width: 200px;
+		overflow-x: visible;
+		overflow-y: scroll;
 	}
 
 	#right-sidebar {
