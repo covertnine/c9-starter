@@ -104,12 +104,12 @@ var c9Page = function ($) {
       var scrollHeight = $(document).height();
       var scrollPosition = $(window).height() + $(window).scrollTop();
 
-      if (scroll > 633) {
+      if (scroll > 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
         jQuery("#right-sidebar").addClass("fixed-sidebar");
       }
 
-      if (scroll < 632) {
+      if (scroll < 132) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       } //back to top button fade ins
