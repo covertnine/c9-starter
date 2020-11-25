@@ -33,7 +33,7 @@ function c9_editor_style()
 		$font_array['c9_heading_font'] 		= esc_html(get_theme_mod('c9_heading_font', 'Sen'));
 		$font_array['c9_subheading_font'] 	= esc_html(get_theme_mod('c9_subheading_font', 'Sen'));
 		$font_array['c9_body_font'] 		= esc_html(get_theme_mod('c9_body_font', 'Sen'));
-		$font_array['c9_default_font']		= $c9_fonts;
+		$font_array['c9_default_font']		= esc_js($c9_fonts);
 
 		// Use the localize function to localize the script and continue with the code
 		wp_localize_script('c9-typography-script', 'c9SelectedFonts', $font_array);
