@@ -28,15 +28,15 @@ if (!function_exists('c9_scripts')) {
 		if (!empty($font_choice) && 'yes' === $font_choice) {
 			// Begin by registering the JavaScript Script
 			// Add action to enqueue the CDN script:
-			wp_enqueue_script('webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js',);
+			wp_enqueue_script('webfont-loader', get_template_directory_uri() . '/assets/scripts/webfont.js');
 
 			wp_register_script('c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
 
 			// Localize the script with the font data
 			$font_array 						= array();
-			$font_array['c9_heading_font'] 		= esc_html( get_theme_mod('c9_heading_font', 'Sen') );
-			$font_array['c9_subheading_font'] 	= esc_html( get_theme_mod('c9_subheading_font', 'Sen') );
-			$font_array['c9_body_font'] 		= esc_html( get_theme_mod('c9_body_font', 'Sen') );
+			$font_array['c9_heading_font'] 		= esc_html(get_theme_mod('c9_heading_font', 'Sen'));
+			$font_array['c9_subheading_font'] 	= esc_html(get_theme_mod('c9_subheading_font', 'Sen'));
+			$font_array['c9_body_font'] 		= esc_html(get_theme_mod('c9_body_font', 'Sen'));
 			$font_array['c9_default_font']		= $c9_fonts;
 
 			// Use the localize function to localize the script and continue with the code
