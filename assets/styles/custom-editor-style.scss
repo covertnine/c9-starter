@@ -498,7 +498,6 @@ body .editor-styles-wrapper,
 }
 
 /****************************************************************************************/
-
 /***************************** core edits for forms in backend editor
 /****************************************************************************************/
 
@@ -617,6 +616,20 @@ body .editor-styles-wrapper,
 .editor-post-publish-panel select,
 .editor-post-publish-panel textarea {
 	border-radius: 0px;
+}
+
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper li.hidden_label input[type=checkbox] {
+	min-height: 13px;
+	min-width: 13px;
+}
+
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_consent_label {
+	margin-bottom: 0px;
 }
 
 /****************************************************************************************/
