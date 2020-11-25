@@ -286,10 +286,22 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress core list items */
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
+	padding: 0px 0px 0px 50px;
+}
+
+.editor-styles-wrapper ol,
+.editor-styles-wrapper .is-root-container>ol[data-type="core/list"] {
+	padding: 0px 0px 0px 50px;
+}
 
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
 	position: relative;
+}
+
+.editor-styles-wrapper .is-root-container>ol li {
+	padding-left: 0px;
 }
 
 .editor-styles-wrapper .block-library-list ul {
