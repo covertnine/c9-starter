@@ -286,6 +286,17 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress core list items */
+.editor-styles-wrapper .is-root-container>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+	padding: 0px 0px 0px 50px;
+	margin: 30px auto 30px auto;
+}
+
+.editor-styles-wrapper .is-root-container>ol[data-block] {
+	list-style-type: none;
+	padding-left: 30px;
+	padding-right: 0px;
+	margin: 30px auto 30px auto;
+}
 
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
@@ -605,6 +616,20 @@ body .editor-styles-wrapper,
 .editor-post-publish-panel select,
 .editor-post-publish-panel textarea {
 	border-radius: 0px;
+}
+
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper li.hidden_label input[type=checkbox] {
+	min-height: 13px;
+	min-width: 13px;
+}
+
+.wp-block[data-type="gravityforms/form"] .gform_wrapper .gfield_consent_label {
+	margin-bottom: 0px;
 }
 
 /****************************************************************************************/

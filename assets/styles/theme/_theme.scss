@@ -1,5 +1,5 @@
 /****************************************************************************************/
-/* Page Setup */
+/* C9 Page Setup */
 /****************************************************************************************/
 :root {
 	font-size: 62.5%;
@@ -1409,7 +1409,9 @@ pre,
 	#right-sidebar {
 		top: 100px;
 		min-width: 150px;
-		max-width: 180px;
+		max-width: 200px;
+		overflow-x: visible;
+		overflow-y: scroll;
 	}
 
 	#right-sidebar {
@@ -1767,6 +1769,7 @@ img {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: $gray-700;
+	text-align: left;
 }
 
 /****************************************************************************************/
@@ -2049,6 +2052,14 @@ table tr th {
 	text-transform: uppercase;
 }
 
+.wp-block-table figcaption {
+	font-weight: $font-weight-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $gray-700;
+	text-align: left;
+}
+
 .entry-content .wp-block-table,
 .entry-content .wp-block-table tbody,
 .entry-content .wp-block-table tbody tr,
@@ -2307,15 +2318,12 @@ table tr th {
 	font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
 	padding: 0px 0px 0px 20px;
 	margin: 30px 0px 30px 15px;
 }
 
-.entry-content ol,
-.editor-styles-wrapper ol,
-.editor-styles-wrapper .is-root-container ol[data-block] {
+.entry-content ol {
 	list-style-type: none;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -3455,7 +3463,8 @@ label {
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input,
 .wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_checkbox li input[type="checkbox"],
-.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"] {
+.wp-block[data-type="gravityforms/form"] .gform_wrapper.gf_browser_safari .gfield_radio li input[type="radio"],
+.wp-block[data-type="gravityforms/form"] .gform_wrapper li.hidden_label input[type="checkbox"] {
 	margin-top: 0px;
 }
 
@@ -3541,6 +3550,8 @@ label {
 .wp-block[data-type="gravityforms/form"] .gform_button.button {
 	padding: 7px 30px;
 	width: auto;
+	min-height: 30px;
+	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
