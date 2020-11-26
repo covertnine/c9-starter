@@ -1,7 +1,7 @@
 {
-    "name": "c9-starter",
+    "name": "c9-music",
     "version": "0.8.2",
-    "description": "WordPress C9 Theme framework",
+    "description": "C9 Music WordPress Theme",
     "main": "index.js",
     "scripts": {
         "start": "gulp watch"
