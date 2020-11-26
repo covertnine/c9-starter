@@ -871,6 +871,17 @@ pre,
 	color: $dark;
 }
 
+.pagination .page-item:last-child .page-link:before,
+.pagination .page-item:first-child .page-link:before {
+	font-family: FontAwesome;
+	content: '\f104';
+	color: $gray-700;
+}
+
+.pagination .page-item:last-child .page-link:before {
+	content: '\f105';
+}
+
 .page-link,
 .page-item.active .page-link,
 .post-page-numbers {
