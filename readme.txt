@@ -106,7 +106,7 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
-* [C9 Client Folder Boilerplate](https://github.com/covertnine/client-togo)
+* [C9 Togo Client Folder Boilerplate](https://github.com/covertnine/client-togo)
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
 * [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
@@ -120,8 +120,8 @@ and of course
 
 Image for theme screenshot, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.flickr.com/photos/assaultshirts/albums/72157649867085700
+Source: https://www.flickr.com/photos/assaultshirts/23305340853
 
 Images for sample content, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.flickr.com/photos/assaultshirts/albums/72157649867085700
+Source: https://www.flickr.com/photos/assaultshirts/23305340853/in/album-72157649867085700/

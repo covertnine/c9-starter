@@ -20,7 +20,7 @@ function c9_post_header_size()
 {
 	add_meta_box(
 		'post_header_size',           // Unique ID
-		'Header Size',  // Box title
+		__('Header Size', 'c9-togo'),  // Box title
 		'c9_post_header_size_html',  // Content callback, must be of type callable
 		'post',               // Post type
 		'side'
@@ -35,14 +35,14 @@ function c9_post_header_size_html($post)
 {
 	$value = isset(get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size']) ? get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size'] : 'small';
 ?>
-	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-togo' ); ?></label>
+	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-togo'); ?></label>
 	<div>
 		<input type="radio" id="large" name="c9_post_header_size" value="large" <?php echo 'large' === $value ? 'checked' : ''; ?>>
-		<label for="large"><?php echo esc_html('Large', 'c9-togo' ); ?></label>
+		<label for="large"><?php echo esc_html('Large', 'c9-togo'); ?></label>
 	</div>
 	<div>
 		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo 'small' === $value ? 'checked' : ''; ?>>
-		<label for="small"><?php echo esc_html('Small', 'c9-togo' ); ?></label>
+		<label for="small"><?php echo esc_html('Small', 'c9-togo'); ?></label>
 	</div>
 <?php
 }
@@ -57,7 +57,7 @@ function c9_save_header_size($post_id)
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
-			$unslashed
+			esc_html($unslashed)
 		);
 	}
 }
