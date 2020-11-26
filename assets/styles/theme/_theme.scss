@@ -892,6 +892,17 @@ pre,
 	border: 1px solid transparent;
 }
 
+.pagination .page-item:last-child .page-link:before,
+.pagination .page-item:first-child .page-link:before {
+	font-family: FontAwesome;
+	content: ‘\f104’;
+	color: $gray-700;
+}
+
+.pagination .page-item:last-child .page-link:before {
+	content: ‘\f105’;
+}
+
 .page-search-results nav .pagination .page-item .page-link,
 .c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
 .archive .pagination .page-item a,
