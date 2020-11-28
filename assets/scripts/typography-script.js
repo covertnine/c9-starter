@@ -30,4 +30,4 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 
 }
 //console.log(c9SelectedFonts);
-console.log(c9QueuedFonts);
+// console.log(c9QueuedFonts);
