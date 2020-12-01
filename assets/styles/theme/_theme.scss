@@ -231,7 +231,7 @@ a.skip-link {
 .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote cite {
-	color: $gray-500;
+	color: $gray-700;
 	font-size: 15px;
 }
 
@@ -250,6 +250,20 @@ a.skip-link {
 .wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation {
 	line-height: 1;
 	font-style: normal;
+}
+
+pre,
+kbd,
+.wp-block-code,
+.wp-block-preformatted {
+	border: 1px solid $gray-300;
+	font-size: 1.5em;
+	padding: 13px;
+	background: rgba($gray-500, 0.4);
+	line-height: 1.3;
+	white-space: normal;
+	margin-bottom: 10px;
+	border-radius: 0px;
 }
 
 .c9-site-title,
@@ -388,17 +402,6 @@ a:focus {
 
 a:focus {
 	outline: 1px dotted $dark;
-}
-
-pre,
-.wp-block-code {
-	font-size: 1.5em;
-	padding: 13px;
-	background: rgba($gray-500, 0.4);
-	line-height: 1.3;
-	white-space: normal;
-	margin-bottom: 10px;
-	border-radius: 0px;
 }
 
 .wp-block-code .block-editor-plain-text {
