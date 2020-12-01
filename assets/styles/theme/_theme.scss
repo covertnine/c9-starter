@@ -581,12 +581,14 @@ pre,
 	}
 }
 
-.alignleft {
+.alignleft,
+.wp-block-gallery.alignleft {
 	float: left;
 	margin-right: 50px;
 }
 
-.alignright {
+.alignright,
+.wp-block-gallery.alignright {
 	float: right;
 	margin-left: 50px;
 }
@@ -2034,7 +2036,8 @@ img {
 	.page-template-blank .entry-content .alignwide,
 	.page-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"],
-	.post-template-default .entry-content>.alignwide {
+	.post-template-default .entry-content>.alignwide,
+	.wp-block-gallery.alignwide {
 		width: 120%;
 		max-width: 1368px;
 		margin-left: -10%;

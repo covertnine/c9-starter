@@ -34,8 +34,7 @@ if (post_password_required()) {
 					'<span>' . wp_kses_post(get_the_title()) . '</span>'
 				);
 			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: number of comments, 2: post title */
+				printf(
 					esc_html(
 						_nx(
 							'%1$s thought on &ldquo;%2$s&rdquo;',
