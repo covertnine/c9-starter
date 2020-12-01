@@ -3056,6 +3056,7 @@ screen and (max-height: 300px) {
 	white-space: normal;
 	color: $light;
 	line-height: 1;
+	border-radius: 0px;
 }
 
 @media only screen and (max-width: 414px) {
@@ -3096,7 +3097,9 @@ screen and (max-height: 300px) {
 
 .wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.wp-block-button__link.c9-button-shape-outline {
+.wp-block-button__link.c9-button-shape-outline,
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
 	border: 3px solid;
 	background-color: transparent;
 	color: $gray-900;
