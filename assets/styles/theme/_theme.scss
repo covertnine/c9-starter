@@ -210,8 +210,6 @@ a.skip-link {
 }
 
 .entry-content address,
-.entry-content table,
-table,
 .post-content>.page-links,
 .entry-content>.page-links {
 	font-size: 1.6em;
@@ -2046,6 +2044,40 @@ img {
 /****************************************************************************************/
 /* WordPress Gutenberg Table Block */
 /****************************************************************************************/
+.editor-styles-wrapper .wp-block-table,
+.editor-styles-wrapper .wp-block-table tbody,
+.editor-styles-wrapper .wp-block-table tbody tr,
+.editor-styles-wrapper .wp-block-table tbody tr td,
+.entry-content .wp-block-table,
+.entry-content .wp-block-table tbody,
+.entry-content .wp-block-table tbody tr,
+.entry-content .wp-block-table tbody tr td {
+	border: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.wp-block-table thead,
+.wp-block-table thead tr th,
+.wp-block-table tfoot,
+.wp-block-table tfoot tr td,
+.wp-block-table tfoot tr th,
+.editor-styles-wrapper .wp-block-table thead,
+.editor-styles-wrapper .wp-block-table thead tr th,
+.editor-styles-wrapper .wp-block-table tfoot,
+.editor-styles-wrapper .wp-block-table tfoot tr td,
+.editor-styles-wrapper .wp-block-table tfoot tr th {
+	border: none;
+}
+
+.wp-block-table thead,
+.wp-block-table tfoot,
+.editor-styles-wrapper .wp-block-table thead,
+.editor-styles-wrapper .wp-block-table tfoot {
+	border-bottom: 2px solid;
+}
+
 table {
 	margin: 0 0 1em;
 }
@@ -2074,37 +2106,27 @@ table tr th {
 	text-align: left;
 }
 
-.entry-content .wp-block-table,
-.entry-content .wp-block-table tbody,
-.entry-content .wp-block-table tbody tr,
-.entry-content .wp-block-table tbody tr td {
-	border: none;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
 .entry-content .wp-block-table tbody tr td,
 .editor-styles-wrapper .wp-block-table tbody tr td,
 .entry-content .wp-block-table.is-style-regular tfoot tr td,
 .editor-styles-wrapper .wp-block-table.is-style-regular tfoot tr td {
 	background: $light;
-	box-shadow: 0 -1px 0 0 $gray-200;
-	line-height: 1.7;
+	box-shadow: 0 -1px 0 0 $gray-500;
 }
 
-.entry-content .wp-block-table tbody tr:nth-child(odd) td {
-	background: $gray-100;
+.entry-content .wp-block-table.is-style-stripes tbody tr td,
+.editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr td,
+.entry-content .wp-block-table.is-style-stripes tfoot tr td,
+.editor-styles-wrapper .wp-block-table.is-style-stripes tfoot tr td {
+	box-shadow: 0 -1px 0 0 $gray-500;
+	background: $light;
 }
 
 .entry-content .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td,
 .editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
-	background: $light;
+	background: $gray-300;
 }
 
-.wp-block-table.is-style-stripes tfoot tr td {
-	box-shadow: 0 -1px 0 0 $gray-200;
-}
 
 @media only screen and (min-width: 1px) {
 	.wp-block-table {
