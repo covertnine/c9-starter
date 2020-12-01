@@ -3118,8 +3118,8 @@ screen and (max-height: 300px) {
 
 .site button:focus,
 .site :focus {
-	-webkit-focus-ring-color: $gray-300;
-	outline-color: $gray-300;
+	-webkit-focus-ring-color: $gray-600;
+	outline-color: $gray-600;
 	outline-width: 1px;
 	outline-style: dotted;
 }

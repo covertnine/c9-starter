@@ -1,14 +1,14 @@
 === C9 Starter ===
-Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
+Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.3.2
+Requires at least: 5.1.0
 Tested up to: 5.5.3
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Stable Tag: 2.3.0
 
-A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
+A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
 == Description ==
 A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
@@ -144,9 +144,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 and of course
 * [jQuery](https://jquery.org) | (Code licensed under MIT)
 * [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL v3
-* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v3
+* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
 * [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
-* [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
+* [Font Awesome](http://fontawesome.io/license/free) | Font: SIL OFL 1.1, CSS: MIT License
 * [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
 
 Image for theme screenshot, Copyright Timothy Toomey
@@ -164,3 +164,11 @@ Source: https://www.flickr.com/photos/assaultshirts/50576216478/in/album-7215771
 Source: https://www.flickr.com/photos/assaultshirts/50576939861/in/album-72157716790081691/
 Source: https://www.flickr.com/photos/assaultshirts/50577074742/in/album-72157716790081691/
 Source: https://www.flickr.com/photos/assaultshirts/50576212893/in/album-72157716790081691/
+
+Illustration of Togo dog, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.covertnine.com/meet-togo-a-delivery-and-pickup-focused-e-commerce-solution-for-restaurants-breweries-and-dispensaries/
+
+Logo Feather, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.covertnine.com
