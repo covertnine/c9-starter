@@ -973,9 +973,13 @@ pre,
 	padding-left: 0px;
 }
 
-.widget,
-.footer-entirety .textwidget {
-	font-size: 1.4em;
+.sidebar {
+	font-size: 10px;
+}
+
+.footer-entirety .textwidget,
+.sidebar .widget .menu-item {
+	font-size: 1.2em;
 }
 
 .widget {
@@ -991,7 +995,7 @@ pre,
 .widget h3 {
 	font-weight: $font-weight-bold;
 	letter-spacing: 0.01em;
-	font-size: 1.8em;
+	font-size: 1.6em;
 }
 
 .widget select {
@@ -1041,6 +1045,12 @@ pre,
 .entry-content .wp-block-latest-comments p {
 	font-size: 16px;
 	line-height: 1.25;
+}
+
+/* search widget */
+.sidebar .widget_search .btn {
+	padding: 12px;
+	font-size: 12px;
 }
 
 /****************************************************************************************/

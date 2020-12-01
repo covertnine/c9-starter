@@ -480,6 +480,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_posts',
 			array(
 				'title'    => __('Posts', 'c9-starter'),
+				'description' => __('These settings control whether side bars show up on single post, posts, and archive page templates, as well as author name and link on single post templates. Changes will only be visible on those pages.', 'c9-starter'),
 				'priority' => 90,
 			)
 		);
@@ -488,7 +489,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_author_visible',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -512,7 +513,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_blog_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -537,7 +538,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_archive_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
