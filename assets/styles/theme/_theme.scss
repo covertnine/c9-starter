@@ -1950,9 +1950,9 @@ img {
 	.page-template-default .entry-content .alignwide,
 	.post-template-default .entry-content .alignwide,
 	.wp-block[data-type="core/cover"][data-align="wide"] {
-		width: 108%;
-		max-width: 768px;
-		margin-left: -4%;
+		width: 100%;
+		max-width: 100vw;
+		margin-left: 0%;
 		margin-right: 0;
 	}
 }
@@ -2170,6 +2170,17 @@ table tr th {
 		word-wrap: break-word;
 		font-family: $font-family-base;
 		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+
+	.page-template-default .entry-content>.wp-block-table.alignwide,
+	.entry-content>.wp-block-table.alignwide {
+		width: 120%;
+		max-width: 1368px;
+		margin-left: -10%;
+		margin-right: -10%;
 	}
 }
 
