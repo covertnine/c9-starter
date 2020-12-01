@@ -97,7 +97,7 @@ if (!function_exists('c9_post_nav')) {
 		}
 ?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e('Post navigation', 'c9-starter'); ?></h2>
+			<h2 class="sr-only"><?php esc_html_e('Post navigation', 'c9-starter'); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
@@ -160,7 +160,7 @@ function c9_sanitize_select($input, $setting)
  */
 
 add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
-if ( !function_exists('c9_add_search_form') ) {
+if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
 		if ('primary' == $args->theme_location) {
