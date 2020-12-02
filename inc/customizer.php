@@ -475,12 +475,13 @@ if (!function_exists('c9_customize_register')) {
 				'choices'     => $c9fonts,
 			)
 		);
-		
+
 		$wp_customize->add_setting(
 			'c9_fadein_webfonts',
 			array(
 				'default'           => true,
 				'transport'         => 'refresh',
+				'sanitize_callback' => 'c9_sanitize_checkbox',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
 			)

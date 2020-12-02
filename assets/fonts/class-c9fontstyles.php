@@ -101,69 +101,68 @@ class C9FontStyles
 
 
 		// Begin outputting styles:
-		
-		
+
+
 		// Hide text only while waiting for Web Font Loader to download its font, and only if the option is selected
 		if ($fadein_fonts) {
 			if (!empty($heading_font)) {
 				self::the_selectors('headings', '.wf-loading'); ?>,
-				<?php /* Some additional selectors here so we don't squash existing anchor transitions: */ ?>
-				.wf-loading .c9.site .h1 a,
-				.wf-loading .c9.site .h2 a,
-				.wf-loading .c9.site .h3 a,
-				.wf-loading .c9.site .h4 a,
-				.wf-loading .c9.site .h5 a,
-				.wf-loading .c9.site .h6 a,
-				.wf-loading .c9.site h1 a,
-				.wf-loading .c9.site h2 a,
-				.wf-loading .c9.site h3 a,
-				.wf-loading .c9.site h4 a,
-				.wf-loading .c9.site h5 a,
-				.wf-loading .c9.site h6 a {
-					color: transparent !important;
-				} <?php
+<?php /* Some additional selectors here so we don't squash existing anchor transitions: */ ?>
+.wf-loading .c9.site .h1 a,
+.wf-loading .c9.site .h2 a,
+.wf-loading .c9.site .h3 a,
+.wf-loading .c9.site .h4 a,
+.wf-loading .c9.site .h5 a,
+.wf-loading .c9.site .h6 a,
+.wf-loading .c9.site h1 a,
+.wf-loading .c9.site h2 a,
+.wf-loading .c9.site h3 a,
+.wf-loading .c9.site h4 a,
+.wf-loading .c9.site h5 a,
+.wf-loading .c9.site h6 a {
+color: transparent !important;
+} <?php
 			}
 			if (!empty($subheading_font)) {
 				self::the_selectors('subheadings', '.wf-loading'); ?> {
-					color: transparent !important;
-				} <?php
+	color: transparent !important;
+	} <?php
 			}
 			if (!empty($body_font)) {
 				self::the_selectors('body', '.wf-loading'); ?> {
-					color: transparent !important;
-				} <?php
+	color: transparent !important;
+	} <?php
 			}
 		}
-		
+
 		// Define their fonts, but also make sure unspecified headings don't inherit body_font
-		
+
 		self::the_selectors('headings'); ?> {
-			<?php if (!empty($heading_font)) { ?>
-				font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
-				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
-			<?php } else { ?>
-				font-family: var(--default-font);
-			<?php } ?>
-		} <?php 
-		
+<?php if (!empty($heading_font)) { ?>
+	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
+	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
+<?php } else { ?>
+	font-family: var(--default-font);
+<?php } ?>
+} <?php
+
 		self::the_selectors('subheadings'); ?> {
-			<?php if (!empty($subheading_font)) { ?>
-				font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
-				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
-			<?php } else { ?>
-				font-family: var(--default-font);
-			<?php } ?>
-		} <?php 
-		
+<?php if (!empty($subheading_font)) { ?>
+	font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
+	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
+<?php } else { ?>
+	font-family: var(--default-font);
+<?php } ?>
+} <?php
+
 		if (!empty($body_font)) { ?>
-			<?php self::the_selectors('body'); ?> {
-				font-family: <?php echo esc_html($body_font); ?>, helvetica, sans-serif;
-				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
-			} <?php 
+	<?php self::the_selectors('body'); ?> {
+	font-family: <?php echo esc_html($body_font); ?>, helvetica, sans-serif;
+	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
+	} <?php
 		}
-		
 	} //end render function
-	
+
 	/**
 	 * Print typography selectors for headdings/subheadings/body, optionally prefixed
 	 */
@@ -272,7 +271,7 @@ class C9FontStyles
 				);
 				break;
 		} // End of switch ($which_selectors)
-		
+
 		// When editing a post in admin, select only the editing area
 		global $pagenow;
 		if ($pagenow == 'post.php') {
@@ -282,7 +281,7 @@ class C9FontStyles
 				$selectors[] = '';
 			}
 		}
-		
+
 		// Add any given prefix to every selector
 		if (!is_null($prefix)) {
 			foreach ($selectors as &$selector) {

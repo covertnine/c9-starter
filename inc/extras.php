@@ -156,6 +156,14 @@ function c9_sanitize_select($input, $setting)
 }
 
 /**
+ * Sanitize checkbox inputs from Customizer
+ */
+function c9_sanitize_checkbox($input)
+{
+	return ($input === true) ? true : false;
+}
+
+/**
  * add a full screen search icon to navigation
  */
 
