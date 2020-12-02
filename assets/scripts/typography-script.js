@@ -24,7 +24,8 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 	WebFont.load({
 		google: {
 			families: c9QueuedFonts
-		}
+		},
+		timeout: 8000 // Set the timeout to 8 seconds. Font may swap if webfont take longer than that.
 	});
 
 }

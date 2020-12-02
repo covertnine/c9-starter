@@ -138,20 +138,18 @@ color: transparent !important;
 		// Define their fonts, but also make sure unspecified headings don't inherit body_font
 
 		self::the_selectors('headings'); ?> {
+	font-family: var(--default-font);
 <?php if (!empty($heading_font)) { ?>
 	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
-<?php } else { ?>
-	font-family: var(--default-font);
 <?php } ?>
 } <?php
 
 		self::the_selectors('subheadings'); ?> {
+	font-family: var(--default-font);
 <?php if (!empty($subheading_font)) { ?>
 	font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
-<?php } else { ?>
-	font-family: var(--default-font);
 <?php } ?>
 } <?php
 
