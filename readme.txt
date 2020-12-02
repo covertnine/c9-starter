@@ -1,5 +1,5 @@
 === C9 Work ===
-Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
+Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.3
 Tested up to: 5.4.2
