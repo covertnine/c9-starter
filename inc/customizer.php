@@ -475,6 +475,25 @@ if (!function_exists('c9_customize_register')) {
 				'choices'     => $c9fonts,
 			)
 		);
+		
+		$wp_customize->add_setting(
+			'c9_fadein_webfonts',
+			array(
+				'default'           => true,
+				'transport'         => 'refresh',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
+		$wp_customize->add_control(
+			'c9_fadein_webfonts',
+			array(
+				'type'        => 'checkbox',
+				'label'       => __('Fade-in custom fonts as they download', 'c9-starter'),
+				'description' => __('Select this if you notice a flash of the default font as the custom fonts download the first time a user visits the site.', 'c9-starter'),
+				'section'     => 'c9_branding',
+			)
+		);
 
 		$wp_customize->add_section(
 			'c9_posts',

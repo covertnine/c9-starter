@@ -15,6 +15,7 @@ class C9FontStyles
 		$heading_font    = $font_array['c9_heading_font'];
 		$subheading_font = $font_array['c9_subheading_font'];
 		$body_font       = $font_array['c9_body_font'];
+		$fadein_fonts    = get_theme_mod('c9_fadein_webfonts', true);
 
 		//assign CSS name of font based on selected font in customizer
 		$c9fonts = array(
@@ -98,106 +99,200 @@ class C9FontStyles
 			}
 		}
 
-?>
-		.c9-site-title,
-		.c9.site .h1,
-		.c9.site .h2,
-		.c9.site .h3,
-		.c9.site .h4,
-		.c9.site .h5,
-		.c9.site .h6,
-		.c9.site h1,
-		.c9.site h2,
-		.c9.site h3,
-		.c9.site h4,
-		.c9.site h5,
-		.c9.site h6,
-		.editor-styles-wrapper h1,
-		.editor-styles-wrapper h2,
-		.editor-styles-wrapper h3,
-		.editor-styles-wrapper h4,
-		.editor-styles-wrapper h5,
-		.editor-styles-wrapper h6
-		.entry-content blockquote:before,
-		.c9-h,
-		.c9-h.h,
-		.c9-txl,
-		.display-1,
-		.display-2,
-		.display-3,
-		.display-4,
-		.display-5,
-		.display-6,
-		.header-navbar .navbar .nav .search,
-		.page-search-results nav .pagination .page-item .page-link,
-		.c9.woocommerce nav.woocommerce-pagination ul li span,
-		.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
-		.woocommerce .site-main .woocommerce-breadcrumb,
-		.archive nav .pagination .page-item .page-link,
-		.blog nav .pagination .page-item .page-link,
-		.single .navigation .nav-previous a,
-		.single .navigation .nav-next a,
-		.header-navbar .search #s,
-		.c9 .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
-		.editor-styles-wrapper .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label,
-		.editor-post-title__block .editor-post-title__input {
-		font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
+
+		// Begin outputting styles:
+		
+		
+		// Hide text only while waiting for Web Font Loader to download its font, and only if the option is selected
+		if ($fadein_fonts) {
+			if (!empty($heading_font)) {
+				self::the_selectors('headings', '.wf-loading'); ?>,
+				<?php /* Some additional selectors here so we don't squash existing anchor transitions: */ ?>
+				.wf-loading .c9.site .h1 a,
+				.wf-loading .c9.site .h2 a,
+				.wf-loading .c9.site .h3 a,
+				.wf-loading .c9.site .h4 a,
+				.wf-loading .c9.site .h5 a,
+				.wf-loading .c9.site .h6 a,
+				.wf-loading .c9.site h1 a,
+				.wf-loading .c9.site h2 a,
+				.wf-loading .c9.site h3 a,
+				.wf-loading .c9.site h4 a,
+				.wf-loading .c9.site h5 a,
+				.wf-loading .c9.site h6 a {
+					color: transparent !important;
+				} <?php
+			}
+			if (!empty($subheading_font)) {
+				self::the_selectors('subheadings', '.wf-loading'); ?> {
+					color: transparent !important;
+				} <?php
+			}
+			if (!empty($body_font)) {
+				self::the_selectors('body', '.wf-loading'); ?> {
+					color: transparent !important;
+				} <?php
+			}
+		}
+		
+		// Define their fonts, but also make sure unspecified headings don't inherit body_font
+		
+		self::the_selectors('headings'); ?> {
+			<?php if (!empty($heading_font)) { ?>
+				font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
+				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
+			<?php } else { ?>
+				font-family: var(--default-font);
+			<?php } ?>
+		} <?php 
+		
+		self::the_selectors('subheadings'); ?> {
+			<?php if (!empty($subheading_font)) { ?>
+				font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
+				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
+			<?php } else { ?>
+				font-family: var(--default-font);
+			<?php } ?>
+		} <?php 
+		
+		if (!empty($body_font)) { ?>
+			<?php self::the_selectors('body'); ?> {
+				font-family: <?php echo esc_html($body_font); ?>, helvetica, sans-serif;
+				<?php if ($fadein_fonts) { ?> transition: color 1s; <?php } ?>
+			} <?php 
+		}
+		
+	} //end render function
+	
+	/**
+	 * Print typography selectors for headdings/subheadings/body, optionally prefixed
+	 */
+	private static function the_selectors($which_selectors, $prefix = NULL)
+	{
+		// The big list of selectors
+		switch ($which_selectors) {
+			case 'headings':
+				$selectors = array(
+					'.c9-site-title',
+					'.c9.site .h1',
+					'.c9.site .h2',
+					'.c9.site .h3',
+					'.c9.site .h4',
+					'.c9.site .h5',
+					'.c9.site .h6',
+					'.c9.site h1',
+					'.c9.site h2',
+					'.c9.site h3',
+					'.c9.site h4',
+					'.c9.site h5',
+					'.c9.site h6',
+					'.editor-styles-wrapper h1',
+					'.editor-styles-wrapper h2',
+					'.editor-styles-wrapper h3',
+					'.editor-styles-wrapper h4',
+					'.editor-styles-wrapper h5',
+					'.editor-styles-wrapper h',
+					'.entry-content blockquote:before',
+					'.c9-h',
+					'.c9-h.h',
+					'.c9-txl',
+					'.display-1',
+					'.display-2',
+					'.display-3',
+					'.display-4',
+					'.display-5',
+					'.display-6',
+					'.header-navbar .navbar .nav .search',
+					'.page-search-results nav .pagination .page-item .page-link',
+					'.c9.woocommerce nav.woocommerce-pagination ul li span',
+					'.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers',
+					'.woocommerce .site-main .woocommerce-breadcrumb',
+					'.archive nav .pagination .page-item .page-link',
+					'.blog nav .pagination .page-item .page-link',
+					'.single .navigation .nav-previous a',
+					'.single .navigation .nav-next a',
+					'.header-navbar .search #s',
+					'.c9 .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label',
+					'.editor-styles-wrapper .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label',
+					'.editor-post-title__block .editor-post-title__input'
+				);
+				break;
+			case 'subheadings':
+				$selectors = array(
+					'p.wp-block-subhead',
+					'.subhead-h',
+					'.c9-sh',
+					'.text-muted',
+					'.c9 .c9-sh',
+					'.c9 .text-muted',
+					'.c9 .c9-heading .c9-h .text-muted',
+					'.c9 .c9-heading .c9-sh .text-muted',
+					'.c9 .c9-heading .c9-txl .text-muted',
+					'.c9-heading.section-heading >.c9-sh'
+				);
+				break;
+			case 'body':
+				$selectors = array(
+					':root',
+					'body',
+					'body .is-root-container',
+					'body .editor-styles-wrapper .is-root-container',
+					'.c9 .wp-block-pullquote',
+					'.c9 .wp-block-pullquote blockquote p',
+					'.c9 #wrapper-footer',
+					'.wp-block-table tr td',
+					'.btn',
+					'.btn:visited',
+					'.entry-content button',
+					'.entry-content input[type="button"]',
+					'.entry-content input[type="reset"]',
+					'.entry-content input[type="submit"]',
+					'.wp-block-button__link',
+					'.wp-block-file__button',
+					'.wp-block-file .wp-block-file__button',
+					'#mc_embed_signup input[type="email"]',
+					'.c9 input[type="text"]',
+					'.c9 input[type="email"]',
+					'.c9 input[type="url"]',
+					'.c9 input[type="password"]',
+					'.c9 input[type="tel"]',
+					'.c9 textarea',
+					'#fullscreensearch input[type="search"]',
+					'.c9 .gform_wrapper label.gfield_label',
+					'.c9 .gform_wrapper legend.gfield_label',
+					'.c9 .gform_wrapper input[type="text"]',
+					'.c9 .gform_wrapper input[type="password"]',
+					'.c9 .gform_wrapper input[type="tel"]',
+					'.c9 .gform_wrapper textarea',
+					'.c9 .gform_button.button',
+					'.c9 .entry-content',
+					'.navbar',
+					'.navbar ul li .dropdown-item',
+					'.navbar ul li a'
+				);
+				break;
+		} // End of switch ($which_selectors)
+		
+		// When editing a post in admin, select only the editing area
+		global $pagenow;
+		if ($pagenow == 'post.php') {
+			$prefix = $prefix . ' .block-editor-block-list__layout.is-root-container';
+			// Also select the block editor itself
+			if ($which_selectors == 'body') {
+				$selectors[] = '';
+			}
+		}
+		
+		// Add any given prefix to every selector
+		if (!is_null($prefix)) {
+			foreach ($selectors as &$selector) {
+				$selector = $prefix . ' ' . $selector;
+			}
+			unset($selector);
 		}
 
-		p.wp-block-subhead,
-		.subhead-h,
-		.c9-sh,
-		.text-muted,
-		.c9 .c9-sh,
-		.c9 .text-muted,
-		.c9 .c9-heading .c9-h .text-muted,
-		.c9 .c9-heading .c9-sh .text-muted,
-		.c9 .c9-heading .c9-txl .text-muted,
-		.c9-heading.section-heading >.c9-sh {
-		font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
-		}
-		<?php if (!empty($body_font)) { ?>
-			:root,
-			body,
-			body .is-root-container,
-			body .editor-styles-wrapper .is-root-container,
-			.c9 .wp-block-pullquote,
-			.c9 .wp-block-pullquote blockquote p,
-			.c9 #wrapper-footer,
-			.wp-block-table tr td,
-			.btn,
-			.btn:visited,
-			.entry-content button,
-			.entry-content input[type="button"],
-			.entry-content input[type="reset"],
-			.entry-content input[type="submit"],
-			.wp-block-button__link,
-			.wp-block-file__button,
-			.wp-block-file .wp-block-file__button,
-			#mc_embed_signup input[type="email"],
-			.c9 input[type="text"],
-			.c9 input[type="email"],
-			.c9 input[type="url"],
-			.c9 input[type="password"],
-			.c9 input[type="tel"],
-			.c9 textarea,
-			#fullscreensearch input[type="search"],
-			.c9 .gform_wrapper label.gfield_label,
-			.c9 .gform_wrapper legend.gfield_label,
-			.c9 .gform_wrapper input[type="text"],
-			.c9 .gform_wrapper input[type="password"],
-			.c9 .gform_wrapper input[type="tel"],
-			.c9 .gform_wrapper textarea,
-			.c9 .gform_button.button,
-			.c9 .entry-content,
-			.navbar,
-			.navbar ul li .dropdown-item,
-			.navbar ul li a {
-			font-family: <?php echo esc_html($body_font); ?>, helvetica, sans-serif;
-			}
-<?php
-		} //end checking for body_font setting
-	} //end render function
+		echo implode(', ', $selectors);
+	}
 
 	/**
 	 * Regex powered CSS minifier

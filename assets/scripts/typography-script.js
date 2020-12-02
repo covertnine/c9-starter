@@ -12,11 +12,11 @@ if (c9SelectedFonts.c9_default_font === "yes") {
 	if (c9SelectedFonts.c9_heading_font) {
 		c9QueuedFonts.push(c9SelectedFonts.c9_heading_font);
 	}
-	if (c9SelectedFonts.c9_subheading_font != c9SelectedFonts.c9_heading_font) {
+	if (c9SelectedFonts.c9_subheading_font && c9SelectedFonts.c9_subheading_font != c9SelectedFonts.c9_heading_font) {
 		c9QueuedFonts.push(c9SelectedFonts.c9_subheading_font);
 	}
 
-	if (c9SelectedFonts.c9_body_font != c9SelectedFonts.c9_heading_font) {
+	if (c9SelectedFonts.c9_body_font && c9SelectedFonts.c9_body_font != c9SelectedFonts.c9_heading_font) {
 		c9QueuedFonts.push(c9SelectedFonts.c9_body_font);
 	}
 
