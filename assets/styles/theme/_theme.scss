@@ -1937,7 +1937,6 @@ hr {
 }
 
 /****************************************************************************************/
-
 /********* WordPress Gutenberg Cover Block & alignwide + alignfull settings
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
@@ -2150,6 +2149,17 @@ table tr th {
 		word-wrap: break-word;
 		font-family: $font-family-base;
 		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+
+	.page-template-default .entry-content>.wp-block-table.alignwide,
+	.entry-content>.wp-block-table.alignwide {
+		width: 120%;
+		max-width: 1368px;
+		margin-left: -10%;
+		margin-right: -10%;
 	}
 }
 
@@ -3038,7 +3048,13 @@ screen and (max-height: 300px) {
 .wp-block-button__link,
 .wp-block-file__button,
 .wp-block-file .wp-block-file__button,
-.wp-block-button__link:not([href]):not([tabindex]) {
+.wp-block-button__link:not([href]):not([tabindex]),
+.c9 .woocommerce #respond input#submit,
+.c9 .woocommerce a.button,
+.c9 .woocommerce button.button,
+.c9 .woocommerce input.button,
+.wp-block-button a:not([href]):not([tabindex]):focus,
+.wp-block-button a:not([href]):not([tabindex]):hover {
 	display: inline-block;
 	padding: 12px 35px;
 	width: auto;
@@ -3054,6 +3070,18 @@ screen and (max-height: 300px) {
 	white-space: normal;
 	color: $light;
 	line-height: 1;
+	border-radius: 0px;
+}
+
+@media only screen and (max-width: 414px) {
+
+	.c9 .woocommerce #respond input#submit,
+	.c9 .woocommerce a.button,
+	.c9 .woocommerce button.button,
+	.c9 .woocommerce input.button {
+		padding: 12px 15px;
+		font-size: 12px;
+	}
 }
 
 .wp-block-button__link:focus,
@@ -3083,7 +3111,9 @@ screen and (max-height: 300px) {
 
 .wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.wp-block-button__link.c9-button-shape-outline {
+.wp-block-button__link.c9-button-shape-outline,
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
 	border: 3px solid;
 	background-color: transparent;
 	color: $gray-900;
