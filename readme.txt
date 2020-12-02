@@ -33,7 +33,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.2.7 =
-Updated theme tags, TGIM update, license + readme updates, button style, table style, hr style updates
+Updated theme tags, TGIM update, license + readme updates, button style, table style, hr style updates, pagination updates.
 
 = 2.2.6 =
 Fixing line height issues on paragraphs and list items. Fixed ol and ul alignment issues in backend. Updated TGM to prevent local install errors. Updated with C9 Starter theme 2.2.9 with bug fixes for starter-content, horizontal scrollbars on some PC browsers.
