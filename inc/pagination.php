@@ -53,7 +53,7 @@ if (!function_exists('c9_pagination')) {
 					};
 			?>
                                             ">
-						<?php esc_html(str_replace('page-numbers', 'page-link', $link)); ?>
+						<?php esc_html_e(str_replace('page-numbers', 'page-link', $link)); ?>
 					</li>
 
 				<?php

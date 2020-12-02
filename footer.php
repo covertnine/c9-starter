@@ -42,7 +42,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 													<div class="footer-social text-center">
 														<?php
 														foreach ($c9_social_links as $link_key => $link_value) {
-															esc_html($link_value);
+															echo $link_value;
 														}
 														?>
 													</div>
