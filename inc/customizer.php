@@ -449,6 +449,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_posts',
 			array(
 				'title'    => __('Posts', 'c9-work'),
+				'description' => __('These settings control whether side bars show up on single post, posts, and archive page templates, as well as author name and link on single post templates. Changes will only be visible on those pages.', 'c9-work'),
 				'priority' => 90,
 			)
 		);
