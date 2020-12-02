@@ -4,24 +4,24 @@ Theme URI: https://work.covertnine.com
 Author: COVERT NINE
 Author URI: https://www.covertnine.com
 Description: A block-driven WordPress theme for businesses that supports Max Mega menu and WooCommerce, based on the C9 starter theme from COVERT NINE.
-Version: 2.2.6
+Version: 2.2.7
 Requires at least: 5.4
 Tested up to: 5.5.3
 Requires PHP: 7.0
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: c9-work
-Tags: one-column, block-styles, wide-blocks, custom-menu, custom-logo, full-width-template, threaded-comments, featured-images, theme-options, translation-ready, e-commerce
+Tags: block-styles, wide-blocks, block-patterns, grid-layout, left-sidebar, right-sidebar, custom-menu, custom-logo, custom-background, editor-style, full-width-template, threaded-comments, featured-images, theme-options, translation-ready, e-commerce, photography, accessibility-ready, featured-image-header, footer-widgets, sticky-post
 
 This theme, like WordPress, is licensed under the GPL.
 
 Resource Licenses:
-Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Font Awesome: http://fontawesome.io/license/free (Font: SIL OFL 1.1, CSS: MIT License)
 Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
-Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+Owl Carousel 2: https://owlcarousel2.github.io/OwlCarousel2/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 TGMPA https://github.com/TGMPA/TGM-Plugin-Activation | GNU GPL v2
 Web Font Loader https://github.com/typekit/webfontloader | Apache 2.0
-C9 Work Logos: https://c9.covertnine.com | GNU GPL v2
+C9 Work Logos: https://c9.covertnine.com | GNU GPL v3
 */
