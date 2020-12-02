@@ -6,7 +6,7 @@ Tested up to: 5.5.3
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.3.1
+Stable Tag: 2.3.2
 
 A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.3.2 =
+Fixing issue with footer social links.
 
 = 2.3.1 =
 Escaping some fields, adding styling for default elements, fixing wide alignments on some screen sizes, customizer refresh fixes for post settings
