@@ -327,14 +327,14 @@ var c9Page = function ($) {
     // Will hold previously focused element
 
     var focusedElementBeforeNavbar;
-    var c9workNavbar = $("#wrapper-navbar");
-    $(".navbar-toggler").on("click", c9workNavbarUse);
+    var c9starterNavbar = $("#wrapper-navbar");
+    $(".navbar-toggler").on("click", c9starterNavbarUse);
 
-    function c9workNavbarUse(e) {
-      e.preventDefault(); //listen for tab keying to trab tabs in modal
+    function c9starterNavbarUse(e) {
+      e.preventDefault(); //listen for tab keying to trap tabs in navbar
 
-      $("body").on("keydown", c9workNavbar, trapTabKey);
-      focusedElementBeforeNavbar = document.activeElement; // Find all focusable children
+      $("body").on("keydown", c9starterNavbar, trapTabKey);
+      focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
 
       var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
       focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
@@ -362,15 +362,13 @@ var c9Page = function ($) {
           }
         }
       }
-    } //end c9workNavbarUse
+    } //end c9starterNavbarUse
     //close navbar
 
 
     $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
-        $(this).addClass("collapsed");
-        $(this).attr("aria-expanded", "false");
         focusedElementBeforeNavbar.focus();
       }
     });

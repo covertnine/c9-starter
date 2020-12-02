@@ -53,11 +53,11 @@ function c9_post_header_size_html($post)
 function c9_save_header_size($post_id)
 {
 	if (array_key_exists('c9_post_header_size', $_POST)) {
-		$unslashed = wp_unslash($_POST);
+		$unslashed = sanitize_text_field(wp_unslash($_POST));
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
-			esc_html($unslashed)
+			$unslashed
 		);
 	}
 }
