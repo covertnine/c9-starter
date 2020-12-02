@@ -85,7 +85,7 @@ function c9_need_client_folder()
 {
 ?>
 	<div class="update-nag notice">
-		<p><?php _e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9-work' ); ?></p>
+		<p><?php esc_html_e('You need a client! If you have no client-specific code, add an empty client/client.php to the parent theme. If you still dont know what&#39;s going on, contact connect@covertnine.com', 'c9-work'); ?></p>
 	</div>
 <?php
 }
