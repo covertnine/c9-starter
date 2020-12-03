@@ -33,7 +33,8 @@ add_action('add_meta_boxes', 'c9_post_header_size');
  */
 function c9_post_header_size_html($post)
 {
-	$value = isset(get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size']) ? get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size'] : 'small';
+	$c9_post_header_size = get_post_meta($post->ID, 'c9_post_header_size', true);
+	$value = isset($c9_post_header_size) ? $c9_post_header_size : 'small';
 ?>
 	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-starter'); ?></label>
 	<div>
@@ -53,11 +54,11 @@ function c9_post_header_size_html($post)
 function c9_save_header_size($post_id)
 {
 	if (array_key_exists('c9_post_header_size', $_POST)) {
-		$unslashed = sanitize_text_field(wp_unslash($_POST));
+		$unslashed = wp_unslash($_POST);
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
-			$unslashed
+			c9_sanitize_post_header_size($unslashed['c9_post_header_size'])
 		);
 	}
 }
