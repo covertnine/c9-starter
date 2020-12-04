@@ -154,3 +154,48 @@ function c9_sanitize_select($input, $setting)
 	// If the input is a valid key, return it; otherwise, return the default.
 	return (array_key_exists($input, $choices) ? $input : $setting->default);
 }
+
+/**
+ * Sanitize checkbox inputs from Customizer
+ */
+function c9_sanitize_checkbox($input)
+{
+	return ($input === true) ? true : false;
+}
+
+/**
+ * Sanitize checkbox inputs from post meta
+ */
+function c9_sanitize_post_header_size($input)
+{
+
+	// Ensure input is a slug.
+	$input = sanitize_html_class($input);
+
+	// Get list of choices from the setting
+	$choices = array('large' => 0, 'small' => 1);
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return (array_key_exists($input, $choices) ? $input : 'small');
+}
+
+/**
+ * add a full screen search icon to navigation
+ */
+
+add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
+if (!function_exists('c9_add_search_form')) {
+	function c9_add_search_form($items, $args)
+	{
+		if (('primary' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
+			$items .= '<li class="nav-item search">
+					<div class="nav-search">
+						<a href="#" class="btn-nav-search nav-link">
+							<i class="fa fa-search"></i>
+							<span class="sr-only">' . __('Search', 'c9-starter') . '</span>
+						</a>
+					</div></li>';
+		}
+		return $items;
+	}
+}
