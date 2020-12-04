@@ -37,6 +37,7 @@ if (!function_exists('c9_customize_register')) {
 				'default'    => false,
 				'type' 	     => 'theme_mod',
 				'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'c9_sanitize_checkbox',
 			)
 		);
 
