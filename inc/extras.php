@@ -187,7 +187,7 @@ add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
 if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
-		if ('primary' == $args->theme_location) {
+		if (('primary' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
 			$items .= '<li class="nav-item search">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">

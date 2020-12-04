@@ -24,6 +24,33 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
 		$wp_customize->add_section(
+			'c9_header',
+			array(
+				'title'    => __('Header', 'c9-starter'),
+				'priority' => 45,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'c9_header_hide_search',
+			array(
+				'default'    => false,
+				'type' 	     => 'theme_mod',
+				'capability' => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			'c9_header_hide_search',
+			array(
+				'label'    => __('Hide the search form in the header', 'c9-starter'),
+				'section'  => 'c9_header',
+				'priority' => 10,
+				'type'     => 'checkbox',
+			)
+		);
+
+		$wp_customize->add_section(
 			'c9_footer',
 			array(
 				'title'    => __('Footer', 'c9-starter'),
