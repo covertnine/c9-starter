@@ -92,6 +92,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 	</form>
 	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e('Close', 'c9-starter'); ?></span></button>
 </div>
+<div id="backtotop" class="backtotop-container"> <button type="button" class="btn-back-to-top"><span class="sr-only">Back to top</span><i class="fa fa-arrow-up"></i></button></div>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
 

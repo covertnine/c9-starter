@@ -101,6 +101,8 @@ var c9Page = function ($) {
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
+      var heightDocument = $(document).height();
+      var position = $(window).height() + $(window).scrollTop();
 
       if (scroll >= 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
@@ -111,6 +113,23 @@ var c9Page = function ($) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
+
+      if (0 == (heightDocument - position) / heightDocument) {
+        jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
+      } else {
+        jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
+
+    $("#backtotop").on("click", ".btn-back-to-top", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        'behavior': 'smooth',
+        'top': 0
+      });
+      $(".btn-back-to-top").css("opacity", "0");
+      $("#page").focus();
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
 
