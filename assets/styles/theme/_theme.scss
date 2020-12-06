@@ -261,7 +261,7 @@ kbd,
 	padding: 13px;
 	background: rgba($gray-500, 0.4);
 	line-height: 1.3;
-	white-space: normal;
+	white-space: pre;
 	margin-bottom: 10px;
 	border-radius: 0px;
 }
@@ -1813,28 +1813,30 @@ img {
 }
 
 .entry-content .wp-block-separator.is-style-wide,
-.wp-block-separator.is-style-wide {
+.wp-block-separator.is-style-wide:not(.is-style-dots) {
 	width: 100%;
 	height: 2px;
 	background-color: $gray-500;
 	border: 0;
+	margin: 30px auto;
 }
 
 .entry-content .wp-block-separator.is-style-dots,
-.wp-block-separator.is-style-dots {
+.wp-block-separator.is-style-dots:not(.is-style-wide) {
 	width: 100%;
 	background-color: transparent;
 	height: 2px;
 	border: 0;
+	margin: 30px auto;
 }
 
 .entry-content .wp-block-separator.is-style-dots:before,
 .wp-block-separator.is-style-dots:before {
-	color: $gray-500;
 	height: 2px;
 	margin-top: -8px;
 	display: block;
 	border: 0;
+	margin: 30px auto;
 }
 
 .wp-block-separator,

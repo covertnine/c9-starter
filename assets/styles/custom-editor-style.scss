@@ -359,6 +359,12 @@ body .editor-styles-wrapper,
 	}
 }
 
+/* code blocks */
+code,
+kbd {
+	background-color: transparent;
+}
+
 /* make mobile editing on gutenberg possible */
 
 @media only screen and (max-width: 414px) {
