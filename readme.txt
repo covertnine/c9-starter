@@ -30,7 +30,7 @@ Yes, but only one tier of dropdowns are currently supported.
 == Changelog ==
 
 = 2.2.3 =
-Added styles for more core blocks, escaping and data sanitization updates, fixes for WordPress.org Theme Review, license updates.
+Added styles for more core blocks, escaping and data sanitization updates, fixes for WordPress.org Theme Review, license updates. Updated backend styles for WordPress 5.6, better font support.
 
 = 2.2.2 =
 Fixing bugs for WordPress.org submission. Moved GSAP out of theme for GPL. Sanitization and escaping updates. List items in block editor not aligned bug fix. Gravity forms backend updates. Compatibility update for C9 Blocks 1.2 and C9 Blocks Animation 1.0
@@ -97,6 +97,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 
 == Upgrade Notice ==
+
+= 2.2.3 =
+* Custom field setting on posts for header size is blank by default. Selectin large or small header layout will display header with title, featured image, and post meta.
 
 = 2.2.1 =
 * This version fixes a font issue in the backend, and accommodates WordPress.org Theme Repo requirements.
