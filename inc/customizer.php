@@ -490,7 +490,7 @@ if (!function_exists('c9_customize_register')) {
 			array(
 				'type'        => 'checkbox',
 				'label'       => __('Fade-in custom fonts as they download', 'c9-togo'),
-				'description' => __('Select this if you notice a flash of the default font as the custom fonts download the first time a user visits the site.', 'c9-starter'),
+				'description' => __('Select this if you notice a flash of the default font as the custom fonts download the first time a user visits the site.', 'c9-togo'),
 				'section'     => 'c9_branding',
 			)
 		);
