@@ -304,7 +304,7 @@ var c9Page = (function ($) {
 			//listen for tab keying to trab tabs in modal
 			$("body").on("keydown", c9workNavbar, trapTabKey);
 
-			focusedElementBeforeNavbar = document.activeElement;
+			focusedElementBeforeNavbar = $(".btn-nav-search");
 
 			// Find all focusable children
 			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
@@ -320,9 +320,6 @@ var c9Page = (function ($) {
 			focusableElements[0].focus();
 
 			function trapTabKey(e) {
-				console.log(focusableElements);
-				console.log(' ');
-				console.log(document.activeElement);
 				// Check for TAB key press
 
 				if (e.keyCode === 9) {
@@ -353,8 +350,6 @@ var c9Page = (function ($) {
 				e.target.className == ".navbar-toggler" ||
 				e.keyCode == 27
 			) {
-				$(this).addClass("collapsed");
-				$(this).attr("aria-expanded", "false");
 				focusedElementBeforeNavbar.focus();
 			}
 		});

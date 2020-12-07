@@ -346,7 +346,7 @@ var c9Page = function ($) {
       e.preventDefault(); //listen for tab keying to trab tabs in modal
 
       $("body").on("keydown", c9workNavbar, trapTabKey);
-      focusedElementBeforeNavbar = document.activeElement; // Find all focusable children
+      focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
 
       var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
       focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements); // Convert NodeList to Array
@@ -357,10 +357,7 @@ var c9Page = function ($) {
       focusableElements[0].focus();
 
       function trapTabKey(e) {
-        console.log(focusableElements);
-        console.log(' ');
-        console.log(document.activeElement); // Check for TAB key press
-
+        // Check for TAB key press
         if (e.keyCode === 9) {
           // SHIFT + TAB
           if (e.shiftKey) {
@@ -384,8 +381,6 @@ var c9Page = function ($) {
     $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
-        $(this).addClass("collapsed");
-        $(this).attr("aria-expanded", "false");
         focusedElementBeforeNavbar.focus();
       }
     });
