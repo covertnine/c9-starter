@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -8,24 +9,23 @@
  */
 ?>
 <?php
-if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
+if (file_exists(locate_template('client/inc/footer.php'))) {
 
-	include( locate_template( 'client/inc/footer.php' ) );
-
+	include(locate_template('client/inc/footer.php'));
 } else {
 
-		$c9_footer_default = '&copy; ' . date("Y") . ' ' . get_bloginfo( 'name' ) . '. <a href="https://www.covertnine.com" title="' . __('Web design company in Chicago', 'c9-togo') . '" target="_blank">' . __('WordPress Website design by COVERT NINE', 'c9-togo') . '</a>.';
-		$c9_footer_search = get_theme_mod('c9_show_search', 'show');
-		$c9_footer_copyright = get_theme_mod( 'c9_copyright_content', $c9_footer_default );
+	$c9_footer_default = '&copy; ' . date("Y") . ' ' . get_bloginfo('name') . '. <a href="https://www.covertnine.com" title="' . esc_attr__('Web design company in Chicago', 'c9-togo') . '" target="_blank">' . esc_attr__('WordPress Website design by COVERT NINE', 'c9-togo') . '</a>.';
+	$c9_footer_search = get_theme_mod('c9_show_search', 'show');
+	$c9_footer_copyright = get_theme_mod('c9_copyright_content', $c9_footer_default);
 
-		require_once( get_template_directory() . '/inc/class-footer.php' );
-		$c9_social_links = c9FooterHelpers::build_c9_social();
+	require_once(get_template_directory() . '/inc/class-footer.php');
+	$c9_social_links = c9FooterHelpers::build_c9_social();
 
-	if ( is_active_sidebar( 'footerfull' ) || !empty($c9_footer_copyright) || 'show' === $c9_footer_search  || $c9_social_links ) {
-	?>
+	if (is_active_sidebar('footerfull') || !empty($c9_footer_copyright) || 'show' === $c9_footer_search  || $c9_social_links) {
+?>
 		<div class="footer-entirety">
 			<?php
-			get_sidebar( 'footerfull' );
+			get_sidebar('footerfull');
 			?>
 			<div class="footer-wrapper" id="wrapper-footer">
 				<div class="container">
@@ -36,62 +36,65 @@ if ( file_exists( locate_template( 'client/inc/footer.php' ) ) ) {
 									<div class="container">
 										<div class="row text-center d-flex justify-content-between align-items-center">
 											<?php
-											if ( $c9_social_links ) :
+											if ($c9_social_links) :
 											?>
-											<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
-												<div class="footer-social text-center">
-												<?php
-												foreach ( $c9_social_links as $link_key => $link_value ) {
-													echo $link_value;
-													}
-												?>
-												</div>
-											</div>
-											<?php endif; ?>
-												<?php
-													if ( !empty($c9_footer_copyright) ) {
-														echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . wp_kses_post($c9_footer_copyright ) . '</p></div>';
-													}
-
-													if ( 'show' === $c9_footer_search ) :
-													?>
-													<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
-														<div class="footer-search">
-															<?php get_search_form(); ?>
-														</div>
+												<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
+													<div class="footer-social text-center">
+														<?php
+														foreach ($c9_social_links as $link_key => $link_value) {
+															echo $link_value;
+														}
+														?>
 													</div>
-													<?php
-													endif;
-												?>
+												</div>
+											<?php endif; ?>
+											<?php
+											if (!empty($c9_footer_copyright)) {
+												echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . wp_kses_post($c9_footer_copyright) . '</p></div>';
+											}
+
+											if ('show' === $c9_footer_search) :
+											?>
+												<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
+													<div class="footer-search">
+														<?php get_search_form(); ?>
+													</div>
+												</div>
+											<?php
+											endif;
+											?>
 										</div><!-- .row-->
 									</div><!-- .container-->
 								</div><!-- .site-info -->
 							</footer><!-- #colophon -->
-						</div> <!--col end -->
+						</div>
+						<!--col end -->
 					</div><!-- row end -->
 				</div><!-- container end -->
 			</div><!-- wrapper end -->
-		</div><!--end .footer-entirety-->
+		</div>
+		<!--end .footer-entirety-->
 	<?php
-		}
+	}
 	?>
-	<?php
-	}; // end of checking for client footer.php
-	?>
-	</div><!--end smoothwrapper-->
-	<div id="fullscreensearch">
-		<form role="search" method="get" id="fullscreen" action="/">
-			<div>
-				<span class="sr-only"><?php esc_html_e( 'Search for:', 'c9-togo' ); ?></span>
-				<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php esc_attr_e( 'Search...', 'c9-togo' ); ?>" />
-				<button type="submit" class="btn"><?php esc_html_e( 'Search', 'c9-togo' ); ?></button>
-			</div>
-		</form>
-		<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e( 'Close', 'c9-togo' ); ?></span></button>
-	</div>
-	<div id="backtotop" class="backtotop-container">
-		<button type="button" class="btn-back-to-top" type="button"><span class="sr-only"><?php esc_html_e('Back to top', 'c9-togo' ); ?></span><i class="fa fa-arrow-up"></i></button>
-	</div>
+<?php
+}; // end of checking for client footer.php
+?>
+</div>
+<!--end smoothwrapper-->
+<div id="fullscreensearch">
+	<form role="search" method="get" id="fullscreen" action="/">
+		<div>
+			<span class="sr-only"><?php esc_html_e('Search for:', 'c9-togo'); ?></span>
+			<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php esc_attr_e('Search...', 'c9-togo'); ?>" />
+			<button type="submit" class="btn"><?php esc_html_e('Search', 'c9-togo'); ?></button>
+		</div>
+	</form>
+	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e('Close', 'c9-togo'); ?></span></button>
+</div>
+<div id="backtotop" class="backtotop-container">
+	<button type="button" class="btn-back-to-top" type="button"><span class="sr-only"><?php esc_html_e('Back to top', 'c9-togo'); ?></span><i class="fa fa-arrow-up"></i></button>
+</div>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
 

@@ -475,7 +475,25 @@ if (!function_exists('c9_customize_register')) {
 				'choices'     => $c9fonts,
 			)
 		);
-
+		$wp_customize->add_setting(
+			'c9_fadein_webfonts',
+			array(
+				'default'           => true,
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'c9_sanitize_checkbox',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
+		$wp_customize->add_control(
+			'c9_fadein_webfonts',
+			array(
+				'type'        => 'checkbox',
+				'label'       => __('Fade-in custom fonts as they download', 'c9-togo'),
+				'description' => __('Select this if you notice a flash of the default font as the custom fonts download the first time a user visits the site.', 'c9-starter'),
+				'section'     => 'c9_branding',
+			)
+		);
 		$wp_customize->add_section(
 			'c9_posts',
 			array(
@@ -488,7 +506,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_author_visible',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -512,7 +530,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_blog_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -537,7 +555,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_archive_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
