@@ -38,6 +38,17 @@ jQuery(document).ready(function () {
 				visibility();
 				setting.bind(visibility);
 			});
+			wp.customize.control('c9_fadein_webfonts', function (control) {
+				var visibility = function () {
+					if ('no' !== setting.get()) {
+						control.container.slideDown(180);
+					} else {
+						control.container.slideUp(180);
+					}
+				};
+				visibility();
+				setting.bind(visibility);
+			});
 		}); //end switch for fonts
 
 		//set switch for c9_social icons
