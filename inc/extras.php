@@ -140,6 +140,14 @@ if (!function_exists('c9_display_image_size_names_muploader')) {
 add_filter('image_size_names_choose', 'c9_display_image_size_names_muploader', 11, 1);
 
 /**
+ * Sanitize checkbox inputs from Customizer
+ */
+function c9_sanitize_checkbox($input)
+{
+	return ($input === true) ? true : false;
+}
+
+/**
  * Sanitize Select inputs from Customizer
  */
 function c9_sanitize_select($input, $setting)
@@ -156,11 +164,27 @@ function c9_sanitize_select($input, $setting)
 }
 
 /**
+ * Sanitize checkbox inputs from post meta
+ */
+function c9_sanitize_post_header_size($input)
+{
+
+	// Ensure input is a slug.
+	$input = sanitize_html_class($input);
+
+	// Get list of choices from the setting
+	$choices = array('large' => 0, 'small' => 1);
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return (array_key_exists($input, $choices) ? $input : 'small');
+}
+
+/**
  * add a full screen search icon to navigation
  */
 
 add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
-if ( !function_exists('c9_add_search_form') ) {
+if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
 		if ('primary' == $args->theme_location) {

@@ -57,7 +57,7 @@ function c9_save_header_size($post_id)
 		update_post_meta(
 			$post_id,
 			'c9_post_header_size',
-			esc_html($unslashed)
+			c9_sanitize_post_header_size($unslashed['c9_post_header_size'])
 		);
 	}
 }

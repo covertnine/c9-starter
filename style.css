@@ -4,23 +4,24 @@ Theme URI: https://togo.covertnine.com
 Author: COVERT NINE
 Author URI: https://www.covertnine.com
 Description: C9 Togo is a block-driven restaurant ordering and delivery theme for WordPess 5 based on the C9 Starter theme that uses Bootstrap's responsive grid system and blocks
-Version: 2.2.2
+Version: 2.2.3
 Tested up to: 5.5.3
 Requires PHP: 7.0
+Requires at least: 5.1.0
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: c9-togo
-Tags: one-column, block-styles, wide-blocks, custom-menu, custom-logo, full-width-template, threaded-comments, featured-images, theme-options, translation-ready, e-commerce
+Tags: block-styles, wide-blocks, block-patterns, grid-layout, left-sidebar, right-sidebar, custom-menu, custom-logo, custom-background, editor-style, full-width-template, threaded-comments, featured-images, theme-options, translation-ready, e-commerce, photography, food-and-drink, featured-image-header, footer-widgets, sticky-post
 
 This theme, like WordPress, is licensed under the GPL.
 
 Resource Licenses:
-Font Awesome: http: //fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-Bootstrap: http: //getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
-Owl Carousel 2: http: //www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
-jQuery: https: //jquery.org | (Code licensed under MIT)
-WP Bootstrap Navwalker by Edward McIntyre: https: //github.com/twittem/wp-bootstrap-navwalker | GNU GPL
-TGMPA https: //github.com/TGMPA/TGM-Plugin-Activation | GNU GPL v2
-Web Font Loader https: //github.com/typekit/webfontloader | Apache 2.0
-C9 Togo Logos: https: //www.covertnine.com | GNU GPL v2
+Font Awesome: http://fontawesome.io/license/free (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Owl Carousel 2: ttps://owlcarousel2.github.io/OwlCarousel2/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+TGMPA https://github.com/TGMPA/TGM-Plugin-Activation | GNU GPL v2
+Web Font Loader https://github.com/typekit/webfontloader | Apache 2.0
+C9 Togo Logos: https://www.covertnine.com | GNU GPL v2
 */
