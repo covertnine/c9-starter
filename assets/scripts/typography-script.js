@@ -6,29 +6,13 @@
 // heading names of the specific fonts (heading_font/subheading_font/typography_presets)
 // If user decided to use their own fonts (clicked no)
 
-if (c9SelectedFonts.c9_default_font === "yes") {
-	/*console.log(
-		c9SelectedFonts.c9_heading_font,
-		c9SelectedFonts.c9_subheading_font,
-		c9SelectedFonts.c9_body_font
-	);
-	alert(c9SelectedFonts.c9_body_font);*/
-
-	c9QueuedFonts = [];
-	c9QueuedFonts.push(c9SelectedFonts.c9_heading_font);
-
-	if (c9SelectedFonts.c9_subheading_font != c9SelectedFonts.c9_heading_font) {
-		c9QueuedFonts.push(c9SelectedFonts.c9_subheading_font);
-	}
-
-	if (c9SelectedFonts.c9_body_font != c9SelectedFonts.c9_heading_font) {
-		c9QueuedFonts.push(c9SelectedFonts.c9_body_font);
-	}
-
+//check if the settings were actually set, if so push the font css
+if ((c9SelectedFonts.c9_default_font === "yes") && (c9SelectedFonts.c9_font_list.length)) {
 	WebFont.load({
 		google: {
-			families: c9QueuedFonts
-		}
+			families: c9SelectedFonts.c9_font_list
+		},
+		timeout: 8000 // Set the timeout to 8 seconds. Font may swap if webfont take longer than that.
 	});
 }
-// console.log(c9SelectedFonts);
+//console.log(c9SelectedFonts.c9_font_list);
