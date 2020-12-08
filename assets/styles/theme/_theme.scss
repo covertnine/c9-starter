@@ -2463,7 +2463,7 @@ table tr th {
 	position: relative;
 }
 
-.entry-content ul:not(.wp-block-gallery) li {
+.entry-content>ul:not(.wp-block-gallery):not(.wp-block-social-links) li {
 	padding-left: 5px;
 	margin-left: -5px;
 }
