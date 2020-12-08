@@ -183,12 +183,12 @@ font-family: var(--default-font);
 					'.c9.site h4',
 					'.c9.site h5',
 					'.c9.site h6',
-					'.editor-styles-wrapper h1',
-					'.editor-styles-wrapper h2',
-					'.editor-styles-wrapper h3',
-					'.editor-styles-wrapper h4',
-					'.editor-styles-wrapper h5',
-					'.editor-styles-wrapper h',
+					'h1',
+					'h2',
+					'h3',
+					'h4',
+					'h5',
+					'h6',
 					'.entry-content blockquote:before',
 					'.c9-h',
 					'.c9-h.h',
@@ -210,7 +210,7 @@ font-family: var(--default-font);
 					'.single .navigation .nav-next a',
 					'.header-navbar .search #s',
 					'.c9 .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label',
-					'.editor-styles-wrapper .c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label',
+					'.c9-toggles.is-style-default .c9-toggles-item-heading .c9-toggles-toggle-label',
 					'.editor-post-title__block .editor-post-title__input'
 				);
 				break;
