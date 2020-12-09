@@ -1,12 +1,12 @@
 === C9 Starter ===
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.1.0
-Tested up to: 5.5.3
+Requires at least: 5.6
+Tested up to: 5.6
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.3.9
+Stable Tag: 2.4.0
 
 A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.4.0 =
+Added filters for adding custom font dropdowns for Google fonts thanks to Bruno. Added styling support for core social icon blocks. Updates for WordPress 5.6 compatibility.
 
 = 2.3.9 =
 Added back to top button, added customizer setting to enable/disable search icon in header. Shout out to @varstahl for those! Style updates to default block elements.
