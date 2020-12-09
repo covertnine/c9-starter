@@ -41,6 +41,7 @@ class C9FontStyles
 			'Inconsolata:wght@300;400;700;800;900'								=> 'Inconsolata',
 			'Inter:wght@200;300;400;700;800;900'								=> 'Inter',
 			'Josefin+Sans:wght@300;400;500;700'									=> 'Josefin Sans',
+			'Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,400;1,700' => 'Jost',
 			'Karla:ital,wght@0,400;0,700;1,400'									=> 'Karla',
 			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   				=> 'Lato',
 			'Libre+Baskerville:wght@400;700'									=> 'Libre Baskerville',
@@ -138,7 +139,7 @@ color: transparent !important;
 		// Define their fonts, but also make sure unspecified headings don't inherit body_font
 
 		self::the_selectors('headings'); ?> {
-	font-family: var(--default-font);
+font-family: var(--default-font);
 <?php if (!empty($heading_font)) { ?>
 	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
@@ -146,7 +147,7 @@ color: transparent !important;
 } <?php
 
 		self::the_selectors('subheadings'); ?> {
-	font-family: var(--default-font);
+font-family: var(--default-font);
 <?php if (!empty($subheading_font)) { ?>
 	font-family: <?php echo esc_html($subheading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>

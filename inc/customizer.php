@@ -37,7 +37,7 @@ if (!function_exists('c9_customize_register')) {
 				'default'    => false,
 				'type' 	     => 'theme_mod',
 				'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'c9_sanitize_checkbox',
+				'sanitize_callback' => 'c9_sanitize_checkbox',
 			)
 		);
 
@@ -405,6 +405,7 @@ if (!function_exists('c9_customize_register')) {
 			'Inconsolata:wght@300;400;700;800;900'								=> 'Inconsolata',
 			'Inter:wght@200;300;400;700;800;900'								=> 'Inter',
 			'Josefin+Sans:wght@300;400;500;700'									=> 'Josefin Sans',
+			'Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,400;1,700' => 'Jost',
 			'Karla:ital,wght@0,400;0,700;1,400'									=> 'Karla',
 			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   				=> 'Lato',
 			'Libre+Baskerville:wght@400;700'									=> 'Libre Baskerville',
