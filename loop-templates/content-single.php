@@ -5,7 +5,7 @@
  *
  * @package c9-starter
  */
-$c9_post_header = get_post_meta($post->ID, 'c9_post_header_size', true);
+$c9_post_header 		= get_post_meta($post->ID, 'c9_post_header_size', true);
 $header_size 	 		= c9_sanitize_post_header_size($c9_post_header);
 $c9_blog_sidebar 		= get_theme_mod('c9_blog_sidebar', 'hide');
 
@@ -95,7 +95,7 @@ if ($c9_blog_sidebar  != 'hide') {
 	<?php
 	} //end small header
 	// if ('hidden' === $header_size) {
-		// This is also an option
+	// This is also an option
 	//}
 	?>
 
