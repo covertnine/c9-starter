@@ -279,7 +279,7 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li,
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
 .editor-styles-wrapper ol li {
 	margin: 10px 0px;
 }
@@ -366,8 +366,12 @@ kbd {
 }
 
 /* social link block */
-.editor-styles-wrapper .wp-block-social-link {
-	margin: 0px 8px 0px 0px;
+.editor-styles-wrapper .wp-block-social-links li {
+	margin: 0px 6px 0px 0px;
+}
+
+.editor-styles-wrapper .wp-block-social-links li:last-child {
+	margin-right: 0px;
 }
 
 /* make mobile editing on gutenberg possible */

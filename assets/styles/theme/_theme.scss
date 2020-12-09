@@ -2483,12 +2483,16 @@ table tr th {
 	color: $gray-700;
 }
 
-.wp-block-social-links {
+.wp-block-social-links,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright {
 	padding-left: 0px;
+	display: -ms-flex;
+	display: flex;
 }
 
 .wp-block-social-links li {
-	margin-right: 10px;
+	margin-right: 6px;
 }
 
 .wp-block-social-links li:last-child {
