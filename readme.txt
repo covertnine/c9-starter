@@ -1,12 +1,12 @@
 === C9 Work ===
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.3
-Tested up to: 5.4.2
+Requires at least: 5.4
+Tested up to: 5.6
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.8
+Stable Tag: 2.2.9
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -32,6 +32,9 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.2.9 =
+Updates for WordPress 5.6. New fonts and graceful Google font loading. Updates to work with C9 Blocks Animation plugin. If you update, be sure to save your font settings again!
 
 = 2.2.8 =
 Fixing translation string.
@@ -113,6 +116,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 
 == Upgrade Notice ==
+
+= 2.2.9 =
+* This version includes updated fonts and font settings so after updating be sure to go save your font settings again.
 
 = 2.1.3 =
 * This version of the theme works witih the latest version of WordPress version 5.4.2 and includes customizer support for theme settings.
