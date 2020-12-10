@@ -178,24 +178,3 @@ function c9_sanitize_post_header_size($input)
 	// If the input is a valid key, return it; otherwise, return the default.
 	return (array_key_exists($input, $choices) ? $input : 'small');
 }
-
-/**
- * add a full screen search icon to navigation
- */
-
-add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
-if (!function_exists('c9_add_search_form')) {
-	function c9_add_search_form($items, $args)
-	{
-		if (('primary' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
-			$items .= '<li class="nav-item search">
-					<div class="nav-search">
-						<a href="#" class="btn-nav-search nav-link">
-							<i class="fa fa-search"></i>
-							<span class="sr-only">' . __('Search', 'c9-work') . '</span>
-						</a>
-					</div></li>';
-		}
-		return $items;
-	}
-}

@@ -34,7 +34,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.2.9 =
-Updates for WordPress 5.6. New fonts and graceful Google font loading. Updates to work with C9 Blocks Animation plugin. If you update, be sure to save your font settings again!
+Updates for WordPress 5.6. New fonts and graceful Google font loading. Updates to work with C9 Blocks Animation plugin. If you update, be sure to save your font settings again! If you're updating from an older version, you may have to save your custom logo settings again as well from Appearance > Customizer.
 
 = 2.2.8 =
 Fixing translation string.
