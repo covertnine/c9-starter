@@ -212,6 +212,7 @@ font-family: var(--default-font);
 					'.single .navigation .nav-previous a',
 					'.single .navigation .nav-next a',
 					'.c9 .c9-vertical-tabs .nav-pills .nav-link',
+					'.c9-vertical-tabs .nav-pills .nav-link',
 					'.c9 .entry-content button, .editor-styles-wrapper .button-primary',
 					'.c9-cta .c9-cta-button .wp-block-button__link',
 					'.mce-content-body.button',
