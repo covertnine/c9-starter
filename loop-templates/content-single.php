@@ -94,6 +94,9 @@ if ($c9_blog_sidebar  != 'hide') {
 		</header>
 	<?php
 	} //end small header
+	// if ('hidden' === $header_size) {
+		// This is also an option
+	//}
 	?>
 
 	<div class="entry-content<?php if (!empty($sidebar_class)) {

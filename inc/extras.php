@@ -173,7 +173,7 @@ function c9_sanitize_post_header_size($input)
 	$input = sanitize_html_class($input);
 
 	// Get list of choices from the setting
-	$choices = array('large' => 0, 'small' => 1);
+	$choices = array('large' => 0, 'small' => 1, 'hidden' => 2);
 
 	// If the input is a valid key, return it; otherwise, return the default.
 	return (array_key_exists($input, $choices) ? $input : 'small');

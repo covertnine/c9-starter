@@ -45,6 +45,10 @@ function c9_post_header_size_html($post)
 		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo 'small' === $value ? 'checked' : ''; ?>>
 		<label for="small"><?php echo esc_html('Small', 'c9-togo'); ?></label>
 	</div>
+	<div>
+		<input type="radio" id="hidden" name="c9_post_header_size" value="hidden" <?php echo 'hidden' === $value ? 'checked' : ''; ?>>
+		<label for="hidden"><?php echo esc_html('Hidden', 'c9-starter'); ?></label>
+	</div>
 <?php
 }
 
