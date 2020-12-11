@@ -34,7 +34,7 @@ add_action('add_meta_boxes', 'c9_post_header_size');
 function c9_post_header_size_html($post)
 {
 	$c9_post_header_size = get_post_meta($post->ID, 'c9_post_header_size', true);
-	$value = !empty($c9_post_header_size) ? $c9_post_header_size : 'small';
+	$value = c9_sanitize_post_header_size($c9_post_header_size);
 ?>
 	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-starter'); ?></label>
 	<div>
