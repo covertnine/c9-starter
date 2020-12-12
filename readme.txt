@@ -155,6 +155,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+= 2.4.2 =
+* Updated single post header size settings may need to be saved again as we added large, small, and a hidden option in 2.4.1
+
 =2.2.7=
 * Updated font settings may require re-saving customizer fields for font selections to fix weight issues.
 
