@@ -34,7 +34,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.3.1 =
-Fixed color button issues on some WooCommerce pages.
+Fixed color button issues on some WooCommerce pages, updates for fuoc issues with Autoptimize.
 
 = 2.3.0 =
 Better sanitization added to post header fields, updated logic to fix some broken post headers, button style updates.

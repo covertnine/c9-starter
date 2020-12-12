@@ -34,7 +34,7 @@ add_action('add_meta_boxes', 'c9_post_header_size');
 function c9_post_header_size_html($post)
 {
 	$c9_post_header_size = get_post_meta($post->ID, 'c9_post_header_size', true);
-	$value = isset($c9_post_header_size) ? $c9_post_header_size : 'small';
+	$value = c9_sanitize_post_header_size($c9_post_header_size);
 ?>
 	<label for="c9_post_header_size"><?php echo esc_html('Header Size', 'c9-work'); ?></label>
 	<div>
@@ -44,6 +44,10 @@ function c9_post_header_size_html($post)
 	<div>
 		<input type="radio" id="small" name="c9_post_header_size" value="small" <?php echo 'small' === $value ? 'checked' : ''; ?>>
 		<label for="small"><?php echo esc_html('Small', 'c9-work'); ?></label>
+	</div>
+	<div>
+		<input type="radio" id="hidden" name="c9_post_header_size" value="hidden" <?php echo 'hidden' === $value ? 'checked' : ''; ?>>
+		<label for="hidden"><?php echo esc_html('Hidden', 'c9-starter'); ?></label>
 	</div>
 <?php
 }
