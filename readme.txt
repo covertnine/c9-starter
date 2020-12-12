@@ -103,6 +103,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+= 2.2.5 =
+* Updated single post header size settings may need to be saved again as we added large, small, and a hidden option.
+
 = 2.2.3 =
 * Custom field setting on posts for header size is blank by default. Selectin large or small header layout will display header with title, featured image, and post meta.
 
