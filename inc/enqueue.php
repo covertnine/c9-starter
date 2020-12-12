@@ -69,7 +69,7 @@ add_action('wp_enqueue_scripts', 'c9_scripts', 10);
 // Force Web Fonts Loader's loading class if it hasn't been set yet,
 // in case Autoptimize moved the regular script to the footer
 add_action('wp_head', 'c9_inline_typography_loading_script');
-if (!function_exists('c9_customizer_scripts')) {
+if (!function_exists('c9_inline_typography_loading_script')) {
 	function c9_inline_typography_loading_script(){
 		?><script>if(!document.documentElement.className.match(/\bwf-/))document.documentElement.classList.add('wf-loading')</script><?php
 	}
