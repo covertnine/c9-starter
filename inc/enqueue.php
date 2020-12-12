@@ -49,6 +49,12 @@ if (!function_exists('c9_scripts')) {
 			// Use the localize function to localize the script and continue with the code
 			wp_localize_script('c9-typography-script', 'c9SelectedFonts', $font_array);
 
+			// Force Web Fonts Loader's loading class if it hasn't been set yet,
+			// in case Autoptimize moved the regular script to the footer
+			add_action('wp_head', function(){
+				?><script>if(!document.documentElement.className.match(/\bwf-/))document.documentElement.classList.add('wf-loading')</script><?php
+			});
+			
 			// Enqueued script with the data we pulled from earlier selections
 			wp_enqueue_script('c9-typography-script');
 
