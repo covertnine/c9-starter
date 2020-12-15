@@ -5,7 +5,8 @@
  *
  * @package c9-starter
  */
-$header_size 	 		= isset(get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size']) ? get_post_meta($post->ID, 'c9_post_header_size', true)['c9_post_header_size'] : 'small';
+$c9_post_header = get_post_meta($post->ID, 'c9_post_header_size', true);
+$header_size 	 		= c9_sanitize_post_header_size($c9_post_header);
 $c9_blog_sidebar 		= get_theme_mod('c9_blog_sidebar', 'hide');
 
 //set sidebar variables pending on theme options and sidebars being active
@@ -69,7 +70,9 @@ if ($c9_blog_sidebar  != 'hide') {
 			$c9_img_sizes  = wp_get_attachment_image_sizes($c9_img_id, 'large');
 
 		?>
-			<figure class="entry-image">
+			<figure class="entry-image<?php if (!empty($sidebar_class)) {
+											echo $sidebar_class;
+										} ?>">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 					<img src="<?php echo esc_url($c9_img_src); ?>" srcset="<?php echo esc_attr($c9_img_srcset); ?>" class="img-fluid mx-auto  d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr($c9_img_sizes); ?>" />
 				</a>
@@ -91,6 +94,9 @@ if ($c9_blog_sidebar  != 'hide') {
 		</header>
 	<?php
 	} //end small header
+	// if ('hidden' === $header_size) {
+	// This is also an option
+	//}
 	?>
 
 	<div class="entry-content<?php if (!empty($sidebar_class)) {
@@ -103,7 +109,9 @@ if ($c9_blog_sidebar  != 'hide') {
 
 
 
-	<footer class="entry-footer">
+	<footer class="entry-footer<?php if (!empty($sidebar_class)) {
+									echo $sidebar_class;
+								} ?>">
 		<div class="entry-footer-content mar30B">
 			<?php
 			wp_link_pages(

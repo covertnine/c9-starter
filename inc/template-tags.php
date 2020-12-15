@@ -15,7 +15,7 @@
 if (!function_exists('c9_posted_on')) {
 	function c9_posted_on()
 	{
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		if (get_the_time('U') !== get_the_modified_time('U')) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
 		}
@@ -42,7 +42,7 @@ if (!function_exists('c9_posted_on')) {
 		}
 
 
-		echo $c9_posted_on; // WPCS: XSS OK.
+		echo $c9_posted_on;
 	}
 }
 
@@ -58,12 +58,12 @@ if (!function_exists('c9_entry_footer')) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list(esc_html__(', ', 'c9-music'));
 			if ($categories_list && c9_categorized_blog()) {
-				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'c9-music') . '</span>', $categories_list); // WPCS: XSS OK.
+				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'c9-music') . '</span>', $categories_list);
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list('', esc_html__(', ', 'c9-music'));
 			if ($tags_list) {
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'c9-music') . '</span>', $tags_list); // WPCS: XSS OK.
+				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'c9-music') . '</span>', $tags_list);
 			}
 		}
 		if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {

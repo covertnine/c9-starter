@@ -101,6 +101,8 @@ var c9Page = function ($) {
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
+      var heightDocument = $(document).height();
+      var position = $(window).height() + $(window).scrollTop();
 
       if (scroll >= 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
@@ -111,6 +113,23 @@ var c9Page = function ($) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
+
+      if (0 == (heightDocument - position) / heightDocument) {
+        jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
+      } else {
+        jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
+
+    $("#backtotop").on("click", ".btn-back-to-top", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        'behavior': 'smooth',
+        'top': 0
+      });
+      $(".btn-back-to-top").css("opacity", "0");
+      $("#page").focus();
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
 
@@ -327,14 +346,14 @@ var c9Page = function ($) {
     // Will hold previously focused element
 
     var focusedElementBeforeNavbar;
-    var c9workNavbar = $("#wrapper-navbar");
-    $(".navbar-toggler").on("click", c9workNavbarUse);
+    var c9starterNavbar = $("#wrapper-navbar");
+    $(".navbar-toggler").on("click", c9starterNavbarUse);
 
-    function c9workNavbarUse(e) {
-      e.preventDefault(); //listen for tab keying to trab tabs in modal
+    function c9starterNavbarUse(e) {
+      e.preventDefault(); //listen for tab keying to trap tabs in navbar
 
-      $("body").on("keydown", c9workNavbar, trapTabKey);
-      focusedElementBeforeNavbar = document.activeElement; // Find all focusable children
+      $("body").on("keydown", c9starterNavbar, trapTabKey);
+      focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
 
       var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
       focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
@@ -362,15 +381,13 @@ var c9Page = function ($) {
           }
         }
       }
-    } //end c9workNavbarUse
+    } //end c9starterNavbarUse
     //close navbar
 
 
     $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
-        $(this).addClass("collapsed");
-        $(this).attr("aria-expanded", "false");
         focusedElementBeforeNavbar.focus();
       }
     });

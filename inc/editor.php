@@ -29,11 +29,18 @@ function c9_editor_style()
 		wp_register_script('c9-typography-script', get_template_directory_uri() . '/assets/scripts/typography-script.js', array('webfont-loader'));
 
 		// Localize the script with the font data
-		$font_array 						= array();
-		$font_array['c9_heading_font'] 		= esc_html(get_theme_mod('c9_heading_font', 'Rubik'));
-		$font_array['c9_subheading_font'] 	= esc_html(get_theme_mod('c9_subheading_font', 'Rubik'));
-		$font_array['c9_body_font'] 		= esc_html(get_theme_mod('c9_body_font', 'Rubik'));
-		$font_array['c9_default_font']		= $c9_fonts;
+		$font_array = [
+			'c9_heading_font'    => esc_html(get_theme_mod('c9_heading_font', 'Rubik')),
+			'c9_subheading_font' => esc_html(get_theme_mod('c9_subheading_font', 'Rubik')),
+			'c9_body_font'       => esc_html(get_theme_mod('c9_body_font', 'Rubik')),
+			'c9_default_font'    => esc_js($c9_fonts)
+		];
+		$font_list  = [];
+		foreach (['c9_heading_font', 'c9_subheading_font', 'c9_body_font'] as $f) {
+			if (!empty($font_array[$f]) && !in_array($font_array[$f], $font_list))
+				$font_list[] = $font_array[$f];
+		}
+		$font_array['c9_font_list'] = apply_filters('c9_google_fonts', $font_list);
 
 		// Use the localize function to localize the script and continue with the code
 		wp_localize_script('c9-typography-script', 'c9SelectedFonts', $font_array);

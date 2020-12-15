@@ -1,14 +1,14 @@
 === C9 Starter ===
-Contributors: ttoomey, htmercury, lgdrew, samirillion, malzdesigns
+Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.3.2
-Tested up to: 5.5.3
+Requires at least: 5.6
+Tested up to: 5.6
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.2.8
+Stable Tag: 2.4.1
 
-A WordPress starter theme based on [Understrap](https://understrap.com) and _s ([underscores](https://underscores.me)) from [C9](https://www.covertnine.com).
+A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
 == Description ==
 A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
@@ -28,6 +28,45 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.4.1 =
+Added better sanitization for header size field and added hidden option to hide header altogether. New translations.
+
+= 2.4.0 =
+Added filters for adding custom font dropdowns for Google fonts thanks to Bruno. Added styling support for core social icon blocks. Updates for WordPress 5.6 compatibility.
+
+= 2.3.9 =
+Added back to top button, added customizer setting to enable/disable search icon in header. Shout out to @varstahl for those! Style updates to default block elements.
+
+= 2.3.8 =
+Update to pingback url sanitization.
+
+= 2.3.7 =
+Sanitization/validation added for custom field in posts for big header.
+
+= 2.3.6 =
+Escaping issue in footer.php fixed.
+
+= 2.3.5 =
+Fixing keyboard navigation, escaping, removing accessibility tag, new screenshot, fixing admin settings, fuoc fixes and new customizer setting for web font setting.
+
+= 2.3.4 =
+Style update to list items.
+
+= 2.3.3 =
+Fixing issue with pagination escaping.
+
+= 2.3.2 =
+Fixing issue with footer social links.
+
+= 2.3.1 =
+Escaping some fields, adding styling for default elements, fixing wide alignments on some screen sizes, customizer refresh fixes for post settings
+
+= 2.3.0 =
+Pagination links added, escaping, sanitizing for wp.org
+
+= 2.2.9 =
+Changing function for sample content so it works locally. Shout out to @dskrepps on Github/Reddit/Twitter for the bug fix.
 
 = 2.2.8 =
 Adjustments to sidebar page templates so sidebars fade in much sooner.
@@ -138,9 +177,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 and of course
 * [jQuery](https://jquery.org) | (Code licensed under MIT)
 * [WP Bootstrap Navwalker by Edward McIntyre](https://github.com/twittem/wp-bootstrap-navwalker) | GNU GPL v3
-* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v3
+* [TGMPA](https://github.com/TGMPA/TGM-Plugin-Activation) | GNU GPL v2
 * [Web Font Loader](https://github.com/typekit/webfontloader) | [Apache 2.0](https://www.apache.org/licenses/GPL-compatibility.html)
-* [Font Awesome](http://fontawesome.io/license) | Font: SIL OFL 1.1, CSS: MIT License
+* [Font Awesome](http://fontawesome.io/license/free) | Font: SIL OFL 1.1, CSS: MIT License
 * [Bootstrap](http://getbootstrap.com) | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
 
 Image for theme screenshot, Copyright Timothy Toomey
@@ -158,3 +197,11 @@ Source: https://www.flickr.com/photos/assaultshirts/50576216478/in/album-7215771
 Source: https://www.flickr.com/photos/assaultshirts/50576939861/in/album-72157716790081691/
 Source: https://www.flickr.com/photos/assaultshirts/50577074742/in/album-72157716790081691/
 Source: https://www.flickr.com/photos/assaultshirts/50576212893/in/album-72157716790081691/
+
+Illustration of Togo dog, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.covertnine.com/meet-togo-a-delivery-and-pickup-focused-e-commerce-solution-for-restaurants-breweries-and-dispensaries/
+
+Logo Feather, Copyright Timothy Toomey
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.covertnine.com

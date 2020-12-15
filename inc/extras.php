@@ -97,7 +97,7 @@ if (!function_exists('c9_post_nav')) {
 		}
 ?>
 		<nav class="navigation post-navigation">
-			<h2 class="sr-only"><?php _e('Post navigation', 'c9-music'); ?></h2>
+			<h2 class="sr-only"><?php esc_html_e('Post navigation', 'c9-music'); ?></h2>
 			<div class="nav-links justify-content-between px-3">
 				<?php
 
@@ -156,6 +156,30 @@ function c9_sanitize_select($input, $setting)
 }
 
 /**
+ * Sanitize checkbox inputs from Customizer
+ */
+function c9_sanitize_checkbox($input)
+{
+	return ($input === true) ? true : false;
+}
+
+/**
+ * Sanitize checkbox inputs from post meta
+ */
+function c9_sanitize_post_header_size($input)
+{
+
+	// Ensure input is a slug.
+	$input = sanitize_html_class($input);
+
+	// Get list of choices from the setting
+	$choices = array('large' => 0, 'small' => 1, 'hidden' => 2);
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return (is_string($input) && array_key_exists($input, $choices) ? $input : 'small');
+}
+
+/**
  * add a full screen search icon to navigation
  */
 
@@ -163,7 +187,7 @@ add_filter('wp_nav_menu_items', 'c9_add_search_form', 10, 2);
 if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
-		if ('primary' == $args->theme_location) {
+		if (('primary' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
 			$items .= '<li class="nav-item search">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">

@@ -61,6 +61,16 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 		margin-left: auto;
 	}
 
+	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block[data-type="core/button"],
+	.is-sidebar-opened .editor-styles-wrapper .c9-grid [data-type="c9-blocks/column-container"].container .wp-block[data-type="core/button"] {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons .wp-block[data-type="core/button"] {
+		margin-right: 8px;
+	}
+
 	body.post-type-post .editor-styles-wrapper .wp-block {
 		max-width: 900px;
 	}
@@ -215,36 +225,6 @@ body .editor-styles-wrapper,
 	margin: 0px auto 25px auto;
 }
 
-.editor-styles-wrapper .wp-block-table,
-.editor-styles-wrapper .wp-block-tablee tbody,
-.editor-styles-wrapper .wp-block-table tbody tr,
-.editor-styles-wrapper .wp-block-table tbody tr td {
-	border: none;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}
-
-.editor-styles-wrapper .wp-block-table thead,
-.editor-styles-wrapper .wp-block-table thead tr th,
-.editor-styles-wrapper .wp-block-table tfoot,
-.editor-styles-wrapper .wp-block-table tfoot tr td {
-	border: none;
-}
-
-.editor-styles-wrapper .wp-block-table tbody tr:nth-child(odd) td {
-	background: $gray-100;
-}
-
-.editor-styles-wrapper .wp-block-table__cell-content {
-	padding: 0px;
-	line-height: 1.7;
-}
-
-.editor-styles-wrapper .wp-block-table tfoot tr td {
-	box-shadow: 0 -1px 0 0 #eceeef;
-}
-
 /* WordPress core square buttons */
 /* center alignment for buttons block */
 .wp-block[data-align="center"] .wp-block-buttons .block-editor-block-list__layout {
@@ -255,10 +235,6 @@ body .editor-styles-wrapper,
 	margin-right: 8px;
 	margin-bottom: 8px;
 	display: inline-block;
-}
-
-.editor-rich-text__editable.wp-block-button__link.square {
-	border-radius: 0;
 }
 
 .editor-rich-text__editable.wp-block-button__link {
@@ -303,7 +279,7 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list) li,
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
 .editor-styles-wrapper ol li {
 	margin: 10px 0px;
 }
@@ -311,7 +287,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block>ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"] ol,
 .editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 10px;
 	margin: 30px 0px 35px 45px;
@@ -381,6 +357,21 @@ body .editor-styles-wrapper,
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+/* code blocks */
+code,
+kbd {
+	background-color: transparent;
+}
+
+/* social link block */
+.editor-styles-wrapper .wp-block-social-links li {
+	margin: 0px 6px 0px 0px;
+}
+
+.editor-styles-wrapper .wp-block-social-links li:last-child {
+	margin-right: 0px;
 }
 
 /* make mobile editing on gutenberg possible */

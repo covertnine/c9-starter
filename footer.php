@@ -14,7 +14,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 	include(locate_template('client/inc/footer.php'));
 } else {
 
-	$c9_footer_default = '&copy; ' . date("Y") . ' ' . get_bloginfo('name') . '. <a href="https://www.covertnine.com" title="' . __('Web design company in Chicago', 'c9-music') . '" target="_blank">' . __('WordPress Website design by COVERT NINE', 'c9-music') . '</a>.';
+	$c9_footer_default = '&copy; ' . date("Y") . ' ' . get_bloginfo('name') . '. <a href="https://www.covertnine.com" title="' . esc_attr__('Web design company in Chicago', 'c9-music') . '" target="_blank">' . esc_html__('WordPress Website design by COVERT NINE', 'c9-music') . '</a>.';
 	$c9_footer_search = get_theme_mod('c9_show_search', 'show');
 	$c9_footer_copyright = get_theme_mod('c9_copyright_content', $c9_footer_default);
 
@@ -92,6 +92,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 	</form>
 	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e('Close', 'c9-music'); ?></span></button>
 </div>
+<div id="backtotop" class="backtotop-container"> <button type="button" class="btn-back-to-top"><span class="sr-only">Back to top</span><i class="fa fa-arrow-up"></i></button></div>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
 

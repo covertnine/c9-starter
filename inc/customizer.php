@@ -24,6 +24,34 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
 		$wp_customize->add_section(
+			'c9_header',
+			array(
+				'title'    => __('Header', 'c9-music'),
+				'priority' => 45,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'c9_header_hide_search',
+			array(
+				'default'    => false,
+				'type' 	     => 'theme_mod',
+				'capability' => 'edit_theme_options',
+				'sanitize_callback' => 'c9_sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_control(
+			'c9_header_hide_search',
+			array(
+				'label'    => __('Hide the search form in the header', 'c9-music'),
+				'section'  => 'c9_header',
+				'priority' => 10,
+				'type'     => 'checkbox',
+			)
+		);
+
+		$wp_customize->add_section(
 			'c9_footer',
 			array(
 				'title'    => __('Footer', 'c9-music'),
@@ -326,7 +354,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_default_font',
 			array(
-				'default'           => 'no',
+				'default'           => 'yes',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -377,6 +405,7 @@ if (!function_exists('c9_customize_register')) {
 			'Inconsolata:wght@300;400;700;800;900'								=> 'Inconsolata',
 			'Inter:wght@200;300;400;700;800;900'								=> 'Inter',
 			'Josefin+Sans:wght@300;400;500;700'									=> 'Josefin Sans',
+			'Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,400;1,700' => 'Jost',
 			'Karla:ital,wght@0,400;0,700;1,400'									=> 'Karla',
 			'Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700'   				=> 'Lato',
 			'Libre+Baskerville:wght@400;700'									=> 'Libre Baskerville',
@@ -415,7 +444,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_heading_font',
 			array(
-				'default'           => '',
+				'default'           => 'Rubik',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
@@ -476,10 +505,31 @@ if (!function_exists('c9_customize_register')) {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'c9_fadein_webfonts',
+			array(
+				'default'           => true,
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'c9_sanitize_checkbox',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
+		$wp_customize->add_control(
+			'c9_fadein_webfonts',
+			array(
+				'type'        => 'checkbox',
+				'label'       => __('Fade-in custom fonts as they download', 'c9-music'),
+				'description' => __('Select this if you notice a flash of the default font as the custom fonts download the first time a user visits the site.', 'c9-music'),
+				'section'     => 'c9_branding',
+			)
+		);
+
 		$wp_customize->add_section(
 			'c9_posts',
 			array(
 				'title'    => __('Posts', 'c9-music'),
+				'description' => __('These settings control whether side bars show up on single post, posts, and archive page templates, as well as author name and link on single post templates. Changes will only be visible on those pages.', 'c9-music'),
 				'priority' => 90,
 			)
 		);
@@ -488,7 +538,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_author_visible',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -512,7 +562,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_blog_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -537,7 +587,7 @@ if (!function_exists('c9_customize_register')) {
 			'c9_archive_sidebar',
 			array(
 				'default'           => 'hide',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
