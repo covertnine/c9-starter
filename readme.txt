@@ -1,4 +1,4 @@
-=== C9 Starter ===
+=== C9 Music ===
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.6
@@ -8,10 +8,10 @@ License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Stable Tag: 2.4.1
 
-A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
+A blocks powered WordPress theme for bands, musicians, or DJs, based on the C9 Starter theme from [COVERT NINE](https://www.covertnine.com).
 
 == Description ==
-A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
+A theme made for building out your audience virtually via your WordPress website with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
 
 == Frequently Asked Questions ==
 
@@ -19,13 +19,13 @@ A theme made for building out landing pages, marketing campaigns, media, content
 
 Yes, you can find the source code on [GitHub](https://github.com/covertnine/c9-starter).
 
-= Does this theme support Gutenberg? =
+= Does this theme support Gutenberg blocks? =
 
 Yes! Use the C9 Blocks plugin, which you are prompted to install after theme activation, which works seamlessly with the new Gutenberg editor for WordPress.
 
 = Is there sub-menu levels of drop downs in the top navigation? =
 
-If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
+If you use the default navigation, then only one level of drop down is supported, but if you activate the Max Mega Menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
 
@@ -169,7 +169,7 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Resources ==
 * [C9 Starter Theme Source Code](https://github.com/covertnine/c9-starter)
-* [C9 Client Folder Boilerplate](https://github.com/covertnine/client-starter)
+* [C9 Music Client Folder Boilerplate](https://github.com/covertnine/client-music)
 * [C9 Logo + Client Assets](https://c9.covertnine.com) | GNU GPL v3
 * [_s](https://underscores.me)
 * [Understrap](https://understrap.com)
