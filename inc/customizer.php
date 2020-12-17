@@ -44,7 +44,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_control(
 			'c9_header_hide_search',
 			array(
-				'label'    => __('Hide the search form in the header', 'c9-music'),
+				'label'    => __('Hide the search icon', 'c9-music'),
 				'section'  => 'c9_header',
 				'priority' => 10,
 				'type'     => 'checkbox',
