@@ -113,6 +113,7 @@ if (!function_exists('c9_setup')) {
 		// C9 custom image sizes
 		add_image_size('c9-feature-wide', 960, 411, array('center', 'center'), true);
 		add_image_size('c9-feature-hd-wide', 1920, 1080, array('center', 'center'), true);
+		add_image_size('c9-feature-hd-uncropped', 1920, 1080, false);
 		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-crop', 960, 411, true);
