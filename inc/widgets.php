@@ -3,7 +3,7 @@
 /**
  * Declaring widgets
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 if (!function_exists('c9_slbd_count_widgets')) {

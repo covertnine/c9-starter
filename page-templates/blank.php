@@ -5,7 +5,7 @@
  *
  * Template for displaying a blank page with no header or footer
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 ?>

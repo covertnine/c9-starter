@@ -5,7 +5,7 @@
  * Add fields and configure admin settings API.
  *
  * @since   1.0.0
- * @package c9-starter
+ * @package c9-music
  */
 
 // Exit if accessed directly.

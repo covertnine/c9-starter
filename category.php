@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper" id="category-wrapper">
 
 	<main class="site-main" id="main">
 
@@ -25,14 +25,14 @@ get_header();
 
 				<div class="col-12 content-area" id="primary">
 
-					<div class="c9-blog-releases" id="index-content-container">
-						<div class="c9-blog-header p-5" id="index-container-fixed">
+					<div class="c9-blog-releases" id="category-content-container">
+						<div class="c9-blog-header p-5" id="category-container-fixed">
 							<div class="c9-blog-info p-5">
-								<h1 class="text-center"><?php esc_html(bloginfo('name')); ?></h1>
-								<p class="text-center"><?php esc_html(bloginfo('description')); ?></p>
+								<h1 class="text-center c9-cat-title"><?php esc_html(single_cat_title()); ?></h1>
+								<div class="text-center taxonomy-description"><?php esc_html(the_archive_description()); ?></div>
 							</div>
 						</div>
-						<div class="c9-blog-posts" id="index-container-content">
+						<div class="c9-blog-posts" id="category-container-content">
 							<?php if (have_posts()) : ?>
 								<?php
 								while (have_posts()) :

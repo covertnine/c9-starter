@@ -1,13 +1,14 @@
 <?php
+
 /**
  * Sidebar setup for footer full.
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 ?>
 
-<?php if (is_active_sidebar('footerfull') ) : ?>
+<?php if (is_active_sidebar('footerfull')) : ?>
 
     <!-- ******************* The Footer Full-width Widget Area ******************* -->
 

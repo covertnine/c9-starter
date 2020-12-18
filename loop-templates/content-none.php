@@ -5,7 +5,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 ?>

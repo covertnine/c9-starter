@@ -3,7 +3,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 get_header();

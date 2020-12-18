@@ -3,19 +3,19 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 ?>
-<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="col-xs-12 entry-article">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 		<?php
 		if (has_post_thumbnail()) {
 			// grab src, srcset, sizes from featured image for Retina support
 			$c9_img_id     = get_post_thumbnail_id();
-			$c9_img_src    = wp_get_attachment_image_url($c9_img_id, 'c9-feature-medium-crop');
-			$c9_img_srcset = wp_get_attachment_image_srcset($c9_img_id, 'c9-feature-medium-crop');
-			$c9_img_sizes  = wp_get_attachment_image_sizes($c9_img_id, 'c9-feature-medium-crop');
+			$c9_img_src    = wp_get_attachment_image_url($c9_img_id, 'c9-feature-hd-wide');
+			$c9_img_srcset = wp_get_attachment_image_srcset($c9_img_id, 'c9-feature-hd-wide');
+			$c9_img_sizes  = wp_get_attachment_image_sizes($c9_img_id, 'c9-feature-hd-wide');
 
 		?>
 

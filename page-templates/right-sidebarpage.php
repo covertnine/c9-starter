@@ -1,10 +1,11 @@
 <?php
+
 /**
  * Template Name: Right Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 get_header();
@@ -18,28 +19,29 @@ get_header();
 
 			<div class="
 			<?php
-			if ( is_active_sidebar( 'right-sidebar' ) ) :
+			if (is_active_sidebar('right-sidebar')) :
 			?>
 			col-12 col-sm-10
 			<?php
 			else :
-				?>
+			?>
 				col-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
 					<?php
-					while ( have_posts() ) :
+					while (have_posts()) :
 						the_post();
-						?>
+					?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part('loop-templates/content', 'page'); ?>
 
-					<?php endwhile; // end of the loop. ?>
+					<?php endwhile; // end of the loop.
+					?>
 
 				</main><!-- #main -->
 
-				<?php get_sidebar( 'right' ); ?>
+				<?php get_sidebar('right'); ?>
 
 			</div><!-- #primary -->
 

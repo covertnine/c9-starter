@@ -3,7 +3,7 @@
 /**
  * Comment layout.
  *
- * @package c9-starter
+ * @package c9-music
  */
 
 // Comments form.

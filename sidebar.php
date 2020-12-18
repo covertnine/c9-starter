@@ -1,11 +1,12 @@
 <?php
+
 /**
  * The sidebar containing the main widget area.
  *
- * @package c9-starter
+ * @package c9-music
  */
 
-if (! is_active_sidebar('sidebar-1') ) {
+if (!is_active_sidebar('sidebar-1')) {
     return;
 }
 ?>

@@ -177,13 +177,15 @@ var c9Page = function ($) {
         if (scroll >= 218) {
           $(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
 
-          $(".header-navbar").addClass("jumpfix"); //$(".header-navbar.jumpfix").css("height", "108px");
+          $(".header-navbar").addClass("jumpfix");
+          $(".c9-blog-posts").addClass("fixed-top"); //$(".header-navbar.jumpfix").css("height", "108px");
         }
 
         if (scroll <= 217) {
           $(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
 
           $(".header-navbar").removeClass("jumpfix");
+          $(".c9-blog-posts").removeClass("fixed-top");
         }
       });
     } //end regular
@@ -355,7 +357,7 @@ var c9Page = function ($) {
       $("body").on("keydown", c9starterNavbar, trapTabKey);
       focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
 
-      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
+      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
       focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
