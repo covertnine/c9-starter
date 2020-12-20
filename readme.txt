@@ -198,6 +198,7 @@ Source: https://www.flickr.com/photos/assaultshirts/50734586691
 Source: https://www.flickr.com/photos/assaultshirts/50733858273
 Source: https://www.flickr.com/photos/assaultshirts/50734691927
 Source: https://www.flickr.com/photos/assaultshirts/50734691987
+Source: https://www.covertnine.com
 
 Illustration of Togo dog, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
