@@ -359,7 +359,7 @@ kbd,
 }
 
 .entry-content .has-huge-font-size {
-	font-size: 4.8em;
+	font-size: 4.2em;
 }
 
 .entry-content p.wp-block-subhead,
@@ -2059,7 +2059,8 @@ hr {
 	}
 
 	.page-template-default .entry-content .alignfull,
-	.wp-block[data-type="core/cover"][data-align="full"] {
+	.wp-block[data-type="core/cover"][data-align="full"],
+	.page-template-default .entry-content .alignwide .alignwide {
 		width: 100vw;
 		max-width: 100vw;
 		margin-left: calc((-100vw + 100%) / 2);
