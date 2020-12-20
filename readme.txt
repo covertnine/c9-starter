@@ -204,7 +204,7 @@ Illustration of Togo dog, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.covertnine.com/meet-togo-a-delivery-and-pickup-focused-e-commerce-solution-for-restaurants-breweries-and-dispensaries/
 
-Logo Feather, Copyright Timothy Toomey
+Logo Feather, Logo C9 Text, Copyright Timothy Toomey
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.covertnine.com
 
