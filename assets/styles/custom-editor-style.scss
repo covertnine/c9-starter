@@ -61,6 +61,11 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 		margin-left: auto;
 	}
 
+	.editor-styles-wrapper .block-list-appender.wp-block {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
 	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block[data-type="core/button"],
 	.is-sidebar-opened .editor-styles-wrapper .c9-grid [data-type="c9-blocks/column-container"].container .wp-block[data-type="core/button"] {
 		margin-left: 0px;
@@ -257,6 +262,21 @@ body .editor-styles-wrapper,
 
 .wp-block[data-type="core/button"][data-align="right"] {
 	float: right;
+}
+
+@media only screen and (min-width: 1200px) {
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons {
+		text-align: center;
+	}
+
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons>.wp-block-button {
+		margin-left: 0px;
+		margin-right: 5px;
+	}
+
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons>.wp-block-button:last-child {
+		margin-right: 0px;
+	}
 }
 
 /* WordPress core list items */

@@ -3599,29 +3599,29 @@ if (!function_exists('tgmpa_load_bulk_installer')) {
 						if ('update' === $this->options['install_type']) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = __('Updating Plugin %1$s (%2$d/%3$d)', 'c9-starter');
+							$this->upgrader->strings['skin_before_update_header'] = __('Updating Plugin %1$s (%2$d/%3$d)', 'tgmpa');
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = __('An error occurred while installing %1$s: <strong>%2$s</strong>.', 'c9-starter');
+							$this->upgrader->strings['skin_update_failed_error'] = __('An error occurred while installing %1$s: <strong>%2$s</strong>.', 'tgmpa');
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = __('The installation of %1$s failed.', 'c9-starter');
+							$this->upgrader->strings['skin_update_failed'] = __('The installation of %1$s failed.', 'tgmpa');
 
 							if ($this->tgmpa->is_automatic) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __('The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-starter');
+								$this->upgrader->strings['skin_upgrade_start'] = __('The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa');
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = __('%1$s installed and activated successfully.', 'c9-starter') . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__('Show Details', 'c9-starter') . '</span><span class="hidden">' . esc_html__('Hide Details', 'c9-starter') . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __('All installations and activations have been completed.', 'c9-starter');
+								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.');
+								$this->upgrader->strings['skin_upgrade_end']       = __('All installations and activations have been completed.', 'tgmpa');
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __('Installing and Activating Plugin %1$s (%2$d/%3$d)', 'c9-starter');
+								$this->upgrader->strings['skin_before_update_header'] = __('Installing and Activating Plugin %1$s (%2$d/%3$d)', 'tgmpa');
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-starter');
+								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa');
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = esc_html__('%1$s installed successfully.', 'c9-starter') . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__('Show Details', 'c9-starter') . '</span><span class="hidden">' . esc_html__('Hide Details', 'c9-starter') . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = __('All installations have been completed.', 'c9-starter');
+								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.');
+								$this->upgrader->strings['skin_upgrade_end']       = __('All installations have been completed.', 'tgmpa');
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __('Installing Plugin %1$s (%2$d/%3$d)', 'c9-starter');
+								$this->upgrader->strings['skin_before_update_header'] = __('Installing Plugin %1$s (%2$d/%3$d)', 'tgmpa');
 							}
 						}
 					}

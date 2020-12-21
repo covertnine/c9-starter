@@ -29,6 +29,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.4.3 =
+Core button alignment fix updates, adding block patterns, TGIM function tweak to prevent local plugin install errors, search block widget center alignment fix.
+
 = 2.4.2 =
 Fixed flash of unstyled content fixed when Autoptimize is enabled.
 
