@@ -30,9 +30,9 @@ function c9_editor_style()
 
 		// Localize the script with the font data
 		$font_array = [
-			'c9_heading_font'    => esc_html(get_theme_mod('c9_heading_font')),
-			'c9_subheading_font' => esc_html(get_theme_mod('c9_subheading_font')),
-			'c9_body_font'       => esc_html(get_theme_mod('c9_body_font')),
+			'c9_heading_font'    => esc_html(get_theme_mod('c9_heading_font', 'Sen:wght@400,700,800')),
+			'c9_subheading_font' => esc_html(get_theme_mod('c9_subheading_font', 'Sen:wght@400,700,800')),
+			'c9_body_font'       => esc_html(get_theme_mod('c9_body_font', 'Sen:wght@400,700,800')),
 			'c9_default_font'    => esc_js($c9_fonts)
 		];
 		$font_list  = [];
