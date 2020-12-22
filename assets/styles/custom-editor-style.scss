@@ -270,16 +270,16 @@ body .editor-styles-wrapper,
 }
 
 @media only screen and (min-width: 1200px) {
-	.editor-styles-wrapper .wp-block[data-align=“center”] .wp-block-buttons {
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons {
 		text-align: center;
 	}
 
-	.editor-styles-wrapper .wp-block[data-align=“center”] .wp-block-buttons>.wp-block-button {
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons>.wp-block-button {
 		margin-left: 0px;
 		margin-right: 5px;
 	}
 
-	.editor-styles-wrapper .wp-block[data-align=“center”] .wp-block-buttons>.wp-block-button:last-child {
+	.editor-styles-wrapper .wp-block[data-align="center"] .wp-block-buttons>.wp-block-button:last-child {
 		margin-right: 0px;
 	}
 }
