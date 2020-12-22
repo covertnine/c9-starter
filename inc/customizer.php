@@ -326,7 +326,7 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_default_font',
 			array(
-				'default'           => 'no',
+				'default'           => 'yes',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
