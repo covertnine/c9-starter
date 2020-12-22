@@ -3616,7 +3616,7 @@ if (!function_exists('tgmpa_load_bulk_installer')) {
 								$this->upgrader->strings['skin_before_update_header'] = __('Installing and Activating Plugin %1$s (%2$d/%3$d)', 'c9-starter');
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.',, 'c9-starter');
+								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-starter');
 								/* translators: 1: plugin name. */
 								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.');
 								$this->upgrader->strings['skin_upgrade_end']       = __('All installations have been completed.', 'c9-starter');
