@@ -29,7 +29,7 @@ Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
 = 2.2.7 =
-Block patterns added. Search block updates. Some button block alignment issues resolved.
+Block patterns added. Search block updates. Some button block alignment issues resolved. Social icon block styling updates.
 
 = 2.2.6 =
 Fixing backend button alignments for some blocks and C9 Social Share block spacing on frontend.

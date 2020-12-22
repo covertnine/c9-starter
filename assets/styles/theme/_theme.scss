@@ -2435,7 +2435,7 @@ table tr th {
 	font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
 	margin: 30px 0px 30px 15px;
 }
@@ -2525,6 +2525,22 @@ table tr th {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: $gray-700;
+}
+
+.wp-block-social-links,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright {
+	padding-left: 0px;
+	display: -ms-flex;
+	display: flex;
+}
+
+.wp-block-social-links li {
+	margin-right: 6px;
+}
+
+.wp-block-social-links li:last-child {
+	margin-right: 0px;
 }
 
 /****************************************************************************************/

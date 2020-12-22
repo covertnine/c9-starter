@@ -414,6 +414,21 @@ body .editor-styles-wrapper,
 	}
 }
 
+/* code blocks */
+code,
+kbd {
+	background-color: transparent;
+}
+
+/* social link block */
+.editor-styles-wrapper .wp-block-social-links li {
+	margin: 0px 6px 0px 0px;
+}
+
+.editor-styles-wrapper .wp-block-social-links li:last-child {
+	margin-right: 0px;
+}
+
 /* make mobile editing on gutenberg possible */
 
 @media only screen and (max-width: 414px) {
