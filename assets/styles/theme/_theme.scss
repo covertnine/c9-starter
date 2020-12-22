@@ -1878,6 +1878,45 @@ hr {
 	font-size: 1.8em;
 }
 
+.c9 .wp-block-search .wp-block-search__label {
+	margin-bottom: 8px;
+	font-size: 1.8em;
+}
+
+.wp-block-search.aligncenter .wp-block-search__inside-wrapper,
+.wp-block[data-align="center"] .wp-block-search .wp-block-search__inside-wrapper,
+.wp-block-search.aligncenter .wp-block-search__label,
+.wp-block[data-align="center"] .wp-block-search .wp-block-search__label {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+	padding: 0px;
+	border: 0px;
+}
+
+.wp-block-search .wp-block-search__input,
+.editor-styles-wrapper .wp-block-search .wp-block-search__input,
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+	min-height: 38px;
+	padding: 2px 8px;
+	min-width: 60px;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button:not(.has-icon) {
+	padding: 12px 35px;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__button {
+	margin-left: 0px;
+}
+
+.wp-block-search.wp-block-search__icon-button .search-icon {
+	fill: currentColor;
+}
+
 /****************************************************************************************/
 /* WordPress Gutenberg Column Blocks
 /****************************************************************************************/
