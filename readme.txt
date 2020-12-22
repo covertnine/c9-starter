@@ -30,7 +30,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.4.4 =
-Adding block patterns. Style updates for search blocks and button blocks.
+Adding block patterns. Style updates for search blocks, button blocks, and some alignments for block patterns.
 
 = 2.4.3 =
 Updates for WordPress 5.6 core block styles. New sample content for starter-content fresh_sites.
