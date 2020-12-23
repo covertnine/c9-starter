@@ -3599,29 +3599,29 @@ if (!function_exists('tgmpa_load_bulk_installer')) {
 						if ('update' === $this->options['install_type']) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = __('Updating Plugin %1$s (%2$d/%3$d)', 'tgmpa');
+							$this->upgrader->strings['skin_before_update_header'] = __('Updating Plugin %1$s (%2$d/%3$d)', 'c9-music');
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = __('An error occurred while installing %1$s: <strong>%2$s</strong>.', 'tgmpa');
+							$this->upgrader->strings['skin_update_failed_error'] = __('An error occurred while installing %1$s: <strong>%2$s</strong>.', 'c9-music');
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = __('The installation of %1$s failed.', 'tgmpa');
+							$this->upgrader->strings['skin_update_failed'] = __('The installation of %1$s failed.', 'c9-music');
 
 							if ($this->tgmpa->is_automatic) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __('The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa');
+								$this->upgrader->strings['skin_upgrade_start'] = __('The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-music');
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.');
-								$this->upgrader->strings['skin_upgrade_end']       = __('All installations and activations have been completed.', 'tgmpa');
+								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.', 'c9-music');
+								$this->upgrader->strings['skin_upgrade_end']       = __('All installations and activations have been completed.', 'c9-music');
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __('Installing and Activating Plugin %1$s (%2$d/%3$d)', 'tgmpa');
+								$this->upgrader->strings['skin_before_update_header'] = __('Installing and Activating Plugin %1$s (%2$d/%3$d)', 'c9-music');
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa');
+								$this->upgrader->strings['skin_upgrade_start'] = __('The installation process is starting. This process may take a while on some hosts, so please be patient.', 'c9-music');
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.');
-								$this->upgrader->strings['skin_upgrade_end']       = __('All installations have been completed.', 'tgmpa');
+								$this->upgrader->strings['skin_update_successful'] = __('%1$s done.', 'c9-music');
+								$this->upgrader->strings['skin_upgrade_end']       = __('All installations have been completed.', 'c9-music');
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = __('Installing Plugin %1$s (%2$d/%3$d)', 'tgmpa');
+								$this->upgrader->strings['skin_before_update_header'] = __('Installing Plugin %1$s (%2$d/%3$d)', 'c9-music');
 							}
 						}
 					}
