@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: C9 Music\n"
-"POT-Creation-Date: 2020-12-20 17:35-0600\n"
-"PO-Revision-Date: 2020-12-20 17:34-0600\n"
+"POT-Creation-Date: 2020-12-22 18:54-0600\n"
+"PO-Revision-Date: 2020-12-22 18:51-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -700,6 +700,106 @@ msgstr ""
 
 #: client/inc/client-setup.php:292
 msgid "Meta Widget"
+msgstr ""
+
+#: client/inc/client-setup.php:309
+msgid "C9 All Patterns"
+msgstr ""
+
+#: client/inc/client-setup.php:313
+msgid "C9 Video"
+msgstr ""
+
+#: client/inc/client-setup.php:317
+msgid "C9 Audio"
+msgstr ""
+
+#: client/inc/client-setup.php:321
+msgid "C9 Page Template"
+msgstr ""
+
+#: client/inc/client-setup.php:336
+msgid "Coming Soon Opt-in"
+msgstr ""
+
+#: client/inc/client-setup.php:337
+msgid ""
+"Start building your audience before you launch with a coming soon page that "
+"captures emails or phone numbers."
+msgstr ""
+
+#: client/inc/client-setup.php:346
+msgid "Video Embed + YouTube Link"
+msgstr ""
+
+#: client/inc/client-setup.php:347
+msgid "Feature a video file you upload with a link to a YouTube video link."
+msgstr ""
+
+#: client/inc/client-setup.php:356
+msgid "Information Dialog Two Buttons"
+msgstr ""
+
+#: client/inc/client-setup.php:357
+msgid ""
+"Highlight important information, and link to two separate places with "
+"buttons."
+msgstr ""
+
+#: client/inc/client-setup.php:365
+msgid "Spotify Embed, Track Listing + Button"
+msgstr ""
+
+#: client/inc/client-setup.php:366
+msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
+msgstr ""
+
+#: client/inc/client-setup.php:375
+msgid "Podcast Episode"
+msgstr ""
+
+#: client/inc/client-setup.php:376
+msgid ""
+"Feature a show photo, audio embed file, and everything you need for a "
+"podcast episode post."
+msgstr ""
+
+#: client/inc/client-setup.php:385
+msgid "Tour Schedule"
+msgstr ""
+
+#: client/inc/client-setup.php:386
+msgid ""
+"Add a bunch of dates and places and links to a table with a nice header and "
+"FAQ, cause tours are coming back!"
+msgstr ""
+
+#: client/inc/client-setup.php:395
+msgid "Article 450 Words"
+msgstr ""
+
+#: client/inc/client-setup.php:396
+msgid ""
+"Get your article laid out before writing with a 450 word placeholder and "
+"some imagery to tet you started."
+msgstr ""
+
+#: client/inc/client-setup.php:404
+msgid "Article 560 Words"
+msgstr ""
+
+#: client/inc/client-setup.php:405
+msgid ""
+"Get your article laid out before writing with a 600 word placeholder and "
+"some imagery to tet you started."
+msgstr ""
+
+#: client/inc/client-setup.php:413
+msgid "C9 Music Style Guide"
+msgstr ""
+
+#: client/inc/client-setup.php:414
+msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
 #: client/inc/client-woocommerce.php:32 client/inc/client-woocommerce.php:34
