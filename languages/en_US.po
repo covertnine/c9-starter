@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-12-21 19:05-0600\n"
-"PO-Revision-Date: 2020-12-21 19:06-0600\n"
+"POT-Creation-Date: 2020-12-27 10:31-0600\n"
+"PO-Revision-Date: 2020-12-27 10:32-0600\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -584,23 +584,26 @@ msgid "C9 All Patterns"
 msgstr "C9 All Patterns"
 
 #: client/inc/client-setup.php:299
+msgid "C9 Page Template"
+msgstr "C9 Page Template"
+
+#: client/inc/client-setup.php:303
 msgid "C9 Video"
 msgstr "C9 Video"
 
-#: client/inc/client-setup.php:303
+#: client/inc/client-setup.php:307
 msgid "C9 Audio"
 msgstr "C9 Audio"
 
-#: client/inc/client-setup.php:307
+#: client/inc/client-setup.php:311
 msgid "C9 Article"
 msgstr "C9 Article"
 
-#: client/inc/client-setup.php:323
+#: client/inc/client-setup.php:327
 msgid "Coming Soon Opt-in"
 msgstr "Coming Soon Opt-in"
 
-#: client/inc/client-setup.php:324
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:328
 msgid ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
@@ -608,21 +611,31 @@ msgstr ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
 
-#: client/inc/client-setup.php:332
+#: client/inc/client-setup.php:336
+msgid "Watch Video"
+msgstr "Watch Video"
+
+#: client/inc/client-setup.php:337
+msgid ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+msgstr ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+
+#: client/inc/client-setup.php:345
 msgid "Video Embed + YouTube Link"
 msgstr "Video Embed + YouTube Link"
 
-#: client/inc/client-setup.php:333
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:346
 msgid "Feature a video file you upload with a link to a YouTube video link."
 msgstr "Feature a video file you upload with a link to a YouTube video link."
 
-#: client/inc/client-setup.php:341
+#: client/inc/client-setup.php:354
 msgid "Information Dialog Two Buttons"
 msgstr "Information Dialog Two Buttons"
 
-#: client/inc/client-setup.php:342
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:355
 msgid ""
 "Highlight important information, and link to two separate places with "
 "buttons."
@@ -630,21 +643,43 @@ msgstr ""
 "Highlight important information, and link to two separate places with "
 "buttons."
 
-#: client/inc/client-setup.php:350
+#: client/inc/client-setup.php:363
 msgid "Spotify Embed, Track Listing + Button"
 msgstr "Spotify Embed, Track Listing + Button"
 
-#: client/inc/client-setup.php:351
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:364
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr "Embed a playlist, track listing or lyrics, and a button to open it up!"
 
-#: client/inc/client-setup.php:359
+#: client/inc/client-setup.php:372
+msgid "Podcast Episode"
+msgstr "Podcast Episode"
+
+#: client/inc/client-setup.php:373
+msgid ""
+"Feature a show photo, audio embed file, and everything you need for a "
+"podcast episode post."
+msgstr ""
+"Feature a show photo, audio embed file, and everything you need for a "
+"podcast episode post."
+
+#: client/inc/client-setup.php:383
+msgid "Events Schedule"
+msgstr "Events Schedule"
+
+#: client/inc/client-setup.php:384
+msgid ""
+"Add a bunch of dates and places and links to a table with a nice header and "
+"FAQ, cause events are coming back!"
+msgstr ""
+"Add a bunch of dates and places and links to a table with a nice header and "
+"FAQ, cause events are coming back!"
+
+#: client/inc/client-setup.php:394
 msgid "Article 450 Words"
 msgstr "Article 450 Words"
 
-#: client/inc/client-setup.php:360
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:395
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
@@ -652,12 +687,11 @@ msgstr ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:368
+#: client/inc/client-setup.php:403
 msgid "Article 600 Words"
 msgstr "Article 600 Words"
 
-#: client/inc/client-setup.php:369
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:404
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
@@ -665,12 +699,11 @@ msgstr ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:377
+#: client/inc/client-setup.php:412
 msgid "C9 Starter Style Guide"
 msgstr "C9 Starter Style Guide"
 
-#: client/inc/client-setup.php:378
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:413
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr "A style guide with type, buttons, and core blocks frequently used."
 

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-12-21 19:05-0600\n"
-"PO-Revision-Date: 2020-12-21 19:05-0600\n"
+"POT-Creation-Date: 2020-12-27 10:31-0600\n"
+"PO-Revision-Date: 2020-12-27 10:31-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -556,85 +556,112 @@ msgid "C9 All Patterns"
 msgstr ""
 
 #: client/inc/client-setup.php:299
-msgid "C9 Video"
+msgid "C9 Page Template"
 msgstr ""
 
 #: client/inc/client-setup.php:303
-msgid "C9 Audio"
+msgid "C9 Video"
 msgstr ""
 
 #: client/inc/client-setup.php:307
+msgid "C9 Audio"
+msgstr ""
+
+#: client/inc/client-setup.php:311
 msgid "C9 Article"
 msgstr ""
 
-#: client/inc/client-setup.php:323
+#: client/inc/client-setup.php:327
 msgid "Coming Soon Opt-in"
 msgstr ""
 
-#: client/inc/client-setup.php:324
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:328
 msgid ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
 msgstr ""
 
-#: client/inc/client-setup.php:332
+#: client/inc/client-setup.php:336
+msgid "Watch Video"
+msgstr ""
+
+#: client/inc/client-setup.php:337
+msgid ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+msgstr ""
+
+#: client/inc/client-setup.php:345
 msgid "Video Embed + YouTube Link"
 msgstr ""
 
-#: client/inc/client-setup.php:333
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:346
 msgid "Feature a video file you upload with a link to a YouTube video link."
 msgstr ""
 
-#: client/inc/client-setup.php:341
+#: client/inc/client-setup.php:354
 msgid "Information Dialog Two Buttons"
 msgstr ""
 
-#: client/inc/client-setup.php:342
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:355
 msgid ""
 "Highlight important information, and link to two separate places with "
 "buttons."
 msgstr ""
 
-#: client/inc/client-setup.php:350
+#: client/inc/client-setup.php:363
 msgid "Spotify Embed, Track Listing + Button"
 msgstr ""
 
-#: client/inc/client-setup.php:351
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:364
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr ""
 
-#: client/inc/client-setup.php:359
+#: client/inc/client-setup.php:372
+msgid "Podcast Episode"
+msgstr ""
+
+#: client/inc/client-setup.php:373
+msgid ""
+"Feature a show photo, audio embed file, and everything you need for a "
+"podcast episode post."
+msgstr ""
+
+#: client/inc/client-setup.php:383
+msgid "Events Schedule"
+msgstr ""
+
+#: client/inc/client-setup.php:384
+msgid ""
+"Add a bunch of dates and places and links to a table with a nice header and "
+"FAQ, cause events are coming back!"
+msgstr ""
+
+#: client/inc/client-setup.php:394
 msgid "Article 450 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:360
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:395
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:368
+#: client/inc/client-setup.php:403
 msgid "Article 600 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:369
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:404
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:377
+#: client/inc/client-setup.php:412
 msgid "C9 Starter Style Guide"
 msgstr ""
 
-#: client/inc/client-setup.php:378
-msgctxt "c9-starter"
+#: client/inc/client-setup.php:413
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
