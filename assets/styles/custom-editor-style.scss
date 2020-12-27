@@ -368,8 +368,13 @@ body .editor-styles-wrapper,
 /* WordPress cover block and core image block on post edit (not page edit) */
 
 /* WordPress core quote blocks on Posts and elsewhere */
+.editor-styles-wrapper .wp-block-quote,
+.editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) {
+	margin: 20px auto 30px auto;
+	margin-left: auto;
+}
 
-.wp-block-image,
+.editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) .wp-block-image,
 .editor-styles-wrapper .wp-block-quote {
 	font-size: 10px;
 }

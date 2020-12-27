@@ -29,6 +29,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.4.5 =
+Blank page template class update. Blockquote alignment fix in admin. Adding more block patterns.
+
 = 2.4.4 =
 Translation string fixes in block patterns, TGM translation string fix.
 
