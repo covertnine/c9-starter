@@ -79,12 +79,6 @@ function c9_register_required_plugins()
 			'required' => false,
 		),
 
-		// array(
-		// 	'name'		=> 'WooCommerce',
-		// 	'slug'		=> 'woocommerce',
-		// 	'required'  => 'false'
-		// )
-
 	);
 
 	if (!isset($config)) {
