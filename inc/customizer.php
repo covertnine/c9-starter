@@ -444,11 +444,11 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_heading_font',
 			array(
-				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
+				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 			)
 		);
 
@@ -466,11 +466,11 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_subheading_font',
 			array(
-				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
+				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 			)
 		);
 
@@ -487,11 +487,11 @@ if (!function_exists('c9_customize_register')) {
 		$wp_customize->add_setting(
 			'c9_body_font',
 			array(
-				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'c9_sanitize_select',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
+				'default'           => 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 			)
 		);
 		$wp_customize->add_control(
