@@ -3,7 +3,7 @@
 /**
  * C9 functions and definitions.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 /**

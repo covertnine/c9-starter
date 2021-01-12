@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 ?>

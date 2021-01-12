@@ -4,7 +4,7 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

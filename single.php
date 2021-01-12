@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

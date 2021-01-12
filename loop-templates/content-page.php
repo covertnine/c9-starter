@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 ?>

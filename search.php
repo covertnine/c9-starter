@@ -3,7 +3,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

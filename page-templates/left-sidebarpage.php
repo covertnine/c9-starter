@@ -5,7 +5,7 @@
  *
  * This template can be used to override the default template and sidebar setup
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

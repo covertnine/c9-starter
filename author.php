@@ -4,7 +4,7 @@
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

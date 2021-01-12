@@ -8,7 +8,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 
 get_header();

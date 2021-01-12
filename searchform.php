@@ -3,7 +3,7 @@
 /**
  * The template for displaying search forms
  *
- * @package c9-starter
+ * @package c9-togo
  */
 ?>
 <form method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>" role="search">

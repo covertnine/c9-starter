@@ -3,7 +3,7 @@
 /**
  * Single post partial template.
  *
- * @package c9-starter
+ * @package c9-togo
  */
 $c9_post_header 		= get_post_meta($post->ID, 'c9_post_header_size', true);
 $header_size 	 		= c9_sanitize_post_header_size($c9_post_header);
