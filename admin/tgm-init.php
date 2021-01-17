@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.
@@ -33,7 +34,7 @@
  */
 require_once get_template_directory() . '/admin/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'c9_register_required_plugins' );
+add_action('tgmpa_register', 'c9_register_required_plugins');
 
 /**
  * Register the required plugins for this theme.
@@ -52,7 +53,8 @@ add_action( 'tgmpa_register', 'c9_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function c9_register_required_plugins() {
+function c9_register_required_plugins()
+{
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -68,18 +70,6 @@ function c9_register_required_plugins() {
 		array(
 			'name'     => 'C9 Blocks',
 			'slug'     => 'c9-blocks',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'Regenerate Thumbnails',
-			'slug'     => 'regenerate-thumbnails',
-			'required' => false,
-		),
-
-		array(
-			'name'     => 'WP Retina 2x',
-			'slug'     => 'wp-retina-2x',
 			'required' => false,
 		),
 
@@ -101,9 +91,9 @@ function c9_register_required_plugins() {
 		),
 	);
 
-	if ( ! isset( $config ) ) {
+	if (!isset($config)) {
 		$config = [];
 	}
 
-	tgmpa( $plugins, $config );
+	tgmpa($plugins, $config);
 }
