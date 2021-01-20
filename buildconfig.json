@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://c9starter.local/",
+		"proxy": "https://heavens-door.local/",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [

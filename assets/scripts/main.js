@@ -32,15 +32,15 @@ var c9Page = (function ($) {
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
-        $("#backtotop").on("click", ".btn-back-to-top", function(e) {
+		$("#backtotop").on("click", ".btn-back-to-top", function (e) {
 			e.preventDefault();
 			window.scrollTo({
 				'behavior': 'smooth',
 				'top': 0
 			});
-            $(".btn-back-to-top").css("opacity", "0");
-            $("#page").focus();
-        });
+			$(".btn-back-to-top").css("opacity", "0");
+			$("#page").focus();
+		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
@@ -53,18 +53,18 @@ var c9Page = (function ($) {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
-				if (scroll >= 288) {
+				if (scroll >= 488) {
 					$(".navbar").addClass("opacity0");
 				}
-				if (scroll <= 287) {
+				if (scroll <= 487) {
 					$(".navbar").removeClass("opacity0");
 				}
 
-				if (scroll >= 338) {
+				if (scroll >= 538) {
 					$(".navbar").addClass("fixed-top opacity100");
 					$(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
 				}
-				if (scroll <= 337) {
+				if (scroll <= 537) {
 					$(".navbar").removeClass("fixed-top opacity100");
 					$(".header-navbar").removeClass("jumpfix"); //remove extra classes and put navs back at top
 				}
@@ -78,19 +78,19 @@ var c9Page = (function ($) {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
-				if (scroll >= 168) {
+				if (scroll >= 368) {
 					$(".navbar").addClass("opacity0");
 				}
-				if (scroll <= 167) {
+				if (scroll <= 367) {
 					$(".navbar").removeClass("opacity0");
 				}
 
-				if (scroll >= 218) {
+				if (scroll >= 418) {
 					$(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
 					$(".header-navbar").addClass("jumpfix");
 					//$(".header-navbar.jumpfix").css("height", "108px");
 				}
-				if (scroll <= 217) {
+				if (scroll <= 417) {
 					$(".navbar").removeClass(
 						"navbar-small fixed-top opacity100"
 					); //expand nav and remove fixed
