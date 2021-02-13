@@ -1696,8 +1696,15 @@ a:focus {
 	border-radius: 0px;
 }
 
-.c9 .woocommerce p {
+.c9 .woocommerce p,
+.c9 .woocommerce .shop_table {
 	font-size: 16px;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+	min-width: 115px;
 }
 
 /****************************************************************************************/
@@ -3367,7 +3374,7 @@ p~.wp-block-button:not(.alignleft) {
 .c9 .entry-content input[type="url"],
 .c9 .entry-content input[type="password"],
 .c9 .entry-content input[type="phone"] {
-	min-height: 55px;
+	min-height: 47px;
 }
 
 .c9 textarea {
