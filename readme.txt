@@ -167,6 +167,9 @@ Initial release of starter theme with support for all WordPress 5.3 blocks
 
 == Upgrade Notice ==
 
+= 2.4.6 =
+* Updated post thumbnail sizes so C9 Post Grid Blocks have better options for thumbnail imagery so you may want to use the Regenerate Thumbnails plugin to create new thumbnail sizes. Be sure to update any C9 Post Grid blocks to use new thumbnail sizes once you run the thumbnails regeneration.
+
 = 2.4.2 =
 * Updated single post header size settings may need to be saved again as we added large, small, and a hidden option in 2.4.1
 
