@@ -2,16 +2,16 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.6
-Tested up to: 5.6
+Tested up to: 5.6.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.5
+Stable Tag: 2.4.6
 
-A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
+C9 Starter is an agency-designed starter theme for the next generation of content creators with mobile-friendly designs, a single level dropdown menu, Gutenberg block patterns, and custom pagination from [COVERT NINE](https://www.covertnine.com).
 
 == Description ==
-A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard).
+A theme made for building out landing pages, marketing campaigns, media, content, and articles in WordPress with the help of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin and the [C9 Admin Dashboard](https://wordpress.org/plugins/c9-admin-dashboard)
 
 == Frequently Asked Questions ==
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.4.6 =
+Updated image thumbnails sizes to fit better in C9 Post Grid blocks. Fixed some font styles for WooCommerce checkout.
 
 = 2.4.5 =
 Blank page template class update. Blockquote alignment fix in admin. Adding more block patterns.
