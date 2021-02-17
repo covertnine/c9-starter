@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.6
-Tested up to: 5.6
+Tested up to: 5.6.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.5
+Stable Tag: 9.4.5
 
 A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
