@@ -188,13 +188,13 @@ if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
 		if (('secondary' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
-			$items .= '<li class="nav-item search">
+			$items = '<li class="nav-item search">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>
 							<span class="sr-only">' . __('Search', 'c9-starter') . '</span>
 						</a>
-					</div></li>';
+					</div></li>' . $items;
 		}
 		return $items;
 	}
