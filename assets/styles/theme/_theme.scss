@@ -2437,7 +2437,7 @@ table tr th {
 	font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
+.entry-content>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
 	margin: 30px 0px 30px 15px;
 }
@@ -3187,6 +3187,14 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
+.wp-block-buttons>.wp-block-button {
+	vertical-align: middle;
+}
+
+.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
+	width: 100%;
+}
+
 @media only screen and (max-width: 414px) {
 
 	.c9 .woocommerce #respond input#submit,
@@ -3231,6 +3239,7 @@ screen and (max-height: 300px) {
 	border: 3px solid;
 	background-color: transparent;
 	color: $gray-900;
+	padding: 9px 35px;
 }
 
 .wp-block-button__link.c9-button-size-small {
