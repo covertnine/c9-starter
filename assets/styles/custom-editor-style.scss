@@ -248,10 +248,6 @@ body .editor-styles-wrapper,
 }
 
 /*WordPress 5.7 button alignments*/
-.editor-styles-wrapper .wp-block-buttons>.wp-block-button {
-	vertical-align: middle;
-}
-
 .editor-styles-wrapper .wp-block-buttons .wp-block-button {
 	margin-right: .5em;
 	margin-bottom: .5em;
@@ -260,6 +256,10 @@ body .editor-styles-wrapper,
 
 .editor-rich-text__editable.wp-block-button__link {
 	width: 100%;
+}
+
+.editor-styles-wrapper .wp-block-buttons>.wp-block-button:last-child {
+	margin-right: 0;
 }
 
 .wp-block[data-type="core/paragraph"]~.wp-block[data-type="core/button"]:not(.alignleft) {

@@ -3187,8 +3187,20 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
-.wp-block-buttons>.wp-block-button {
-	vertical-align: middle;
+.wp-block-buttons>.wp-block-button.wp-block-button__width-25:last-child {
+	width: 25%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50:last-child {
+	width: 50%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-75:last-child {
+	width: 75%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-100:last-child {
+	width: 100%;
 }
 
 .wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
