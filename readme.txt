@@ -30,7 +30,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.4.7 =
-Update for WordPress 5.7 compatibility and slight updates for list styles.
+Update for WordPress 5.7 compatibility and slight updates for list styles. Button block formatting updates for 5.7.
 
 = 2.4.6 =
 Updated image thumbnails sizes to fit better in C9 Post Grid blocks. Fixed some font styles for WooCommerce checkout.
