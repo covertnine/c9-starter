@@ -194,8 +194,19 @@ if (!function_exists('c9_add_search_form')) {
 							<i class="fa fa-search"></i>
 							<span class="sr-only">' . __('Search', 'c9-starter') . '</span>
 						</a>
-					</div></li>' . $items;
+					</div></li>
+					' . $items;
 		}
 		return $items;
 	}
 }
+
+/*
+<li class="nav-social d-none d-sm-inline-block">
+							<a href="https://facebook.com/wowbao" title="Follow Wow Bao Facebook" class="nav-link d-inline-block"><i class="fa fa-facebook"></i><span class="sr-only">Follow Wow Bao Facebook</span></a>
+							<a href="https://twitter.com/wowbao" title="Follow Wow Bao Twitter" class="nav-link d-inline-block"><i class="fa fa-twitter"></i><span class="sr-only">Follow Wow Bao Twitter</span></a>
+							<a href="https://instagram.com/wowbao" title="Follow Wow Bao Instagram" class="nav-link d-inline-block"><i class="fa fa-instagram"></i><span class="sr-only">Follow Wow Bao Instagram</span></a>
+							<a href="https://www.youtube.com/channel/UCPwsyyValYh-SeG4s1lhMFQ" title="Follow Wow Bao YouTube" class="nav-link d-inline-block"><i class="fa fa-youtube"></i><span class="sr-only">Follow Wow Bao YouTube</span></a>
+							<a href="https://www.linkedin.com/company/wow-bao" title="Follow Wow Bao LinkedIn" class="nav-link d-inline-block"><i class="fa fa-linkedin"></i><span class="sr-only">Follow Wow Bao LinkedIn</span></a>
+						</li>'
+						*/
