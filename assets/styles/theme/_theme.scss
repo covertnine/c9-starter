@@ -2430,7 +2430,7 @@ table tr th {
 	font-size: 1.6em;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
+.entry-content>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
 	margin: 30px 0px 30px 15px;
 }
@@ -3180,6 +3180,26 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
+.wp-block-buttons>.wp-block-button.wp-block-button__width-25:last-child {
+	width: 25%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50:last-child {
+	width: 50%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-75:last-child {
+	width: 75%;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-100:last-child {
+	width: 100%;
+}
+
+.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
+	width: 100%;
+}
+
 @media only screen and (max-width: 414px) {
 
 	.c9 .woocommerce #respond input#submit,
@@ -3188,6 +3208,27 @@ screen and (max-height: 300px) {
 	.c9 .woocommerce input.button {
 		padding: 12px 15px;
 		font-size: 12px;
+	}
+
+	/* added for new button settings for 5.7 */
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-50:last-child,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-25:last-child,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-25,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+		width: calc(50% - .4em);
+		max-width: calc(50% - .4em);
+		margin-right: 0;
+		margin: 0 .2em .4em .2em;
+	}
+
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-75:last-child,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-100:last-child,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-75,
+	.wp-block-buttons>.wp-block-button.wp-block-button__width-100 {
+		width: calc(100% - .4em);
+		max-width: calc(100% - .4em);
+		margin-right: 0;
+		margin: 0 .2em .4em .2em;
 	}
 }
 

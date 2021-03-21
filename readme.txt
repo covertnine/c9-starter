@@ -1,12 +1,12 @@
-=== C9 Starter ===
+=== C9 Starter Heaven's Door ===
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.6
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.5
+Stable Tag: 9.4.5
 
 A blocks powered WordPress starter theme that uses Bootstrap 4, Google Fonts, and CSS Grid from [C9](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 9.4.5 =
+Custom theme for Heaven's Door Whiskey
 
 = 2.4.5 =
 Blank page template class update. Blockquote alignment fix in admin. Adding more block patterns.
