@@ -66,7 +66,7 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_instagram_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-instagram"></i><<span class="sr-only">Instagram</span>/a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>';
 			} else {
 				$link = '<a href="//instagram.com/' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>';
 			}
