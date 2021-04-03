@@ -3958,6 +3958,11 @@ label {
 	height: auto;
 }
 
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img {
+	border-radius: 34px;
+}
+
 .opacity0 {
 	opacity: 0;
 }
