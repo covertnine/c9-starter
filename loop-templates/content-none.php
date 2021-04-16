@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template part for displaying a message that posts cannot be found.
  *
@@ -8,53 +9,57 @@
  */
 
 ?>
-			<div class="container">
-				<div class="row no-gutter">
-<section class="no-results not-found">
+<div class="container">
+	<div class="row no-gutter">
+		<section class="no-results not-found">
 
-	<header class="page-header">
+			<header class="page-header">
 
-		<h1 class="page-title mar30T"><?php esc_html_e( 'Nothing Found', 'c9-starter' ); ?></h1>
+				<h1 class="page-title mar30T"><?php esc_html_e('Nothing Found', 'c9-starter'); ?></h1>
 
-	</header><!-- .page-header -->
+			</header><!-- .page-header -->
 
-	<div class="page-content">
+			<div class="page-content">
 
-		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-		?>
-		<p>
-		<?php
-		printf(
-			wp_kses(
-			__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'c9-starter' ),
-			array(
-				'a' => array(
-					'href' => array(),
-				),
-			)
-			),
-			esc_url( admin_url( 'post-new.php' ) )
-			);
-			?>
-		</p>
+				<?php
+				if (is_home() && current_user_can('publish_posts')) :
+				?>
+					<p>
+						<?php
+						printf(
+							wp_kses(
+								__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'c9-starter'),
+								array(
+									'a' => array(
+										'href' => array(),
+									),
+								)
+							),
+							esc_url(admin_url('post-new.php'))
+						);
+						?>
+					</p>
 
-		<?php
-		elseif ( is_search() ) :
-		?>
+				<?php
+				elseif (is_search()) :
+				?>
 
-		<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'c9-starter' ); ?></p>
-		<?php
-			get_search_form();
-		else :
-		?>
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'c9-starter' ); ?></p>
-			<?php
-				get_search_form();
-		endif;
-		?>
-	</div><!-- .page-content -->
+					<p><?php esc_html_e('Sorry, but nothing matched your search terms.', 'c9-starter'); ?> Try searching, or use our <a href="/locations" title="Find a Wow Bao near you!">Locations</a> link to search by address or ZIP code.
+					</p>
+				<?php
+					get_search_form();
+				else :
+				?>
+					<p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for.', 'c9-starter'); ?> Try searching, or use our <a href="/locations" title="Find a Wow Bao near you!">Locations</a> link to search by address or ZIP code.
+					</p>
+				<?php
+					get_search_form();
+				endif;
+				?>
+			</div><!-- .page-content -->
 
-</section><!-- .no-results -->
-	</div><!--container -->
-	</div><!--.row-->
+		</section><!-- .no-results -->
+	</div>
+	<!--container -->
+</div>
+<!--.row-->
