@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="container">
+<div class="container-narrow">
 	<div class="row no-gutter">
 		<section class="no-results not-found">
 
@@ -47,7 +47,7 @@
 				elseif (is_search()) :
 				?>
 
-					<p>Try searching below, or search by zip code on our <a href="/locations" title="Find a Wow Bao near you!">Locations</a> page.
+					<p>Try searching below, or search by city, state, or zip code on our <a href="/locations" title="Find a Wow Bao near you!"><strong>Locations</strong></a> page.
 					</p>
 				<?php
 					get_search_form();
