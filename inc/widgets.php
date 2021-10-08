@@ -30,10 +30,10 @@ if (!function_exists('c9_slbd_count_widgets')) {
 			$widget_classes = 'widget-count-' . count($sidebars_widgets_count[$sidebar_id]);
 			if (0 == $widget_count % 4 || 6 < $widget_count || 0 == $widget_count % 5) :
 				// Four widgets per row if there are exactly four or more than six
-				$widget_classes .= ' col-xs-12';
+				$widget_classes .= ' col-xs-12 col-sm-4';
 			elseif (6 == $widget_count) :
 				// If two widgets are published
-				$widget_classes .= ' col-xs-12';
+				$widget_classes .= ' col-xs-12 col-sm-6';
 			elseif ($widget_count >= 3) :
 				// Three widgets per row if there's three or more widgets
 				$widget_classes .= ' col-xs-12';
