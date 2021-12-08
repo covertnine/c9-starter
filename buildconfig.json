@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://c9starter.local/",
+		"proxy": "https://skinny-butcher.local/chickn",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [
