@@ -23,58 +23,58 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 
 	if (is_active_sidebar('footerfull') || !empty($c9_footer_copyright) || 'show' === $c9_footer_search  || $c9_social_links) {
 ?>
-		<div class="footer-entirety">
-			<?php
+<div class="footer-entirety">
+    <?php
 			get_sidebar('footerfull');
 			?>
-			<div class="footer-wrapper" id="wrapper-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<footer class="site-footer" id="colophon">
-								<div class="site-info">
-									<div class="container">
-										<div class="row text-center d-flex justify-content-between align-items-center">
-											<?php
+    <div class="footer-wrapper" id="wrapper-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <footer class="site-footer" id="colophon">
+                        <div class="site-info">
+                            <div class="container">
+                                <div class="row text-center justify-content-between align-items-center d-block">
+                                    <?php
 											if ($c9_social_links) :
 											?>
-												<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
-													<div class="footer-social text-center">
-														<?php
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
+                                        <div class="footer-social text-center">
+                                            <?php
 														foreach ($c9_social_links as $link_key => $link_value) {
 															echo $link_value;
 														}
 														?>
-													</div>
-												</div>
-											<?php endif; ?>
-											<?php
+                                        </div>
+                                    </div>
+                                    <?php endif; ?>
+                                    <?php
 											if (!empty($c9_footer_copyright)) {
-												echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . wp_kses_post($c9_footer_copyright) . '</p></div>';
+												echo '<div class="col-xs-12 p-0 footer-copyright-wrapper text-center d-block"><p class="text-center copyright text-center d-block">' . wp_kses_post($c9_footer_copyright) . '</p></div>';
 											}
 
 											if ('show' === $c9_footer_search) :
 											?>
-												<div class="col-xs-12 col-sm-12 col-md-2 text-left footer-search-wrapper">
-													<div class="footer-search">
-														<?php get_search_form(); ?>
-													</div>
-												</div>
-											<?php
+                                    <div class="col-xs-12 text-center footer-search-wrapper">
+                                        <div class="footer-search">
+                                            <?php get_search_form(); ?>
+                                        </div>
+                                    </div>
+                                    <?php
 											endif;
 											?>
-										</div><!-- .row-->
-									</div><!-- .container-->
-								</div><!-- .site-info -->
-							</footer><!-- #colophon -->
-						</div>
-						<!--col end -->
-					</div><!-- row end -->
-				</div><!-- container end -->
-			</div><!-- wrapper end -->
-		</div>
-		<!--end .footer-entirety-->
-	<?php
+                                </div><!-- .row-->
+                            </div><!-- .container-->
+                        </div><!-- .site-info -->
+                    </footer><!-- #colophon -->
+                </div>
+                <!--col end -->
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </div><!-- wrapper end -->
+</div>
+<!--end .footer-entirety-->
+<?php
 	}
 	?>
 <?php
@@ -83,16 +83,19 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 </div>
 <!--end smoothwrapper-->
 <div id="fullscreensearch">
-	<form role="search" method="get" id="fullscreen" action="/">
-		<div>
-			<span class="sr-only"><?php esc_html_e('Search for:', 'c9-starter'); ?></span>
-			<input type="search" class="search-field" name="s" value="" tabindex="0" placeholder="<?php esc_attr_e('Search...', 'c9-starter'); ?>" />
-			<button type="submit" class="btn"><?php esc_html_e('Search', 'c9-starter'); ?></button>
-		</div>
-	</form>
-	<button type="button" class="search-close"><i class="fa fa-close"></i><span class="sr-only"><?php esc_html_e('Close', 'c9-starter'); ?></span></button>
+    <form role="search" method="get" id="fullscreen" action="/">
+        <div>
+            <span class="sr-only"><?php esc_html_e('Search for:', 'c9-starter'); ?></span>
+            <input type="search" class="search-field" name="s" value="" tabindex="0"
+                placeholder="<?php esc_attr_e('Search...', 'c9-starter'); ?>" />
+            <button type="submit" class="btn"><?php esc_html_e('Search', 'c9-starter'); ?></button>
+        </div>
+    </form>
+    <button type="button" class="search-close"><i class="fa fa-close"></i><span
+            class="sr-only"><?php esc_html_e('Close', 'c9-starter'); ?></span></button>
 </div>
-<div id="backtotop" class="backtotop-container"> <button type="button" class="btn-back-to-top"><span class="sr-only">Back to top</span><i class="fa fa-arrow-up"></i></button></div>
+<div id="backtotop" class="backtotop-container"> <button type="button" class="btn-back-to-top"><span
+            class="sr-only">Back to top</span><i class="fa fa-arrow-up"></i></button></div>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
 
