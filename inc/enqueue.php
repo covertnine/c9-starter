@@ -87,16 +87,3 @@ if (!function_exists('c9_inline_typography_loading_script')) {
 					wp_enqueue_script('c9_field_conditionals', get_template_directory_uri() . '/assets/scripts/c9-conditional-customizer.js', array('jquery'));
 				}
 			}
-
-			// // remove inline styles added by WP to Gutenberg
-			// add_filter('block_editor_settings_all', 'c9_kill_goot_styles');
-
-			// function c9_kill_goot_styles($editor_settings)
-			// {
-			// 	// echo "<pre>";
-			// 	// echo print_r(get_default_block_editor_settings());
-			// 	// echo "</pre>";
-			// 	// exit();
-			// 	unset($editor_settings['defaultEditorStyles'][0]);
-			// 	return $editor_settings;
-			// }
