@@ -40,7 +40,7 @@ if (!function_exists('c9_scripts')) {
 				'c9_default_font'    => esc_js($c9_fonts)
 			];
 			$font_list  = [];
-			foreach(['c9_heading_font', 'c9_subheading_font', 'c9_body_font'] as $f) {
+			foreach (['c9_heading_font', 'c9_subheading_font', 'c9_body_font'] as $f) {
 				if (!empty($font_array[$f]) && !in_array($font_array[$f], $font_list))
 					$font_list[] = $font_array[$f];
 			}
@@ -48,7 +48,7 @@ if (!function_exists('c9_scripts')) {
 
 			// Use the localize function to localize the script and continue with the code
 			wp_localize_script('c9-typography-script', 'c9SelectedFonts', $font_array);
-			
+
 			// Enqueued script with the data we pulled from earlier selections
 			wp_enqueue_script('c9-typography-script');
 
@@ -70,26 +70,20 @@ add_action('wp_enqueue_scripts', 'c9_scripts', 10);
 // in case Autoptimize moved the regular script to the footer
 add_action('wp_head', 'c9_inline_typography_loading_script');
 if (!function_exists('c9_inline_typography_loading_script')) {
-	function c9_inline_typography_loading_script(){
-		?><script>if(!document.documentElement.className.match(/\bwf-/))document.documentElement.classList.add('wf-loading')</script><?php
-	}
-}
-
-// adds conditional JS for font selections in customizer
-add_action('customize_controls_enqueue_scripts', 'c9_customizer_scripts', 20);
-if (!function_exists('c9_customizer_scripts')) {
-
-	function c9_customizer_scripts()
+	function c9_inline_typography_loading_script()
 	{
-		wp_enqueue_script('c9_field_conditionals', get_template_directory_uri() . '/assets/scripts/c9-conditional-customizer.js', array('jquery'));
-	}
-}
+?><script>
+			if (!document.documentElement.className.match(/\bwf-/)) document.documentElement.classList.add('wf-loading')
+		</script><?php
+				}
+			}
 
-// remove inline styles added by WP to Gutenberg
-add_filter('block_editor_settings', 'c9_kill_goot_styles');
+			// adds conditional JS for font selections in customizer
+			add_action('customize_controls_enqueue_scripts', 'c9_customizer_scripts', 20);
+			if (!function_exists('c9_customizer_scripts')) {
 
-function c9_kill_goot_styles($editor_settings)
-{
-	unset($editor_settings['styles'][0]);
-	return $editor_settings;
-}
+				function c9_customizer_scripts()
+				{
+					wp_enqueue_script('c9_field_conditionals', get_template_directory_uri() . '/assets/scripts/c9-conditional-customizer.js', array('jquery'));
+				}
+			}
