@@ -110,12 +110,7 @@ if (!function_exists('c9_setup')) {
 
 		add_theme_support('responsive-embeds');
 
-		// Add support for custom line height controls.
 		add_theme_support('custom-line-height');
-
-		// Add support for experimental link color control.
-		add_theme_support('experimental-link-color');
-
 
 		// C9 custom image sizes
 		add_image_size('c9-post-feature-hd', 1920, 1080, true);

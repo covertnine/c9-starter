@@ -5,6 +5,21 @@
 	color: $primary;
 }
 
+body .editor-styles-wrapper {
+	padding: 0px;
+}
+
+html :where(.editor-styles-wrapper) {
+	font-family: "helvetica neue",
+		helvetica,
+		sans-serif;
+}
+
+.editor-styles-wrapper .block-list-appender {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 /****************************************************************************************/
 /* post title */
 /****************************************************************************************/
@@ -150,12 +165,19 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 	font-size: 16px;
 }
 
-.editor-styles-wrapper p,
+.editor-styles-wrapper .is-root-container>p,
+.editor-styles-wrapper .is-root-container>.block-list-appender>.has-visible-prompt>p,
 .wp-block[data-type="core/paragraph"] p,
 .editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
 	line-height: 1.6;
 	margin-bottom: 20px;
 	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html :where(.editor-styles-wrapper) p {
+	line-height: 1.6;
 }
 
 .editor-styles-wrapper blockquote p,
@@ -163,7 +185,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 .editor-styles-wrapper p.mce-content-body,
 .editor-styles-wrapper p.mce-content-body {
 	margin-bottom: 20px;
-	line-height: 1.7;
+	line-height: 1.6;
 	font-size: 16px;
 }
 
@@ -577,8 +599,8 @@ kbd {
 	margin-bottom: 5px;
 }
 
-.editor-styles-wrapper .editor-post-title>span {
-	font-size: 2em;
+.editor-styles-wrapper .editor-post-title [data-rich-text-placeholder] {
+	font-size: inherit;
 }
 
 .editor-styles-wrapper .is-root-container h1,
