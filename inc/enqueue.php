@@ -71,7 +71,9 @@ add_action('wp_enqueue_scripts', 'c9_scripts', 10);
 add_action('wp_head', 'c9_inline_typography_loading_script');
 if (!function_exists('c9_inline_typography_loading_script')) {
 	function c9_inline_typography_loading_script(){
-		?><script>if(!document.documentElement.className.match(/\bwf-/))document.documentElement.classList.add('wf-loading')</script><?php
+		?><script>
+if (!document.documentElement.className.match(/\bwf-/)) document.documentElement.classList.add('wf-loading')
+</script><?php
 	}
 }
 
@@ -86,10 +88,10 @@ if (!function_exists('c9_customizer_scripts')) {
 }
 
 // remove inline styles added by WP to Gutenberg
-add_filter('block_editor_settings', 'c9_kill_goot_styles');
+// add_filter('block_editor_settings', 'c9_kill_goot_styles');
 
-function c9_kill_goot_styles($editor_settings)
-{
-	unset($editor_settings['styles'][0]);
-	return $editor_settings;
-}
+// function c9_kill_goot_styles($editor_settings)
+// {
+// 	unset($editor_settings['styles'][0]);
+// 	return $editor_settings;
+// }
