@@ -110,6 +110,8 @@ if (!function_exists('c9_setup')) {
 
 		add_theme_support('responsive-embeds');
 
+		add_theme_support('custom-line-height');
+
 		// C9 custom image sizes
 		add_image_size('c9-post-feature-hd', 1920, 1080, true);
 		add_image_size('c9-post-large-wide', 1600, 465, array('center', 'center'), true);
