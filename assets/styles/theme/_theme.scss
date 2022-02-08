@@ -33,6 +33,10 @@ body {
 	display: flex;
 }
 
+.admin-bar .fixed-top {
+	top: var(--wp-admin--admin-bar--height);
+}
+
 /* blog index */
 .container-posts .post .entry-content p:last-child {
 	margin-bottom: 5px;
