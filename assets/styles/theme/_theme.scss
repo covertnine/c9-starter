@@ -33,8 +33,10 @@ body {
 	display: flex;
 }
 
-.admin-bar .fixed-top {
-	top: var(--wp-admin--admin-bar--height);
+@media only screen and (min-width:992px) {
+	.admin-bar .fixed-top {
+		top: var(--wp-admin--admin-bar--height);
+	}
 }
 
 /* blog index */
@@ -2202,7 +2204,7 @@ table tr th {
 	.wp-block-table tr th,
 	.wp-block-table tr td {
 		padding: 4px;
-		font-size: 1em;
+		font-size: 12px;
 	}
 
 	.page-template-default .entry-content>.wp-block-table.alignfull {
@@ -2225,7 +2227,6 @@ table tr th {
 	.wp-block-table tr th,
 	.wp-block-table tr td {
 		padding: 4px;
-		font-size: 1.4em;
 	}
 }
 
@@ -2236,6 +2237,7 @@ table tr th {
 		word-wrap: break-word;
 		font-family: $font-family-base;
 		padding: 15px;
+		font-size: 16px;
 	}
 }
 
