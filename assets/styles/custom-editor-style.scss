@@ -424,7 +424,10 @@ body .editor-styles-wrapper,
 
 /* code blocks */
 code,
-kbd {
+kbd,
+pre,
+html :where(.editor-styles-wrapper) code,
+html :where(.editor-styles-wrapper) kbd {
 	background-color: transparent;
 }
 
