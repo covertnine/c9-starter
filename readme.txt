@@ -28,6 +28,8 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.4.9 =
+Adjustments for WordPress 5.9 related to spacing in backend/frontend for some elements.
 
 = 2.4.8 =
 Update to rounded image style, added screen reader text to social icons.
