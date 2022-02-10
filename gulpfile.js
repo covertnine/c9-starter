@@ -1,7 +1,7 @@
 // Defining requirements
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
