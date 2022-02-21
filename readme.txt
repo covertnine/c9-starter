@@ -33,6 +33,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.3.3 =
+Updating packages for development. WordPress 5.9 copmatibility updates.
+
 = 2.3.2 =
 Fixed TGIM errors on local, core block styles, added block patterns.
 
