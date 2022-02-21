@@ -24,7 +24,7 @@
 	"author": "COVERT NINE",
 	"license": "GPL-2.0",
 	"bugs": {
-		"url": "https://github.com/covertnine/c9"
+		"url": "https://github.com/covertnine/c9-starter"
 	},
 	"homepage": "https://covertnine.com",
 	"dependencies": {
