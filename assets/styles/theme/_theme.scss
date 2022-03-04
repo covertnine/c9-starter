@@ -847,9 +847,10 @@ a:focus {
 
 .page-search-results nav .pagination .page-item,
 .archive .pagination .page-item,
-.blog .pagination .page-item {
+.blog .pagination .page-item,
+.wp-block-query-pagination .wp-block-query-pagination-numbers a {
 	display: inline-block;
-	font-size: 1.6em;
+	font-size: 16px;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
@@ -859,7 +860,8 @@ a:focus {
 .blog nav .pagination .page-item .page-link,
 .single .navigation .nav-previous a,
 .single .navigation .nav-next a,
-.post-page-numbers {
+.post-page-numbers,
+.wp-block-query-pagination .wp-block-query-pagination-numbers a {
 	font-weight: 700;
 	font-family: $headings-font-family;
 	padding: 10px;
