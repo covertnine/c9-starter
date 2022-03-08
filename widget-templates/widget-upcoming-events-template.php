@@ -20,7 +20,7 @@
                         'meta_compare'           => '>=', // Compare today's datetime with our event datetime
                         'order'                  => 'ASC', // Show earlier events first
                         'posts_per_page'          => $items_num,
-                        'post__not_in'              => array($post->ID),
+                        //  'post__not_in'              => $post['ID'],
                         'ignore_sticky_posts'      => 1
                     )
                 );
@@ -41,7 +41,7 @@
                             ),
                         ),
                         'posts_per_page' => $items_num,
-                        'post__not_in' => array($post->ID),
+                        //  'post__not_in' => $post['ID'],
                         'ignore_sticky_posts' => 1
                     )
                 );
@@ -53,8 +53,6 @@
                 $u_start                 = get_field('date_and_time', false, false);
                 $u_date_setup               = new DateTime($u_start);
                 $u_date                     = $u_date_setup->format('F j, Y');
-
-
                 $event_headline             = get_field('event_headline');
                 $location_name             = get_field('location_name');
                 $location_city_country     = get_field('location_city_country');
@@ -96,7 +94,7 @@
                         <div class="event-tickets-small">
 
                             <?php if ((!empty($event_ticket_link)) && ($show_is_sold_out !== true)) { ?>
-                                <a class="btn btn-xs btn-default" href="<?php echo $event_ticket_link; ?>" target="_blank"><?php _e('Tickets', 'cortex'); ?><span class="sr-only">(Opens in new window).</span></a>
+                                <a class="btn btn-xs btn-default" href="<?php echo $event_ticket_link; ?>" target="_blank"><?php _e('Tickets', 'c9-starter'); ?><span class="sr-only">(Opens in new window).</span></a>
                             <?php } ?>
 
                             <?php if ($show_is_sold_out === true) { ?>

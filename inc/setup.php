@@ -111,5 +111,9 @@ if (!function_exists('c9_setup')) {
 		add_image_size('c9-post-wide-sm-crop', 500, 281, true);
 		add_image_size('c9-post-wide-xs-crop', 380, 215, true);
 		add_image_size('c9-post-wide-tiny-crop', 120, 90, true);
+		add_image_size('riot-featured-post-img', 698, 392);
+		add_image_size('riot-square-show', 1080, 1080, array('center', 'center'), true);
+		add_image_size('riot-square-show-big', 1500, 1500, array('center', 'center'), true);
+		set_post_thumbnail_size(698, 392);
 	}
 }

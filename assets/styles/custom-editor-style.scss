@@ -337,19 +337,18 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links):not(.wp-block-social-links):not(.wp-block-post-template) li,
 .editor-styles-wrapper ol li {
 	margin: 10px 0px;
 }
 
 .editor-styles-wrapper .wp-block>ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"] ol,
-.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
-.editor-styles-wrapper ul {
+.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list):not(.wp-block-social-links):not(.wp-block-post-template),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list):not(.wp-block-social-links):not(.wp-block-post-template),
+.editor-styles-wrapper ul[data-type="core/list"] {
 	padding: 0px 0px 0px 10px;
 	margin: 30px 0px 35px 45px;
-	list-style-type: none;
 }
 
 /* WordPress Core search widget block */
@@ -437,11 +436,7 @@ html :where(.editor-styles-wrapper) kbd {
 
 /* social link block */
 .editor-styles-wrapper .wp-block-social-links li {
-	margin: 0px 6px 0px 0px;
-}
-
-.editor-styles-wrapper .wp-block-social-links li:last-child {
-	margin-right: 0px;
+	margin: 0px;
 }
 
 /* make mobile editing on gutenberg possible */
@@ -614,42 +609,42 @@ html :where(.editor-styles-wrapper) kbd {
 .editor-styles-wrapper .is-root-container .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-	font-size: 4em;
+	font-size: 40px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h2,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
 .wp-block-heading h2 {
-	font-size: 3.6em;
+	font-size: 35px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h3,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3,
 .wp-block-heading h3 {
-	font-size: 3em;
+	font-size: 30px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h4,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4,
 .wp-block-heading h4 {
-	font-size: 2.8em;
+	font-size: 25px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h5,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5,
 .wp-block-heading h5 {
-	font-size: 2em;
+	font-size: 20px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h6,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6,
 .wp-block-heading h6 {
-	font-size: 1.4em;
+	font-size: 18px;
 }
 
 .display-1,

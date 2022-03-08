@@ -95,7 +95,7 @@ if ($c9_blog_sidebar  != 'hide') {
 	<?php
 	} //end small header
 	// if ('hidden' === $header_size) {
-		// This is also an option
+	// This is also an option
 	//}
 	?>
 
@@ -104,6 +104,43 @@ if ($c9_blog_sidebar  != 'hide') {
 								} ?>">
 
 		<?php the_content(); ?>
+		<?php
+
+		if (get_theme_mod('c9_author_visible') === "show") {
+		?>
+			<div class="row author-about-title mt-5">
+				<div class="col-12 mt-5 mb-1">
+					<h5 class="full center"><?php esc_html_e('About The Author', 'c9-starter'); ?></h5>
+				</div>
+			</div>
+			<div class="row author-about">
+				<div class="col-2 d-none d-sm-inline-flex" id="author-bio">
+
+					<div class="avatar">
+						<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+							<?php echo get_avatar(get_the_author_meta('email'), '210'); ?>
+						</a>
+					</div><!-- .avatar -->
+
+				</div>
+				<div class="col-12 col-sm-10 author-info" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+					<span class="vcard author">
+						<span class="fn">
+							<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" itemprop="url" class="h5">
+								<span itemprop="name"><?php the_author_meta('display_name'); ?></span>
+							</a>
+						</span>
+					</span>
+					<p itemprop="description" class="author-description">
+						<?php the_author_meta('description'); ?>
+					</p>
+				</div><!-- .info -->
+
+			</div>
+
+		<?php
+		} //end checking theme setting
+		?>
 
 	</div><!-- .entry-content -->
 
