@@ -16,6 +16,7 @@ if (!class_exists('c9FooterHelpers')) {
 			if ($social_options != 'hide') {
 				$social_options_selected = array(
 					'c9_twitter' 		=> get_theme_mod('c9_twitter', ''),
+					'c9_tiktok' 		=> get_theme_mod('c9_tiktok', ''),
 					'c9_facebook' 		=> get_theme_mod('c9_facebook', ''),
 					'c9_instagram' 		=> get_theme_mod('c9_instagram', ''),
 					'c9_pinterest' 		=> get_theme_mod('c9_pinterest', ''),
@@ -49,6 +50,16 @@ if (!class_exists('c9FooterHelpers')) {
 				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-starter') . '</span></a>';
 			} else {
 				$link = '<a href="//twitter.com/' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-starter') . '</span></a>';
+			}
+			return $link;
+		}
+
+		public static function build_c9_tiktok_link($input, $type)
+		{
+			if ('url' === $type) {
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">' . __('TikTok', 'c9-starter') . '</span></a>';
+			} else {
+				$link = '<a href="//tiktok.com/' . $input . '" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">' . __('TikTok', 'c9-starter') . '</span></a>';
 			}
 			return $link;
 		}

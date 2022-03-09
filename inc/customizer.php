@@ -136,7 +136,25 @@ if (!function_exists('c9_customize_register')) {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'c9_tiktok',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'esc_url_raw',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
 
+		$wp_customize->add_control(
+			'c9_tiktok',
+			array(
+				'type'        => 'text',
+				'label'       => __('TikTok Link', 'c9-starter'),
+				'section'     => 'c9_social',
+				'description' => __('Input your TikTok Username or full url', 'c9-starter'),
+			)
+		);
 		$wp_customize->add_setting(
 			'c9_twitter',
 			array(
