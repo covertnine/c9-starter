@@ -114,12 +114,17 @@ if (!function_exists('c9_setup')) {
 		// add_theme_support('block-templates');
 
 		// C9 custom image sizes
-		add_image_size('c9-feature-wide', 960, 411, array('center', 'center'), true);
-		add_image_size('c9-feature-hd-wide', 1920, 1080, array('center', 'center'), true);
-		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
-		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
-		add_image_size('c9-feature-medium-crop', 960, 411, true);
-		add_image_size('c9-feature-audio', 850, 400, array('center', 'center'));
-		add_image_size('c9-tiny-thumb', 120, 56, true);
+		add_image_size('c9-post-feature-hd', 1920, 1080, true);
+		add_image_size('c9-post-large-wide', 1600, 465, array('center', 'center'), true);
+		add_image_size('c9-post-medium-wide', 960, 465, array('center', 'center'), true);
+		add_image_size('c9-post-rectangle-lg', 960, 720, false);
+		add_image_size('c9-post-rectangle-md', 560, 420, false);
+		add_image_size('c9-post-rectangle-sm', 380, 285, false);
+		add_image_size('c9-post-wide-xl-crop', 1368, 770, true);
+		add_image_size('c9-post-wide-lg-crop', 960, 540, true);
+		add_image_size('c9-post-wide-md-crop', 720, 405, true);
+		add_image_size('c9-post-wide-sm-crop', 500, 281, true);
+		add_image_size('c9-post-wide-xs-crop', 380, 215, true);
+		add_image_size('c9-post-wide-tiny-crop', 120, 90, true);
 	}
 }
