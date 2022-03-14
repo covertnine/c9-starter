@@ -33,7 +33,7 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 <body <?php esc_attr(body_class()); ?>>
 	<?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'c9-starter'); ?></a>
-	<div class="hfeed site c9" id="page">
+	<div class="hfeed site c9 riot-mag" id="page">
 		<div id="smoothwrapper" <?php esc_attr(body_class()); ?>>
 			<?php
 			if (file_exists(locate_template('client/inc/topnav.php'))) {
@@ -71,7 +71,7 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 									</div>
 								<?php
 								}
-								if (has_nav_menu('primary')) { ?>
+								if (has_nav_menu('magazine')) { ?>
 
 									<div class="nav-toggle">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle Navigation', 'c9-starter'); ?>">
@@ -88,12 +88,12 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 							<?php
 							wp_nav_menu(
 								array(
-									'theme_location'  => 'primary',
+									'theme_location'  => 'magazine',
 									'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-lg',
 									'container_id'    => 'navbarNavDropdown',
 									'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 									'fallback_cb'     => '',
-									'menu_id'         => 'main-menu',
+									'menu_id'         => 'mag-main-menu',
 									'depth'           => 2,
 									'walker'          => new c9_WP_Bootstrap_Navwalker(),
 								)

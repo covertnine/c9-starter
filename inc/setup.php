@@ -40,10 +40,16 @@ if (!function_exists('c9_setup')) {
 		 */
 		add_theme_support('title-tag');
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
 				'primary' => __('Top Navigation Menu', 'c9-starter'),
+			)
+		);
+
+		register_nav_menus(
+			array(
+				'magazine' => __('Magazine Top Menu', 'c9-starter'),
 			)
 		);
 
@@ -102,16 +108,16 @@ if (!function_exists('c9_setup')) {
 		add_image_size('c9-post-feature-hd', 1920, 1080, true);
 		add_image_size('c9-post-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-post-medium-wide', 960, 465, array('center', 'center'), true);
-		add_image_size('c9-post-rectangle-lg', 960, 720, true);
-		add_image_size('c9-post-rectangle-md', 560, 420, true);
-		add_image_size('c9-post-rectangle-sm', 380, 285, true);
+		add_image_size('c9-post-rectangle-lg', 960, 720, false);
+		add_image_size('c9-post-rectangle-md', 560, 420, false);
+		add_image_size('c9-post-rectangle-sm', 380, 285, false);
 		add_image_size('c9-post-wide-xl-crop', 1368, 770, true);
 		add_image_size('c9-post-wide-lg-crop', 960, 540, true);
 		add_image_size('c9-post-wide-md-crop', 720, 405, true);
 		add_image_size('c9-post-wide-sm-crop', 500, 281, true);
 		add_image_size('c9-post-wide-xs-crop', 380, 215, true);
 		add_image_size('c9-post-wide-tiny-crop', 120, 90, true);
-		add_image_size('riot-featured-post-img', 698, 392);
+		add_image_size('riot-featured-post-img', 698, 392, false);
 		add_image_size('riot-square-show', 1080, 1080, true);
 		add_image_size('riot-square-show-sm', 385, 385, true);
 		add_image_size('riot-square-show-md', 540, 540, true);

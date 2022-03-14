@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying archive pages.
  *
@@ -10,7 +11,7 @@
 get_header();
 $c9_archive_sidebar = get_theme_mod('c9_archive_sidebar', 'hide');
 
-if ($c9_archive_sidebar != 'hide' ) {
+if ($c9_archive_sidebar != 'hide') {
     $sidebar_left  = 'archive-left' === get_theme_mod('c9_archive_sidebar') && is_active_sidebar('left-sidebar') ? true : false;
     $sidebar_right = 'archive-right' === get_theme_mod('c9_archive_sidebar') && is_active_sidebar('right-sidebar') ? true : false;
 } else {
@@ -25,71 +26,73 @@ if ($c9_archive_sidebar != 'hide' ) {
 
             <main class="site-main" id="main">
 
-                <?php if (have_posts() ) : ?>
+                <?php if (have_posts()) : ?>
 
                     <header class="page-header">
                         <div class="container">
-                    <?php
-                    the_archive_title('<h1 class="page-title">', '</h1>');
-                    the_archive_description('<div class="taxonomy-description">', '</div>');
-                    ?>
+                            <?php
+                            the_archive_title('<h1 class="page-title"><span class="sr-only">', '</span></h1>');
+                            the_archive_description('<div class="taxonomy-description"><span class="sr-only">', '</span></div>');
+                            ?>
                         </div>
                     </header><!-- .page-header -->
                     <div class="container container-posts c9">
-                        <div class="row no-gutter">
+                        <div class="row no-gutters">
 
-                    <?php if ($sidebar_left ) : ?>
+                            <?php if ($sidebar_left) : ?>
 
-                <div class="col-sm-12 col-md-2 sidebar">
-                        <?php dynamic_sidebar('left-sidebar'); ?>
-                </div>
+                                <div class="col-sm-12 col-md-2 sidebar">
+                                    <?php dynamic_sidebar('left-sidebar'); ?>
+                                </div>
 
-                        <?php echo '<div class="col-sm-12 col-md-10">'; ?>
+                                <?php echo '<div class="col-sm-12 col-md-10">'; ?>
 
-                <?php elseif ($sidebar_right ) : ?>
+                            <?php elseif ($sidebar_right) : ?>
 
-                    <?php echo '<div class="col-12 col-sm-10 content-area" id="primary">'; ?>
+                                <?php echo '<div class="col-12 col-sm-10 content-area" id="primary">'; ?>
 
-                <?php else : ?>
+                            <?php else : ?>
 
-                <div class="col-12 content-area" id="primary">
+                                <div class="col-12 content-area category-posts-container" id="primary">
 
-                <?php endif; ?>
+                                <?php endif; ?>
 
-                    <div class="row">
-                    <?php if (have_posts() ) : ?>
-                        <?php
-                        while ( have_posts() ) :
-                            the_post();
+                                <div class="row no-gutters">
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) :
+                                            the_post();
 
-                            /*
+                                            /*
                             * Include the Post-Format-specific template for the content.
                             * If you want to override this in a child theme, then include a file
                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                             */
-                            get_template_part('loop-templates/content', get_post_format());
-                        endwhile;
-                        ?>
-                        <?php else : ?>
+                                            get_template_part('loop-templates/content', get_post_format());
+                                        endwhile;
+                                        ?>
+                                    <?php else : ?>
 
-                            <?php get_template_part('loop-templates/content', 'none'); ?>
+                                        <?php get_template_part('loop-templates/content', 'none'); ?>
 
-                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+                                </div>
+                                <?php
+                                if ($sidebar_right) :
+                                ?>
+                                    <div class="col-12 col-sm-2 content-area sidebar" id="primary">
+
+                                        <?php dynamic_sidebar('right-sidebar'); ?>
+
+                                    </div>
+                                <?php endif; ?>
+
+                        </div>
+                        <!--.row-->
                     </div>
-                </div>
-                    <?php
-                    if ($sidebar_right ) :
-                        ?>
-                <div class="col-12 col-sm-2 content-area sidebar" id="primary">
-
-                        <?php dynamic_sidebar('right-sidebar'); ?>
-
-                </div>
-                    <?php endif; ?>
-
-                        </div><!--.row-->
-                    </div><!--.container-->
-                    <?php
+                    <!--.container-->
+                <?php
                 else :
                     get_template_part('loop-templates/content', 'none');
                 endif;

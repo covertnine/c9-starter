@@ -3311,8 +3311,8 @@ p~.wp-block-button:not(.alignleft) {
 /****************************************************************************************/
 /* all mailchimp forms*/
 #mc_embed_signup input[type="email"] {
-	background: #ffffff;
-	border: 1px solid rgba(43, 43, 43, 0.77);
+	background: $light;
+	border: 1px solid $gray-500;
 	height: auto;
 	padding: 8px;
 	color: $dark;
@@ -3487,7 +3487,7 @@ label {
 	outline: none;
 	background: rgba(255, 255, 255, 0.7);
 	font-family: $font-family-base;
-	border: 1px solid rgba(151, 151, 151, 1);
+	border: 1px solid $gray-500;
 }
 
 #fullscreensearch .btn {
@@ -3541,7 +3541,7 @@ label {
 	border-top-right-radius: 0px;
 	color: #495057;
 	background-color: $light;
-	border: 1px solid #ced4da;
+	border: 1px solid $gray-500;
 }
 
 .footer-search-wrapper .field[type="text"] {
@@ -3737,7 +3737,7 @@ label {
 .wp-block[data-type="gravityforms/form"] .gform_wrapper textarea {
 	line-height: 1;
 	font-family: $font-family-base;
-	border: 1px solid rgba(151, 151, 151, 1);
+	border: 1px solid $gray-500;
 }
 
 .c9 .gform_wrapper input[type="text"],
@@ -3772,20 +3772,21 @@ label {
 
 .c9 .gform_button.button,
 .wp-block[data-type="gravityforms/form"] .gform_button.button {
-	padding: 7px 30px;
+	padding: 12px 30px;
 	min-height: 30px;
 	line-height: 1;
 	width: auto;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 0.2em;
-	font-family: $font-family-base;
+	letter-spacing: 0.5px;
+	font-family: $headings-font-family;
 	font-weight: 400;
-	border-radius: 34px;
+	border-radius: 0px;
 	background-color: $dark;
 	color: $light;
 	cursor: pointer;
 	transition: 0.4s opacity;
+	font-size: 18px;
 }
 
 .c9 .gform_button.button:hover,
@@ -3957,6 +3958,10 @@ label {
 	-webkit-filter: blur(15px);
 	filter: blur(15px);
 	transform: scale(1.1);
+}
+
+.mar0B {
+	margin-bottom: 0px !important;
 }
 
 .mar5B {

@@ -8,11 +8,11 @@
 $c9_blog_sidebar         = get_theme_mod('c9_blog_sidebar', 'hide');
 
 // fields renamed to use below
-$cortex_start                       = get_field('date_and_time'); //can be used for formatting
-$cortex_day                      = date('D M j', strtotime($cortex_start));
-$cortex_date                      = date('m.j.y', strtotime($cortex_start));
-$cortex_time                      = date('g:iA', strtotime($cortex_start));
-$cortex_doors                    = get_field('time');
+$cortex_start                   = get_field('date_and_time'); //can be used for formatting
+$cortex_day                     = date('D M j', strtotime($cortex_start));
+$cortex_date                    = date('m.j.y', strtotime($cortex_start));
+$cortex_time                    = date('g:iA', strtotime($cortex_start));
+$cortex_doors                   = get_field('time');
 $cortex_featured_img            = get_post_thumbnail_id();
 $cortex_featured_img_src        = wp_get_attachment_image_url($cortex_featured_img, 'riot-square-show-sm');
 $cortex_featured_img_srcset     = wp_get_attachment_image_srcset($cortex_featured_img, 'riot-square-show-big');
@@ -20,7 +20,7 @@ $cortex_featured_img_alt        = get_post_meta($cortex_featured_img, '_wp_attac
 $cortex_location_name           = get_field('location_name');
 $cortex_location_city_country   = get_field('location_city_country');
 $cortex_location_map_link       = esc_url(get_field('location_map_link'));
-$cortex_location_address           = get_field('location_address');
+$cortex_location_address        = get_field('location_address');
 $cortex_u_event_ticket_link     = esc_url(get_field('event_ticket_link'));
 $cortex_u_rsvp_link             = esc_url(get_field('rsvp_link'));
 $show_is_sold_out               = get_field('show_is_sold_out');

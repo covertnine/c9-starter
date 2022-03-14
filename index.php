@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file.
  *
@@ -14,7 +15,7 @@
 get_header();
 $archive_sidebar = get_theme_mod('c9_archive_sidebar', 'hide');
 
-if ($archive_sidebar != 'hide' ) {
+if ($archive_sidebar != 'hide') {
     $sidebar_left  = 'archive-left' === get_theme_mod('c9_archive_sidebar') && is_active_sidebar('left-sidebar') ? true : false;
     $sidebar_right = 'archive-right' === get_theme_mod('c9_archive_sidebar') && is_active_sidebar('right-sidebar') ? true : false;
 } else {
@@ -31,28 +32,28 @@ if ($archive_sidebar != 'hide' ) {
 
             <div class="row no-gutter">
 
-                <?php if ($sidebar_left ) : ?>
+                <?php if ($sidebar_left) : ?>
 
-                <div class="col-sm-12 col-md-2 content-area sidebar">
-                    <?php dynamic_sidebar('left-sidebar'); ?>
-                </div>
+                    <div class="col-sm-12 col-md-2 content-area sidebar">
+                        <?php dynamic_sidebar('left-sidebar'); ?>
+                    </div>
 
                     <?php echo '<div class="col-sm-12 col-md-10">'; ?>
 
-                <?php elseif ($sidebar_right ) : ?>
+                <?php elseif ($sidebar_right) : ?>
 
                     <?php echo '<div class="col-12 col-sm-10 content-area" id="primary">'; ?>
 
                 <?php else : ?>
 
-                <div class="col-12 content-area" id="primary">
+                    <div class="col-12 content-area" id="primary">
 
-                <?php endif; ?>
+                    <?php endif; ?>
 
-                    <div class="row">
-                        <?php if (have_posts() ) : ?>
+                    <div class="row no-gutters">
+                        <?php if (have_posts()) : ?>
                             <?php
-                            while ( have_posts() ) :
+                            while (have_posts()) :
                                 the_post();
 
                                 /*
@@ -69,17 +70,18 @@ if ($archive_sidebar != 'hide' ) {
 
                         <?php endif; ?>
                     </div>
-                </div>
-                <?php
-                if ($sidebar_right ) :
+                    </div>
+                    <?php
+                    if ($sidebar_right) :
                     ?>
-                <div class="col-12 col-sm-2 sidebar content-area" id="primary">
+                        <div class="col-12 col-sm-2 sidebar content-area" id="primary">
 
-                    <?php dynamic_sidebar('right-sidebar'); ?>
+                            <?php dynamic_sidebar('right-sidebar'); ?>
 
-                </div>
-                <?php endif; ?>
-            </div><!--end .row-->
+                        </div>
+                    <?php endif; ?>
+            </div>
+            <!--end .row-->
         </div><!-- .container-->
 
     </main><!-- #main -->
