@@ -102,6 +102,17 @@ var c9Page = (function ($) {
 
 		///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		var $grid = $('.grid').masonry({
+			// options
+			itemSelector: '.grid-item',
+			gutter: 	'.gutter-sizer',
+			columnWidth: '.grid-sizer',
+			percentPosition: true
+		});
+		$grid.imagesLoaded().progress( function() {
+			$grid.masonry('layout');
+		});
+
 		$(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
 			disableOn: 700,
 			type: "iframe",
@@ -132,7 +143,7 @@ var c9Page = (function ($) {
 			fixedContentPos: false
 		});
 		$(
-			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a'
+			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a, .img_container a[href$=".jpg"]'
 		).click(function (e) {
 			e.preventDefault();
 

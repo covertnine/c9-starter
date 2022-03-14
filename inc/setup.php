@@ -78,6 +78,21 @@ if (!function_exists('c9_setup')) {
 		 */
 		add_theme_support('customize-selective-refresh-widgets');
 
+		/*
+		 * Enable support for Post Formats.
+		 * See http://codex.wordpress.org/Post_Formats
+		 */
+		add_theme_support(
+			'post-formats',
+			array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+			)
+		);
+
 		// Set up the WordPress Theme logo feature.
 		add_theme_support(
 			'custom-logo',

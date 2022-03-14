@@ -30,7 +30,7 @@ if ($archive_sidebar != 'hide') {
 
         <div class="container container-posts c9" id="content">
 
-            <div class="row no-gutter">
+            <div class="row no-gutters">
 
                 <?php if ($sidebar_left) : ?>
 

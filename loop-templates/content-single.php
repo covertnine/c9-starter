@@ -104,12 +104,15 @@ if ($c9_blog_sidebar  != 'hide') {
 								} ?>">
 
 		<?php the_content(); ?>
+		<?php if (get_post_format() == 'gallery') {
+			include("content-gallery-display.php");
+		} ?>
 		<?php
 
 		if (get_theme_mod('c9_author_visible') === "show") {
 		?>
 			<div class="row author-about-title mt-5">
-				<div class="col-12 mt-5 mb-1">
+				<div class="col-12 mt-5">
 					<h5 class="full center"><?php esc_html_e('About The Author', 'c9-starter'); ?></h5>
 				</div>
 			</div>
