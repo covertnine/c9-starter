@@ -1696,8 +1696,15 @@ a:focus {
 	border-radius: 0px;
 }
 
-.c9 .woocommerce p {
+.c9 .woocommerce p,
+.c9 .woocommerce .shop_table {
 	font-size: 16px;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+	min-width: 115px;
 }
 
 /****************************************************************************************/
@@ -3910,6 +3917,11 @@ label {
 	height: auto;
 }
 
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img {
+	border-radius: 34px;
+}
+
 .opacity0 {
 	opacity: 0;
 }
@@ -3925,179 +3937,179 @@ label {
 }
 
 .mar5B {
-	margin-bottom: 5px;
+	margin-bottom: 5px !important;
 }
 
 .mar10B {
-	margin-bottom: 10px;
+	margin-bottom: 10px !important;
 }
 
 .mar15B {
-	margin-bottom: 15px;
+	margin-bottom: 15px !important;
 }
 
 .mar20B {
-	margin-bottom: 20px;
+	margin-bottom: 20px !important;
 }
 
 .mar30B {
-	margin-bottom: 30px;
+	margin-bottom: 30px !important;
 }
 
 .mar40B {
-	margin-bottom: 40px;
+	margin-bottom: 40px !important;
 }
 
 .mar50B {
-	margin-bottom: 50px;
+	margin-bottom: 50px !important;
 }
 
 .mar60B {
-	margin-bottom: 60px;
+	margin-bottom: 60px !important;
 }
 
 .mar70B {
-	margin-bottom: 70px;
+	margin-bottom: 70px !important;
 }
 
 .mar80B {
-	margin-bottom: 80px;
+	margin-bottom: 80px !important;
 }
 
 .mar100B {
-	margin-bottom: 90px;
+	margin-bottom: 90px !important;
 }
 
 .mar110B {
-	margin-bottom: 110px;
+	margin-bottom: 110px !important;
 }
 
 .mar120B {
-	margin-bottom: 120px;
+	margin-bottom: 120px !important;
 }
 
 .mar0T {
-	margin-top: 0;
+	margin-top: 0 !important;
 }
 
 .mar5T {
-	margin-top: 5px;
+	margin-top: 5px !important;
 }
 
 .mar10T {
-	margin-top: 10px;
+	margin-top: 10px !important;
 }
 
 .mar15T {
-	margin-top: 15px;
+	margin-top: 15px !important;
 }
 
 .mar20T {
-	margin-top: 20px;
+	margin-top: 20px !important;
 }
 
 .mar30T {
-	margin-top: 30px;
+	margin-top: 30px !important;
 }
 
 .mar40T {
-	margin-top: 40px;
+	margin-top: 40px !important;
 }
 
 .mar50T {
-	margin-top: 50px;
+	margin-top: 50px !important;
 }
 
 .mar60T {
-	margin-top: 60px;
+	margin-top: 60px !important;
 }
 
 .mar70T {
-	margin-top: 70px;
+	margin-top: 70px !important;
 }
 
 .mar80T {
-	margin-top: 80px;
+	margin-top: 80px !important;
 }
 
 .mar90T {
-	margin-top: 90px;
+	margin-top: 90px !important;
 }
 
 .mar100T {
-	margin-top: 100px;
+	margin-top: 100px !important;
 }
 
 .mar110T {
-	margin-top: 110px;
+	margin-top: 110px !important;
 }
 
 .mar120T {
-	margin-top: 120px;
+	margin-top: 120px !important;
 }
 
 .mar130T {
-	margin-top: 130px;
+	margin-top: 130px !important;
 }
 
 .mar140T {
-	margin-top: 140px;
+	margin-top: 140px !important;
 }
 
 .mar10NT {
-	margin-top: -10px;
+	margin-top: -10px !important;
 }
 
 .mar20NT {
-	margin-top: -20px;
+	margin-top: -20px !important;
 }
 
 .mar30NT {
-	margin-top: -30px;
+	margin-top: -30px !important;
 }
 
 .mar40NT {
-	margin-top: -40px;
+	margin-top: -40px !important;
 }
 
 .mar50NT {
-	margin-top: -50px;
+	margin-top: -50px !important;
 }
 
 .mar60NT {
-	margin-top: -60px;
+	margin-top: -60px !important;
 }
 
 .mar70NT {
-	margin-top: -70px;
+	margin-top: -70px !important;
 }
 
 .mar80NT {
-	margin-top: -80px;
+	margin-top: -80px !important;
 }
 
 .mar90NT {
-	margin-top: -90px;
+	margin-top: -90px !important;
 }
 
 .mar100NT {
-	margin-top: -100px;
+	margin-top: -100px !important;
 }
 
 .mar110NT {
-	margin-top: -110px;
+	margin-top: -110px !important;
 }
 
 .mar120NT {
-	margin-top: -120px;
+	margin-top: -120px !important;
 }
 
 .mar130NT {
-	margin-top: -130px;
+	margin-top: -130px !important;
 }
 
 .mar140NT {
-	margin-top: -140px;
+	margin-top: -140px !important;
 }
 
 .lighter {
