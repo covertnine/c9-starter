@@ -75,12 +75,3 @@ if (!function_exists('c9_customizer_scripts')) {
 		wp_enqueue_script('c9_field_conditionals', get_template_directory_uri() . '/assets/scripts/c9-conditional-customizer.js', array('jquery'));
 	}
 }
-
-// remove inline styles added by WP to Gutenberg
-add_filter('block_editor_settings', 'c9_kill_goot_styles');
-
-function c9_kill_goot_styles($editor_settings)
-{
-	unset($editor_settings['styles'][0]);
-	return $editor_settings;
-}
