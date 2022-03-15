@@ -222,16 +222,21 @@ var c9Page = function ($) {
         }
       }
     });
-    $('.wp-block-image a[href$=".jpg"]').magnificPopup({
+    $('.wp-block-image a[href$=".jpg"], .wp-block-image a[href$=".png"], .wp-block-image a[href$=".jpeg"], .wp-block-image a[href$=".webp"]').magnificPopup({
       disableOn: 700,
       type: "image",
       mainClass: "mfp-zoom-in",
       tError: '<a href="%url%">The image</a> could not be loaded.',
       removalDelay: 160,
       preloader: false,
-      fixedContentPos: false
+      fixedContentPos: false,
+      image: {
+        titleSrc: function (item) {
+          return item.el.find('img').attr('alt');
+        }
+      }
     });
-    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a, .img_container a[href$=".jpg"]').click(function (e) {
+    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a, .img_container a[href$=".jpg"]').on("click", function (e) {
       e.preventDefault();
       var items = [];
       var firstItem = $(this).attr("href");

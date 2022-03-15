@@ -267,6 +267,6 @@ gulp.task("browser-sync", function () {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task("watch-bs", gulp.parallel('browser-sync', 'watch', 'scripts'), function () {});
+gulp.task("watch-bs", gulp.parallel('browser-sync', 'watch'), function () {});
 
 gulp.task("compress", compress);
