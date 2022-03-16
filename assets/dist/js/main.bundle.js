@@ -222,21 +222,81 @@ var c9Page = function ($) {
         }
       }
     });
-    $('.wp-block-image a[href$=".jpg"], .wp-block-image a[href$=".png"], .wp-block-image a[href$=".jpeg"], .wp-block-image a[href$=".webp"]').magnificPopup({
+    $('.c9-column-innner>.wp-block-image>a[href$=".jpg"], .c9-column-innner>.wp-block-image>a[href$=".png"], .c9-column-innner>.wp-block-image>a[href$=".jpeg"], .c9-column-innner>.wp-block-image>a[href$=".webp"], .entry-content>.wp-block-image>a[href$=".jpg"], .entry-content>.wp-block-image>a[href$=".png"], .entry-content>.wp-block-image>a[href$=".jpeg"], .entry-content>.wp-block-image>a[href$=".webp"]').magnificPopup({
       disableOn: 700,
       type: "image",
       mainClass: "mfp-zoom-in",
       tError: '<a href="%url%">The image</a> could not be loaded.',
       removalDelay: 160,
       preloader: false,
-      fixedContentPos: false,
-      image: {
-        titleSrc: function (item) {
-          return item.el.find('img').attr('alt');
+      fixedContentPos: false
+    }); // default wordpress photo galleries on ticket pages
+
+    $('.wp-block-gallery>.wp-block-image').on("click", 'a', function (e) {
+      e.preventDefault();
+      var items = [];
+      var firstItem = $(this).attr("href");
+      var firstCaption = $(this).attr("title");
+      items.push({
+        src: firstItem,
+        title: firstCaption
+      }); //items after
+
+      $(this).parent().nextAll().children('a').each(function () {
+        var imageLink = $(this).attr("href");
+        var imageCaption = $(this).attr("title");
+        items.push({
+          src: imageLink,
+          title: imageCaption
+        });
+      }); //items before
+
+      $(this).parent().prevAll().children('a').each(function () {
+        var imageLink = $(this).attr("href");
+        var imageCaption = $(this).attr("title");
+        items.push({
+          src: imageLink,
+          title: imageCaption
+        });
+      });
+      console.log(items);
+      $.magnificPopup.open({
+        items: items,
+        type: "image",
+        gallery: {
+          enabled: true
+        },
+        mainClass: "mfp-zoom-in",
+        callbacks: {
+          open: function () {
+            //overwrite default prev + next function. Add timeout for css3 crossfade animation
+            $.magnificPopup.instance.next = function () {
+              var self = this;
+              self.wrap.removeClass("mfp-image-loaded");
+              setTimeout(function () {
+                $.magnificPopup.proto.next.call(self);
+              }, 120);
+            };
+
+            $.magnificPopup.instance.prev = function () {
+              var self = this;
+              self.wrap.removeClass("mfp-image-loaded");
+              setTimeout(function () {
+                $.magnificPopup.proto.prev.call(self);
+              }, 120);
+            };
+          },
+          imageLoadComplete: function () {
+            var self = this;
+            setTimeout(function () {
+              self.wrap.addClass("mfp-image-loaded");
+            }, 16);
+          }
         }
-      }
-    });
-    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a, .img_container a[href$=".jpg"]').on("click", function (e) {
+      });
+    }); // older photo galleries from category posts
+
+    $('.cortex-popup, .img_container a[href$=".jpg"]').on("click", function (e) {
       e.preventDefault();
       var items = [];
       var firstItem = $(this).attr("href");

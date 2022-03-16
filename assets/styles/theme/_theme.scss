@@ -4164,11 +4164,15 @@ label {
 }
 
 .light-color-text,
-.is-style-light-text {
-	color: $light;
+.is-style-light-text,
+.light-color-text a,
+.is-style-light-text a {
+	color: $light !important;
 }
 
 .dark-color-text,
-.is-style-dark-text {
-	color: $dark;
+.is-style-dark-text,
+.dark-color-text a,
+.is-style-dark-text a {
+	color: $dark !important;
 }
