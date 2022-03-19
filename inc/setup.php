@@ -108,16 +108,21 @@ if (!function_exists('c9_setup')) {
 		//Apply empty stylesheet to visual editor to remove that doesn't work right yet for some reason.
 		add_editor_style(get_template_directory() . '/editor-style.css');
 
-		add_theme_support('responsive-embeds');
+		// Add support for custom line height controls.
+		add_theme_support('custom-line-height');
 
 		// C9 custom image sizes
 		add_image_size('c9-feature-wide', 960, 411, array('center', 'center'), true);
 		add_image_size('c9-feature-hd-wide', 1920, 1080, array('center', 'center'), true);
-		add_image_size('c9-feature-hd-uncropped', 1920, 1080, false);
 		add_image_size('c9-feature-large-wide', 1600, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-wide', 960, 465, array('center', 'center'), true);
 		add_image_size('c9-feature-medium-crop', 960, 411, true);
 		add_image_size('c9-feature-audio', 850, 400, array('center', 'center'));
-		add_image_size('c9-tiny-thumb', 120, 56, true);
+		add_image_size(
+			'c9-tiny-thumb',
+			120,
+			56,
+			true
+		);
 	}
 }
