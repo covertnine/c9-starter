@@ -1,12 +1,12 @@
 === C9 Music ===
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
-Requires at least: 5.6
-Tested up to: 5.6
+Requires at least: 5.9
+Tested up to: 5.9.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.6
+Stable Tag: 2.4.7
 
 A blocks powered WordPress theme for bands, musicians, or DJs, based on the C9 Starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -28,6 +28,8 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the Max Mega Menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.4.7 =
+Updated for WordPress 5.9.2 compatibility. Updates to button styling, list stylings, bugs on some browsers in admin.
 
 = 2.4.6 =
 Fixing some errors related to older versions of PHP. Fixing 3 default setting arrays in customizer to prevent sanitize missing error.
