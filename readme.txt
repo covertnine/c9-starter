@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.6
-Tested up to: 5.7
+Tested up to: 5.9.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.8
+Stable Tag: 2.5.1
 
 C9 Starter is an agency-designed starter theme for the next generation of content creators with mobile-friendly designs, a single level dropdown menu, Gutenberg block patterns, and custom pagination from [COVERT NINE](https://www.covertnine.com).
 
