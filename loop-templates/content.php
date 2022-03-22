@@ -15,7 +15,7 @@
 			$c9_img_id     = get_post_thumbnail_id();
 			$c9_img_src    = wp_get_attachment_image_src($c9_img_id, 'c9-post-rectangle-sm');
 			$c9_img_srcset = wp_get_attachment_image_srcset($c9_img_id, 'c9-post-rectangle-sm');
-			$c9_img_alt    = get_post_meta($cortex_featured_img, '_wp_attachment_image_alt', true);
+			$c9_img_alt    = get_post_meta($c9_img_id, '_wp_attachment_image_alt', true);
 
 		?>
 
