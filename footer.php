@@ -94,6 +94,25 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 </div>
 <div id="backtotop" class="backtotop-container"> <button type="button" class="btn-back-to-top"><span class="sr-only">Back to top</span><i class="fa fa-arrow-up"></i></button></div>
 </div><!-- #page we need this extra closing tag here -->
+<?php
+
+$rf_mobile_background_image = esc_url(get_theme_mod('riot_bg_mobile', ''));
+
+// check for dark logo option if it's there show it
+if (!empty($rf_mobile_background_image)) {
+?>
+	<style type="text/css">
+		@media only screen and (max-width: 667px) {
+
+			body.custom-background {
+				background: #ffffff url(<?php echo $rf_mobile_background_image; ?>) top center no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		}
+	</style>
+<?php } ?>
+
 <?php wp_footer(); ?>
 
 </body>
