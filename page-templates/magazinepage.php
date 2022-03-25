@@ -11,31 +11,33 @@
 get_header('magazine');
 ?>
 
-<div class="container-width-page-wrapper c9 riot-magazine" id="container-width-page-wrapper">
+<div class="wrapper" id="page-wrapper">
 
-	<main class="site-main" id="main" role="main">
+	<div class="page-container c9" id="content" tabindex="-1">
 
-		<?php
-		while (have_posts()) :
-			the_post();
-		?>
 
-			<div class="entry-content">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<?php the_content(); ?>
-						</div><!-- .col-->
-					</div><!-- .row-->
-				</div><!-- .container-->
+		<main class="site-main" id="main">
 
-			</div><!-- .entry-content -->
+			<?php
+			while (have_posts()) :
+				the_post();
+			?>
+				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-		<?php endwhile; // end of the loop. 
-		?>
+					<div class="entry-content">
 
-	</main><!-- #main -->
+						<?php the_content(); ?>
+					</div><!-- .entry-content -->
 
-</div><!-- Wrapper end -->
+				</article><!-- #post-## -->
+
+			<?php endwhile; // end of the loop. 
+			?>
+
+		</main><!-- #main -->
+
+	</div><!-- page-container end -->
+
+</div><!-- wrapper end -->
 
 <?php get_footer(); ?>
