@@ -93,7 +93,7 @@ a.skip-link {
 	top: 65px;
 	font-size: 12px;
 	font-weight: bold;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	text-transform: uppercase;
 	text-decoration: none;
 	z-index: 100000;
@@ -274,7 +274,7 @@ kbd,
 .entry-content .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-	font-size: 40px;
+	font-size: 32px;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1593,7 +1593,7 @@ a:focus {
 }
 
 #wrapper-footer .site-footer {
-	letter-spacing: 0.061em;
+	letter-spacing: 0;
 	line-height: 1.6;
 	padding: 45px 0px;
 	font-weight: $font-weight-base;
@@ -3152,7 +3152,7 @@ screen and (max-height: 300px) {
 	box-shadow: none;
 	border: none;
 	font-size: 14px;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	text-align: center;
 	text-transform: uppercase;
 	transition: opacity 0.4s ease-in-out;
