@@ -74,18 +74,18 @@ if ($c9_blog_sidebar  != 'hide') {
                             <div class="wp-container-6228f76eab3b0 wp-block-group pl-5 pr-5">
                                 <div class="c9-block-post-grid-byline entry-content">
                                     <div class="show-day show-date row no-gutter no-gutters">
-                                        <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold headline-font">
+                                        <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold">
                                             <span class="date-number h5"><?php echo $cortex_day; ?>
                                             </span>
                                         </div>
-                                        <div class="col-4 col-sm-4 d-inline-block text-right headline-font">
+                                        <div class="col-4 col-sm-4 d-inline-block text-right">
                                             <span class="show-time h5 font-weight-light"><?php echo $cortex_time; ?>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm">
-                                            <span class="show-doors headline-font font-weight-light text-uppercase"><?php echo $cortex_doors; ?></span>
+                                            <span class="show-doors font-weight-light text-uppercase"><?php echo $cortex_doors; ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -103,24 +103,24 @@ if ($c9_blog_sidebar  != 'hide') {
                                 $cortex_opener_5     = get_field('opener_5');
                                 ?>
                                 <div class="event-act">
-                                    <?php if (!empty($cortex_opener_1)) { ?><div class="c9-h h5 opener headline-font font-weight-light"><?php echo $cortex_opener_1; ?></div><?php } ?>
-                                    <?php if (!empty($cortex_opener_2)) { ?><div class="c9-h h5 opener headline-font font-weight-light"><?php echo $cortex_opener_2; ?></div><?php } ?>
-                                    <?php if (!empty($cortex_opener_3)) { ?><div class="c9-h h5 opener headline-font font-weight-light"><?php echo $cortex_opener_3; ?></div><?php } ?>
-                                    <?php if (!empty($cortex_opener_4)) { ?><div class="c9-h h5 opener headline-font font-weight-light"><?php echo $cortex_opener_4; ?></div><?php } ?>
-                                    <?php if (!empty($cortex_opener_5)) { ?><div class="c9-h h5 opener headline-font font-weight-light"><?php echo $cortex_opener_5; ?></div><?php } ?>
+                                    <?php if (!empty($cortex_opener_1)) { ?><div class="c9-h h5 opener font-weight-light"><?php echo $cortex_opener_1; ?></div><?php } ?>
+                                    <?php if (!empty($cortex_opener_2)) { ?><div class="c9-h h5 opener font-weight-light"><?php echo $cortex_opener_2; ?></div><?php } ?>
+                                    <?php if (!empty($cortex_opener_3)) { ?><div class="c9-h h5 opener font-weight-light"><?php echo $cortex_opener_3; ?></div><?php } ?>
+                                    <?php if (!empty($cortex_opener_4)) { ?><div class="c9-h h5 opener font-weight-light"><?php echo $cortex_opener_4; ?></div><?php } ?>
+                                    <?php if (!empty($cortex_opener_5)) { ?><div class="c9-h h5 opener font-weight-light"><?php echo $cortex_opener_5; ?></div><?php } ?>
                                 </div><!-- end event-acts-->
-                                <div class="venue text-uppercase text-center mb-5">
+                                <div class="venue text-uppercase text-center mb-5 mt-5">
                                     <?php if (!empty($cortex_location_map_link)) { ?>
                                         <a href="<?php echo $cortex_location_map_link; ?>" target="_blank">
                                         <?php } ?>
                                         <?php if (!empty($cortex_location_name)) { ?>
-                                            <span class="font-weight-bolder headline-font d-block venue-name"><?php echo $cortex_location_name; ?></span>
+                                            <span class="font-weight-bolder d-block headline-font venue-name"><?php echo $cortex_location_name; ?></span>
                                         <?php } ?>
                                         <?php if (!empty($cortex_location_address)) { ?>
-                                            <span class="headline-font secondary-color-text h4 font-weight-light"><?php echo $cortex_location_address; ?></span> •
+                                            <span class="secondary-color-text h4 font-weight-light"><?php echo $cortex_location_address; ?></span> •
                                         <?php } ?>
                                         <?php if (!empty($cortex_location_city_country)) { ?>
-                                            <span class="headline-font secondary-color-text h4 font-weight-light"><?php echo $cortex_location_city_country; ?></span>
+                                            <span class="secondary-color-text h4 font-weight-light"><?php echo $cortex_location_city_country; ?></span>
                                         <?php } ?>
                                         <?php if (!empty($cortex_location_map_link)) { ?>
                                         </a>

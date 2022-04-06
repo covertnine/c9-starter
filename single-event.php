@@ -26,15 +26,6 @@ if ($c9_blog_sidebar != 'hide') {
     <div class="container c9 riot-show" id="content" tabindex="-1">
         <div class="row no-gutters">
             <div class="col-12 content-area" id="primary">
-
-                <?php
-
-                if ($sidebar_left) :
-
-                    get_sidebar('left');
-
-                endif;
-                ?>
                 <main class="site-main" id="main">
 
                     <?php
@@ -51,15 +42,6 @@ if ($c9_blog_sidebar != 'hide') {
 
 
                 </main><!-- #main -->
-                <?php
-
-
-                if ($sidebar_right) :
-
-                    get_sidebar('right');
-
-                endif;
-                ?>
             </div>
             <!--end primary-->
         </div><!-- Row end -->

@@ -77,17 +77,17 @@
 									<div class="c9-block-post-grid-byline">
 										<div class="show-day show-date row">
 											<div class="col-8 text-uppercase d-inline-block text-left font-weight-bold headline-font">
-												<span class="date-number h5"><?php echo $cortex_day; ?>
+												<span class="date-number"><?php echo $cortex_day; ?>
 												</span>
 											</div>
 											<div class="col-4 d-inline-block text-right headline-font">
-												<span class="show-time h5 font-weight-light"><?php echo $cortex_time; ?>
+												<span class="show-time font-weight-light"><?php echo $cortex_time; ?>
 												</span>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col">
-												<span class="show-doors headline-font font-weight-light text-uppercase"><?php echo $cortex_doors; ?></span>
+												<span class="show-doors text-uppercase"><?php echo $cortex_doors; ?></span>
 											</div>
 										</div>
 									</div>
@@ -103,11 +103,11 @@
 									$cortex_opener_5     = get_field('opener_5');
 									?>
 									<div class="event-act">
-										<?php if (!empty($cortex_opener_1)) { ?><div class="h5 opener headline-font font-weight-light"><?php echo $cortex_opener_1; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_2)) { ?><div class="h5 opener headline-font font-weight-light"><?php echo $cortex_opener_2; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_3)) { ?><div class="h5 opener headline-font font-weight-light"><?php echo $cortex_opener_3; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_4)) { ?><div class="h5 opener headline-font font-weight-light"><?php echo $cortex_opener_4; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_5)) { ?><div class="h5 opener headline-font font-weight-light"><?php echo $cortex_opener_5; ?></div><?php } ?>
+										<?php if (!empty($cortex_opener_1)) { ?><div class="opener"><?php echo $cortex_opener_1; ?></div><?php } ?>
+										<?php if (!empty($cortex_opener_2)) { ?><div class="opener"><?php echo $cortex_opener_2; ?></div><?php } ?>
+										<?php if (!empty($cortex_opener_3)) { ?><div class="opener"><?php echo $cortex_opener_3; ?></div><?php } ?>
+										<?php if (!empty($cortex_opener_4)) { ?><div class="opener"><?php echo $cortex_opener_4; ?></div><?php } ?>
+										<?php if (!empty($cortex_opener_5)) { ?><div class="opener"><?php echo $cortex_opener_5; ?></div><?php } ?>
 									</div><!-- end event-acts-->
 									<div class="venue text-uppercase">
 										<?php if (!empty($cortex_location_map_link)) { ?>
