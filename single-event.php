@@ -23,7 +23,7 @@ if ($c9_blog_sidebar != 'hide') {
 ?>
 
 <div class="wrapper" id="single-wrapper">
-    <div class="container c9 riot-show" id="content" tabindex="-1">
+    <div class="c9 riot-show" id="content" tabindex="-1">
         <div class="row no-gutters">
             <div class="col-12 content-area" id="primary">
                 <main class="site-main" id="main">
