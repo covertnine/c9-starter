@@ -24,7 +24,7 @@ get_header();
                             <div class="container">
                                 <div class="entry-search-result">
 
-                                    <h1 class="entry-title text-center mar30T">
+                                    <h1 class="entry-title text-center mar30T light-color-text">
                                         <?php
                                         printf(
                                             /* translators:*/
@@ -45,7 +45,7 @@ get_header();
 
 
                 <div class="container">
-                    <div class="row no-gutter">
+                    <div class="row no-gutters">
                     <?php
                     while (have_posts()) :
                         the_post();
