@@ -16,54 +16,54 @@ get_header();
 
         <main class="site-main" id="main">
 
-            <?php if (have_posts() ) : ?>
+            <?php if (have_posts()) : ?>
 
-            <div class="c9-grid mar20B">
-                <div class="container header-container-search">
-                    <div class="row no-gutter">
-                        <div class="container">
-                            <div class="entry-search-result">
+                <div class="c9-grid mar20B">
+                    <div class="container header-container-search">
+                        <div class="row no-gutters">
+                            <div class="container">
+                                <div class="entry-search-result">
 
-                                <h1 class="entry-title text-center mar30T">
-                                    <?php
-                                    printf(
-                                    /* translators:*/
-                                        esc_html__('Results for: %s', 'c9-starter'),
-                                        '<span>' . get_search_query() . '</span>'
-                                    );
-                                    ?>
-                                </h1>
+                                    <h1 class="entry-title text-center mar30T">
+                                        <?php
+                                        printf(
+                                            /* translators:*/
+                                            esc_html__('Results for: %s', 'c9-starter'),
+                                            '<span>' . get_search_query() . '</span>'
+                                        );
+                                        ?>
+                                    </h1>
+
+                                </div>
+
 
                             </div>
 
-
-                        </div>
-
-                    </div><!-- .row-->
-                </div><!-- .container-fluid-->
-            </div><!-- .c9 block column container -->
+                        </div><!-- .row-->
+                    </div><!-- .container-fluid-->
+                </div><!-- .c9 block column container -->
 
 
-            <div class="container">
-                <div class="row no-gutter">
-                <?php
-                while ( have_posts() ) :
-                    the_post();
-                    /**
-                     * Run the loop for the search to output the results.
-                     * If you want to overload this in a child theme then include a file
-                     * called content-search.php and that will be used instead.
-                     */
-                    get_template_part('loop-templates/content', 'search');
-                endwhile;
+                <div class="container">
+                    <div class="row no-gutter">
+                    <?php
+                    while (have_posts()) :
+                        the_post();
+                        /**
+                         * Run the loop for the search to output the results.
+                         * If you want to overload this in a child theme then include a file
+                         * called content-search.php and that will be used instead.
+                         */
+                        get_template_part('loop-templates/content', 'search');
+                    endwhile;
 
-                    else :
-                        get_template_part('loop-templates/content', 'none');
-                    endif;
+                else :
+                    get_template_part('loop-templates/content', 'none');
+                endif;
                     ?>
 
-                </div><!-- .row-->
-            </div><!-- .container-->
+                    </div><!-- .row-->
+                </div><!-- .container-->
 
         </main><!-- #main -->
         <!-- The pagination component -->
