@@ -85,6 +85,16 @@ if ($c9_blog_sidebar  != 'hide') {
 									} ?>">
 
 			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+			<?php
+			$c9_post_sub_heading = get_post_meta(get_the_id(), 'c9_post_sub_heading', true);
+
+			if (!empty($c9_post_sub_heading)) { ?>
+				<div class="mar10B rf-subheading">
+					<span class="h3 c9-sh <?php echo esc_attr($className); ?>" id="<?php echo esc_attr($id); ?>">
+						<?php echo $c9_post_sub_heading; ?>
+					</span>
+				</div>
+			<?php } ?>
 
 			<div class="entry-meta">
 				<?php c9_posted_on(); ?>
