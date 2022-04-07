@@ -38,7 +38,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 											<?php
 											if ($c9_social_links) :
 											?>
-												<div class="col-xs-6 col-sm-3 col-lg-2 p-0 footer-social-wrapper">
+												<div class="col-xs-6 col-sm-6 col-lg-2 p-0 footer-social-wrapper">
 													<div class="footer-social text-center">
 														<?php
 														foreach ($c9_social_links as $link_key => $link_value) {
