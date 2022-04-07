@@ -36,7 +36,7 @@ function c9_editor_style()
 			'c9_default_font'    => esc_js($c9_fonts)
 		];
 		$font_list  = [];
-		foreach(['c9_heading_font', 'c9_subheading_font', 'c9_body_font'] as $f) {
+		foreach (['c9_heading_font', 'c9_subheading_font', 'c9_body_font'] as $f) {
 			if (!empty($font_array[$f]) && !in_array($font_array[$f], $font_list))
 				$font_list[] = $font_array[$f];
 		}

@@ -98,7 +98,7 @@ if (!function_exists('c9_post_nav')) {
 ?>
 		<nav class="navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e('Post navigation', 'c9-starter'); ?></h2>
-			<div class="nav-links justify-content-between px-3">
+			<div class="nav-links justify-content-between pl-5 pr-5">
 				<?php
 
 				if (get_previous_post_link()) {
