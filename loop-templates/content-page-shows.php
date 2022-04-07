@@ -95,20 +95,28 @@
 								</header>
 								<div class="c9-block-post-grid-excerpt">
 									<?php //add openers
-
-									$cortex_opener_1     = get_field('opener_1');
-									$cortex_opener_2     = get_field('opener_2');
-									$cortex_opener_3     = get_field('opener_3');
-									$cortex_opener_4     = get_field('opener_4');
-									$cortex_opener_5     = get_field('opener_5');
+									// Check rows exists.
+									if (have_rows('opening_acts')) :
 									?>
-									<div class="event-act">
-										<?php if (!empty($cortex_opener_1)) { ?><div class="opener"><?php echo $cortex_opener_1; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_2)) { ?><div class="opener"><?php echo $cortex_opener_2; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_3)) { ?><div class="opener"><?php echo $cortex_opener_3; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_4)) { ?><div class="opener"><?php echo $cortex_opener_4; ?></div><?php } ?>
-										<?php if (!empty($cortex_opener_5)) { ?><div class="opener"><?php echo $cortex_opener_5; ?></div><?php } ?>
-									</div><!-- end event-acts-->
+										<div class="event-act">
+											<?php
+											// Loop through rows.
+											while (have_rows('opening_acts')) : the_row();
+
+												// Load sub field value.
+												$opener_name = get_sub_field('opener_name');
+
+											?>
+												<div class="opener font-weight-light">
+													<h3 class="c9-sh h6"><?php echo esc_html($opener_name); ?></span>
+												</div>
+											<?php
+
+											// End loop.
+											endwhile;
+											?>
+										</div><!-- end event-acts-->
+									<?php endif; ?>
 									<div class="venue text-uppercase">
 										<?php if (!empty($cortex_location_map_link)) { ?>
 											<a href="<?php echo $cortex_location_map_link; ?>" target="_blank">
