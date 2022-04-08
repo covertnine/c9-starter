@@ -133,7 +133,7 @@ var c9Page = (function ($) {
 				}
 			}
 		});
-		$('.c9-column-innner>.wp-block-image>a[href$=".jpg"], .c9-column-innner>.wp-block-image>a[href$=".png"], .c9-column-innner>.wp-block-image>a[href$=".jpeg"], .c9-column-innner>.wp-block-image>a[href$=".webp"], .entry-content>.wp-block-image>a[href$=".jpg"], .entry-content>.wp-block-image>a[href$=".png"], .entry-content>.wp-block-image>a[href$=".jpeg"], .entry-content>.wp-block-image>a[href$=".webp"]').magnificPopup({ 
+		$('.c9-column-innner>.wp-block-image>a[href$=".jpg"], .c9-column-innner>.wp-block-image>a[href$=".png"], .c9-column-innner>.wp-block-image>a[href$=".jpeg"], .c9-column-innner>.wp-block-image>a[href$=".webp"], .entry-content>.wp-block-image>a[href$=".jpg"], .entry-content>.wp-block-image>a[href$=".png"], .entry-content>.wp-block-image>a[href$=".jpeg"], .entry-content>.wp-block-image>a[href$=".webp"], .entry-content .wp-block-image a[href$=".jpeg"], .entry-content .wp-block-image a[href$=".jpg"]').magnificPopup({ 
 			disableOn: 700, 
 			type: "image",
 			mainClass: "mfp-zoom-in",
