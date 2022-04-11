@@ -84,13 +84,27 @@
                             <h5><a href="<?php the_permalink(); ?>" title="<?php echo $event_headline; ?>"><span class="widget-event-headline"><?php echo $event_headline; ?></span><span class="sr-only"><?php the_title(); ?> <?php echo $event_headline; ?></span></a></h5>
                         <?php } ?>
                         <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                        <h4><a href="<?php the_permalink(); ?>"><?php echo get_field('co_headliner'); ?><span class="sr-only"><?php the_title(); ?> <?php echo get_field('co_headliner'); ?></span></a></h4>
-                        <h4><a href="<?php the_permalink(); ?>"><?php echo get_field('second_co_headliner'); ?><span class="sr-only"><?php the_title(); ?> <?php echo get_field('second_co_headliner'); ?></span></a></h4>
-                        <?php if (!empty($opener_1)) { ?><p><small><?= $opener_1; ?></small></p><?php } ?>
-                        <?php if (!empty($opener_2)) { ?><p><small><?= $opener_2; ?></small></p><?php } ?>
-                        <?php if (!empty($opener_3)) { ?><p><small><?= $opener_3; ?></small></p><?php } ?>
-                        <?php if (!empty($opener_4)) { ?><p><small><?= $opener_4; ?></small></p><?php } ?>
-                        <?php if (!empty($opener_5)) { ?><p><small><?= $opener_5; ?></small></p><?php } ?>
+
+                        <?php //add openers
+                        // Check rows exists.
+                        if (have_rows('opening_acts')) :
+                        ?>
+                            <?php
+                            // Loop through rows.
+                            while (have_rows('opening_acts')) : the_row();
+
+                                // Load sub field value.
+                                $opener_name = get_sub_field('opener_name');
+
+                            ?>
+                                <p><small><?php echo esc_html($opener_name); ?></small></p>
+                            <?php
+
+                            // End loop.
+                            endwhile;
+                            ?>
+                        <?php endif; ?>
+
                         <div class="event-tickets-small">
 
                             <?php if ((!empty($event_ticket_link)) && ($show_is_sold_out !== true)) { ?>
