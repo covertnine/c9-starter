@@ -9,7 +9,7 @@ $c9_blog_sidebar         = get_theme_mod('c9_blog_sidebar', 'hide');
 
 // fields renamed to use below
 $cortex_start                   = get_field('date_and_time'); //can be used for formatting
-$cortex_day                     = date('D M j', strtotime($cortex_start));
+$cortex_day                     = date('D M j Y', strtotime($cortex_start));
 $cortex_date                    = date('m.j.y', strtotime($cortex_start));
 $cortex_time                    = date('g:iA', strtotime($cortex_start));
 $cortex_doors                   = get_field('time');
@@ -89,7 +89,7 @@ if ($c9_blog_sidebar  != 'hide') {
                                 </div>
                             </div>
                             <div class="section-heading c9-heading text-left mar30T mar00B">
-                                <span class="c9-sh font-weight-light rf-presents h4">Riot Fest Presents</span>
+                                <span class="c9-sh font-weight-light rf-presents h4">Riot Fest Presents: <?php the_title(); ?></span>
                             </div>
                             <div class="section-heading c9-heading text-left">
                                 <h1 class="c9-h"><?php the_title(); ?></h1>
@@ -157,6 +157,7 @@ if ($c9_blog_sidebar  != 'hide') {
                             <!--end buttons-->
                         </div>
                         <!--end block group-->
+                        <span class="sr-only">Full Link: <?php the_permalink(); ?></span>
                     </div>
                     <!--end column inner-->
                 </div>
