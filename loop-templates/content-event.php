@@ -157,7 +157,7 @@ if ($c9_blog_sidebar  != 'hide') {
                             <!--end buttons-->
                         </div>
                         <!--end block group-->
-                        <span class="sr-only">Full Link: <?php the_permalink(); ?></span>
+                        <span class="rf-official-url has-color-info-color text-center d-block"><?php the_permalink(); ?></span>
                     </div>
                     <!--end column inner-->
                 </div>
