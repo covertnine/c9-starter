@@ -47,7 +47,7 @@
 						$cortex_query->the_post();
 
 						$cortex_start      		 		= get_field('date_and_time'); //can be used for formatting
-						$cortex_day      				= date('D M j', strtotime($cortex_start));
+						$cortex_day      				= date('D M j Y', strtotime($cortex_start));
 						$cortex_date      				= date('m.j.y', strtotime($cortex_start));
 						$cortex_time      				= date('g:iA', strtotime($cortex_start));
 						$cortex_doors					= get_field('time');
