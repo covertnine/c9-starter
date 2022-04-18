@@ -166,7 +166,7 @@ if (!empty($playlist_link)) {
                         <?php if (!empty($rf_playlist_embed)) { ?>
                             <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify wp-embed-aspect-21-9 wp-has-aspect-ratio d-block mr-auto ml-auto text-center pr-5 pl-5 pb-5">
                                 <div class="wp-block-embed__wrapper">
-                                    <iframe title="Spotify Embed: <?php the_title(); ?>" style="border-radius: 12px" width="100%" height="380" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="<?php echo $rf_playlist_embed; ?>&amp;utm_source=oembed"></iframe>
+                                    <iframe title="Spotify Embed: <?php the_title(); ?>" style="border-radius: 12px" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="<?php echo $rf_playlist_embed; ?>&amp;utm_source=oembed"></iframe>
                                 </div>
                             </figure>
                         <?php } ?>
