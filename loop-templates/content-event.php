@@ -23,6 +23,7 @@ $cortex_location_map_link       = esc_url(get_field('location_map_link'));
 $cortex_location_address        = get_field('location_address');
 $cortex_u_event_ticket_link     = esc_url(get_field('event_ticket_link'));
 $cortex_u_rsvp_link             = esc_url(get_field('rsvp_link'));
+$playlist_link                  = get_field('playlist_link');
 $show_is_sold_out               = get_field('show_is_sold_out');
 $show_id                        = get_the_ID();
 
@@ -51,6 +52,10 @@ if ($c9_blog_sidebar  != 'hide') {
     $sidebar                = false;
     $sidebar_left          = false;
     $sidebar_right         = false;
+}
+
+if (!empty($playlist_link)) {
+    $rf_playlist_embed = str_replace('spotify.com/playlist/', 'spotify.com/embed/playlist/', $playlist_link);
 }
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -157,7 +162,14 @@ if ($c9_blog_sidebar  != 'hide') {
                             <!--end buttons-->
                         </div>
                         <!--end block group-->
-                        <span class="rf-official-url has-color-info-color text-center d-block"><?php the_permalink(); ?></span>
+                        <span class="rf-official-url has-color-info-color text-center d-block pl-t pr-5"><?php the_permalink(); ?></span>
+                        <?php if (!empty($rf_playlist_embed)) { ?>
+                            <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify wp-embed-aspect-21-9 wp-has-aspect-ratio d-block mr-auto ml-auto text-center pr-5 pl-5">
+                                <div class="wp-block-embed__wrapper">
+                                    <iframe title="Spotify Embed: <?php the_title(); ?>" style="border-radius: 12px" width="100%" height="380" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="<?php echo $rf_playlist_embed; ?>&amp;utm_source=oembed"></iframe>
+                                </div>
+                            </figure>
+                        <?php } ?>
                     </div>
                     <!--end column inner-->
                 </div>
