@@ -92,13 +92,9 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 		margin-right: 0px;
 	}
 
-	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons .wp-block[data-type="core/button"] {
+	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons .wp-block-button[data-type="core/button"] {
 		margin-right: 8px;
 		display: grid;
-	}
-
-	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons>.wp-block[data-type="core/button"]:only-of-type {
-		margin-right: 0;
 	}
 
 	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons .wp-block[data-type="core/button"]:last-child {
