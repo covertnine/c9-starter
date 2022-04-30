@@ -101,5 +101,8 @@
 		"validator": "^10.11.0",
 		"vinyl-paths": "^2.1.0",
 		"webpack-stream": "^5.2.1"
+	},
+	"overrides": {
+		"async": "^2.6.4"
 	}
 }
