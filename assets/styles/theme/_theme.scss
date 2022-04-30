@@ -1724,12 +1724,19 @@ img {
 [data-type="core/image"][data-align="left"] figure,
 [data-type="core/image"][data-align="right"] figure {
 	margin-bottom: 10px;
+	position: relative;
 }
 
-.entry-content .container .wp-block-image img {
+.entry-content .container .wp-block-image>.aligncenter>img {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+
+.entry-content .container .wp-block-image>img {
+	margin-left: 0;
+	margin-right: 0;
+	display: inline;
 }
 
 .wp-block-image .alignleft {
