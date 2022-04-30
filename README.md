@@ -1,6 +1,6 @@
-# C9
+# C9 Starter
 
-C9 uses `npm` to compile files and an untracked `client` folder for website-specific code. The goal is to allow a developer to create custom themes, which they can track via git, while allowing their client to still use a child theme if they like. Developers and clients mutually making changes to a child theme is a recipe for chaos.
+C9 Starter or C9 uses `npm` to compile files and an untracked `client` folder for website-specific code. The goal is to allow a developer to create custom themes, which they can track via git, while allowing their client to still use a child theme if they like. Developers and clients mutually making changes to a child theme is a recipe for chaos.
 
 ## Installation
 
