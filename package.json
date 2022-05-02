@@ -103,6 +103,8 @@
 		"webpack-stream": "^5.2.1"
 	},
 	"overrides": {
-		"async": "^2.6.4"
+		"async": {
+			".": "^2.6.4"
+		}
 	}
 }
