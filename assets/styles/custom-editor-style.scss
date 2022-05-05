@@ -273,6 +273,11 @@ body .editor-styles-wrapper,
 	text-align: center;
 }
 
+
+.wp-block-buttons [data-rich-text-placeholder] {
+	font-size: 14px;
+}
+
 /*WordPress 5.7 button alignments*/
 .editor-styles-wrapper .wp-block-buttons .wp-block-button {
 	margin-right: .5em;
@@ -396,10 +401,11 @@ body .editor-styles-wrapper,
 	display: block;
 }
 
+.c9-layout-columns-3>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] [data-type^="core"],
 .c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block>[data-type="core/image"],
 .c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block>[data-type="core/buttons"],
 .c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block[data-type^="core"] [data-type="core/button"] {
-	width: auto;
+	width: auto !important;
 }
 
 [data-align="center"] .wp-block-image .components-resizable-box__container,
@@ -418,8 +424,7 @@ body .editor-styles-wrapper,
 
 .wp-block[data-align="left"] [data-type="core/image"],
 .wp-block[data-align="left"]>.wp-block-image,
-.alignleft.wp-block-image>img,
-.alignleft.wp-block-image>div {
+.alignleft.wp-block-image>img {
 	margin-left: 0px;
 	margin-right: 30px;
 }
@@ -433,15 +438,15 @@ body .editor-styles-wrapper,
 
 .wp-block[data-align="right"] [data-type="core/image"],
 .wp-block[data-align="right"]>.wp-block-image,
-.alignright.wp-block-image img,
-.alignright.wp-block-image>div {
+.alignright.wp-block-image img {
 	margin-left: 30px;
 	margin-right: 0px;
 }
 
 .wp-block[data-align="right"]>.wp-block-image,
 .wp-block[data-align="right"]>.wp-block-image>.components-resizable-box__container,
-.alignright.wp-block-image img {
+.alignright.wp-block-image img,
+.alignright.wp-block-image>div {
 	float: right;
 }
 
