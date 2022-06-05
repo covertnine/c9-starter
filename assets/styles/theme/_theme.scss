@@ -2430,15 +2430,15 @@ table tr th {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul ul,
-.entry-content ol ol {
-	font-size: 10px;
-}
+// .entry-content ul ul,
+// .entry-content ol ol {
+// 	font-size: 10px;
+// }
 
-.entry-content ul:not(.wp-block-social-links)>li,
-.entry-content ol:not(.wp-block-social-links)>li {
-	font-size: 1.6em;
-}
+// .entry-content ul:not(.wp-block-social-links)>li,
+// .entry-content ol:not(.wp-block-social-links)>li {
+// 	font-size: 1.6em;
+// }
 
 .entry-content>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
@@ -2457,6 +2457,8 @@ table tr th {
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
 .editor-styles-wrapper ol>li>ol {
 	margin: 0px 0px 0px 15px;
+	-webkit-padding-start: 0px;
+	padding-inline-start: 0px;
 }
 
 .entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
@@ -3186,19 +3188,23 @@ screen and (max-height: 300px) {
 	border-radius: 0px;
 }
 
-.wp-block-buttons>.wp-block-button.wp-block-button__width-25:last-child {
+.wp-block-buttons .wp-block-button {
+	display: block;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-25 {
 	width: 25%;
 }
 
-.wp-block-buttons>.wp-block-button.wp-block-button__width-50:last-child {
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
 	width: 50%;
 }
 
-.wp-block-buttons>.wp-block-button.wp-block-button__width-75:last-child {
+.wp-block-buttons>.wp-block-button.wp-block-button__width-75 {
 	width: 75%;
 }
 
-.wp-block-buttons>.wp-block-button.wp-block-button__width-100:last-child {
+.wp-block-buttons>.wp-block-button.wp-block-button__width-100 {
 	width: 100%;
 }
 

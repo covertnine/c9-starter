@@ -108,12 +108,6 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 		margin-right: 0px;
 	}
 
-	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons .wp-block[data-type="core/button"] {
-		margin-right: 8px;
-		display: grid;
-		place-content: center;
-	}
-
 	.editor-styles-wrapper .c9-grid .wp-block[data-type="c9-blocks/column-container"] .wp-block-buttons>.wp-block[data-type="core/button"]:only-of-type {
 		margin-right: 0;
 	}
@@ -172,8 +166,6 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 .editor-styles-wrapper .wp-block-paragraph,
 .editor-styles-wrapper .wp-block-quote p,
 .editor-styles-wrapper .wp-block-file,
-.editor-styles-wrapper ul li,
-.editor-styles-wrapper ol li,
 .editor-styles-wrapper .wp-block-pullquote,
 .editor-styles-wrapper .wp-block-pullquote blockquote p,
 .block-editor-format-toolbar__link-container-value,
@@ -417,13 +409,6 @@ body .editor-styles-wrapper,
 	display: block;
 }
 
-.c9-layout-columns-3>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] [data-type^="core"],
-.c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block>[data-type="core/image"],
-.c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block>[data-type="core/buttons"],
-.c9-column-container>.c9-layout-column-wrap-admin>.block-editor-inner-blocks>.block-editor-block-list__layout>.wp-block[data-type="c9-blocks/column"] .wp-block[data-type^="core"] [data-type="core/button"] {
-	width: auto !important;
-}
-
 [data-align="center"] .wp-block-image .components-resizable-box__container,
 [data-align="center"] .wp-block-image img,
 .wp-block[data-align="center"]>.wp-block-image img,
@@ -506,6 +491,18 @@ html :where(.editor-styles-wrapper) kbd {
 /* social link block */
 .editor-styles-wrapper .wp-block-social-links li:last-child {
 	margin-right: 0px;
+}
+
+.editor-styles-wrapper .wp-block-social-links.aligncenter {
+	justify-content: center;
+}
+
+.editor-styles-wrapper .wp-block-social-links.alignleft {
+	justify-content: flex-start;
+}
+
+.editor-styles-wrapper .wp-block-social-links.alignright {
+	justify-content: flex-end;
 }
 
 /* make mobile editing on gutenberg possible */
