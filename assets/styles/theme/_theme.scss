@@ -1728,12 +1728,19 @@ img {
 [data-type="core/image"][data-align="left"] figure,
 [data-type="core/image"][data-align="right"] figure {
 	margin-bottom: 10px;
+	position: relative;
 }
 
-.entry-content .container .wp-block-image img {
+.entry-content .container .wp-block-image>.aligncenter>img {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+
+.entry-content .container .wp-block-image>img {
+	margin-left: 0;
+	margin-right: 0;
+	display: inline;
 }
 
 .wp-block-image .alignleft {
@@ -2428,15 +2435,6 @@ table tr th {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul ul,
-.entry-content ol ol {
-	font-size: 10px;
-}
-
-.entry-content ul:not(.wp-block-social-links)>li,
-.entry-content ol:not(.wp-block-social-links)>li {
-	font-size: 1.6em;
-}
 
 .entry-content>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
