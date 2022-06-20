@@ -2430,15 +2430,10 @@ table tr th {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
-// .entry-content ul ul,
-// .entry-content ol ol {
-// 	font-size: 10px;
-// }
-
-// .entry-content ul:not(.wp-block-social-links)>li,
-// .entry-content ol:not(.wp-block-social-links)>li {
-// 	font-size: 1.6em;
-// }
+.entry-content ul:not([class]),
+.entry-content ul[class=""] {
+	font-size: 16px;
+}
 
 .entry-content>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding: 0px 0px 0px 30px;
