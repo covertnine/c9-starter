@@ -2441,6 +2441,10 @@ table tr th {
 	margin: 30px 0px 30px 15px;
 }
 
+.entry-content ul:not([class]) {
+	font-size: 16px;
+}
+
 .entry-content>ul>li ul {
 	padding-left: 10px;
 }
