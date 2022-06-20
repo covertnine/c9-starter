@@ -2441,7 +2441,8 @@ table tr th {
 	margin: 30px 0px 30px 15px;
 }
 
-.entry-content ul:not([class]) {
+.entry-content ul:not([class]),
+.entry-content ul[class=""] {
 	font-size: 16px;
 }
 
