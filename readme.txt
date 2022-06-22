@@ -28,6 +28,9 @@ Yes! Use the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin, which 
 Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
+= 2.3.5 =
+Fixes to font sizes for WordPress 6.0 in some block elements, button and image alignment fixes.
+
 = 2.3.4 =
 Fixed namespace issue for translations.
 
