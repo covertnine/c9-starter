@@ -352,6 +352,11 @@ body .editor-styles-wrapper,
 	padding: 0px 0px 0px 50px;
 }
 
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+	font-size: 16px;
+}
+
 .editor-styles-wrapper ol,
 .editor-styles-wrapper .is-root-container>ol[data-type="core/list"] {
 	padding: 0px 0px 0px 50px;

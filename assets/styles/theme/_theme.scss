@@ -2433,7 +2433,8 @@ table tr th {
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
 .entry-content ul:not([class]),
-.entry-content ul[class=""] {
+.entry-content ul[class=""],
+.entry-content ol {
 	font-size: 16px;
 }
 
