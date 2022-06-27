@@ -34,7 +34,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.3.6 =
-Updates for WordPress 6.0 compatibility with list item spacing on some blocks.
+Updates for WordPress 6.0 compatibility with list item spacing on some blocks, default item widths/alignments in admin, and some minor backend font issues.
 
 = 2.3.5 =
 Update for WordPress 6.0 compatibility with font sizes on some blocks. Bug fixes.
