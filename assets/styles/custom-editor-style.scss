@@ -97,6 +97,10 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 		margin-right: 8px;
 	}
 
+	body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
+	body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
 	body.post-type-post .editor-styles-wrapper .wp-block {
 		max-width: 900px;
 	}
