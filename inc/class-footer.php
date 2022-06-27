@@ -46,9 +46,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_twitter_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//twitter.com/' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-starter') . '</span></a>';
+				$link = '<a href="//twitter.com/' . $input . '" target="_blank"><i class="fab fa-twitter"></i><span class="sr-only">' . __('Twitter', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -56,9 +56,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_facebook_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-facebook"></i><span class="sr-only">' . __('Facebook', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-facebook"></i><span class="sr-only">' . __('Facebook', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//facebook.com/' . $input . '" target="_blank"><i class="fab fa-facebook"></i><span class="sr-only">' . __('Facebook', 'c9-starter') . '</span></a>';
+				$link = '<a href="//facebook.com/' . $input . '" target="_blank"><i class="fab fa-facebook"></i><span class="sr-only">' . __('Facebook', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -66,9 +66,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_instagram_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">' . __('Instagram', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">' . __('Instagram', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//instagram.com/' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">' . __('Instagram', 'c9-starter') . '</span></a>';
+				$link = '<a href="//instagram.com/' . $input . '" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">' . __('Instagram', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -76,9 +76,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_pinterest_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-pinterest"></i><span class="sr-only">' . __('Pinterest', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-pinterest"></i><span class="sr-only">' . __('Pinterest', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//pinterest.com/' . $input . '" target="_blank"><i class="fab fa-pinterest"></i><span class="sr-only">' . __('Pinterest', 'c9-starter') . '</span></a>';
+				$link = '<a href="//pinterest.com/' . $input . '" target="_blank"><i class="fab fa-pinterest"></i><span class="sr-only">' . __('Pinterest', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -86,9 +86,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_spotify_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-spotify"></i><span class="sr-only">' . __('Spotify', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-spotify"></i><span class="sr-only">' . __('Spotify', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//open.spotify.com/' . $input . '" target="_blank"><i class="fab fa-spotify"></i><span class="sr-only">' . __('Spotify', 'c9-starter') . '</span></a>';
+				$link = '<a href="//open.spotify.com/' . $input . '" target="_blank"><i class="fab fa-spotify"></i><span class="sr-only">' . __('Spotify', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -96,9 +96,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_youtube_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-youtube"></i><span class="sr-only">' . __('YouTube', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-youtube"></i><span class="sr-only">' . __('YouTube', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//youtube.com/' . $input . '" target="_blank"><i class="fab fa-youtube"></i><span class="sr-only">' . __('YouTube', 'c9-starter') . '</span></a>';
+				$link = '<a href="//youtube.com/' . $input . '" target="_blank"><i class="fab fa-youtube"></i><span class="sr-only">' . __('YouTube', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -106,9 +106,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_flickr_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-flickr"></i><span class="sr-only">' . __('Flickr', 'c9-starter') . '</span></a';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-flickr"></i><span class="sr-only">' . __('Flickr', 'c9-work') . '</span></a';
 			} else {
-				$link = '<a href="//flickr.com/' . $input . '" target="_blank"><i class="fab fa-flickr"></i><span class="sr-only">' . __('Flickr', 'c9-starter') . '</span></a>';
+				$link = '<a href="//flickr.com/' . $input . '" target="_blank"><i class="fab fa-flickr"></i><span class="sr-only">' . __('Flickr', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -116,9 +116,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_tumblr_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-tumblr"></i><span class="sr-only">' . __('Tumblr', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-tumblr"></i><span class="sr-only">' . __('Tumblr', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//' . $input . '.tumblr.com" target="_blank"><i class="fab fa-tumblr"></i><span class="sr-only">' . __('Tumblr', 'c9-starter') . '</span></a>';
+				$link = '<a href="//' . $input . '.tumblr.com" target="_blank"><i class="fab fa-tumblr"></i><span class="sr-only">' . __('Tumblr', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -126,9 +126,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_yelp_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-yelp"></i><span class="sr-only">' . __('Yelp', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-yelp"></i><span class="sr-only">' . __('Yelp', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//yelp.com/biz/' . $input . '" target="_blank"><i class="fab fa-yelp"></i><span class="sr-only">' . __('Yelp', 'c9-starter') . '</span></a>';
+				$link = '<a href="//yelp.com/biz/' . $input . '" target="_blank"><i class="fab fa-yelp"></i><span class="sr-only">' . __('Yelp', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -136,9 +136,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_subreddit_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-reddit"></i><span class="sr-only">' . __('Reddit', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-reddit"></i><span class="sr-only">' . __('Reddit', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//reddit.com/r/' . $input . '" target="_blank"><i class="fab fa-reddit"></i><span class="sr-only">' . __('Reddit', 'c9-starter') . '</span></a>';
+				$link = '<a href="//reddit.com/r/' . $input . '" target="_blank"><i class="fab fa-reddit"></i><span class="sr-only">' . __('Reddit', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -146,9 +146,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_linkedin_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-linkedin"></i><span class="sr-only">' . __('LinkedIn', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-linkedin"></i><span class="sr-only">' . __('LinkedIn', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//linkedin.com/in/' . $input . '" target="_blank"><i class="fab fa-linkedin"></i><span class="sr-only">' . __('LinkedIn', 'c9-starter') . '</span></a>';
+				$link = '<a href="//linkedin.com/in/' . $input . '" target="_blank"><i class="fab fa-linkedin"></i><span class="sr-only">' . __('LinkedIn', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -156,9 +156,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_github_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-github"></i><span class="sr-only">' . __('GitHub', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-github"></i><span class="sr-only">' . __('GitHub', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//github.com/' . $input . '" target="_blank"><i class="fab fa-github"></i><span class="sr-only">' . __('GitHub', 'c9-starter') . '</span></a>';
+				$link = '<a href="//github.com/' . $input . '" target="_blank"><i class="fab fa-github"></i><span class="sr-only">' . __('GitHub', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
@@ -166,9 +166,9 @@ if (!class_exists('c9FooterHelpers')) {
 		public static function build_c9_soundcloud_link($input, $type)
 		{
 			if ('url' === $type) {
-				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-soundcloud"></i><span class="sr-only">' . __('SoundCloud', 'c9-starter') . '</span></a>';
+				$link = '<a href="' . $input . '" target="_blank"><i class="fab fa-soundcloud"></i><span class="sr-only">' . __('SoundCloud', 'c9-work') . '</span></a>';
 			} else {
-				$link = '<a href="//soundcloud.com/' . $input . '" target="_blank"><i class="fab fa-soundcloud"></i><span class="sr-only">' . __('SoundCloud', 'c9-starter') . '</span></a>';
+				$link = '<a href="//soundcloud.com/' . $input . '" target="_blank"><i class="fab fa-soundcloud"></i><span class="sr-only">' . __('SoundCloud', 'c9-work') . '</span></a>';
 			}
 			return $link;
 		}
