@@ -76,6 +76,27 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 	.is-sidebar-opened .editor-styles-wrapper .wp-block {
 		max-width: 100vw;
 	}
+
+	body.post-type-page .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-page .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
+	body.post-type-page .is-root-container>.block-list-appender.wp-block,
+	body.post-type-page:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-page:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
+	body.post-type-page .is-sidebar-opened .editor-styles-wrapper .is-root-container>.wp-block {
+		max-width: 1140px;
+	}
+
+	.post-type-page .is-sidebar-opened .edit-post-visual-editor__post-title-wrapper {
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.post-type-post .is-sidebar-opened .edit-post-visual-editor__post-title-wrapper h1,
+	.post-type-page .is-sidebar-opened .edit-post-visual-editor__post-title-wrapper h1 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -101,6 +122,14 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 	.editor-styles-wrapper .is-root-container>.block-list-appender.wp-block {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
+	body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+	body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty=true],
+	body.post-type-post .editor-styles-wrapper .wp-block {
+		max-width: 900px;
 	}
 
 	body.post-type-post .editor-styles-wrapper .wp-block {
@@ -357,11 +386,6 @@ body .editor-styles-wrapper,
 	font-size: 16px;
 }
 
-.editor-styles-wrapper ol,
-.editor-styles-wrapper .is-root-container>ol[data-type="core/list"] {
-	padding: 0px 0px 0px 50px;
-}
-
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
 	position: relative;
@@ -387,7 +411,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-links):not(.c9-share-list),
 .editor-styles-wrapper ul {
 	padding: 0px 0px 0px 10px;
-	margin: 30px 0px 35px 45px;
+	margin: 30px auto 35px auto;
 	list-style-type: none;
 }
 
