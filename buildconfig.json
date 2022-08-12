@@ -1,23 +1,23 @@
 {
-	"browserSyncOptions": {
-		"proxy": "https://riot-fest.local",
-		"notify": false
-	},
-	"browserSyncWatchFiles": [
-		"./assets/styles/*.min.css",
-		"./assets/scripts/*.min.js",
-		"./assets/dist/*.js",
-		"./assets/dist/css/*.css",
-		"./**/*.php"
-	],
-	"paths": {
-		"client": "./client/client-assets",
-		"js": "./assets/scripts",
-		"img": "./assets/images",
-		"clientImg": "./client/client-assets/img",
-		"node": "./node_modules",
-		"dev": "./",
-		"dist": "./assets/dist",
-		"styles": "./assets/styles"
-	}
+    "browserSyncOptions": {
+        "proxy": "https://riot-fest.local",
+        "notify": false
+    },
+    "browserSyncWatchFiles": [
+        "./assets/styles/*.min.css",
+        "./assets/scripts/*.min.js",
+        "./assets/dist/*.js",
+        "./assets/dist/css/*.css",
+        "./**/*.php"
+    ],
+    "paths": {
+        "client": "./client/client-assets",
+        "js": "./assets/scripts",
+        "img": "./assets/images",
+        "clientImg": "./client/client-assets/img",
+        "node": "./node_modules",
+        "dev": "./",
+        "dist": "./assets/dist",
+        "styles": "./assets/styles"
+    }
 }
