@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://c9starter-v218.local",
+		"proxy": "https://riot-pop.local",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [
