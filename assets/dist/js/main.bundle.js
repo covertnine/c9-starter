@@ -125,8 +125,8 @@ var c9Page = function ($) {
     $("#backtotop").on("click", ".btn-back-to-top", function (e) {
       e.preventDefault();
       window.scrollTo({
-        'behavior': 'smooth',
-        'top': 0
+        behavior: "smooth",
+        top: 0
       });
       $(".btn-back-to-top").css("opacity", "0");
       $("#page").focus();
@@ -205,9 +205,9 @@ var c9Page = function ($) {
       iframe: {
         patterns: {
           youtube_short: {
-            index: 'youtu.be/',
-            id: 'youtu.be/',
-            src: '//www.youtube.com/embed/%id%?autoplay=1'
+            index: "youtu.be/",
+            id: "youtu.be/",
+            src: "//www.youtube.com/embed/%id%?autoplay=1"
           }
         }
       }
@@ -300,8 +300,8 @@ var c9Page = function ($) {
 
       $("body").on("keydown", modal, trapTabKey); // Find all focusable children
 
-      var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
-      focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements); // Convert NodeList to Array
+      var focusableElements = "a[href], input:not([disabled]), button:not([disabled])";
+      focusableElements = document.querySelector("#fullscreensearch").querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
@@ -343,7 +343,15 @@ var c9Page = function ($) {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       Navbar Accessibility        /////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Will hold previously focused element
+
+    $(".dropdown-item").click(function () {
+      $(".navbar div").removeClass("show");
+      $(".navbar-toggler").attr("aria-expanded", "false");
+    });
+    $(".linksingle").click(function () {
+      $(".navbar div").removeClass("show");
+      $(".navbar-toggler").attr("aria-expanded", "false");
+    }); // Will hold previously focused element
 
     var focusedElementBeforeNavbar;
     var c9starterNavbar = $("#wrapper-navbar");
@@ -355,8 +363,8 @@ var c9Page = function ($) {
       $("body").on("keydown", c9starterNavbar, trapTabKey);
       focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
 
-      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-      focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
+      var focusableElements = "a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])";
+      focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
@@ -385,7 +393,7 @@ var c9Page = function ($) {
     //close navbar
 
 
-    $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
+    $("#wrapper-navbar").on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
         focusedElementBeforeNavbar.focus();
