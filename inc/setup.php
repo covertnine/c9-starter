@@ -90,6 +90,7 @@ if (!function_exists('c9_setup')) {
 				'video',
 				'quote',
 				'link',
+				'gallery'
 			)
 		);
 
