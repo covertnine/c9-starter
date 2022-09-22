@@ -26,7 +26,7 @@ if (!empty($cortex_images)) { ?>
                                 <div class="grid-item <?php echo $cortex_columns; ?>">
                                     <figure class="img_container">
                                         <a href="<?php echo esc_url($cortex_image['url']); ?>" class="entry-link" title="<?php echo esc_html($cortex_image['caption']); ?>">
-                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
+                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium_large']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
                                     </figure>
                                 </div>
                         <?php endforeach;
@@ -51,7 +51,7 @@ if (!empty($cortex_images)) { ?>
                                 <div class="grid-item <?php echo $cortex_columns; ?>">
                                     <figure class="img_container">
                                         <a href="<?php echo esc_url($cortex_image['url']); ?>" class="entry-link" title="<?php echo esc_html($cortex_image['caption']); ?>">
-                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
+                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium_large']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
                                     </figure>
                                 </div>
                         <?php endforeach;
