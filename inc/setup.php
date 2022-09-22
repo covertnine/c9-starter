@@ -11,7 +11,7 @@ if (!isset($content_width)) {
 	$content_width = 960; /* pixels */
 }
 
-add_action('after_setup_theme', 'c9_setup');
+add_action('after_setup_theme', 'c9_setup', 10);
 
 if (!function_exists('c9_setup')) {
 	/**
@@ -86,11 +86,11 @@ if (!function_exists('c9_setup')) {
 			'post-formats',
 			array(
 				'aside',
+				'gallery',
 				'image',
 				'video',
 				'quote',
 				'link',
-				'gallery'
 			)
 		);
 

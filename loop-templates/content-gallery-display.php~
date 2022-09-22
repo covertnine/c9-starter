@@ -26,7 +26,7 @@ if (!empty($cortex_images)) { ?>
                                 <div class="grid-item <?php echo $cortex_columns; ?>">
                                     <figure class="img_container">
                                         <a href="<?php echo esc_url($cortex_image['url']); ?>" class="entry-link" title="<?php echo esc_html($cortex_image['caption']); ?>">
-                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
+                                            <img src="<?php echo esc_url($cortex_image['sizes']['large']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" /></a>
                                     </figure>
                                 </div>
                         <?php endforeach;
@@ -51,7 +51,7 @@ if (!empty($cortex_images)) { ?>
                                 <div class="grid-item <?php echo $cortex_columns; ?>">
                                     <figure class="img_container">
                                         <a href="<?php echo esc_url($cortex_image['url']); ?>" class="entry-link" title="<?php echo esc_html($cortex_image['caption']); ?>">
-                                            <img src="<?php echo esc_url($cortex_image['sizes']['medium']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" loading= "lazy" /></a>
+                                            <img src="<?php echo esc_url($cortex_image['sizes']['large']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" /></a>
                                     </figure>
                                 </div>
                         <?php endforeach;
@@ -71,7 +71,7 @@ if (!empty($cortex_images)) { ?>
                     if (!empty($cortex_images)) {
                         foreach ($cortex_images as $cortex_image) :  ?>
                             <div class="entry-content-image">
-                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" loading= "lazy"/>
+                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" />
                             </div>
                     <?php endforeach;
                     } //endifempty
@@ -89,7 +89,7 @@ if (!empty($cortex_images)) { ?>
                     if (!empty($cortex_images)) {
                         foreach ($cortex_images as $cortex_image) :  ?>
                             <div class="entry-content-image">
-                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" loading= "lazy" />
+                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" />
                                 <p class="h6 mar30B"><?php echo esc_html($cortex_image['caption']); ?></p>
                             </div>
                     <?php endforeach;
@@ -106,7 +106,7 @@ if (!empty($cortex_images)) { ?>
                     if (!empty($cortex_images)) {
                         foreach ($cortex_images as $cortex_image) :  ?>
                             <div class="entry-content-image">
-                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" loading= "lazy" />
+                                <img src="<?php echo esc_url($cortex_image['url']); ?>" alt="<?php echo esc_html($cortex_image['alt']); ?>" class="mar10B" />
                             </div>
                     <?php endforeach;
                     } //endifempty
