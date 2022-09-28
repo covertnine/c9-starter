@@ -97,7 +97,7 @@ if (!empty($playlist_link)) {
                                 <span class="c9-sh font-weight-light rf-presents h4">Riot Fest Presents: <?php the_title(); ?></span>
                             </div>
                             <div class="section-heading c9-heading text-left">
-                                <h1 class="c9-h"><?php the_title(); ?></h1>
+                                <h1 class="c9-h c9-txl h4"><?php the_title(); ?></h1>
                             </div>
                             <?php //add openers
                             // Check rows exists.
@@ -162,7 +162,7 @@ if (!empty($playlist_link)) {
                             <!--end buttons-->
                         </div>
                         <!--end block group-->
-                        <span class="rf-official-url has-color-info-color text-center d-block pl-t pr-5"><?php the_permalink(); ?></span>
+                        <span class="rf-official-url text-center d-block pl-t pr-5"><?php the_permalink(); ?></span>
                         <?php if (!empty($rf_playlist_embed)) { ?>
                             <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify d-block mr-auto ml-auto text-center pr-5 pl-5 pb-5">
                                 <div class="wp-block-embed__wrapper">
