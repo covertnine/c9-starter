@@ -126,5 +126,22 @@ if (!function_exists('c9_setup')) {
 		add_image_size('c9-post-wide-sm-crop', 500, 281, true);
 		add_image_size('c9-post-wide-xs-crop', 380, 215, true);
 		add_image_size('c9-post-wide-tiny-crop', 120, 90, true);
+		add_image_size('riot-featured-post-img', 698, 392, false);
+		add_image_size('riot-square-show', 1080, 1080, true);
+		add_image_size('riot-square-show-sm', 385, 385, true);
+		add_image_size('riot-square-show-md', 540, 540, true);
+		add_image_size('riot-square-show-big', 1500, 1500, true);
+		set_post_thumbnail_size(698, 392);
 	}
+}
+
+add_filter('image_size_names_choose', 'aw_custom_add_image_size_names');
+function aw_custom_add_image_size_names($sizes)
+{
+	return array_merge($sizes, array(
+		'riot-square-show' 		=> __('Riot Square'),
+		'riot-square-show-sm' 	=> __('Riot Square Sm'),
+		'riot-square-show-md' 	=> __('Riot Square Md'),
+		'riot-square-show-big' 	=> __('Riot Square Lg'),
+	));
 }
