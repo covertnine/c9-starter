@@ -97,7 +97,7 @@ if (!empty($playlist_link)) {
                                 <span class="c9-sh font-weight-light rf-presents h4">Riot Fest Presents: <?php the_title(); ?></span>
                             </div>
                             <div class="section-heading c9-heading text-left">
-                                <h1 class="c9-h c9-txl h4"><?php the_title(); ?></h1>
+                                <h1 class="c9-h"><?php the_title(); ?></h1>
                             </div>
                             <?php //add openers
                             // Check rows exists.

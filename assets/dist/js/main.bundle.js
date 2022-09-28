@@ -114,7 +114,7 @@ var c9Page = function ($) {
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
 
-      if (0 == (heightDocument - position) / heightDocument) {
+      if (0.001 >= (heightDocument - position) / heightDocument) {
         jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
       } else {
         jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
