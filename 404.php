@@ -27,7 +27,7 @@ get_header();
                                 <h1 class="page-title">
                                     <?php
                                     esc_html_e(
-                                        'Oops! That page can&rsquo;t be found.',
+                                        'Oops! Page can&rsquo;t be found.',
                                         'c9-starter'
                                     );
                                     ?>
@@ -35,12 +35,12 @@ get_header();
 
                             </header><!-- .page-header -->
 
-                            <div class="container-narrow mar30B">
+                            <div class="container-narrow">
 
                                 <p>
                                 <?php
                                 esc_html_e(
-                                    'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+                                    ' Maybe try a search?',
                                     'c9-starter'
                                 );
                                 ?>
