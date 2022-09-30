@@ -95,9 +95,14 @@
 
                                 // Load sub field value.
                                 $opener_name = get_sub_field('opener_name');
-
+                                $allowed_tags = array(
+                                    'b' => array(),
+                                    'em' => array(),
+                                    'i' => array(),
+                                    'strong' => array(),
+                                );
                             ?>
-                                <p><small><?php echo esc_html($opener_name); ?></small></p>
+                                <p><small><?php echo wp_kses($opener_name, $allowed_tags); ?></small></p>
                             <?php
 
                             // End loop.
