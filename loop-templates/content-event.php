@@ -110,10 +110,16 @@ if (!empty($playlist_link)) {
 
                                         // Load sub field value.
                                         $opener_name = get_sub_field('opener_name');
+                                        $allowed_tags = array(
+                                            'b' => array(),
+                                            'em' => array(),
+                                            'i' => array(),
+                                            'strong' => array(),
+                                        );
 
                                     ?>
                                         <div class="opener font-weight-light">
-                                            <h2 class="c9-sh"><?php echo esc_html($opener_name); ?></span>
+                                            <h2 class="c9-sh"><?php echo wp_kses($opener_name, $allowed_tags); ?></h2>
                                         </div>
                                     <?php
 

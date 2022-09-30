@@ -106,9 +106,16 @@
 												// Load sub field value.
 												$opener_name = get_sub_field('opener_name');
 
+												$allowed_tags = array(
+													'b' => array(),
+													'em' => array(),
+													'i' => array(),
+													'strong' => array(),
+												);
+
 											?>
 												<div class="opener font-weight-light">
-													<h3 class="c9-sh h6"><?php echo esc_html($opener_name); ?></span>
+													<h3 class="c9-sh h6"><?php echo wp_kses($opener_name, $allowed_tags); ?></h3>
 												</div>
 											<?php
 
