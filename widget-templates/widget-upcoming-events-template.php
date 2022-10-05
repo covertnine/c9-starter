@@ -66,7 +66,9 @@
                 $opener_3                 = get_field('opener_3');
                 $opener_4                 = get_field('opener_4');
                 $opener_5                 = get_field('opener_5');
-                $show_is_sold_out                 = get_field('show_is_sold_out');
+                $show_is_sold_out         = get_field('show_is_sold_out');
+                $show_low_tickets         = get_field('show_is_almost_sold_out');
+
             ?>
                 <article class="single-article mar20B clearfix">
                     <header class="single-article-title">
@@ -94,8 +96,8 @@
                             while (have_rows('opening_acts')) : the_row();
 
                                 // Load sub field value.
-                                $opener_name = get_sub_field('opener_name');
-                                $allowed_tags = array(
+                                $opener_name        = get_sub_field('opener_name');
+                                $allowed_tags       = array(
                                     'b' => array(),
                                     'em' => array(),
                                     'i' => array(),
@@ -113,7 +115,7 @@
                         <div class="event-tickets-small">
 
                             <?php if ((!empty($event_ticket_link)) && ($show_is_sold_out !== true)) { ?>
-                                <a class="btn btn-xs btn-default" href="<?php echo $event_ticket_link; ?>" target="_blank"><?php _e('Tickets', 'c9-starter'); ?><span class="sr-only">(Opens in new window).</span></a>
+                                <a class="btn btn-xs btn-default<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text';}?>" href="<?php echo $event_ticket_link; ?>" target="_blank"><?php if (!empty($show_low_tickets)) { _e('Low Tickets', 'c9-starter'); } else { _e('Tickets', 'c9-starter'); }?><span class="sr-only">(Opens in new window).</span></a>
                             <?php } ?>
 
                             <?php if ($show_is_sold_out === true) { ?>
