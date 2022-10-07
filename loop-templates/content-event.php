@@ -152,7 +152,7 @@ if (!empty($playlist_link)) {
                             <div class="wp-container-6228f76eaa87d wp-block-buttons text-center pb-5 rf-show-single-btns">
                                 <?php if ((!empty($cortex_u_event_ticket_link)) && ($show_is_sold_out != true)) { ?>
                                     <div class="wp-block-button">
-                                    <a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
+                                    <a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_u_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($show_is_sold_out == true) { ?>
