@@ -137,7 +137,7 @@ var c9Page = (function($) {
 
 			var items = [];
 			var firstItem = $(this).attr("href");
-			var firstCaption = $(this).attr("title");
+			var firstCaption = $(this).children("img").attr("alt");
 
 			items.push({
 				src: firstItem,
@@ -151,24 +151,20 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).attr("title");
 					items.push({
-						src: imageLink,
-						title: imageCaption
+						src: imageLink
 					});
 				});
 
-			//items before
+			//items before d
 			$(this)
 				.parent()
 				.prevAll()
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).attr("title");
 					items.push({
-						src: imageLink,
-						title: imageCaption
+						src: imageLink
 					});
 				});
 
@@ -177,6 +173,11 @@ var c9Page = (function($) {
 				type: "image",
 				gallery: {
 					enabled: true
+				},
+				image: {
+					titleSrc: function(item) {
+					return item.el.children('img').attr("alt");
+					}
 				},
 				mainClass: "mfp-zoom-in",
 				callbacks: {
