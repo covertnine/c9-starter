@@ -130,17 +130,17 @@ var c9Page = (function($) {
 				}
 			}
 		});
-		$('.wp-block-image a[href$=".jpg"]').magnificPopup({
-			disableOn: 700,
-			type: "image",
-			mainClass: "mfp-zoom-in",
-			tError: '<a href="%url%">The image</a> could not be loaded.',
-			removalDelay: 160,
-			preloader: false,
-			fixedContentPos: false
-		});
+		// $('.wp-block-image a[href$=".jpg"]').magnificPopup({
+		// 	disableOn: 700,
+		// 	type: "image",
+		// 	mainClass: "mfp-zoom-in",
+		// 	tError: '<a href="%url%">The image</a> could not be loaded.',
+		// 	removalDelay: 160,
+		// 	preloader: false,
+		// 	fixedContentPos: false
+		// });
 		$(
-			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a'
+			'.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif, "], .gallery-item a'
 		).click(function(e) {
 			e.preventDefault();
 
@@ -156,9 +156,7 @@ var c9Page = (function($) {
 			//items after
 			$(this)
 				.parent()
-				.parent()
 				.nextAll()
-				.children()
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
@@ -172,9 +170,7 @@ var c9Page = (function($) {
 			//items before
 			$(this)
 				.parent()
-				.parent()
 				.prevAll()
-				.children()
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
