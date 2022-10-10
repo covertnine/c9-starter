@@ -224,15 +224,19 @@ var c9Page = function ($) {
 
       $(this).parent().nextAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
-          src: imageLink
+          src: imageLink,
+          title: imageCaption
         });
-      }); //items before d
+      }); //items before
 
       $(this).parent().prevAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
-          src: imageLink
+          src: imageLink,
+          title: imageCaption
         });
       });
       $.magnificPopup.open({
@@ -243,7 +247,7 @@ var c9Page = function ($) {
         },
         image: {
           titleSrc: function (item) {
-            return item.el.children('img').attr("alt");
+            return item.el.children("img").attr("alt");
           }
         },
         mainClass: "mfp-zoom-in",

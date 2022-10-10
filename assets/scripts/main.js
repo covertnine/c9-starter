@@ -131,13 +131,16 @@ var c9Page = (function($) {
 			}
 		});
 
-		$('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif, "], .gallery-item a'
+		$(
+			'.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif, "], .gallery-item a'
 		).click(function(e) {
 			e.preventDefault();
 
 			var items = [];
 			var firstItem = $(this).attr("href");
-			var firstCaption = $(this).children("img").attr("alt");
+			var firstCaption = $(this)
+				.children("img")
+				.attr("alt");
 
 			items.push({
 				src: firstItem,
@@ -151,20 +154,27 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
+					var imageCaption = $(this).children("img").attr("alt");
+
 					items.push({
-						src: imageLink
+						src: imageLink,
+						title: imageCaption
 					});
 				});
 
-			//items before d
+			//items before
 			$(this)
 				.parent()
 				.prevAll()
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
+					var imageCaption = $(this).children("img").attr("alt");
+
 					items.push({
-						src: imageLink
+						src: imageLink,
+						title: imageCaption
+
 					});
 				});
 
@@ -176,7 +186,7 @@ var c9Page = (function($) {
 				},
 				image: {
 					titleSrc: function(item) {
-					return item.el.children('img').attr("alt");
+						return item.el.children("img").attr("alt");
 					}
 				},
 				mainClass: "mfp-zoom-in",
@@ -208,7 +218,9 @@ var c9Page = (function($) {
 			});
 		});
 
-		$('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
+		$(
+			'.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]'
+		).magnificPopup({
 			disableOn: 700,
 			type: "image",
 			mainClass: "mfp-zoom-in",
@@ -217,7 +229,6 @@ var c9Page = (function($) {
 			preloader: false,
 			fixedContentPos: false
 		});
-
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
