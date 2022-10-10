@@ -211,16 +211,7 @@ var c9Page = function ($) {
           }
         }
       }
-    }); // $('.wp-block-image a[href$=".jpg"]').magnificPopup({
-    // 	disableOn: 700,
-    // 	type: "image",
-    // 	mainClass: "mfp-zoom-in",
-    // 	tError: '<a href="%url%">The image</a> could not be loaded.',
-    // 	removalDelay: 160,
-    // 	preloader: false,
-    // 	fixedContentPos: false
-    // });
-
+    });
     $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif, "], .gallery-item a').click(function (e) {
       e.preventDefault();
       var items = [];
@@ -282,6 +273,15 @@ var c9Page = function ($) {
           }
         }
       });
+    });
+    $('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
+      disableOn: 700,
+      type: "image",
+      mainClass: "mfp-zoom-in",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
