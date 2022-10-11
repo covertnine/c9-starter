@@ -10,13 +10,9 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="entry-content">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<?php the_content(); ?>
-				</div><!-- .col-->
-			</div><!-- .row-->
-		</div><!-- .container-->
+
+		<?php the_content(); ?>
+
 	</div><!-- .entry-content -->
 
 	<?php
@@ -64,6 +60,8 @@
 						$cortex_rsvp_link     			= esc_url(get_field('rsvp_link'));
 						$show_id						= get_the_ID();
 						$show_is_sold_out				= get_field('show_is_sold_out');
+						$show_low_tickets               = get_field('show_is_almost_sold_out');
+
 
 					?>
 						<article id="post-<?php echo $show_id; ?>" class="c9-post-grid-item rf-show-single-event post-<?php echo $show_id; ?> has-post-thumbnail has-color-light-background-color entry-content" itemscope>
@@ -106,9 +104,16 @@
 												// Load sub field value.
 												$opener_name = get_sub_field('opener_name');
 
+												$allowed_tags = array(
+													'b' => array(),
+													'em' => array(),
+													'i' => array(),
+													'strong' => array(),
+												);
+
 											?>
 												<div class="opener font-weight-light">
-													<h3 class="c9-sh h6"><?php echo esc_html($opener_name); ?></span>
+													<h3 class="c9-sh h6"><?php echo wp_kses($opener_name, $allowed_tags); ?></h3>
 												</div>
 											<?php
 
@@ -142,7 +147,7 @@
 							<div class="wp-block-buttons rf-show-btns">
 								<?php if ((!empty($cortex_event_ticket_link)) && ($show_is_sold_out != true)) { ?>
 									<div class="wp-block-button">
-										<a class="wp-block-button__link has-color-success-background-color has-background has-color-light-color" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank">Buy Tickets</a>
+										<a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
 									</div>
 								<?php } ?>
 								<?php if ($show_is_sold_out == true) { ?>

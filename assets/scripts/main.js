@@ -1,15 +1,15 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
 	c9Page.init();
 });
 
-var c9Page = (function ($) {
+var c9Page = (function($) {
 	var c9PageInit = {};
 
-	c9PageInit.init = function () {
+	c9PageInit.init = function() {
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
 
-		jQuery(window).scroll(function () {
+		jQuery(window).scroll(function() {
 			//scroll position variable
 			var scroll = jQuery(window).scrollTop();
 			var heightDocument = $(document).height();
@@ -23,24 +23,30 @@ var c9Page = (function ($) {
 				jQuery("#left-sidebar").removeClass("fixed-sidebar");
 				jQuery("#right-sidebar").removeClass("fixed-sidebar");
 			}
-			if (0.001 >= ((heightDocument - position) / heightDocument)) {
-				jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
+			if (0.001 >= (heightDocument - position) / heightDocument) {
+				jQuery(".btn-back-to-top")
+					.css("opacity", "1")
+					.parent()
+					.css("z-index", "1050");
 			} else {
-				jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
+				jQuery(".btn-back-to-top")
+					.css("opacity", "0")
+					.parent()
+					.css("z-index", "-1");
 			}
 		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
-        $("#backtotop").on("click", ".btn-back-to-top", function(e) {
+		$("#backtotop").on("click", ".btn-back-to-top", function(e) {
 			e.preventDefault();
 			window.scrollTo({
-				'behavior': 'smooth',
-				'top': 0
+				behavior: "smooth",
+				top: 0
 			});
-            $(".btn-back-to-top").css("opacity", "0");
-            $("#page").focus();
-        });
+			$(".btn-back-to-top").css("opacity", "0");
+			$("#page").focus();
+		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
@@ -49,7 +55,7 @@ var c9Page = (function ($) {
 			$(".navbar").addClass("navbar-small");
 			$("body").addClass("navbar-small");
 
-			$(window).scroll(function () {
+			$(window).scroll(function() {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -74,7 +80,7 @@ var c9Page = (function ($) {
 
 			//var logoHeight = $(".c9-custom-logo").height();
 
-			$(window).scroll(function () {
+			$(window).scroll(function() {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
@@ -102,7 +108,19 @@ var c9Page = (function ($) {
 
 		///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
+		// var $grid = $(".grid").masonry({
+		// 	// options
+		// 	itemSelector: ".grid-item",
+		// 	gutter: ".gutter-sizer",
+		// 	columnWidth: ".grid-sizer",
+		// 	percentPosition: true
+		// });
+		// $grid.imagesLoaded().progress(function() {
+		// 	$grid.masonry("layout");
+		// }); 
+
+		$(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']"
+		).magnificPopup({
 			disableOn: 700,
 			type: "iframe",
 			mainClass: "mfp-zoom-in",
@@ -110,35 +128,30 @@ var c9Page = (function ($) {
 			preloader: false,
 			fixedContentPos: false
 		});
+
 		$("a.wp-block-button__link[href*='youtu.be']").magnificPopup({
 			type: "iframe",
 			iframe: {
 				patterns: {
 					youtube_short: {
-						index: 'youtu.be/',
-						id: 'youtu.be/',
-						src: '//www.youtube.com/embed/%id%?autoplay=1'
+						index: "youtu.be/",
+						id: "youtu.be/",
+						src: "//www.youtube.com/embed/%id%?autoplay=1"
 					}
 				}
 			}
 		});
-		$('.wp-block-image a[href$=".jpg"]').magnificPopup({
-			disableOn: 700,
-			type: "image",
-			mainClass: "mfp-zoom-in",
-			tError: '<a href="%url%">The image</a> could not be loaded.',
-			removalDelay: 160,
-			preloader: false,
-			fixedContentPos: false
-		});
-		$(
-			'.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a'
-		).click(function (e) {
+
+		// default wordpress photo galleries on ticket pages
+		$('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a'
+		).click(function(e) {
 			e.preventDefault();
 
 			var items = [];
 			var firstItem = $(this).attr("href");
-			var firstCaption = $(this).attr("title");
+			var firstCaption = $(this)
+				.children("img")
+				.attr("alt");
 
 			items.push({
 				src: firstItem,
@@ -148,13 +161,12 @@ var c9Page = (function ($) {
 			//items after
 			$(this)
 				.parent()
-				.parent()
 				.nextAll()
-				.children()
 				.find("a")
-				.each(function () {
+				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).attr("title");
+					var imageCaption = $(this).children("img").attr("alt");
+
 					items.push({
 						src: imageLink,
 						title: imageCaption
@@ -164,13 +176,12 @@ var c9Page = (function ($) {
 			//items before
 			$(this)
 				.parent()
-				.parent()
 				.prevAll()
-				.children()
 				.find("a")
-				.each(function () {
+				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).attr("title");
+					var imageCaption = $(this).children("img").attr("alt");
+
 					items.push({
 						src: imageLink,
 						title: imageCaption
@@ -183,33 +194,51 @@ var c9Page = (function ($) {
 				gallery: {
 					enabled: true
 				},
+				image: {
+					titleSrc: function(item) {
+						return item.el.children("img").attr("alt");
+					}
+				},
 				mainClass: "mfp-zoom-in",
 				callbacks: {
-					open: function () {
+					open: function() {
 						//overwrite default prev + next function. Add timeout for css3 crossfade animation
-						$.magnificPopup.instance.next = function () {
+						$.magnificPopup.instance.next = function() {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function () {
+							setTimeout(function() {
 								$.magnificPopup.proto.next.call(self);
 							}, 120);
 						};
-						$.magnificPopup.instance.prev = function () {
+						$.magnificPopup.instance.prev = function() {
 							var self = this;
 							self.wrap.removeClass("mfp-image-loaded");
-							setTimeout(function () {
+							setTimeout(function() {
 								$.magnificPopup.proto.prev.call(self);
 							}, 120);
 						};
 					},
-					imageLoadComplete: function () {
+					imageLoadComplete: function() {
 						var self = this;
-						setTimeout(function () {
+						setTimeout(function() {
 							self.wrap.addClass("mfp-image-loaded");
 						}, 16);
 					}
 				}
 			});
+		});
+
+		//single image magnific lightbox
+		$(
+			'.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]'
+		).magnificPopup({
+			disableOn: 700,
+			type: "image",
+			mainClass: "mfp-zoom-in",
+			tError: '<a href="%url%">The image</a> could not be loaded.',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
 		});
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -234,8 +263,11 @@ var c9Page = (function ($) {
 			$("body").on("keydown", modal, trapTabKey);
 
 			// Find all focusable children
-			var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
-			focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements);
+			var focusableElements =
+				"a[href], input:not([disabled]), button:not([disabled])";
+			focusableElements = document
+				.querySelector("#fullscreensearch")
+				.querySelectorAll(focusableElements);
 
 			// Convert NodeList to Array
 			focusableElements = Array.prototype.slice.call(focusableElements);
@@ -268,7 +300,9 @@ var c9Page = (function ($) {
 		} //end fullScreenSearch
 
 		//close modal
-		$("#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click", function (e) {
+		$(
+			"#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close"
+		).on("click", function(e) {
 			// if escape is hit or if search close is clicked
 			if (
 				e.target == this ||
@@ -307,8 +341,11 @@ var c9Page = (function ($) {
 			focusedElementBeforeNavbar = $(".btn-nav-search");
 
 			// Find all focusable children
-			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-			focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements);
+			var focusableElements =
+				"a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])";
+			focusableElements = document
+				.querySelector("#wrapper-navbar")
+				.querySelectorAll(focusableElements);
 
 			// Convert NodeList to Array
 			focusableElements = Array.prototype.slice.call(focusableElements);
@@ -323,7 +360,6 @@ var c9Page = (function ($) {
 				if (e.keyCode === 9) {
 					// SHIFT + TAB
 					if (e.shiftKey) {
-
 						if (document.activeElement === firstTabStop) {
 							e.preventDefault();
 							lastTabStop.focus();
@@ -338,21 +374,23 @@ var c9Page = (function ($) {
 					}
 				}
 			}
-
 		} //end c9starterNavbarUse
 
 		//close navbar
-		$('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
-			// if escape is hit or if search close is clicked
-			if (
-				e.target == this ||
-				e.target.className == ".navbar-toggler" ||
-				e.keyCode == 27
-			) {
-				focusedElementBeforeNavbar.focus();
+		$("#wrapper-navbar").on(
+			"click",
+			'.navbar-toggler[aria-expanded="true"]',
+			function(e) {
+				// if escape is hit or if search close is clicked
+				if (
+					e.target == this ||
+					e.target.className == ".navbar-toggler" ||
+					e.keyCode == 27
+				) {
+					focusedElementBeforeNavbar.focus();
+				}
 			}
-		});
-
+		);
 	};
 	return c9PageInit;
 })(jQuery);
