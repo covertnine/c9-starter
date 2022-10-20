@@ -84,6 +84,7 @@ if (!function_exists('c9_setup')) {
 				'video',
 				'quote',
 				'link',
+				'gallery'
 			)
 		);
 
@@ -102,16 +103,45 @@ if (!function_exists('c9_setup')) {
 
 		add_theme_support('align-wide');
 
-		// For the Block Editor.
-		add_theme_support('editor-styles');
-
 		//Apply empty stylesheet to visual editor to remove that doesn't work right yet for some reason.
 		add_editor_style(get_template_directory() . '/editor-style.css');
 
 		add_theme_support('responsive-embeds');
 
 		add_theme_support('custom-line-height');
-		// add_theme_support('block-templates');
+		
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => esc_attr__( 'Small', 'c9-starter' ),
+				'size' => 13,
+				'slug' => 'small'
+			),
+			array(
+				'name' => esc_attr__( 'Normal', 'c9-starter' ),
+				'size' => 16,
+				'slug' => 'normal'
+			),
+			array(
+				'name' => esc_attr__( 'Medium', 'c9-starter' ),
+				'size' => 25,
+				'slug' => 'large'
+			),
+			array(
+				'name' => esc_attr__( 'Large', 'c9-starter' ),
+				'size' => 30,
+				'slug' => 'huge'
+			),			
+			array(
+				'name' => esc_attr__( 'Extra Large', 'c9-starter' ),
+				'size' => 36,
+				'slug' => 'huge'
+			),
+			array(
+				'name' => esc_attr__( '2X Large', 'c9-starter' ),
+				'size' => 48,
+				'slug' => 'huge'
+			),
+		) );
 
 		// C9 custom image sizes
 		add_image_size('c9-post-feature-hd', 1920, 1080, true);

@@ -114,7 +114,7 @@ var c9Page = function ($) {
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
 
-      if (0 == (heightDocument - position) / heightDocument) {
+      if (0.001 >= (heightDocument - position) / heightDocument) {
         jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
       } else {
         jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
@@ -211,38 +211,30 @@ var c9Page = function ($) {
           }
         }
       }
-    });
-    $('.wp-block-image a[href$=".jpg"]').magnificPopup({
-      disableOn: 700,
-      type: "image",
-      mainClass: "mfp-zoom-in",
-      tError: '<a href="%url%">The image</a> could not be loaded.',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false
-    });
-    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a').click(function (e) {
+    }); // default wordpress photo gallery bocks
+
+    $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a').click(function (e) {
       e.preventDefault();
       var items = [];
       var firstItem = $(this).attr("href");
-      var firstCaption = $(this).attr("title");
+      var firstCaption = $(this).children("img").attr("alt");
       items.push({
         src: firstItem,
         title: firstCaption
       }); //items after
 
-      $(this).parent().parent().nextAll().children().find("a").each(function () {
+      $(this).parent().nextAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
         });
       }); //items before
 
-      $(this).parent().parent().prevAll().children().find("a").each(function () {
+      $(this).parent().prevAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
@@ -253,6 +245,11 @@ var c9Page = function ($) {
         type: "image",
         gallery: {
           enabled: true
+        },
+        image: {
+          titleSrc: function (item) {
+            return item.el.children("img").attr("alt");
+          }
         },
         mainClass: "mfp-zoom-in",
         callbacks: {
@@ -282,6 +279,16 @@ var c9Page = function ($) {
           }
         }
       });
+    }); //single image magnific lightbox
+
+    $('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
+      disableOn: 700,
+      type: "image",
+      mainClass: "mfp-zoom-in",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
