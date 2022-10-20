@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2020-12-27 10:31-0600\n"
-"PO-Revision-Date: 2020-12-27 10:32-0600\n"
+"POT-Creation-Date: 2022-10-20 18:06-0500\n"
+"PO-Revision-Date: 2022-10-20 18:08-0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -539,7 +539,7 @@ msgstr ""
 "A blocks-based WordPress Theme starter theme for musicians, events, small "
 "businesses, restaurants, dispensaries, and bloggers."
 
-#: client/inc/client-setup.php:93 inc/setup.php:45
+#: client/inc/client-setup.php:93 inc/setup.php:46
 msgid "Top Navigation Menu"
 msgstr "Top Navigation Menu"
 
@@ -571,39 +571,39 @@ msgstr ""
 "toggles, and the responsive grid system that makes the theme look super "
 "duper."
 
-#: client/inc/client-setup.php:274
+#: client/inc/client-setup.php:276
 msgid "Light Color Text"
 msgstr "Light Color Text"
 
-#: client/inc/client-setup.php:282
+#: client/inc/client-setup.php:284
 msgid "Dark Color Text"
 msgstr "Dark Color Text"
 
-#: client/inc/client-setup.php:295
+#: client/inc/client-setup.php:297
 msgid "C9 All Patterns"
 msgstr "C9 All Patterns"
 
-#: client/inc/client-setup.php:299
+#: client/inc/client-setup.php:301
 msgid "C9 Page Template"
 msgstr "C9 Page Template"
 
-#: client/inc/client-setup.php:303
+#: client/inc/client-setup.php:305
 msgid "C9 Video"
 msgstr "C9 Video"
 
-#: client/inc/client-setup.php:307
+#: client/inc/client-setup.php:309
 msgid "C9 Audio"
 msgstr "C9 Audio"
 
-#: client/inc/client-setup.php:311
+#: client/inc/client-setup.php:313
 msgid "C9 Article"
 msgstr "C9 Article"
 
-#: client/inc/client-setup.php:327
+#: client/inc/client-setup.php:329
 msgid "Coming Soon Opt-in"
 msgstr "Coming Soon Opt-in"
 
-#: client/inc/client-setup.php:328
+#: client/inc/client-setup.php:330
 msgid ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
@@ -611,11 +611,11 @@ msgstr ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
 
-#: client/inc/client-setup.php:336
+#: client/inc/client-setup.php:338
 msgid "Watch Video"
 msgstr "Watch Video"
 
-#: client/inc/client-setup.php:337
+#: client/inc/client-setup.php:339
 msgid ""
 "Focus the page attention on a video button link, with an auto-playing video "
 "clip in the background."
@@ -623,19 +623,19 @@ msgstr ""
 "Focus the page attention on a video button link, with an auto-playing video "
 "clip in the background."
 
-#: client/inc/client-setup.php:345
+#: client/inc/client-setup.php:347
 msgid "Video Embed + YouTube Link"
 msgstr "Video Embed + YouTube Link"
 
-#: client/inc/client-setup.php:346
+#: client/inc/client-setup.php:348
 msgid "Feature a video file you upload with a link to a YouTube video link."
 msgstr "Feature a video file you upload with a link to a YouTube video link."
 
-#: client/inc/client-setup.php:354
+#: client/inc/client-setup.php:356
 msgid "Information Dialog Two Buttons"
 msgstr "Information Dialog Two Buttons"
 
-#: client/inc/client-setup.php:355
+#: client/inc/client-setup.php:357
 msgid ""
 "Highlight important information, and link to two separate places with "
 "buttons."
@@ -643,19 +643,19 @@ msgstr ""
 "Highlight important information, and link to two separate places with "
 "buttons."
 
-#: client/inc/client-setup.php:363
+#: client/inc/client-setup.php:365
 msgid "Spotify Embed, Track Listing + Button"
 msgstr "Spotify Embed, Track Listing + Button"
 
-#: client/inc/client-setup.php:364
+#: client/inc/client-setup.php:366
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr "Embed a playlist, track listing or lyrics, and a button to open it up!"
 
-#: client/inc/client-setup.php:372
+#: client/inc/client-setup.php:374
 msgid "Podcast Episode"
 msgstr "Podcast Episode"
 
-#: client/inc/client-setup.php:373
+#: client/inc/client-setup.php:375
 msgid ""
 "Feature a show photo, audio embed file, and everything you need for a "
 "podcast episode post."
@@ -663,11 +663,11 @@ msgstr ""
 "Feature a show photo, audio embed file, and everything you need for a "
 "podcast episode post."
 
-#: client/inc/client-setup.php:383
+#: client/inc/client-setup.php:385
 msgid "Events Schedule"
 msgstr "Events Schedule"
 
-#: client/inc/client-setup.php:384
+#: client/inc/client-setup.php:386
 msgid ""
 "Add a bunch of dates and places and links to a table with a nice header and "
 "FAQ, cause events are coming back!"
@@ -675,11 +675,11 @@ msgstr ""
 "Add a bunch of dates and places and links to a table with a nice header and "
 "FAQ, cause events are coming back!"
 
-#: client/inc/client-setup.php:394
+#: client/inc/client-setup.php:396
 msgid "Article 450 Words"
 msgstr "Article 450 Words"
 
-#: client/inc/client-setup.php:395
+#: client/inc/client-setup.php:397
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
@@ -687,11 +687,11 @@ msgstr ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:403
+#: client/inc/client-setup.php:405
 msgid "Article 600 Words"
 msgstr "Article 600 Words"
 
-#: client/inc/client-setup.php:404
+#: client/inc/client-setup.php:406
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
@@ -699,11 +699,11 @@ msgstr ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:412
+#: client/inc/client-setup.php:414
 msgid "C9 Starter Style Guide"
 msgstr "C9 Starter Style Guide"
 
-#: client/inc/client-setup.php:413
+#: client/inc/client-setup.php:415
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr "A style guide with type, buttons, and core blocks frequently used."
 
@@ -780,6 +780,58 @@ msgstr "Skip to content"
 #: header.php:73
 msgid "Toggle Navigation"
 msgstr "Toggle Navigation"
+
+#: inc/class-footer.php:49 inc/class-footer.php:51
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/class-footer.php:59 inc/class-footer.php:61
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/class-footer.php:69 inc/class-footer.php:71
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/class-footer.php:79 inc/class-footer.php:81
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: inc/class-footer.php:89 inc/class-footer.php:91
+msgid "Spotify"
+msgstr "Spotify"
+
+#: inc/class-footer.php:99 inc/class-footer.php:101
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/class-footer.php:109 inc/class-footer.php:111
+msgid "Flickr"
+msgstr "Flickr"
+
+#: inc/class-footer.php:119 inc/class-footer.php:121
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: inc/class-footer.php:129 inc/class-footer.php:131
+msgid "Yelp"
+msgstr "Yelp"
+
+#: inc/class-footer.php:139 inc/class-footer.php:141
+msgid "Reddit"
+msgstr "Reddit"
+
+#: inc/class-footer.php:149 inc/class-footer.php:151
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: inc/class-footer.php:159 inc/class-footer.php:161
+msgid "GitHub"
+msgstr "GitHub"
+
+#: inc/class-footer.php:169 inc/class-footer.php:171
+msgid "SoundCloud"
+msgstr "SoundCloud"
 
 #: inc/class-wp-bootstrap-navwalker.php:366
 msgid "Add a menu"
@@ -1067,6 +1119,30 @@ msgstr "Previous"
 msgid "Next"
 msgstr "Next"
 
+#: inc/setup.php:115
+msgid "Small"
+msgstr "Small"
+
+#: inc/setup.php:120
+msgid "Normal"
+msgstr "Normal"
+
+#: inc/setup.php:125
+msgid "Medium"
+msgstr "Medium"
+
+#: inc/setup.php:130
+msgid "Large"
+msgstr "Large"
+
+#: inc/setup.php:135
+msgid "Extra Large"
+msgstr "Extra Large"
+
+#: inc/setup.php:140
+msgid "2X Large"
+msgstr "2X Large"
+
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
@@ -1193,13 +1269,13 @@ msgstr "https://c9.covertnine.com"
 
 #. Description of the plugin/theme
 msgid ""
-"C9 is a starter theme for WordPress 5 that uses Bootstrap's responsive grid "
-"system, a single level dropdown menu navbar, and Gutenberg blocks with "
-"custom pagination."
+"C9 Starter is an agency-designed starter theme for the next generation of "
+"content creators with mobile-friendly designs, a single level dropdown menu, "
+"Gutenberg block patterns, and custom pagination."
 msgstr ""
-"C9 is a starter theme for WordPress 5 that uses Bootstrap's responsive grid "
-"system, a single level dropdown menu navbar, and Gutenberg blocks with "
-"custom pagination."
+"C9 Starter is an agency-designed starter theme for the next generation of "
+"content creators with mobile-friendly designs, a single level dropdown menu, "
+"Gutenberg block patterns, and custom pagination."
 
 #. Author of the plugin/theme
 msgid "COVERT NINE"
