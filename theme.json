@@ -12,27 +12,37 @@
 		"typography": {
 			"lineHeight": true,
 			"fontSizes": [{
-					"slug": "small",
-					"size": "1.3em",
-					"name": "Small"
-				},
-				{
-					"slug": "medium",
-					"size": "1.6em",
-					"name": "Medium"
-				},
-				{
-					"slug": "large",
-					"size": "3.6em",
-					"name": "Large"
-				},
-				{
-					"slug": "x-large",
-					"size": "4.8em",
-					"name": "Extra Large"
-				}
-			]
-		},
+				"slug": "small",
+				"size": "13px",
+				"name": "Small"
+			},
+			{
+				"slug": "normal",
+				"size": "16px",
+				"name": "Normal"
+			},
+			{
+				"slug": "medium",
+				"size": "25px",
+				"name": "Medium"
+			},
+			{
+				"slug": "large",
+				"size": "30px",
+				"name": "Large"
+			},
+			{
+				"slug": "x-large",
+				"size": "36px",
+				"name": "Extra Large"
+			},
+			{
+				"slug": "xx-large",
+				"size": "48px",
+				"name": "2X Large"
+			}
+		]
+},
 		"styles": {
 			"typography": {
 				"lineHeight": "1.6",
