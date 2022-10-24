@@ -101,40 +101,35 @@ var c9Page = function ($) {
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
-      var scrollHeight = $(document).height();
-      var scrollPosition = $(window).height() + $(window).scrollTop();
+      var heightDocument = $(document).height();
+      var position = $(window).height() + $(window).scrollTop();
 
-      if (scroll > 133) {
+      if (scroll >= 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
         jQuery("#right-sidebar").addClass("fixed-sidebar");
       }
 
-      if (scroll < 132) {
+      if (scroll <= 132) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
-      } //back to top button fade ins
-
-
-      if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-        jQuery(".btn-back-to-top").css('opacity', '1').parent().css('z-index', '1050');
-      } else {
-        jQuery(".btn-back-to-top").css('opacity', '0').parent().css('z-index', '-1');
       }
-    });
-    $("#backtotop").on("click", ".btn-back-to-top", function (event) {
-      event.preventDefault(); //grab #page
 
-      var sectionLink = '#page'; // scroll to that part of the page
+      if (0.001 >= (heightDocument - position) / heightDocument) {
+        jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
+      } else {
+        jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
 
-      gsap.to(window, {
-        duration: 1.5,
-        scrollTo: {
-          y: sectionLink
-        },
-        ease: "power1.out"
+    $("#backtotop").on("click", ".btn-back-to-top", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        'behavior': 'smooth',
+        'top': 0
       });
-      $(".btn-back-to-top").css('opacity', '0');
-      $(sectionLink).focus();
+      $(".btn-back-to-top").css("opacity", "0");
+      $("#page").focus();
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
 
@@ -204,38 +199,30 @@ var c9Page = function ($) {
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false
-    });
-    $('.wp-block-image a[href$=".jpg"]').magnificPopup({
-      disableOn: 700,
-      type: "image",
-      mainClass: "mfp-zoom-in",
-      tError: '<a href="%url%">The image</a> could not be loaded.',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false
-    });
-    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a').click(function (e) {
+    }); // default wordpress photo gallery blocks
+
+    $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a').click(function (e) {
       e.preventDefault();
       var items = [];
       var firstItem = $(this).attr("href");
-      var firstCaption = $(this).attr("title");
+      var firstCaption = $(this).children("img").attr("alt");
       items.push({
         src: firstItem,
         title: firstCaption
       }); //items after
 
-      $(this).parent().parent().nextAll().children().find("a").each(function () {
+      $(this).parent().nextAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
         });
       }); //items before
 
-      $(this).parent().parent().prevAll().children().find("a").each(function () {
+      $(this).parent().prevAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
@@ -246,6 +233,11 @@ var c9Page = function ($) {
         type: "image",
         gallery: {
           enabled: true
+        },
+        image: {
+          titleSrc: function (item) {
+            return item.el.children("img").attr("alt");
+          }
         },
         mainClass: "mfp-zoom-in",
         callbacks: {
@@ -275,6 +267,16 @@ var c9Page = function ($) {
           }
         }
       });
+    }); //single image magnific lightbox
+
+    $('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
+      disableOn: 700,
+      type: "image",
+      mainClass: "mfp-zoom-in",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
