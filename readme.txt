@@ -34,7 +34,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.3.9 =
-Adding back to top button, updates to fonts (px instead of em), theme.json update, lightbox image gallerly + caption updates, pullquote style updates
+Adding back to top button, updates to fonts (px instead of em), theme.json update, lightbox image gallery + caption updates, pullquote style updates and alignment tweaks.
 
 = 2.3.8 =
 Bug fix to paragraph block.
