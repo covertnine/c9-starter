@@ -174,24 +174,10 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 /* font changes for editor only (frontend color is on body)
 /****************************************************************************************/
 
-.editor-styles-wrapper p,
-.editor-styles-wrapper .container p,
-.editor-styles-wrapper .container-narrow p,
-.editor-styles-wrapper .container-fluid p,
-.editor-styles-wrapper .mce-content-body p,
-.editor-styles-wrapper .wp-block-paragraph,
-.editor-styles-wrapper .wp-block-quote p,
-.editor-styles-wrapper .wp-block-list,
-.editor-styles-wrapper .wp-block-file,
-.editor-styles-wrapper .wp-block-pullquote,
-.editor-styles-wrapper .wp-block-pullquote blockquote p,
 .block-editor-format-toolbar__link-container-value,
-.wp-block[data-type="core/pullquote"][data-align="left"] .block-editor-rich-text p,
-.wp-block[data-type="core/pullquote"][data-align="right"] .block-editor-rich-text p,
-.editor-styles-wrapper .block-editor-rich-text__editable [data-rich-text-placeholder],
+[data-rich-text-placeholder],
 .editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
     word-wrap: break-word;
-    font-family: $font-family-base;
     font-size: 16px;
 }
 
@@ -377,22 +363,31 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress core list items */
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
-    padding: 0px 0px 0px 50px;
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ul:not([class]),
+.editor-styles-wrapper ul[class=""],
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ol:not([class]),
+.editor-styles-wrapper ol[class=""] {
+    font-size: 16px;
 }
 
-.editor-styles-wrapper ul,
-.editor-styles-wrapper ol {
-    font-size: 16px;
+.editor-styles-wrapper ul li div,
+.editor-styles-wrapper ul:not([class]) li div,
+.editor-styles-wrapper ul[class=""] li div,
+.editor-styles-wrapper ol li div,
+.editor-styles-wrapper ol:not([class]) li div,
+.editor-styles-wrapper ol[class=""] li div {
+    display: inline-block;
+}
+
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
+    padding: 0px 0px 0px 50px;
 }
 
 .editor-styles-wrapper ul li,
 .editor-styles-wrapper ol li {
     position: relative;
-}
-
-.editor-styles-wrapper .is-root-container>ol li {
-    padding-left: 0px;
 }
 
 .editor-styles-wrapper .block-library-list ul {
@@ -408,15 +403,21 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block>ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"]>ol,
 .editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-links):not(.c9-share-list),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
 .editor-styles-wrapper ul {
     padding: 0px 0px 0px 10px;
     margin: 30px auto 35px auto;
     list-style-type: none;
 }
 
-/* WordPress Core search widget block */
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
+.editor-styles-wrapper ol>li>ol {
+    margin: 0px 0px 0px 15px;
+    -webkit-padding-start: 0px;
+    padding-inline-start: 0px;
+}
 
+/* WordPress Core search widget block */
 .editor-styles-wrapper .wp-block-search .wp-block-search__label {
     margin-bottom: 8px;
     font-size: 1.8em;
@@ -498,6 +499,11 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress core quote blocks on Posts and elsewhere */
+.editor-styles-wrapper .wp-block-quote,
+.editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) {
+    margin: 20px auto 30px auto;
+    margin-left: auto;
+}
 
 .wp-block-image,
 .editor-styles-wrapper .wp-block-quote {
@@ -809,42 +815,42 @@ html :where(.editor-styles-wrapper) kbd {
 .editor-styles-wrapper .is-root-container .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-    font-size: 4em;
+    font-size: 40px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h2,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
 .wp-block-heading h2 {
-    font-size: 3.6em;
+    font-size: 36px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h3,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3,
 .wp-block-heading h3 {
-    font-size: 3em;
+    font-size: 30px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h4,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4,
 .wp-block-heading h4 {
-    font-size: 2.8em;
+    font-size: 28px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h5,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5,
 .wp-block-heading h5 {
-    font-size: 2em;
+    font-size: 20px;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h6,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6,
 .wp-block-heading h6 {
-    font-size: 1.4em;
+    font-size: 14px;
 }
 
 .display-1,
@@ -858,32 +864,32 @@ html :where(.editor-styles-wrapper) kbd {
 
 .editor-styles-wrapper .h1.c9-txl,
 .editor-styles-wrapper h1.c9-txl {
-    font-size: 8em;
+    font-size: 80px;
 }
 
 .editor-styles-wrapper .h2.c9-txl,
 .editor-styles-wrapper h2.c9-txl {
-    font-size: 7.3em;
+    font-size: 73px;
 }
 
 .editor-styles-wrapper .h3.c9-txl,
 .editor-styles-wrapper h3.c9-txl {
-    font-size: 6.5em;
+    font-size: 65px;
 }
 
 .editor-styles-wrapper .h4.c9-txl,
 .editor-styles-wrapper h4.c9-txl {
-    font-size: 5.8em;
+    font-size: 58px;
 }
 
 .editor-styles-wrapper .h5.c9-txl,
 .editor-styles-wrapper h5.c9-txl {
-    font-size: 5em;
+    font-size: 50px;
 }
 
 .editor-styles-wrapper .h6.c9-txl,
 .editor-styles-wrapper h6.c9-txl {
-    font-size: 4.3em;
+    font-size: 43px;
 }
 
 p.wp-block-subhead,
