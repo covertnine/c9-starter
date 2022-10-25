@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.9
-Tested up to: 6.0.1
+Tested up to: 6.0.3
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.3.8
+Stable Tag: 2.3.9
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -32,6 +32,9 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.3.9 =
+Adding back to top button, updates to fonts (px instead of em), theme.json update, lightbox image gallerly + caption updates, pullquote style updates
 
 = 2.3.8 =
 Bug fix to paragraph block.

@@ -101,6 +101,8 @@ var c9Page = function ($) {
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
+      var heightDocument = $(document).height();
+      var position = $(window).height() + $(window).scrollTop();
 
       if (scroll >= 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
@@ -111,6 +113,23 @@ var c9Page = function ($) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
+
+      if (0.001 >= (heightDocument - position) / heightDocument) {
+        jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
+      } else {
+        jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
+      }
+    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
+
+    $("#backtotop").on("click", ".btn-back-to-top", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        behavior: "smooth",
+        top: 0
+      });
+      $(".btn-back-to-top").css("opacity", "0");
+      $("#page").focus();
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
 
@@ -180,38 +199,30 @@ var c9Page = function ($) {
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false
-    });
-    $('.wp-block-image a[href$=".jpg"]').magnificPopup({
-      disableOn: 700,
-      type: "image",
-      mainClass: "mfp-zoom-in",
-      tError: '<a href="%url%">The image</a> could not be loaded.',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false
-    });
-    $('.wp-block-gallery a[href$=".jpg"], .wp-block-gallery a[href$=".jpeg"], .wp-block-gallery a[href$=".png"], .wp-block-gallery a[href$=".gif, "], .cortex-popup, .gallery-item a').click(function (e) {
+    }); // default wordpress photo gallery blocks
+
+    $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a').click(function (e) {
       e.preventDefault();
       var items = [];
       var firstItem = $(this).attr("href");
-      var firstCaption = $(this).attr("title");
+      var firstCaption = $(this).children("img").attr("alt");
       items.push({
         src: firstItem,
         title: firstCaption
       }); //items after
 
-      $(this).parent().parent().nextAll().children().find("a").each(function () {
+      $(this).parent().nextAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
         });
       }); //items before
 
-      $(this).parent().parent().prevAll().children().find("a").each(function () {
+      $(this).parent().prevAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
-        var imageCaption = $(this).attr("title");
+        var imageCaption = $(this).children("img").attr("alt");
         items.push({
           src: imageLink,
           title: imageCaption
@@ -222,6 +233,11 @@ var c9Page = function ($) {
         type: "image",
         gallery: {
           enabled: true
+        },
+        image: {
+          titleSrc: function (item) {
+            return item.el.children("img").attr("alt");
+          }
         },
         mainClass: "mfp-zoom-in",
         callbacks: {
@@ -251,6 +267,16 @@ var c9Page = function ($) {
           }
         }
       });
+    }); //single image magnific lightbox
+
+    $('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
+      disableOn: 700,
+      type: "image",
+      mainClass: "mfp-zoom-in",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
     }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
@@ -269,8 +295,8 @@ var c9Page = function ($) {
 
       $("body").on("keydown", modal, trapTabKey); // Find all focusable children
 
-      var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
-      focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements); // Convert NodeList to Array
+      var focusableElements = "a[href], input:not([disabled]), button:not([disabled])";
+      focusableElements = document.querySelector("#fullscreensearch").querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
@@ -324,8 +350,8 @@ var c9Page = function ($) {
       $("body").on("keydown", c9workNavbar, trapTabKey);
       focusedElementBeforeNavbar = document.activeElement; // Find all focusable children
 
-      var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-      focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements); // Convert NodeList to Array
+      var focusableElements = "a[href]:not(.custom-logo-link):not(.btn-nav-search), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])";
+      focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements); // Convert NodeList to Array
 
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
@@ -354,7 +380,7 @@ var c9Page = function ($) {
     //close navbar
 
 
-    $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
+    $("#wrapper-navbar").on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
         $(this).addClass("collapsed");
