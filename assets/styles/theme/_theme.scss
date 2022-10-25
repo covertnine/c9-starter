@@ -340,24 +340,42 @@ kbd,
     color: $link-color;
 }
 
-.entry-content .has-small-font-size {
+.entry-content .has-small-font-size,
+.has-small-font-size,
+.has-small-font-size>blockquote p {
     font-size: 13px;
 }
 
 .entry-content .has-regular-font-size,
-.entry-content .has-normal-font-size {
+.entry-content .has-normal-font-size,
+.has-normal-font-size,
+.has-normal-font-size>blockquote p {
     font-size: 16px;
 }
 
-.entry-content .has-medium-font-size {
-    font-size: 20px;
+.entry-content .has-medium-font-size,
+.has-medium-font-size,
+.has-medium-font-size>blockquote p {
+    font-size: 25px;
 }
 
-.entry-content .has-large-font-size {
+.entry-content .has-large-font-size,
+.has-large-font-size,
+.has-large-font-size>blockquote p {
+    font-size: 30px;
+}
+
+.entry-content .has-huge-font-size,
+.entry-content .has-x-large-font-size,
+.has-x-large-font-size,
+.has-huge-font-size,
+.has-x-large-font-size>blockquote p {
     font-size: 36px;
 }
 
-.entry-content .has-huge-font-size {
+.entry-content .has-xx-large-font-size,
+.has-xx-large-font-size,
+.has-xx-large-font-size>blockquote p {
     font-size: 48px;
 }
 
