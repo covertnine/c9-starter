@@ -371,8 +371,8 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block>ol,
 .editor-styles-wrapper .wp-block[data-type="core/list"]>ol,
 .editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
-.editor-styles-wrapper ul {
+.editor-styles-wrapper .is-root-container>ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
+.editor-styles-wrapper .is-root-container>ul {
     padding: 0px 0px 0px 10px;
     margin: 30px auto 35px auto;
     list-style-type: none;
