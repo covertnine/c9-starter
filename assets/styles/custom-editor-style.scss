@@ -228,13 +228,7 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper .mce-content-body p:last-child,
-.editor-styles-wrapper blockquote p:last-child,
-.editor-styles-wrapper .wp-block-quote p:last-child,
-.wp-block-pullquote.is-style-solid-color blockquote p:last-child,
-.editor-styles-wrapper .mce-content-body p:only-of-type,
-.editor-styles-wrapper blockquote p:only-of-type,
-.editor-styles-wrapper .wp-block-quote p:only-of-type,
-.wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
+.editor-styles-wrapper .mce-content-body p:only-of-type {
     margin-bottom: 0px;
 }
 
