@@ -52,7 +52,7 @@
                 //custom field renaming for use
                 $u_start                 = get_field('date_and_time', false, false);
                 $u_date_setup               = new DateTime($u_start);
-                $u_date                     = $u_date_setup->format('F j, Y');
+                $u_date                     = $u_date_setup->format('M. j, Y');
                 $event_headline             = get_field('event_headline');
                 $location_name             = get_field('location_name');
                 $location_city_country     = get_field('location_city_country');
