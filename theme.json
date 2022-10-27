@@ -13,27 +13,37 @@
 			"lineHeight": true,
 			"fontSizes": [{
 					"slug": "small",
-					"size": "1.3em",
+					"size": "13px",
 					"name": "Small"
 				},
 				{
+					"slug": "normal",
+					"size": "16px",
+					"name": "Normal"
+				},
+				{
 					"slug": "medium",
-					"size": "1.6em",
+					"size": "25px",
 					"name": "Medium"
 				},
 				{
 					"slug": "large",
-					"size": "3.6em",
+					"size": "30px",
 					"name": "Large"
 				},
 				{
 					"slug": "x-large",
-					"size": "4.8em",
+					"size": "36px",
 					"name": "Extra Large"
+				},
+				{
+					"slug": "xx-large",
+					"size": "48px",
+					"name": "2X Large"
 				}
 			]
 		},
-		"styles": {
+	"styles": {
 			"typography": {
 				"lineHeight": "1.6",
 				"fontSize": "1.6em"
