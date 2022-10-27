@@ -102,6 +102,7 @@
                                     'em' => array(),
                                     'i' => array(),
                                     'strong' => array(),
+                                    'a' => array(),
                                 );
                             ?>
                                 <p><small><?php echo wp_kses($opener_name, $allowed_tags); ?></small></p>

@@ -109,6 +109,7 @@
 													'em' => array(),
 													'i' => array(),
 													'strong' => array(),
+													'a' => array(),
 												);
 
 											?>
