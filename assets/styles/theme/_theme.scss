@@ -212,6 +212,10 @@ a.skip-link {
     font-size: 16px;
 }
 
+.wp-block-pullquote blockquote p {
+    font-size: 16px;
+}
+
 .entry-content address,
 .post-content>.page-links,
 .entry-content>.page-links {
@@ -226,7 +230,6 @@ a.skip-link {
 .wp-block-pullquote blockquote>.block-editor-rich-text p,
 .wp-block-pullquote blockquote p:only-of-type,
 .wp-block-pullquote blockquote p:last-child {
-    font-size: 16px;
     line-height: 1.7;
     margin-bottom: 30px;
 }
@@ -480,7 +483,6 @@ a:focus {
         max-width: 960px;
         margin-left: auto;
         margin-right: auto;
-        font-size: 10px;
     }
 
     .entry-content .container .wp-block-gallery:only-child {
@@ -2315,12 +2317,6 @@ table tr th {
     max-width: none;
 }
 
-.wp-block-pullquote.is-style-solid-color blockquote cite,
-.wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation,
-.wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
-    text-align: left;
-}
-
 .wp-block-pullquote blockquote {
     margin: 0px;
     padding: 0px;
@@ -2335,7 +2331,6 @@ table tr th {
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation {
     display: block;
-    font-size: 13px;
     color: $gray-700;
     margin-top: 8px;
 }
@@ -2353,16 +2348,6 @@ table tr th {
 
     .wp-block-pullquote.is-style-solid-color blockquote p,
     .wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
-        font-size: 20px;
-        line-height: 2;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-
-    .wp-block-pullquote.is-style-solid-color blockquote p,
-    .wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
-        font-size: 26px;
         line-height: 2;
     }
 }
@@ -2387,7 +2372,7 @@ table tr th {
         text-transform: uppercase;
         position: absolute;
         top: -20px;
-        left: -30px;
+        left: -20px;
         font-size: 70px;
         font-weight: $font-weight-normal;
         font-family: $headings-font-family;
@@ -2403,7 +2388,7 @@ table tr th {
 
     .editor-styles-wrapper .wp-block-pullquote blockquote:before,
     .entry-content .wp-block-pullquote blockquote:before {
-        left: -30px;
+        left: -20px;
     }
 }
 

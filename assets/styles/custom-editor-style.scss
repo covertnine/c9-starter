@@ -136,20 +136,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 /* font changes for editor only (frontend color is on body)
 /****************************************************************************************/
 
-.editor-styles-wrapper p,
-.editor-styles-wrapper .container p,
-.editor-styles-wrapper .container-narrow p,
-.editor-styles-wrapper .container-fluid p,
-.editor-styles-wrapper .mce-content-body p,
-.editor-styles-wrapper .wp-block-paragraph,
-.editor-styles-wrapper .wp-block-quote p,
-.editor-styles-wrapper .wp-block-list,
-.editor-styles-wrapper .wp-block-file,
-.editor-styles-wrapper .wp-block-pullquote,
-.editor-styles-wrapper .wp-block-pullquote blockquote p,
 .block-editor-format-toolbar__link-container-value,
-.wp-block[data-type="core/pullquote"][data-align="left"] .block-editor-rich-text p,
-.wp-block[data-type="core/pullquote"][data-align="right"] .block-editor-rich-text p,
 [data-rich-text-placeholder],
 .editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
     word-wrap: break-word;
@@ -167,8 +154,10 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
     margin-right: auto;
 }
 
-.editor-styles-wrapper blockquote p,
-.editor-styles-wrapper .wp-block-quote p,
+html :where(.editor-styles-wrapper) p {
+    line-height: 1.6;
+}
+
 .editor-styles-wrapper p.mce-content-body,
 .editor-styles-wrapper p.mce-content-body {
     margin-bottom: 20px;
@@ -303,16 +292,24 @@ body .editor-styles-wrapper,
 
 /* WordPress core list items */
 .editor-styles-wrapper ul,
-.editor-styles-wrapper ol {
+.editor-styles-wrapper ul:not([class]),
+.editor-styles-wrapper ul[class=""],
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ol:not([class]),
+.editor-styles-wrapper ol[class=""] {
     font-size: 16px;
 }
 
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
-    padding: 0px 0px 0px 50px;
+.editor-styles-wrapper ul li div,
+.editor-styles-wrapper ul:not([class]) li div,
+.editor-styles-wrapper ul[class=""] li div,
+.editor-styles-wrapper ol li div,
+.editor-styles-wrapper ol:not([class]) li div,
+.editor-styles-wrapper ol[class=""] li div {
+    display: inline-block;
 }
 
-.editor-styles-wrapper ol,
-.editor-styles-wrapper .is-root-container>ol[data-type="core/list"] {
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
     padding: 0px 0px 0px 50px;
 }
 
@@ -332,13 +329,20 @@ body .editor-styles-wrapper,
 }
 
 .editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block[data-type="core/list"] ol,
-.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-links):not(.c9-share-list),
-.editor-styles-wrapper ul {
+.editor-styles-wrapper .wp-block[data-type="core/list"]>ol,
+.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
+.editor-styles-wrapper .is-root-container>ul {
     padding: 0px 0px 0px 10px;
     margin: 30px 0px 35px 45px;
     list-style-type: none;
+}
+
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
+.editor-styles-wrapper ol>li>ol {
+    margin: 0px 0px 0px 15px;
+    -webkit-padding-start: 0px;
+    padding-inline-start: 0px;
 }
 
 /* WordPress Core search widget block */
