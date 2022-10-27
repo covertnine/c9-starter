@@ -212,7 +212,11 @@ a.skip-link {
     font-size: 16px;
 }
 
-.wp-block-pullquote blockquote p {
+.wp-block-pullquote blockquote p,
+.wp-block-pullquote.has-text-align-left p,
+.wp-block-pullquote.has-text-align-right p,
+.wp-block[data-align="left"]>.wp-block-pullquote p,
+.wp-block[data-align="right"]>.wp-block-pullquote p {
     font-size: 16px;
 }
 
@@ -337,25 +341,55 @@ kbd,
     color: $link-color;
 }
 
-.entry-content .has-small-font-size {
-    font-size: 13px;
+.entry-content .has-small-font-size,
+.has-small-font-size,
+.has-small-font-size>blockquote p,
+.has-small-font-size>p,
+.has-small-font-size>div>p {
+    font-size: 13px !important;
 }
 
 .entry-content .has-regular-font-size,
-.entry-content .has-normal-font-size {
-    font-size: 16px;
+.entry-content .has-normal-font-size,
+.has-normal-font-size,
+.has-normal-font-size>blockquote p,
+.has-normal-font-size>p,
+.has-normal-font-size>div>p {
+    font-size: 16px !important;
 }
 
-.entry-content .has-medium-font-size {
-    font-size: 20px;
+.entry-content .has-medium-font-size,
+.has-medium-font-size,
+.has-medium-font-size>blockquote p,
+.has-medium-font-size>p,
+.has-medium-font-size>div>p {
+    font-size: 25px !important;
 }
 
-.entry-content .has-large-font-size {
-    font-size: 36px;
+.entry-content .has-large-font-size,
+.has-large-font-size,
+.has-large-font-size>blockquote p,
+.has-large-font-size>p,
+.has-large-font-size>div>p {
+    font-size: 30px !important;
 }
 
-.entry-content .has-huge-font-size {
-    font-size: 42px;
+.entry-content .has-huge-font-size,
+.entry-content .has-x-large-font-size,
+.has-x-large-font-size,
+.has-huge-font-size,
+.has-x-large-font-size>blockquote p,
+.has-x-large-font-size>p,
+.has-x-large-font-size>div>p {
+    font-size: 36px !important;
+}
+
+.entry-content .has-xx-large-font-size,
+.has-xx-large-font-size,
+.has-xx-large-font-size>blockquote p,
+.has-xx-large-font-size>p,
+.has-xx-large-font-size>div>p {
+    font-size: 48px !important;
 }
 
 .entry-content p.wp-block-subhead,
