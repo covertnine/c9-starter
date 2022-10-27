@@ -1476,7 +1476,7 @@ a:focus {
 
 .widget_cortex_subscribe_widget ul li .fab,
 .widget_cortex_subscribe_widget ul li .fa {
-    font: normal normal normal 1.7rem/1 FontAwesome;
+    font: normal normal normal 17px/1 FontAwesome;
     color: $light;
 }
 
@@ -3274,7 +3274,7 @@ p~.wp-block-button:not(.alignleft) {
     height: auto;
     padding: 8px;
     color: $dark;
-    font: normal 1.4rem/1.1 $font-family-base;
+    font: normal 14px/1.1 $font-family-base;
     letter-spacing: 0.057em;
     max-width: 85px;
 }
@@ -3794,7 +3794,7 @@ label {
 
 .entry-content .nav.nav-tabs {
     line-height: 1;
-    font-size:15px;
+    font-size: 15px;
     border-bottom: none;
     margin: 0px;
 }
