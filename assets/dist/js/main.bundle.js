@@ -190,16 +190,6 @@ var c9Page = function ($) {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // var $grid = $(".grid").masonry({
-    // 	// options
-    // 	itemSelector: ".grid-item",
-    // 	gutter: ".gutter-sizer",
-    // 	columnWidth: ".grid-sizer",
-    // 	percentPosition: true
-    // });
-    // $grid.imagesLoaded().progress(function() {
-    // 	$grid.masonry("layout");
-    // }); 
 
 
     $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
@@ -215,13 +205,13 @@ var c9Page = function ($) {
       iframe: {
         patterns: {
           youtube_short: {
-            index: "youtu.be/",
-            id: "youtu.be/",
-            src: "//www.youtube.com/embed/%id%?autoplay=1"
+            index: 'youtu.be/',
+            id: 'youtu.be/',
+            src: '//www.youtube.com/embed/%id%?autoplay=1'
           }
         }
       }
-    }); // default wordpress photo galleries on ticket pages
+    }); // default wordpress photo gallery bocks
 
     $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a').click(function (e) {
       e.preventDefault();
