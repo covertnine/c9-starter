@@ -62,7 +62,7 @@ if (!empty($playlist_link)) {
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
-    <div class="c9-grid c9-scroll rf-single-show-header p-5" style="min-height:40vh">
+    <div class="c9-grid c9-scroll rf-single-show-header p-2 pt-4" style="min-height:40vh">
         <div class="container c9-column-container pl-0 pr-0 c9-scroll c9-layout-columns-2 c9-is-vertically-aligned-center c9-2-col-equal" style="min-height:10vh">
             <div class="c9-overlay-container" style="background-color:rgba(255,255,255,1);mix-blend-mode:normal"></div>
             <div class="c9-layout-column-wrap c9-block-layout-column-gap-0 c9-is-responsive-column">
@@ -76,7 +76,7 @@ if (!empty($playlist_link)) {
                 </div>
                 <div class="c9-block-layout-column c9-column text-left c9-is-vertically-aligned-center">
                     <div class="c9-column-innner">
-                        <div class="wp-container-6228f76eab3b0 wp-block-group pl-5 pr-5">
+                        <div class="wp-container-6228f76eab3b0 wp-block-group pl-2 pr-1">
                             <div class="c9-block-post-grid-byline entry-content p-0">
                                 <div class="show-day show-date row no-gutter no-gutters">
                                     <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold">
@@ -120,7 +120,7 @@ if (!empty($playlist_link)) {
 
                                     ?>
                                         <div class="opener font-weight-light">
-                                            <h2 class="c9-sh"><?php echo wp_kses($opener_name, $allowed_tags); ?></h2>
+                                            <h2 class="c9-sh h5"><?php echo wp_kses($opener_name, $allowed_tags); ?></h2>
                                         </div>
                                     <?php
 
@@ -131,7 +131,7 @@ if (!empty($playlist_link)) {
                             <?php endif; ?>
 
 
-                            <div class="venue text-uppercase text-center mb-5 mt-5">
+                            <div class="venue text-uppercase text-center mb-4 mt-4">
                                 <?php if (!empty($cortex_location_map_link)) { ?>
                                     <a href="<?php echo $cortex_location_map_link; ?>" target="_blank">
                                     <?php } ?>
@@ -139,10 +139,10 @@ if (!empty($playlist_link)) {
                                         <span class="font-weight-bolder d-block headline-font venue-name"><?php echo $cortex_location_name; ?></span>
                                     <?php } ?>
                                     <?php if (!empty($cortex_location_address)) { ?>
-                                        <span class="secondary-color-text h4 font-weight-light"><?php echo $cortex_location_address; ?></span> •
+                                        <span class="secondary-color-text h6 font-weight-light"><?php echo $cortex_location_address; ?></span> •
                                     <?php } ?>
                                     <?php if (!empty($cortex_location_city_country)) { ?>
-                                        <span class="secondary-color-text h4 font-weight-light"><?php echo $cortex_location_city_country; ?></span>
+                                        <span class="secondary-color-text h6 font-weight-light"><?php echo $cortex_location_city_country; ?></span>
                                     <?php } ?>
                                     <?php if (!empty($cortex_location_map_link)) { ?>
                                     </a>
@@ -169,7 +169,7 @@ if (!empty($playlist_link)) {
                             <!--end buttons-->
                         </div>
                         <!--end block group-->
-                        <span class="rf-official-url has-color-info-color text-center d-block pl-t pr-5"><?php the_permalink(); ?></span>
+                        <span class="rf-official-url text-center d-block pl-t pr-5"><?php the_permalink(); ?></span>
                         <?php if (!empty($rf_playlist_embed)) { ?>
                             <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify d-block mr-auto ml-auto text-center pr-5 pl-5 pb-5">
                                 <div class="wp-block-embed__wrapper">
