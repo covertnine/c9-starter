@@ -5,9 +5,13 @@
  *
  * @package c9-starter
  */
-$c9_post_header = get_post_meta($post->ID, 'c9_post_header_size', true);
+$c9_post_header 		= get_post_meta($post->ID, 'c9_post_header_size', true);
 $header_size 	 		= c9_sanitize_post_header_size($c9_post_header);
 $c9_blog_sidebar 		= get_theme_mod('c9_blog_sidebar', 'hide');
+
+if (empty($header_size)) {
+	$header_size = 'small';
+}
 
 //set sidebar variables pending on theme options and sidebars being active
 if ($c9_blog_sidebar  != 'hide') {
@@ -56,7 +60,6 @@ if ($c9_blog_sidebar  != 'hide') {
 				<figure class="entry-header-bgimg" style="background-image: url(<?php echo esc_url($c9_img_src); ?>);"></figure>
 
 			<?php } ?>
-
 		</header>
 		<?php
 	}
@@ -74,11 +77,28 @@ if ($c9_blog_sidebar  != 'hide') {
 											echo $sidebar_class;
 										} ?>">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<img src="<?php echo esc_url($c9_img_src); ?>" srcset="<?php echo esc_attr($c9_img_srcset); ?>" class="img-fluid mx-auto  d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr($c9_img_sizes); ?>" />
+					<img src="<?php echo esc_url($c9_img_src); ?>" srcset="<?php echo esc_attr($c9_img_srcset); ?>" class="img-fluid mx-auto d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr($c9_img_sizes); ?>" />
+				</a>
+			</figure>
+
+		<?php } else {
+			// grab src, srcset, sizes from featured image for Retina support of placeholder img since no featured image is set
+			$c9_img_id     = '78896';
+			$c9_img_src    = wp_get_attachment_image_url($c9_img_id, 'large');
+			$c9_img_srcset = wp_get_attachment_image_srcset($c9_img_id, 'large');
+			$c9_img_sizes  = wp_get_attachment_image_sizes($c9_img_id, 'large');
+		
+		?>
+			<figure class="entry-image<?php if (!empty($sidebar_class)) {
+											echo $sidebar_class;
+										} ?>">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<img src="<?php echo esc_url($c9_img_src); ?>" srcset="<?php echo esc_attr($c9_img_srcset); ?>" class="img-fluid mx-auto d-block" alt="<?php the_title_attribute(); ?>" sizes="<?php echo esc_attr($c9_img_sizes); ?>" />
 				</a>
 			</figure>
 
 		<?php } ?>
+
 
 		<header class="entry-header<?php if (!empty($sidebar_class)) {
 										echo $sidebar_class;

@@ -35,8 +35,8 @@
 	if ($cortex_query->have_posts()) {
 
 	?>
-		<div class="c9-posts-grid riot-upcoming-shows p-5 c9-scroll">
-			<section class="c9-block-post-grid p-3 container align">
+		<div class="c9-posts-grid riot-upcoming-shows p-3 c9-scroll">
+			<section class="c9-block-post-grid p-0 container align">
 				<div class="c9-post-grid-items is-grid columns-4">
 					<?php
 					while ($cortex_query->have_posts()) {
