@@ -235,7 +235,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper blockquote p:only-of-type,
 .editor-styles-wrapper .wp-block-quote p:only-of-type,
 .wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
 }
 
 .editor-styles-wrapper .wp-block-pullquote blockquote:before {
@@ -379,7 +379,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block[data-type="core/list"]>ol,
 .editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
-.editor-styles-wrapper ul {
+.editor-styles-wrapper .is-root-container>ul {
     padding: 0px 0px 0px 10px;
     margin: 30px auto 35px auto;
     list-style-type: none;
@@ -480,11 +480,6 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) {
     margin: 20px auto 30px auto;
     margin-left: auto;
-}
-
-.editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) .wp-block-image,
-.editor-styles-wrapper .wp-block-quote {
-    font-size: 10px;
 }
 
 /* pullquote blocks */

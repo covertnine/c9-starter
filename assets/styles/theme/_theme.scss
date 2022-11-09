@@ -243,26 +243,23 @@ a.skip-link {
 
 .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote .wp-block-pullquote__citation,
-.c9 .wp-block-pullquote cite {
-    color: $gray-700;
-    font-size: 15px;
-}
-
-.entry-content p:last-child,
-.entry-content p:only-of-type,
-.wp-block-pullquote.is-style-solid-color blockquote p:last-child,
-.wp-block-pullquote.is-style-solid-color blockquote p:only-of-type {
-    margin-bottom: 0px;
-}
-
+.c9 .wp-block-pullquote cite,
+.wp-block-pullquote cite,
 .editor-styles-wrapper .wp-block-quote__citation,
 .entry-content .wp-block-quote cite,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation {
+    color: $gray-700;
+    font-size: 16px;
     line-height: 1;
     font-style: normal;
+}
+
+.entry-content>p:last-child,
+.entry-content>p:only-of-type {
+    margin-bottom: 0px;
 }
 
 pre,
@@ -347,26 +344,26 @@ kbd,
 .entry-content .has-small-font-size,
 .has-small-font-size,
 .has-small-font-size>blockquote p {
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 .entry-content .has-regular-font-size,
 .entry-content .has-normal-font-size,
 .has-normal-font-size,
 .has-normal-font-size>blockquote p {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .entry-content .has-medium-font-size,
 .has-medium-font-size,
 .has-medium-font-size>blockquote p {
-    font-size: 25px;
+    font-size: 25px !important;
 }
 
 .entry-content .has-large-font-size,
 .has-large-font-size,
 .has-large-font-size>blockquote p {
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
 .entry-content .has-huge-font-size,
@@ -374,13 +371,13 @@ kbd,
 .has-x-large-font-size,
 .has-huge-font-size,
 .has-x-large-font-size>blockquote p {
-    font-size: 36px;
+    font-size: 36px !important;
 }
 
 .entry-content .has-xx-large-font-size,
 .has-xx-large-font-size,
 .has-xx-large-font-size>blockquote p {
-    font-size: 48px;
+    font-size: 48px !important;
 }
 
 .entry-content p.wp-block-subhead,
@@ -685,7 +682,7 @@ a:focus {
 }
 
 .header-navbar .nav .search .nav-link .fa-search {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .header-navbar .nav .nav-item .dropdown-menu {
@@ -2714,6 +2711,7 @@ button.mfp-arrow {
     cursor: pointer;
     border: 0;
     -webkit-appearance: none;
+    appearance: none;
     display: block;
     outline: none;
     padding: 0;
@@ -3772,6 +3770,7 @@ label {
     border-radius: 0px;
     height: 50px;
     -webkit-appearance: none;
+    appearance: none;
     background: #fff;
     padding-left: 14px;
 }
@@ -3847,10 +3846,6 @@ label {
     margin: 0px;
 }
 
-.entry-content .nav.nav-tabs .nav-item {
-    margin: 0px 18px;
-}
-
 .entry-content .nav.nav-tabs .nav-item:before {
     display: none;
 }
@@ -3869,10 +3864,6 @@ label {
 
 .c9-horizontal-tabs .nav-tabs .nav-link.active {
     color: $gray-700;
-}
-
-.c9-horizontal-tabs .tab-content {
-    padding: 25px;
 }
 
 /******************************************** grid **************************************/
