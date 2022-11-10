@@ -6,6 +6,8 @@
  * @package c9-starter
  */
 $c9_blog_sidebar         = get_theme_mod('c9_blog_sidebar', 'hide');
+date_default_timezone_set('UTC');
+
 
 // fields renamed to use below
 $cortex_start                   = get_field('date_and_time'); //can be used for formatting
