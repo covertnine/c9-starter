@@ -2421,13 +2421,13 @@ ul[class=""],
 .c9-grid .c9-column-inner>ul[class=""],
 .is-root-container>ul.wp-block-list,
 .is-root-container>ol.wp-block-list,
-.c9-grid ul.wp-block-list,
-.c9-grid ol.wp-block-list,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list],
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list],
 html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list {
     font-size: 16px;
     line-height: 1.3;
     padding: 0px 0px 0px 30px;
-    margin: 30px 0px 30px 15px;
+    margin: 30px 0px;
 }
 
 ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
@@ -2436,7 +2436,8 @@ ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.w
 ul[class=""]:not(.wp-block-gallery):not(.wp-block-social-links) li,
 .is-root-container>ul.wp-block-list li,
 .is-root-container>.c9-grid ul.wp-block-list li,
-html :where(.editor-styles-wrapper) ul.wp-block-list li {
+html :where(.editor-styles-wrapper) ul.wp-block-list li,
+.editor-styles-wrapper .c9-grid ul.wp-block-list[data-block] li {
     margin: 10px 0px;
     padding-left: 8px;
     position: relative;
@@ -2444,8 +2445,12 @@ html :where(.editor-styles-wrapper) ul.wp-block-list li {
 }
 
 ul[class=""]:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
-.c9-grid .c9-column-inner>ul>li>ul {
-    margin: 0px 0px 0px 15px;
+.c9-grid .c9-column-inner>ul>li>ul,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list] ul,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list] ol,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list] ol,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list] ul {
+    margin: 0px;
 }
 
 /* ordered */
@@ -2455,17 +2460,20 @@ ol[class=""] li>ol>li:before {
 }
 
 ol[class=""],
-.c9-grid .c9-column-inner>ol[class=""] {
+.c9-grid .c9-column-inner>ol[class=""],
+ol[class~=wp-block-list] {
     list-style-type: none;
     padding-left: 30px;
     padding-right: 0px;
-    margin: 30px 0px 30px 15px;
+    margin: 30px 0px;
     line-height: 1.3;
     position: relative;
 }
 
 ol[class=""]>li,
-.c9-grid .c9-column-inner>ol[class=""]>li {
+.c9-grid .c9-column-inner>ol[class=""]>li,
+ol[class~=wp-block-list]>li,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list]>li {
     margin: 10px 0px;
     counter-increment: step-counter;
     padding-left: 14px;
@@ -2474,7 +2482,9 @@ ol[class=""]>li,
 ol[class=""]>li:before,
 .c9-grid .c9-column-inner>ol[class=""]>li:before,
 ol[class=""]>li>ol>li:before,
-.c9-grid .c9-column-inner>ol[class=""]>li>ol>li:before {
+.c9-grid .c9-column-inner>ol[class=""]>li>ol>li:before,
+ol[class~=wp-block-list]>li:before,
+ol[class~=wp-block-list] li>ol>li:before {
     content: counter(step-counter);
     width: 25px;
     display: inline-block;
@@ -2482,29 +2492,36 @@ ol[class=""]>li>ol>li:before,
     margin: 0px 0px 0px -30px;
 }
 
-ol[class=""]>li>ol {
-    margin: 0px 0px 0px 15px;
+ol[class=""]>li>ol,
+ol[class~=wp-block-list]>li>ol {
+    margin: 0px 0px 0px 25px;
     -webkit-padding-start: 0px;
     padding-inline-start: 0px;
 }
 
-ol[class=""] li>ol>li {
+ol[class=""] li>ol>li,
+ol[class~=wp-block-list] li>ol>li,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"]>li ol>li {
     counter-increment: inner-step-counter;
 }
 
-ol[class=""] li>ol>li>ol>li {
+ol[class=""] li>ol>li>ol>li,
+ol[class~=wp-block-list] li>ol>li>ol>li {
     counter-increment: inner-inner-step-counter;
 }
 
-ol[class=""] li>ol>li:before {
+ol[class=""] li>ol>li:before,
+ol[class~=wp-block-list] li>ol>li:before {
     content: counter(inner-step-counter);
 }
 
-ol[class=""] li>ol>li>ol>li:before {
+ol[class=""] li>ol>li>ol>li:before,
+ol[class~=wp-block-list] li>ol>li>ol>li:before {
     content: counter(inner-inner-step-counter);
 }
 
-ol[class=""] li>ul>li {
+ol[class=""] li>ul>li,
+ol[class~=wp-block-list] li>ul>li {
     padding-left: 0px;
 }
 
