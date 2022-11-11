@@ -29,7 +29,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.5.7 =
-Updates for WordPress 6.1 compatibility and list item updates.
+Updated to work with WordPress 6.1. Custom font size updates. Bug fix for horizontal tabs. List items formatting.
 
 = 2.5.6 =
 Changed em font sizes to px, updated font size presets to work with theme.json, mobile overflow scrollbar bug fixed, lightbox gallery updates for captions, and back to top button visibility issue bug fixed.
