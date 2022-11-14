@@ -5,8 +5,9 @@
     color: $primary;
 }
 
-body .editor-styles-wrapper {
+body .is-root-container {
     padding: 0px;
+    font-size: 1.6em;
 }
 
 body.post-type-post .is-root-container {
@@ -196,13 +197,6 @@ html :where(.editor-styles-wrapper) p {
     line-height: 1.6;
 }
 
-.editor-styles-wrapper p.mce-content-body,
-.editor-styles-wrapper p.mce-content-body {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
 .editor-styles-wrapper a:not(.wp-block-button__link) {
     text-decoration: underline;
 }
@@ -343,7 +337,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper ol li div,
 .editor-styles-wrapper ol:not([class]) li div,
 .editor-styles-wrapper ol[class=""] li div {
-    display: inline-block;
+    display: inline;
 }
 
 html :where(.editor-styles-wrapper) ul,

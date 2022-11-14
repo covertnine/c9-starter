@@ -1,7 +1,6 @@
 /****************************************************************************************/
 /* C9 Page Setup */
 /****************************************************************************************/
-
 html,
 body {
     height: 100%;
@@ -210,23 +209,26 @@ a.skip-link {
 /****************************************************************************************/
 /* Typography */
 /****************************************************************************************/
-.entry-content p,
-.page-content p,
-.c9 dl,
-.entry-footer {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-size: 16px;
+:root {
+    font-size: 62.5%;
 }
 
-.wp-block-pullquote blockquote p {
-    font-size: 16px;
+body {
+    font-size: 1.6rem;
+}
+
+.entry-content>p,
+.page-content>p,
+.c9 dl,
+.entry-footer,
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .entry-content address,
 .post-content>.page-links,
 .entry-content>.page-links {
-    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -252,7 +254,6 @@ a.skip-link {
 .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation {
     color: $gray-700;
-    font-size: 16px;
     line-height: 1;
     font-style: normal;
 }
@@ -284,50 +285,6 @@ kbd,
     hyphens: auto;
 }
 
-.c9-site-title,
-.entry-content h1,
-.entry-content .h1,
-.wp-block-heading h1,
-.entry-header h1 {
-    font-size: 40px;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-}
-
-.entry-content h2,
-.entry-content .h2,
-.wp-block-heading h2 {
-    font-size: 36px;
-}
-
-.entry-content h3,
-.entry-content .h3,
-.wp-block-heading h3 {
-    font-size: 30px;
-}
-
-.entry-content h4,
-.entry-content .h4,
-.wp-block-heading h4 {
-    font-size: 27px;
-}
-
-.entry-content h5,
-.entry-content .h5,
-.wp-block-heading h5 {
-    font-size: 20px;
-}
-
-.entry-content h6,
-.entry-content .h6,
-.wp-block-heading h6 {
-    font-size: 14px;
-}
-
-.entry-header h2 {
-    font-size: 30px;
-}
-
 .entry-meta {
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -341,45 +298,6 @@ kbd,
     color: $link-color;
 }
 
-.entry-content .has-small-font-size,
-.has-small-font-size,
-.has-small-font-size>blockquote p {
-    font-size: 13px !important;
-}
-
-.entry-content .has-regular-font-size,
-.entry-content .has-normal-font-size,
-.has-normal-font-size,
-.has-normal-font-size>blockquote p {
-    font-size: 16px !important;
-}
-
-.entry-content .has-medium-font-size,
-.has-medium-font-size,
-.has-medium-font-size>blockquote p {
-    font-size: 25px !important;
-}
-
-.entry-content .has-large-font-size,
-.has-large-font-size,
-.has-large-font-size>blockquote p {
-    font-size: 30px !important;
-}
-
-.entry-content .has-huge-font-size,
-.entry-content .has-x-large-font-size,
-.has-x-large-font-size,
-.has-huge-font-size,
-.has-x-large-font-size>blockquote p {
-    font-size: 36px !important;
-}
-
-.entry-content .has-xx-large-font-size,
-.has-xx-large-font-size,
-.has-xx-large-font-size>blockquote p {
-    font-size: 48px !important;
-}
-
 .entry-content p.wp-block-subhead,
 .subhead-h,
 .c9-sh,
@@ -388,28 +306,28 @@ kbd,
 }
 
 .display-1 {
-    font-size: 80px;
+    font-size: 8em;
 }
 
 .display-2 {
-    font-size: 73px;
+    font-size: 7.3em;
 }
 
 .display-3,
 .c9-txl {
-    font-size: 65px;
+    font-size: 6.5em;
 }
 
 .display-4 {
-    font-size: 58px;
+    font-size: 5.8em;
 }
 
 .display-5 {
-    font-size: 50px;
+    font-size: 5em;
 }
 
 .display-6 {
-    font-size: 43px;
+    font-size: 4.3em;
 }
 
 /* links in content */
@@ -443,14 +361,13 @@ a:focus {
 /* Responsive Typography */
 @media only screen and (min-width: 1px) and (max-width: 667px) {
 
+    :root {
+        font-size: 50%;
+    }
 
     .has-larger-font-size,
     .has-huge-font-size {
         line-height: 1 !important;
-    }
-
-    .single .entry-header h1 {
-        line-height: 1.2;
     }
 
 }
@@ -859,7 +776,6 @@ a:focus {
 .archive .pagination .page-item,
 .blog .pagination .page-item {
     display: inline-block;
-    font-size: 16px;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
@@ -995,10 +911,6 @@ a:focus {
     padding-left: 0px;
 }
 
-.sidebar {
-    font-size: 10px;
-}
-
 .footer-entirety .textwidget,
 .sidebar .widget .menu-item {
     font-size: 12px;
@@ -1017,7 +929,6 @@ a:focus {
 .widget h3 {
     font-weight: $font-weight-bold;
     letter-spacing: 0.01em;
-    font-size: 16px;
 }
 
 .widget select {
@@ -1062,11 +973,6 @@ a:focus {
 /* wp block latest comments */
 .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment:before {
     display: none;
-}
-
-.entry-content .wp-block-latest-comments p {
-    font-size: 16px;
-    line-height: 1.25;
 }
 
 /* search widget */
@@ -1143,12 +1049,6 @@ a:focus {
     max-width: 960px;
     margin: 0px auto;
     padding: 15px;
-    font-size: 10px;
-}
-
-.comment-content>ul,
-.comment-content>ol {
-    font-size: 16px;
 }
 
 .comment-list {
@@ -1240,7 +1140,6 @@ a:focus {
 
 .comment-awaiting-moderation {
     display: inline;
-    font-size: 10px;
 }
 
 .comment-author .fn,
@@ -1540,7 +1439,7 @@ a:focus {
 
 .entry-big-header .entry-title-box .entry-title {
     color: #fff;
-    font-size: 50px;
+    font-size: var(--wp--preset--font-size--x-large);
 }
 
 .entry-big-header .entry-title-box .entry-meta {
@@ -2424,7 +2323,6 @@ ul[class=""],
 .editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list],
 .editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list],
 html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list {
-    font-size: 16px;
     line-height: 1.3;
     padding: 0px 0px 0px 30px;
     margin: 30px 0px;
@@ -2531,6 +2429,15 @@ ol[class~=wp-block-list] li>ul>li {
     font-size: 12px;
     text-transform: uppercase;
     color: $gray-700;
+}
+
+/* block social icons */
+.wp-block-social-links {
+    grid-gap: 5px;
+}
+
+.wp-block-social-links .wp-social-link {
+    margin: 0px 2px;
 }
 
 .wp-block-social-links,
@@ -3949,6 +3856,11 @@ label {
 /****************************************************************************************/
 /* Utility Classes
 /****************************************************************************************/
+.is-layout-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .wp-block-image.img-fluid,
 .img-fluid img {
     max-width: 100%;
