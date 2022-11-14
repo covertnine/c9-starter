@@ -29,7 +29,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.6.0 =
-Updates to responsive typography for WordPress 6.1.
+Updates to responsive typography for WordPress 6.1 that now uses theme.json for font size settings. Ya'll have no idea how tedious and shitty it was to get that working.
 
 = 2.5.7 =
 Updated to work with WordPress 6.1. Custom font size updates. Bug fix for horizontal tabs. List items formatting.

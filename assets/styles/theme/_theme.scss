@@ -3180,7 +3180,9 @@ screen and (max-height: 300px) {
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.c9-button-shape-outline,
 .is-style-outline .wp-block-button__link,
-.wp-block-button__link.is-style-outline {
+.wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline>.wp-block-button__link,
+.wp-block-button .wp-block-button__link.is-style-outline {
     border: 3px solid;
     background-color: transparent;
     color: $gray-900;
@@ -3856,9 +3858,10 @@ label {
 /****************************************************************************************/
 /* Utility Classes
 /****************************************************************************************/
-.is-layout-flex {
+body .is-layout-flex {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .wp-block-image.img-fluid,
