@@ -2531,6 +2531,10 @@ ol[class~=wp-block-list] li>ul>li {
 }
 
 /* block gallery */
+.wp-block-gallery {
+    display: flex;
+}
+
 .wp-block-gallery figcaption {
     font-weight: $font-weight-bold;
     font-size: 12px;
@@ -3964,6 +3968,7 @@ label {
 /****************************************************************************************/
 .is-layout-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .wp-block-image.img-fluid,
