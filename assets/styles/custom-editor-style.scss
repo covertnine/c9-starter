@@ -323,7 +323,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper ol li div,
 .editor-styles-wrapper ol:not([class]) li div,
 .editor-styles-wrapper ol[class=""] li div {
-    display: inline-block;
+    display: inline;
 }
 
 html :where(.editor-styles-wrapper) ul,
