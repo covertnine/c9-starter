@@ -71,6 +71,7 @@ gulp.task("watch", function () {
 	});
 	gulp.watch(
 		[paths.styles + "/**/*.scss", paths.client + "/*.scss"],
+		{ usePolling: true },
 		gulp.series('styles')
 	);
 	// Inside the watch task.

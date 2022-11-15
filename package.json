@@ -39,7 +39,6 @@
 		"eslint-plugin-react": "^7.20.5",
 		"fitvids": "^2.1.1",
 		"font-awesome": "^4.7.0",
-		"gulp-a11y": "^0.1.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^3.9.2",
