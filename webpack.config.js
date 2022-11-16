@@ -38,3 +38,4 @@ module.exports = {
 		path: path.join(__dirname, cfg.paths.dist)
 	}
 };
+
