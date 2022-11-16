@@ -107,7 +107,7 @@ if (!empty($rf_mobile_background_image)) {
 
 			.rf-mobile-bg {
 				background: #ffffff url(<?php echo $rf_mobile_background_image; ?>) center no-repeat;
-				background-attachment: fixed;
+				background-size:cover;
 				position:fixed;
 				width: 100vw;
 				height: 100vh;
