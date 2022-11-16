@@ -64,7 +64,7 @@ if (!empty($playlist_link)) {
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
-    <div class="c9-grid c9-scroll rf-single-show-header p-5" style="min-height:40vh">
+    <div class="c9-grid c9-scroll rf-single-show-header p-2" style="min-height:40vh">
         <div class="container c9-column-container pl-0 pr-0 c9-scroll c9-layout-columns-2 c9-is-vertically-aligned-center c9-2-col-equal" style="min-height:10vh">
             <div class="c9-overlay-container" style="background-color:rgba(255,255,255,1);mix-blend-mode:normal"></div>
             <div class="c9-layout-column-wrap c9-block-layout-column-gap-0 c9-is-responsive-column">
@@ -78,7 +78,7 @@ if (!empty($playlist_link)) {
                 </div>
                 <div class="c9-block-layout-column c9-column text-left c9-is-vertically-aligned-center">
                     <div class="c9-column-innner">
-                        <div class="wp-container-6228f76eab3b0 wp-block-group pl-5 pr-5">
+                        <div class="wp-container-6228f76eab3b0 wp-block-group pl-4 pr-4">
                             <div class="c9-block-post-grid-byline entry-content p-0">
                                 <div class="show-day show-date row no-gutter no-gutters">
                                     <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold">
