@@ -50,7 +50,7 @@ if (!function_exists('c9_customize_register')) {
 				'type'     => 'checkbox',
 			)
 		);
-
+/*
 		$wp_customize->add_section(
 			'c9_footer',
 			array(
@@ -343,6 +343,7 @@ if (!function_exists('c9_customize_register')) {
 				'description' => __('Input your SoundCloud username or full url', 'c9-starter'),
 			)
 		);
+		*/
 		$wp_customize->add_section(
 			'c9_branding',
 			array(
