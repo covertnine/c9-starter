@@ -19,7 +19,7 @@ require get_template_directory() . '/inc/setup.php';
 /**
  * Register widget area.
  */
-require get_template_directory() . '/inc/widgets.php';
+//require get_template_directory() . '/inc/widgets.php';
 
 /**
  * Enqueue scripts and styles.
