@@ -85,7 +85,7 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'primary',
-									'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-lg',
+									'container_class' => 'collapse navbar-collapse justify-content-end navbar-expand-lg',
 									'container_id'    => 'navbarNavDropdown',
 									'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 									'fallback_cb'     => '',
