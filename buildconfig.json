@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://c9-starter.local",
+		"proxy": "https://rff.local",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [
