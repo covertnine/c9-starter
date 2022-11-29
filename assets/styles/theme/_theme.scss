@@ -2186,27 +2186,15 @@ table tr th {
     position: relative;
     margin: 20px auto 30px auto;
     padding: 0 30px;
-    margin-left: 15px;
-    border-left: 3px solid $primary;
+}
+
+.wp-block-quote cite {
+    padding-bottom: 4rem;
 }
 
 .wp-block-quote.has-text-align-right:not(.is-large):not(.is-style-large) {
     margin-left: 0px;
     margin-right: 15px;
-}
-
-.editor-styles-wrapper blockquote:before,
-.entry-content blockquote:before {
-    content: "\201C";
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    font-size: 70px;
-    font-weight: $font-weight-normal;
-    font-family: $headings-font-family;
-    color: $primary;
 }
 
 .wp-block-quote:not(.is-large):not(.is-style-large).has-text-align-right,
@@ -2292,7 +2280,6 @@ table tr th {
     .entry-content .wp-block-pullquote blockquote:before {
         content: "\201C";
         letter-spacing: 0.2em;
-        text-transform: uppercase;
         position: absolute;
         top: -20px;
         left: -20px;
@@ -3089,7 +3076,6 @@ screen and (max-height: 300px) {
     font-size: 14px;
     letter-spacing: 1px;
     text-align: center;
-    text-transform: uppercase;
     transition: opacity 0.4s ease-in-out;
     white-space: normal;
     color: $light;
@@ -3518,7 +3504,6 @@ label {
     display: inline-block;
     background-color: $dark;
     color: $light;
-    text-transform: uppercase;
     border: 0px;
     letter-spacing: 1px;
 }
@@ -3712,7 +3697,6 @@ label {
     line-height: 1;
     width: auto;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 0.2em;
     font-family: $font-family-base;
     font-weight: 400;
@@ -3787,7 +3771,6 @@ label {
 
 .c9-horizontal-tabs .nav-tabs .nav-link {
     color: $gray-600;
-    text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.09em;
 }
