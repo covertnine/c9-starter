@@ -77,7 +77,7 @@ if (!function_exists('c9_customizer_scripts')) {
 }
 
 // remove inline styles added by WP to Gutenberg
-//add_filter('block_editor_settings', 'c9_kill_goot_styles');
+add_filter('block_editor_settings', 'c9_kill_goot_styles');
 
 function c9_kill_goot_styles($editor_settings)
 {
