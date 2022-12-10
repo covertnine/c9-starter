@@ -176,7 +176,7 @@ function c9_sanitize_post_header_size($input)
 	$choices = array('large' => 0, 'small' => 1, 'hidden' => 2);
 	
 	// If the input is a valid key, return it; otherwise, return the default.
-	return (is_string($input) && array_key_exists($input, $choices) ? $input : 'small');
+	return (is_string($input) && array_key_exists($input, $choices) ? $input : 'hidden');
 }
 
 /**

@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://c9-starter.local",
+		"proxy": "https://verity-it.local",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [

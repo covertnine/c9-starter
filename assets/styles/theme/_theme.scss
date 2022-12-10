@@ -1000,22 +1000,21 @@ a:focus {
 /* WordPress Archive */
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
-    .archive h3.entry-title {
-        font-size: 18px;
+
+    .archive h3.entry-title,
+    .blog h3.entry-title {
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .archive h3.entry-title {
-        font-size: 14px;
+
+    .archive h3.entry-title,
+    .blog h3.entry-title {
+        font-size: 1.4rem;
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .archive h3.entry-title {
-        font-size: 14px;
-    }
-}
 
 /****************************************************************************************/
 /* WordPress Comment, Page, & Post Navigation */
@@ -3074,7 +3073,7 @@ screen and (max-height: 300px) {
     box-shadow: none;
     border: none;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     text-align: center;
     transition: opacity 0.4s ease-in-out;
     white-space: normal;
