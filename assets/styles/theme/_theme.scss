@@ -1691,6 +1691,11 @@ img {
         text-align: center;
         margin: 10px 0px 25px 0px;
     }
+
+    .wp-block-image.aligncenter>figcaption {
+        margin: 10px auto 25px auto;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 576px) {
