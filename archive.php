@@ -40,15 +40,15 @@ if ($c9_archive_sidebar != 'hide' ) {
 
                     <?php if ($sidebar_left ) : ?>
 
-                <div class="col-sm-12 col-md-2 sidebar">
+                <div class="col-12 col-sm-3 sidebar">
                         <?php dynamic_sidebar('left-sidebar'); ?>
                 </div>
 
-                        <?php echo '<div class="col-sm-12 col-md-10">'; ?>
+                        <?php echo '<div class="col-12 col-sm-9">'; ?>
 
                 <?php elseif ($sidebar_right ) : ?>
 
-                    <?php echo '<div class="col-12 col-sm-10 content-area" id="primary">'; ?>
+                    <?php echo '<div class="col-12 col-sm-9 content-area" id="primary">'; ?>
 
                 <?php else : ?>
 
@@ -80,7 +80,7 @@ if ($c9_archive_sidebar != 'hide' ) {
                     <?php
                     if ($sidebar_right ) :
                         ?>
-                <div class="col-12 col-sm-2 content-area sidebar" id="primary">
+                <div class="col-12 col-sm-3 content-area sidebar">
 
                         <?php dynamic_sidebar('right-sidebar'); ?>
 
