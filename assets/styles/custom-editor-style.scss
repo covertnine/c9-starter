@@ -404,10 +404,10 @@ html :where(.editor-styles-wrapper) ol {
 }
 
 /* WordPress image blocks */
-
-.wp-block-image .aligncenter>figcaption,
-.wp-block-image .alignleft>figcaption,
-.wp-block-image .alignright>figcaption,
+.editor-styles-wrapper .wp-block-image.aligncenter,
+.wp-block-image.aligncenter>figcaption,
+.wp-block-image.alignleft>figcaption,
+.wp-block-image.alignright>figcaption,
 .wp-block-image.is-resized>figcaption {
     display: block;
 }

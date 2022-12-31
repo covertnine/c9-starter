@@ -1701,16 +1701,12 @@ img {
         text-align: center;
         margin: 10px 0px 25px 0px;
     }
-}
 
-@media only screen and (min-width: 576px) {
-
-    .entry-content .container .wp-block-image img,
-    .wp-block-image .alignright,
-    .wp-block-image .alignleft {
-        max-width: 100%;
-        height: auto;
+    .wp-block-image.aligncenter>figcaption {
+        margin: 10px auto 25px auto;
+        width: 100%;
     }
+
 }
 
 /****************************************************************************************/
