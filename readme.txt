@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.9
-Tested up to: 6.0.3
+Tested up to: 6.1.1
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.3.7
+Stable Tag: 2.3.8
 
 C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering, local pickup and delivery through their WordPress website. Fully compatible with WordPress 5.5--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin, which 
 Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
+= 2.3.8 =
+Updates to list item styles, and some backend styles to better match frontend. Font sizes switched to rems. Updates for WP 6.1 markup compatibility.
+
 = 2.3.7 =
 Updates to lightbox image galleries, list items, font sizes changed to px, back to top button visibility on desktop bugfix, pullquote styling update, updated translations, updated theme.json with custom font sizes.
 
