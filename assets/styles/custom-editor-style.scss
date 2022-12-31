@@ -200,7 +200,6 @@ html :where(.editor-styles-wrapper) p {
 .editor-styles-wrapper p.mce-content-body {
     margin-bottom: 20px;
     line-height: 1.6;
-    font-size: 16px;
 }
 
 .editor-styles-wrapper a:not(.wp-block-button__link) {
@@ -355,59 +354,22 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress core list items */
-.editor-styles-wrapper ul,
-.editor-styles-wrapper ul:not([class]),
-.editor-styles-wrapper ul[class=""],
-.editor-styles-wrapper ol,
-.editor-styles-wrapper ol:not([class]),
-.editor-styles-wrapper ol[class=""] {
-    font-size: 16px;
-}
-
 .editor-styles-wrapper ul li div,
 .editor-styles-wrapper ul:not([class]) li div,
 .editor-styles-wrapper ul[class=""] li div,
 .editor-styles-wrapper ol li div,
 .editor-styles-wrapper ol:not([class]) li div,
 .editor-styles-wrapper ol[class=""] li div {
-    display: inline-block;
+    display: inline;
 }
 
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
-    padding: 0px 0px 0px 50px;
+html :where(.editor-styles-wrapper) ul,
+html :where(.editor-styles-wrapper) ol {
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    padding: 0px 0px 0px 30px;
 }
 
-.editor-styles-wrapper ul li,
-.editor-styles-wrapper ol li {
-    position: relative;
-}
-
-.editor-styles-wrapper .block-library-list ul {
-    margin: 30px 0 45px 45px;
-}
-
-.editor-styles-wrapper ol li,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
-.editor-styles-wrapper ol li {
-    margin: 10px 0px;
-}
-
-.editor-styles-wrapper .wp-block>ol,
-.editor-styles-wrapper .wp-block[data-type="core/list"]>ol,
-.editor-styles-wrapper .wp-block>ul:not(.blocks-gallery-grid):not(.wp-block-latest-posts):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.c9-share-list),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav.nav-tabs):not(.wp-block-social-link):not(.c9-share-list),
-.editor-styles-wrapper ul {
-    padding: 0px 0px 0px 10px;
-    margin: 30px auto 35px auto;
-    list-style-type: none;
-}
-
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
-.editor-styles-wrapper ol>li>ol {
-    margin: 0px 0px 0px 15px;
-    -webkit-padding-start: 0px;
-    padding-inline-start: 0px;
-}
 
 /* WordPress Core search widget block */
 .editor-styles-wrapper .wp-block-search .wp-block-search__label {
@@ -423,7 +385,7 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-search__button {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1.4rem;
     background: $primary;
     box-shadow: none;
     border-radius: 0px;
@@ -440,7 +402,7 @@ body .editor-styles-wrapper,
 }
 
 /* WordPress image blocks */
-
+.editor-styles-wrapper .wp-block-image.aligncenter,
 .wp-block-image .aligncenter>figcaption,
 .wp-block-image .alignleft>figcaption,
 .wp-block-image .alignright>figcaption,
@@ -495,11 +457,6 @@ body .editor-styles-wrapper,
 .editor-styles-wrapper .wp-block-quote:not(.is-large):not(.is-style-large) {
     margin: 20px auto 30px auto;
     margin-left: auto;
-}
-
-.wp-block-image,
-.editor-styles-wrapper .wp-block-quote {
-    font-size: 10px;
 }
 
 /* pullquote blocks */
@@ -807,42 +764,42 @@ html :where(.editor-styles-wrapper) kbd {
 .editor-styles-wrapper .is-root-container .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h2,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2,
 .wp-block-heading h2 {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h3,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3,
 .wp-block-heading h3 {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h4,
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4,
 .wp-block-heading h4 {
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h5,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5,
 .wp-block-heading h5 {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout h6,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6,
 .wp-block-heading h6 {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .display-1,
@@ -856,32 +813,32 @@ html :where(.editor-styles-wrapper) kbd {
 
 .editor-styles-wrapper .h1.c9-txl,
 .editor-styles-wrapper h1.c9-txl {
-    font-size: 80px;
+    font-size: 8rem;
 }
 
 .editor-styles-wrapper .h2.c9-txl,
 .editor-styles-wrapper h2.c9-txl {
-    font-size: 73px;
+    font-size: 7.3rem;
 }
 
 .editor-styles-wrapper .h3.c9-txl,
 .editor-styles-wrapper h3.c9-txl {
-    font-size: 65px;
+    font-size: 6.5rem;
 }
 
 .editor-styles-wrapper .h4.c9-txl,
 .editor-styles-wrapper h4.c9-txl {
-    font-size: 58px;
+    font-size: 5.8rem;
 }
 
 .editor-styles-wrapper .h5.c9-txl,
 .editor-styles-wrapper h5.c9-txl {
-    font-size: 50px;
+    font-size: 5rem;
 }
 
 .editor-styles-wrapper .h6.c9-txl,
 .editor-styles-wrapper h6.c9-txl {
-    font-size: 43px;
+    font-size: 4.3rem;
 }
 
 p.wp-block-subhead,

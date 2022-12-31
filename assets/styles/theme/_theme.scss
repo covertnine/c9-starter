@@ -94,7 +94,7 @@ a.skip-link {
     left: 15px;
     right: auto;
     top: 65px;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -206,23 +206,25 @@ a.skip-link {
 /****************************************************************************************/
 /* Typography */
 /****************************************************************************************/
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
 .entry-content p,
 .page-content p,
 .c9 dl,
 .entry-footer {
     margin-bottom: 20px;
     line-height: 1.6;
-    font-size: 16px;
-}
-
-.wp-block-pullquote blockquote p {
-    font-size: 16px;
 }
 
 .entry-content address,
 .post-content>.page-links,
 .entry-content>.page-links {
-    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -235,13 +237,14 @@ a.skip-link {
 .wp-block-pullquote blockquote p:last-child {
     line-height: 1.3;
     margin-bottom: 30px;
+    font-size: 1.6rem;
 }
 
 .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote cite {
     color: $gray-700;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .entry-content p:last-child,
@@ -251,14 +254,20 @@ a.skip-link {
     margin-bottom: 0px;
 }
 
+.editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
+.c9 .wp-block-pullquote .wp-block-pullquote__citation,
+.c9 .wp-block-pullquote cite,
+.wp-block-pullquote cite,
 .editor-styles-wrapper .wp-block-quote__citation,
 .entry-content .wp-block-quote cite,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color blockquote .block-editor-rich-text .wp-block-pullquote__citation {
+    color: $gray-700;
     line-height: 1;
     font-style: normal;
+    font-size: 1.6rem;
 }
 
 pre,
@@ -266,11 +275,11 @@ kbd,
 .wp-block-code,
 .wp-block-preformatted {
     border: 1px solid $gray-300;
-    font-size: 15px;
+    font-size: 1.5rem;
     padding: 13px;
     background: rgba($gray-500, 0.4);
     line-height: 1.3;
-    white-space: pre;
+    white-space: pre-wrap;
     margin-bottom: 10px;
     border-radius: 0px;
     overflow-wrap: break-word;
@@ -288,7 +297,7 @@ kbd,
 .entry-content .h1,
 .wp-block-heading h1,
 .entry-header h1 {
-    font-size: 40px;
+    font-size: 4rem;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
@@ -296,35 +305,35 @@ kbd,
 .entry-content h2,
 .entry-content .h2,
 .wp-block-heading h2 {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 .entry-content h3,
 .entry-content .h3,
 .wp-block-heading h3 {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .entry-content h4,
 .entry-content .h4,
 .wp-block-heading h4 {
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 .entry-content h5,
 .entry-content .h5,
 .wp-block-heading h5 {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .entry-content h6,
 .entry-content .h6,
 .wp-block-heading h6 {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .entry-header h2 {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .entry-meta {
@@ -333,7 +342,7 @@ kbd,
     line-height: 1.2;
     margin-bottom: 1em;
     color: $gray-800;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .entry-meta a {
@@ -343,26 +352,26 @@ kbd,
 .entry-content .has-small-font-size,
 .has-small-font-size,
 .has-small-font-size>blockquote p {
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 .entry-content .has-regular-font-size,
 .entry-content .has-normal-font-size,
 .has-normal-font-size,
 .has-normal-font-size>blockquote p {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .entry-content .has-medium-font-size,
 .has-medium-font-size,
 .has-medium-font-size>blockquote p {
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .entry-content .has-large-font-size,
 .has-large-font-size,
 .has-large-font-size>blockquote p {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .entry-content .has-huge-font-size,
@@ -370,13 +379,13 @@ kbd,
 .has-x-large-font-size,
 .has-huge-font-size,
 .has-x-large-font-size>blockquote p {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 .entry-content .has-xx-large-font-size,
 .has-xx-large-font-size,
 .has-xx-large-font-size>blockquote p {
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 
 .entry-content p.wp-block-subhead,
@@ -387,28 +396,28 @@ kbd,
 }
 
 .display-1 {
-    font-size: 80px;
+    font-size: 8rem;
 }
 
 .display-2 {
-    font-size: 73px;
+    font-size: 7.3rem;
 }
 
 .display-3,
 .c9-txl {
-    font-size: 65px;
+    font-size: 6.5rem;
 }
 
 .display-4 {
-    font-size: 58px;
+    font-size: 5.8rem;
 }
 
 .display-5 {
-    font-size: 50px;
+    font-size: 5rem;
 }
 
 .display-6 {
-    font-size: 43px;
+    font-size: 4.3rem;
 }
 
 /* links in content */
@@ -435,7 +444,7 @@ a:focus {
 
 @media only screen and (min-width: 600px) {
     .wp-block-code .block-editor-plain-text {
-        font-size: 15px;
+        font-size: 1.5rem;
     }
 }
 
@@ -675,13 +684,13 @@ a:focus {
 .header-navbar .nav .nav-item .dropdown-item {
     font-family: $headings-font-family;
     font-weight: $font-weight-bold;
-    font-size: 14px;
+    font-size: 1.4rem;
     text-decoration: none;
     line-height: 1.3;
 }
 
 .header-navbar .nav .search .nav-link .fa-search {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .header-navbar .nav .nav-item .dropdown-menu {
@@ -694,7 +703,6 @@ a:focus {
 
 .header-navbar .nav .nav-item .dropdown-header {
     font-family: $headings-font-family;
-    font-size: 16px;
     color: $body-color;
     padding: 15px;
 }
@@ -728,7 +736,7 @@ a:focus {
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
     margin: 0px;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1;
     cursor: pointer;
 }
@@ -858,7 +866,6 @@ a:focus {
 .archive .pagination .page-item,
 .blog .pagination .page-item {
     display: inline-block;
-    font-size: 16px;
 }
 
 .page-search-results nav .pagination .page-item .page-link,
@@ -995,12 +1002,12 @@ a:focus {
 }
 
 .sidebar {
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .footer-entirety .textwidget,
 .sidebar .widget .menu-item {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .widget {
@@ -1016,7 +1023,7 @@ a:focus {
 .widget h3 {
     font-weight: $font-weight-bold;
     letter-spacing: 0.01em;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .widget select {
@@ -1049,7 +1056,7 @@ a:focus {
 }
 
 .wp-calendar-nav {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .wp-block-calendar,
@@ -1064,14 +1071,13 @@ a:focus {
 }
 
 .entry-content .wp-block-latest-comments p {
-    font-size: 16px;
     line-height: 1.25;
 }
 
 /* search widget */
 .sidebar .widget_search .btn {
     padding: 12px;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 /****************************************************************************************/
@@ -1083,7 +1089,7 @@ a:focus {
 }
 
 .search-results .container article .entry-header h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.1;
 }
 
@@ -1092,25 +1098,25 @@ a:focus {
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
     .archive h3.entry-title {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (min-width: 667px) {
     .archive h3.entry-title {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (min-width: 768px) {
     .archive h3.entry-title {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 }
 
 @media only screen and (min-width: 992px) {
     .archive h3.entry-title {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 }
 
@@ -1122,7 +1128,7 @@ a:focus {
 .site-main .post-navigation {
     margin: 3rem 0;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.2;
 }
 
@@ -1148,12 +1154,7 @@ a:focus {
     max-width: 960px;
     margin: 0px auto;
     padding: 15px;
-    font-size: 10px;
-}
-
-.comment-content>ul,
-.comment-content>ol {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .comment-list {
@@ -1245,7 +1246,7 @@ a:focus {
 
 .comment-awaiting-moderation {
     display: inline;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .comment-author .fn,
@@ -1284,7 +1285,7 @@ a:focus {
 }
 
 .entry-footer .comments-link a {
-    font-size: 11px;
+    font-size: 1.1rem;
     font-weight: 400;
     padding: 6px 10px;
     letter-spacing: 0.1em;
@@ -1323,13 +1324,13 @@ a:focus {
 
     .comment-metadata a,
     .comment-reply-link {
-        font-size: 11px;
+        font-size: 1.1rem;
         line-height: 1;
         letter-spacing: 0.1em;
     }
 
     .comment-author {
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: $font-weight-bold;
         letter-spacing: 0.05em;
     }
@@ -1337,7 +1338,7 @@ a:focus {
     .comment-content p {
         margin-left: 95px;
         margin-top: 0px;
-        font-size: 14px;
+        font-size: 1.4rem;
         line-height: 1.4;
     }
 
@@ -1549,7 +1550,7 @@ a:focus {
 }
 
 .entry-big-header .entry-title-box .entry-meta {
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1;
     text-decoration: none;
 }
@@ -1628,7 +1629,7 @@ a:focus {
 }
 
 #wrapper-footer .site-footer .footer-copyright-wrapper .copyright {
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 #wrapper-footer .site-footer p {
@@ -1647,7 +1648,7 @@ a:focus {
 }
 
 #wrapper-footer .footer-social a {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: $gray-800;
 }
 
@@ -1656,7 +1657,7 @@ a:focus {
 }
 
 #wrapper-footer .site-footer .social-wrapper {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 #wrapper-footer p:only-of-type {
@@ -1701,10 +1702,6 @@ a:focus {
     border-radius: 0px;
 }
 
-.c9 .woocommerce p,
-.c9 .woocommerce .shop_table {
-    font-size: 16px;
-}
 
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
@@ -1763,8 +1760,8 @@ img {
 
 .wp-caption-text {
     text-align: center;
-    font-size: 11px;
-    line-height: 1.3em;
+    font-size: 1.1rem;
+    line-height: 1.3;
     margin-top: 0;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
@@ -1784,28 +1781,16 @@ img {
     }
 
     .wp-block-image figcaption {
-        font-size: 10px;
+        font-size: 1rem;
         color: $secondary;
         text-align: center;
         margin: 10px 0px 25px 0px;
     }
-}
 
-@media only screen and (min-width: 576px) {
-
-    .entry-content .container .wp-block-image img,
-    .wp-block-image .alignright,
-    .wp-block-image .alignleft {
-        max-width: 100%;
-        height: auto;
+    .wp-block-image.aligncenter>figcaption {
+        margin: 10px auto 25px auto;
+        width: 100%;
     }
-}
-
-/****************************************************************************************/
-/* WordPress File Download block */
-/****************************************************************************************/
-.wp-block-file {
-    font-size: 16px;
 }
 
 /****************************************************************************************/
@@ -1813,7 +1798,7 @@ img {
 /****************************************************************************************/
 .wp-block-video figcaption {
     font-weight: $font-weight-bold;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: $gray-700;
     text-align: left;
@@ -1887,12 +1872,12 @@ hr {
 /****************************************************************************************/
 .c9 .wp-block-search .wp-block-search__label {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .c9 .wp-block-search .wp-block-search__label {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .wp-block-search.aligncenter .wp-block-search__inside-wrapper,
@@ -2178,7 +2163,7 @@ table tr th {
 
 .wp-block-table figcaption {
     font-weight: $font-weight-bold;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: $gray-700;
     text-align: left;
@@ -2214,7 +2199,7 @@ table tr th {
     .wp-block-table tr th,
     .wp-block-table tr td {
         padding: 4px;
-        font-size: 12px;
+        font-size: 1.2rem;
     }
 
     .page-template-default .entry-content>.wp-block-table.alignfull {
@@ -2247,7 +2232,6 @@ table tr th {
         word-wrap: break-word;
         font-family: $font-family-base;
         padding: 15px;
-        font-size: 16px;
     }
 }
 
@@ -2301,7 +2285,7 @@ table tr th {
     position: absolute;
     top: -30px;
     left: -40px;
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: $font-weight-normal;
     font-family: $headings-font-family;
     color: $primary;
@@ -2382,7 +2366,6 @@ table tr th {
     }
 
     .entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
-        font-size: 16px;
         line-height: 1.9;
     }
 
@@ -2394,7 +2377,7 @@ table tr th {
         position: absolute;
         top: -20px;
         left: -30px;
-        font-size: 70px;
+        font-size: 7rem;
         font-weight: $font-weight-normal;
         font-family: $headings-font-family;
         color: $primary;
@@ -2416,104 +2399,135 @@ table tr th {
 /****************************************************************************************/
 /* WordPress Gutenberg ol ul li + Core Gallery Blocks (Ordered and unordered lists) */
 /****************************************************************************************/
-.entry-content ul:not([class]),
-.entry-content ul[class=""],
-.entry-content ol {
-    font-size: 16px;
-}
-
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
+ul[class=""],
+.c9-grid .c9-column-inner>ul[class=""],
+.is-root-container>ul.wp-block-list,
+.is-root-container>ol.wp-block-list,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list],
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list],
+html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list {
+    line-height: 1.3;
     padding: 0px 0px 0px 30px;
-    margin: 30px 0px 30px 15px;
+    margin: 30px 0px;
 }
 
-.entry-content>ol {
+ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
+ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links)>li,
+.c9-grid .c9-column-inner>ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links)>li,
+ul[class=""]:not(.wp-block-gallery):not(.wp-block-social-links) li,
+.is-root-container>ul.wp-block-list li,
+.is-root-container>.c9-grid ul.wp-block-list li,
+html :where(.editor-styles-wrapper) ul.wp-block-list li,
+.editor-styles-wrapper .c9-grid ul.wp-block-list[data-block] li {
+    margin: 10px 0px;
+    padding-left: 8px;
+    position: relative;
+    list-style-type: none;
+}
+
+ul[class=""]:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
+.c9-grid .c9-column-inner>ul>li>ul,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list] ul,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list] ol,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list] ol,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list] ul {
+    margin: 0px;
+}
+
+
+/* Latest Posts Block */
+.wp-block-latest-posts li a {
+    text-decoration: underline;
+}
+
+/* ordered */
+ol[class=""] li>ul>li:before,
+ol[class=""] li>ol>li:before {
+    display: none;
+}
+
+ol[class=""],
+.c9-grid .c9-column-inner>ol[class=""],
+ol[class~=wp-block-list] {
     list-style-type: none;
     padding-left: 30px;
     padding-right: 0px;
-    margin: 30px 0px 30px 15px;
+    margin: 30px 0px;
+    line-height: 1.3;
+    position: relative;
 }
 
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links)>li>ul,
-.entry-content ol>li>ol,
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)>li>ul,
-.editor-styles-wrapper ol>li>ol {
-    margin: 0px 0px 0px 15px;
-    -webkit-padding-start: 0px;
-    padding-inline-start: 0px;
-}
-
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
-    list-style-type: disc;
-}
-
-.entry-content ol,
-.editor-styles-wrapper ol,
-.editor-styles-wrapper ol li {
-    list-style-type: none;
-}
-
-.entry-content ol li,
-.editor-styles-wrapper ol li {
+ol[class=""]>li,
+.c9-grid .c9-column-inner>ol[class=""]>li,
+ol[class~=wp-block-list]>li,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~=wp-block-list]>li {
+    margin: 10px 0px;
     counter-increment: step-counter;
     padding-left: 14px;
 }
 
-.entry-content ol li:before,
-.editor-styles-wrapper ol li:before {
+ol[class=""]>li:before,
+.c9-grid .c9-column-inner>ol[class=""]>li:before,
+ol[class=""]>li>ol>li:before,
+.c9-grid .c9-column-inner>ol[class=""]>li>ol>li:before,
+ol[class~=wp-block-list]>li:before,
+ol[class~=wp-block-list] li>ol>li:before {
     content: counter(step-counter);
-    width: 30px;
+    width: 25px;
     display: inline-block;
     font-weight: $font-weight-bold;
     margin: 0px 0px 0px -30px;
 }
 
-.entry-content ol li>ol>li,
-.editor-styles-wrapper ol li>ol>li {
+ol[class=""]>li>ol,
+ol[class~=wp-block-list]>li>ol {
+    margin: 0px 0px 0px 25px;
+    -webkit-padding-start: 0px;
+    padding-inline-start: 0px;
+}
+
+ol[class=""] li>ol>li,
+ol[class~=wp-block-list] li>ol>li,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"]>li ol>li {
     counter-increment: inner-step-counter;
 }
 
-.entry-content ol li>ol>li>ol>li,
-.editor-styles-wrapper ol li>ol>li>ol>li {
+ol[class=""] li>ol>li>ol>li,
+ol[class~=wp-block-list] li>ol>li>ol>li {
     counter-increment: inner-inner-step-counter;
 }
 
-.entry-content ol li>ol>li:before,
-.editor-styles-wrapper ol li>ol>li:before {
+ol[class=""] li>ol>li:before,
+ol[class~=wp-block-list] li>ol>li:before {
     content: counter(inner-step-counter);
 }
 
-.entry-content ol li>ol>li>ol>li:before,
-.editor-styles-wrapper ol li>ol>li>ol>li:before {
+ol[class=""] li>ol>li>ol>li:before,
+ol[class~=wp-block-list] li>ol>li>ol>li:before {
     content: counter(inner-inner-step-counter);
 }
 
-.entry-content ol li>ul>li,
-.editor-styles-wrapper ol li>ul>li {
+ol[class=""] li>ul>li,
+ol[class~=wp-block-list] li>ul>li {
     padding-left: 0px;
 }
 
-.editor-styles-wrapper ol li>ul>li:before,
-.entry-content ol li>ul>li:before {
-    display: none;
-}
-
-.entry-content ul:not(.wp-block-gallery) li,
-.entry-content ol:not(.wp-block-gallery) li {
-    position: relative;
-}
-
-.entry-content ul:not(.wp-block-gallery):not(.wp-block-social-links) li {
-    padding-left: 5px;
-    margin-left: -5px;
-}
-
+/* block gallery */
 .wp-block-gallery figcaption {
     font-weight: $font-weight-bold;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: $gray-700;
+}
+
+
+/* block social icons */
+.wp-block-social-links {
+    grid-gap: 5px;
+}
+
+.wp-block-social-links .wp-social-link {
+    margin: 0px 2px;
 }
 
 .wp-block-social-links,
@@ -2527,6 +2541,7 @@ table tr th {
 .wp-block-social-links li:last-child {
     margin-right: 0px;
 }
+
 
 /****************************************************************************************/
 /* WordPress Core Embed Blocks */
@@ -2738,7 +2753,7 @@ button::-moz-focus-inner {
     filter: alpha(opacity=65);
     padding: 0 0 18px 10px;
     color: $light;
-    font-size: 30px;
+    font-size: 3rem;
     background-color: transparent;
 }
 
@@ -2769,7 +2784,7 @@ button::-moz-focus-inner {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 18px;
     white-space: nowrap;
     color: $light;
@@ -2872,7 +2887,7 @@ img.mfp-img {
 
 .mfp-figure small {
     display: block;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 14px;
 }
 
@@ -2896,7 +2911,7 @@ img.mfp-img {
     padding-right: 36px;
     color: $light;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .mfp-image-holder .mfp-content {
@@ -3159,7 +3174,7 @@ screen and (max-height: 300px) {
     background-color: $primary;
     box-shadow: none;
     border: none;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
@@ -3177,7 +3192,7 @@ screen and (max-height: 300px) {
     .c9 .woocommerce button.button,
     .c9 .woocommerce input.button {
         padding: 12px 15px;
-        font-size: 12px;
+        font-size: 1.2rem;
     }
 }
 
@@ -3292,7 +3307,7 @@ p~.wp-block-button:not(.alignleft) {
 #mc_embed_signup input[type="submit"] {
     background-color: $secondary;
     padding: 1rem 1.4rem 0.8rem 1.7em;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1;
     border-radius: 0;
     display: inline-block;
@@ -3350,7 +3365,6 @@ p~.wp-block-button:not(.alignleft) {
 .c9 input[type="number"],
 .c9 textarea,
 .c9 select {
-    font-size: 16px;
     min-height: 47px;
     border-radius: 0px;
     border: 1px solid $gray-500;
@@ -3380,7 +3394,7 @@ p~.wp-block-button:not(.alignleft) {
 
 input,
 label {
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 /**************************** WordPress Comment Form **********************************/
@@ -3390,7 +3404,7 @@ label {
 }
 
 .comment-respond h3 {
-    font-size: 26px;
+    font-size: 2.6rem;
 }
 
 .comment-notes,
@@ -3443,7 +3457,7 @@ label {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: 1;
     text-align: left;
     margin: -51px auto 0px auto;
@@ -3472,7 +3486,7 @@ label {
     right: 35px;
     opacity: 1;
     padding: 12px 15px;
-    font-size: 27px;
+    font-size: 2.7rem;
     line-height: 1;
     z-index: 1055;
     color: $light;
@@ -3497,7 +3511,7 @@ label {
     display: inline;
     vertical-align: top;
     padding: 2px 8px;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -3510,12 +3524,12 @@ label {
 
 .footer-search-wrapper .field[type="text"] {
     min-height: auto;
-    font-size: 14px
+    font-size: 1.4rem;
 }
 
 .wp-block-search {
     margin-bottom: 25px;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .wp-block-search:only-child {
@@ -3539,7 +3553,7 @@ label {
     width: 100%;
     line-height: 1;
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 1rem;
     height: 32px;
     border-radius: 0px;
 }
@@ -3556,7 +3570,7 @@ label {
 .footer-search-wrapper input[type="submit"] {
     padding: 6px 8px;
     line-height: 1;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     width: auto;
     min-width: 60px;
@@ -3800,7 +3814,7 @@ label {
 
 .entry-content .nav.nav-tabs {
     line-height: 1;
-    font-size: 15px;
+    font-size: 1.5rem;
     border-bottom: none;
     margin: 0px;
 }

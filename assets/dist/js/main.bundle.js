@@ -91,37 +91,34 @@
 jQuery(document).ready(function () {
   c9Page.init();
 });
-
 var c9Page = function ($) {
   var c9PageInit = {};
-
   c9PageInit.init = function () {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////// Sidebars on some templates //////////////////////////////////////////////////
+
     jQuery(window).scroll(function () {
       //scroll position variable
       var scroll = jQuery(window).scrollTop();
       var heightDocument = $(document).height();
       var position = $(window).height() + $(window).scrollTop();
-
       if (scroll >= 133) {
         jQuery("#left-sidebar").addClass("fixed-sidebar");
         jQuery("#right-sidebar").addClass("fixed-sidebar");
       }
-
       if (scroll <= 132) {
         jQuery("#left-sidebar").removeClass("fixed-sidebar");
         jQuery("#right-sidebar").removeClass("fixed-sidebar");
       }
-
       if (0.001 >= (heightDocument - position) / heightDocument) {
         jQuery(".btn-back-to-top").css("opacity", "1").parent().css("z-index", "1050");
       } else {
         jQuery(".btn-back-to-top").css("opacity", "0").parent().css("z-index", "-1");
       }
-    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
+    });
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Back to top ////////////////////////////////////////////////////////////////////////////
     $("#backtotop").on("click", ".btn-back-to-top", function (e) {
       e.preventDefault();
       window.scrollTo({
@@ -130,9 +127,10 @@ var c9Page = function ($) {
       });
       $(".btn-back-to-top").css("opacity", "0");
       $("#page").focus();
-    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
+    });
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
     if ($(window).width() <= 667) {
       //use small nav for mobile
       $(".navbar").addClass("navbar-small");
@@ -140,15 +138,12 @@ var c9Page = function ($) {
       $(window).scroll(function () {
         //scroll position variable
         var scroll = $(window).scrollTop();
-
         if (scroll >= 288) {
           $(".navbar").addClass("opacity0");
         }
-
         if (scroll <= 287) {
           $(".navbar").removeClass("opacity0");
         }
-
         if (scroll >= 338) {
           $(".navbar").addClass("fixed-top opacity100");
           $(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
@@ -161,37 +156,34 @@ var c9Page = function ($) {
       });
     } else {
       //end small screens so desktop next
+
       //var logoHeight = $(".c9-custom-logo").height();
+
       $(window).scroll(function () {
         //scroll position variable
         var scroll = $(window).scrollTop();
-
         if (scroll >= 168) {
           $(".navbar").addClass("opacity0");
         }
-
         if (scroll <= 167) {
           $(".navbar").removeClass("opacity0");
         }
-
         if (scroll >= 218) {
           $(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
-
-          $(".header-navbar").addClass("jumpfix"); //$(".header-navbar.jumpfix").css("height", "108px");
+          $(".header-navbar").addClass("jumpfix");
+          //$(".header-navbar.jumpfix").css("height", "108px");
         }
 
         if (scroll <= 217) {
           $(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
-
           $(".header-navbar").removeClass("jumpfix");
         }
       });
     } //end regular
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     ///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
     $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
       disableOn: 700,
       type: "iframe",
@@ -199,8 +191,9 @@ var c9Page = function ($) {
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false
-    }); // default wordpress photo gallery blocks
+    });
 
+    // default wordpress photo gallery blocks
     $('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a').click(function (e) {
       e.preventDefault();
       var items = [];
@@ -209,8 +202,9 @@ var c9Page = function ($) {
       items.push({
         src: firstItem,
         title: firstCaption
-      }); //items after
+      });
 
+      //items after
       $(this).parent().nextAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
         var imageCaption = $(this).children("img").attr("alt");
@@ -218,8 +212,9 @@ var c9Page = function ($) {
           src: imageLink,
           title: imageCaption
         });
-      }); //items before
+      });
 
+      //items before
       $(this).parent().prevAll().find("a").each(function () {
         var imageLink = $(this).attr("href");
         var imageCaption = $(this).children("img").attr("alt");
@@ -250,7 +245,6 @@ var c9Page = function ($) {
                 $.magnificPopup.proto.next.call(self);
               }, 120);
             };
-
             $.magnificPopup.instance.prev = function () {
               var self = this;
               self.wrap.removeClass("mfp-image-loaded");
@@ -267,8 +261,9 @@ var c9Page = function ($) {
           }
         }
       });
-    }); //single image magnific lightbox
+    });
 
+    //single image magnific lightbox
     $('.wp-block-image a[href$=".jpg"],.wp-block-image a[href$=".jpeg"].wp-block-image a[href$=".png"].wp-block-image a[href$=".gif"]').magnificPopup({
       disableOn: 700,
       type: "image",
@@ -277,33 +272,38 @@ var c9Page = function ($) {
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false
-    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    });
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //////////////////////////////////////       full screen search        ///////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Will hold previously focused element
-
     var focusedElementBeforeModal;
-    var modal = $("#fullscreensearch"); //open modal for search
+    var modal = $("#fullscreensearch");
 
+    //open modal for search
     $(".btn-nav-search").on("click", fullScreenSearch);
-
     function fullScreenSearch(e) {
-      e.preventDefault(); //refocus on this when closed
+      e.preventDefault();
 
-      focusedElementBeforeModal = document.activeElement; //listen for tab keying to trab tabs in modal
+      //refocus on this when closed
+      focusedElementBeforeModal = document.activeElement;
 
-      $("body").on("keydown", modal, trapTabKey); // Find all focusable children
+      //listen for tab keying to trab tabs in modal
+      $("body").on("keydown", modal, trapTabKey);
 
+      // Find all focusable children
       var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
-      focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements); // Convert NodeList to Array
+      focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements);
 
+      // Convert NodeList to Array
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
       var lastTabStop = focusableElements[focusableElements.length - 1];
       $("#fullscreensearch").addClass("open");
       focusableElements[0].focus();
-
       function trapTabKey(e) {
         // Check for TAB key press
         if (e.keyCode === 9) {
@@ -312,8 +312,9 @@ var c9Page = function ($) {
             if (document.activeElement === firstTabStop) {
               e.preventDefault();
               lastTabStop.focus();
-            } // TAB
+            }
 
+            // TAB
           } else {
             if (document.activeElement === lastTabStop) {
               e.preventDefault();
@@ -323,9 +324,8 @@ var c9Page = function ($) {
         }
       }
     } //end fullScreenSearch
+
     //close modal
-
-
     $("#fullscreensearch .search-close, #fullscreensearch .search-close .fa-close").on("click", function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == "search-close" || e.keyCode == 27) {
@@ -334,40 +334,45 @@ var c9Page = function ($) {
         $(this).parent().parent().removeClass("open");
         focusedElementBeforeModal.focus();
       }
-    }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    });
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //////////////////////////////////////       Navbar Accessibility        /////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Will hold previously focused element
 
+    // Will hold previously focused element
     var focusedElementBeforeNavbar;
     var c9workNavbar = $("#wrapper-navbar");
     $(".navbar-toggler").on("click", c9workNavbarUse);
-
     function c9workNavbarUse(e) {
-      e.preventDefault(); //listen for tab keying to trab tabs in modal
+      e.preventDefault();
 
+      //listen for tab keying to trab tabs in modal
       $("body").on("keydown", c9workNavbar, trapTabKey);
-      focusedElementBeforeNavbar = $(".btn-nav-search"); // Find all focusable children
+      focusedElementBeforeNavbar = $(".btn-nav-search");
 
+      // Find all focusable children
       var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
-      focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements); // Convert NodeList to Array
+      focusableElements = document.querySelector("#wrapper-navbar").querySelectorAll(focusableElements);
 
+      // Convert NodeList to Array
       focusableElements = Array.prototype.slice.call(focusableElements);
       var firstTabStop = focusableElements[0];
       var lastTabStop = focusableElements[focusableElements.length - 1];
       focusableElements[0].focus();
-
       function trapTabKey(e) {
         // Check for TAB key press
+
         if (e.keyCode === 9) {
           // SHIFT + TAB
           if (e.shiftKey) {
             if (document.activeElement === firstTabStop) {
               e.preventDefault();
               lastTabStop.focus();
-            } // TAB
+            }
 
+            // TAB
           } else {
             if (document.activeElement === lastTabStop) {
               e.preventDefault();
@@ -377,9 +382,8 @@ var c9Page = function ($) {
         }
       }
     } //end c9workNavbarUse
+
     //close navbar
-
-
     $('#wrapper-navbar').on("click", '.navbar-toggler[aria-expanded="true"]', function (e) {
       // if escape is hit or if search close is clicked
       if (e.target == this || e.target.className == ".navbar-toggler" || e.keyCode == 27) {
@@ -387,7 +391,6 @@ var c9Page = function ($) {
       }
     });
   };
-
   return c9PageInit;
 }(jQuery);
 
