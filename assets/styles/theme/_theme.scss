@@ -3286,50 +3286,6 @@ p~.wp-block-button:not(.alignleft) {
 }
 
 /****************************************************************************************/
-/* MailChimp Sign Up Forms
-/****************************************************************************************/
-/* all mailchimp forms*/
-#mc_embed_signup input[type="email"] {
-    background: #ffffff;
-    border: 1px solid rgba(43, 43, 43, 0.77);
-    height: auto;
-    padding: 8px;
-    color: $dark;
-    font: normal 1.4rem/1.1 $font-family-base;
-    letter-spacing: 0.057em;
-    max-width: 85px;
-}
-
-#mc_embed_signup label {
-    margin-right: 10px;
-}
-
-#mc_embed_signup input[type="submit"] {
-    background-color: $secondary;
-    padding: 1rem 1.4rem 0.8rem 1.7em;
-    font-size: 1.4rem;
-    line-height: 1;
-    border-radius: 0;
-    display: inline-block;
-    width: auto;
-    margin: 0px 0px 0px -5px;
-    transition: opacity 0.3s;
-}
-
-#mc_embed_signup input[type="submit"]:hover {
-    opacity: 0.8;
-}
-
-#mc_embed_signup #mce-responses {
-    display: block;
-}
-
-/* footer mailchimp form*/
-.site-footer #mc_embed_signup input[type="email"] {
-    display: inline-block;
-}
-
-/****************************************************************************************/
 /* WordPress Forms, Search Forms, + Gravity Forms
 /****************************************************************************************/
 /* search results page */
