@@ -369,7 +369,7 @@ html :where(.editor-styles-wrapper) ol {
 /* WordPress Core search widget block */
 .editor-styles-wrapper .wp-block-search .wp-block-search__label {
     margin-bottom: 8px;
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 .editor-styles-wrapper .wp-block-search .wp-block-search__input {
@@ -751,50 +751,15 @@ html :where(.editor-styles-wrapper) kbd {
     margin-bottom: 5px;
 }
 
+.block-editor-format-toolbar__link-container-value,
+[data-rich-text-placeholder],
+.editor-styles-wrapper .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+    word-wrap: break-word;
+    font-size: 1.6rem;
+}
+
 .editor-styles-wrapper .editor-post-title [data-rich-text-placeholder] {
     font-size: inherit;
-}
-
-.editor-styles-wrapper .is-root-container h1,
-.editor-styles-wrapper .is-root-container .h1,
-.wp-block-heading h1,
-.entry-header h1 {
-    font-size: 4rem;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout h2,
-.editor-styles-wrapper h2,
-.editor-styles-wrapper .h2,
-.wp-block-heading h2 {
-    font-size: 3.6rem;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout h3,
-.editor-styles-wrapper h3,
-.editor-styles-wrapper .h3,
-.wp-block-heading h3 {
-    font-size: 3rem;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout h4,
-.editor-styles-wrapper h4,
-.editor-styles-wrapper .h4,
-.wp-block-heading h4 {
-    font-size: 2.8rem;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout h5,
-.editor-styles-wrapper h5,
-.editor-styles-wrapper .h5,
-.wp-block-heading h5 {
-    font-size: 2rem;
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout h6,
-.editor-styles-wrapper h6,
-.editor-styles-wrapper .h6,
-.wp-block-heading h6 {
-    font-size: 1.4rem;
 }
 
 .display-1,
@@ -804,36 +769,6 @@ html :where(.editor-styles-wrapper) kbd {
 .display-5,
 .display-6 {
     line-height: 1.1;
-}
-
-.editor-styles-wrapper .h1.c9-txl,
-.editor-styles-wrapper h1.c9-txl {
-    font-size: 8rem;
-}
-
-.editor-styles-wrapper .h2.c9-txl,
-.editor-styles-wrapper h2.c9-txl {
-    font-size: 7.3rem;
-}
-
-.editor-styles-wrapper .h3.c9-txl,
-.editor-styles-wrapper h3.c9-txl {
-    font-size: 6.5rem;
-}
-
-.editor-styles-wrapper .h4.c9-txl,
-.editor-styles-wrapper h4.c9-txl {
-    font-size: 5.8rem;
-}
-
-.editor-styles-wrapper .h5.c9-txl,
-.editor-styles-wrapper h5.c9-txl {
-    font-size: 5rem;
-}
-
-.editor-styles-wrapper .h6.c9-txl,
-.editor-styles-wrapper h6.c9-txl {
-    font-size: 4.3rem;
 }
 
 p.wp-block-subhead,
