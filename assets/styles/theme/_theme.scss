@@ -293,44 +293,12 @@ kbd,
 }
 
 .c9-site-title,
-.entry-content h1,
-.entry-content .h1,
-.wp-block-heading h1,
 .entry-header h1 {
     font-size: 4rem;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
 
-.entry-content h2,
-.entry-content .h2,
-.wp-block-heading h2 {
-    font-size: 3.6rem;
-}
-
-.entry-content h3,
-.entry-content .h3,
-.wp-block-heading h3 {
-    font-size: 3rem;
-}
-
-.entry-content h4,
-.entry-content .h4,
-.wp-block-heading h4 {
-    font-size: 2.8rem;
-}
-
-.entry-content h5,
-.entry-content .h5,
-.wp-block-heading h5 {
-    font-size: 2rem;
-}
-
-.entry-content h6,
-.entry-content .h6,
-.wp-block-heading h6 {
-    font-size: 1.4rem;
-}
 
 .entry-header h2 {
     font-size: 3rem;
@@ -347,45 +315,6 @@ kbd,
 
 .entry-meta a {
     color: $link-color;
-}
-
-.entry-content .has-small-font-size,
-.has-small-font-size,
-.has-small-font-size>blockquote p {
-    font-size: 1.3rem;
-}
-
-.entry-content .has-regular-font-size,
-.entry-content .has-normal-font-size,
-.has-normal-font-size,
-.has-normal-font-size>blockquote p {
-    font-size: 1.6rem;
-}
-
-.entry-content .has-medium-font-size,
-.has-medium-font-size,
-.has-medium-font-size>blockquote p {
-    font-size: 2.5rem;
-}
-
-.entry-content .has-large-font-size,
-.has-large-font-size,
-.has-large-font-size>blockquote p {
-    font-size: 3rem;
-}
-
-.entry-content .has-huge-font-size,
-.entry-content .has-x-large-font-size,
-.has-x-large-font-size,
-.has-huge-font-size,
-.has-x-large-font-size>blockquote p {
-    font-size: 3.6rem;
-}
-
-.entry-content .has-xx-large-font-size,
-.has-xx-large-font-size,
-.has-xx-large-font-size>blockquote p {
-    font-size: 4.8rem;
 }
 
 .entry-content p.wp-block-subhead,
@@ -1045,7 +974,7 @@ a:focus {
 /* calendar widget */
 .widget-area .calendar_wrap table,
 .footer-widget .calendar_wrap table {
-    font-size: 8px;
+    0.8rem;
 }
 
 .widget-area .calendar_wrap table tr td,
@@ -1546,7 +1475,7 @@ a:focus {
 
 .entry-big-header .entry-title-box .entry-title {
     color: #fff;
-    font-size: 50px;
+    font-size: 5rem;
 }
 
 .entry-big-header .entry-title-box .entry-meta {
@@ -3526,7 +3455,6 @@ label {
 .footer-search-wrapper input[type="submit"] {
     padding: 6px 8px;
     line-height: 1;
-    font-size: 1.6rem;
     font-weight: 500;
     width: auto;
     min-width: 60px;
