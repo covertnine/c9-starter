@@ -90,7 +90,7 @@ if ($c9_archive_sidebar != 'hide') {
 								<?php
 								if ($sidebar_right) :
 								?>
-									<div class="col-12 col-sm-2 content-area sidebar" id="primary">
+									<div class="col-12 col-sm-2 content-area sidebar">
 
 										<?php dynamic_sidebar('right-sidebar'); ?>
 
