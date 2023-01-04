@@ -29,7 +29,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.5.0 =
-List item updates, WordPress 6.1 markup updates. Better responsive typography.
+List item updates, WordPress 6.1 markup updates. Better responsive typography. Dev packages updated.
 
 = 2.4.9 =
 Paragraph, font size, and list block updates.

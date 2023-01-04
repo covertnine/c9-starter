@@ -2,6 +2,7 @@ jQuery(document).ready(function () {
 	c9Page.init();
 });
 
+// eslint-disable-next-line vars-on-top
 var c9Page = (function ($) {
 	var c9PageInit = {};
 
@@ -15,11 +16,11 @@ var c9Page = (function ($) {
 			var heightDocument = $(document).height();
 			var position = $(window).height() + $(window).scrollTop();
 
-			if (scroll >= 133) {
+			if (133 <= scroll) {
 				jQuery("#left-sidebar").addClass("fixed-sidebar");
 				jQuery("#right-sidebar").addClass("fixed-sidebar");
 			}
-			if (scroll <= 132) {
+			if (132 >= scroll) {
 				jQuery("#left-sidebar").removeClass("fixed-sidebar");
 				jQuery("#right-sidebar").removeClass("fixed-sidebar");
 			}
@@ -44,7 +45,7 @@ var c9Page = (function ($) {
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////// Mobile and desktop navigation classes //////////////////////////////////////////////////
-		if ($(window).width() <= 667) {
+		if (667 >= $(window).width()) {
 			//use small nav for mobile
 			$(".navbar").addClass("navbar-small");
 			$("body").addClass("navbar-small");
@@ -53,19 +54,19 @@ var c9Page = (function ($) {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
-				if (scroll >= 288) {
+				if (288 <= scroll) {
 					$(".navbar").addClass("opacity0");
 				}
-				if (scroll <= 287) {
+				if (287 >= scroll) {
 					$(".navbar").removeClass("opacity0");
 				}
 
-				if (scroll >= 338) {
+				if (338 <= scroll) {
 					$(".navbar").addClass("fixed-top opacity100");
 					$(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
 
 				}
-				if (scroll <= 337) {
+				if (337 >= scroll) {
 					$(".navbar").removeClass("fixed-top opacity100");
 					$(".header-navbar").removeClass("jumpfix"); //remove extra classes and put navs back at top
 				}
@@ -79,20 +80,20 @@ var c9Page = (function ($) {
 				//scroll position variable
 				var scroll = $(window).scrollTop();
 
-				if (scroll >= 168) {
+				if (168 <= scroll) {
 					$(".navbar").addClass("opacity0");
 				}
-				if (scroll <= 167) {
+				if (167 >= scroll) {
 					$(".navbar").removeClass("opacity0");
 				}
 
-				if (scroll >= 218) {
+				if (218 <= scroll) {
 					$(".navbar").addClass("navbar-small fixed-top opacity100"); //shrink nav and fix it to top
 					$(".header-navbar").addClass("jumpfix");
 					$(".c9-blog-posts").addClass("fixed-top");
 					//$(".header-navbar.jumpfix").css("height", "108px");
 				}
-				if (scroll <= 217) {
+				if (217 >= scroll) {
 					$(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
 					$(".header-navbar").removeClass("jumpfix");
 					$(".c9-blog-posts").removeClass("fixed-top");
@@ -115,6 +116,7 @@ var c9Page = (function ($) {
 			type: "iframe",
 			iframe: {
 				patterns: {
+					// eslint-disable-next-line camelcase
 					youtube_short: {
 						index: 'youtu.be/',
 						id: 'youtu.be/',
@@ -129,8 +131,11 @@ var c9Page = (function ($) {
 		).click(function(e) {
 			e.preventDefault();
 
+			// eslint-disable-next-line vars-on-top
 			var items = [];
+			// eslint-disable-next-line vars-on-top
 			var firstItem = $(this).attr("href");
+			// eslint-disable-next-line vars-on-top
 			var firstCaption = $(this)
 				.children("img")
 				.attr("alt");
@@ -228,7 +233,9 @@ var c9Page = (function ($) {
 		//////////////////////////////////////       full screen search        ///////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// Will hold previously focused element
+		// eslint-disable-next-line vars-on-top
 		var focusedElementBeforeModal;
+		// eslint-disable-next-line vars-on-top
 		var modal = $("#fullscreensearch");
 
 		//open modal for search
@@ -244,13 +251,16 @@ var c9Page = (function ($) {
 			$("body").on("keydown", modal, trapTabKey);
 
 			// Find all focusable children
+			// eslint-disable-next-line vars-on-top
 			var focusableElements = 'a[href], input:not([disabled]), button:not([disabled])';
 			focusableElements = document.querySelector('#fullscreensearch').querySelectorAll(focusableElements);
 
 			// Convert NodeList to Array
 			focusableElements = Array.prototype.slice.call(focusableElements);
 
+			// eslint-disable-next-line vars-on-top
 			var firstTabStop = focusableElements[0];
+			// eslint-disable-next-line vars-on-top
 			var lastTabStop = focusableElements[focusableElements.length - 1];
 
 			$("#fullscreensearch").addClass("open");
@@ -258,7 +268,7 @@ var c9Page = (function ($) {
 
 			function trapTabKey(e) {
 				// Check for TAB key press
-				if (e.keyCode === 9) {
+				if (9 === e.keyCode) {
 					// SHIFT + TAB
 					if (e.shiftKey) {
 						if (document.activeElement === firstTabStop) {
@@ -282,8 +292,8 @@ var c9Page = (function ($) {
 			// if escape is hit or if search close is clicked
 			if (
 				e.target == this ||
-				e.target.className == "search-close" ||
-				e.keyCode == 27
+				"search-close" == e.target.className ||
+				27 == e.keyCode
 			) {
 				$(this).removeClass("open");
 				$(this)
@@ -303,7 +313,9 @@ var c9Page = (function ($) {
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		// Will hold previously focused element
+		// eslint-disable-next-line vars-on-top
 		var focusedElementBeforeNavbar;
+		// eslint-disable-next-line vars-on-top
 		var c9starterNavbar = $("#wrapper-navbar");
 
 		$(".navbar-toggler").on("click", c9starterNavbarUse);
@@ -317,20 +329,23 @@ var c9Page = (function ($) {
 			focusedElementBeforeNavbar = $(".btn-nav-search");
 
 			// Find all focusable children
+			// eslint-disable-next-line vars-on-top
 			var focusableElements = 'a[href]:not(.custom-logo-link):not(.btn-nav-search):not(.nav-shop-link), input:not([disabled]):not(#searchsubmit):not(#s), button:not([disabled])';
 			focusableElements = document.querySelector('#wrapper-navbar').querySelectorAll(focusableElements);
 
 			// Convert NodeList to Array
 			focusableElements = Array.prototype.slice.call(focusableElements);
 
+			// eslint-disable-next-line vars-on-top
 			var firstTabStop = focusableElements[0];
+			// eslint-disable-next-line vars-on-top
 			var lastTabStop = focusableElements[focusableElements.length - 1];
 
 			focusableElements[0].focus();
 
 			function trapTabKey(e) {
 				// Check for TAB key press
-				if (e.keyCode === 9) {
+				if (9 === e.keyCode) {
 					// SHIFT + TAB
 					if (e.shiftKey) {
 
@@ -356,8 +371,8 @@ var c9Page = (function ($) {
 			// if escape is hit or if search close is clicked
 			if (
 				e.target == this ||
-				e.target.className == ".navbar-toggler" ||
-				e.keyCode == 27
+				".navbar-toggler" == e.target.className ||
+				27 == e.keyCode
 			) {
 				focusedElementBeforeNavbar.focus();
 			}
