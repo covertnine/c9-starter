@@ -6,7 +6,7 @@ Tested up to: 6.1.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.6.1
+Stable Tag: 9.6.1
 
 C9 Starter is an agency-designed starter theme for the next generation of content creators with mobile-friendly designs, a single level dropdown menu, Gutenberg block patterns, and custom pagination from [COVERT NINE](https://www.covertnine.com).
 
