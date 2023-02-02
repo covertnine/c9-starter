@@ -13,7 +13,6 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
