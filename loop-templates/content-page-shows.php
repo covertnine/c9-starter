@@ -66,7 +66,7 @@
 					?>
 						<article id="post-<?php echo $show_id; ?>" class="c9-post-grid-item rf-show-single-event post-<?php echo $show_id; ?> has-post-thumbnail has-color-light-background-color entry-content" itemscope>
 							<div class="c9-block-post-grid-image">
-								<a href="<?php the_permalink(); ?>" rel="bookmark" aria-hidden="true" tabindex="-1" title="<?php the_title_attribute(); ?>">
+								<a href="<?php the_permalink(); ?>" rel="bookmark" aria-hidden="true" tabindex="-1" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>">
 									<img src="<?php echo esc_attr($cortex_featured_img_src); ?>" srcset="<?php echo esc_attr($cortex_featured_img_srcset); ?>" sizes="(max-width: 414px) 100vw, (max-width: 991px) 540px, (min-width: 992px) 245px" alt="<?php echo $cortex_featured_img_alt; ?>" loading="lazy">
 								</a>
 							</div>
@@ -89,7 +89,7 @@
 											</div>
 										</div>
 									</div>
-									<h2 class="c9-block-post-grid-title headliner-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+									<h2 class="c9-block-post-grid-title headliner-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>"><?php the_title(); ?></a></h2>
 								</header>
 								<div class="c9-block-post-grid-excerpt">
 									<?php //add openers
@@ -128,14 +128,16 @@
 											<a href="<?php echo $cortex_location_map_link; ?>" target="_blank">
 											<?php } ?>
 											<?php if (!empty($cortex_location_name)) { ?>
-												<span class="font-weight-bolder headline-font d-block"><?php echo $cortex_location_name; ?></span>
+												<span class="font-weight-bolder headline-font headliner"><?php echo $cortex_location_name; ?></span>
 											<?php } ?>
+											<div class="location-address">
 											<?php if (!empty($cortex_location_address)) { ?>
-												<span class="headline-font secondary-color-text"><?php echo $cortex_location_address; ?></span> •
+												<span class="headline-font"><?php echo $cortex_location_address; ?></span> •
 											<?php } ?>
 											<?php if (!empty($cortex_location_city_country)) { ?>
-												<span class="headline-font secondary-color-text"><?php echo $cortex_location_city_country; ?></span>
+												<span class="headline-font"><?php echo $cortex_location_city_country; ?></span>
 											<?php } ?>
+											</div>
 											<?php if (!empty($cortex_location_map_link)) { ?>
 											</a>
 										<?php } ?>
@@ -146,9 +148,10 @@
 							</div>
 
 							<div class="wp-block-buttons rf-show-btns">
+							<div class="wp-block-button"><a class="wp-block-button__link has-color-light-color" href="<?php the_permalink(); ?>" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>">Details</a></div>
 								<?php if ((!empty($cortex_event_ticket_link)) && ($show_is_sold_out != true)) { ?>
 									<div class="wp-block-button">
-										<a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
+										<a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php echo get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
 									</div>
 								<?php } ?>
 								<?php if ($show_is_sold_out == true) { ?>
@@ -156,7 +159,6 @@
 										<span class="wp-block-button-soldout wp-block-button__link has-color-gray-background-color has-background has-color-light-color">Sold Out</span>
 									</div>
 								<?php } ?>
-								<div class="wp-block-button"><a class="wp-block-button__link has-color-light-color" href="<?php the_permalink(); ?>" title="<?php get_the_title(); ?>">Info</a></div>
 								<?php if (!empty($cortex_rsvp_link)) { ?><div class="wp-block-button"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background has-color-light-color" href="<?php echo $cortex_rsvp_link; ?>" title="RSVP to <?php get_the_title(); ?>">RSVP</a></div><?php } ?>
 							</div>
 						</article>
