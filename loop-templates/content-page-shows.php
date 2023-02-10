@@ -151,7 +151,7 @@
 							<div class="wp-block-button"><a class="wp-block-button__link has-color-light-color" href="<?php the_permalink(); ?>" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>">Details</a></div>
 								<?php if ((!empty($cortex_event_ticket_link)) && ($show_is_sold_out != true)) { ?>
 									<div class="wp-block-button">
-										<a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php echo get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
+										<a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_event_ticket_link; ?>" title="Buy tickets to <?php echo get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Tickets'; }?></a>
 									</div>
 								<?php } ?>
 								<?php if ($show_is_sold_out == true) { ?>
