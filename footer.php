@@ -50,7 +50,7 @@ if (file_exists(locate_template('client/inc/footer.php'))) {
 											<?php endif; ?>
 											<?php
 											if (!empty($c9_footer_copyright)) {
-												echo '<div class="col-xs-12 col-sm-6 col-md-5 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . wp_kses_post($c9_footer_copyright) . '</p></div>';
+												echo '<div class="col-12 p-0 footer-copyright-wrapper"><p class="text-center copyright">' . wp_kses_post($c9_footer_copyright) . '</p></div>';
 											}
 
 											if ('show' === $c9_footer_search) :
