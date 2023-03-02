@@ -44,7 +44,11 @@ get_header();
 
                                         <?php if (!empty($curauth->user_description)) : ?>
                                             <dt><?php esc_html_e('Profile', 'c9-starter'); ?></dt>
-                                            <dd><?php echo esc_html($curauth->user_description); ?></dd>
+                                            <dd><?php echo wp_kses($curauth->user_description, array(
+  'strong' => array(),
+  'em' => array('class' => true),
+  'a' => array('href' => true, 'title' => true),
+)); ?></dd>
                                         <?php endif; ?>
                                     </dl>
                                 </div>
