@@ -138,7 +138,7 @@ if (!function_exists('c9_setup')) {
 		add_image_size('riot-square-show-sm', 385, 385, true);
 		add_image_size('riot-square-show-md', 540, 540, true);
 		add_image_size('riot-square-show-big', 1500, 1500, true);
-		set_post_thumbnail_size(698, 392);
+		set_post_thumbnail_size(698, 866);
 	}
 }
 
