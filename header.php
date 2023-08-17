@@ -60,7 +60,7 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 							<div class="navbar-small-buttons">
 								<div class="header-buttons-mobile d-inline-block d-sm-none">
 									<!-- <a href="/chicago/tickets" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-secondary-background-color">Tickets</a> -->
-									<a href="https://riotfest.org/chicago/tickets" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-success-background-color">Tickets</a>
+									<a href="https://www.tixr.com/groups/riotfest/events/riot-fest-2023-70356" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-success-background-color">Tickets</a>
 								</div>
 								<?php if (!$c9_header_search) { ?>
 									<div class="nav-search">
