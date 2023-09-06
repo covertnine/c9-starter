@@ -232,7 +232,7 @@ p {
 .c9 .wp-block-pullquote .wp-block-pullquote__citation,
 .c9 .wp-block-pullquote cite {
     color: $gray-700;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .entry-content p:last-child,
@@ -257,7 +257,7 @@ kbd,
 .wp-block-code,
 .wp-block-preformatted {
     border: 1px solid $gray-300;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 13px;
     background: rgba($gray-500, 0.4);
     line-height: 1.3;
@@ -662,7 +662,7 @@ a:focus {
 }
 
 .header-navbar .nav .search .nav-link .fa-search {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .header-navbar .nav .nav-item .dropdown-menu {
@@ -709,7 +709,7 @@ a:focus {
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
     margin: 0px;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 1;
     cursor: pointer;
 }
@@ -983,7 +983,7 @@ a:focus {
 
 .footer-entirety .textwidget,
 .sidebar .widget .menu-item {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .widget {
@@ -1075,13 +1075,13 @@ a:focus {
 /****************************************************************************************/
 @media only screen and (min-width: 1px) {
     .archive h3.entry-title {
-        font-size: 1.8em;
+        font-size: 1.8r
     }
 }
 
 @media only screen and (min-width: 667px) {
     .archive h3.entry-title {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 }
 
@@ -1532,7 +1532,7 @@ a:focus {
 }
 
 .entry-big-header .entry-title-box .entry-meta {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 1;
     text-decoration: none;
 }
@@ -1753,8 +1753,8 @@ img {
 
 .wp-caption-text {
     text-align: center;
-    font-size: 1.1em;
-    line-height: 1.3em;
+    font-size: 1.1rem;
+    line-height: 1.2;
     margin-top: 0;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
@@ -1803,7 +1803,7 @@ img {
 /****************************************************************************************/
 .wp-block-video figcaption {
     font-weight: $font-weight-bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: $gray-700;
     text-align: left;
@@ -2167,7 +2167,7 @@ table tr th {
 
 .wp-block-table figcaption {
     font-weight: $font-weight-bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: $gray-700;
     text-align: left;
@@ -2347,7 +2347,7 @@ table tr th {
 .wp-block-pullquote footer,
 .wp-block-pullquote__citation {
     display: block;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     color: $gray-700;
     margin-top: 8px;
 }
@@ -2365,7 +2365,7 @@ table tr th {
 
     .wp-block-pullquote.is-style-solid-color blockquote p,
     .wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
-        font-size: 2em;
+        font-size: 2rem;
         line-height: 2;
     }
 }
@@ -2374,7 +2374,7 @@ table tr th {
 
     .wp-block-pullquote.is-style-solid-color blockquote p,
     .wp-block-pullquote.is-style-solid-color blockquote>.block-editor-rich-text p {
-        font-size: 2.6em;
+        font-size: 2.6rem;
         line-height: 2;
     }
 }
@@ -2400,7 +2400,7 @@ table tr th {
         position: absolute;
         top: -20px;
         left: -30px;
-        font-size: 7em;
+        font-size: 7rem;
         font-weight: $font-weight-normal;
         font-family: $headings-font-family;
         color: $primary;
@@ -2766,7 +2766,7 @@ button::-moz-focus-inner {
     filter: alpha(opacity=65);
     padding: 0 0 18px 10px;
     color: $light;
-    font-size: 3em;
+    font-size: 3rem;
     background-color: transparent;
 }
 
@@ -2924,7 +2924,7 @@ img.mfp-img {
     padding-right: 36px;
     color: $light;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .mfp-image-holder .mfp-content {
@@ -3457,7 +3457,7 @@ label {
 }
 
 .comment-respond h3 {
-    font-size: 2.6em;
+    font-size: 2.6rem;
 }
 
 .comment-notes,
@@ -3510,7 +3510,7 @@ label {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    font-size: 2.8em;
+    font-size: 2.8rem;
     line-height: 1;
     text-align: left;
     margin: -51px auto 0px auto;
@@ -3539,7 +3539,7 @@ label {
     right: 35px;
     opacity: 1;
     padding: 12px 15px;
-    font-size: 2.7em;
+    font-size: 2.7rem;
     line-height: 1;
     z-index: 1055;
     color: $light;
@@ -3564,7 +3564,7 @@ label {
     display: inline;
     vertical-align: top;
     padding: 2px 8px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 1;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -3606,7 +3606,7 @@ label {
     width: 100%;
     line-height: 1;
     margin-top: 5px;
-    font-size: 1em;
+    font-size: 1rem;
     height: 32px;
     border-radius: 0px;
 }
@@ -3869,7 +3869,7 @@ label {
 
 .entry-content .nav.nav-tabs {
     line-height: 1;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     border-bottom: none;
     margin: 0px;
 }
