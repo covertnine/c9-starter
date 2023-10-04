@@ -137,6 +137,7 @@ if ($c9_blog_sidebar  != 'hide') {
 		<?php if (get_post_format() == 'gallery') {
 			include("content-gallery-display.php");
 		} ?>
+		<?php echo do_shortcode('[yarpp]'); ?>
 		<?php
 
 		if (get_theme_mod('c9_author_visible') === "show") {
