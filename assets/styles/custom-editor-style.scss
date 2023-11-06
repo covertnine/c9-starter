@@ -90,6 +90,10 @@ p.wp-block-subhead,
     margin-right: auto;
 }
 
+body .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/group"] .wp-block[data-type="core/paragraph"] {
+    max-width: none;
+}
+
 .editor-styles-wrapper a:not(.wp-block-button__link) {
     text-decoration: underline;
 }
