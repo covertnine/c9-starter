@@ -49,8 +49,8 @@
 						$cortex_doors					= get_field('time');
 						//$cortex_date       		 		= get_field('date_and_time'); //raw date from db is already displayed correctly
 						$cortex_featured_img 			= get_post_thumbnail_id();
-						$cortex_featured_img_src 		= wp_get_attachment_image_url($cortex_featured_img, 'riot-square-show-sm');
-						$cortex_featured_img_srcset 	= wp_get_attachment_image_srcset($cortex_featured_img, 'riot-square-show-big');
+						$cortex_featured_img_src 		= wp_get_attachment_image_url($cortex_featured_img, 'riot-square-show');
+						$cortex_featured_img_srcset 	= wp_get_attachment_image_srcset($cortex_featured_img_src, 'riot-square-show-big');
 						$cortex_featured_img_alt 		= get_post_meta($cortex_featured_img, '_wp_attachment_image_alt', true);
 						$cortex_location_name    		= get_field('location_name');
 						$cortex_location_city_country   = get_field('location_city_country');
@@ -67,7 +67,7 @@
 						<article id="post-<?php echo $show_id; ?>" class="c9-post-grid-item rf-show-single-event post-<?php echo $show_id; ?> has-post-thumbnail has-color-light-background-color entry-content" itemscope>
 							<div class="c9-block-post-grid-image">
 								<a href="<?php the_permalink(); ?>" rel="bookmark" aria-hidden="true" tabindex="-1" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>">
-									<img src="<?php echo esc_attr($cortex_featured_img_src); ?>" srcset="<?php echo esc_attr($cortex_featured_img_srcset); ?>" sizes="(max-width: 414px) 100vw, (max-width: 991px) 540px, (min-width: 992px) 245px" alt="<?php echo $cortex_featured_img_alt; ?>" loading="lazy">
+									<img src="<?php echo esc_attr($cortex_featured_img_src); ?>" srcset="<?php echo esc_attr($cortex_featured_img_srcset); ?>" sizes="(max-width: 414px) 100vw, (max-width: 991px) 540px, (min-width: 992px) 1080px" alt="<?php echo $cortex_featured_img_alt; ?>" loading="lazy">
 								</a>
 							</div>
 							<div class="c9-block-post-grid-text">
