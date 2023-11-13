@@ -89,7 +89,7 @@
 											</div>
 										</div>
 									</div>
-									<h2 class="c9-block-post-grid-title headliner-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>"><?php the_title(); ?></a></h2>
+									<h2 class="c9-block-post-grid-title headliner-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Concert details for <?php echo get_the_title(); ?> at <?=$cortex_location_name;?> in <?=$cortex_location_city_country;?>" class="show-title"><?php the_title(); ?></a></h2>
 								</header>
 								<div class="c9-block-post-grid-excerpt">
 									<?php //add openers
@@ -159,7 +159,10 @@
 										<span class="wp-block-button-soldout wp-block-button__link has-color-gray-background-color has-background has-color-light-color">Sold Out</span>
 									</div>
 								<?php } ?>
-								<?php if (!empty($cortex_rsvp_link)) { ?><div class="wp-block-button"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background has-color-light-color" href="<?php echo $cortex_rsvp_link; ?>" title="RSVP to <?php get_the_title(); ?>">RSVP</a></div><?php } ?>
+								<?php if (!empty($cortex_rsvp_link)) { ?><div class="wp-block-button"><a class="wp-block-button__link has-rsvp-color has-background has-color-light-color" href="<?php echo $cortex_rsvp_link; ?>" title="RSVP to <?php get_the_title(); ?>">RSVP</a></div><?php } ?>
+								<div class="wp-block-button share-event d-none d-block d-sm-none">
+                                    <a class="wp-block-button__link has-color-share-color has-background light-color-text" href="<?= the_permalink(); ?>" target="_blank" title="Share this show with a cool friend. You have lots of those right?">Share</a>
+                                </div>
 							</div>
 						</article>
 					<?php

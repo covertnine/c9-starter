@@ -78,7 +78,7 @@ if (!empty($playlist_link)) {
                 </div>
                 <div class="c9-block-layout-column c9-column text-left c9-is-vertically-aligned-center">
                     <div class="c9-column-innner">
-                        <div class="wp-container-6228f76eab3b0 wp-block-group pl-4 pr-4">
+                        <div class="rf-show-single-event wp-block-group pl-4 pr-4">
                             <div class="c9-block-post-grid-byline entry-content p-0">
                                 <div class="show-day show-date row no-gutter no-gutters">
                                     <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold">
@@ -100,7 +100,7 @@ if (!empty($playlist_link)) {
                                 <span class="c9-sh font-weight-light rf-presents h4">Riot Fest Presents: <?php the_title(); ?></span>
                             </div>
                             <div class="section-heading c9-heading text-left">
-                                <h1 class="c9-h"><?php the_title(); ?></h1>
+                                <h1 class="c9-h show-title"><?php the_title(); ?></h1>
                             </div>
                             <?php //add openers
                             // Check rows exists.
@@ -154,7 +154,15 @@ if (!empty($playlist_link)) {
                             <div class="wp-container-6228f76eaa87d wp-block-buttons text-center pb-5 rf-show-single-btns">
                                 <?php if ((!empty($cortex_u_event_ticket_link)) && ($show_is_sold_out != true)) { ?>
                                     <div class="wp-block-button">
-                                    <a class="wp-block-button__link<?php if (!empty($show_low_tickets)) { echo ' has-color-yellow-bg dark-color-text'; } else { echo ' has-color-success-background-color has-background has-color-light-color';}?>" href="<?php echo $cortex_u_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) { echo 'Low tickets';} else { echo 'Buy Tickets'; }?></a>
+                                        <a class="wp-block-button__link<?php if (!empty($show_low_tickets)) {
+                                                                            echo ' has-color-yellow-bg dark-color-text';
+                                                                        } else {
+                                                                            echo ' has-color-success-background-color has-background has-color-light-color';
+                                                                        } ?>" href="<?php echo $cortex_u_event_ticket_link; ?>" title="Buy tickets to <?php get_the_title(); ?> (opens in new window)" target="_blank"><?php if (!empty($show_low_tickets)) {
+                                                                                                                                                                                                                            echo 'Low Tickets';
+                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                            echo 'Tickets';
+                                                                                                                                                                                                                        } ?></a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($show_is_sold_out == true) { ?>
@@ -164,9 +172,12 @@ if (!empty($playlist_link)) {
                                 <?php } ?>
                                 <?php if (!empty($cortex_u_rsvp_link)) { ?>
                                     <div class="wp-block-button">
-                                        <a class="wp-block-button__link has-color-primary-background-color has-background" href="<?php echo $cortex_u_rsvp_link; ?>" target="_blank" title="RSVP to <?php the_title_attribute(); ?> on Facebook">RSVP</a>
+                                        <a class="wp-block-button__link has-rsvp-color has-background" href="<?php echo $cortex_u_rsvp_link; ?>" target="_blank" title="RSVP to <?php the_title_attribute(); ?> on Facebook">RSVP</a>
                                     </div>
                                 <?php } ?>
+                                <div class="wp-block-button share-event d-none d-inline-block d-sm-none">
+                                    <a class="wp-block-button__link has-color-share-color has-background" href="<?= the_permalink(); ?>" target="_blank" title="Share this show with a cool friend. You have lots of those right?">Share</a>
+                                </div>
                             </div>
                             <!--end buttons-->
                         </div>
