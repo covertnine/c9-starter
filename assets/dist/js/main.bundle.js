@@ -192,16 +192,23 @@ var c9Page = function ($) {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    var $grid = $(".grid").masonry({
-      // options
-      itemSelector: ".grid-item",
-      gutter: ".gutter-sizer",
-      columnWidth: ".grid-sizer",
-      percentPosition: true
-    });
-    $grid.imagesLoaded().progress(function () {
-      $grid.masonry("layout");
-    });
+    try {
+      if ($.isFunction($.fn.masonry) && $(".grid").length) {
+        var $grid = $(".grid").masonry({
+          // options
+          itemSelector: ".grid-item",
+          gutter: ".gutter-sizer",
+          columnWidth: ".grid-sizer",
+          percentPosition: true
+        });
+        $grid.imagesLoaded().progress(function () {
+          $grid.masonry("layout");
+        });
+      }
+    } catch (error) {
+      console.error("Masonry or imagesLoaded not initialized: ", error);
+    }
+
     $(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']").magnificPopup({
       disableOn: 700,
       type: "iframe",

@@ -188,7 +188,12 @@ if (!function_exists('c9_add_search_form')) {
 	function c9_add_search_form($items, $args)
 	{
 		if (('primary' == $args->theme_location) || ('magazine' == $args->theme_location) && !get_theme_mod('c9_header_hide_search', false)) {
-			$items .= '<li class="nav-item search">
+			$items .= '<li class="nav-item rftv">
+				<a href="https://rftv.riotfest.org" class="watch-rfsn" title="Watch Riot Fest TV and the Riot Fest Sucks network">
+				<span class="sr-only">Watch RFTV</span>
+				</a>
+			</li>
+			<li class="nav-item search">
 					<div class="nav-search">
 						<a href="#" class="btn-nav-search nav-link">
 							<i class="fa fa-search"></i>

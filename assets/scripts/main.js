@@ -108,18 +108,26 @@ var c9Page = (function($) {
 
 		///////////////////////// for putting WordPress galleries linked to images/videos in lightbox ////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		var $grid = $(".grid").masonry({
-			// options
-			itemSelector: ".grid-item",
-			gutter: ".gutter-sizer",
-			columnWidth: ".grid-sizer",
-			percentPosition: true
-		});
-		$grid.imagesLoaded().progress(function() {
-			$grid.masonry("layout");
-		});
+		try {
+			if ($.isFunction($.fn.masonry) && $(".grid").length) {
+				var $grid = $(".grid").masonry({
+					// options
+					itemSelector: ".grid-item",
+					gutter: ".gutter-sizer",
+					columnWidth: ".grid-sizer",
+					percentPosition: true
+				});
 
-		$(".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']"
+				$grid.imagesLoaded().progress(function() {
+					$grid.masonry("layout");
+				});
+			}
+		} catch (error) {
+			console.error("Masonry or imagesLoaded not initialized: ", error);
+		}
+
+		$(
+			".cortex-popup-video,a.wp-block-button__link[href*='youtube.com'],a.wp-block-button__link[href*='vimeo.com'],a.wp-block-button__link[href*='maps.google.com']"
 		).magnificPopup({
 			disableOn: 700,
 			type: "iframe",
@@ -143,7 +151,8 @@ var c9Page = (function($) {
 		});
 
 		// default wordpress photo galleries on ticket pages
-		$('.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a'
+		$(
+			'.wp-block-gallery .wp-block-image a[href$=".jpg"], .wp-block-gallery .wp-block-image a[href$=".jpeg"], .wp-block-gallery .wp-block-image a[href$=".png"], .wp-block-gallery .wp-block-image a[href$=".gif"], .gallery-item a'
 		).click(function(e) {
 			e.preventDefault();
 
@@ -165,7 +174,9 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).children("img").attr("alt");
+					var imageCaption = $(this)
+						.children("img")
+						.attr("alt");
 
 					items.push({
 						src: imageLink,
@@ -180,7 +191,9 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).children("img").attr("alt");
+					var imageCaption = $(this)
+						.children("img")
+						.attr("alt");
 
 					items.push({
 						src: imageLink,
@@ -242,12 +255,16 @@ var c9Page = (function($) {
 		});
 
 		// older photo galleries from category posts
-		$('.cortex-popup, .img_container a[href$=".jpg"]').on("click", function(e) {
+		$('.cortex-popup, .img_container a[href$=".jpg"]').on("click", function(
+			e
+		) {
 			e.preventDefault();
 
 			var items = [];
 			var firstItem = $(this).attr("href");
-			var imageCaption = $(this).children("img").attr("alt");
+			var imageCaption = $(this)
+				.children("img")
+				.attr("alt");
 
 			items.push({
 				src: firstItem,
@@ -263,7 +280,9 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).children("img").attr("alt");
+					var imageCaption = $(this)
+						.children("img")
+						.attr("alt");
 
 					items.push({
 						src: imageLink,
@@ -280,7 +299,9 @@ var c9Page = (function($) {
 				.find("a")
 				.each(function() {
 					var imageLink = $(this).attr("href");
-					var imageCaption = $(this).children("img").attr("alt");
+					var imageCaption = $(this)
+						.children("img")
+						.attr("alt");
 
 					items.push({
 						src: imageLink,
