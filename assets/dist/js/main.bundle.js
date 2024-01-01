@@ -148,7 +148,6 @@ var c9Page = function ($) {
           $(".navbar").addClass("fixed-top opacity100");
           $(".header-navbar").addClass("jumpfix"); //accounts for position-fixed CSS change
         }
-
         if (scroll <= 337) {
           $(".navbar").removeClass("fixed-top opacity100");
           $(".header-navbar").removeClass("jumpfix"); //remove extra classes and put navs back at top
@@ -173,7 +172,6 @@ var c9Page = function ($) {
           $(".header-navbar").addClass("jumpfix");
           //$(".header-navbar.jumpfix").css("height", "108px");
         }
-
         if (scroll <= 217) {
           $(".navbar").removeClass("navbar-small fixed-top opacity100"); //expand nav and remove fixed
           $(".header-navbar").removeClass("jumpfix");
