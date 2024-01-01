@@ -1,30 +1,32 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: C9 Togo\n"
-"POT-Creation-Date: 2022-10-25 10:44-0500\n"
-"PO-Revision-Date: 2022-10-25 10:44-0500\n"
+"POT-Creation-Date: 2024-01-01 18:23-0500\n"
+"PO-Revision-Date: 2024-01-01 18:23-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: 404.php:30 node_modules/undescores-for-npm/404.php:17
+#: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:43 node_modules/undescores-for-npm/404.php:21
+#: 404.php:43
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -42,11 +44,13 @@ msgstr ""
 msgid "Install Plugins"
 msgstr ""
 
+#. translators: %s: plugin name.
 #: admin/class-tgm-plugin-activation.php:336
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
+#. translators: %s: plugin name.
 #: admin/class-tgm-plugin-activation.php:338
 #, php-format
 msgid "Updating Plugin: %s"
@@ -56,6 +60,7 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
@@ -63,6 +68,7 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:348
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
@@ -70,6 +76,7 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:354
 #, php-format
 msgid ""
@@ -81,6 +88,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:360
 #, php-format
 msgid "There is an update available for: %1$s."
@@ -88,6 +96,7 @@ msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:366
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
@@ -95,6 +104,7 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:372
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -143,11 +153,13 @@ msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:396
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:398
 #, php-format
 msgid ""
@@ -155,6 +167,7 @@ msgid ""
 "Please update the plugin."
 msgstr ""
 
+#. translators: 1: dashboard link.
 #: admin/class-tgm-plugin-activation.php:400
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
@@ -207,6 +220,7 @@ msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
+#. translators: %s: version number
 #: admin/class-tgm-plugin-activation.php:2041
 #, php-format
 msgid "TGMPA v%s"
@@ -256,12 +270,14 @@ msgstr ""
 msgid "Update recommended"
 msgstr ""
 
+#. translators: 1: install status, 2: update status
 #: admin/class-tgm-plugin-activation.php:2411
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
+#. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2459
 #, php-format
 msgctxt "plugins"
@@ -270,6 +286,7 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2463
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
@@ -277,6 +294,7 @@ msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2467
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
@@ -284,6 +302,7 @@ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2471
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
@@ -332,16 +351,19 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2683
 #, php-format
 msgid "Install %2$s"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2688
 #, php-format
 msgid "Update %2$s"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2694
 #, php-format
 msgid "Activate %2$s"
@@ -391,16 +413,19 @@ msgstr ""
 msgid "Plugin activation failed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3602
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#. translators: 1: plugin name, 2: error message.
 #: admin/class-tgm-plugin-activation.php:3605
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:3607
 #, php-format
 msgid "The installation of %1$s failed."
@@ -412,6 +437,7 @@ msgid ""
 "while on some hosts, so please be patient."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:3613
 #: admin/class-tgm-plugin-activation.php:3621
 #, php-format
@@ -422,6 +448,7 @@ msgstr ""
 msgid "All installations and activations have been completed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3616
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
@@ -437,6 +464,7 @@ msgstr ""
 msgid "All installations have been completed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3624
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
@@ -526,150 +554,117 @@ msgstr ""
 msgid "Green Gradient"
 msgstr ""
 
-#: client/inc/client-setup.php:115
-msgctxt "C9 Togo Logo"
-msgid "C9 Togo Logo"
-msgstr ""
-
-#: client/inc/client-setup.php:127
-msgid "Setup"
-msgstr ""
-
-#: client/inc/client-setup.php:133
-msgid "Style Guide"
-msgstr ""
-
-#: client/inc/client-setup.php:137
-msgid ""
-"This page will show all of the blog posts once you have populated your "
-"database with blog items."
-msgstr ""
-
-#: client/inc/client-setup.php:145
-msgid ""
-"A blocks-based WordPress Theme for restaurants, breweries, or dispensaries "
-"offering online ordering, pickup, togo, or local delivery with the power of "
-"WooCommerce."
-msgstr ""
-
-#: client/inc/client-setup.php:169 inc/setup.php:46
-msgid "Top Navigation Menu"
-msgstr ""
-
-#: client/inc/client-setup.php:191
-msgid "Secondary Menu"
-msgstr ""
-
-#: client/inc/client-setup.php:211
-msgid "Company Menu"
-msgstr ""
-
-#: client/inc/client-setup.php:232
-msgid "WordPress Meta"
-msgstr ""
-
-#: client/inc/client-setup.php:237 client/inc/client-setup.php:247
-#: client/inc/client-setup.php:260
-msgid "About C9-Togo"
-msgstr ""
-
-#: client/inc/client-setup.php:238
-msgid ""
-"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
-"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
-"toggles, and the responsive grid system that makes the theme look super "
-"duper."
-msgstr ""
-
-#: client/inc/client-setup.php:248 client/inc/client-setup.php:261
-msgid ""
-"Be sure to activate the <strong>C9 Blocks Plugin</strong> and <strong>C9 "
-"Admin Dashboard</strong> during theme setup. The blocks plugin includes the "
-"custom WordPress blocks for tabs, toggles, and the responsive grid system "
-"that makes the theme look super duper."
-msgstr ""
-
-#: client/inc/client-setup.php:265
-msgid "Meta Widget"
-msgstr ""
-
-#: client/inc/client-setup.php:285
+#: client/inc/client-setup.php:108
 msgid "C9 All Patterns"
 msgstr ""
 
-#: client/inc/client-setup.php:289
+#: client/inc/client-setup.php:112
+msgid "C9 Page Templates"
+msgstr ""
+
+#: client/inc/client-setup.php:116
 msgid "C9 Video"
 msgstr ""
 
-#: client/inc/client-setup.php:293
+#: client/inc/client-setup.php:120
 msgid "C9 Audio"
 msgstr ""
 
-#: client/inc/client-setup.php:297
+#: client/inc/client-setup.php:124
 msgid "C9 Article"
 msgstr ""
 
-#: client/inc/client-setup.php:313
+#: client/inc/client-setup.php:185
 msgid "Coming Soon Opt-in"
 msgstr ""
 
-#: client/inc/client-setup.php:314
+#: client/inc/client-setup.php:186
 msgid ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
 msgstr ""
 
-#: client/inc/client-setup.php:323
+#: client/inc/client-setup.php:197
+msgid "Watch Video"
+msgstr ""
+
+#: client/inc/client-setup.php:198
+msgid ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+msgstr ""
+
+#: client/inc/client-setup.php:206
 msgid "Video Embed + YouTube Link"
 msgstr ""
 
-#: client/inc/client-setup.php:324
+#: client/inc/client-setup.php:207
 msgid "Feature a video file you upload with a link to a YouTube video link."
 msgstr ""
 
-#: client/inc/client-setup.php:332
+#: client/inc/client-setup.php:215
 msgid "Information Dialog Two Buttons"
 msgstr ""
 
-#: client/inc/client-setup.php:333
+#: client/inc/client-setup.php:216
 msgid ""
 "Highlight important information, and link to two separate places with "
 "buttons."
 msgstr ""
 
-#: client/inc/client-setup.php:341
+#: client/inc/client-setup.php:224
 msgid "Spotify Embed, Track Listing + Button"
 msgstr ""
 
-#: client/inc/client-setup.php:342
+#: client/inc/client-setup.php:225
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr ""
 
-#: client/inc/client-setup.php:350
+#: client/inc/client-setup.php:233
+msgid "Podcast Episode"
+msgstr ""
+
+#: client/inc/client-setup.php:234
+msgid ""
+"Feature a show photo, audio embed file, and everything you need for a "
+"podcast episode post."
+msgstr ""
+
+#: client/inc/client-setup.php:244
+msgid "Events Schedule"
+msgstr ""
+
+#: client/inc/client-setup.php:245
+msgid ""
+"Add a bunch of dates and places and links to a table with a nice header and "
+"FAQ, cause events are coming back!"
+msgstr ""
+
+#: client/inc/client-setup.php:256
 msgid "Article 450 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:351
+#: client/inc/client-setup.php:257
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:359
+#: client/inc/client-setup.php:266
 msgid "Article 600 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:360
+#: client/inc/client-setup.php:267
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:368
+#: client/inc/client-setup.php:276
 msgid "C9 Togo Style Guide"
 msgstr ""
 
-#: client/inc/client-setup.php:369
+#: client/inc/client-setup.php:277
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
@@ -695,6 +690,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
+#. translators: %s: post title
 #: comments.php:33
 #, php-format
 msgctxt "comments title"
@@ -710,8 +706,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: comments.php:61 comments.php:116
-#: node_modules/undescores-for-npm/comments.php:40
-#: node_modules/undescores-for-npm/comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
@@ -723,7 +717,7 @@ msgstr ""
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:160 node_modules/undescores-for-npm/comments.php:78
+#: comments.php:160
 msgid "Comments are closed."
 msgstr ""
 
@@ -758,7 +752,7 @@ msgid ""
 "contact connect@covertnine.com"
 msgstr ""
 
-#: header.php:37 node_modules/undescores-for-npm/header.php:24
+#: header.php:37
 msgid "Skip to content"
 msgstr ""
 
@@ -847,11 +841,11 @@ msgstr ""
 msgid "Hide or show the search form in the footer"
 msgstr ""
 
-#: inc/customizer.php:52 inc/customizer.php:105 inc/customizer.php:523
+#: inc/customizer.php:52 inc/customizer.php:105 inc/customizer.php:545
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:53 inc/customizer.php:106 inc/customizer.php:524
+#: inc/customizer.php:53 inc/customizer.php:106 inc/customizer.php:546
 msgid "Hide"
 msgstr ""
 
@@ -979,65 +973,65 @@ msgstr ""
 msgid "No, I will queue my own fonts."
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:452
 msgid "Heading Font"
 msgstr ""
 
-#: inc/customizer.php:431
+#: inc/customizer.php:453
 msgid "Select your heading font family."
 msgstr ""
 
-#: inc/customizer.php:452
+#: inc/customizer.php:474
 msgid "Subheading Font"
 msgstr ""
 
-#: inc/customizer.php:453
+#: inc/customizer.php:475
 msgid "Select your subheading font family."
 msgstr ""
 
-#: inc/customizer.php:472
+#: inc/customizer.php:494
 msgid "Body Paragraph Font"
 msgstr ""
 
-#: inc/customizer.php:473
+#: inc/customizer.php:495
 msgid "Select your base font family."
 msgstr ""
 
-#: inc/customizer.php:492
+#: inc/customizer.php:514
 msgid "Fade-in custom fonts as they download"
 msgstr ""
 
-#: inc/customizer.php:493
+#: inc/customizer.php:515
 msgid ""
 "Select this if you notice a flash of the default font as the custom fonts "
 "download the first time a user visits the site."
 msgstr ""
 
-#: inc/customizer.php:500
+#: inc/customizer.php:522
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:520
+#: inc/customizer.php:542
 msgid "Do you want to show or hide the author name on posts?"
 msgstr ""
 
-#: inc/customizer.php:544
+#: inc/customizer.php:566
 msgid "Display a sidebar on single posts?"
 msgstr ""
 
-#: inc/customizer.php:547 inc/customizer.php:572
+#: inc/customizer.php:569 inc/customizer.php:594
 msgid "No Sidebar"
 msgstr ""
 
-#: inc/customizer.php:548 inc/customizer.php:573 inc/widgets.php:90
+#: inc/customizer.php:570 inc/customizer.php:595 inc/widgets.php:90
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/customizer.php:549 inc/customizer.php:574 inc/widgets.php:78
+#: inc/customizer.php:571 inc/customizer.php:596 inc/widgets.php:78
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer.php:569
+#: inc/customizer.php:591
 msgid "Display a sidebar on archive pages?"
 msgstr ""
 
@@ -1083,34 +1077,33 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
+#: inc/setup.php:46
+msgid "Top Navigation Menu"
+msgstr ""
+
 #: inc/template-tags.php:30
-#: node_modules/undescores-for-npm/inc/template-tags.php:28
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #: inc/template-tags.php:38
-#: node_modules/undescores-for-npm/inc/template-tags.php:33
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:59 inc/template-tags.php:64
-#: node_modules/undescores-for-npm/inc/template-tags.php:50
-#: node_modules/undescores-for-npm/inc/template-tags.php:56
 msgid ", "
 msgstr ""
 
 #: inc/template-tags.php:61
-#: node_modules/undescores-for-npm/inc/template-tags.php:52
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #: inc/template-tags.php:66
-#: node_modules/undescores-for-npm/inc/template-tags.php:58
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
@@ -1127,9 +1120,8 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
+#. translators: %s: Name of current post
 #: inc/template-tags.php:77
-#: node_modules/undescores-for-npm/inc/template-tags.php:72
-#: node_modules/undescores-for-npm/template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
 msgstr ""
@@ -1153,26 +1145,22 @@ msgid ""
 msgstr ""
 
 #: loop-templates/content-none.php:17
-#: node_modules/undescores-for-npm/template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
 
 #: loop-templates/content-none.php:30
-#: node_modules/undescores-for-npm/template-parts/content-none.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: loop-templates/content-none.php:46
-#: node_modules/undescores-for-npm/template-parts/content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
 #: loop-templates/content-none.php:51
-#: node_modules/undescores-for-npm/template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -1185,83 +1173,10 @@ msgstr ""
 
 #: loop-templates/content-page.php:20 loop-templates/content-single.php:119
 #: loop-templates/content.php:43
-#: node_modules/undescores-for-npm/template-parts/content-page.php:22
-#: node_modules/undescores-for-npm/template-parts/content.php:38
 msgid "Pages:"
 msgstr ""
 
-#: node_modules/undescores-for-npm/404.php:33
-msgid "Most Used Categories"
-msgstr ""
-
-#: node_modules/undescores-for-npm/404.php:51
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: node_modules/undescores-for-npm/comments.php:31
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/undescores-for-npm/comments.php:43
-#: node_modules/undescores-for-npm/comments.php:64
-msgid "Older Comments"
-msgstr ""
-
-#: node_modules/undescores-for-npm/comments.php:44
-#: node_modules/undescores-for-npm/comments.php:65
-msgid "Newer Comments"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:18
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:18
-#, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:20
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:47
-msgid "Primary"
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:90
-msgid "Sidebar"
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:92
-msgid "Add widgets here."
-msgstr ""
-
-#: node_modules/undescores-for-npm/header.php:44
-msgid "Primary Menu"
-msgstr ""
-
-#: node_modules/undescores-for-npm/inc/template-tags.php:65
-#, php-format
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
-#: node_modules/undescores-for-npm/search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
-#: node_modules/undescores-for-npm/template-parts/content.php:33
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
+#. translators:
 #: search.php:31
 #, php-format
 msgid "Results for: %s"
