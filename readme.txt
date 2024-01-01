@@ -29,7 +29,7 @@ Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
 = 2.4.2 =
-Fixed list items, updated block patterns, more Google fonts, bug fixes, and updated development files.
+Fixed list items, updated block patterns, more Google fonts, updated translation files, bug fixes, and updated development files.
 
 = 2.4.1 =
 Minor fix to backend placeholder text.
