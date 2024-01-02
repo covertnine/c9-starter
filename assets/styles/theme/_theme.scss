@@ -2396,7 +2396,7 @@ ol[class=""]>li>ol>li:before,
 ol[class~=wp-block-list]>li:before,
 ol[class~=wp-block-list] li>ol>li:before {
     content: counter(step-counter);
-    width: 25px;
+    width: 30px;
     display: inline-block;
     font-weight: $font-weight-bold;
     margin: 0px 0px 0px -30px;
