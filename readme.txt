@@ -34,7 +34,7 @@ If you use the default navigation, then only one level of drop down is supported
 == Changelog ==
 
 = 2.4.4 =
-Updated dev packages, list item spacing fix, new block pattern updates, more Google fonts, bug fixes.
+Updated dev packages, list item spacing fix, new block pattern updates, alignment fixes for cover blocks in backend, more Google fonts, bug fixes.
 
 = 2.4.3 =
 Update to button block styles where underlines appeared at times.
