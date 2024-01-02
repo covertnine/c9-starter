@@ -142,7 +142,7 @@ a.skip-link {
 
     .container-narrow,
     .page-container .entry-header,
-    .page-template-default .page .entry-content .container {
+    .page-template-default .page .entry-content .container:not(.alignwide) {
         width: 100%;
     }
 
@@ -160,7 +160,7 @@ a.skip-link {
     .container-narrow,
     .page-template-default .page .entry-content,
     .page-container .entry-header,
-    #full-width-page-wrapper>.container {
+    #full-width-page-wrapper>.container:not(.alignwide) {
         width: 100%;
         margin: 0px auto;
     }
@@ -2016,6 +2016,8 @@ hr {
     .page-template-default .entry-content .alignwide,
     .wp-block[data-type="core/cover"][data-align="wide"],
     .post-template-default .entry-content>.alignwide,
+    .page-template-default .entry-content .alignwide .alignwide,
+    .post-template-default .entry-content .alignwide .alignwide,
     .wp-block-gallery.alignwide {
         width: 120%;
         max-width: 1368px;
@@ -2023,9 +2025,14 @@ hr {
         margin-right: -10%;
     }
 
+    .page-template-default .entry-content .alignwide,
+    .post-template-default .entry-content .alignwide {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .page-template-default .entry-content .alignfull,
-    .wp-block[data-type="core/cover"][data-align="full"],
-    .page-template-default .entry-content .alignwide .alignwide {
+    .wp-block[data-type="core/cover"][data-align="full"] {
         width: 100vw;
         max-width: 100vw;
         margin-left: calc((-100vw + 100%) / 2);
@@ -3452,7 +3459,8 @@ label {
 }
 
 .wp-block-search label,
-.widget-area .widget_product_search label {
+.widget-area .widget_product_search label,
+.wp-block-search__label {
     font-weight: bold;
 }
 
