@@ -6,7 +6,7 @@ Tested up to: 6.1.1
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.5.3
+Stable Tag: 2.5.4
 
 A blocks powered WordPress theme for bands, musicians, or DJs, based on the C9 Starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the Max Mega Menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.5.4 =
+Updated for WordPress 6.4.2 including updates to block patterns, Google fonts, bug fixes related to list items, cover blocks, and search blocks for better frontend/backend compatibility.
+
 = 2.5.3 =
 Fixes to list items and post content width in backend to match frontend more closely. Bug fix for some button alignments/gaps.
 

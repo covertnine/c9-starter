@@ -141,7 +141,7 @@ a.skip-link {
 
     .container-narrow,
     .page-container .entry-header,
-    .page-template-default .page .entry-content .container {
+    .page-template-default .page .entry-content .container:not(.alignwide) {
         width: 100%;
     }
 
@@ -159,7 +159,7 @@ a.skip-link {
     .container-narrow,
     .page-template-default .page .entry-content,
     .page-container .entry-header,
-    #full-width-page-wrapper>.container {
+    #full-width-page-wrapper>.container:not(.alignwide) {
         width: 100%;
         margin: 0px auto;
     }
@@ -1978,11 +1978,19 @@ hr {
     .page-template-default .entry-content .alignwide,
     .wp-block[data-type="core/cover"][data-align="wide"],
     .post-template-default .entry-content>.alignwide,
+    .page-template-default .entry-content .alignwide .alignwide,
+    .post-template-default .entry-content .alignwide .alignwide,
     .wp-block-gallery.alignwide {
         width: 120%;
         max-width: 1368px;
         margin-left: -10%;
         margin-right: -10%;
+    }
+
+    .page-template-default .entry-content .alignwide,
+    .post-template-default .entry-content .alignwide {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-template-default .entry-content .alignfull,
