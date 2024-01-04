@@ -470,6 +470,12 @@ a:focus {
         max-width: 1140px;
     }
 
+    .entry-content .wp-block-cover__inner-container:not(.alignwide):not(.alignfull) {
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     .page-template-default .entry-content .alignfull,
     .page-template-default .entry-content>.wp-block-columns.alignfull {
         width: 100vw;
@@ -1994,8 +2000,7 @@ hr {
     }
 
     .page-template-default .entry-content .alignfull,
-    .wp-block[data-type="core/cover"][data-align="full"],
-    .page-template-default .entry-content .alignwide .alignwide {
+    .wp-block[data-type="core/cover"][data-align="full"] {
         width: 100vw;
         max-width: 100vw;
         margin-left: calc((-100vw + 100%) / 2);
@@ -3383,7 +3388,7 @@ label {
     margin-bottom: 0px;
 }
 
-.wp-block-search label,
+.wp-block-search__label,
 .widget-area .widget_product_search label {
     font-weight: bold;
 }
