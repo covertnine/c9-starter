@@ -29,7 +29,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.5.4 =
-Updated for WordPress 6.4.2 including updates to block patterns, Google fonts, bug fixes related to list items, cover blocks, and search blocks for better frontend/backend compatibility.
+Updated for WordPress 6.4.2 including updates to block patterns, Google fonts, bug fixes related to list items, cover blocks wide alignment, and search blocks for better frontend/backend compatibility. Fix to some build tool steps. 
 
 = 2.5.3 =
 Fixes to list items and post content width in backend to match frontend more closely. Bug fix for some button alignments/gaps.

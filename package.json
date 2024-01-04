@@ -4,7 +4,7 @@
 	"description": "WordPress C9 Theme",
 	"main": "index.js",
 	"scripts": {
-		"start": "gulp watch"
+		"start": "NODE_OPTIONS=--openssl-legacy-provider gulp watch"
 	},
 	"engines": {
 		"npm": ">=2.1.8"
