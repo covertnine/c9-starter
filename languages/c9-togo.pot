@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: C9 Togo\n"
-"POT-Creation-Date: 2024-01-01 18:23-0500\n"
-"PO-Revision-Date: 2024-01-01 18:23-0500\n"
+"POT-Creation-Date: 2024-01-05 12:32-0600\n"
+"PO-Revision-Date: 2024-01-05 12:31-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -584,87 +584,87 @@ msgid ""
 "captures emails or phone numbers."
 msgstr ""
 
-#: client/inc/client-setup.php:197
-msgid "Watch Video"
-msgstr ""
-
-#: client/inc/client-setup.php:198
-msgid ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
-msgstr ""
-
-#: client/inc/client-setup.php:206
-msgid "Video Embed + YouTube Link"
-msgstr ""
-
-#: client/inc/client-setup.php:207
-msgid "Feature a video file you upload with a link to a YouTube video link."
-msgstr ""
-
-#: client/inc/client-setup.php:215
-msgid "Information Dialog Two Buttons"
-msgstr ""
-
-#: client/inc/client-setup.php:216
-msgid ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-msgstr ""
-
-#: client/inc/client-setup.php:224
+#: client/inc/client-setup.php:222
 msgid "Spotify Embed, Track Listing + Button"
 msgstr ""
 
-#: client/inc/client-setup.php:225
+#: client/inc/client-setup.php:223
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr ""
 
-#: client/inc/client-setup.php:233
+#: client/inc/client-setup.php:286
 msgid "Podcast Episode"
 msgstr ""
 
-#: client/inc/client-setup.php:234
+#: client/inc/client-setup.php:287
 msgid ""
 "Feature a show photo, audio embed file, and everything you need for a "
 "podcast episode post."
 msgstr ""
 
-#: client/inc/client-setup.php:244
+#: client/inc/client-setup.php:393
 msgid "Events Schedule"
 msgstr ""
 
-#: client/inc/client-setup.php:245
+#: client/inc/client-setup.php:394
 msgid ""
 "Add a bunch of dates and places and links to a table with a nice header and "
 "FAQ, cause events are coming back!"
 msgstr ""
 
-#: client/inc/client-setup.php:256
+#: client/inc/client-setup.php:537
 msgid "Article 450 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:257
+#: client/inc/client-setup.php:538
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:266
+#: client/inc/client-setup.php:646
 msgid "Article 600 Words"
 msgstr ""
 
-#: client/inc/client-setup.php:267
+#: client/inc/client-setup.php:647
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 msgstr ""
 
-#: client/inc/client-setup.php:276
+#: client/inc/client-setup.php:682
+msgid "Watch Video"
+msgstr ""
+
+#: client/inc/client-setup.php:683
+msgid ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+msgstr ""
+
+#: client/inc/client-setup.php:708
+msgid "Video Embed + YouTube Link"
+msgstr ""
+
+#: client/inc/client-setup.php:709
+msgid "Feature a video file you upload with a link to a YouTube video link."
+msgstr ""
+
+#: client/inc/client-setup.php:754
+msgid "Information Dialog Two Buttons"
+msgstr ""
+
+#: client/inc/client-setup.php:755
+msgid ""
+"Highlight important information, and link to two separate places with "
+"buttons."
+msgstr ""
+
+#: client/inc/client-setup.php:954
 msgid "C9 Togo Style Guide"
 msgstr ""
 
-#: client/inc/client-setup.php:277
+#: client/inc/client-setup.php:955
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
