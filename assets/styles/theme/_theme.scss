@@ -2025,10 +2025,10 @@ hr {
         margin-right: -10%;
     }
 
-    .page-template-default .entry-content .alignwide,
-    .post-template-default .entry-content .alignwide {
-        margin-left: auto;
-        margin-right: auto;
+    .page-template-default .entry-content .alignwide .alignwide,
+    .post-template-default .entry-content .alignwide .alignwide {
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     .page-template-default .entry-content .alignfull,

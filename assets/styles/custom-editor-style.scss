@@ -32,7 +32,7 @@ html :where(.editor-styles-wrapper) {
 /* post title */
 /****************************************************************************************/
 :root,
-body .editor-styles-wrapper {
+body .is-root-container {
     font-family: "helvetica neue", helvetica, sans-serif;
 }
 
@@ -42,7 +42,6 @@ body .editor-styles-wrapper {
 
 .editor-post-title__block .editor-post-title__input {
     padding: 16px;
-    font-family: $headings-font-family;
     font-weight: $headings-font-weight;
 }
 
@@ -105,7 +104,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
     }
 
     .editor-styles-wrapper .wp-block:not(.alignwide):not(.alignfull),
-    .editor-styles-wrapper .is-root-container>.wp-block:not(.alignwide):not(.alignfull) {
+    .editor-styles-wrapper .is-root-container>.wp-block:not(.alignwide):not(.alignfull):not(.wp-social-link) {
         max-width: 1140px;
         margin-right: auto;
         margin-left: auto;
