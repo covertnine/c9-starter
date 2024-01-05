@@ -1993,6 +1993,12 @@ hr {
         margin-right: -10%;
     }
 
+    .page-template-default .entry-content .alignwide .alignwide,
+    .post-template-default .entry-content .alignwide .alignwide {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     .page-template-default .entry-content .alignfull,
     .wp-block[data-type="core/cover"][data-align="full"] {
         width: 100vw;
