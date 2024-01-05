@@ -1,14 +1,16 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2022-10-20 18:06-0500\n"
-"PO-Revision-Date: 2022-10-20 18:08-0500\n"
+"POT-Creation-Date: 2024-01-04 17:42-0600\n"
+"PO-Revision-Date: 2024-01-04 17:42-0600\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -16,8 +18,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: en_US\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
@@ -506,104 +506,39 @@ msgstr "Profile"
 msgid "Posts by"
 msgstr "Posts by"
 
-#: client/inc/client-setup.php:36
-msgctxt "C9 Starter Content Logo"
-msgid "C9 Starter Logo"
-msgstr "C9 Starter Logo"
-
-#: client/inc/client-setup.php:48
-msgid "About"
-msgstr "About"
-
-#: client/inc/client-setup.php:54
-msgid "Setup"
-msgstr "Setup"
-
-#: client/inc/client-setup.php:60
-msgid "Style Guide"
-msgstr "Style Guide"
-
-#: client/inc/client-setup.php:64
-msgid ""
-"This page will show all of the blog posts once you have populated your "
-"database with blog items."
-msgstr ""
-"This page will show all of the blog posts once you have populated your "
-"database with blog items."
-
-#: client/inc/client-setup.php:72
-msgid ""
-"A blocks-based WordPress Theme starter theme for musicians, events, small "
-"businesses, restaurants, dispensaries, and bloggers."
-msgstr ""
-"A blocks-based WordPress Theme starter theme for musicians, events, small "
-"businesses, restaurants, dispensaries, and bloggers."
-
-#: client/inc/client-setup.php:93 inc/setup.php:46
-msgid "Top Navigation Menu"
-msgstr "Top Navigation Menu"
-
-#: client/inc/client-setup.php:120
-msgid "Resources Menu"
-msgstr "Resources Menu"
-
-#: client/inc/client-setup.php:143
-msgid "Company Menu"
-msgstr "Company Menu"
-
-#: client/inc/client-setup.php:164
-msgid "WordPress Meta"
-msgstr "WordPress Meta"
-
-#: client/inc/client-setup.php:169
-msgid "About C9 Starter"
-msgstr "About C9 Starter"
-
-#: client/inc/client-setup.php:170
-msgid ""
-"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
-"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
-"toggles, and the responsive grid system that makes the theme look super "
-"duper."
-msgstr ""
-"Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme "
-"setup. The blocks plugin includes the custom WordPress blocks for tabs, "
-"toggles, and the responsive grid system that makes the theme look super "
-"duper."
-
-#: client/inc/client-setup.php:276
+#: client/inc/client-setup.php:90
 msgid "Light Color Text"
 msgstr "Light Color Text"
 
-#: client/inc/client-setup.php:284
+#: client/inc/client-setup.php:98
 msgid "Dark Color Text"
 msgstr "Dark Color Text"
 
-#: client/inc/client-setup.php:297
+#: client/inc/client-setup.php:111
 msgid "C9 All Patterns"
 msgstr "C9 All Patterns"
 
-#: client/inc/client-setup.php:301
-msgid "C9 Page Template"
-msgstr "C9 Page Template"
+#: client/inc/client-setup.php:115
+msgid "C9 Page Templates"
+msgstr "C9 Page Templates"
 
-#: client/inc/client-setup.php:305
+#: client/inc/client-setup.php:119
 msgid "C9 Video"
 msgstr "C9 Video"
 
-#: client/inc/client-setup.php:309
+#: client/inc/client-setup.php:123
 msgid "C9 Audio"
 msgstr "C9 Audio"
 
-#: client/inc/client-setup.php:313
+#: client/inc/client-setup.php:127
 msgid "C9 Article"
 msgstr "C9 Article"
 
-#: client/inc/client-setup.php:329
+#: client/inc/client-setup.php:188
 msgid "Coming Soon Opt-in"
 msgstr "Coming Soon Opt-in"
 
-#: client/inc/client-setup.php:330
+#: client/inc/client-setup.php:189
 msgid ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
@@ -611,51 +546,47 @@ msgstr ""
 "Start building your audience before you launch with a coming soon page that "
 "captures emails or phone numbers."
 
-#: client/inc/client-setup.php:338
-msgid "Watch Video"
-msgstr "Watch Video"
+#: client/inc/client-setup.php:516
+msgid "Artist Promo Links + Content"
+msgstr "Artist Promo Links + Content"
 
-#: client/inc/client-setup.php:339
+#: client/inc/client-setup.php:517
 msgid ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
+"A template for a list of links plus a few videos and embeds to promote music "
+"or video."
 msgstr ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
+"A template for a list of links plus a few videos and embeds to promote music "
+"or video."
 
-#: client/inc/client-setup.php:347
-msgid "Video Embed + YouTube Link"
-msgstr "Video Embed + YouTube Link"
+#: client/inc/client-setup.php:590
+msgid "Artist Promo Links"
+msgstr "Artist Promo Links"
 
-#: client/inc/client-setup.php:348
-msgid "Feature a video file you upload with a link to a YouTube video link."
-msgstr "Feature a video file you upload with a link to a YouTube video link."
+#: client/inc/client-setup.php:591
+msgid "A template for a list of links."
+msgstr "A template for a list of links."
 
-#: client/inc/client-setup.php:356
-msgid "Information Dialog Two Buttons"
-msgstr "Information Dialog Two Buttons"
+#: client/inc/client-setup.php:656
+msgid "Artist Promo Links Alt"
+msgstr "Artist Promo Links Alt"
 
-#: client/inc/client-setup.php:357
-msgid ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-msgstr ""
-"Highlight important information, and link to two separate places with "
-"buttons."
+#: client/inc/client-setup.php:657
+msgid "An artist promo template for a list of links."
+msgstr "An artist promo template for a list of links."
 
-#: client/inc/client-setup.php:365
+#: client/inc/client-setup.php:693
 msgid "Spotify Embed, Track Listing + Button"
 msgstr "Spotify Embed, Track Listing + Button"
 
-#: client/inc/client-setup.php:366
+#: client/inc/client-setup.php:694
 msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
 msgstr "Embed a playlist, track listing or lyrics, and a button to open it up!"
 
-#: client/inc/client-setup.php:374
+#: client/inc/client-setup.php:757
 msgid "Podcast Episode"
 msgstr "Podcast Episode"
 
-#: client/inc/client-setup.php:375
+#: client/inc/client-setup.php:758
 msgid ""
 "Feature a show photo, audio embed file, and everything you need for a "
 "podcast episode post."
@@ -663,11 +594,11 @@ msgstr ""
 "Feature a show photo, audio embed file, and everything you need for a "
 "podcast episode post."
 
-#: client/inc/client-setup.php:385
+#: client/inc/client-setup.php:864
 msgid "Events Schedule"
 msgstr "Events Schedule"
 
-#: client/inc/client-setup.php:386
+#: client/inc/client-setup.php:865
 msgid ""
 "Add a bunch of dates and places and links to a table with a nice header and "
 "FAQ, cause events are coming back!"
@@ -675,11 +606,11 @@ msgstr ""
 "Add a bunch of dates and places and links to a table with a nice header and "
 "FAQ, cause events are coming back!"
 
-#: client/inc/client-setup.php:396
+#: client/inc/client-setup.php:1008
 msgid "Article 450 Words"
 msgstr "Article 450 Words"
 
-#: client/inc/client-setup.php:397
+#: client/inc/client-setup.php:1009
 msgid ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
@@ -687,11 +618,11 @@ msgstr ""
 "Get your article laid out before writing with a 450 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:405
+#: client/inc/client-setup.php:1117
 msgid "Article 600 Words"
 msgstr "Article 600 Words"
 
-#: client/inc/client-setup.php:406
+#: client/inc/client-setup.php:1118
 msgid ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
@@ -699,11 +630,43 @@ msgstr ""
 "Get your article laid out before writing with a 600 word placeholder and "
 "some imagery to tet you started."
 
-#: client/inc/client-setup.php:414
+#: client/inc/client-setup.php:1153
+msgid "Watch Video"
+msgstr "Watch Video"
+
+#: client/inc/client-setup.php:1154
+msgid ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+msgstr ""
+"Focus the page attention on a video button link, with an auto-playing video "
+"clip in the background."
+
+#: client/inc/client-setup.php:1179
+msgid "Video Embed + YouTube Link"
+msgstr "Video Embed + YouTube Link"
+
+#: client/inc/client-setup.php:1180
+msgid "Feature a video file you upload with a link to a YouTube video link."
+msgstr "Feature a video file you upload with a link to a YouTube video link."
+
+#: client/inc/client-setup.php:1225
+msgid "Information Dialog Two Buttons"
+msgstr "Information Dialog Two Buttons"
+
+#: client/inc/client-setup.php:1226
+msgid ""
+"Highlight important information, and link to two separate places with "
+"buttons."
+msgstr ""
+"Highlight important information, and link to two separate places with "
+"buttons."
+
+#: client/inc/client-setup.php:1433
 msgid "C9 Starter Style Guide"
 msgstr "C9 Starter Style Guide"
 
-#: client/inc/client-setup.php:415
+#: client/inc/client-setup.php:1434
 msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr "A style guide with type, buttons, and core blocks frequently used."
 
@@ -870,11 +833,11 @@ msgstr "Display search in footer"
 msgid "Hide or show the search form in the footer"
 msgstr "Hide or show the search form in the footer"
 
-#: inc/customizer.php:80 inc/customizer.php:133 inc/customizer.php:555
+#: inc/customizer.php:80 inc/customizer.php:133 inc/customizer.php:577
 msgid "Show"
 msgstr "Show"
 
-#: inc/customizer.php:81 inc/customizer.php:134 inc/customizer.php:556
+#: inc/customizer.php:81 inc/customizer.php:134 inc/customizer.php:578
 msgid "Hide"
 msgstr "Hide"
 
@@ -1003,35 +966,35 @@ msgstr "Yes"
 msgid "No, I will queue my own fonts."
 msgstr "No, I will queue my own fonts."
 
-#: inc/customizer.php:459
+#: inc/customizer.php:481
 msgid "Heading Font"
 msgstr "Heading Font"
 
-#: inc/customizer.php:460
+#: inc/customizer.php:482
 msgid "Select your heading font family."
 msgstr "Select your heading font family."
 
-#: inc/customizer.php:481
+#: inc/customizer.php:503
 msgid "Subheading Font"
 msgstr "Subheading Font"
 
-#: inc/customizer.php:482
+#: inc/customizer.php:504
 msgid "Select your subheading font family."
 msgstr "Select your subheading font family."
 
-#: inc/customizer.php:501
+#: inc/customizer.php:523
 msgid "Body Paragraph Font"
 msgstr "Body Paragraph Font"
 
-#: inc/customizer.php:502
+#: inc/customizer.php:524
 msgid "Select your base font family."
 msgstr "Select your base font family."
 
-#: inc/customizer.php:522
+#: inc/customizer.php:544
 msgid "Fade-in custom fonts as they download"
 msgstr "Fade-in custom fonts as they download"
 
-#: inc/customizer.php:523
+#: inc/customizer.php:545
 msgid ""
 "Select this if you notice a flash of the default font as the custom fonts "
 "download the first time a user visits the site."
@@ -1039,11 +1002,11 @@ msgstr ""
 "Select this if you notice a flash of the default font as the custom fonts "
 "download the first time a user visits the site."
 
-#: inc/customizer.php:531
+#: inc/customizer.php:553
 msgid "Posts"
 msgstr "Posts"
 
-#: inc/customizer.php:532
+#: inc/customizer.php:554
 msgid ""
 "These settings control whether side bars show up on single post, posts, and "
 "archive page templates, as well as author name and link on single post "
@@ -1053,27 +1016,27 @@ msgstr ""
 "archive page templates, as well as author name and link on single post "
 "templates. Changes will only be visible on those pages."
 
-#: inc/customizer.php:552
+#: inc/customizer.php:574
 msgid "Do you want to show or hide the author name on posts?"
 msgstr "Do you want to show or hide the author name on posts?"
 
-#: inc/customizer.php:576
+#: inc/customizer.php:598
 msgid "Display a sidebar on single posts?"
 msgstr "Display a sidebar on single posts?"
 
-#: inc/customizer.php:579 inc/customizer.php:604
+#: inc/customizer.php:601 inc/customizer.php:626
 msgid "No Sidebar"
 msgstr "No Sidebar"
 
-#: inc/customizer.php:580 inc/customizer.php:605 inc/widgets.php:90
+#: inc/customizer.php:602 inc/customizer.php:627 inc/widgets.php:90
 msgid "Left Sidebar"
 msgstr "Left Sidebar"
 
-#: inc/customizer.php:581 inc/customizer.php:606 inc/widgets.php:78
+#: inc/customizer.php:603 inc/customizer.php:628 inc/widgets.php:78
 msgid "Right Sidebar"
 msgstr "Right Sidebar"
 
-#: inc/customizer.php:601
+#: inc/customizer.php:623
 msgid "Display a sidebar on archive pages?"
 msgstr "Display a sidebar on archive pages?"
 
@@ -1118,6 +1081,10 @@ msgstr "Previous"
 #: inc/pagination.php:65 inc/pagination.php:67
 msgid "Next"
 msgstr "Next"
+
+#: inc/setup.php:46
+msgid "Top Navigation Menu"
+msgstr "Top Navigation Menu"
 
 #: inc/setup.php:115
 msgid "Small"
