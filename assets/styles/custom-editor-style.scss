@@ -96,7 +96,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
 }
 
 @media only screen and (min-width: 1200px) {
-    .editor-styles-wrapper .wp-block:not(.alignwide):not(.alignfull) {
+    .editor-styles-wrapper .wp-block:not(.alignwide):not(.alignfull):not(.wp-social-link) {
         max-width: 1140px;
         margin-right: auto;
         margin-left: auto;
