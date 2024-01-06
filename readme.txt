@@ -6,7 +6,7 @@ Tested up to: 6.4.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.6.9
+Stable Tag: 2.7.0
 
 C9 Starter is an agency-designed starter theme for the next generation of content creators with mobile-friendly designs, a single level dropdown menu, Gutenberg block patterns, and custom pagination from [COVERT NINE](https://www.covertnine.com).
 
@@ -28,6 +28,9 @@ Yes! Use the C9 Blocks plugin, which you are prompted to install after theme act
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+= 2.7.0 =
+Updated sample content included in theme. Fixed a few minor display issues with block patterns and wide aligned blocks.
+
 = 2.6.9 =
 New block pattern for a social link tree. Fix to alignwide cover block. Fix to some build tool steps. 
 
