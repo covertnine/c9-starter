@@ -9,7 +9,7 @@
  */
 
 $c9_header_search = get_theme_mod('c9_header_hide_search', false);
-
+$c9_header_tickets_link = get_theme_mod('riot_tickets', 'https://riotfest.org/chicago/tickets');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -60,7 +60,7 @@ $c9_header_search = get_theme_mod('c9_header_hide_search', false);
 							<div class="navbar-small-buttons">
 								<div class="header-buttons-mobile d-inline-block d-sm-none">
 									<!--<a href="/chicago/tickets" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-success-background-color">Tickets</a>-->
-									<a href="https://www.tixr.com/groups/riotfest/events/riot-fest-2024-87339" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-success-background-color">Tickets</a>
+									<a href="<?=$c9_header_tickets_link;?>" title="Riot Fest Chicago Tickets" class="btn btn-xs has-color-success-background-color">Tickets</a>
 								</div>
 								<div class="nav-rftv d-inline-block d-sm-none">
 									<a href="https://rftv.riotfest.org" class="watch-rfsn" title="Watch Riot Fest TV and the Riot Fest Sucks network"><span class="sr-only">Watch Riot Fest TV and the Riot Fest Sucks Network</span></a>
