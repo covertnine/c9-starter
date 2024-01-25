@@ -16,8 +16,8 @@ $cortex_date                    = date('m.j.y', strtotime($cortex_start));
 $cortex_time                    = date('g:iA', strtotime($cortex_start));
 $cortex_doors                   = get_field('time');
 $cortex_featured_img            = get_post_thumbnail_id();
-$cortex_featured_img_src        = wp_get_attachment_image_url($cortex_featured_img, 'riot-square-show-sm');
-$cortex_featured_img_srcset     = wp_get_attachment_image_srcset($cortex_featured_img, 'riot-square-show-big');
+$cortex_featured_img_src        = wp_get_attachment_image_url($cortex_featured_img, 'c9-post-rectangle-lg');
+$cortex_featured_img_srcset     = wp_get_attachment_image_srcset($cortex_featured_img, 'c9-post-rectangle-lg');
 $cortex_featured_img_alt        = get_post_meta($cortex_featured_img, '_wp_attachment_image_alt', true);
 $cortex_location_name           = get_field('location_name');
 $cortex_location_city_country   = get_field('location_city_country');
@@ -34,7 +34,7 @@ if (has_post_thumbnail()) {
 
     // grab src, srcset, sizes from featured image for Retina support
     $c9_img_id  = get_post_thumbnail_id($post->ID);
-    $c9_img_src = esc_url(wp_get_attachment_image_url($c9_img_id, 'riot-square-show-md'));
+    $c9_img_src = esc_url(wp_get_attachment_image_url($c9_img_id, 'c9-post-rectangle-lg'));
 }
 //set sidebar variables pending on theme options and sidebars being active
 if ($c9_blog_sidebar  != 'hide') {
