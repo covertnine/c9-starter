@@ -82,11 +82,11 @@ if (!empty($playlist_link)) {
                             <div class="c9-block-post-grid-byline entry-content p-0">
                                 <div class="show-day show-date row no-gutter no-gutters">
                                     <div class="col-8 col-sm-8 text-uppercase d-inline-block text-left font-weight-bold">
-                                        <span class="date-number h5"><?php echo $cortex_day; ?>
+                                        <span class="date-number h3"><?php echo $cortex_day; ?>
                                         </span>
                                     </div>
                                     <div class="col-4 col-sm-4 d-inline-block text-right">
-                                        <span class="show-time h5 font-weight-light"><?php echo $cortex_time; ?>
+                                        <span class="show-time h3 font-weight-light"><?php echo $cortex_time; ?>
                                         </span>
                                     </div>
                                 </div>
