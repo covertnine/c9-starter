@@ -33,6 +33,32 @@
 
 	<?php endwhile; // end of the loop.
 	?>
+	<?php
+
+$rf_mobile_background_image = esc_url(get_theme_mod('riot_bg_mobile', ''));
+
+// check for dark logo option if it's there show it
+if (!empty($rf_mobile_background_image)) {
+?>
+<div class="rf-mobile-bg"></div>
+	<style type="text/css">
+		@media only screen and (max-width: 667px) {
+
+			.rf-mobile-bg {
+				background: #ffffff url(<?php echo $rf_mobile_background_image; ?>) center no-repeat;
+				background-size:cover;
+				position:fixed;
+				width: 100vw;
+				height: 100vh;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				z-index:-1;
+			}
+		}
+	</style>
+<?php } ?>
 	<?php wp_footer(); ?>
 </body>
 
