@@ -470,8 +470,9 @@ a.skip-link {
     font-size: 62.5%;
 }
 
-body {
+body.theme-c9-starter {
     font-size: 1.6rem;
+    --wp--style--block-gap: 8px;
 }
 
 .entry-content>p,
@@ -3103,10 +3104,6 @@ screen and (max-height: 300px) {
 
 .wp-block-buttons .wp-block-button {
     display: block;
-}
-
-.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
-    width: 100%;
 }
 
 @media only screen and (max-width: 414px) {

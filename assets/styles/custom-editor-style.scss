@@ -138,6 +138,10 @@ body .editor-styles-wrapper,
 /* Backend editor widths setup and default max widths for Blocks not in C9 Grid Containers
 /****************************************************************************************/
 
+.theme-c9-starter .editor-styles-wrapper {
+    --wp--style--block-gap: 8px;
+}
+
 .block-editor-editor-skeleton__content .editor-styles-wrapper {
     margin: 0px auto;
     border-left: 1px solid #d6d6d6;
