@@ -2,7 +2,7 @@
 /**
  * Title: Coming Soon Placeholder
  * Slug: c9-starter/page-post-coming-soon
- * Categories: page
+ * Categories: page, banners
  * Keywords: starter
  * Block Types: core/post-content
  * Post Types: page, post
