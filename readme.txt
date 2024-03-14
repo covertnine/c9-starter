@@ -29,7 +29,7 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 = 2.7.1 =
-Fixes to custom button widths. Added starter patterns to new page/post modals.
+Fixes to custom button widths, cover blocks on posts in backend not being full width. Added starter patterns to new page/post modals.
 
 = 2.7.0 =
 Updated sample content included in theme. Fixed a few minor display issues with block patterns and wide aligned blocks.
