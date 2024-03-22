@@ -103,7 +103,7 @@ if (!empty($rf_mobile_background_image)) {
 ?>
 <div class="rf-mobile-bg"></div>
 	<style type="text/css">
-		@media only screen and (max-width: 667px) {
+		@media only screen and (max-width: 1024px) {
 
 			.rf-mobile-bg {
 				background: #ffffff url(<?php echo $rf_mobile_background_image; ?>) center no-repeat;
