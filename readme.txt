@@ -2,16 +2,16 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.9
-Tested up to: 6.4.2
+Tested up to: 6.4.3
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.3
+Stable Tag: 2.4.5
 
-C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering, local pickup and delivery through their WordPress website. Fully compatible with WordPress 5.5--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
+C9 Togo is a theme made for restaurants, catering companies, breweries, or any food and beverage concept that wants to offer online ordering, local pickup and delivery through their WordPress website. Fully compatible with WordPress 6--based on the [C9 Starter](https://c9.covertnine.com) theme that uses Bootstrap and [C9 Blocks](https://c9.covertnine.com).
 
 == Description ==
-A restaurant ordering and delivery theme for WordPress 5.5 that makes it easy to add online ordering for any food and beverage concept with local pickup/delivery options instead of just shipping. Uses of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin to simplify the creation of menus and landing pages for marketing campaigns. This theme uses custom markup for post and page navigation, and supports one tier of dropdown menu.
+A restaurant ordering and delivery theme for WordPress 6 that makes it easy to add online ordering for any food and beverage concept with local pickup/delivery options instead of just shipping. Uses of the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin to simplify the creation of menus and landing pages for marketing campaigns. This theme uses custom markup for post and page navigation, and supports one tier of dropdown menu.
 
 == Frequently Asked Questions ==
 
@@ -28,6 +28,12 @@ Yes! Use the [C9 Blocks](https://wordpress.org/plugins/c9-blocks) plugin, which 
 Yes, but only one tier of dropdowns are currently supported.
 
 == Changelog ==
+= 2.4.5 =
+Added block patterns to block modal plus bug fixes for WordPress 6.4.3.
+
+= 2.4.4 =
+Adjustments to block patterns, colors in block patterns, and some adjustments to alignments.
+
 = 2.4.3 =
 Fixed alignments for some full/wide elements in front/backend. Fix to search block and updated block pattern.
 

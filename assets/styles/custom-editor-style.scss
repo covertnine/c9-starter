@@ -5,6 +5,10 @@
     color: $primary;
 }
 
+.theme-c9-togo .editor-styles-wrapper {
+    --wp--style--block-gap: 8px;
+}
+
 body .editor-styles-wrapper {
     padding: 0px;
 }
