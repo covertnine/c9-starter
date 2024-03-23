@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Stream Album
- * Slug: c9-starter/text-stream-album
- * Categories: text, featured, call-to-action
+ * Slug: c9-togo/text-stream-album
+ * Categories: text, featured, call-to-action, post
  * Keywords: audio, image, button, heading
  * Viewport width: 1400
  */

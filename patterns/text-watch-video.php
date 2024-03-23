@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Watch Video
- * Slug: c9-starter/text-watch-video
- * Categories: text, featured, call-to-action, banners
+ * Slug: c9-togo/text-watch-video
+ * Categories: text, featured, call-to-action, banners, post
  * Keywords: video, button, heading
  * Viewport width: 1400
  */

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Article 500 Words
- * Slug: c9-starter/page-article-500
+ * Slug: c9-togo/page-article-500
  * Categories: page,post
  * Keywords: image,article,blog,starter
  * Block Types: core/post-content

@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Tour Schedule
- * Slug: c9-starter/text-tour-schedule
- * Categories: text, featured
+ * Slug: c9-togo/text-tour-schedule
+ * Categories: text, featured, post
  * Keywords: event, tour, schedule
  * Viewport width: 1400
  */

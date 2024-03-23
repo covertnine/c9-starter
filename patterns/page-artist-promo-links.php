@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Artist Promo Link Tree + Content
- * Slug: c9-starter/page-artist-promo-links
+ * Title: Promo Link Tree + Content
+ * Slug: c9-togo/page-artist-promo-links
  * Categories: page
- * Keywords: starter
+ * Keywords: starter,links
  * Block Types: core/post-content
  * Post Types: page, post
  * Viewport width: 970

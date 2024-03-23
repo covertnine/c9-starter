@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Artist Promo Link Tree Alt
- * Slug: c9-starter/hero-artist-link-tree-alt
+ * Title: Promo Link Tree Alt
+ * Slug: c9-togo/hero-artist-link-tree-alt
  * Categories: text, featured, headers, banners, page
- * Keywords: buttons, heading
+ * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page
  * Viewport width: 1400

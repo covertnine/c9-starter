@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Event Tour Schedule
- * Slug: c9-starter/page-events-schedule
+ * Slug: c9-togo/page-events-schedule
  * Categories: page
  * Keywords: starter
  * Block Types: core/post-content

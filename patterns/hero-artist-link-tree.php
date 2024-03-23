@@ -1,25 +1,25 @@
 <?php
 /**
- * Title: Artist Promo Link Tree
- * Slug: c9-starter/hero-artist-link-tree
+ * Title: Link Promo Tree
+ * Slug: c9-togo/hero-artist-link-tree
  * Categories: text, featured, headers, banners, page
- * Keywords: buttons, heading
+ * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page
  * Viewport width: 1400
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190621-alaska-vacation-207-2.jpg","id":2789,"dimRatio":60,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2789" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190621-alaska-vacation-207-2.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg","id":2789,"dimRatio":60,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2789" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 		<!-- /wp:spacer -->
 		
 		<!-- wp:image {"align":"center","id":3798,"width":"72px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-		<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
+		<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
 		<!-- /wp:image -->
 		
 		<!-- wp:heading {"textAlign":"center","level":1} -->
-		<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Artist Promo Tree</mark></h1>
+		<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Link Promo Tree</mark></h1>
 		<!-- /wp:heading -->
 		
 		<!-- wp:paragraph {"align":"center","fontSize":"small"} -->

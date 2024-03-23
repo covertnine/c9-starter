@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Stream Spotify
- * Slug: c9-starter/text-stream-spotify
- * Categories: text, featured, call-to-action
+ * Slug: c9-togo/text-stream-spotify
+ * Categories: text, featured, call-to-action, post
  * Keywords: audio, spotify, button, heading
  * Viewport width: 1400
  */
