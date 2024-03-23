@@ -1,15 +1,14 @@
 <?php
 /**
- * Title: Promo Link Tree Alt
+ * Title: Link Promo Tree Alt
  * Slug: c9-togo/hero-artist-link-tree-alt
- * Categories: text, featured, headers, banners, page
+ * Categories: text, featured, headers, banners, landingpage, posts, COVERT NINE
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
- * Post Types: page
+ * Post Types: page,post
  * Viewport width: 1400
  */
 ?>
-
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-alaska-vacation-66-2.jpg","id":2789,"isRepeated":true,"dimRatio":30,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
 <div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-alaska-vacation-66-2.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>

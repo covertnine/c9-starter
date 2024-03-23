@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190619-disney-alaska-vacation-51-2.jpg","id":2789,"hasParallax":true,"dimRatio":60,"overlayColor":"color-primary","minHeight":772,"minHeightUnit":"px","align":"full","c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-light has-parallax" style="min-height:772px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190619-disney-alaska-vacation-51-2.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"hasParallax":true,"dimRatio":60,"overlayColor":"color-primary","minHeight":772,"minHeightUnit":"px","align":"full","c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-light has-parallax" style="min-height:772px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
 <p class="has-text-align-center has-large-font-size"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">C9 Starter Article</mark></strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Block Pattern</mark></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
@@ -57,7 +57,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:image {"align":"right","id":2792,"sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image alignright size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190619-disney-alaska-vacation-171-1024x683.jpg" alt="" class="wp-image-2792"/><figcaption class="wp-element-caption"><strong>Photo is CC0 if you want <a href="https://www.flickr.com/photos/assaultshirts/50576944571/in/dateposted/">it</a>.</strong></figcaption></figure>
+<figure class="wp-block-image alignright size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg" alt="" class="wp-image-2792"/><figcaption class="wp-element-caption"><strong>Photo is CC0 if you want <a href="https://flickr.com/photos/assaultshirts/50357908037/">it</a>.</strong></figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3} -->
@@ -91,7 +91,7 @@
 
 <!-- wp:column {"width":"10%"} -->
 <div class="wp-block-column" style="flex-basis:10%"><!-- wp:image {"align":"center","id":3798,"width":"51px","height":"38px","sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="width:51px;height:38px"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

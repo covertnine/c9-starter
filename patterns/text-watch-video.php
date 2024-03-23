@@ -2,8 +2,10 @@
 /**
  * Title: Watch Video
  * Slug: c9-togo/text-watch-video
- * Categories: text, featured, call-to-action, banners, post
+ * Categories: text, featured, call-to-action, banners, posts
  * Keywords: video, button, heading
+ * Block Types: core/post-content
+ * Post Types: page, post
  * Viewport width: 1400
  */
 ?>

@@ -4,7 +4,9 @@
  * Slug: c9-togo/text-tour-schedule
  * Categories: text, featured, post
  * Keywords: event, tour, schedule
- * Viewport width: 1400
+ * Block Types: core/post-content
+ * Post Types: page, post
+* Viewport width: 1400
  */
 ?>
 

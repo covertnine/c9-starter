@@ -4,6 +4,8 @@
  * Slug: c9-togo/text-stream-spotify
  * Categories: text, featured, call-to-action, post
  * Keywords: audio, spotify, button, heading
+* Block Types: core/post-content
+ * Post Types: page, post
  * Viewport width: 1400
  */
 ?>

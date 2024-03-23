@@ -2,16 +2,16 @@
 /**
  * Title: Coming Soon Placeholder
  * Slug: c9-togo/page-post-coming-soon
- * Categories: page, banners
+ * Categories: page, banners, post
  * Keywords: starter
  * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 970
+ * Viewport width: 960
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190619-disney-alaska-vacation-51-2.jpg","id":2789,"dimRatio":80,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full"} -->
-<div class="wp-block-cover alignfull has-background-dim-80 has-color-primary-background-color has-background-dim" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190619-disney-alaska-vacation-51-2.jpg);min-height:995px"><div class="wp-block-cover__inner-container"><!-- wp:image {"align":"center","id":3798,"width":"42px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"dimRatio":80,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full"} -->
+<div class="wp-block-cover alignfull has-background-dim-80 has-color-primary-background-color has-background-dim" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg);min-height:995px"><div class="wp-block-cover__inner-container"><!-- wp:image {"align":"center","id":3798,"width":"42px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
 <figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:42px;height:auto"/></figure>
 <!-- /wp:image -->
 

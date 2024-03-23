@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Event Tour Schedule
+ * Title: Event Schedule
  * Slug: c9-togo/page-events-schedule
  * Categories: page
  * Keywords: starter
@@ -41,4 +41,4 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <div style="height:17px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"c9-starter/text-tour-schedule"} /-->
+<!-- wp:pattern {"slug":"c9-togo/text-tour-schedule"} /-->

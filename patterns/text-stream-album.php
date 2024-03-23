@@ -4,6 +4,8 @@
  * Slug: c9-togo/text-stream-album
  * Categories: text, featured, call-to-action, post
  * Keywords: audio, image, button, heading
+ * Block Types: core/post-content
+ * Post Types: page, post
  * Viewport width: 1400
  */
 ?>

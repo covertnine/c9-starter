@@ -2,10 +2,10 @@
 /**
  * Title: Link Promo Tree
  * Slug: c9-togo/hero-artist-link-tree
- * Categories: text, featured, headers, banners, page
+ * Categories: text, featured, headers, banners, page, landingpage, posts, COVERT NINE
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
- * Post Types: page
+ * Post Types: page,post
  * Viewport width: 1400
  */
 ?>
