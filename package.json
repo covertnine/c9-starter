@@ -78,13 +78,13 @@
 		"undescores-for-npm": "^1.0.0"
 	},
 	"devDependencies": {
+		"@babel/traverse": "^7.23.2",
 		"@fortawesome/fontawesome-free": "^5.14.0",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.1.0",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-react": "^6.24.1",
-		"@babel/traverse": "^7.23.2",
 		"browserify-sign": ">=4.2.2",
 		"del": "^3.0.0",
 		"eslint": "^5.16.0",
@@ -92,6 +92,7 @@
 		"eslint-loader": "^2.2.1",
 		"eslint-plugin-jquery": "^1.5.1",
 		"fast-xml-parser": ">=4.2.4",
+		"follow-redirects": "^1.15.6",
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-gzip": "^1.4.2",
