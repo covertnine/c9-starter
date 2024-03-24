@@ -6,7 +6,7 @@
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page,post
- * Viewport width: 1400
+ * Viewport width: 1140
  */
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg","id":2789,"dimRatio":60,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->

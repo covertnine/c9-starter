@@ -6,7 +6,7 @@
  * Keywords: audio, spotify, button, heading
 * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 1400
+ * Viewport width: 1140
  */
 ?>
 

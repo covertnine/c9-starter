@@ -6,7 +6,7 @@
  * Keywords: starter,links
  * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 970
+ * Viewport width: 1140
  */
 
 ?>

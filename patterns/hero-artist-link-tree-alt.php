@@ -6,11 +6,11 @@
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page,post
- * Viewport width: 1400
+ * Viewport width: 1140
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg","id":2789,"isRepeated":true,"dimRatio":30,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg","id":2789,"isRepeated":true,"dimRatio":70,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
