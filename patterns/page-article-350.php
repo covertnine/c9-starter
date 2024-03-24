@@ -91,7 +91,7 @@
 
 <!-- wp:column {"width":"10%"} -->
 <div class="wp-block-column" style="flex-basis:10%"><!-- wp:image {"align":"center","id":3798,"width":"51px","height":"38px","sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

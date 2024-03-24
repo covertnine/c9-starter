@@ -9,13 +9,13 @@
  * Viewport width: 1400
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-alaska-vacation-66-2.jpg","id":2789,"isRepeated":true,"dimRatio":30,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-alaska-vacation-66-2.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg","id":2789,"isRepeated":true,"dimRatio":30,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:image {"align":"center","id":3798,"width":"72px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->

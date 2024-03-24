@@ -12,7 +12,7 @@
 ?>
 
 <!-- wp:image {"align":"full","id":1908,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image alignfull size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/widescreen-homepage-hero-1920x1200-v2.jpg" alt="" class="wp-image-1908"/><figcaption class="wp-element-caption"><strong>Full Width Image Block</strong> C9 Logo + Photo CC0.</figcaption></figure>
+<figure class="wp-block-image alignfull size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/chips-guac-salsa.jpg" alt="" class="wp-image-1908"/><figcaption class="wp-element-caption"><strong>Full Width Image Block</strong> C9 Logo + Photo CC0.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:spacer {"height":"57px"} -->
@@ -86,7 +86,7 @@
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":2799,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190621-disney-alaska-vacation-122-2-1024x683.jpg" alt="" class="wp-image-2799"/><figcaption class="wp-element-caption">Photo Caption</figcaption></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/chicken-wings.jpg" alt="" class="wp-image-2799"/><figcaption class="wp-element-caption">Photo Caption</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"dropCap":true,"fontSize":"medium"} -->
@@ -102,7 +102,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"align":"center","id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

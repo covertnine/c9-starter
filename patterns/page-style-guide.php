@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-disney-alaska-vacation-66-2.jpg","id":2805,"dimRatio":70,"minHeight":611,"minHeightUnit":"px","align":"full","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|70"}}},"className":"is-light","c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-light" style="margin-bottom:var(--wp--preset--spacing--70);min-height:611px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2805" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190622-disney-alaska-vacation-66-2.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"textColor":"color-light","fontSize":"huge"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/tacos.jpg","id":2805,"dimRatio":70,"minHeight":611,"minHeightUnit":"px","align":"full","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|70"}}},"className":"is-light","c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-light" style="margin-bottom:var(--wp--preset--spacing--70);min-height:611px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2805" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/tacos.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"textColor":"color-light","fontSize":"huge"} -->
 <h1 class="wp-block-heading has-text-align-center has-color-light-color has-text-color has-huge-font-size"><mark style="background-color:rgba(0, 0, 0, 0);color:#fbfbfb" class="has-inline-color"><strong>Know where you're going?</strong><br>C9 Helper Style Guide</mark></h1>
 <!-- /wp:heading -->
 

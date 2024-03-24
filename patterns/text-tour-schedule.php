@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Tour Schedule
+ * Title: Event Schedule
  * Slug: c9-togo/text-tour-schedule
  * Categories: text, featured, post
  * Keywords: event, tour, schedule
  * Block Types: core/post-content
  * Post Types: page, post
-* Viewport width: 1400
+* Viewport width: 1200
  */
 ?>
 
