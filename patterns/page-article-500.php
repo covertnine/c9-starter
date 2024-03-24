@@ -6,7 +6,7 @@
  * Keywords: image,article,blog,starter
  * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 1140
+ * Viewport width: 1200
  */
 
 ?>
@@ -85,8 +85,8 @@
 
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":2799,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/chicken-wings.jpg" alt="" class="wp-image-2799"/><figcaption class="wp-element-caption">Photo Caption</figcaption></figure>
+<div class="wp-block-column"><!-- wp:image {"id":2797,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot-1024x683.jpg" alt="" class="wp-image-2797"/><figcaption class="wp-element-caption"><strong>Photo Caption</strong></figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"dropCap":true,"fontSize":"medium"} -->
@@ -98,17 +98,17 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">Now go make your own theme!</p>
+<p class="">Now go make your own!</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"align":"center","id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798"/></figure>
+<!-- wp:image {"align":"center","id":3798,"width":"100px","height":"80px","scale":"cover","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/togo__Pointing-1-300x198.png" alt="" class="wp-image-3798" style="object-fit:cover;width:100px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":2797,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/20190621-disney-alaska-vacation-58-2-1024x683.jpg" alt="" class="wp-image-2797"/><figcaption class="wp-element-caption"><strong>Photo Caption</strong></figcaption></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot-1024x683.jpg" alt="" class="wp-image-2797"/><figcaption class="wp-element-caption"><strong>Photo Caption</strong></figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->

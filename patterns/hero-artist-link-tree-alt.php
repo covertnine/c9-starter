@@ -6,11 +6,12 @@
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page,post
- * Viewport width: 1140
+ * Viewport width: 1200
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg","id":2789,"isRepeated":true,"dimRatio":70,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/burger-sausauge-fries-msutard.jpg","id":2789,"isRepeated":true,"dimRatio":60,"overlayColor":"color-dark-gray","focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-dark-gray-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(https://c9togo.local/wp-content/themes/c9-togo/client/client-assets/img/burger-sausauge-fries-msutard.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
@@ -19,7 +20,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Artist Promo Tree</mark></h1>
+<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Link Promo Tree Alt</mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
@@ -32,7 +33,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"vertical"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|80"}}}} -->
 <div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:button {"width":50,"style":{"color":{"background":"#141414"}}} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-background wp-element-button" href="#" style="background-color:#141414">Stream Album</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-background wp-element-button" href="#" style="background-color:#141414">Stream Podcast</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"textColor":"color-light","width":50,"className":"is-style-outline"} -->

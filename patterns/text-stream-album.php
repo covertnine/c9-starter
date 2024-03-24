@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Stream Album
+ * Title: Stream Podcast
  * Slug: c9-togo/text-stream-album
  * Categories: text, featured, call-to-action, post
  * Keywords: audio, image, button, heading
  * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 1140
+ * Viewport width: 1200
  */
 ?>
 
@@ -14,7 +14,7 @@
 <div class="wp-block-columns has-background" id="stream-album" style="background-color:#f3f3f3;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
-<h1 class="wp-block-heading has-text-align-center has-large-font-size">♫ Listen to the new single ♫<br>Stream-Me-Please.mp3</h1>
+<h1 class="wp-block-heading has-text-align-center has-large-font-size">Stream Podcast<br>Stream-Me-Please.mp3</h1>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"opacity":"css"} -->
@@ -53,7 +53,7 @@
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"id":1975,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/c9-album-b.jpg" alt="" class="wp-image-1975"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot-1024x683.jpg" alt="" class="wp-image-1975"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:audio {"id":1974} -->

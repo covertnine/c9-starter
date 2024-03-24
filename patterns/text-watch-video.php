@@ -6,7 +6,7 @@
  * Keywords: video, button, heading
  * Block Types: core/post-content
  * Post Types: page, post
- * Viewport width: 1140
+ * Viewport width: 960
  */
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/video/c9-starter-templates-clip.mp4","id":3697,"dimRatio":80,"overlayColor":"color-primary","backgroundType":"video","minHeight":995,"minHeightUnit":"px","align":"full","layout":{"type":"constrained","contentSize":"1140px"},"c9ContainerWidth":""} -->

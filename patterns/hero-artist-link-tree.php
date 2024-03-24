@@ -6,7 +6,7 @@
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page,post
- * Viewport width: 1140
+ * Viewport width: 1200
  */
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg","id":2789,"dimRatio":60,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
@@ -31,12 +31,12 @@
 		<!-- /wp:spacer -->
 		
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"vertical"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|80"}}}} -->
-		<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:button {"backgroundColor":"color-light","width":50,"style":{"color":{"text":"#181818"},"elements":{"link":{"color":{"text":"#181818"}}}}} -->
-		<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-color-light-background-color has-text-color has-background has-link-color wp-element-button" href="#stream-album" style="color:#181818">Stream Album</a></div>
+		<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:button {"backgroundColor":"color-light","width":50,"style":{"color":{"text":"#ffffff"},"elements":{"link":{"color":{"text":"#181818"}}}}} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-color-light-background-color has-text-color has-background has-link-color wp-element-button" href="#stream-album" style="color:#ffffff">Stream Podcast</a></div>
 		<!-- /wp:button -->
 		
 		<!-- wp:button {"textColor":"color-light","width":50,"className":"is-style-outline"} -->
-		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color wp-element-button" href="#tour-dates">Tour Dates</a></div>
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color wp-element-button" href="#tour-dates">Event Dates</a></div>
 		<!-- /wp:button -->
 		
 		<!-- wp:button {"backgroundColor":"c9music-dark-gray","textColor":"color-light","width":50,"className":"is-style-outline"} -->
