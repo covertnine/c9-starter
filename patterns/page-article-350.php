@@ -11,7 +11,7 @@
 
 ?><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"hasParallax":true,"dimRatio":60,"overlayColor":"color-primary","minHeight":772,"minHeightUnit":"px","align":"full","c9ContainerWidth":""} -->
 <div class="wp-block-cover alignfull is-light has-parallax" style="min-height:772px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
-<p class="has-text-align-center has-large-font-size"><strong><?php _e( 'C9 Togo Article or Blog Post', 'c9-togo' ); ?></strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php _e( 'Block Pattern', 'c9-togo' ); ?></mark></p>
+<p class="has-text-align-center has-large-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php _e( 'C9 Togo Article or Blog Post', 'c9-togo' ); ?> - <?php _e( 'Block Pattern', 'c9-togo' ); ?></mark></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 

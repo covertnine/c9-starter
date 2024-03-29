@@ -9,7 +9,8 @@
  * Viewport width: 1200
  */
 
-?><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg","id":1895,"dimRatio":30,"overlayColor":"c9music-black","focalPoint":{"x":"0.49","y":"0.67"},"minHeight":849,"minHeightUnit":"px","contentPosition":"bottom center","align":"full","className":"has-color-dark-background-color has-background-dim","c9ContainerWidth":"container-fluid","c9Align":"full"} -->
+?>
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg","id":1895,"dimRatio":30,"overlayColor":"c9music-black","focalPoint":{"x":"0.49","y":"0.67"},"minHeight":849,"minHeightUnit":"px","contentPosition":"bottom center","align":"full","className":"has-color-dark-background-color has-background-dim","c9ContainerWidth":"container-fluid","c9Align":"full"} -->
 <div class="wp-block-cover alignfull has-custom-content-position is-position-bottom-center has-color-dark-background-color has-background-dim alignfull container-fluid" style="min-height:849px"><span aria-hidden="true" class="wp-block-cover__background has-c-9-music-black-background-color has-background-dim-30 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-1895" alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/food-table-overview-shot.jpg" style="object-position:49% 67%" data-object-fit="cover" data-object-position="49% 67%"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"66.67%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.67%"><!-- wp:image {"id":1955,"width":"66px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized aligncenter"} -->
