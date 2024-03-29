@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: C9 Togo\n"
-"POT-Creation-Date: 2024-01-05 12:32-0600\n"
-"PO-Revision-Date: 2024-01-05 12:32-0600\n"
+"POT-Creation-Date: 2024-03-29 17:22-0500\n"
+"PO-Revision-Date: 2024-03-29 17:22-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -575,24 +575,24 @@ msgid "Green Gradient"
 msgstr "Green Gradient"
 
 #: client/inc/client-setup.php:108
-msgid "C9 All Patterns"
-msgstr "C9 All Patterns"
+msgid "C9 Togo All Patterns"
+msgstr "C9 Togo All Patterns"
 
 #: client/inc/client-setup.php:112
-msgid "C9 Page Templates"
-msgstr "C9 Page Templates"
+msgid "C9 Togo Page Templates"
+msgstr "C9 Togo Page Templates"
 
 #: client/inc/client-setup.php:116
-msgid "C9 Video"
-msgstr "C9 Video"
+msgid "C9 Togo Video"
+msgstr "C9 Togo Video"
 
 #: client/inc/client-setup.php:120
-msgid "C9 Audio"
-msgstr "C9 Audio"
+msgid "C9 Togo Audio"
+msgstr "C9 Togo Audio"
 
 #: client/inc/client-setup.php:124
-msgid "C9 Article"
-msgstr "C9 Article"
+msgid "C9 Togo Article"
+msgstr "C9 Togo Article"
 
 #: client/inc/client-setup.php:185
 msgid "Coming Soon Opt-in"
@@ -712,7 +712,7 @@ msgid "Deliver to different address?"
 msgstr "Deliver to different address?"
 
 #: client/inc/header.php:53 footer.php:90 header.php:66 inc/extras.php:195
-#: searchform.php:10 searchform.php:14
+#: patterns/page-style-guide.php:31 searchform.php:10 searchform.php:14
 msgid "Search"
 msgstr "Search"
 
@@ -806,6 +806,8 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: inc/class-footer.php:69 inc/class-footer.php:71
+#: patterns/hero-artist-link-tree-alt.php:51
+#: patterns/hero-artist-link-tree.php:55
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -814,10 +816,14 @@ msgid "Pinterest"
 msgstr "Pinterest"
 
 #: inc/class-footer.php:89 inc/class-footer.php:91
+#: patterns/hero-artist-link-tree-alt.php:55
+#: patterns/hero-artist-link-tree.php:59
 msgid "Spotify"
 msgstr "Spotify"
 
 #: inc/class-footer.php:99 inc/class-footer.php:101
+#: patterns/hero-artist-link-tree-alt.php:47
+#: patterns/hero-artist-link-tree.php:51
 msgid "YouTube"
 msgstr "YouTube"
 
@@ -1227,6 +1233,643 @@ msgstr "Edit"
 msgid "Pages:"
 msgstr "Pages:"
 
+#: patterns/hero-artist-link-tree-alt.php:22
+msgid "Link Promo Tree Alt"
+msgstr "Link Promo Tree Alt"
+
+#: patterns/hero-artist-link-tree-alt.php:26
+msgid "\"Link tree\" style layout with button links"
+msgstr "\"Link tree\" style layout with button links"
+
+#: patterns/hero-artist-link-tree-alt.php:26
+msgid "a video background"
+msgstr "a video background"
+
+#: patterns/hero-artist-link-tree-alt.php:35
+#: patterns/hero-artist-link-tree.php:35 patterns/text-stream-album.php:16
+msgid "Stream Podcast"
+msgstr "Stream Podcast"
+
+#: patterns/hero-artist-link-tree-alt.php:39
+msgid "Tour Dates"
+msgstr "Tour Dates"
+
+#: patterns/hero-artist-link-tree-alt.php:43
+#: patterns/hero-artist-link-tree.php:43
+msgid "Tour Promo Video"
+msgstr "Tour Promo Video"
+
+#: patterns/hero-artist-link-tree-alt.php:59
+#: patterns/hero-artist-link-tree.php:63
+msgid "Apple Music"
+msgstr "Apple Music"
+
+#: patterns/hero-artist-link-tree-alt.php:63
+#: patterns/hero-artist-link-tree.php:67
+msgid "Merch"
+msgstr "Merch"
+
+#: patterns/hero-artist-link-tree.php:22
+msgid "Link Promo Tree"
+msgstr "Link Promo Tree"
+
+#: patterns/hero-artist-link-tree.php:26
+msgid "Advanced \"Link tree\" style layout with video sections + tour links"
+msgstr "Advanced \"Link tree\" style layout with video sections + tour links"
+
+#: patterns/hero-artist-link-tree.php:39
+msgid "Event Dates"
+msgstr "Event Dates"
+
+#: patterns/hero-artist-link-tree.php:47
+msgid "New Music Video"
+msgstr "New Music Video"
+
+#: patterns/page-article-350.php:14
+msgid "C9 Togo Article or Blog Post"
+msgstr "C9 Togo Article or Blog Post"
+
+#: patterns/page-article-350.php:14
+msgid "Block Pattern"
+msgstr "Block Pattern"
+
+#: patterns/page-article-350.php:21 patterns/page-article-500.php:24
+msgid "Author Name"
+msgstr "Author Name"
+
+#: patterns/page-article-350.php:21 patterns/page-article-500.php:24
+msgid "Author Title"
+msgstr "Author Title"
+
+#: patterns/page-article-350.php:25 patterns/page-article-500.php:28
+msgid "December 16th, 2084"
+msgstr "December 16th, 2084"
+
+#: patterns/page-article-350.php:35 patterns/page-article-500.php:38
+msgid ""
+"Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt "
+"praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor "
+"aliquam nulla facilisi."
+msgstr ""
+"Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt "
+"praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor "
+"aliquam nulla facilisi."
+
+#: patterns/page-article-350.php:39 patterns/page-article-500.php:42
+msgid "Paragraphs inside of columns"
+msgstr "Paragraphs inside of columns"
+
+#: patterns/page-article-350.php:39 patterns/page-article-500.php:42
+msgid ""
+"Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id "
+"leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla "
+"est ullamcorper eget nulla facilisi."
+msgstr ""
+"Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id "
+"leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla "
+"est ullamcorper eget nulla facilisi."
+
+#: patterns/page-article-350.php:43
+msgid ""
+"Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam "
+"quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat "
+"pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum "
+"varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci "
+"sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et "
+"malesuada fames."
+msgstr ""
+"Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam "
+"quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat "
+"pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum "
+"varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci "
+"sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et "
+"malesuada fames."
+
+#: patterns/page-article-350.php:47 patterns/page-article-500.php:46
+msgid "Orci eu lobortis elementum nibh tellus molestie."
+msgstr "Orci eu lobortis elementum nibh tellus molestie."
+
+#: patterns/page-article-350.php:51 patterns/page-article-500.php:51
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa."
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa."
+
+#: patterns/page-article-350.php:51 patterns/page-article-500.php:52
+msgid "No one actually said this--Tim"
+msgstr "No one actually said this--Tim"
+
+#: patterns/page-article-350.php:59
+msgid "Photo is CC0 if you want"
+msgstr "Photo is CC0 if you want"
+
+#: patterns/page-article-350.php:59
+msgid "it"
+msgstr "it"
+
+#: patterns/page-article-350.php:63 patterns/page-article-500.php:60
+msgid "Heading inside of article"
+msgstr "Heading inside of article"
+
+#: patterns/page-article-350.php:67 patterns/page-article-500.php:64
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt."
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt."
+
+#: patterns/page-article-350.php:71 patterns/page-article-500.php:68
+msgid ""
+"Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed "
+"pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla "
+"facilisi nullam vehicula ipsum a."
+msgstr ""
+"Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed "
+"pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla "
+"facilisi nullam vehicula ipsum a."
+
+#: patterns/page-article-350.php:75 patterns/page-article-500.php:72
+msgid ""
+"In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a "
+"erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis "
+"at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas "
+"congue quisque egestas diam."
+msgstr ""
+"In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a "
+"erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis "
+"at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas "
+"congue quisque egestas diam."
+
+#: patterns/page-article-350.php:79 patterns/page-article-500.php:76
+msgid ""
+"Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed "
+"vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. "
+"Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui "
+"sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus "
+"semper eget. Dictum sit amet justo donec."
+msgstr ""
+"Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed "
+"vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. "
+"Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui "
+"sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus "
+"semper eget. Dictum sit amet justo donec."
+
+#: patterns/page-article-350.php:87
+msgid "Now share this article or my boss will yell at me."
+msgstr "Now share this article or my boss will yell at me."
+
+#: patterns/page-article-500.php:14
+msgid "Full Width Image Block"
+msgstr "Full Width Image Block"
+
+#: patterns/page-article-500.php:14
+msgid "C9 Logo + Photo CC0."
+msgstr "C9 Logo + Photo CC0."
+
+#: patterns/page-article-500.php:88 patterns/page-article-500.php:110
+msgid "Photo Caption"
+msgstr "Photo Caption"
+
+#: patterns/page-article-500.php:92
+msgid ""
+"Bring complex landing pages to life in minutes from section + page templates "
+"or build pages from scratch using C9 Grid and C9 Post Grid blocks. But, you "
+"can't do that if you don't download C9 Blocks when you install the C9 Theme."
+msgstr ""
+"Bring complex landing pages to life in minutes from section + page templates "
+"or build pages from scratch using C9 Grid and C9 Post Grid blocks. But, you "
+"can't do that if you don't download C9 Blocks when you install the C9 Theme."
+
+#: patterns/page-article-500.php:96
+msgid ""
+"This layout uses core blocks from WordPress including columns, images, "
+"paragraphs, and more paragraphs!"
+msgstr ""
+"This layout uses core blocks from WordPress including columns, images, "
+"paragraphs, and more paragraphs!"
+
+#: patterns/page-article-500.php:100
+msgid "Now go make your own!"
+msgstr "Now go make your own!"
+
+#: patterns/page-article-500.php:114
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. Quam "
+"pellentesque nec nam aliquam sem. Ut diam quam nulla porttitor massa id "
+"neque aliquam vestibulum. Mauris augue neque gravida in fermentum et. Risus "
+"commodo viverra maecenas accumsan."
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. Quam "
+"pellentesque nec nam aliquam sem. Ut diam quam nulla porttitor massa id "
+"neque aliquam vestibulum. Mauris augue neque gravida in fermentum et. Risus "
+"commodo viverra maecenas accumsan."
+
+#: patterns/page-article-500.php:118
+msgid ""
+"Elit eget gravida cum sociis natoque penatibus. Ullamcorper a lacus "
+"vestibulum sed arcu non odio euismod lacinia. Nec sagittis aliquam malesuada "
+"bibendum arcu vitae elementum. Id cursus metus aliquam eleifend mi in nulla "
+"posuere."
+msgstr ""
+"Elit eget gravida cum sociis natoque penatibus. Ullamcorper a lacus "
+"vestibulum sed arcu non odio euismod lacinia. Nec sagittis aliquam malesuada "
+"bibendum arcu vitae elementum. Id cursus metus aliquam eleifend mi in nulla "
+"posuere."
+
+#: patterns/page-article-500.php:122
+msgid ""
+"Nec tincidunt praesent semper feugiat nibh sed pulvinar. Facilisi cras "
+"fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar "
+"proin gravida hendrerit lectus a."
+msgstr ""
+"Nec tincidunt praesent semper feugiat nibh sed pulvinar. Facilisi cras "
+"fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar "
+"proin gravida hendrerit lectus a."
+
+#: patterns/page-article-500.php:126
+msgid "Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a."
+msgstr "Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a."
+
+#: patterns/page-article-500.php:130
+msgid "Share with your bestie"
+msgstr "Share with your bestie"
+
+#: patterns/page-events-schedule.php:20
+msgid "Event – OF THE CENTURY"
+msgstr "Event – OF THE CENTURY"
+
+#: patterns/page-events-schedule.php:20
+msgid "told you we'd be back"
+msgstr "told you we'd be back"
+
+#: patterns/page-events-schedule.php:24
+msgid "↓ SCROLL FOR THE DATES AND LISTEN TO THE JAMS WHILE YOU DO!"
+msgstr "↓ SCROLL FOR THE DATES AND LISTEN TO THE JAMS WHILE YOU DO!"
+
+#: patterns/page-post-coming-soon.php:18
+msgid "Something Great is Coming Soon"
+msgstr "Something Great is Coming Soon"
+
+#: patterns/page-post-coming-soon.php:26
+msgid ""
+"Click the button below to get notified via email when we're up and running"
+msgstr ""
+"Click the button below to get notified via email when we're up and running"
+
+#: patterns/page-post-coming-soon.php:35
+msgid "Get Notifications"
+msgstr "Get Notifications"
+
+#: patterns/page-post-coming-soon.php:39
+msgid "Learn More"
+msgstr "Learn More"
+
+#: patterns/page-style-guide.php:14
+msgid "Know where you're going?"
+msgstr "Know where you're going?"
+
+#: patterns/page-style-guide.php:14
+msgid "C9 Helper Style Guide"
+msgstr "C9 Helper Style Guide"
+
+#: patterns/page-style-guide.php:19
+msgid "Download now"
+msgstr "Download now"
+
+#: patterns/page-style-guide.php:23
+msgid "Tutorial Videos"
+msgstr "Tutorial Videos"
+
+#: patterns/page-style-guide.php:31
+msgid "Or search through our archives"
+msgstr "Or search through our archives"
+
+#: patterns/page-style-guide.php:31
+msgid "How to design a signup page using C9 Blocks...."
+msgstr "How to design a signup page using C9 Blocks...."
+
+#: patterns/page-style-guide.php:38
+msgid ""
+"Three calls to action so your visitors can pick their lane, and what they "
+"want to see next."
+msgstr ""
+"Three calls to action so your visitors can pick their lane, and what they "
+"want to see next."
+
+#: patterns/page-style-guide.php:43
+msgid "Ask a question"
+msgstr "Ask a question"
+
+#: patterns/page-style-guide.php:50
+msgid "Sign up for a newsletter or hit the most popular category of your shop."
+msgstr ""
+"Sign up for a newsletter or hit the most popular category of your shop."
+
+#: patterns/page-style-guide.php:55
+msgid "Sign up for alerts"
+msgstr "Sign up for alerts"
+
+#: patterns/page-style-guide.php:62
+msgid ""
+"Consider your three most popular user paths and use those links in these "
+"three buttons."
+msgstr ""
+"Consider your three most popular user paths and use those links in these "
+"three buttons."
+
+#: patterns/page-style-guide.php:67 patterns/text-tour-schedule.php:68
+msgid "Buy Tickets"
+msgstr "Buy Tickets"
+
+#: patterns/page-style-guide.php:79
+msgid "C9 Core Blocks Typography"
+msgstr "C9 Core Blocks Typography"
+
+#: patterns/page-style-guide.php:85 patterns/page-style-guide.php:109
+msgid "Heading One"
+msgstr "Heading One"
+
+#: patterns/page-style-guide.php:89 patterns/page-style-guide.php:113
+msgid "Heading Two"
+msgstr "Heading Two"
+
+#: patterns/page-style-guide.php:93 patterns/page-style-guide.php:117
+msgid "Heading Three"
+msgstr "Heading Three"
+
+#: patterns/page-style-guide.php:97 patterns/page-style-guide.php:121
+msgid "Heading Four"
+msgstr "Heading Four"
+
+#: patterns/page-style-guide.php:101 patterns/page-style-guide.php:125
+msgid "Heading Five"
+msgstr "Heading Five"
+
+#: patterns/page-style-guide.php:105 patterns/page-style-guide.php:129
+msgid "Heading Six"
+msgstr "Heading Six"
+
+#: patterns/page-style-guide.php:135
+msgid "Small Font Paragraph."
+msgstr "Small Font Paragraph."
+
+#: patterns/page-style-guide.php:135
+msgid ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin. Ut enim ad minim veniam, quis nostrud exercitation ullamco "
+"laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in "
+"reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin. Ut enim ad minim veniam, quis nostrud exercitation ullamco "
+"laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in "
+"reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:139
+msgid ""
+"Pat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"Pat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:143
+msgid "Normal Font Paragraph."
+msgstr "Normal Font Paragraph."
+
+#: patterns/page-style-guide.php:143 patterns/page-style-guide.php:147
+msgid ""
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:147
+msgid "Medium Font Paragraph."
+msgstr "Medium Font Paragraph."
+
+#: patterns/page-style-guide.php:151 patterns/page-style-guide.php:155
+msgid "Large Font Paragraph."
+msgstr "Large Font Paragraph."
+
+#: patterns/page-style-guide.php:151
+msgid "Ut enim ad minim veniam, quis nostrud. "
+msgstr "Ut enim ad minim veniam, quis nostrud. "
+
+#: patterns/page-style-guide.php:155
+msgid "Ut enim ad minim veniam, quis. "
+msgstr "Ut enim ad minim veniam, quis. "
+
+#: patterns/page-style-guide.php:163
+msgid "Ordered List"
+msgstr "Ordered List"
+
+#: patterns/page-style-guide.php:167 patterns/page-style-guide.php:177
+msgid "List Item"
+msgstr "List Item"
+
+#: patterns/page-style-guide.php:167 patterns/page-style-guide.php:177
+msgid ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin."
+msgstr ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin."
+
+#: patterns/page-style-guide.php:173
+msgid "Unordered List"
+msgstr "Unordered List"
+
+#: patterns/page-style-guide.php:183
+msgid "Separators (HR)"
+msgstr "Separators (HR)"
+
+#: patterns/text-stream-album.php:16
+msgid "Stream-Me-Please.mp3"
+msgstr "Stream-Me-Please.mp3"
+
+#: patterns/text-stream-album.php:24
+msgid "If you haven't, we highly recommend installing the"
+msgstr "If you haven't, we highly recommend installing the"
+
+#: patterns/text-stream-album.php:24
+msgid "C9 Blocks"
+msgstr "C9 Blocks"
+
+#: patterns/text-stream-album.php:24
+msgid "and"
+msgstr "and"
+
+#: patterns/text-stream-album.php:24
+msgid "C9 Admin Dashboard Plugins"
+msgstr "C9 Admin Dashboard Plugins"
+
+#: patterns/text-stream-album.php:24
+msgid ""
+"For animations, and additional child theme features like a single page "
+"animated website, get on the C9 email list."
+msgstr ""
+"For animations, and additional child theme features like a single page "
+"animated website, get on the C9 email list."
+
+#: patterns/text-stream-album.php:29 patterns/text-stream-album.php:33
+#: patterns/text-stream-album.php:37
+msgid "Song Name"
+msgstr "Song Name"
+
+#: patterns/text-stream-album.php:29 patterns/text-stream-album.php:33
+#: patterns/text-stream-album.php:37
+msgid "Track Title"
+msgstr "Track Title"
+
+#: patterns/text-stream-album.php:47
+msgid "YouTube Video Pop"
+msgstr "YouTube Video Pop"
+
+#: patterns/text-stream-spotify.php:23
+msgid "Spotify Stream Block"
+msgstr "Spotify Stream Block"
+
+#: patterns/text-stream-spotify.php:28
+msgid "Track Listing Song Name"
+msgstr "Track Listing Song Name"
+
+#: patterns/text-stream-spotify.php:28
+msgid "Featuring someone"
+msgstr "Featuring someone"
+
+#: patterns/text-stream-spotify.php:32
+msgid "Under Control"
+msgstr "Under Control"
+
+#: patterns/text-stream-spotify.php:32
+msgid "Not Under Control"
+msgstr "Not Under Control"
+
+#: patterns/text-stream-spotify.php:36
+msgid "The October"
+msgstr "The October"
+
+#: patterns/text-stream-spotify.php:40
+msgid "Kids & Knives"
+msgstr "Kids & Knives"
+
+#: patterns/text-stream-spotify.php:40
+msgid "Savile Remix"
+msgstr "Savile Remix"
+
+#: patterns/text-stream-spotify.php:44
+msgid "Out of Season (Acoustic)"
+msgstr "Out of Season (Acoustic)"
+
+#: patterns/text-stream-spotify.php:48
+msgid "1981 (Demo)"
+msgstr "1981 (Demo)"
+
+#: patterns/text-stream-spotify.php:52
+msgid "The November"
+msgstr "The November"
+
+#: patterns/text-stream-spotify.php:58
+msgid "Listen on Spotify"
+msgstr "Listen on Spotify"
+
+#: patterns/text-tour-schedule.php:16
+msgid "C9"
+msgstr "C9"
+
+#: patterns/text-tour-schedule.php:16
+msgid "Events Block Pattern"
+msgstr "Events Block Pattern"
+
+#: patterns/text-tour-schedule.php:24
+msgid ""
+"COVERT NINE - The nine essentials ingredients for good digital marketing. "
+"Copywriting, Design, Development, SEO, PPC, Social Media, Email, Videos, "
+"Photograph"
+msgstr ""
+"COVERT NINE - The nine essentials ingredients for good digital marketing. "
+"Copywriting, Design, Development, SEO, PPC, Social Media, Email, Videos, "
+"Photograph"
+
+#: patterns/text-tour-schedule.php:32
+msgid "Tickets and on-sale information would be great in here."
+msgstr "Tickets and on-sale information would be great in here."
+
+#: patterns/text-tour-schedule.php:36
+msgid "Frequently asked questions would go great in here."
+msgstr "Frequently asked questions would go great in here."
+
+#: patterns/text-tour-schedule.php:40 patterns/text-tour-schedule.php:48
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra."
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra."
+
+#: patterns/text-tour-schedule.php:44
+msgid "All content editing is done inline."
+msgstr "All content editing is done inline."
+
+#: patterns/text-tour-schedule.php:52
+msgid "Have fun!"
+msgstr "Have fun!"
+
+#: patterns/text-tour-schedule.php:57
+msgid "GET TICKETS"
+msgstr "GET TICKETS"
+
+#: patterns/text-tour-schedule.php:61
+msgid "ASK TIRESOME QUESTIONS"
+msgstr "ASK TIRESOME QUESTIONS"
+
+#: patterns/text-tour-schedule.php:68
+msgid "Date"
+msgstr "Date"
+
+#: patterns/text-tour-schedule.php:68
+msgid "City"
+msgstr "City"
+
+#: patterns/text-tour-schedule.php:68
+msgid "Tickets"
+msgstr "Tickets"
+
+#: patterns/text-tour-schedule.php:68
+msgid "Coming soon!"
+msgstr "Coming soon!"
+
+#: patterns/text-watch-video.php:17
+msgid "Watch the video to learn more."
+msgstr "Watch the video to learn more."
+
+#: patterns/text-watch-video.php:21
+msgid ""
+"Watch the video below to learn how to build page templates with C9 Blocks"
+msgstr ""
+"Watch the video below to learn how to build page templates with C9 Blocks"
+
+#: patterns/text-watch-video.php:30
+msgid "Building Pages"
+msgstr "Building Pages"
+
 #. translators:
 #: search.php:31
 #, php-format
@@ -1248,11 +1891,11 @@ msgstr "https://togo.covertnine.com"
 #. Description of the plugin/theme
 msgid ""
 "C9 Togo is a block-driven restaurant ordering and delivery theme for "
-"WordPess 5 based on the C9 Starter theme that uses Bootstrap's responsive "
+"WordPess 5+ based on the C9 Starter theme that uses Bootstrap's responsive "
 "grid system and blocks"
 msgstr ""
 "C9 Togo is a block-driven restaurant ordering and delivery theme for "
-"WordPess 5 based on the C9 Starter theme that uses Bootstrap's responsive "
+"WordPess 5+ based on the C9 Starter theme that uses Bootstrap's responsive "
 "grid system and blocks"
 
 #. Author of the plugin/theme
