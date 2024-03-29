@@ -9,21 +9,20 @@
  * Viewport width: 1200
  */
 
-?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"hasParallax":true,"dimRatio":60,"overlayColor":"color-primary","minHeight":772,"minHeightUnit":"px","align":"full","c9ContainerWidth":""} -->
+?><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"hasParallax":true,"dimRatio":60,"overlayColor":"color-primary","minHeight":772,"minHeightUnit":"px","align":"full","c9ContainerWidth":""} -->
 <div class="wp-block-cover alignfull is-light has-parallax" style="min-height:772px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 has-parallax" style="background-position:50% 50%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
-<p class="has-text-align-center has-large-font-size"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">C9 Togo Article or Blog Post</mark></strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Block Pattern</mark></p>
+<p class="has-text-align-center has-large-font-size"><strong><?php _e( 'C9 Togo Article or Blog Post', 'c9-togo' ); ?></strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php _e( 'Block Pattern', 'c9-togo' ); ?></mark></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"15%"} -->
 <div class="wp-block-column" style="flex-basis:15%"><!-- wp:paragraph -->
-<p class=""><strong>Author Name</strong><br>Author Title</p>
+<p class=""><strong><?php _e( 'Author Name', 'c9-togo' ); ?></strong><br><?php _e( 'Author Title', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":6,"className":"has-has-color-dark-color has-text-color"} -->
-<h6 class="wp-block-heading has-has-color-dark-color has-text-color">December 16th, 2084</h6>
+<h6 class="wp-block-heading has-has-color-dark-color has-text-color"><?php _e( 'December 16th, 2084', 'c9-togo' ); ?></h6>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"opacity":"css"} -->
@@ -33,23 +32,23 @@
 
 <!-- wp:column {"width":"80%"} -->
 <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph {"dropCap":true} -->
-<p class="has-drop-cap">Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor aliquam nulla facilisi. </p>
+<p class="has-drop-cap"><?php _e( 'Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor aliquam nulla facilisi.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class=""><strong>Paragraphs inside of columns</strong>. Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. </p>
+<p class=""><strong><?php _e( 'Paragraphs inside of columns', 'c9-togo' ); ?></strong>. <?php _e( 'Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et malesuada fames.</p>
+<p class=""><?php _e( 'Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et malesuada fames.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">Orci eu lobortis elementum nibh tellus molestie. </p>
+<p class=""><?php _e( 'Orci eu lobortis elementum nibh tellus molestie.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:pullquote -->
-<figure class="wp-block-pullquote"><blockquote><p>Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris sit amet massa. </p><cite>No one actually said this--Tim</cite></blockquote></figure>
+<figure class="wp-block-pullquote"><blockquote><p><?php _e( 'Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris sit amet massa.', 'c9-togo' ); ?></p><cite><?php _e( 'No one actually said this--Tim', 'c9-togo' ); ?></cite></blockquote></figure>
 <!-- /wp:pullquote -->
 
 <!-- wp:spacer {"height":"48px"} -->
@@ -57,27 +56,27 @@
 <!-- /wp:spacer -->
 
 <!-- wp:image {"align":"right","id":2792,"sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image alignright size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg" alt="" class="wp-image-2792"/><figcaption class="wp-element-caption"><strong>Photo is CC0 if you want <a href="https://flickr.com/photos/assaultshirts/50357908037/">it</a>.</strong></figcaption></figure>
+<figure class="wp-block-image alignright size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg" alt="" class="wp-image-2792"/><figcaption class="wp-element-caption"><strong><?php _e( 'Photo is CC0 if you want', 'c9-togo' ); ?> <a href="https://flickr.com/photos/assaultshirts/50357908037/"><?php _e( 'it', 'c9-togo' ); ?></a>.</strong></figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Heading inside of article</h3>
+<h3 class="wp-block-heading"><?php _e( 'Heading inside of article', 'c9-togo' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p class="">Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. </p>
+<p class=""><?php _e( 'Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a.</p>
+<p class=""><?php _e( 'Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas congue quisque egestas diam. </p>
+<p class=""><?php _e( 'In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas congue quisque egestas diam.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p class="">Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. Dictum sit amet justo donec.</p>
+<p class=""><?php _e( 'Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. Dictum sit amet justo donec.', 'c9-togo' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"28px"} -->
@@ -85,7 +84,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><strong>Now share this article or my boss will yell at me.</strong></p>
+<p class="has-text-align-center"><strong><?php _e( 'Now share this article or my boss will yell at me.', 'c9-togo' ); ?></strong></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

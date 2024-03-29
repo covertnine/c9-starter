@@ -8,7 +8,6 @@
  * Post Types: page, post
  * Viewport width: 1200
  */
-
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg","id":2789,"dimRatio":80,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full"} -->
 <div class="wp-block-cover alignfull has-background-dim-80 has-color-primary-background-color has-background-dim" style="background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/build-burger-ingredients.jpg);min-height:995px"><div class="wp-block-cover__inner-container"><!-- wp:image {"align":"center","id":3798,"width":"42px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
@@ -16,7 +15,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Something Great is Coming Soon</mark></h1>
+<h1 class="has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php _e( 'Something Great is Coming Soon', 'c9-togo' ); ?></mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":60} -->
@@ -24,7 +23,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Click the button below to get notified via email when we're up and running</mark></p>
+<p class="has-text-align-center has-small-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php _e( 'Click the button below to get notified via email when we\'re up and running', 'c9-togo' ); ?></mark></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":10} -->
@@ -33,11 +32,11 @@
 
 <!-- wp:buttons {"align":"center"} -->
 <div class="wp-block-buttons aligncenter"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link">Get Notifications</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link"><?php _e( 'Get Notifications', 'c9-togo' ); ?></a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"textColor":"color-light","className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color">Learn More</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color"><?php _e( 'Learn More', 'c9-togo' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div>
 <!-- /wp:cover -->

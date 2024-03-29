@@ -14,11 +14,11 @@
 <div class="wp-block-group has-background" style="background-color:#ededed">
 
 <!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#222222"}}} -->
-<h1 class="wp-block-heading has-text-align-center has-text-color" style="color:#222222">Watch the video to learn more.</h1>
+<h1 class="wp-block-heading has-text-align-center has-text-color" style="color:#222222"><?php echo esc_html__('Watch the video to learn more.', 'c9-togo'); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"color-primary","fontSize":"small"} -->
-<p class="has-text-align-center has-color-primary-color has-text-color has-small-font-size">Watch the video below to learn how to build page templates with C9 Blocks</p>
+<p class="has-text-align-center has-color-primary-color has-text-color has-small-font-size"><?php echo esc_html__('Watch the video below to learn how to build page templates with C9 Blocks', 'c9-togo'); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"29px"} -->
@@ -27,7 +27,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8qyP5abkoe4">Building Pages</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8qyP5abkoe4"><?php echo esc_html__('Building Pages', 'c9-togo'); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div>
