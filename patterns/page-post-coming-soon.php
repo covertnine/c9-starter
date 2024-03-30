@@ -16,7 +16,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center"><?php esc_html_e( 'Something Great is Coming Soon', 'c9-starter' ); ?></h1>
+<h1 class="has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php esc_html_e( 'Something Great is Coming Soon', 'c9-starter' ); ?></mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":60} -->
@@ -24,7 +24,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Click the button below to get notified via email when we\'re up and running', 'c9-starter' ); ?></p>
+<p class="has-text-align-center has-small-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php esc_html_e( 'Click the button below to get notified via email when we\'re up and running', 'c9-starter' ); ?></mark></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":10} -->
