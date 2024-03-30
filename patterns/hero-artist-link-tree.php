@@ -19,7 +19,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php esc_html_e( 'Artist Promo Tree', 'c9-starter' ); ?></mark></h1>
+<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color"><?php esc_html_e( 'Promo Link Tree', 'c9-starter' ); ?></mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
