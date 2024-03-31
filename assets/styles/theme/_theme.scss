@@ -14,6 +14,7 @@ body {
     font-family: "helvetica neue",
         helvetica,
         sans-serif;
+    --wp--style--block-gap: 8px;
 }
 
 #page-wrapper,
@@ -3079,6 +3080,10 @@ screen and (max-height: 300px) {
 /****************************************************************************************/
 /* WordPress Gutenberg Buttons
 /****************************************************************************************/
+.wp-block-buttons-is-layout-flex {
+    gap: --wp--style--block-gap;
+}
+
 .btn,
 .btn:visited,
 .entry-content button,

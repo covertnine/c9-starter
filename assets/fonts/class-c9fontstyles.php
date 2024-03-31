@@ -165,7 +165,14 @@ font-family: var(--default-font);
 <?php if (!empty($heading_font)) { ?>
 	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
-<?php } ?>
+
+<?php } 		
+//adding line for input title on posts/pages since it's selector will ble different ?>
+}
+.edit-post-visual-editor__post-title-wrapper>h1 {
+	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
+}
+		
 } <?php
 
 		self::the_selectors('subheadings'); ?> {
