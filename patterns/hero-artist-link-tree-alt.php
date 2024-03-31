@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Link Promo Tree Alt
- * Slug: c9-starter/hero-artist-link-tree-alt
+ * Slug: c9-work/hero-artist-link-tree-alt
  * Categories: text, featured, headers, banners, landingpage, posts, COVERT NINE
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
@@ -9,8 +9,8 @@
  * Viewport width: 1200
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/man-transport-vehicle-industrial-machine-factory-1072797-pxhere.com.jpg","id":2789,"isRepeated":true,"dimRatio":30,"focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","gradient":"blush-light-purple","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
-<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim wp-block-cover__gradient-background has-background-gradient has-blush-light-purple-gradient-background"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/man-transport-vehicle-industrial-machine-factory-1072797-pxhere.com.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/man-transport-vehicle-industrial-machine-factory-1072797-pxhere.com.jpg","id":2789,"isRepeated":true,"dimRatio":70,"overlayColor":"color-black","focalPoint":{"x":0.52,"y":1},"minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull is-repeated" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-black-background-color has-background-dim-70 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 is-repeated" style="background-position:52% 100%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/man-transport-vehicle-industrial-machine-factory-1072797-pxhere.com.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
 <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 

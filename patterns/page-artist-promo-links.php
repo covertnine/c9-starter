@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Promo Link Tree + Content
- * Slug: c9-starter/page-artist-promo-links
+ * Slug: c9-work/page-artist-promo-links
  * Categories: page,posts,landingpage
  * Keywords: starter,links
  * Block Types: core/post-content

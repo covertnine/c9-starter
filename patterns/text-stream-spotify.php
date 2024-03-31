@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Stream Spotify
- * Slug: c9-starter/text-stream-spotify
+ * Slug: c9-work/text-stream-spotify
  * Categories: text, featured, call-to-action, post
  * Keywords: audio, spotify, button, heading
  * Block Types: core/post-content

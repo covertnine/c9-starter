@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Tour or Event Schedule
- * Slug: c9-starter/text-tour-schedule
+ * Slug: c9-work/text-tour-schedule
  * Categories: text, featured, post
  * Keywords: event, tour, schedule
  * Block Types: core/post-content

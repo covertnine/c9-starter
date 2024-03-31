@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Stream Album or Podcast
- * Slug: c9-starter/text-stream-album
+ * Slug: c9-work/text-stream-album
  * Categories: text, featured, call-to-action, post
  * Keywords: audio, image, button, heading
  * Block Types: core/post-content

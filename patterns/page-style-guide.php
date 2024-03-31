@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Style Guide
- * Slug: c9-starter/page-style-guide
+ * Slug: c9-work/page-style-guide
  * Categories: page, post, text
  * Keywords: starter
  * Block Types: core/post-content

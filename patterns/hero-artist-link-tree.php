@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Link Promo Tree
- * Slug: c9-starter/hero-artist-link-tree
+ * Slug: c9-work/hero-artist-link-tree
  * Categories: text, featured, headers, banners, page, landingpage, posts, COVERT NINE
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
