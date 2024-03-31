@@ -11,8 +11,8 @@
 
 ?>
 
-<!-- wp:pattern {"slug":"c9-starter/hero-artist-link-tree"} /-->
-<!-- wp:pattern {"slug":"c9-starter/text-watch-video"} /-->
-<!-- wp:pattern {"slug":"c9-starter/text-stream-album"} /-->
-<!-- wp:pattern {"slug":"c9-starter/text-stream-spotify"} /-->
-<!-- wp:pattern {"slug":"c9-starter/text-tour-schedule"} /-->
+<!-- wp:pattern {"slug":"c9-work/hero-artist-link-tree"} /-->
+<!-- wp:pattern {"slug":"c9-work/text-watch-video"} /-->
+<!-- wp:pattern {"slug":"c9-work/text-stream-album"} /-->
+<!-- wp:pattern {"slug":"c9-work/text-stream-spotify"} /-->
+<!-- wp:pattern {"slug":"c9-work/text-tour-schedule"} /-->

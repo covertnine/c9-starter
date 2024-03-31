@@ -26,9 +26,9 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:embed {"url":"https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw","type":"rich","providerNameSlug":"spotify","allowResponsive":false,"responsive":true,"className":""} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:embed {"url":"https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum","type":"rich","providerNameSlug":"spotify","allowResponsive":false,"responsive":true,"className":""} -->
 <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify"><div class="wp-block-embed__wrapper">
-https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
+https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum
 </div></figure>
 <!-- /wp:embed --></div>
 <!-- /wp:column --></div>
@@ -40,4 +40,4 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <div style="height:17px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:pattern {"slug":"c9-starter/text-tour-schedule"} /-->
+<!-- wp:pattern {"slug":"c9-work/text-tour-schedule"} /-->
