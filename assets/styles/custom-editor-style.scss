@@ -713,6 +713,10 @@ html :where(.editor-styles-wrapper) kbd {
     line-height: 1.1;
 }
 
+.editor-styles-wrapper .wp-block-heading [data-rich-text-placeholder] {
+    font-size: inherit;
+}
+
 .editor-styles-wrapper .h1.c9-txl,
 .editor-styles-wrapper h1.c9-txl {
     font-size: 8rem;
