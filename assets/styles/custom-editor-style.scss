@@ -29,6 +29,10 @@ html :where(.editor-styles-wrapper) {
         sans-serif;
 }
 
+.editor-styles-wrapper :where(body .is-layout-flex) {
+    gap: --wp--style--block-gap;
+}
+
 .editor-styles-wrapper .block-list-appender {
     margin-top: 0px;
     margin-bottom: 0px;

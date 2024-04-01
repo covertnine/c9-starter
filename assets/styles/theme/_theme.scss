@@ -16,6 +16,10 @@ body {
     --wp--style--block-gap: 8px;
 }
 
+:where(body .is-layout-flex) {
+    gap: --wp--style--block-gap;
+}
+
 #page-wrapper,
 .wrapper {
     padding: 0px;
@@ -3090,7 +3094,7 @@ screen and (max-height: 300px) {
 /* WordPress Gutenberg Buttons
 /****************************************************************************************/
 .wp-block-buttons-is-layout-flex {
-    gap: 8px;
+    gap: --wp--style--block-gap;
 }
 
 .btn,
@@ -3135,6 +3139,23 @@ screen and (max-height: 300px) {
     .c9 .woocommerce input.button {
         padding: 12px 15px;
         font-size: 1.2rem;
+    }
+
+    /* added for new button settings for 5.7 */
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-50:last-child,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-25:last-child,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-25,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+        width: calc(50% - .4em);
+        max-width: calc(50% - .4em);
+    }
+
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-75:last-child,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-100:last-child,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-75,
+    .wp-block-buttons>.wp-block-button.wp-block-button__width-100 {
+        width: calc(100% - .4em);
+        max-width: calc(100% - .4em);
     }
 }
 
