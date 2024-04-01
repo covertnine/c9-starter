@@ -166,7 +166,10 @@ font-family: var(--default-font);
 	font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
 	<?php if ($fadein_fonts) { ?> transition: color .2s; <?php } ?>
 <?php } ?>
-} <?php
+} .edit-post-visual-editor__post-title-wrapper>h1 {
+font-family: <?php echo esc_html($heading_font); ?>, helvetica, sans-serif;
+}
+<?php
 
 		self::the_selectors('subheadings'); ?> {
 font-family: var(--default-font);
@@ -183,6 +186,7 @@ font-family: var(--default-font);
 	} <?php
 		}
 	} //end render function
+
 
 	/**
 	 * Print typography selectors for headdings/subheadings/body, optionally prefixed
