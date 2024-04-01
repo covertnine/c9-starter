@@ -17,6 +17,12 @@ body.post-type-post .is-root-container {
     margin-right: auto;
 }
 
+body.block-editor-iframe__body.post-type-post .is-root-container {
+    max-width: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 html :where(.editor-styles-wrapper) {
     font-family: "helvetica neue",
         helvetica,
