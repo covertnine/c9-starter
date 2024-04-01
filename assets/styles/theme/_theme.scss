@@ -3093,8 +3093,9 @@ screen and (max-height: 300px) {
 /****************************************************************************************/
 /* WordPress Gutenberg Buttons
 /****************************************************************************************/
-.wp-block-buttons-is-layout-flex {
-    gap: --wp--style--block-gap;
+
+.wp-block-buttons.is-layout-flex.wp-block-buttons-is-layout-flex {
+    gap: 8px;
 }
 
 .btn,
