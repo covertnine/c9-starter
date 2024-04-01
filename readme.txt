@@ -6,7 +6,7 @@ Tested up to: 6.5
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.6
+Stable Tag: 2.4.7
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -32,6 +32,9 @@ The C9 Work theme includes the theme styling for the mega menu with it. After in
 If you use the default navigation, then only one level of drop down is supported, but if you activate the mega menu plugin, it supports multiple tiers of drop downs and mega menus with widgets and multiple lists of links.
 
 == Changelog ==
+
+= 2.4.7 =
+Fixing issue with custom fonts from declaration changes.
 
 = 2.4.6 =
 Updated markup for WordPress 6.5 with new block patterns in page/post modals, new translation files, some bug fixes in backend alignments
