@@ -34,6 +34,11 @@ html :where(.editor-styles-wrapper) {
     margin-bottom: 0px;
 }
 
+/* fixes block preview */
+.block-editor-block-patterns-list .block-editor-block-preview__container>.block-editor-block-preview__content iframe {
+    max-width: none;
+}
+
 /****************************************************************************************/
 /* Typography + font changes for editor only (frontend color is on body) */
 /****************************************************************************************/
