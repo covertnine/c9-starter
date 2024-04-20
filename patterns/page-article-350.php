@@ -2,7 +2,7 @@
 /**
  * Title: Article 350 Words
  * Slug: c9-starter/page-article-350
- * Categories: page, c9, landingpage, headers
+ * Categories: page, c9, landingpage, headers, media
  * Keywords: image, article, blog, starter
  * Block Types: core/post-content
  * Post Types: page, post

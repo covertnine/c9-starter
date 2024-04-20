@@ -2,7 +2,7 @@
 /**
  * Title: Link Promo Tree Alt
  * Slug: c9-starter/hero-artist-link-tree-alt
- * Categories: text, featured, headers, banners, landingpage, c9, video, audio
+ * Categories: text, featured, headers, banners, landingpage, c9, video, audio, media
  * Keywords: buttons, heading, links
  * Block Types: core/post-content
  * Post Types: page,post

@@ -2,7 +2,7 @@
 /**
  * Title: Promo Link Tree + Content
  * Slug: c9-starter/page-artist-promo-links
- * Categories: page, landingpage, c9, video, audio, headers
+ * Categories: page, landingpage, c9, video, audio, headers, media
  * Keywords: starter,links
  * Block Types: core/post-content
  * Post Types: page, post
