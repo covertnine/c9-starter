@@ -2,10 +2,10 @@
 /**
  * Title: Event Tour Schedule
  * Slug: c9-starter/page-events-schedule
- * Categories: page
- * Keywords: starter
+ * Categories: page, landingpage, c9
+ * Keywords: starter,schedule,event
  * Block Types: core/post-content
- * Post Types: page
+ * Post Types: page, post
  * Viewport width: 1200
  */
 ?>

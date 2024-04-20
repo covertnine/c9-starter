@@ -2,8 +2,8 @@
 /**
  * Title: Style Guide
  * Slug: c9-starter/page-style-guide
- * Categories: page, post, text
- * Keywords: starter
+ * Categories: page, text, landingpage, c9
+ * Keywords: starter, article
  * Block Types: core/post-content
  * Post Types: page, post
  * Viewport width: 1200
