@@ -29,6 +29,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.7.6 =
+New translations and bug fix for new cover block.
+
 = 2.7.5 =
 Fixes to alignwide cover blocks in admin and new block markup for some block patterns with WordPress 6.5.2
 
