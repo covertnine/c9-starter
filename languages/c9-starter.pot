@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: C9 Starter\n"
-"POT-Creation-Date: 2024-03-29 19:51-0500\n"
-"PO-Revision-Date: 2024-03-29 19:50-0500\n"
+"POT-Creation-Date: 2024-04-20 14:25-0500\n"
+"PO-Revision-Date: 2024-04-20 14:24-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,6 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -499,7 +498,7 @@ msgid "C9 All Patterns"
 msgstr ""
 
 #: client/inc/client-setup.php:115
-msgid "C9 Page Templates"
+msgid "C9 Page + Post Templates"
 msgstr ""
 
 #: client/inc/client-setup.php:119
@@ -508,130 +507,6 @@ msgstr ""
 
 #: client/inc/client-setup.php:123
 msgid "C9 Audio"
-msgstr ""
-
-#: client/inc/client-setup.php:127
-msgid "C9 Article"
-msgstr ""
-
-#: client/inc/client-setup.php:190
-msgid "Coming Soon Opt-in"
-msgstr ""
-
-#: client/inc/client-setup.php:191
-msgid ""
-"Start building your audience before you launch with a coming soon page that "
-"captures emails or phone numbers."
-msgstr ""
-
-#: client/inc/client-setup.php:513
-msgid "Artist Promo Links + Content"
-msgstr ""
-
-#: client/inc/client-setup.php:514
-msgid ""
-"A template for a list of links plus a few videos and embeds to promote music "
-"or video."
-msgstr ""
-
-#: client/inc/client-setup.php:583
-msgid "Artist Promo Links"
-msgstr ""
-
-#: client/inc/client-setup.php:584
-msgid "A template for a list of links."
-msgstr ""
-
-#: client/inc/client-setup.php:649
-msgid "Artist Promo Links Alt"
-msgstr ""
-
-#: client/inc/client-setup.php:650
-msgid "An artist promo template for a list of links."
-msgstr ""
-
-#: client/inc/client-setup.php:686
-msgid "Spotify Embed, Track Listing + Button"
-msgstr ""
-
-#: client/inc/client-setup.php:687
-msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
-msgstr ""
-
-#: client/inc/client-setup.php:750
-msgid "Podcast Episode"
-msgstr ""
-
-#: client/inc/client-setup.php:751
-msgid ""
-"Feature a show photo, audio embed file, and everything you need for a "
-"podcast episode post."
-msgstr ""
-
-#: client/inc/client-setup.php:857
-msgid "Events Schedule"
-msgstr ""
-
-#: client/inc/client-setup.php:858
-msgid ""
-"Add a bunch of dates and places and links to a table with a nice header and "
-"FAQ, cause events are coming back!"
-msgstr ""
-
-#: client/inc/client-setup.php:1001
-msgid "Article 450 Words"
-msgstr ""
-
-#: client/inc/client-setup.php:1002
-msgid ""
-"Get your article laid out before writing with a 450 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-
-#: client/inc/client-setup.php:1110
-msgid "Article 600 Words"
-msgstr ""
-
-#: client/inc/client-setup.php:1111
-msgid ""
-"Get your article laid out before writing with a 600 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-
-#: client/inc/client-setup.php:1146
-msgid "Watch Video"
-msgstr ""
-
-#: client/inc/client-setup.php:1147
-msgid ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
-msgstr ""
-
-#: client/inc/client-setup.php:1172
-msgid "Video Embed + YouTube Link"
-msgstr ""
-
-#: client/inc/client-setup.php:1173
-msgid "Feature a video file you upload with a link to a YouTube video link."
-msgstr ""
-
-#: client/inc/client-setup.php:1218
-msgid "Information Dialog Two Buttons"
-msgstr ""
-
-#: client/inc/client-setup.php:1219
-msgid ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-msgstr ""
-
-#: client/inc/client-setup.php:1418
-msgid "C9 Starter Style Guide"
-msgstr ""
-
-#: client/inc/client-setup.php:1419
-msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
 #. translators: %s: post title
@@ -1204,7 +1079,7 @@ msgid "Merch"
 msgstr ""
 
 #: patterns/hero-artist-link-tree.php:22
-msgid "Artist Promo Tree"
+msgid "Promo Link Tree"
 msgstr ""
 
 #: patterns/hero-artist-link-tree.php:26
@@ -1464,7 +1339,7 @@ msgid ""
 "three buttons."
 msgstr ""
 
-#: patterns/page-style-guide.php:68 patterns/text-tour-schedule.php:68
+#: patterns/page-style-guide.php:68
 msgid "Buy Tickets"
 msgstr ""
 
@@ -1667,18 +1542,6 @@ msgstr ""
 
 #: patterns/text-tour-schedule.php:61
 msgid "ASK TIRESOME QUESTIONS"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "Date"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "City"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "Tickets"
 msgstr ""
 
 #: patterns/text-watch-video.php:17
