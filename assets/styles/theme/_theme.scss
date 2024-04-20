@@ -2006,7 +2006,9 @@ hr {
     .page-template-containerwidthpage .entry-content .alignwide,
     .page-template-blank .entry-content .alignwide,
     .page-template-default .entry-content .alignwide,
+    .post-template-default .entry-content .alignwide,
     .wp-block[data-type="core/cover"][data-align="wide"],
+    .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block-cover.alignwide,
     .page-template-default .entry-content .alignwide .alignwide,
     .post-template-default .entry-content .alignwide .alignwide,
     .wp-block-gallery.alignwide {
