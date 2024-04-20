@@ -2,7 +2,7 @@
 /**
  * Title: Stream Album or Podcast
  * Slug: c9-work/text-stream-album
- * Categories: text, featured, call-to-action, post
+ * Categories: text, featured, call-to-action, post, c9, audio, media
  * Keywords: audio, image, button, heading
  * Block Types: core/post-content
  * Post Types: page, post

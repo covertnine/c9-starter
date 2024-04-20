@@ -2,7 +2,7 @@
 /**
  * Title: Stream Spotify
  * Slug: c9-work/text-stream-spotify
- * Categories: text, featured, call-to-action, post
+ * Categories: text, featured, call-to-action, post, audio, c9, media
  * Keywords: audio, spotify, button, heading
  * Block Types: core/post-content
  * Post Types: page, post

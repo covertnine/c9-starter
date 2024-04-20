@@ -2,7 +2,7 @@
 /**
  * Title: Watch Video
  * Slug: c9-work/text-watch-video
- * Categories: text, featured, call-to-action, banners, posts
+ * Categories: text, featured, call-to-action, banners, post, c9, video, media
  * Keywords: video, button, heading
  * Block Types: core/post-content
  * Post Types: page, post

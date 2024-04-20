@@ -2,7 +2,7 @@
 /**
  * Title: Article 500 Words
  * Slug: c9-work/page-article-500
- * Categories: page,post
+ * Categories: page, c9, landingpage, headers, media
  * Keywords: image,article,blog,starter
  * Block Types: core/post-content
  * Post Types: page, post
@@ -100,8 +100,8 @@
 <p class=""><?php esc_html_e( 'Now go make your own theme!', 'c9-work' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"align":"center","id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="width:51px;height:38px"/></figure>
+<!-- wp:image {"id":3798,"width":"82px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:82px;height:auto"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

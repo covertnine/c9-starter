@@ -33,6 +33,11 @@ html :where(.editor-styles-wrapper) {
     margin-bottom: 0px;
 }
 
+/* fixes block preview */
+.block-editor-block-patterns-list .block-editor-block-preview__container>.block-editor-block-preview__content iframe {
+    max-width: none;
+}
+
 /****************************************************************************************/
 /* post title */
 /****************************************************************************************/
@@ -171,8 +176,8 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
         margin-right: calc((-100vw + 100%) / 2);
     }
 
-    body.post-type-page .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block.wp-block-cover.container:where(:not(.alignleft):not(.alignright):not(.alignfull)),
-    body.post-type-post .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block.wp-block-cover.container:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    body.post-type-page .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block.wp-block-cover.container:where(:not(.alignleft):not(.alignright):not(.alignfull)).alignwide,
+    body.post-type-post .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block.wp-block-cover.container:where(:not(.alignleft):not(.alignright):not(.alignfull)).alignwide {
         width: 120%;
         margin-left: -10% !important;
         margin-right: -10% !important;
@@ -638,6 +643,12 @@ html :where(.editor-styles-wrapper) kbd {
         max-width: calc(100vw - 280px - 72px);
         margin-left: -58px;
         margin-right: -58px;
+    }
+
+    /* specific for WordPress 6.5.2 */
+    .post-type-post .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block-cover.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: -10% !important;
+        margin-right: -10% !important;
     }
 }
 

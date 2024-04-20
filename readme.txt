@@ -33,6 +33,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.4.9 =
+Updates to some block patterns and alignwide bug fix.
+
 = 2.4.8 =
 Fixes to button block on mobile.
 
