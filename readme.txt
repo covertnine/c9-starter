@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.9
-Tested up to: 6.5
+Tested up to: 6.5.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.7.4
+Stable Tag: 2.7.5
 
 C9 Starter is an agency-designed starter theme for the next generation of content creators with mobile-friendly designs, a single level dropdown menu, Gutenberg block patterns, and custom pagination from [COVERT NINE](https://www.covertnine.com).
 
@@ -29,8 +29,11 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.7.5 =
+Fixes to alignwide cover blocks in admin and new block markup for some block patterns with WordPress 6.5.2
+
 = 2.7.4 =
-Fix to button blocks on mobile
+Fix to button blocks on mobile.
 
 = 2.7.3 =
 Bug fix related to custom font display in backend and frontend.
