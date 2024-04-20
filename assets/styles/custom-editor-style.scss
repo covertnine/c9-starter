@@ -280,7 +280,7 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
     }
 
     /* specific for WordPress 6.5.2 */
-    .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block-cover.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    .post-type-post .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block-cover.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
         margin-left: -10% !important;
         margin-right: -10% !important;
     }
