@@ -2,7 +2,7 @@
 /**
  * Title: Event Schedule
  * Slug: c9-togo/page-events-schedule
- * Categories: page
+ * Categories: page, landingpage, c9, media
  * Keywords: starter
  * Block Types: core/post-content
  * Post Types: page

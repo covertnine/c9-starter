@@ -2,7 +2,7 @@
 /**
  * Title: Style Guide
  * Slug: c9-togo/page-style-guide
- * Categories: page,post
+ * Categories: page, text, landingpage, c9
  * Keywords: starter
  * Block Types: core/post-content
  * Post Types: page, post

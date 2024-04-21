@@ -2,7 +2,7 @@
 /**
  * Title: Article 350 Words
  * Slug: c9-togo/page-article-350
- * Categories: page,post
+ * Categories: page, c9, landingpage, headers, media
  * Keywords: image,article,blog,starter
  * Block Types: core/post-content
  * Post Types: page, post

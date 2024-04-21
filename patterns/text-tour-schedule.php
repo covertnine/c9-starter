@@ -2,7 +2,7 @@
 /**
  * Title: Event Schedule
  * Slug: c9-togo/text-tour-schedule
- * Categories: text, featured, post
+ * Categories: text, featured, post, c9, landingpage, call-to-action
  * Keywords: event, tour, schedule
  * Block Types: core/post-content
  * Post Types: page, post
