@@ -38,6 +38,11 @@ html :where(.editor-styles-wrapper) {
     margin-bottom: 0px;
 }
 
+/* fixes block preview */
+.block-editor-block-patterns-list .block-editor-block-preview__container>.block-editor-block-preview__content iframe {
+    max-width: none;
+}
+
 /****************************************************************************************/
 /* post title */
 /****************************************************************************************/
@@ -166,6 +171,12 @@ body.post-type-page .is-sidebar-opened .block-editor-editor-skeleton__content .e
         width: 100vw;
         margin-left: calc((-100vw + 100%) / 2);
         margin-right: calc((-100vw + 100%) / 2);
+    }
+
+    /* specific for WordPress 6.5.2 */
+    .post-type-post .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block-cover.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: -10% !important;
+        margin-right: -10% !important;
     }
 
     body.post-type-page .editor-styles-wrapper .block-editor-block-list__layout.is-root-container>.wp-block.wp-block-cover.container:where(:not(.alignleft):not(.alignright):not(.alignfull)),
