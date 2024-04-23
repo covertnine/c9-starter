@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Stream Album or Podcast
- * Slug: c9-starter/text-stream-album
- * Categories: text, featured, call-to-action, post
+ * Slug: c9-music/text-stream-album
+ * Categories: text, featured, call-to-action, post, c9, audio, media
  * Keywords: audio, image, button, heading
  * Block Types: core/post-content
  * Post Types: page, post
@@ -16,7 +16,7 @@
         <!-- wp:group -->
         <div class="wp-block-group">
             <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
-            <h1 class="wp-block-heading has-text-align-center has-large-font-size"><?php _e('♫ Listen to the new single ♫<br>Stream-Me-Please.mp3', 'c9-starter'); ?></h1>
+            <h1 class="wp-block-heading has-text-align-center has-large-font-size"><?php _e('♫ Listen to the new single ♫<br>Stream-Me-Please.mp3', 'c9-music'); ?></h1>
             <!-- /wp:heading -->
 
             <!-- wp:separator {"opacity":"css"} -->
@@ -24,21 +24,21 @@
             <!-- /wp:separator -->
 
             <!-- wp:paragraph {"align":"center","placeholder":"Content…","fontSize":"small"} -->
-            <p class="has-text-align-center has-small-font-size"><?php _e('If you haven\'t, we highly recommend installing the <a href="#">C9 Blocks</a> and <a href="#">C9 Admin Dashboard Plugins</a>. <strong>For animations, and additional child theme features like a single page animated website, get on the C9 email list.</strong>', 'c9-starter'); ?></p>
+            <p class="has-text-align-center has-small-font-size"><?php _e('If you haven\'t, we highly recommend installing the <a href="#">C9 Blocks</a> and <a href="#">C9 Admin Dashboard Plugins</a>. <strong>For animations, and additional child theme features like a single page animated website, get on the C9 email list.</strong>', 'c9-music'); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:list -->
             <ul class="">
                 <!-- wp:list-item -->
-                <li class=""><strong><strong><span class="has-inline-color has-color-secondary-background-color">✓</span></strong> <?php _e('Song Name - Track Title', 'c9-starter'); ?></strong></li>
+                <li class=""><strong><strong><span class="has-inline-color has-color-secondary-background-color">✓</span></strong> <?php _e('Song Name - Track Title', 'c9-music'); ?></strong></li>
                 <!-- /wp:list-item -->
 
                 <!-- wp:list-item -->
-                <li class=""><strong><span class="has-inline-color has-color-secondary-background-color">✓</span> <?php _e('Song Name - Track Title', 'c9-starter'); ?></strong></li>
+                <li class=""><strong><span class="has-inline-color has-color-secondary-background-color">✓</span> <?php _e('Song Name - Track Title', 'c9-music'); ?></strong></li>
                 <!-- /wp:list-item -->
 
                 <!-- wp:list-item -->
-                <li class=""><strong><span class="has-inline-color has-color-secondary-background-color">✓</span> <?php _e('Song Name - Track Title', 'c9-starter'); ?></strong></li>
+                <li class=""><strong><span class="has-inline-color has-color-secondary-background-color">✓</span> <?php _e('Song Name - Track Title', 'c9-music'); ?></strong></li>
                 <!-- /wp:list-item -->
             </ul>
             <!-- /wp:list -->
@@ -50,7 +50,7 @@
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
             <div class="wp-block-buttons">
                 <!-- wp:button -->
-                <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8qyP5abkoe4" target="_blank" rel="noreferrer noopener"><?php _e('YouTube Video Pop', 'c9-starter'); ?></a></div>
+                <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8qyP5abkoe4" target="_blank" rel="noreferrer noopener"><?php _e('YouTube Video Pop', 'c9-music'); ?></a></div>
                 <!-- /wp:button -->
             </div>
             <!-- /wp:buttons -->

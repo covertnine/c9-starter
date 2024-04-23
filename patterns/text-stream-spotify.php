@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Stream Spotify
- * Slug: c9-starter/text-stream-spotify
- * Categories: text, featured, call-to-action, post
+ * Slug: c9-music/text-stream-spotify
+ * Categories: text, featured, call-to-action, post, audio, c9, media
  * Keywords: audio, spotify, button, heading
  * Block Types: core/post-content
  * Post Types: page, post
@@ -26,37 +26,37 @@
     <!-- wp:column {"verticalAlignment":"center"} -->
     <div class="wp-block-column is-vertically-aligned-center">
         <!-- wp:heading {"textAlign":"center","level":5} -->
-        <h5 class="wp-block-heading has-text-align-center"><?php _e('Spotify Stream Block', 'c9-starter'); ?></h5>
+        <h5 class="wp-block-heading has-text-align-center"><?php _e('Spotify Stream Block', 'c9-music'); ?></h5>
         <!-- /wp:heading -->
 
         <!-- wp:list -->
         <ul>
             <!-- wp:list-item -->
-            <li><?php _e('Track Listing Song Name<br><strong>Featuring someone</strong>', 'c9-starter'); ?></li>
+            <li><?php _e('Track Listing Song Name<br><strong>Featuring someone</strong>', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('Under Control<br><strong>Not Under Control</strong>', 'c9-starter'); ?></li>
+            <li><?php _e('Under Control<br><strong>Not Under Control</strong>', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('The October', 'c9-starter'); ?></li>
+            <li><?php _e('The October', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('Kids &amp; Knives<br><strong>Savile Remix</strong>', 'c9-starter'); ?></li>
+            <li><?php _e('Kids &amp; Knives<br><strong>Savile Remix</strong>', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('Out of Season (Acoustic)', 'c9-starter'); ?></li>
+            <li><?php _e('Out of Season (Acoustic)', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('1981 (Demo)', 'c9-starter'); ?></li>
+            <li><?php _e('1981 (Demo)', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
 
             <!-- wp:list-item -->
-            <li><?php _e('The November', 'c9-starter'); ?></li>
+            <li><?php _e('The November', 'c9-music'); ?></li>
             <!-- /wp:list-item -->
         </ul>
         <!-- /wp:list -->
@@ -65,7 +65,7 @@
         <div class="wp-block-buttons">
             <!-- wp:button {"textColor":"color-success","style":{"border":{"radius":"25px"}},"className":"is-style-outline"} -->
             <div class="wp-block-button is-style-outline">
-                <a class="wp-block-button__link has-color-success-color has-text-color wp-element-button" href="https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ" style="border-radius:25px"><?php _e('Listen on Spotify', 'c9-starter'); ?></a>
+                <a class="wp-block-button__link has-color-success-color has-text-color wp-element-button" href="https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ" style="border-radius:25px"><?php _e('Listen on Spotify', 'c9-music'); ?></a>
             </div>
             <!-- /wp:button -->
         </div>
