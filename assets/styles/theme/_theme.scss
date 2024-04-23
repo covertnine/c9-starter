@@ -1096,6 +1096,12 @@ a:focus {
     line-height: 1.1;
 }
 
+.entry-footer .cat-links,
+.entry-footer .tags-links {
+    margin-bottom: 20px;
+    display: block;
+}
+
 /****************************************************************************************/
 /* 4.4 WordPress Comment, Page, & Post Navigation */
 /****************************************************************************************/
@@ -3102,6 +3108,18 @@ screen and (max-height: 300px) {
     color: $light;
     line-height: 1;
     border-radius: 0px;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .wp-block-buttons:not(.alignwide):not(.alignfull) {
+        max-width: 1140px;
+    }
+}
+
+.wp-block-buttons.is-content-justification-center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wp-block-buttons .wp-block-button {
