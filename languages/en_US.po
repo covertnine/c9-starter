@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: C9 Music\n"
-"POT-Creation-Date: 2024-01-04 10:33-0600\n"
-"PO-Revision-Date: 2024-01-04 10:34-0600\n"
+"POT-Creation-Date: 2024-04-22 22:44-0500\n"
+"PO-Revision-Date: 2024-04-22 22:45-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -21,14 +21,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
-"X-Poedit-SearchPathExcluded-2: bundled/c9-music/client/client-assets/vendor\n"
-"X-Poedit-SearchPathExcluded-3: client/client-assets/vendor\n"
+"X-Poedit-SearchPathExcluded-2: client/client-assets/vendor\n"
 
-#: 404.php:31 bundled/c9-music/404.php:31
+#: 404.php:31
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! That page can&rsquo;t be found."
 
-#: 404.php:44 bundled/c9-music/404.php:44
+#: 404.php:44
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -36,42 +35,36 @@ msgstr ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 
-#: admin/admin-settings.php:23 bundled/c9-music/admin/admin-settings.php:23
+#: admin/admin-settings.php:23
 msgid "Header Size"
 msgstr "Header Size"
 
 #: admin/class-tgm-plugin-activation.php:333
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
 msgstr "Install Required Plugins"
 
 #: admin/class-tgm-plugin-activation.php:334
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:334
 msgid "Install Plugins"
 msgstr "Install Plugins"
 
 #. translators: %s: plugin name.
 #: admin/class-tgm-plugin-activation.php:336
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:336
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installing Plugin: %s"
 
 #. translators: %s: plugin name.
 #: admin/class-tgm-plugin-activation.php:338
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:338
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Updating Plugin: %s"
 
 #: admin/class-tgm-plugin-activation.php:339
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:339
 msgid "Something went wrong with the plugin API."
 msgstr "Something went wrong with the plugin API."
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:342
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
@@ -80,7 +73,6 @@ msgstr[1] "This theme requires the following plugins: %1$s."
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:348
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:348
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
@@ -89,7 +81,6 @@ msgstr[1] "This theme recommends the following plugins: %1$s."
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:354
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:354
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -106,7 +97,6 @@ msgstr[1] ""
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:360
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:360
 #, php-format
 msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
@@ -115,7 +105,6 @@ msgstr[1] "There are updates available for the following plugins: %1$s."
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:366
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:366
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
@@ -124,7 +113,6 @@ msgstr[1] "The following required plugins are currently inactive: %1$s."
 
 #. translators: 1: plugin name(s).
 #: admin/class-tgm-plugin-activation.php:372
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:372
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
@@ -132,28 +120,24 @@ msgstr[0] "The following recommended plugin is currently inactive: %1$s."
 msgstr[1] "The following recommended plugins are currently inactive: %1$s."
 
 #: admin/class-tgm-plugin-activation.php:377
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:377
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] "Begin installing plugin"
 msgstr[1] "Begin installing plugins"
 
 #: admin/class-tgm-plugin-activation.php:382
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:382
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] "Begin updating plugin"
 msgstr[1] "Begin updating plugins"
 
 #: admin/class-tgm-plugin-activation.php:387
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:387
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] "Begin activating plugin"
 msgstr[1] "Begin activating plugins"
 
 #: admin/class-tgm-plugin-activation.php:391
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:391
 msgid "Return to Required Plugins Installer"
 msgstr "Return to Required Plugins Installer"
 
@@ -161,24 +145,16 @@ msgstr "Return to Required Plugins Installer"
 #: admin/class-tgm-plugin-activation.php:843
 #: admin/class-tgm-plugin-activation.php:2609
 #: admin/class-tgm-plugin-activation.php:3686
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:392
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:843
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2609
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3686
 msgid "Return to the Dashboard"
 msgstr "Return to the Dashboard"
 
 #: admin/class-tgm-plugin-activation.php:393
 #: admin/class-tgm-plugin-activation.php:3256
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:393
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3256
 msgid "Plugin activated successfully."
 msgstr "Plugin activated successfully."
 
 #: admin/class-tgm-plugin-activation.php:394
 #: admin/class-tgm-plugin-activation.php:3041
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:394
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3041
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] "The following plugin was activated successfully:"
@@ -186,14 +162,12 @@ msgstr[1] "The following plugins were activated successfully:"
 
 #. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:396
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:396
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "No action taken. Plugin %1$s was already active."
 
 #. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:398
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:398
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -204,18 +178,15 @@ msgstr ""
 
 #. translators: 1: dashboard link.
 #: admin/class-tgm-plugin-activation.php:400
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:400
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "All plugins installed and activated successfully. %1$s"
 
 #: admin/class-tgm-plugin-activation.php:401
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:401
 msgid "Dismiss this notice"
 msgstr "Dismiss this notice"
 
 #: admin/class-tgm-plugin-activation.php:402
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:402
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
@@ -224,22 +195,18 @@ msgstr ""
 "activate."
 
 #: admin/class-tgm-plugin-activation.php:403
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:403
 msgid "Please contact the administrator of this site for help."
 msgstr "Please contact the administrator of this site for help."
 
 #: admin/class-tgm-plugin-activation.php:532
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:532
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr "This plugin needs to be updated to be compatible with your theme."
 
 #: admin/class-tgm-plugin-activation.php:533
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:533
 msgid "Update Required"
 msgstr "Update Required"
 
 #: admin/class-tgm-plugin-activation.php:952
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:952
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
@@ -249,8 +216,6 @@ msgstr ""
 
 #: admin/class-tgm-plugin-activation.php:952
 #: admin/class-tgm-plugin-activation.php:955
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:952
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:955
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
@@ -259,7 +224,6 @@ msgstr ""
 "according to the WordPress guidelines."
 
 #: admin/class-tgm-plugin-activation.php:955
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:955
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
@@ -269,77 +233,62 @@ msgstr ""
 
 #: admin/class-tgm-plugin-activation.php:1145
 #: admin/class-tgm-plugin-activation.php:3037
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:1145
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3037
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr "and"
 
 #. translators: %s: version number
 #: admin/class-tgm-plugin-activation.php:2041
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2041
 #, php-format
 msgid "TGMPA v%s"
 msgstr "TGMPA v%s"
 
 #: admin/class-tgm-plugin-activation.php:2342
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2342
 msgid "Required"
 msgstr "Required"
 
 #: admin/class-tgm-plugin-activation.php:2345
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2345
 msgid "Recommended"
 msgstr "Recommended"
 
 #: admin/class-tgm-plugin-activation.php:2362
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2362
 msgid "WordPress Repository"
 msgstr "WordPress Repository"
 
 #: admin/class-tgm-plugin-activation.php:2365
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2365
 msgid "External Source"
 msgstr "External Source"
 
 #: admin/class-tgm-plugin-activation.php:2368
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2368
 msgid "Pre-Packaged"
 msgstr "Pre-Packaged"
 
 #: admin/class-tgm-plugin-activation.php:2386
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2386
 msgid "Not Installed"
 msgstr "Not Installed"
 
 #: admin/class-tgm-plugin-activation.php:2390
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2390
 msgid "Installed But Not Activated"
 msgstr "Installed But Not Activated"
 
 #: admin/class-tgm-plugin-activation.php:2392
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2392
 msgid "Active"
 msgstr "Active"
 
 #: admin/class-tgm-plugin-activation.php:2398
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2398
 msgid "Required Update not Available"
 msgstr "Required Update not Available"
 
 #: admin/class-tgm-plugin-activation.php:2400
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2400
 msgid "Requires Update"
 msgstr "Requires Update"
 
 #: admin/class-tgm-plugin-activation.php:2402
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2402
 msgid "Update recommended"
 msgstr "Update recommended"
 
 #. translators: 1: install status, 2: update status
 #: admin/class-tgm-plugin-activation.php:2411
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2411
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
@@ -347,7 +296,6 @@ msgstr "%1$s, %2$s"
 
 #. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2459
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2459
 #, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
@@ -357,7 +305,6 @@ msgstr[1] "All <span class=\"count\">(%s)</span>"
 
 #. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2463
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2463
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
@@ -366,7 +313,6 @@ msgstr[1] "To Install <span class=\"count\">(%s)</span>"
 
 #. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2467
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2467
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
@@ -375,7 +321,6 @@ msgstr[1] "Update Available <span class=\"count\">(%s)</span>"
 
 #. translators: 1: number of plugins.
 #: admin/class-tgm-plugin-activation.php:2471
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2471
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
@@ -383,155 +328,127 @@ msgstr[0] "To Activate <span class=\"count\">(%s)</span>"
 msgstr[1] "To Activate <span class=\"count\">(%s)</span>"
 
 #: admin/class-tgm-plugin-activation.php:2557
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2557
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr "unknown"
 
 #: admin/class-tgm-plugin-activation.php:2565
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2565
 msgid "Installed version:"
 msgstr "Installed version:"
 
 #: admin/class-tgm-plugin-activation.php:2573
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2573
 msgid "Minimum required version:"
 msgstr "Minimum required version:"
 
 #: admin/class-tgm-plugin-activation.php:2585
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2585
 msgid "Available version:"
 msgstr "Available version:"
 
 #: admin/class-tgm-plugin-activation.php:2609
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2609
 msgid "No plugins to install, update or activate."
 msgstr "No plugins to install, update or activate."
 
 #: admin/class-tgm-plugin-activation.php:2624
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2624
 msgid "Plugin"
 msgstr "Plugin"
 
 #: admin/class-tgm-plugin-activation.php:2625
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2625
 msgid "Source"
 msgstr "Source"
 
 #: admin/class-tgm-plugin-activation.php:2626
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2626
 msgid "Type"
 msgstr "Type"
 
 #: admin/class-tgm-plugin-activation.php:2630
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2630
 msgid "Version"
 msgstr "Version"
 
 #: admin/class-tgm-plugin-activation.php:2631
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2631
 msgid "Status"
 msgstr "Status"
 
 #. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2683
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2683
 #, php-format
 msgid "Install %2$s"
 msgstr "Install %2$s"
 
 #. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2688
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2688
 #, php-format
 msgid "Update %2$s"
 msgstr "Update %2$s"
 
 #. translators: %2$s: plugin name in screen reader markup
 #: admin/class-tgm-plugin-activation.php:2694
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2694
 #, php-format
 msgid "Activate %2$s"
 msgstr "Activate %2$s"
 
 #: admin/class-tgm-plugin-activation.php:2766
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2766
 msgid "Upgrade message from the plugin author:"
 msgstr "Upgrade message from the plugin author:"
 
 #: admin/class-tgm-plugin-activation.php:2803
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2803
 msgid "Install"
 msgstr "Install"
 
 #: admin/class-tgm-plugin-activation.php:2809
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2809
 msgid "Update"
 msgstr "Update"
 
 #: admin/class-tgm-plugin-activation.php:2812
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2812
 msgid "Activate"
 msgstr "Activate"
 
 #: admin/class-tgm-plugin-activation.php:2844
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2844
 msgid "No plugins were selected to be installed. No action taken."
 msgstr "No plugins were selected to be installed. No action taken."
 
 #: admin/class-tgm-plugin-activation.php:2846
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2846
 msgid "No plugins were selected to be updated. No action taken."
 msgstr "No plugins were selected to be updated. No action taken."
 
 #: admin/class-tgm-plugin-activation.php:2887
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2887
 msgid "No plugins are available to be installed at this time."
 msgstr "No plugins are available to be installed at this time."
 
 #: admin/class-tgm-plugin-activation.php:2889
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2889
 msgid "No plugins are available to be updated at this time."
 msgstr "No plugins are available to be updated at this time."
 
 #: admin/class-tgm-plugin-activation.php:2997
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:2997
 msgid "No plugins were selected to be activated. No action taken."
 msgstr "No plugins were selected to be activated. No action taken."
 
 #: admin/class-tgm-plugin-activation.php:3023
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3023
 msgid "No plugins are available to be activated at this time."
 msgstr "No plugins are available to be activated at this time."
 
 #: admin/class-tgm-plugin-activation.php:3255
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3255
 msgid "Plugin activation failed."
 msgstr "Plugin activation failed."
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3602
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3602
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr "Updating Plugin %1$s (%2$d/%3$d)"
 
 #. translators: 1: plugin name, 2: error message.
 #: admin/class-tgm-plugin-activation.php:3605
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3605
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr "An error occurred while installing %1$s: <strong>%2$s</strong>."
 
 #. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:3607
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3607
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr "The installation of %1$s failed."
 
 #: admin/class-tgm-plugin-activation.php:3611
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3611
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
@@ -542,26 +459,21 @@ msgstr ""
 #. translators: 1: plugin name.
 #: admin/class-tgm-plugin-activation.php:3613
 #: admin/class-tgm-plugin-activation.php:3621
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3613
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3621
 #, php-format
 msgid "%1$s done."
 msgstr "%1$s done."
 
 #: admin/class-tgm-plugin-activation.php:3614
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3614
 msgid "All installations and activations have been completed."
 msgstr "All installations and activations have been completed."
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3616
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3616
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 
 #: admin/class-tgm-plugin-activation.php:3619
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3619
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
@@ -570,45 +482,39 @@ msgstr ""
 "hosts, so please be patient."
 
 #: admin/class-tgm-plugin-activation.php:3622
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3622
 msgid "All installations have been completed."
 msgstr "All installations have been completed."
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: admin/class-tgm-plugin-activation.php:3624
-#: bundled/c9-music/admin/class-tgm-plugin-activation.php:3624
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Installing Plugin %1$s (%2$d/%3$d)"
 
-#: author.php:35 bundled/c9-music/author.php:35
+#: author.php:35
 msgid "About: "
 msgstr "About: "
 
-#: author.php:39 bundled/c9-music/author.php:39
-#: bundled/c9-music/inc/custom-comments.php:33 inc/custom-comments.php:33
+#: author.php:39 inc/custom-comments.php:33
 msgid "Website"
 msgstr "Website"
 
-#: author.php:46 bundled/c9-music/author.php:46
+#: author.php:46
 msgid "Profile"
 msgstr "Profile"
 
-#: author.php:60 bundled/c9-music/author.php:60
+#: author.php:60
 msgid "Posts by"
 msgstr "Posts by"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:42
 #: client/inc/client-admin-settings.php:42
 msgid "Body Link Hover"
 msgstr "Body Link Hover"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:66
 #: client/inc/client-admin-settings.php:66
 msgid "Top Navigation Background"
 msgstr "Top Navigation Background"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:68
 #: client/inc/client-admin-settings.php:68
 msgid ""
 "Color of the navigation at the top of the screen after scrolling, and on "
@@ -617,12 +523,10 @@ msgstr ""
 "Color of the navigation at the top of the screen after scrolling, and on "
 "single post templates."
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:91
 #: client/inc/client-admin-settings.php:91
 msgid "Mobile Top Navigation Dropdown Background"
 msgstr "Mobile Top Navigation Dropdown Background"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:92
 #: client/inc/client-admin-settings.php:92
 msgid ""
 "Background color of the navigation that collapses to a single column on "
@@ -631,280 +535,125 @@ msgstr ""
 "Background color of the navigation that collapses to a single column on "
 "mobile."
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:116
 #: client/inc/client-admin-settings.php:116
 msgid "Top Navigation Link"
 msgstr "Top Navigation Link"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:140
 #: client/inc/client-admin-settings.php:140
 msgid "Top Navigation Link Active/Hover"
 msgstr "Top Navigation Link Active/Hover"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:164
 #: client/inc/client-admin-settings.php:164
 msgid "Top Navigation Dropdown Background"
 msgstr "Top Navigation Dropdown Background"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:188
 #: client/inc/client-admin-settings.php:188
 msgid "Top Navigation Dropdown Link"
 msgstr "Top Navigation Dropdown Link"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:212
 #: client/inc/client-admin-settings.php:212
 msgid "Top Navigation Dropdown Link Background Hover"
 msgstr "Top Navigation Dropdown Link Background Hover"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:236
 #: client/inc/client-admin-settings.php:236
 msgid "Top Navigation Dropdown Link Active/Hover"
 msgstr "Top Navigation Dropdown Link Active/Hover"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:261
 #: client/inc/client-admin-settings.php:261
 msgid "WooCommerce Store Notice Background"
 msgstr "WooCommerce Store Notice Background"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:285
 #: client/inc/client-admin-settings.php:285
 msgid "WooCommerce Store Notice Text"
 msgstr "WooCommerce Store Notice Text"
 
-#: bundled/c9-music/client/inc/client-admin-settings.php:307
 #: client/inc/client-admin-settings.php:307
 msgid "Hide the cart icon"
 msgstr "Hide the cart icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:29
 #: client/inc/client-extras.php:29
 msgid "Icon Options"
 msgstr "Icon Options"
 
-#: bundled/c9-music/client/inc/client-extras.php:35
 #: client/inc/client-extras.php:35
 msgid "None"
 msgstr "None"
 
-#: bundled/c9-music/client/inc/client-extras.php:36
 #: client/inc/client-extras.php:36
 msgid "Spotify Icon"
 msgstr "Spotify Icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:37
 #: client/inc/client-extras.php:37
 msgid "Instagram Icon"
 msgstr "Instagram Icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:38
 #: client/inc/client-extras.php:38
 msgid "SoundCloud Icon"
 msgstr "SoundCloud Icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:39
 #: client/inc/client-extras.php:39
 msgid "Email Icon"
 msgstr "Email Icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:40
 #: client/inc/client-extras.php:40
 msgid "Facebook Icon"
 msgstr "Facebook Icon"
 
-#: bundled/c9-music/client/inc/client-extras.php:41
 #: client/inc/client-extras.php:41
 msgid "YouTube Icon"
 msgstr "YouTube Icon"
 
-#: bundled/c9-music/client/inc/client-setup.php:15
 #: client/inc/client-setup.php:15
 msgid "White Text"
 msgstr "White Text"
 
-#: bundled/c9-music/client/inc/client-setup.php:24
 #: client/inc/client-setup.php:24
 msgid "White Links"
 msgstr "White Links"
 
-#: bundled/c9-music/client/inc/client-setup.php:80
 #: client/inc/client-setup.php:78
 msgid "C9 All Patterns"
 msgstr "C9 All Patterns"
 
-#: bundled/c9-music/client/inc/client-setup.php:84
-msgid "C9 Page Template"
-msgstr "C9 Page Template"
+#: client/inc/client-setup.php:82
+msgid "C9 Page Templates"
+msgstr "C9 Page Templates"
 
-#: bundled/c9-music/client/inc/client-setup.php:88
 #: client/inc/client-setup.php:86
 msgid "C9 Video"
 msgstr "C9 Video"
 
-#: bundled/c9-music/client/inc/client-setup.php:92
 #: client/inc/client-setup.php:90
 msgid "C9 Audio"
 msgstr "C9 Audio"
 
-#: bundled/c9-music/client/inc/client-setup.php:107
-#: client/inc/client-setup.php:151
-msgid "Coming Soon Opt-in"
-msgstr "Coming Soon Opt-in"
-
-#: bundled/c9-music/client/inc/client-setup.php:108
-#: client/inc/client-setup.php:152
-msgid ""
-"Start building your audience before you launch with a coming soon page that "
-"captures emails or phone numbers."
-msgstr ""
-"Start building your audience before you launch with a coming soon page that "
-"captures emails or phone numbers."
-
-#: bundled/c9-music/client/inc/client-setup.php:117
-msgid "Video Embed + YouTube Link"
-msgstr "Video Embed + YouTube Link"
-
-#: bundled/c9-music/client/inc/client-setup.php:118
-#: client/inc/client-setup.php:683
-msgid "Feature a video file you upload with a link to a YouTube video link."
-msgstr "Feature a video file you upload with a link to a YouTube video link."
-
-#: bundled/c9-music/client/inc/client-setup.php:127
-#: client/inc/client-setup.php:1476
-msgid "Information Dialog Two Buttons"
-msgstr "Information Dialog Two Buttons"
-
-#: bundled/c9-music/client/inc/client-setup.php:128
-#: client/inc/client-setup.php:1477
-msgid ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-msgstr ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-
-#: bundled/c9-music/client/inc/client-setup.php:136
-#: client/inc/client-setup.php:719
-msgid "Spotify Embed, Track Listing + Button"
-msgstr "Spotify Embed, Track Listing + Button"
-
-#: bundled/c9-music/client/inc/client-setup.php:137
-#: client/inc/client-setup.php:720
-msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
-msgstr "Embed a playlist, track listing or lyrics, and a button to open it up!"
-
-#: bundled/c9-music/client/inc/client-setup.php:146
-#: client/inc/client-setup.php:860
-msgid "Podcast Episode"
-msgstr "Podcast Episode"
-
-#: bundled/c9-music/client/inc/client-setup.php:147
-#: client/inc/client-setup.php:861
-msgid ""
-"Feature a show photo, audio embed file, and everything you need for a "
-"podcast episode post."
-msgstr ""
-"Feature a show photo, audio embed file, and everything you need for a "
-"podcast episode post."
-
-#: bundled/c9-music/client/inc/client-setup.php:156
-msgid "Stream Discography"
-msgstr "Stream Discography"
-
-#: bundled/c9-music/client/inc/client-setup.php:157
-#: client/inc/client-setup.php:795
-msgid ""
-"Embed audio from your favorite streaming service to show off a season or "
-"discography of work"
-msgstr ""
-"Embed audio from your favorite streaming service to show off a season or "
-"discography of work"
-
-#: bundled/c9-music/client/inc/client-setup.php:166
-#: client/inc/client-setup.php:968
-msgid "Tour Schedule"
-msgstr "Tour Schedule"
-
-#: bundled/c9-music/client/inc/client-setup.php:167
-msgid ""
-"Add a bunch of dates and places and links to a table with a nice header and "
-"FAQ, cause tours are coming back!"
-msgstr ""
-"Add a bunch of dates and places and links to a table with a nice header and "
-"FAQ, cause tours are coming back!"
-
-#: bundled/c9-music/client/inc/client-setup.php:176
-msgid "Article 450 Words"
-msgstr "Article 450 Words"
-
-#: bundled/c9-music/client/inc/client-setup.php:177
-msgid ""
-"Get your article laid out before writing with a 450 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-"Get your article laid out before writing with a 450 word placeholder and "
-"some imagery to tet you started."
-
-#: bundled/c9-music/client/inc/client-setup.php:185
-msgid "Article 560 Words"
-msgstr "Article 560 Words"
-
-#: bundled/c9-music/client/inc/client-setup.php:186
-msgid ""
-"Get your article laid out before writing with a 600 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-"Get your article laid out before writing with a 600 word placeholder and "
-"some imagery to tet you started."
-
-#: bundled/c9-music/client/inc/client-setup.php:194
-#: client/inc/client-setup.php:1430
-msgid "C9 Music Style Guide"
-msgstr "C9 Music Style Guide"
-
-#: bundled/c9-music/client/inc/client-setup.php:195
-#: client/inc/client-setup.php:1431
-msgid "A style guide with type, buttons, and core blocks frequently used."
-msgstr "A style guide with type, buttons, and core blocks frequently used."
-
-#: bundled/c9-music/client/inc/client-woocommerce.php:32
-#: bundled/c9-music/client/inc/client-woocommerce.php:34
-#: bundled/c9-music/client/inc/header.php:32
-#: bundled/c9-music/client/inc/header.php:34
 #: client/inc/client-woocommerce.php:32 client/inc/client-woocommerce.php:34
 #: client/inc/header.php:32 client/inc/header.php:34
 msgid "Shopping Cart"
 msgstr "Shopping Cart"
 
-#: bundled/c9-music/client/inc/client-woocommerce.php:32
-#: bundled/c9-music/client/inc/client-woocommerce.php:34
-#: bundled/c9-music/client/inc/header.php:32
-#: bundled/c9-music/client/inc/header.php:34
 #: client/inc/client-woocommerce.php:32 client/inc/client-woocommerce.php:34
 #: client/inc/header.php:32 client/inc/header.php:34
 msgid "View Cart"
 msgstr "View Cart"
 
-#: bundled/c9-music/client/inc/header.php:18 bundled/c9-music/footer.php:90
-#: bundled/c9-music/header.php:65 bundled/c9-music/inc/extras.php:195
-#: bundled/c9-music/searchform.php:10 bundled/c9-music/searchform.php:14
 #: client/inc/header.php:18 footer.php:90 header.php:65 inc/extras.php:195
-#: searchform.php:10 searchform.php:14
+#: patterns/page-style-guide.php:32 searchform.php:10 searchform.php:14
 msgid "Search"
 msgstr "Search"
 
-#: bundled/c9-music/client/inc/header.php:43 bundled/c9-music/header.php:73
 #: client/inc/header.php:43 header.php:73
 msgid "Toggle Navigation"
 msgstr "Toggle Navigation"
 
 #. translators: %s: post title
-#: bundled/c9-music/comments.php:33 comments.php:33
+#: comments.php:33
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr "One thought on &ldquo;%s&rdquo;"
 
-#: bundled/c9-music/comments.php:40 comments.php:40
+#: comments.php:40
 #, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -912,46 +661,43 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
 
-#: bundled/c9-music/comments.php:61 bundled/c9-music/comments.php:116
 #: comments.php:61 comments.php:116
 msgid "Comment navigation"
 msgstr "Comment navigation"
 
-#: bundled/c9-music/comments.php:68 bundled/c9-music/comments.php:123
 #: comments.php:68 comments.php:123
 msgid "&larr; Older Comments"
 msgstr "&larr; Older Comments"
 
-#: bundled/c9-music/comments.php:82 bundled/c9-music/comments.php:137
 #: comments.php:82 comments.php:137
 msgid "Newer Comments &rarr;"
 msgstr "Newer Comments &rarr;"
 
-#: bundled/c9-music/comments.php:160 comments.php:160
+#: comments.php:160
 msgid "Comments are closed."
 msgstr "Comments are closed."
 
-#: bundled/c9-music/footer.php:17 footer.php:17
+#: footer.php:17
 msgid "Web design company in Chicago"
 msgstr "Web design company in Chicago"
 
-#: bundled/c9-music/footer.php:17 footer.php:17
+#: footer.php:17
 msgid "WordPress Website design by COVERT NINE"
 msgstr "WordPress Website design by COVERT NINE"
 
-#: bundled/c9-music/footer.php:88 footer.php:88
+#: footer.php:88
 msgid "Search for:"
 msgstr "Search for:"
 
-#: bundled/c9-music/footer.php:89 footer.php:89
+#: footer.php:89
 msgid "Search..."
 msgstr "Search..."
 
-#: bundled/c9-music/footer.php:93 footer.php:93
+#: footer.php:93
 msgid "Close"
 msgstr "Close"
 
-#: bundled/c9-music/functions.php:88 functions.php:88
+#: functions.php:88
 msgid ""
 "You need a client! If you have no client-specific code, add an empty client/"
 "client.php to the parent theme. If you still dont know what&#39;s going on, "
@@ -961,295 +707,267 @@ msgstr ""
 "client.php to the parent theme. If you still dont know what&#39;s going on, "
 "contact connect@covertnine.com"
 
-#: bundled/c9-music/header.php:35 header.php:35
+#: header.php:35
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: bundled/c9-music/inc/class-footer.php:49
-#: bundled/c9-music/inc/class-footer.php:51 inc/class-footer.php:49
-#: inc/class-footer.php:51
+#: inc/class-footer.php:49 inc/class-footer.php:51
 msgid "Twitter"
 msgstr "Twitter"
 
-#: bundled/c9-music/inc/class-footer.php:59
-#: bundled/c9-music/inc/class-footer.php:61 inc/class-footer.php:59
-#: inc/class-footer.php:61
+#: inc/class-footer.php:59 inc/class-footer.php:61
 msgid "Facebook"
 msgstr "Facebook"
 
-#: bundled/c9-music/inc/class-footer.php:69
-#: bundled/c9-music/inc/class-footer.php:71 inc/class-footer.php:69
-#: inc/class-footer.php:71
+#: inc/class-footer.php:69 inc/class-footer.php:71
+#: patterns/hero-artist-link-tree-alt.php:51
+#: patterns/hero-artist-link-tree.php:55
 msgid "Instagram"
 msgstr "Instagram"
 
-#: bundled/c9-music/inc/class-footer.php:79
-#: bundled/c9-music/inc/class-footer.php:81 inc/class-footer.php:79
-#: inc/class-footer.php:81
+#: inc/class-footer.php:79 inc/class-footer.php:81
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: bundled/c9-music/inc/class-footer.php:89
-#: bundled/c9-music/inc/class-footer.php:91 inc/class-footer.php:89
-#: inc/class-footer.php:91
+#: inc/class-footer.php:89 inc/class-footer.php:91
+#: patterns/hero-artist-link-tree-alt.php:55
+#: patterns/hero-artist-link-tree.php:59
 msgid "Spotify"
 msgstr "Spotify"
 
-#: bundled/c9-music/inc/class-footer.php:99
-#: bundled/c9-music/inc/class-footer.php:101 inc/class-footer.php:99
-#: inc/class-footer.php:101
+#: inc/class-footer.php:99 inc/class-footer.php:101
+#: patterns/hero-artist-link-tree-alt.php:47
+#: patterns/hero-artist-link-tree.php:51
 msgid "YouTube"
 msgstr "YouTube"
 
-#: bundled/c9-music/inc/class-footer.php:109
-#: bundled/c9-music/inc/class-footer.php:111 inc/class-footer.php:109
-#: inc/class-footer.php:111
+#: inc/class-footer.php:109 inc/class-footer.php:111
 msgid "Flickr"
 msgstr "Flickr"
 
-#: bundled/c9-music/inc/class-footer.php:119
-#: bundled/c9-music/inc/class-footer.php:121 inc/class-footer.php:119
-#: inc/class-footer.php:121
+#: inc/class-footer.php:119 inc/class-footer.php:121
 msgid "Tumblr"
 msgstr "Tumblr"
 
-#: bundled/c9-music/inc/class-footer.php:129
-#: bundled/c9-music/inc/class-footer.php:131 inc/class-footer.php:129
-#: inc/class-footer.php:131
+#: inc/class-footer.php:129 inc/class-footer.php:131
 msgid "Yelp"
 msgstr "Yelp"
 
-#: bundled/c9-music/inc/class-footer.php:139
-#: bundled/c9-music/inc/class-footer.php:141 inc/class-footer.php:139
-#: inc/class-footer.php:141
+#: inc/class-footer.php:139 inc/class-footer.php:141
 msgid "Reddit"
 msgstr "Reddit"
 
-#: bundled/c9-music/inc/class-footer.php:149
-#: bundled/c9-music/inc/class-footer.php:151 inc/class-footer.php:149
-#: inc/class-footer.php:151
+#: inc/class-footer.php:149 inc/class-footer.php:151
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: bundled/c9-music/inc/class-footer.php:159
-#: bundled/c9-music/inc/class-footer.php:161 inc/class-footer.php:159
-#: inc/class-footer.php:161
+#: inc/class-footer.php:159 inc/class-footer.php:161
 msgid "GitHub"
 msgstr "GitHub"
 
-#: bundled/c9-music/inc/class-footer.php:169
-#: bundled/c9-music/inc/class-footer.php:171 inc/class-footer.php:169
-#: inc/class-footer.php:171
+#: inc/class-footer.php:169 inc/class-footer.php:171
 msgid "SoundCloud"
 msgstr "SoundCloud"
 
-#: bundled/c9-music/inc/class-wp-bootstrap-navwalker.php:375
 #: inc/class-wp-bootstrap-navwalker.php:375
 msgid "Add a menu"
 msgstr "Add a menu"
 
-#: bundled/c9-music/inc/custom-comments.php:29 inc/custom-comments.php:29
+#: inc/custom-comments.php:29
 msgid "Name"
 msgstr "Name"
 
-#: bundled/c9-music/inc/custom-comments.php:31 inc/custom-comments.php:31
+#: inc/custom-comments.php:31
 msgid "Email"
 msgstr "Email"
 
-#: bundled/c9-music/inc/custom-comments.php:56 inc/custom-comments.php:56
+#: inc/custom-comments.php:56
 msgctxt "noun"
 msgid "Comment"
 msgstr "Comment"
 
-#: bundled/c9-music/inc/customizer.php:29 inc/customizer.php:29
+#: inc/customizer.php:29
 msgid "Header"
 msgstr "Header"
 
-#: bundled/c9-music/inc/customizer.php:47 inc/customizer.php:47
+#: inc/customizer.php:47
 msgid "Hide the search icon"
 msgstr "Hide the search icon"
 
-#: bundled/c9-music/inc/customizer.php:57 bundled/c9-music/inc/widgets.php:67
 #: inc/customizer.php:57 inc/widgets.php:67
 msgid "Footer"
 msgstr "Footer"
 
-#: bundled/c9-music/inc/customizer.php:76 inc/customizer.php:76
+#: inc/customizer.php:76
 msgid "Display search in footer"
 msgstr "Display search in footer"
 
-#: bundled/c9-music/inc/customizer.php:78 inc/customizer.php:78
+#: inc/customizer.php:78
 msgid "Hide or show the search form in the footer"
 msgstr "Hide or show the search form in the footer"
 
-#: bundled/c9-music/inc/customizer.php:80
-#: bundled/c9-music/inc/customizer.php:133
-#: bundled/c9-music/inc/customizer.php:555 inc/customizer.php:80
-#: inc/customizer.php:133 inc/customizer.php:579
+#: inc/customizer.php:80 inc/customizer.php:133 inc/customizer.php:579
 msgid "Show"
 msgstr "Show"
 
-#: bundled/c9-music/inc/customizer.php:81
-#: bundled/c9-music/inc/customizer.php:134
-#: bundled/c9-music/inc/customizer.php:556 inc/customizer.php:81
-#: inc/customizer.php:134 inc/customizer.php:580
+#: inc/customizer.php:81 inc/customizer.php:134 inc/customizer.php:580
 msgid "Hide"
 msgstr "Hide"
 
-#: bundled/c9-music/inc/customizer.php:101 inc/customizer.php:101
+#: inc/customizer.php:101
 msgid "Copyright"
 msgstr "Copyright"
 
-#: bundled/c9-music/inc/customizer.php:103 inc/customizer.php:103
+#: inc/customizer.php:103
 msgid "Enter in any copyright information, links to privacy policies or terms."
 msgstr ""
 "Enter in any copyright information, links to privacy policies or terms."
 
-#: bundled/c9-music/inc/customizer.php:109 inc/customizer.php:109
+#: inc/customizer.php:109
 msgid "Social Media"
 msgstr "Social Media"
 
-#: bundled/c9-music/inc/customizer.php:129 inc/customizer.php:129
+#: inc/customizer.php:129
 msgid "Display social icons in footer"
 msgstr "Display social icons in footer"
 
-#: bundled/c9-music/inc/customizer.php:131 inc/customizer.php:131
+#: inc/customizer.php:131
 msgid "Hide or show social icons in the footer"
 msgstr "Hide or show social icons in the footer"
 
-#: bundled/c9-music/inc/customizer.php:154 inc/customizer.php:154
+#: inc/customizer.php:154
 msgid "Twitter Link"
 msgstr "Twitter Link"
 
-#: bundled/c9-music/inc/customizer.php:156 inc/customizer.php:156
+#: inc/customizer.php:156
 msgid "Input your Twitter Username or full url"
 msgstr "Input your Twitter Username or full url"
 
-#: bundled/c9-music/inc/customizer.php:172 inc/customizer.php:172
+#: inc/customizer.php:172
 msgid "Facebook Link"
 msgstr "Facebook Link"
 
-#: bundled/c9-music/inc/customizer.php:174 inc/customizer.php:174
+#: inc/customizer.php:174
 msgid "Input your Facebook username or full url"
 msgstr "Input your Facebook username or full url"
 
-#: bundled/c9-music/inc/customizer.php:190 inc/customizer.php:190
+#: inc/customizer.php:190
 msgid "Instagram Link"
 msgstr "Instagram Link"
 
-#: bundled/c9-music/inc/customizer.php:192 inc/customizer.php:192
+#: inc/customizer.php:192
 msgid "Input your Instagram username or full url"
 msgstr "Input your Instagram username or full url"
 
-#: bundled/c9-music/inc/customizer.php:208 inc/customizer.php:208
+#: inc/customizer.php:208
 msgid "Pinterest Link"
 msgstr "Pinterest Link"
 
-#: bundled/c9-music/inc/customizer.php:210 inc/customizer.php:210
+#: inc/customizer.php:210
 msgid "Input your Pinterest username or full url"
 msgstr "Input your Pinterest username or full url"
 
-#: bundled/c9-music/inc/customizer.php:227 inc/customizer.php:227
+#: inc/customizer.php:227
 msgid "Spotify Link"
 msgstr "Spotify Link"
 
-#: bundled/c9-music/inc/customizer.php:229 inc/customizer.php:229
+#: inc/customizer.php:229
 msgid "Input your Spotify username or full url"
 msgstr "Input your Spotify username or full url"
 
-#: bundled/c9-music/inc/customizer.php:246 inc/customizer.php:246
+#: inc/customizer.php:246
 msgid "YouTube Link"
 msgstr "YouTube Link"
 
-#: bundled/c9-music/inc/customizer.php:248 inc/customizer.php:248
+#: inc/customizer.php:248
 msgid "Input your YouTube username or full url"
 msgstr "Input your YouTube username or full url"
 
-#: bundled/c9-music/inc/customizer.php:265 inc/customizer.php:265
+#: inc/customizer.php:265
 msgid "Yelp Link"
 msgstr "Yelp Link"
 
-#: bundled/c9-music/inc/customizer.php:267 inc/customizer.php:267
+#: inc/customizer.php:267
 msgid "Input your Yelp username or full url"
 msgstr "Input your Yelp username or full url"
 
-#: bundled/c9-music/inc/customizer.php:284 inc/customizer.php:284
+#: inc/customizer.php:284
 msgid "Subreddit Link"
 msgstr "Subreddit Link"
 
-#: bundled/c9-music/inc/customizer.php:286 inc/customizer.php:286
+#: inc/customizer.php:286
 msgid "Input your Subreddit url"
 msgstr "Input your Subreddit url"
 
-#: bundled/c9-music/inc/customizer.php:303 inc/customizer.php:303
+#: inc/customizer.php:303
 msgid "LinkedIn Link"
 msgstr "LinkedIn Link"
 
-#: bundled/c9-music/inc/customizer.php:305 inc/customizer.php:305
+#: inc/customizer.php:305
 msgid "Input your LinkedIn url"
 msgstr "Input your LinkedIn url"
 
-#: bundled/c9-music/inc/customizer.php:322 inc/customizer.php:322
+#: inc/customizer.php:322
 msgid "Github Link"
 msgstr "Github Link"
 
-#: bundled/c9-music/inc/customizer.php:324 inc/customizer.php:324
+#: inc/customizer.php:324
 msgid "Input your Github username or full url"
 msgstr "Input your Github username or full url"
 
-#: bundled/c9-music/inc/customizer.php:341 inc/customizer.php:341
+#: inc/customizer.php:341
 msgid "SoundCloud Link"
 msgstr "SoundCloud Link"
 
-#: bundled/c9-music/inc/customizer.php:343 inc/customizer.php:343
+#: inc/customizer.php:343
 msgid "Input your SoundCloud username or full url"
 msgstr "Input your SoundCloud username or full url"
 
-#: bundled/c9-music/inc/customizer.php:349 inc/customizer.php:349
+#: inc/customizer.php:349
 msgid "Branding"
 msgstr "Branding"
 
-#: bundled/c9-music/inc/customizer.php:369 inc/customizer.php:369
+#: inc/customizer.php:369
 msgid "Use C9 Theme Fonts?"
 msgstr "Use C9 Theme Fonts?"
 
-#: bundled/c9-music/inc/customizer.php:372 inc/customizer.php:372
+#: inc/customizer.php:372
 msgid "Yes"
 msgstr "Yes"
 
-#: bundled/c9-music/inc/customizer.php:373 inc/customizer.php:373
+#: inc/customizer.php:373
 msgid "No, I will queue my own fonts."
 msgstr "No, I will queue my own fonts."
 
-#: bundled/c9-music/inc/customizer.php:459 inc/customizer.php:483
+#: inc/customizer.php:483
 msgid "Heading Font"
 msgstr "Heading Font"
 
-#: bundled/c9-music/inc/customizer.php:460 inc/customizer.php:484
+#: inc/customizer.php:484
 msgid "Select your heading font family."
 msgstr "Select your heading font family."
 
-#: bundled/c9-music/inc/customizer.php:481 inc/customizer.php:505
+#: inc/customizer.php:505
 msgid "Subheading Font"
 msgstr "Subheading Font"
 
-#: bundled/c9-music/inc/customizer.php:482 inc/customizer.php:506
+#: inc/customizer.php:506
 msgid "Select your subheading font family."
 msgstr "Select your subheading font family."
 
-#: bundled/c9-music/inc/customizer.php:501 inc/customizer.php:525
+#: inc/customizer.php:525
 msgid "Body Paragraph Font"
 msgstr "Body Paragraph Font"
 
-#: bundled/c9-music/inc/customizer.php:502 inc/customizer.php:526
+#: inc/customizer.php:526
 msgid "Select your base font family."
 msgstr "Select your base font family."
 
-#: bundled/c9-music/inc/customizer.php:522 inc/customizer.php:546
+#: inc/customizer.php:546
 msgid "Fade-in custom fonts as they download"
 msgstr "Fade-in custom fonts as they download"
 
-#: bundled/c9-music/inc/customizer.php:523 inc/customizer.php:547
+#: inc/customizer.php:547
 msgid ""
 "Select this if you notice a flash of the default font as the custom fonts "
 "download the first time a user visits the site."
@@ -1257,11 +975,11 @@ msgstr ""
 "Select this if you notice a flash of the default font as the custom fonts "
 "download the first time a user visits the site."
 
-#: bundled/c9-music/inc/customizer.php:531 inc/customizer.php:555
+#: inc/customizer.php:555
 msgid "Posts"
 msgstr "Posts"
 
-#: bundled/c9-music/inc/customizer.php:532 inc/customizer.php:556
+#: inc/customizer.php:556
 msgid ""
 "These settings control whether side bars show up on single post, posts, and "
 "archive page templates, as well as author name and link on single post "
@@ -1271,134 +989,122 @@ msgstr ""
 "archive page templates, as well as author name and link on single post "
 "templates. Changes will only be visible on those pages."
 
-#: bundled/c9-music/inc/customizer.php:552 inc/customizer.php:576
+#: inc/customizer.php:576
 msgid "Do you want to show or hide the author name on posts?"
 msgstr "Do you want to show or hide the author name on posts?"
 
-#: bundled/c9-music/inc/customizer.php:576 inc/customizer.php:600
+#: inc/customizer.php:600
 msgid "Display a sidebar on single posts?"
 msgstr "Display a sidebar on single posts?"
 
-#: bundled/c9-music/inc/customizer.php:579
-#: bundled/c9-music/inc/customizer.php:604 inc/customizer.php:603
-#: inc/customizer.php:628
+#: inc/customizer.php:603 inc/customizer.php:628
 msgid "No Sidebar"
 msgstr "No Sidebar"
 
-#: bundled/c9-music/inc/customizer.php:580
-#: bundled/c9-music/inc/customizer.php:605 bundled/c9-music/inc/widgets.php:91
 #: inc/customizer.php:604 inc/customizer.php:629 inc/widgets.php:91
 msgid "Left Sidebar"
 msgstr "Left Sidebar"
 
-#: bundled/c9-music/inc/customizer.php:581
-#: bundled/c9-music/inc/customizer.php:606 bundled/c9-music/inc/widgets.php:79
 #: inc/customizer.php:605 inc/customizer.php:630 inc/widgets.php:79
 msgid "Right Sidebar"
 msgstr "Right Sidebar"
 
-#: bundled/c9-music/inc/customizer.php:601 inc/customizer.php:625
+#: inc/customizer.php:625
 msgid "Display a sidebar on archive pages?"
 msgstr "Display a sidebar on archive pages?"
 
-#: bundled/c9-music/inc/extras.php:76 inc/extras.php:76
+#: inc/extras.php:76
 msgid "Home"
 msgstr "Home"
 
-#: bundled/c9-music/inc/extras.php:76 inc/extras.php:76
+#: inc/extras.php:76
 msgid "logo"
 msgstr "logo"
 
-#: bundled/c9-music/inc/extras.php:100 inc/extras.php:100
+#: inc/extras.php:100
 msgid "Post navigation"
 msgstr "Post navigation"
 
-#: bundled/c9-music/inc/extras.php:105 inc/extras.php:105
+#: inc/extras.php:105
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp; Previous Post"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp; Previous Post"
 
-#: bundled/c9-music/inc/extras.php:108 inc/extras.php:108
+#: inc/extras.php:108
 msgctxt "Next post link"
 msgid "Next Post&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "Next Post&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: bundled/c9-music/inc/pagination.php:22 inc/pagination.php:22
+#: inc/pagination.php:22
 msgid "&laquo;"
 msgstr "&laquo;"
 
-#: bundled/c9-music/inc/pagination.php:23 inc/pagination.php:23
+#: inc/pagination.php:23
 msgid "&raquo;"
 msgstr "&raquo;"
 
-#: bundled/c9-music/inc/pagination.php:24 inc/pagination.php:24
+#: inc/pagination.php:24
 msgid "Posts navigation"
 msgstr "Posts navigation"
 
-#: bundled/c9-music/inc/pagination.php:39
-#: bundled/c9-music/inc/pagination.php:41 inc/pagination.php:39
-#: inc/pagination.php:41
+#: inc/pagination.php:39 inc/pagination.php:41
 msgid "Previous"
 msgstr "Previous"
 
-#: bundled/c9-music/inc/pagination.php:65
-#: bundled/c9-music/inc/pagination.php:67 inc/pagination.php:65
-#: inc/pagination.php:67
+#: inc/pagination.php:65 inc/pagination.php:67
 msgid "Next"
 msgstr "Next"
 
-#: bundled/c9-music/inc/setup.php:46 inc/setup.php:46
+#: inc/setup.php:46
 msgid "Top Navigation Menu"
 msgstr "Top Navigation Menu"
 
-#: bundled/c9-music/inc/template-tags.php:30 inc/template-tags.php:30
+#: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "Posted on %s"
 
-#: bundled/c9-music/inc/template-tags.php:38 inc/template-tags.php:38
+#: inc/template-tags.php:38
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "by %s"
 
 #. translators: used between list items, there is a space after the comma
-#: bundled/c9-music/inc/template-tags.php:59
-#: bundled/c9-music/inc/template-tags.php:64 inc/template-tags.php:59
-#: inc/template-tags.php:64
+#: inc/template-tags.php:59 inc/template-tags.php:64
 msgid ", "
 msgstr ", "
 
-#: bundled/c9-music/inc/template-tags.php:61 inc/template-tags.php:61
+#: inc/template-tags.php:61
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Posted in %1$s"
 
-#: bundled/c9-music/inc/template-tags.php:66 inc/template-tags.php:66
+#: inc/template-tags.php:66
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tagged %1$s"
 
-#: bundled/c9-music/inc/template-tags.php:71 inc/template-tags.php:71
+#: inc/template-tags.php:71
 msgid "Leave a comment"
 msgstr "Leave a comment"
 
-#: bundled/c9-music/inc/template-tags.php:71 inc/template-tags.php:71
+#: inc/template-tags.php:71
 msgid "1 Comment"
 msgstr "1 Comment"
 
-#: bundled/c9-music/inc/template-tags.php:71 inc/template-tags.php:71
+#: inc/template-tags.php:71
 msgid "% Comments"
 msgstr "% Comments"
 
 #. translators: %s: Name of current post
-#: bundled/c9-music/inc/template-tags.php:77 inc/template-tags.php:77
+#: inc/template-tags.php:77
 #, php-format
 msgid "Edit %s"
 msgstr "Edit %s"
 
-#: bundled/c9-music/inc/widgets.php:69 inc/widgets.php:69
+#: inc/widgets.php:69
 msgid ""
 "Full bottom widget with dynamic responsive grid that shows on every page. "
 "Suggested 3-6 widgets."
@@ -1406,7 +1112,7 @@ msgstr ""
 "Full bottom widget with dynamic responsive grid that shows on every page. "
 "Suggested 3-6 widgets."
 
-#: bundled/c9-music/inc/widgets.php:81 inc/widgets.php:81
+#: inc/widgets.php:81
 msgid ""
 "Right sidebar widget area displayed when using the Right Sidebar Layout page "
 "template. Widget content fades in after scrolling down on frontend.."
@@ -1414,7 +1120,7 @@ msgstr ""
 "Right sidebar widget area displayed when using the Right Sidebar Layout page "
 "template. Widget content fades in after scrolling down on frontend.."
 
-#: bundled/c9-music/inc/widgets.php:93 inc/widgets.php:93
+#: inc/widgets.php:93
 msgid ""
 "Left sidebar widget area displayed when using the Right Sidebar Layout page "
 "template. Widget content fades in after scrolling down on the frontend."
@@ -1422,12 +1128,10 @@ msgstr ""
 "Left sidebar widget area displayed when using the Right Sidebar Layout page "
 "template. Widget content fades in after scrolling down on the frontend."
 
-#: bundled/c9-music/loop-templates/content-none.php:18
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
 msgstr "Nothing Found"
 
-#: bundled/c9-music/loop-templates/content-none.php:31
 #: loop-templates/content-none.php:31
 #, php-format
 msgid ""
@@ -1435,7 +1139,6 @@ msgid ""
 msgstr ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 
-#: bundled/c9-music/loop-templates/content-none.php:47
 #: loop-templates/content-none.php:47
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
@@ -1444,7 +1147,6 @@ msgstr ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 
-#: bundled/c9-music/loop-templates/content-none.php:52
 #: loop-templates/content-none.php:52
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
@@ -1453,114 +1155,620 @@ msgstr ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 
-#: bundled/c9-music/loop-templates/content-page-container-with-title.php:36
-#: bundled/c9-music/loop-templates/content-page-with-title.php:31
 #: loop-templates/content-page-container-with-title.php:36
 #: loop-templates/content-page-with-title.php:31
 msgid "Edit"
 msgstr "Edit"
 
-#: bundled/c9-music/loop-templates/content-page.php:21
-#: bundled/c9-music/loop-templates/content-single.php:119
-#: bundled/c9-music/loop-templates/content.php:49
 #: loop-templates/content-page.php:21 loop-templates/content-single.php:119
 #: loop-templates/content.php:49
 msgid "Pages:"
 msgstr "Pages:"
 
+#: patterns/hero-artist-link-tree-alt.php:22
+msgid "Link Promo Tree Alternate"
+msgstr "Link Promo Tree Alternate"
+
+#: patterns/hero-artist-link-tree-alt.php:26
+msgid "\"Link tree\" style layout with button links"
+msgstr "\"Link tree\" style layout with button links"
+
+#: patterns/hero-artist-link-tree-alt.php:26
+msgid "a video background"
+msgstr "a video background"
+
+#: patterns/hero-artist-link-tree-alt.php:35
+#: patterns/hero-artist-link-tree.php:35
+msgid "Stream Album"
+msgstr "Stream Album"
+
+#: patterns/hero-artist-link-tree-alt.php:39
+#: patterns/hero-artist-link-tree.php:39
+msgid "Tour Dates"
+msgstr "Tour Dates"
+
+#: patterns/hero-artist-link-tree-alt.php:43
+#: patterns/hero-artist-link-tree.php:43
+msgid "Tour Promo Video"
+msgstr "Tour Promo Video"
+
+#: patterns/hero-artist-link-tree-alt.php:59
+#: patterns/hero-artist-link-tree.php:63
+msgid "Apple Music"
+msgstr "Apple Music"
+
+#: patterns/hero-artist-link-tree-alt.php:63
+#: patterns/hero-artist-link-tree.php:67
+msgid "Merch"
+msgstr "Merch"
+
+#: patterns/hero-artist-link-tree.php:22
+msgid "Promo Link Tree"
+msgstr "Promo Link Tree"
+
+#: patterns/hero-artist-link-tree.php:26
+msgid "Advanced \"Link tree\" style layout with video sections + tour links"
+msgstr "Advanced \"Link tree\" style layout with video sections + tour links"
+
+#: patterns/hero-artist-link-tree.php:47
+msgid "New Music Video"
+msgstr "New Music Video"
+
+#: patterns/page-article-350.php:15
+msgid "C9 Starter Article"
+msgstr "C9 Starter Article"
+
+#: patterns/page-article-350.php:15
+msgid "Block Pattern"
+msgstr "Block Pattern"
+
+#: patterns/page-article-350.php:22 patterns/page-article-500.php:24
+msgid "Author Name"
+msgstr "Author Name"
+
+#: patterns/page-article-350.php:22 patterns/page-article-500.php:24
+msgid "Author Title"
+msgstr "Author Title"
+
+#: patterns/page-article-350.php:26 patterns/page-article-500.php:28
+msgid "December 16th, 2084"
+msgstr "December 16th, 2084"
+
+#: patterns/page-article-350.php:36 patterns/page-article-500.php:38
+msgid ""
+"Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt "
+"praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor "
+"aliquam nulla facilisi. "
+msgstr ""
+"Dum velit laoreet id donec. In fermentum posuere urna nec tincidunt "
+"praesent. Amet purus gravida quis blandit turpis cursus in. Tincidunt tortor "
+"aliquam nulla facilisi. "
+
+#: patterns/page-article-350.php:40 patterns/page-article-500.php:42
+msgid "Paragraphs inside of columns"
+msgstr "Paragraphs inside of columns"
+
+#: patterns/page-article-350.php:40 patterns/page-article-500.php:42
+msgid ""
+"Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id "
+"leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla "
+"est ullamcorper eget nulla facilisi. "
+msgstr ""
+"Cras fermentum odio. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id "
+"leo in vitae turpis massa sed elementum tempus. Facilisis leo vel fringilla "
+"est ullamcorper eget nulla facilisi. "
+
+#: patterns/page-article-350.php:44
+msgid ""
+"Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam "
+"quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat "
+"pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum "
+"varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci "
+"sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et "
+"malesuada fames."
+msgstr ""
+"Maecenas accumsan lacus vel facilisis volutpat. Arcu risus quis varius quam "
+"quisque. Semper feugiat nibh sed pulvinar. Molestie a iaculis at erat "
+"pellentesque. Ullamcorper malesuada proin libero nunc consequat interdum "
+"varius sit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Orci "
+"sagittis eu volutpat odio facilisis mauris sit. Senectus et netus et "
+"malesuada fames."
+
+#: patterns/page-article-350.php:48 patterns/page-article-500.php:46
+msgid "Orci eu lobortis elementum nibh tellus molestie. "
+msgstr "Orci eu lobortis elementum nibh tellus molestie. "
+
+#: patterns/page-article-350.php:52 patterns/page-article-500.php:51
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. "
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. "
+
+#: patterns/page-article-350.php:52 patterns/page-article-500.php:52
+msgid "No one actually said this--Tim"
+msgstr "No one actually said this--Tim"
+
+#: patterns/page-article-350.php:60
+msgid "Photo is CC0 if you want"
+msgstr "Photo is CC0 if you want"
+
+#: patterns/page-article-350.php:60
+msgid "it"
+msgstr "it"
+
+#: patterns/page-article-350.php:64 patterns/page-article-500.php:60
+msgid "Heading inside of article"
+msgstr "Heading inside of article"
+
+#: patterns/page-article-350.php:68 patterns/page-article-500.php:64
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. "
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. "
+
+#: patterns/page-article-350.php:72 patterns/page-article-500.php:68
+msgid ""
+"Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed "
+"pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla "
+"facilisi nullam vehicula ipsum a."
+msgstr ""
+"Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed "
+"pulvinar proin gravida hendrerit lectus a. Nibh sit amet commodo nulla "
+"facilisi nullam vehicula ipsum a."
+
+#: patterns/page-article-350.php:76 patterns/page-article-500.php:72
+msgid ""
+"In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a "
+"erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis "
+"at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas "
+"congue quisque egestas diam. "
+msgstr ""
+"In fermentum posuere urna nec. Velit scelerisque in dictum non consectetur a "
+"erat nam. Gravida dictum fusce ut placerat orci. Mattis molestie a iaculis "
+"at erat pellentesque adipiscing commodo. In eu mi bibendum neque egestas "
+"congue quisque egestas diam. "
+
+#: patterns/page-article-350.php:80 patterns/page-article-500.php:76
+msgid ""
+"Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed "
+"vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. "
+"Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui "
+"sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus "
+"semper eget. Dictum sit amet justo donec."
+msgstr ""
+"Vel fringilla est ullamcorper eget nulla. Lacinia at quis risus sed "
+"vulputate odio ut enim blandit. Ut pharetra sit amet aliquam id diam. "
+"Tristique nulla aliquet enim tortor at auctor. Justo nec ultrices dui "
+"sapien. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus "
+"semper eget. Dictum sit amet justo donec."
+
+#: patterns/page-article-350.php:88
+msgid "Now share this article or my boss will yell at me."
+msgstr "Now share this article or my boss will yell at me."
+
+#: patterns/page-article-500.php:14
+msgid "Full Width Image Block"
+msgstr "Full Width Image Block"
+
+#: patterns/page-article-500.php:14
+msgid "C9 Logo + Photo CC0."
+msgstr "C9 Logo + Photo CC0."
+
+#: patterns/page-article-500.php:88 patterns/page-article-500.php:110
+msgid "Photo Caption"
+msgstr "Photo Caption"
+
+#: patterns/page-article-500.php:92
+msgid ""
+"Bring complex landing pages to life in minutes from section + page templates "
+"or build pages from scratch using C9 Grid and C9 Post Grid blocks. But, you "
+"can't do that if you don't download C9 Blocks when you install the C9 Theme."
+msgstr ""
+"Bring complex landing pages to life in minutes from section + page templates "
+"or build pages from scratch using C9 Grid and C9 Post Grid blocks. But, you "
+"can't do that if you don't download C9 Blocks when you install the C9 Theme."
+
+#: patterns/page-article-500.php:96
+msgid ""
+"This layout uses core blocks from WordPress including columns, images, "
+"paragraphs, and more paragraphs!"
+msgstr ""
+"This layout uses core blocks from WordPress including columns, images, "
+"paragraphs, and more paragraphs!"
+
+#: patterns/page-article-500.php:100
+msgid "Now go make your own theme!"
+msgstr "Now go make your own theme!"
+
+#: patterns/page-article-500.php:114
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. Quam "
+"pellentesque nec nam aliquam sem. Ut diam quam nulla porttitor massa id "
+"neque aliquam vestibulum. Mauris augue neque gravida in fermentum et. Risus "
+"commodo viverra maecenas accumsan. "
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra. Eu volutpat odio facilisis mauris "
+"sit amet massa. Nec feugiat in fermentum posuere urna nec tincidunt. Quam "
+"pellentesque nec nam aliquam sem. Ut diam quam nulla porttitor massa id "
+"neque aliquam vestibulum. Mauris augue neque gravida in fermentum et. Risus "
+"commodo viverra maecenas accumsan. "
+
+#: patterns/page-article-500.php:118
+msgid ""
+"Elit eget gravida cum sociis natoque penatibus. Ullamcorper a lacus "
+"vestibulum sed arcu non odio euismod lacinia. Nec sagittis aliquam malesuada "
+"bibendum arcu vitae elementum. Id cursus metus aliquam eleifend mi in nulla "
+"posuere. "
+msgstr ""
+"Elit eget gravida cum sociis natoque penatibus. Ullamcorper a lacus "
+"vestibulum sed arcu non odio euismod lacinia. Nec sagittis aliquam malesuada "
+"bibendum arcu vitae elementum. Id cursus metus aliquam eleifend mi in nulla "
+"posuere. "
+
+#: patterns/page-article-500.php:122
+msgid ""
+"Nec tincidunt praesent semper feugiat nibh sed pulvinar. Facilisi cras "
+"fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar "
+"proin gravida hendrerit lectus a. "
+msgstr ""
+"Nec tincidunt praesent semper feugiat nibh sed pulvinar. Facilisi cras "
+"fermentum odio eu feugiat pretium nibh ipsum. Feugiat nibh sed pulvinar "
+"proin gravida hendrerit lectus a. "
+
+#: patterns/page-article-500.php:126
+msgid "Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a."
+msgstr "Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a."
+
+#: patterns/page-article-500.php:130
+msgid "Share with your bestie"
+msgstr "Share with your bestie"
+
+#: patterns/page-events-schedule.php:20
+msgid "Event – OF THE CENTURY"
+msgstr "Event – OF THE CENTURY"
+
+#: patterns/page-events-schedule.php:20
+msgid "told you we'd be back"
+msgstr "told you we'd be back"
+
+#: patterns/page-events-schedule.php:24
+msgid "↓ SCROLL FOR THE DATES AND LISTEN TO THE JAMS WHILE YOU DO!"
+msgstr "↓ SCROLL FOR THE DATES AND LISTEN TO THE JAMS WHILE YOU DO!"
+
+#: patterns/page-post-coming-soon.php:19
+msgid "Something Great is Coming Soon"
+msgstr "Something Great is Coming Soon"
+
+#: patterns/page-post-coming-soon.php:27
+msgid ""
+"Click the button below to get notified via email when we're up and running"
+msgstr ""
+"Click the button below to get notified via email when we're up and running"
+
+#: patterns/page-post-coming-soon.php:36
+msgid "Get Notifications"
+msgstr "Get Notifications"
+
+#: patterns/page-post-coming-soon.php:40
+msgid "Learn More"
+msgstr "Learn More"
+
+#: patterns/page-style-guide.php:15
+msgid "Know where you're going?"
+msgstr "Know where you're going?"
+
+#: patterns/page-style-guide.php:15
+msgid "C9 Helper Style Guide"
+msgstr "C9 Helper Style Guide"
+
+#: patterns/page-style-guide.php:20
+msgid "Download now"
+msgstr "Download now"
+
+#: patterns/page-style-guide.php:24
+msgid "Tutorial Videos"
+msgstr "Tutorial Videos"
+
+#: patterns/page-style-guide.php:32
+msgid "Or search through our archives"
+msgstr "Or search through our archives"
+
+#: patterns/page-style-guide.php:32
+msgid "How to design a signup page using C9 Blocks...."
+msgstr "How to design a signup page using C9 Blocks...."
+
+#: patterns/page-style-guide.php:39
+msgid ""
+"Three calls to action so your visitors can pick their lane, and what they "
+"want to see next."
+msgstr ""
+"Three calls to action so your visitors can pick their lane, and what they "
+"want to see next."
+
+#: patterns/page-style-guide.php:44
+msgid "Ask a question"
+msgstr "Ask a question"
+
+#: patterns/page-style-guide.php:51
+msgid "Sign up for a newsletter or hit the most popular category of your shop."
+msgstr ""
+"Sign up for a newsletter or hit the most popular category of your shop."
+
+#: patterns/page-style-guide.php:56
+msgid "Sign up for alerts"
+msgstr "Sign up for alerts"
+
+#: patterns/page-style-guide.php:63
+msgid ""
+"Consider your three most popular user paths and use those links in these "
+"three buttons."
+msgstr ""
+"Consider your three most popular user paths and use those links in these "
+"three buttons."
+
+#: patterns/page-style-guide.php:68
+msgid "Buy Tickets"
+msgstr "Buy Tickets"
+
+#: patterns/page-style-guide.php:80
+msgid "C9 Core Blocks Typography"
+msgstr "C9 Core Blocks Typography"
+
+#: patterns/page-style-guide.php:86 patterns/page-style-guide.php:110
+msgid "Heading One"
+msgstr "Heading One"
+
+#: patterns/page-style-guide.php:90 patterns/page-style-guide.php:114
+msgid "Heading Two"
+msgstr "Heading Two"
+
+#: patterns/page-style-guide.php:94 patterns/page-style-guide.php:118
+msgid "Heading Three"
+msgstr "Heading Three"
+
+#: patterns/page-style-guide.php:98 patterns/page-style-guide.php:122
+msgid "Heading Four"
+msgstr "Heading Four"
+
+#: patterns/page-style-guide.php:102 patterns/page-style-guide.php:126
+msgid "Heading Five"
+msgstr "Heading Five"
+
+#: patterns/page-style-guide.php:106 patterns/page-style-guide.php:130
+msgid "Heading Six"
+msgstr "Heading Six"
+
+#: patterns/page-style-guide.php:136
+msgid "Small Font Paragraph."
+msgstr "Small Font Paragraph."
+
+#: patterns/page-style-guide.php:136
+msgid ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin. Ut enim ad minim veniam, quis nostrud exercitation ullamco "
+"laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in "
+"reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin. Ut enim ad minim veniam, quis nostrud exercitation ullamco "
+"laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in "
+"reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:140
+msgid ""
+"Pat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"Pat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:144
+msgid "Normal Font Paragraph."
+msgstr "Normal Font Paragraph."
+
+#: patterns/page-style-guide.php:144 patterns/page-style-guide.php:148
+msgid ""
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+msgstr ""
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+"voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#: patterns/page-style-guide.php:148
+msgid "Medium Font Paragraph."
+msgstr "Medium Font Paragraph."
+
+#: patterns/page-style-guide.php:152 patterns/page-style-guide.php:156
+msgid "Large Font Paragraph."
+msgstr "Large Font Paragraph."
+
+#: patterns/page-style-guide.php:152
+msgid "Ut enim ad minim veniam, quis nostrud. "
+msgstr "Ut enim ad minim veniam, quis nostrud. "
+
+#: patterns/page-style-guide.php:156
+msgid "Ut enim ad minim veniam, quis. "
+msgstr "Ut enim ad minim veniam, quis. "
+
+#: patterns/page-style-guide.php:164
+msgid "Ordered List"
+msgstr "Ordered List"
+
+#: patterns/page-style-guide.php:168 patterns/page-style-guide.php:178
+msgid "List Item"
+msgstr "List Item"
+
+#: patterns/page-style-guide.php:168 patterns/page-style-guide.php:178
+msgid ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin."
+msgstr ""
+"There are more heading styles, large fonts, subheadings, and more in the C9 "
+"Blocks Plugin."
+
+#: patterns/page-style-guide.php:174
+msgid "Unordered List"
+msgstr "Unordered List"
+
+#: patterns/page-style-guide.php:184
+msgid "Separators (HR)"
+msgstr "Separators (HR)"
+
+#: patterns/text-stream-album.php:19
+msgid "♫ Listen to the new single ♫<br>Stream-Me-Please.mp3"
+msgstr "♫ Listen to the new single ♫<br>Stream-Me-Please.mp3"
+
+#: patterns/text-stream-album.php:27
+msgid ""
+"If you haven't, we highly recommend installing the <a href=\"#\">C9 Blocks</"
+"a> and <a href=\"#\">C9 Admin Dashboard Plugins</a>. <strong>For animations, "
+"and additional child theme features like a single page animated website, get "
+"on the C9 email list.</strong>"
+msgstr ""
+"If you haven't, we highly recommend installing the <a href=\"#\">C9 Blocks</"
+"a> and <a href=\"#\">C9 Admin Dashboard Plugins</a>. <strong>For animations, "
+"and additional child theme features like a single page animated website, get "
+"on the C9 email list.</strong>"
+
+#: patterns/text-stream-album.php:33 patterns/text-stream-album.php:37
+#: patterns/text-stream-album.php:41
+msgid "Song Name - Track Title"
+msgstr "Song Name - Track Title"
+
+#: patterns/text-stream-album.php:53
+msgid "YouTube Video Pop"
+msgstr "YouTube Video Pop"
+
+#: patterns/text-stream-spotify.php:29
+msgid "Spotify Stream Block"
+msgstr "Spotify Stream Block"
+
+#: patterns/text-stream-spotify.php:35
+msgid "Track Listing Song Name<br><strong>Featuring someone</strong>"
+msgstr "Track Listing Song Name<br><strong>Featuring someone</strong>"
+
+#: patterns/text-stream-spotify.php:39
+msgid "Under Control<br><strong>Not Under Control</strong>"
+msgstr "Under Control<br><strong>Not Under Control</strong>"
+
+#: patterns/text-stream-spotify.php:43
+msgid "The October"
+msgstr "The October"
+
+#: patterns/text-stream-spotify.php:47
+msgid "Kids &amp; Knives<br><strong>Savile Remix</strong>"
+msgstr "Kids &amp; Knives<br><strong>Savile Remix</strong>"
+
+#: patterns/text-stream-spotify.php:51
+msgid "Out of Season (Acoustic)"
+msgstr "Out of Season (Acoustic)"
+
+#: patterns/text-stream-spotify.php:55
+msgid "1981 (Demo)"
+msgstr "1981 (Demo)"
+
+#: patterns/text-stream-spotify.php:59
+msgid "The November"
+msgstr "The November"
+
+#: patterns/text-stream-spotify.php:68
+msgid "Listen on Spotify"
+msgstr "Listen on Spotify"
+
+#: patterns/text-tour-schedule.php:16
+msgid "C9"
+msgstr "C9"
+
+#: patterns/text-tour-schedule.php:16
+msgid "Events Block Pattern"
+msgstr "Events Block Pattern"
+
+#: patterns/text-tour-schedule.php:24
+msgid ""
+"COVERT NINE - The nine essentials ingredients for good digital marketing. "
+"Copywriting, Design, Development, SEO, PPC, Social Media, Email, Videos, "
+"Photograph"
+msgstr ""
+"COVERT NINE - The nine essentials ingredients for good digital marketing. "
+"Copywriting, Design, Development, SEO, PPC, Social Media, Email, Videos, "
+"Photograph"
+
+#: patterns/text-tour-schedule.php:32
+msgid ""
+"<strong>Tickets and on-sale information would be great in here. </"
+"strong>Orci eu lobortis elementum nibh tellus molestie. Tellus cras "
+"adipiscing enim eu turpis egestas pretium aenean pharetra."
+msgstr ""
+"<strong>Tickets and on-sale information would be great in here. </"
+"strong>Orci eu lobortis elementum nibh tellus molestie. Tellus cras "
+"adipiscing enim eu turpis egestas pretium aenean pharetra."
+
+#: patterns/text-tour-schedule.php:36
+msgid "<strong>Frequently asked questions would go great in here.</strong>"
+msgstr "<strong>Frequently asked questions would go great in here.</strong>"
+
+#: patterns/text-tour-schedule.php:40 patterns/text-tour-schedule.php:48
+msgid ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra."
+msgstr ""
+"Orci eu lobortis elementum nibh tellus molestie. Tellus cras adipiscing enim "
+"eu turpis egestas pretium aenean pharetra."
+
+#: patterns/text-tour-schedule.php:44
+msgid "<strong>All content editing is done inline. </strong>"
+msgstr "<strong>All content editing is done inline. </strong>"
+
+#: patterns/text-tour-schedule.php:52
+msgid "Have fun!"
+msgstr "Have fun!"
+
+#: patterns/text-tour-schedule.php:57
+msgid "GET TICKETS"
+msgstr "GET TICKETS"
+
+#: patterns/text-tour-schedule.php:61
+msgid "ASK TIRESOME QUESTIONS"
+msgstr "ASK TIRESOME QUESTIONS"
+
+#: patterns/text-watch-video.php:17
+msgid "Watch the video to learn more."
+msgstr "Watch the video to learn more."
+
+#: patterns/text-watch-video.php:21
+msgid ""
+"Watch the video below to learn how to build page templates with C9 Blocks"
+msgstr ""
+"Watch the video below to learn how to build page templates with C9 Blocks"
+
+#: patterns/text-watch-video.php:30
+msgid "Building Pages"
+msgstr "Building Pages"
+
 #. translators:
-#: bundled/c9-music/search.php:31 search.php:31
+#: search.php:31
 #, php-format
 msgid "Results for: %s"
 msgstr "Results for: %s"
 
-#: bundled/c9-music/searchform.php:12 searchform.php:12
+#: searchform.php:12
 msgid "Search &hellip;"
 msgstr "Search &hellip;"
-
-#: client/inc/client-setup.php:82
-msgid "C9 Page Templates"
-msgstr "C9 Page Templates"
-
-#: client/inc/client-setup.php:478
-msgid "Artist Promo Links + Content"
-msgstr "Artist Promo Links + Content"
-
-#: client/inc/client-setup.php:479
-msgid ""
-"A template for a list of links plus a few videos and embeds to promote music "
-"or video."
-msgstr ""
-"A template for a list of links plus a few videos and embeds to promote music "
-"or video."
-
-#: client/inc/client-setup.php:552
-msgid "Artist Promo Links"
-msgstr "Artist Promo Links"
-
-#: client/inc/client-setup.php:553
-msgid "A template for a list of links."
-msgstr "A template for a list of links."
-
-#: client/inc/client-setup.php:618
-msgid "Artist Promo Links Alt"
-msgstr "Artist Promo Links Alt"
-
-#: client/inc/client-setup.php:619
-msgid "An artist promo template for a list of links."
-msgstr "An artist promo template for a list of links."
-
-#: client/inc/client-setup.php:655
-msgid "Watch Music Video"
-msgstr "Watch Music Video"
-
-#: client/inc/client-setup.php:656
-msgid ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
-msgstr ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
-
-#: client/inc/client-setup.php:682
-msgid "Watch Music Video Embed + YouTube Link"
-msgstr "Watch Music Video Embed + YouTube Link"
-
-#: client/inc/client-setup.php:794
-msgid "Album Stream Discography"
-msgstr "Album Stream Discography"
-
-#: client/inc/client-setup.php:969
-msgid ""
-"Add a bunch of tour dates and places and links to a table with a nice header "
-"and FAQ, cause events are coming back!"
-msgstr ""
-"Add a bunch of tour dates and places and links to a table with a nice header "
-"and FAQ, cause events are coming back!"
-
-#: client/inc/client-setup.php:1114
-msgid "Blog 450 Words"
-msgstr "Blog 450 Words"
-
-#: client/inc/client-setup.php:1115
-msgid ""
-"Get your blog laid out before writing with a 450 word placeholder and some "
-"imagery to tet you started."
-msgstr ""
-"Get your blog laid out before writing with a 450 word placeholder and some "
-"imagery to tet you started."
-
-#: client/inc/client-setup.php:1222
-msgid "Blog 600 Words"
-msgstr "Blog 600 Words"
-
-#: client/inc/client-setup.php:1223
-msgid ""
-"Get your blog laid out before writing with a 600 word placeholder and some "
-"imagery to tet you started."
-msgstr ""
-"Get your blog laid out before writing with a 600 word placeholder and some "
-"imagery to tet you started."
 
 #. Theme Name of the plugin/theme
 msgid "C9 Music"
@@ -1572,11 +1780,11 @@ msgstr "https://music.covertnine.com"
 
 #. Description of the plugin/theme
 msgid ""
-"C9 Music is a block-based theme for WordPress 5 that uses Bootstrap's "
+"C9 Music is a block-based theme for WordPress 6.5 that uses Bootstrap's "
 "responsive grid system, a single level dropdown menu navbar, and Gutenberg "
 "blocks with custom pagination."
 msgstr ""
-"C9 Music is a block-based theme for WordPress 5 that uses Bootstrap's "
+"C9 Music is a block-based theme for WordPress 6.5 that uses Bootstrap's "
 "responsive grid system, a single level dropdown menu navbar, and Gutenberg "
 "blocks with custom pagination."
 
