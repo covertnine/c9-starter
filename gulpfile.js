@@ -63,7 +63,7 @@ gulp.task("watch", function () {
 	});
 	// These happen each time a watched file is saved
 	gulp.watch(scriptMain, function () {
-		gulp.series("webpack-watch", "webpack-once", "styles", "scripts")(function (err) {
+		gulp.series("webpack-watch", "webpack-once", "scripts")(function (err) {
 			if (err) {
 				console.log(err);
 			}
@@ -71,6 +71,7 @@ gulp.task("watch", function () {
 	});
 	gulp.watch(
 		[paths.styles + "/**/*.scss", paths.client + "/*.scss"],
+		{ usePolling: true },
 		gulp.series('styles')
 	);
 	// Inside the watch task.
