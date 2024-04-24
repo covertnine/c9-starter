@@ -29,6 +29,9 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.5.7 =
+Cover block default overlay fix.
+
 = 2.5.6 =
 Further bug fixes to backend alignments from new post markup.
 

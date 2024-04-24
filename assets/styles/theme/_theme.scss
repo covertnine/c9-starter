@@ -2010,6 +2010,14 @@ hr {
     }
 }
 
+.wp-block-cover .has-background-dim,
+.wp-block-cover .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image.has-background-dim:not([class*="-background-color"]),
+.wp-block-cover.has-background-dim:not([class*="-background-color"]) {
+    background-color: $dark;
+}
+
 /****************************************************************************************/
 /* WordPress Gutenberg Table Block */
 /****************************************************************************************/
