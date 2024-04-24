@@ -2,11 +2,11 @@
 Contributors: ttoomey
 Donate link: https://www.covertnine.com/about
 Requires at least: 5.9
-Tested up to: 6.5
+Tested up to: 6.5.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Stable Tag: 2.4.8
+Stable Tag: 2.5.0
 
 A block-driven WordPress theme for businesses based on the C9 starter theme from [COVERT NINE](https://www.covertnine.com).
 
@@ -33,8 +33,11 @@ If you use the default navigation, then only one level of drop down is supported
 
 == Changelog ==
 
+= 2.5.0 =
+Adjustments to some block patterns.
+
 = 2.4.9 =
-Updates to some block patterns and alignwide bug fix.
+Updates to some block patterns and alignwide bug fix in backend. Fixing some block validation issues. Better block preview support.
 
 = 2.4.8 =
 Fixes to button block on mobile.

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: C9 Work\n"
-"POT-Creation-Date: 2024-03-31 10:13-0500\n"
-"PO-Revision-Date: 2024-03-31 10:13-0500\n"
+"POT-Creation-Date: 2024-04-20 15:59-0500\n"
+"PO-Revision-Date: 2024-04-20 15:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,6 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -496,138 +495,40 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: client/inc/client-setup.php:14
+#: client/inc/client-setup.php:61
 msgid "Full Width Black Bar"
 msgstr ""
 
-#: client/inc/client-setup.php:22
+#: client/inc/client-setup.php:69
 msgid "Gray Diagonal Background"
 msgstr ""
 
-#: client/inc/client-setup.php:31
+#: client/inc/client-setup.php:78
 msgid "Left Side Dark Gradient Background"
 msgstr ""
 
-#: client/inc/client-setup.php:39
+#: client/inc/client-setup.php:86
 msgid "Shadow Below"
 msgstr ""
 
-#: client/inc/client-setup.php:47
+#: client/inc/client-setup.php:94
 msgid "Black Bar Behind"
 msgstr ""
 
-#: client/inc/client-setup.php:109
+#: client/inc/client-setup.php:108
 msgid "C9 All Patterns"
 msgstr ""
 
-#: client/inc/client-setup.php:113
-msgid "C9 Page Templates"
+#: client/inc/client-setup.php:112
+msgid "C9 Page + Post Templates"
 msgstr ""
 
-#: client/inc/client-setup.php:117
+#: client/inc/client-setup.php:116
 msgid "C9 Video"
 msgstr ""
 
-#: client/inc/client-setup.php:121
+#: client/inc/client-setup.php:120
 msgid "C9 Audio"
-msgstr ""
-
-#: client/inc/client-setup.php:125
-msgid "C9 Article"
-msgstr ""
-
-#: client/inc/client-setup.php:186
-msgid "Coming Soon Opt-in"
-msgstr ""
-
-#: client/inc/client-setup.php:187
-msgid ""
-"Start building your audience before you launch with a coming soon page that "
-"captures emails or phone numbers."
-msgstr ""
-
-#: client/inc/client-setup.php:223
-msgid "Spotify Embed, Track Listing + Button"
-msgstr ""
-
-#: client/inc/client-setup.php:224
-msgid "Embed a playlist, track listing or lyrics, and a button to open it up!"
-msgstr ""
-
-#: client/inc/client-setup.php:287
-msgid "Podcast Episode"
-msgstr ""
-
-#: client/inc/client-setup.php:288
-msgid ""
-"Feature a show photo, audio embed file, and everything you need for a "
-"podcast episode post."
-msgstr ""
-
-#: client/inc/client-setup.php:394
-msgid "Events Schedule"
-msgstr ""
-
-#: client/inc/client-setup.php:395
-msgid ""
-"Add a bunch of dates and places and links to a table with a nice header and "
-"FAQ, cause events are coming back!"
-msgstr ""
-
-#: client/inc/client-setup.php:538
-msgid "Article 450 Words"
-msgstr ""
-
-#: client/inc/client-setup.php:539
-msgid ""
-"Get your article laid out before writing with a 450 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-
-#: client/inc/client-setup.php:647
-msgid "Article 600 Words"
-msgstr ""
-
-#: client/inc/client-setup.php:648
-msgid ""
-"Get your article laid out before writing with a 600 word placeholder and "
-"some imagery to tet you started."
-msgstr ""
-
-#: client/inc/client-setup.php:683
-msgid "Watch Video"
-msgstr ""
-
-#: client/inc/client-setup.php:684
-msgid ""
-"Focus the page attention on a video button link, with an auto-playing video "
-"clip in the background."
-msgstr ""
-
-#: client/inc/client-setup.php:709
-msgid "Video Embed + YouTube Link"
-msgstr ""
-
-#: client/inc/client-setup.php:710
-msgid "Feature a video file you upload with a link to a YouTube video link."
-msgstr ""
-
-#: client/inc/client-setup.php:755
-msgid "Information Dialog Two Buttons"
-msgstr ""
-
-#: client/inc/client-setup.php:756
-msgid ""
-"Highlight important information, and link to two separate places with "
-"buttons."
-msgstr ""
-
-#: client/inc/client-setup.php:955
-msgid "C9 Work Style Guide"
-msgstr ""
-
-#: client/inc/client-setup.php:956
-msgid "A style guide with type, buttons, and core blocks frequently used."
 msgstr ""
 
 #: client/inc/header.php:57 header.php:71
@@ -1429,7 +1330,7 @@ msgid ""
 "three buttons."
 msgstr ""
 
-#: patterns/page-style-guide.php:68 patterns/text-tour-schedule.php:68
+#: patterns/page-style-guide.php:68
 msgid "Buy Tickets"
 msgstr ""
 
@@ -1632,18 +1533,6 @@ msgstr ""
 
 #: patterns/text-tour-schedule.php:61
 msgid "ASK TIRESOME QUESTIONS"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "Date"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "City"
-msgstr ""
-
-#: patterns/text-tour-schedule.php:68
-msgid "Tickets"
 msgstr ""
 
 #: patterns/text-watch-video.php:17

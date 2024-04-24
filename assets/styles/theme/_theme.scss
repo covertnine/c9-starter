@@ -2043,6 +2043,13 @@ hr {
     }
 }
 
+.wp-block-cover .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image.has-background-dim:not([class*="-background-color"]),
+.wp-block-cover.has-background-dim:not([class*="-background-color"]) {
+    background-color: $dark;
+}
+
 /****************************************************************************************/
 /* WordPress Gutenberg Table Block */
 /****************************************************************************************/
@@ -3120,6 +3127,23 @@ screen and (max-height: 300px) {
     border-radius: 0px;
 }
 
+.wp-block-buttons .wp-block-button {
+    display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .wp-block-buttons:not(.alignwide):not(.alignfull) {
+        max-width: 1140px;
+    }
+}
+
+.wp-block-buttons.is-content-justification-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 @media only screen and (max-width: 414px) {
 
     .c9 .woocommerce #respond input#submit,
@@ -3282,6 +3306,12 @@ p~.wp-block-button:not(.alignleft) {
 /* search results page */
 .page-search-results {
     min-height: 50vh;
+}
+
+.entry-footer .cat-links,
+.entry-footer .tags-links {
+    margin-bottom: 20px;
+    display: block;
 }
 
 /*************************** Most WordPress Inputs and Forms ****************************/
