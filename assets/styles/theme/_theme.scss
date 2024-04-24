@@ -1027,6 +1027,12 @@ a:focus {
     line-height: 1.1;
 }
 
+.entry-footer .cat-links,
+.entry-footer .tags-links {
+    margin-bottom: 20px;
+    display: block;
+}
+
 /****************************************************************************************/
 /* WordPress Archive */
 /****************************************************************************************/
@@ -2043,6 +2049,13 @@ hr {
         margin-left: calc((-100vw + 100%) / 2);
         margin-right: calc((-100vw + 100%) / 2);
     }
+}
+
+.wp-block-cover .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image .has-background-dim:not([class*="-background-color"]),
+.wp-block-cover-image.has-background-dim:not([class*="-background-color"]),
+.wp-block-cover.has-background-dim:not([class*="-background-color"]) {
+    background-color: $dark;
 }
 
 /****************************************************************************************/
@@ -3130,6 +3143,22 @@ screen and (max-height: 300px) {
     color: $light;
     line-height: 1;
     border-radius: 0px;
+}
+
+.wp-block-buttons .wp-block-button {
+    display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .wp-block-buttons:not(.alignwide):not(.alignfull) {
+        max-width: 1140px;
+    }
+}
+
+.wp-block-buttons.is-content-justification-center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 414px) {
